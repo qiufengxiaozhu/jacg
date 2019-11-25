@@ -1,0 +1,271 @@
+#crop_image {
+    float: left;
+    width: 55%;
+    background-color: #333;
+    user-select: none;
+    margin: 10% 20%;
+    border: 1px solid #DEDEDE;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+#crop_image_top,#crop_image_bottom {
+    float: left;
+    width: 100%;
+    padding: 2%;
+    background-color: white;
+}
+/* 底部 */
+#crop_image_bottom {
+    text-align: right;
+}
+#crop_image_bottom input {
+    height: 30px;
+    padding: 5px 15px;
+    border-radius: 3px;
+    border: none;
+    margin-left: 20px;
+    outline: none;
+}
+#submitBtn {
+    background-color: #40aff2;
+    color: white;
+    cursor: pointer;
+}
+#submitBtn:HOVER {
+    background-color: #409ff2;
+}
+/* 顶部 */
+#crop_image_top h4 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+/* 裁剪部分 */
+#crop_image_content {
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 92%;
+    margin: 4%;
+}
+/* 上传图片区域 */
+#uploadForm {
+    float: left;
+    margin: -2% 20% 5% 20%;
+}
+#uploadImage {
+    position: relative;
+    width: 372px;
+    height: 202px;
+    background-color: #40aff2;
+    text-align: center;
+}
+#uploadImage #cropimg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+#uploadImage .addImage {
+    display: inline-block;
+    position: relative;
+    min-width: 80px;
+    height: 40px;
+    overflow: hidden;
+    padding: 0 30px;
+    margin: 81px auto;
+    border: none;
+    background-color: #F3F3F3;
+    color: #555;
+    font: 14px/40px 'MicroSoft Yahei', 'Simhei';
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#uploadImage .addImage:HOVER {
+    background-color: #DEDEDE;
+}
+#uploadImage #imgFile
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    cursor: hand;
+    border: none;
+    font-size: 0;
+    padding: 0;
+    /* older safari/Chrome browsers */
+    -webkit-opacity: 0;
+    /* Netscape and Older than Firefox 0.9 */
+    -moz-opacity: 0;
+    /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+    -khtml-opacity: 0;
+    /* IE9 + etc...modern browsers */
+    opacity: 0;
+    /* IE 4-9 */
+    filter:alpha(opacity=0);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /*IE4-IE9*/
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+#uploadImage #imgFile::-webkit-file-upload-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    cursor: hand;
+    border: none;
+    font-size: 0;
+    padding: 0;
+    /* older safari/Chrome browsers */
+    -webkit-opacity: 0;
+    /* Netscape and Older than Firefox 0.9 */
+    -moz-opacity: 0;
+    /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+    -khtml-opacity: 0;
+    /* IE9 + etc...modern browsers */
+    opacity: 0;
+    /* IE 4-9 */
+    filter:alpha(opacity=0);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /*IE4-IE9*/
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 100%;
+}
+
+body {
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 100%;
+    overflow-x: hidden;
+    vertical-align: baseline;
+    font-weight: normal;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: "Microsoft Yahei", "Hiragino Sans GB", Helvetica,
+    "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
+    background-color: #F6F6F6;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+
+a:focus { /* 除掉超链接的虚线框 */
+    hide-focus: expression(this.hideFocus = true);
+    /* IE识别 */
+    outline: none; /* FF识别 */
+}
+
+a img {
+    border: none;
+}
+
+ol,ul,li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,th,td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+input,select,textarea,button {
+    font-family: "Microsoft Yahei", Verdana, Arial, Helvetica, sans-serif;
+}
+
+::-ms-clear,::-ms-reveal {
+    display: none;
+}
+
+q,blockquote {
+    quotes: none;
+}
+
+q:before,q:after,blockquote:before,blockquote:after {
+    content: "";
+    content: none;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary
+{
+    display: block;
+}
+
+
+
+
+
+.jcrop-holder #preview-pane {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    top: 10px;
+    right: -280px;
+    padding: 6px;
+    border: 1px rgba(0, 0, 0, .4) solid;
+    background-color: white;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+/* The Javascript code will set the aspect ratio of the crop
+   area based on the size of the thumbnail preview,
+   specified here */
+#preview-pane .preview-container {
+    width: 170px;
+    height: 170px;
+    overflow: hidden;
+}

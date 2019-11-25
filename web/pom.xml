@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>parent</artifactId>
+        <groupId>com.zte.zudp</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+
+        <relativePath>../parent</relativePath>
+    </parent>
+
+
+    <artifactId>web</artifactId>
+    <packaging>jar</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>web</name>
+    <description>ZUDP web manage project.</description>
+
+	<!-- 子模块依赖  开始-->
+	 <dependencies>
+        <dependency>
+			  <groupId>com.zte.zudp</groupId>
+			  <artifactId>common</artifactId>
+			  <version>1.0-SNAPSHOT</version>											
+        </dependency>
+        <dependency>
+        	<groupId>com.zte.zudp</groupId>
+			<artifactId>mm</artifactId>
+			<version>1.0-SNAPSHOT</version>
+        </dependency>
+     </dependencies>
+    <!-- 子模块依赖  结束-->
+
+    <build>
+        <finalName>${project.finalName}</finalName>
+        <plugins>
+            <!-- 要将源码放上去，需要加入这个插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+            </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+</project>
