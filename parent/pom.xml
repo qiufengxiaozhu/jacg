@@ -13,6 +13,7 @@
     <modules>
         <module>../common</module>
         <module>../mm</module>
+        <module>../info</module>
         <module>../web</module>
     </modules>
 
