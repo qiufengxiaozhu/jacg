@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zte.zudp</groupId>
+    <artifactId>zudp</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.12.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <modules>
+        <module>parent</module>
+        <module>common</module>
+    </modules>
+
+    <name>zudp</name>
+    <description>ZUDP，中兴统一开发平台。</description>
+    <url>http://10.81.36.233/zudp/zudp.git</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <jdk.version>1.8</jdk.version>
+        <support.basedir>${project.basedir}/support</support.basedir>
+        <site.basedir>${project.basedir}</site.basedir>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <developers>
+        <developer>
+            <id>piumnl</id>
+            <name>钟子奇</name>
+            <email>piumnl@foxmail.com</email>
+            <organization>研发管理中心研发一部</organization>
+            <timezone>+8</timezone>
+        </developer>
+        <developer>
+            <id>DW</id>
+            <name>代炜</name>
+            <email>m15879067251@163.com</email>
+            <organization>研发管理中心研发一部</organization>
+            <timezone>+8</timezone>
+        </developer>
+        <developer>
+            <id>pixel</id>
+            <name>万勋</name>
+            <email>422282486@qq.com</email>
+            <organization>研发管理中兴研发一部</organization>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+</project>
