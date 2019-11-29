@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.zte.zudp.admin.info.complain.dao.DeptDao">
+
+    <resultMap type="com.zte.zudp.admin.info.complain.entity.DeptEntity" id="deptMap">
+        <id column="id" property="id"/>
+        <result column="department" property="department"/>
+        <result column="create_user" property="createUser.id" />
+        <result column="create_date" property="createDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="del" property="del" />
+    </resultMap>
+
+    <!--<resultMap id="userMap" type="com.zte.zudp.admin.info.complain.entity.UserEntity">-->
+        <!--<id column="id" property="id"/>-->
+        <!--<result column="username" property="username"/>-->
+        <!--<result column="password" property="password" />-->
+    <!--</resultMap>-->
+
+    <!--<insert id="saveUser" parameterType="com.zte.zudp.admin.info.complain.entity.UserEntity">-->
+        <!--INSERT INTO-->
+            <!--zzb_user-->
+		<!--(-->
+		    <!--id,-->
+		    <!--username,-->
+		    <!--password-->
+		<!--)-->
+        <!--values-->
+        <!--(-->
+            <!--#{id},-->
+            <!--#{username},-->
+            <!--#{password}-->
+        <!--)-->
+    <!--</insert>-->
+
+
+    <!-- 查询所有的数据 -->
+    <select id="findList" resultMap="deptMap" useCache="false">
+        select
+            z.id,
+            z.department,
+            z.create_user,
+            z.create_date,
+            z.update_user,
+            z.update_date,
+            z.del
+        FROM
+            zzb_dept z
+        WHERE
+            z.del != 1
+        <if test="department != null and department != ''">
+            and `department` like concat('%', #{department}, '%')
+        </if>
+        ORDER BY create_date desc
+    </select>
+
+    <!-- 插入数据 -->
+    <insert id="insert">
+        insert into zzb_dept
+		      (
+		          id,
+                  department,
+                  create_user,
+                  create_date,
+		          del
+		      )
+        VALUE (
+              #{id},
+              #{department},
+              #{createUser.id},
+              #{createDate},
+              0
+        )
+    </insert>
+
+
+    <!-- 确定 department 的唯一性 -->
+    <select id="checkDept" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM zzb_dept
+        WHERE del =  0
+        AND `department` = #{department}
+        <if test="id!=null and id !=''">
+            AND id != #{id}
+        </if>
+    </select>
+
+
+    <!-- 数据更新问题 -->
+    <update id="update" parameterType="com.zte.zudp.admin.info.complain.entity.DeptEntity">
+        UPDATE
+            zzb_dept
+        SET
+            department = #{department},
+            update_user = #{updateUser.id},
+            update_date = #{updateDate}
+        WHERE
+            id = #{id}
+    </update>
+
+    <!-- 点击编辑按钮的方法 -->
+    <select id="get" resultMap="deptMap" >
+        select
+            z.id,
+            z.department,
+            z.create_user,
+            z.create_date,
+            z.update_user,
+            z.update_date,
+            z.del
+        FROM
+            zzb_dept z
+        WHERE
+            z.del != 1
+        AND
+            id=#{id}
+    </select>
+
+    <!--单条数据删除 -->
+    <delete id="delete">
+        UPDATE zzb_dept
+        SET del = 1
+        WHERE id = #{id}
+    </delete>
+
+    <!-- 批量删除 -->
+    <delete id="batchDelete">
+        UPDATE zzb_dept SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </delete>
+
+
+</mapper>
