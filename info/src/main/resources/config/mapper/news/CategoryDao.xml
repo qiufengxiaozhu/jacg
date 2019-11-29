@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.news.dao.CategoryDao">
+
+    <resultMap type="com.zte.zudp.admin.info.news.entity.Category" id="categoryMap">
+        <id column="id" property="id"/>
+        <result column="category" property="category"/>
+        <result column="describe" property="describe" />
+        <result column="create_date" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="del" property="del" />
+        <result column="spare_1" property="spare_1" />
+    </resultMap>
+
+
+
+    <select id="findList" resultMap="categoryMap" useCache="false">
+        SELECT id,category,qgq_category.describe
+        from qgq_category
+        where del!=1
+        <if test="category!=null and category!=''">
+            and `category` like concat('%', #{category}, '%')
+        </if>
+        ORDER BY create_date desc
+    </select>
+
+    <select id="get" resultMap="categoryMap" >
+        SELECT id, category, qgq_category.describe,
+        create_date,create_user
+        from qgq_category
+        where id=#{id}
+    </select>
+
+    <!--<select id="checkName" resultType="java.lang.Integer">-->
+        <!--SELECT COUNT(1) FROM oa_post-->
+        <!--WHERE del =  '0'-->
+        <!--AND `name` = #{name}-->
+        <!--<if test="id!=null and id !=''">-->
+            <!--AND id != #{id}-->
+        <!--</if>-->
+    <!--</select>-->
+    <!--<select id="checkIdentification" resultType="java.lang.Integer">-->
+        <!--SELECT COUNT(1) FROM oa_post-->
+        <!--WHERE del = '0'-->
+        <!--AND identification = #{identification}-->
+        <!--<if test="id!=null and id !=''">-->
+            <!--AND id != #{id}-->
+        <!--</if>-->
+    <!--</select>-->
+
+    <insert id="insert">
+        INSERT INTO qgq_category (
+        id, category,qgq_category.describe,
+        create_date,
+        create_user,
+        update_date,
+        update_user,
+        del
+        )
+        VALUE (
+        #{id}, #{category}, #{describe},
+        #{createDate},
+        #{createUser.id},
+        #{updateDate},
+        #{updateUser.id},
+        '0'
+        )
+    </insert>
+    <update id="update" parameterType="com.zte.zudp.admin.info.news.entity.Category">
+        UPDATE qgq_category m SET
+        m.category = #{category},
+        m.describe = #{describe},
+        m.update_date = #{updateDate},
+        m.update_user = #{updateUser.id}
+        WHERE m.id = #{id}
+    </update>
+
+    <delete id="delete">
+        UPDATE qgq_category
+        SET del = 1
+        WHERE id = #{id}
+    </delete>
+    <delete id="batchDelete">
+        UPDATE qgq_category SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </delete>
+</mapper>
