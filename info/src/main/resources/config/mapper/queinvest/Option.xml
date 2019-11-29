@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.queinvest.dao.OptionDao">
+
+    <resultMap type="com.zte.zudp.admin.info.queinvest.entity.Options" id="optionMap">
+        <id column="id" property="id"/>
+        <result column="create_date" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="del" property="del" />
+
+        <result column="choiceText01" property="choiceText01" />
+        <result column="choiceText02" property="choiceText02" />
+        <result column="choiceText03" property="choiceText03" />
+        <result column="choiceText04" property="choiceText04" />
+        <!--对象的映射-->
+        <result column="questions_id" property="questions.id" />
+
+
+
+    </resultMap>
+
+
+
+    <!--添加选项-->
+    <insert id="addOption" >
+  insert into jacg_options
+        (id,
+        questions_id,
+        choiceText01,
+        choiceText02,
+        choiceText03,
+        choiceText04,
+        create_user,
+        create_date,
+        update_user,
+        update_date,
+        del,
+        val01)
+    VALUES
+    ( #{id},
+      #{questions.id},
+      #{choiceText01},
+      #{choiceText02},
+      #{choiceText03},
+      #{choiceText04},
+      #{createUser.id},
+      #{createDate},
+      #{updateUser.id},
+      #{updateDate},
+      '0',
+      '预留字段'
+     )
+
+    </insert>
+
+
+</mapper>
