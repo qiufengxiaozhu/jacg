@@ -1,3 +1,4 @@
+/*
 package com.zte.zudp.admin.info.warning.service;
 
 import com.zte.zudp.admin.common.persistence.service.BusinessService;
@@ -18,3 +19,4 @@ public class WarningService extends BusinessService<Options> {
         return optionDao.addOption(t);
     }
 }
+*/

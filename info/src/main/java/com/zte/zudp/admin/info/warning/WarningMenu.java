@@ -1,3 +1,4 @@
+/*
 package com.zte.zudp.admin.info.warning;
 
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
@@ -11,3 +12,4 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WarningMenu {
 
 }
+*/

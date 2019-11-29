@@ -1,3 +1,4 @@
+<#--
 <!DOCTYPE>
 <html>
 <head>
@@ -40,11 +41,11 @@
                                 新建
                             </button>&nbsp;&nbsp;
                         </@hasPermission>
-                        <#--<@hasPermission name="oaManager:post:batchDelete">-->
+                        &lt;#&ndash;<@hasPermission name="oaManager:post:batchDelete">&ndash;&gt;
                             <button class='btn btn-success btn-danger' id="delete-items">
                                 批量删除
                             </button>
-                        <#--</@hasPermission>-->
+                        &lt;#&ndash;</@hasPermission>&ndash;&gt;
                         <div class='querybtn my-querybtn'>
                             <input type='text' name='search' id='search_name' placeholder='请输入位置' class='form-control search-input'>
                             <button class='btn btn-primary mgl my-mgl research-btn' >
@@ -76,7 +77,7 @@
     </div>
 </div>
 
-<#--以下是模态框-->
+&lt;#&ndash;以下是模态框&ndash;&gt;
 <div class="modal inmodal fade modal-form" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -87,7 +88,7 @@
             </div>
             <small class="font-bold">
                 <div class="modal-body fix-height" style="height: 350px">
-                    <#--表单-->
+                    &lt;#&ndash;表单&ndash;&gt;
                     <form class="form-horizontal" id="kind_form">
                         <input type="hidden" name="id" id="id">
 
@@ -327,3 +328,4 @@
 </script>
 </body>
 </html>
+-->
