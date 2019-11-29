@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@EndpointModule(id="reportManage",name = "公众上报管理",icon = "home")
+@EndpointModule(id="reportManage",name = "公众上报管理", order = 2,icon = "home")
 @RequestMapping("/reportMenu")
 public class ReportMenu {
 

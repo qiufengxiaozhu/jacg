@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.dynamicpush.dao.DynamicPushDao">
+    <resultMap id="dynamicPushMap" type="DynamicPush">
+        <id column="id" property="id"/>
+        <result column="create_date" property="createDate"/>
+        <result column="create_user" property="createUser.id"/>
+        <result column="update_user" property="updateUser.id"/>
+        <result column="update_date" property="updateDate"/>
+        <result column="del" property="del"/>
+        <result column="push_type" property="pushType"/>
+        <result column="title" property="title"/>
+        <result column="author" property="author"/>
+        <result column="pubdate" property="pubdate"/>
+        <result column="push_status" property="pushStatus"/>
+        <result column="content" property="content"/>
+    </resultMap>
+
+    <select id="findList" resultMap="dynamicPushMap">
+        select *
+        from msq_dynamic_push
+        where del=0
+        <if test="title!=null and title!=''">
+            and title like concat('%', #{title}, '%')
+        </if>
+        <if test="pushType!=null and pushType!=''">
+            and push_type like concat('%', #{pushType}, '%')
+        </if>
+        ORDER BY id desc
+    </select>
+
+    <select id="get" resultMap="dynamicPushMap">
+        select *
+        from msq_dynamic_push
+        where id=#{id}
+    </select>
+    <update id="update">
+        UPDATE msq_dynamic_push m SET
+        m.push_type = #{pushType},
+        m.title= #{title},
+        m.author = #{author},
+        m.content=#{content},
+        m.update_user = #{updateUser.id}
+        WHERE m.id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE msq_dynamic_push
+        SET del = 1
+        WHERE id = #{id}
+    </update>
+
+    <update id="batchDelete">
+        UPDATE msq_dynamic_push SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </update>
+</mapper>
