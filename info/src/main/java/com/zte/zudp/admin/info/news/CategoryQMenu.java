@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 //@EndpointModule(id = "Manager", name = "新闻列表管理",parent =  MainMenu.class, order = 1028 ,icon = "cogs")
 @RequestMapping("/category")
-public class CategoryMenu {
+public class CategoryQMenu {
 
     @Menu
     @GetMapping("/categorylist")
