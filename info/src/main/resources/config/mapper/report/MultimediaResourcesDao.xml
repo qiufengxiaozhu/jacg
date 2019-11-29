@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.report.dao.MultimediaResourcesDao">
+    <resultMap id="multimediaResourcesMap" type="MultimediaResources">
+        <id column="id" property="id"/>
+        <result column="create_date" property="createDate"/>
+        <result column="create_user" property="createUser.id"/>
+        <result column="update_user" property="updateUser.id"/>
+        <result column="update_date" property="updateDate"/>
+        <result column="del" property="del"/>
+        <result column="image" property="image"/>
+        <result column="video" property="video"/>
+        <result column="sound" property="sound"/>
+    </resultMap>
+
+    <select id="get" resultMap="multimediaResourcesMap">
+        select *
+        from msq_multimedia
+        where id=#{id}
+    </select>
+
+    <update id="delete">
+        UPDATE msq_multimedia
+        SET del = 1
+        WHERE id = #{id}
+    </update>
+
+    <update id="batchDelete">
+        UPDATE msq_multimedia SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </update>
+</mapper>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.report.dao.ReportDao">
+    <resultMap id="reportMap" type="Report">
+        <id column="id" property="id"/>
+        <result column="create_date" property="createDate"/>
+        <result column="create_user" property="createUser.id"/>
+        <result column="update_user" property="updateUser.id"/>
+        <result column="update_date" property="updateDate"/>
+        <result column="del" property="del"/>
+        <result column="case_type" property="caseType"/>
+        <result column="location" property="location"/>
+        <result column="coordinate" property="coordinate"/>
+        <result column="description" property="description"/>
+        <result column="nick_name" property="nickName"/>
+    </resultMap>
+
+    <select id="findList" resultMap="reportMap">
+        select *
+        from msq_report
+        where del=0
+        <if test="location!=null and location!=''">
+            and location like concat('%', #{location}, '%')
+        </if>
+        <if test="caseType!=null and caseType!=''">
+            and case_type like concat('%', #{caseType}, '%')
+        </if>
+        ORDER BY id desc
+    </select>
+
+    <select id="get" resultMap="reportMap">
+        select *
+        from msq_report
+        where id=#{id}
+    </select>
+
+    <update id="delete">
+        UPDATE msq_report
+        SET del = 1
+        WHERE id = #{id}
+    </update>
+
+    <update id="batchDelete">
+        UPDATE msq_report SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </update>
+</mapper>
