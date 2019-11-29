@@ -111,6 +111,7 @@ function initForm(obj){
         for (var i = 0; i < obj.disabledName.length; i++) {
             $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
                 .attr("disabled", true);
+            $("#calendar_btn").disabled=true;
         }
     });
      //详情

@@ -506,7 +506,7 @@ var zudp = {
     template: {
         detailBtn: '<button class="btn btn-info btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>',
         editBtn: '<button class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>',
-        delBtn: '<button class="btn btn-danger btn-sm row-delete mgl my-mgl" value="{id}"><i class="fa fa-close"></i>删除</button>&nbsp;&nbsp;'
+        delBtn: '<button class="btn btn-danger btn-sm row-delete mgl my-mgl" value="{id}"><i class="fa fa-close"></i>删除</button>&nbsp;&nbsp;',
     },
     data: {
         table: {}
@@ -1748,6 +1748,7 @@ zudp.component.initCURD = (function () {
                     $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
                         .attr("disabled", true);
                 }
+
             });
             //校验保存
             var msgSuccess = zudp.util.render(obj.success, {"msg": "成功"});
@@ -1772,8 +1773,10 @@ zudp.component.initCURD = (function () {
                 } else {
                     window.e.cancelBubble = true;
                 }
+
                 $(".modal-form").modal("show");
                 $(".modal-form").addClass("detail-form").removeClass("create-form edit-form");
+
                 var detailData = dataTable.row($(this).parents('tr')).data();
                 dataEcho(obj.formId,detailData);
                 obj.callback.detail(detailData);
