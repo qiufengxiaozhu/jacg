@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.queinvest.dao.QueinvestDao">
+
+    <!--<resultMap type="com.zte.zudp.admin.info.queinvest.entity.Queinvest" id="queinvestMap">-->
+        <!--<id column="id" property="id"/>-->
+        <!--<result column="create_date" property="createDate" />-->
+        <!--<result column="create_user" property="createUser.id" />-->
+        <!--<result column="update_date" property="updateDate" />-->
+        <!--<result column="update_user" property="updateUser.id" />-->
+        <!--<result column="del" property="del" />-->
+
+        <!--<result column="title" property="title" />-->
+        <!--<result column="description" property="description" />-->
+        <!--<result column="valid" property="valid" />-->
+        <!--<result column="status" property="status" />-->
+        <!--<result column="queinvestType" property="queinvestType" />-->
+
+    <!--</resultMap>-->
+
+
+    <!--新建问卷-->
+    <insert id="insert" >
+     insert into jacg_queinvest
+        (id,
+        title,
+        description,
+        create_user,
+        create_date,
+        update_user,
+        update_date,
+        del,
+        valid,
+        status)
+    VALUES
+    ( #{id},
+      #{title},
+      #{description} ,
+      #{createUser.id},
+      #{createDate},
+      #{updateUser.id},
+      #{updateDate},
+      '0',
+      '30',
+      '0'
+     );
+
+
+
+    </insert>
+
+    <!--查询所有   显示所有的问卷的题目和描述-->
+    <select id="findList" resultType="com.zte.zudp.admin.info.queinvest.entity.Queinvest">
+        SELECT
+        t1.id id,
+        t1.title title,
+        t1.`description` description,
+
+        t1.valid valid,
+        t1.status status,
+        /*问卷类型*/
+        t2.label  queinvestType
+
+        FROM `jacg_queinvest` t1
+        left join sys_dict t2 on t1.queinvestType = t2.value and t2.type = 'queinvestType' /*字典项*/
+
+        where t1.del!=1
+        <if test="title!=null and title!=''">
+            and `title` like concat('%', #{title}, '%')
+        </if>
+
+    </select>
+
+    <!--编辑-->
+    <update id="update">
+       update jacg_queinvest t1 set
+        t1.title = #{title},
+        t1.description = #{description},
+        t1.update_date = #{updateDate},
+        t1.update_user = #{updateUser.id}
+
+        where t1.id=#{id}
+    </update>
+
+    <!--删除-->
+    <delete id="delete">
+    UPDATE jacg_queinvest
+    SET del = 1
+    WHERE id = #{id}
+    </delete>
+
+
+    <!--批量删除-->
+    <delete id="batchDelete">
+    UPDATE jacg_queinvest SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+
+    </delete>
+
+    <!--数据回显-->
+    <select id="get" resultType="com.zte.zudp.admin.info.queinvest.entity.Queinvest">
+         SELECT
+        t1.id id,
+        t1.title title,
+        t1.`description` description,
+        t1.queinvestType queinvestType
+
+        FROM `jacg_queinvest` t1
+
+        where t1.id=#{id}
+    </select>
+
+    <!--问卷类型下拉-->
+    <select id="getList" resultType="com.zte.zudp.admin.info.queinvest.entity.Dictionary" >
+         select t1.label  from sys_dict t1 where  t1.type = "queinvestType"
+    </select>
+
+   <!-- <select id="getOneType" resultType="com.zte.zudp.admin.info.queinvest.entity.Queinvest" >
+        SELECT queinvestType from jacg_queinvest where id =#{id}
+    </select>-->
+
+
+
+
+
+
+
+
+    <!--<select id="checkName" resultType="java.lang.Integer">-->
+    <!--SELECT COUNT(1) FROM oa_post-->
+    <!--WHERE del =  '0'-->
+    <!--AND `name` = #{name}-->
+    <!--<if test="id!=null and id !=''">-->
+    <!--AND id != #{id}-->
+    <!--</if>-->
+    <!--</select>-->
+    <!--<select id="checkIdentification" resultType="java.lang.Integer">-->
+    <!--SELECT COUNT(1) FROM oa_post-->
+    <!--WHERE del = '0'-->
+    <!--AND identification = #{identification}-->
+    <!--<if test="id!=null and id !=''">-->
+    <!--AND id != #{id}-->
+    <!--</if>-->
+    <!--</select>-->
+
+    <!--<insert id="insert">-->
+    <!--INSERT INTO oa_post (-->
+    <!--id, name,mark,-->
+    <!--create_date,-->
+    <!--create_user,-->
+    <!--update_date,-->
+    <!--update_user,-->
+    <!--del,-->
+    <!--identification-->
+    <!--)-->
+    <!--VALUE (-->
+    <!--#{id}, #{name}, #{mark},-->
+    <!--#{createDate},-->
+    <!--#{createUser.id},-->
+    <!--#{updateDate},-->
+    <!--#{updateUser.id},-->
+    <!--'0',-->
+    <!--'111'-->
+    <!--)-->
+    <!--</insert>-->
+    <!--<update id="update" parameterType="com.zte.zudp.admin.modules.mm.entity.PostEntity">-->
+    <!--UPDATE oa_post m SET-->
+    <!--m.name = #{name},-->
+    <!--m.mark = #{mark},-->
+    <!--m.update_date = #{updateDate},-->
+    <!--m.update_user = #{updateUser.id}-->
+    <!--&lt;!&ndash;  m.identification = #{identification} &ndash;&gt;-->
+    <!--WHERE m.id = #{id}-->
+    <!--</update>-->
+
+    <!--<delete id="delete">-->
+    <!--UPDATE oa_post-->
+    <!--SET del = 1-->
+    <!--WHERE id = #{id}-->
+    <!--</delete>-->
+    <!--<delete id="batchDelete">-->
+    <!--UPDATE oa_post SET del = 1-->
+    <!--WHERE id IN-->
+    <!--<foreach collection="array" item="i" separator="," open="(" close=")">-->
+    <!--#{i}-->
+    <!--</foreach>-->
+    <!--</delete>-->
+</mapper>
