@@ -201,7 +201,10 @@
 
 
     <!--题目类型下拉-->
-    <select id="getList" resultType="com.zte.zudp.admin.info.queinvest.entity.Questions" >
-        select DISTINCT(questionType) from jacg_questions
+    <select id="getList" resultType="com.zte.zudp.admin.info.queinvest.entity.Dictionary" >
+         select
+         t1.label,
+         t1.value
+        from sys_dict t1 where  t1.type = "questionType"
     </select>
 </mapper>

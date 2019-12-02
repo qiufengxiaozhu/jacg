@@ -343,14 +343,8 @@
             }
         });*/
             //校验保存
-            /*var msgSuccess = zudp.util.render(obj.success, {"msg": "成功"});*/
-//            alert(1);
             $(document).on("click", ".test-form #test-save-btn", function () {
-                alert(1);
                 var data = zudp.util.formData2json("form");
-                alert(data + (typeof data));
-                alert(JSON.stringify(data));
-//                exit(0);
 
                 zudp.ajax("/api/option/addOption").post(data).then(function (value) {
 //                    if (value.size >=0 ) {
@@ -435,9 +429,11 @@
                             } else { //不添加 添加选项按钮
 
                                 // 编辑
-                            <@hasPermission name="queManager:questionManager:question:update">
-                                editStr = zudp.template.editBtn;
-                            </@hasPermission>
+                            <#--<@hasPermission name="queManager:questionManager:question:update">-->
+                                <#--editStr = zudp.template.editBtn;-->
+                            <#--</@hasPermission>-->
+                                editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
+
 
                             <@hasPermission name="queManager:questionManager:question:update ">
                                 delStr = zudp.template.delBtn;
@@ -507,19 +503,17 @@
 
     // 获取问卷类型的下拉框
     function getAllType(obj) {
-        var str = $(obj).parent().prev().prev().text();
-//        alert(str);
+        // 获取到问卷类型
+        var str = $(obj).parent().prev().text();
+        // 本条记录的id值
         var idstr = $(obj).val();
 
         var typeId = "";
 
-//        alert(idstr);
-//        alert(str);
         if (str != "") {
             // 查询单个
             zudp.ajax("/api/question/getOneType?id=" + idstr).get().then(function (value) {
-                typeId = value.queinvestType;
-//                alert(categoryId);
+                typeId = value.questionType;
             });
         }
         // 下拉的id -->categor
@@ -529,26 +523,24 @@
 //           $("#department").append("<option value='" + "'>" + "全部" + "</option>");
             for (var k = 0; k < value.length; k++) {
 
-                if (value[k].questionType  == null) {
-                    value[k].questionType = "";
+                if (value[k].label  == null) {
+                    value[k].label = "";
                 }else{
                     if (typeId != "") {
-                        if (value[k].questionType == typeId) {
-                            $("#category").append("<option value='" + value[k].questionType + "' selected='selected'>" + value[k].questionType+ "</option>");
+                        if (value[k].value == typeId) {
+                            $("#category").append("<option value='" + value[k].value + "' selected='selected'>" + value[k].label+ "</option>");
                         } else {
-                            $("#category").append("<option value='" + value[k].questionType+ "'>" + value[k].questionType  + "</option>");
+                            $("#category").append("<option value='" + value[k].value+ "'>" + value[k].label  + "</option>");
                         }
                     } else {
-                        $("#category").append("<option value='" + value[k].questionType+ "'>" + value[k].questionType  + "</option>");
+                        $("#category").append("<option value='" + value[k].value+ "'>" + value[k].label  + "</option>");
                     }
                 }
             }
-        }, function (reason) {
+        },function (reason) {
             zudp.plugin.dialog("error").alert("获取用户列表失败！", "提示");
         });
     };
-
-
 
 
     function initUpload(){

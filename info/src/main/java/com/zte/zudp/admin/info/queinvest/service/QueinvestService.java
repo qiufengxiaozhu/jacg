@@ -3,7 +3,9 @@ package com.zte.zudp.admin.info.queinvest.service;
 import com.zte.zudp.admin.common.persistence.service.BusinessService;
 import com.zte.zudp.admin.info.queinvest.dao.QueinvestDao;
 import com.zte.zudp.admin.info.queinvest.dao.QuestionDao;
+import com.zte.zudp.admin.info.queinvest.entity.Dictionary;
 import com.zte.zudp.admin.info.queinvest.entity.Queinvest;
+import com.zte.zudp.admin.info.queinvest.entity.Questions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional(readOnly = true, rollbackFor = Exception.class)
+@Transactional
 public class QueinvestService extends BusinessService<Queinvest> {
 
 
@@ -21,9 +23,35 @@ public class QueinvestService extends BusinessService<Queinvest> {
      *  下拉 问卷类型
      * @return
      */
-    public List<Queinvest> getList() {
+    public List<Dictionary> getList() {
         return queinvestDao.getList();
     }
 
 
+    public List<Questions> addQuestion() {
+        return queinvestDao.addQuestion();
+    }
+
+    public void updateQuestion(String idJson) {
+        queinvestDao.updateQuestion(idJson);
+    }
+
+    /**
+     * 发布
+     * @param id
+     */
+    public void updateStatus(String id) {
+        queinvestDao.updateStatus(id);
+    }
+    /**
+     * 撤销发布
+     * @param id
+     */
+    public void updateStatus02(String id) {
+        queinvestDao.updateStatus02(id);
+    }
+
+    public List<Questions> findAllQuestion(String id) {
+      return   queinvestDao.findAllQuestion(id);
+    }
 }

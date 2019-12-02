@@ -26,6 +26,7 @@
         (id,
         title,
         description,
+        queinvestType,
         create_user,
         create_date,
         update_user,
@@ -36,7 +37,8 @@
     VALUES
     ( #{id},
       #{title},
-      #{description} ,
+      #{description},
+      #{queinvestType},
       #{createUser.id},
       #{createDate},
       #{updateUser.id},
@@ -76,6 +78,7 @@
     <update id="update">
        update jacg_queinvest t1 set
         t1.title = #{title},
+        t1.queinvestType = #{queinvestType},
         t1.description = #{description},
         t1.update_date = #{updateDate},
         t1.update_user = #{updateUser.id}
@@ -116,12 +119,48 @@
 
     <!--问卷类型下拉-->
     <select id="getList" resultType="com.zte.zudp.admin.info.queinvest.entity.Dictionary" >
-         select t1.label  from sys_dict t1 where  t1.type = "queinvestType"
+         select
+         t1.label,
+         t1.value
+        from sys_dict t1 where  t1.type = "queinvestType"
     </select>
 
-   <!-- <select id="getOneType" resultType="com.zte.zudp.admin.info.queinvest.entity.Queinvest" >
-        SELECT queinvestType from jacg_queinvest where id =#{id}
-    </select>-->
+<!--查询出所有的题目-->
+    <select id="addQuestion" resultType="com.zte.zudp.admin.info.queinvest.entity.Questions">
+         select
+          t1.id id,
+          t1.contents contents
+        from jacg_questions t1
+    </select>
+
+
+<!--往问卷中添加题目   即是修改关联的外键的值即可-->
+    <update id="updateQuestion">
+        update jacg_questions t1 set t1.queinvest_id = #{idJson}
+    </update>
+
+    <!--发布   发布状态-->
+    <update id="updateStatus">
+        update `jacg_queinvest` t1 set t1.status = '2'
+    </update>
+
+    <!--撤销发布  未发布状态-->
+    <update id="updateStatus02">
+        update `jacg_queinvest` t1 set t1.status = '1'
+    </update>
+
+
+    <select id="findAllQuestion" resultType="com.zte.zudp.admin.info.queinvest.entity.Questions">
+        select
+        t1.id id,
+        t1.contents contents
+        from jacg_questions t1
+        where t1.id =#{id}
+
+    </select>
+    <!-- <select id="getOneType" resultType="com.zte.zudp.admin.info.queinvest.entity.Queinvest" >
+         SELECT queinvestType from jacg_queinvest where id =#{id}
+     </select>-->
 
 
 
