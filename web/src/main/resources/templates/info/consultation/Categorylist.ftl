@@ -220,7 +220,7 @@
 <script>
 
     var dataTable;
-    var urlstr="/api/category";
+    var urlstr="/api/consultCategory";
     var formIdStr="#kind_form";
     var sys_url=window.location.host;
     $(document).ready(function () {
@@ -258,7 +258,7 @@
     //列表数据初始化方法
     function findList() {
 
-        var urls="/api/category";
+        var urls="/api/consultCategory";
         dataTable=zudp.plugin.table('#post-list-table')
             .url(urls)
             .search(function () {
