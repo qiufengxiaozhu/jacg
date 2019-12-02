@@ -119,14 +119,14 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">咨询内容：</label>
                             <div class="col-sm-6">
-                                <textarea  class="form-control" rows="2" cols="" name="content" id="content"></textarea>
+                                <textarea placeholder="咨询内容" class="form-control" rows="2" cols="" name="content" id="content"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">回复内容：</label>
                             <div class="col-sm-6">
-                                <textarea class="form-control" rows="2" cols="" name="reply" id="reply"></textarea>
+                                <textarea placeholder="回复内容" class="form-control" rows="2" cols="" name="reply" id="reply"></textarea>
                             </div>
                         </div>
 
@@ -272,7 +272,7 @@
         var ca=$(obj).parent().prev().prev().html();
         //$("#categoryId").find("option").remove();
         $("#categoryId").html("");
-        zudp.ajax("/api/category/clist").get().then(function (value) {
+        zudp.ajax("/api/consultCategory/clist").get().then(function (value) {
 
             $("#categoryId").append("<option value='"+ "'>"+ "全部"+"</option>");
             for (var k = 0; k < value.length; k++) {
