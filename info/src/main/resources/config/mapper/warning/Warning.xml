@@ -112,7 +112,7 @@
 
     <!--解除报警-->
     <update id="updateStatus">
-        update jacg_warning t1 set status = '1'
+        update jacg_warning t1 set status = '1' where t1.id = #{id}
     </update>
 
 

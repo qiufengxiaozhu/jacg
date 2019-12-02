@@ -29,12 +29,12 @@ public interface QueinvestDao extends AbstractDao<Queinvest> {
      * 发布
      * @param id
      */
-    void updateStatus(String id);
+    void updateStatus(@Param("id")String  id);
     /**
      * 撤销发布
      * @param id
      */
-    void updateStatus02(String id);
+    void updateStatus02(@Param("id")String id);
 
     List<Questions> findAllQuestion(String id);
 }
