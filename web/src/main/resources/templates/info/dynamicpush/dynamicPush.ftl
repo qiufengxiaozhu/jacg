@@ -123,7 +123,11 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label">推送状态：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="pushStatus" class="form-control">
+                            <select class="form-control" name="pushStatus">
+                                <option value="0">临时</option>
+                                <option value="1">已发布</option>
+                                <option value="2">下架</option>
+                            </select>
                             </div>
                         </div>
 
