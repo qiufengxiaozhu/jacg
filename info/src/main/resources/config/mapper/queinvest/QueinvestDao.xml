@@ -141,12 +141,12 @@
 
     <!--发布   发布状态-->
     <update id="updateStatus">
-        update `jacg_queinvest` t1 set t1.status = '2'
+        update `jacg_queinvest` t1 set t1.status = '2' where t1.id =#{id}
     </update>
 
     <!--撤销发布  未发布状态-->
     <update id="updateStatus02">
-        update `jacg_queinvest` t1 set t1.status = '1'
+        update `jacg_queinvest` t1 set t1.status = '1' where t1.id = #{id}
     </update>
 
 

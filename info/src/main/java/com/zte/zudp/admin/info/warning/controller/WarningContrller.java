@@ -27,7 +27,7 @@ public class WarningContrller extends AbstractCRUDController<Warning>{
     @PostMapping(value = "/updateStatus")
     @EndpointRest(id = "updateStatus", name = "", authorizedType = AuthorizedType.GUEST)
 
-    public void updateStatus(String id){
+    public void updateStatus(@RequestBody String id){
         warningService.updateStatus(id);
     }
 

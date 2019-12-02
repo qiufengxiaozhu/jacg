@@ -110,7 +110,7 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
     @PostMapping(value = "/updateStatus")
     @EndpointRest(id = "updateStatus", name = "", authorizedType = AuthorizedType.GUEST)
 
-    public void updateStatus(String id){
+    public void updateStatus(@RequestBody String id){
         queinvestService.updateStatus(id);
     }
 
@@ -135,7 +135,7 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
     @PostMapping(value = "/findAllQuestion")
     @EndpointRest(id = "findAllQuestion", name = "", authorizedType = AuthorizedType.GUEST)
 
-    public List<Questions> findAllQuestion(String id){
+    public List<Questions> findAllQuestion(@RequestBody String id){
        return  queinvestService.findAllQuestion(id);
     }
 
