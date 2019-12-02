@@ -1,4 +1,4 @@
-package com.zte.zudp.admin.info.complain.entity;
+package com.zte.zudp.admin.info.total.entity;
 
 import com.zte.zudp.admin.common.persistence.entity.DataEntity;
 
@@ -7,7 +7,7 @@ import com.zte.zudp.admin.common.persistence.entity.DataEntity;
  * @Author TotalEntity
  * @Date 2019/11/26 10:09
  **/
-public class ComplainEntity extends DataEntity {
+public class TotalEntity extends DataEntity {
 
     /**
      * department 部门名称
