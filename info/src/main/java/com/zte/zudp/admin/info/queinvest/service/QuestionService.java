@@ -2,6 +2,7 @@ package com.zte.zudp.admin.info.queinvest.service;
 
 import com.zte.zudp.admin.common.persistence.service.BusinessService;
 import com.zte.zudp.admin.info.queinvest.dao.QuestionDao;
+import com.zte.zudp.admin.info.queinvest.entity.Dictionary;
 import com.zte.zudp.admin.info.queinvest.entity.Queinvest;
 import com.zte.zudp.admin.info.queinvest.entity.Questions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class QuestionService extends BusinessService<Questions> {
      *
      * @return
      */
-    public List<Questions> getList() {
+    public List<Dictionary> getList() {
         return  questionDao.getList();
     }
 }

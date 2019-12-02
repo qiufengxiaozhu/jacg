@@ -128,24 +128,6 @@
                             </div>
                         </div>
 
-                    <#--<div class="form-group">-->
-                    <#--<label class="col-sm-3 control-label my-control-label ">岗位标识：</label>-->
-                    <#--<div class="col-sm-6">-->
-                    <#--<input type="text" name="identification" maxlength="64" id="identification" placeholder="岗位标识" class="form-control">-->
-                    <#--</div>-->
-                    <#--<div>-->
-                    <#--<i class="i_context my-i_context">*</i>-->
-                    <#--</div>-->
-                    <#--</div>-->
-                    <#--<div class="form-group">-->
-                    <#--<label class="col-sm-3 control-label my-control-label">描述：</label>-->
-                    <#--<div class="col-sm-6">-->
-                    <#--<textarea class="form-control" rows="5" cols="" name="mark" id="mark"></textarea>-->
-                    <#--</div>-->
-
-                    <#--</div>-->
-
-
                     </form>
                 </div>
 
@@ -163,30 +145,30 @@
     </small>
 </div>
 
-
-
-
-
-<#--添加题目 模态框-->
-
+<#--往问卷中添加题目 模态框-->
 <div class="modal inmodal fade modal-form-content" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <table id="list-table" class="table my-table table-bordered dataTables-example">
-                    <thead>
-                    <tr>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">添加</h4>
+            </div>
+            <small class="font-bold">
+                <div class="modal-body fix-height" style="height: 350px">
+                <#--表单-->
+                    <input type="hidden" id="add-type" class ="test001">
+                    <table id="dataList" class="table my-table table-bordered dataTables-example">
+                        <thead>
+                        <tr>
+                            <th ># </th>
+                            <th >题目名称</th>
+                        </tr>
+                        <thead>
+                </div>
 
-                        <th>题目内容</th>
-                        <th>题目类型</th>
-                        <th>选中</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
                 <div class="modal-footer">
-                    <input type="hidden" id="add-type">
+
                     <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
                     <button type="button" class="btn btn-primary" id="test-save-btn">保存</button>
                 </div>
@@ -198,11 +180,6 @@
     <small class="font-bold">
     </small>
 </div>
-
-
-
-
-
 
 
 
@@ -232,75 +209,6 @@
     var formIdStr="#post_form";
     var sys_url=window.location.host;
     $(document).ready(function () {
-
-//        $("#post_form").validate({
-//            rules: {
-//                name:{
-//                    required:true,
-//                    remote: {
-//                        url:"/api/post/checkName",
-//                        type:"get",
-//                        data: {
-//                            "name":function () {
-//                                return $("#name").val();
-//                            },
-//                            "id":function () {
-//                                return $("#id").val();
-//                            }
-//                        },
-//                        dataFilter: function(data, type) {
-//                            var da=JSON.parse(data).data;
-//                            if(zudp.util.isBoolean(da)){
-//                                return da;
-//                            }else{
-//                                return false;
-//                            }
-//                        }
-//                    }
-//                },
-////                identification:{
-////                    required:true,
-////                    rangelength:[0,64],
-////                    remote: {
-////                        url:"/api/post/checkIdenty",
-////                        type:"get",
-////                        data: {
-////                            "identy":function () {
-////                                return $("#identification").val();
-////                            },
-////                            "id":function () {
-////                                return $("#id").val();
-////                            }
-////                        },
-////                        dataFilter: function(data, type) {
-////                            var da=JSON.parse(data).data;
-////                            if(zudp.util.isBoolean(da)){
-////                                return da;
-////                            }else{
-////                                return false;
-////                            }
-////                        }
-////                    }
-////                },
-//
-//                mark:{
-//                    rangelength:[0,1000]
-//                }
-//            },
-//            messages: {
-//                name: {
-//                    required: "请输入岗位名称",
-//                    remote: "岗位名称已存在"
-//                },
-////                identification: {
-////                    required: "请输入岗位标识",
-////                    remote: "岗位标识已存在"
-////                },
-//                mark: {
-//                    rangelength:"字符个数不能超过1000"
-//                }
-//            },ignore: []
-//        });
 
         findList();
 
@@ -388,25 +296,35 @@
                             var overviewStr="";
                             var publicStr="";
                             var unpublicStr="";
-
+                            // 判断状态来实现对按钮的隐藏和显示
+                            if(data.status == '0' || data.status == '1'){// 临时状态 未发布状态
                                 // 编辑
-                            <#--<@hasPermission name="queManager:queinvestManager:queinvest:update">-->
-                                <#--editStr=zudp.template.editBtn;-->
-                            <#--</@hasPermission>-->
                                 editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
-
-
-                        <@hasPermission name="queManager:queinvestManager:queinvest:delete ">
-                            delStr=zudp.template.delBtn;
-                        </@hasPermission>
+                                // 删除
+                                delStr=zudp.template.delBtn;
                                 //添加题目
-                            addStr='<button id="addQuestion_btn" class="btn btn-info btn-sm " data-toggle="modal_hjm" onclick="addQuestion()" value="{id}"><i class="fa fa-pencil"></i>添加题目</button>';
-                            overviewStr='<button class="btn btn-info btn-sm " data-toggle="modal_overview" onclick="overview()" value="{id}"><i class="fa fa-pencil"></i>预览</button>';
-                            publicStr='<button class="btn btn-info btn-sm " data-toggle="modal_public" onclick="public()" value="{id}"><i class="fa fa-pencil"></i>发布</button>';
-                            unpublicStr='<button class="btn btn-info btn-sm " data-toggle="modal_unpublic" onclick="unpublic()" value="{id}"><i class="fa fa-pencil"></i>撤销发布</button>';
+                                addStr='<button id="addStr" class="btn btn-info btn-sm " data-toggle="modal_hjm" value="{id}"><i class="fa fa-pencil"></i>添加题目</button>';
+                                // 发布
+                                publicStr= '<button id= "publishStr" class="btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>发布</button>';
+//                                publicStr='<button id="publishStr" class="btn btn-info btn-sm " data-toggle="modal_public"  value="{id}"><i class="fa fa-pencil"></i>发布</button>';
+                                // 预览
+                                overviewStr='<button id="overview" class="btn btn-info btn-sm " data-toggle="modal_overview" onclick="overview()" value="{id}"><i class="fa fa-pencil"></i>预览</button>';
+                                    // 编辑   删除   添加题目  预览     发布
+                                btn+=editStr+delStr+addStr+overviewStr+publicStr;
+                                return zudp.util.render(btn, row);
+                            }else { // 发布状态
+                                // 预览
+                                overviewStr='<button class="btn btn-info btn-sm " data-toggle="modal_overview" onclick="overview()" value="{id}"><i class="fa fa-pencil"></i>预览</button>';
+                                // 撤销发布
+                                unpublicStr= '<button id= "unpublishStr" class="btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>撤销发布</button>';
+//                                unpublicStr='<button class="btn btn-info btn-sm " data-toggle="modal_unpublic" onclick="unpublic()" value="{id}"><i class="fa fa-pencil"></i>撤销发布</button>';
+                                    // 预览        撤销发布
+                                btn+= overviewStr + unpublicStr;
+                                return zudp.util.render(btn, row);
 
-                            btn+=editStr+delStr+addStr+overviewStr+publicStr+unpublicStr;
-                            return zudp.util.render(btn, row);
+                            }
+
+
                             }
 
                         }
@@ -417,129 +335,60 @@
     }
 
 // 添加题目
-    $(document).on("click", '#addQuestion_btn', function (e) {  // addQuestion_btn --->btn id
-        //清除冒泡
-        if (e && e.stopPropagation) {
-            e.stopPropagation();
-        } else {
-            window.e.cancelBubble = true;
-        }
-        // 模态框的弹出
-        $(".modal-form-content").modal("show");  //  modal-form-content -->模态框  class
-        // 给模态框添加class --->add-form
-        $(".modal-form-content").addClass("add-form").removeClass("create-form detail-form");
-        // 清空输入框的
-//        zudp.plugin.form("#form").reset();
-
-        // 发送ajax请求  查询出所有的题目
-        zudp.ajax("/api/question/findList").post().then(function (value) {
-                alert(value);
-    });
-
-    /*
-    zudp.ajax(updateUrl).get("").then(function (data) {
-        dataEcho(obj.formId, data);
-    }, function (error) {
-    });*!/
-    //设置禁用
-    for (var i = 0; i < obj.disabledName.length; i++) {
-        $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
-            .attr("disabled", true);
-    }
-});*/
-    //校验保存  指向模态框的保存按钮   #test-save-btn-->保存按钮的id
-    $(document).on("click", ".add-form #test-save-btn", function () {
-//        alert(1);
-//        var data = zudp.util.formData2json("form");
-//        alert(data + (typeof data));
-
-        //将字符串转成json格式的字符串
-        alert(JSON.stringify(data));
-
-        zudp.ajax("/api/question/addQuestion").post(data).then(function (value) {
-//                    if (value.size >=0 ) {
-//                        zudp.plugin.dialog("success").alert("更新成功 ");
-            // 关闭模态框
-            $(".modal-form-content").modal("hide");
-//                    }
-        })
-    });
-
-    });
-
-
-    // 添加题目
-//    function addQuestion(obj) {
-//        //弹窗 模态框的弹出
-//        $(document).on("click", '#add_btn', function (e) { // button -->id
-//            //清除冒泡
-//            if (e && e.stopPropagation) {
-//                e.stopPropagation();
-//            } else {
-//                window.e.cancelBubble = true;
-//            }
-//            // 模态框的弹出
-//            $(".modal-form-content").modal("show");
-//            $(".modal-form-content").addClass("edit-form").removeClass("create-form detail-form");
-//
-//            /*
-//            zudp.ajax(updateUrl).get("").then(function (data) {
-//                dataEcho(obj.formId, data);
-//            }, function (error) {
-//            });*!/
-//            //设置禁用
-//            for (var i = 0; i < obj.disabledName.length; i++) {
-//                $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
-//                    .attr("disabled", true);
-//            }
-//        });*/
-//            //校验保存
-//            /*var msgSuccess = zudp.util.render(obj.success, {"msg": "成功"});*/
-//            $(document).on("click", ".edit-form #save-btn", function () {
-//
-////                var data = zudp.util.formData2json("form");
-//                zudp.ajax("/api/queinvest/findList").get().then(function (value) {
-//                    if (value == 1) {
-////                        zudp.plugin.dialog("success").alert("更新成功 ");
-//                        $(".modal-form-content").modal("hide");
-//                    }
-//                })
-//            })
-//
-//        });
-//        return this;
-//    };
-//
-//
-
-
-    // 审核功能
-//    function check(e){
+//    $(document).on("click", '#addQuestion_btn', function (e) {  // addQuestion_btn --->btn id
 //        //清除冒泡
 //        if (e && e.stopPropagation) {
 //            e.stopPropagation();
 //        } else {
 //            window.e.cancelBubble = true;
 //        }
-//        // 跳出浮态框
+//        // 模态框的弹出
+//        $(".modal-form-content").modal("show");  //  modal-form-content -->模态框  class
+//        // 给模态框添加class --->add-form
+//        $(".modal-form-content").addClass("add-form").removeClass("create-form detail-form");
+//        // 清空输入框的
+////        zudp.plugin.form("#form").reset();
 //
-//    }
+//        // 发送ajax请求  查询出所有的题目
+//        zudp.ajax("/api/question/findList").post().then(function (value) {
+//                alert(value);
+//    });
+//
+//
+//    //校验保存  指向模态框的保存按钮   #test-save-btn-->保存按钮的id
+//    $(document).on("click", ".add-form #test-save-btn", function () {
+////        alert(1);
+////        var data = zudp.util.formData2json("form");
+////        alert(data + (typeof data));
+//
+//        //将字符串转成json格式的字符串
+//        alert(JSON.stringify(data));
+//
+//        zudp.ajax("/api/question/addQuestion").post(data).then(function (value) {
+////                    if (value.size >=0 ) {
+////                        zudp.plugin.dialog("success").alert("更新成功 ");
+//            // 关闭模态框
+//            $(".modal-form-content").modal("hide");
+////                    }
+//        })
+//    });
+//
+//    });
+
 
     // 获取问卷类型的下拉框
     function getAllType(obj) {
+        // 获取到问卷类型
         var str = $(obj).parent().prev().prev().text();
-//        alert(str);
+        // 本条记录的id值
         var idstr = $(obj).val();
 
         var typeId = "";
 
-//        alert(idstr);
-//        alert(str);
         if (str != "") {
             // 查询单个
             zudp.ajax("/api/queinvest/getOneType?id=" + idstr).get().then(function (value) {
                 typeId = value.queinvestType;
-//                alert(categoryId);
             });
         }
         // 下拉的id -->categor
@@ -549,31 +398,139 @@
 //           $("#department").append("<option value='" + "'>" + "全部" + "</option>");
             for (var k = 0; k < value.length; k++) {
 
-                if (value[k].queinvestType  == null) {
-                    value[k].queinvestType = "";
+                if (value[k].label  == null) {
+                    value[k].label = "";
                 }else{
                     if (typeId != "") {
-                        if (value[k].id == typeId) {
-                            $("#category").append("<option value='" + value[k].id + "' selected='selected'>" + value[k].queinvestType+ "</option>");
+                        if (value[k].value == typeId) {
+                            $("#category").append("<option value='" + value[k].value + "' selected='selected'>" + value[k].label+ "</option>");
                         } else {
-                            $("#category").append("<option value='" + value[k].id+ "'>" + value[k].queinvestType  + "</option>");
+                            $("#category").append("<option value='" + value[k].value+ "'>" + value[k].label  + "</option>");
                         }
                     } else {
-                        $("#category").append("<option value='" + value[k].id+ "'>" + value[k].queinvestType  + "</option>");
+                        $("#category").append("<option value='" + value[k].value+ "'>" + value[k].label  + "</option>");
                     }
                 }
             }
-        }, function (reason) {
+        },function (reason) {
             zudp.plugin.dialog("error").alert("获取用户列表失败！", "提示");
         });
     };
 
+    //添加题目到问卷中       弹出可以选择题目的页面
+    $(document).on("click", '#addStr', function (e) {
+        //清除冒泡
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        } else {
+            window.e.cancelBubble = true;
+        }
+//        var id = $("#row-add-test").val();
+        // 模态框的弹出
+        $(".modal-form-content").modal("show");
+//
+
+        // 查询出所有的题目
+        zudp.ajax("/api/queinvest/addQuestion").post().then(function (value) {
+
+//
+            //获取到table
+            // 获取到所有的题目id值
+            var table = $("#dataList");//获取需要显示数据的table
+            for(var i=0;i<value.length ;i++){ //遍历数据
+                table.append(
+                        "<tr>"+
+                        '<td>'+'<input id="selall" type="checkbox" name ="checkBtn" class= "myChecked"  />' + '</td>'+
+                        "<td>"+value[i].contents+"</td>"
+                        +"<tr/>");
+            }
+
+            // 在模态框中，点击添加按钮，完成题目的导入，其实就是修改外键的值为问卷的id匹配上
+            $(document).on("click", '#test-save-btn', function (e) { // 模态框中的保存按钮
+                var idJson = $("#addStr").val(); // 获取到id值  问卷的id值
+//                alert(idJson);
+                // 遍历所有的复选框
+                var checks = document.getElementsByName("checkBtn");
+                // 所有被选中的复选框的对应的问题的id值
+                var idsJson = [];
+                for(var m = 0; m < value.length; m++){
+                    if(checks[m].checked){ //如果被选中
+                        // 往数组中添加被选中的问题的id值
+                        idsJson.push(value[m].id);
+                    }
+
+                }
+                //将id值传入到后端  实现问卷中添加题目的效果
+                zudp.ajax("/api/queinvest/updateQuestion").post(idJson).then(function (value) {
+                     // 关闭模态框
+                    $(".modal-form-content").modal("hide");
+                });
+
+
+            });
+
+        });
+
+
+    });
+
+    // 发布  改变状态为发布状态
+    $(document).on("click", '#publishStr', function (e) {
+
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        } else {
+            window.e.cancelBubble = true;
+        }
+        //获取到id
+        var id = $("#publishStr").val();
+
+        zudp.ajax("/api/queinvest/updateStatus").post(id).then(function (value) {
+            // 刷新页面
+            document.location.reload();
+        });
+    });
+
+    // 撤销发布
+    $(document).on("click", '#unpublishStr', function (e) {
+
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        } else {
+            window.e.cancelBubble = true;
+        }
+        //获取到id
+        var id = $("#update-btn").val();
+
+        zudp.ajax("/api/queinvest/updateStatus02").post(id).then(function (value) {
+            document.location.reload();
+        });
+    });
+
+
+    // 预览
+    //添加题目到问卷中       弹出可以选择题目的页面
+    $(document).on("click", '#overview', function (e) {
+        //清除冒泡
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        } else {
+            window.e.cancelBubble = true;
+        }
+//        var id = $("#row-add-test").val();
+        // 模态框的弹出
+        $(".modal-form-content").modal("show");
+
+        zudp.ajax("/api/queinvest/findAllQuestion").post(id).then(function (value) {
+            $(".modal-form-content").modal("hide");
+        });
+
+    });
+//
 
 
 
-
-
-
+     // 初始化上传
     function initUpload(){
 
         var uploader = WebUploader.create({
@@ -607,6 +564,18 @@
             //change(response);
         });
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 </body>

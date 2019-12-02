@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.warning.dao.WarningDao">
+
+    <resultMap type="com.zte.zudp.admin.info.warning.entity.Warning" id="warningMap">
+        <id column="id" property="id"/>
+        <result column="create_date" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="del" property="del" />
+
+        <result column="warningPosition" property="warningPosition" />
+        <result column="status" property="status" />
+        <result column="description" property="description" />
+
+
+
+    </resultMap>
+
+<!--添加-->
+    <insert id="insert" >
+        insert into jacg_warning
+        (id,
+        warningPosition,
+        description,
+        create_user,
+        create_date,
+        update_user,
+        update_date,
+        del,
+        status)
+        VALUES
+        ( #{id},
+        #{warningPosition},
+        #{description} ,
+        #{createUser.id},
+        #{createDate},
+        #{updateUser.id},
+        #{updateDate},
+        '0',
+        '0'
+        );
+
+
+
+    </insert>
+
+
+    <!--查询所有   显示所有的问卷的题目和描述-->
+    <select id="findList" resultMap="warningMap">
+        SELECT
+        t1.id id,
+        t1.warningPosition warningPosition,
+        t1.`description` description,
+        t1.status status
+
+
+        FROM jacg_warning t1
+
+        where t1.del!=1
+        <if test="warningPosition!=null and warningPosition!=''">
+            and `warningPosition` like concat('%', #{warningPosition}, '%')
+        </if>
+
+    </select>
+
+    <!--编辑-->
+    <update id="update">
+        update jacg_warning t1 set
+        t1.warningPosition = #{warningPosition},
+        t1.description = #{description},
+        t1.update_date = #{updateDate},
+        t1.update_user = #{updateUser.id}
+
+        where t1.id=#{id}
+    </update>
+
+
+    <!--删除-->
+    <delete id="delete">
+        UPDATE jacg_warning
+        SET del = 1
+        WHERE id = #{id}
+    </delete>
+
+
+    <!--批量删除-->
+    <delete id="batchDelete">
+        UPDATE jacg_warning SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+
+    </delete>
+
+    <!--数据回显-->
+    <select id="get" resultMap="warningMap">
+        SELECT
+        t1.id id,
+        t1.warningPosition warningPosition,
+        t1.`description` description
+
+        FROM `jacg_warning` t1
+
+        where t1.id=#{id}
+    </select>
+
+
+
+    <!--解除报警-->
+    <update id="updateStatus">
+        update jacg_warning t1 set status = '1'
+    </update>
+
+
+
+</mapper>

@@ -1,4 +1,3 @@
-<#--
 <!DOCTYPE>
 <html>
 <head>
@@ -41,13 +40,13 @@
                                 新建
                             </button>&nbsp;&nbsp;
                         </@hasPermission>
-                        &lt;#&ndash;<@hasPermission name="oaManager:post:batchDelete">&ndash;&gt;
+                        <#--<@hasPermission name="oaManager:post:batchDelete">-->
                             <button class='btn btn-success btn-danger' id="delete-items">
                                 批量删除
                             </button>
-                        &lt;#&ndash;</@hasPermission>&ndash;&gt;
+                        <#--</@hasPermission>-->
                         <div class='querybtn my-querybtn'>
-                            <input type='text' name='search' id='search_name' placeholder='请输入位置' class='form-control search-input'>
+                            <input type='text' name='warningPosition' id='search_name' placeholder='请输入位置' class='form-control search-input'>
                             <button class='btn btn-primary mgl my-mgl research-btn' >
                                 搜索
                             </button>&nbsp;&nbsp;
@@ -77,7 +76,7 @@
     </div>
 </div>
 
-&lt;#&ndash;以下是模态框&ndash;&gt;
+<#--以下是模态框-->
 <div class="modal inmodal fade modal-form" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -88,14 +87,14 @@
             </div>
             <small class="font-bold">
                 <div class="modal-body fix-height" style="height: 350px">
-                    &lt;#&ndash;表单&ndash;&gt;
+                    <#--表单-->
                     <form class="form-horizontal" id="kind_form">
                         <input type="hidden" name="id" id="id">
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">报警位置：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="warningPosition" maxlength="64" id="name" placeholder="种类名称" class="form-control">
+                                <input type="text" name="warningPosition" maxlength="64" id="name" placeholder="报警位置" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -106,7 +105,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">报警信息：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="description" maxlength="64" id="name" placeholder="种类名称" class="form-control">
+                                <input type="text" name="description" maxlength="64" id="name" placeholder="报警信息" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -153,7 +152,7 @@
 <script>
 
     var dataTable;
-    var urlstr="/api/category";
+    var urlstr="/api/warning";
     var formIdStr="#kind_form";
     var sys_url=window.location.host;
     $(document).ready(function () {
@@ -163,9 +162,9 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}种类",
-            success: "数据{msg}",
-            error: "数据{msg}",
+            title: "{type}",
+            success: "{msg}",
+            error: "{msg}",
             disabledName: ["type", 'value'],
             hideInputName:[],
             search: [".clear-input", "#search",".search-input"]
@@ -192,36 +191,53 @@
     //列表数据初始化方法
     function findList() {
 
-        var urls="/api/category";
+        var urls="/api/warning";
         dataTable=zudp.plugin.table('#post-list-table')
             .url(urls)
             .search(function () {
                 return {
-                    "name":$("#search_name").val()
+                    "warningPosition":$("#search_name").val()
 
                 }
             })
             .columns( [
                 {data: 'id', visible: false},
-                {data: 'name'},
 
+                {data: 'warningPosition'},
+                {data: 'description'},
+//                {data: 'status'}, {
+                {
+                    render: function (data, type, row) {
+            if(data.status == "0"){ // 报警
+                return "报警";
+            }
+            else if(data.status == "1"){
+                return "解除报警";
+            }
+        }
+    },
                 {
                     render: function (data, type, row) {
                         var btn = "";
                         var editstr="";
                         var  delstr="";
-                        <@hasPermission name="oaManager:post:update">
+                        var detailstr = "";
+                        var overWarningStr="";
+                        if(data.status == "0"){ //报警状态
+                            overWarningStr= '<button id= "update-btn" class="btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>解除报警</button>';
+                            detailstr=zudp.template.detailBtn;
+                            editstr=zudp.template.editBtn;
+                            delstr=zudp.template.delBtn;
+
+                            btn += editstr+delstr+detailstr+overWarningStr;
+                            return zudp.util.render(btn, row);
+                        }
+                        detailstr=zudp.template.detailBtn;
                         editstr=zudp.template.editBtn;
-                        </@hasPermission>
-
-                        <@hasPermission name="oaManager:post:delete">
                         delstr=zudp.template.delBtn;
-                        </@hasPermission>
-                        var addstr='<button onclick="add()" id="row-add-test" class="btn btn-info btn-sm  updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
 
-                        btn += editstr+delstr+addstr;
+                        btn += editstr+delstr+detailstr;
                         return zudp.util.render(btn, row);
-                        //return "";
                     }
                 }
             ])
@@ -229,18 +245,18 @@
 
     }
     /***************************************************************/
-    function add(obj) {
-        //弹窗
-        //var updateUrl ='';
-        $(document).on("click", '#row-add-test', function (e) {
-            //清除冒泡
-            if (e && e.stopPropagation) {
-                e.stopPropagation();
-            } else {
-                window.e.cancelBubble = true;
-            }
-            $(".modal-form-content").modal("show");
-            $(".modal-form-content").addClass("edit-form").removeClass("create-form detail-form");
+//    function add(obj) {
+//        //弹窗
+//        //var updateUrl ='';
+//        $(document).on("click", '#row-add-test', function (e) {
+//            //清除冒泡
+//            if (e && e.stopPropagation) {
+//                e.stopPropagation();
+//            } else {
+//                window.e.cancelBubble = true;
+//            }
+//            $(".modal-form-content").modal("show");
+//            $(".modal-form-content").addClass("edit-form").removeClass("create-form detail-form");
 
             /*updateUrl = obj.url + '/' + $(this).val();
             //修改标题
@@ -264,7 +280,7 @@
         });*/
         //校验保存
         /*var msgSuccess = zudp.util.render(obj.success, {"msg": "成功"});*/
-        $(document).on("click", ".edit-form #save-btn", function () {
+//        $(document).on("click", ".edit-form #save-btn", function () {
             /*if ($(obj.formId).valid()) {
                 var data = zudp.util.formData2json("form");
                 zudp.ajax(updateUrl).put(data).then(function () {
@@ -274,18 +290,37 @@
                 });
                 obj.callback.update(data);
             }*/
-            var data = zudp.util.formData2json("consult_form");
-            zudp.ajax("/api/consult/insert").post(data).then(function (value) {
-                if (value == 1) {
-                    /*zudp.plugin.dialog("success").alert("更新成功 "！", "提示");*/
-                    $(".modal-form-content").modal("hide");
-                }
-            })
-        })
+//            var data = zudp.util.formData2json("consult_form");
+//            zudp.ajax("/api/consult/insert").post(data).then(function (value) {
+//                if (value == 1) {
+//                    /*zudp.plugin.dialog("success").alert("更新成功 "！", "提示");*/
+//                    $(".modal-form-content").modal("hide");
+//                }
+//            })
+//        })
+//
+//        });
+//        return this;
+//    };
 
-        });
-        return this;
-    };
+/**
+ * 解除报警状态
+ * */
+$(document).on("click", '#update-btn', function (e) {
+
+    if (e && e.stopPropagation) {
+        e.stopPropagation();
+    } else {
+        window.e.cancelBubble = true;
+    }
+    //获取到id
+    var id = $("#update-btn").val();
+
+    zudp.ajax("/api/warning/updateStatus").post(id).then(function (value) {
+        document.location.reload();
+    });
+});
+    //
 
 
 
@@ -328,4 +363,3 @@
 </script>
 </body>
 </html>
--->
