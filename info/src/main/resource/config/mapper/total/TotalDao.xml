@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zte.zudp.admin.info.complain.dao.ComplainDao">
+<mapper namespace="com.zte.zudp.admin.info.total.dao.TotalDao">
 
-    <resultMap type="com.zte.zudp.admin.info.complain.entity.ComplainEntity" id="complainMap">
+    <resultMap type="com.zte.zudp.admin.info.total.entity.TotalEntity" id="totalMap">
         <id column="id" property="id"/>
         <result column="department" property="department" />
         <result column="topic" property="topic"/>
@@ -22,27 +22,21 @@
     </resultMap>
 
     <!-- select All 查询所有信息 -->
-    <select id="findList" resultMap="complainMap" useCache="false">
+    <select id="findList" resultMap="totalMap" useCache="false">
         select
-            z.id,
-            z.department,
-            z.topic,
-            z.type,
-            z.username,
-            z.tel,
-            z.comment,
-            z.reply,
-            z.reply_status,
-            z.total,
-            z.create_user,
-            z.create_date,
-            z.update_user,
-            z.update_date,
-            z.del
-        FROM
-            zzb_complain z
-        WHERE
+            id,
+            sum(total) as total,
+            tel,
+            username
+        from
+            zzb_complain
+        where
             del != 1
+        AND
+            tel != null
+        or
+            tel != ""
+        group by tel
         <if test="department != null and department != ''">
             and `department` like concat('%', #{department}, '%')
         </if>
@@ -136,7 +130,7 @@
     </delete>
 
     <!-- 点击编辑按钮 -->
-    <select id="get" resultMap="complainMap" >
+    <select id="get" resultMap="totalMap" >
         select
             z.id,
             z.department,
@@ -159,5 +153,20 @@
             z.del != 1
         AND
             id=#{id}
+    </select>
+
+    <select id="findTotal" resultMap="totalMap">
+        select
+            id,
+            sum(total) as total,
+            tel,
+            username
+        from
+            zzb_complain
+        where
+            tel != null
+        or
+            tel != ""
+        group by tel;
     </select>
 </mapper>
