@@ -1,0 +1,100 @@
+﻿html{height:100%;font-size: 24px}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, from, fieldset, legend, input, textarea, p, blockquote, th, td, header, hgroup, nav, section, article, aside, footer, figure, figcaption, menu, button { margin: 0; padding: 0; }
+body {height:100%; font-size: 1rem;font-family: "微软雅黑", Helvetica, STHeiTi, sans-serif; line-height: 1.5;color: #000; -webkit-user-select: none; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; outline: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+table { border-collapse: collapse; border-spacing: 0; }
+caption, th { text-align: left; }
+fieldset, img { border: 0; }
+img{width:100%;}
+li { list-style: none; }  
+ins { text-decoration: none; }  
+del { text-decoration: line-through; }
+input, button, textarea, select, optgroup, option { outline: 0;} 
+input{ -webkit-appearance: none;border:0;outline: none;} 
+input[type="checkbox"]{-webkit-appearance:checkbox;}
+a { -webkit-touch-callout: none; text-decoration: none; }
+em, i { font-style: normal;}
+
+select option{
+	-webkit-appearance: none;
+}
+select option:hover{
+	-webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+  color: #bbb; } 
+.clearfix:before{content: "";display: block;height: 0;clear: both;}
+.clearfix:after{content: "";display: block;height: 0;clear: both;}
+.flex { display: box; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; }
+.flex-1 { -webkit-box-flex: 1; -moz-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+.flex-2 { -webkit-box-flex: 2; -moz-box-flex: 2; -webkit-flex: 2; -ms-flex: 2; flex: 2; }
+/*row（默认值）：主轴为水平方向，起点在左端*/
+.flex-fx-r { -webkit-box-orient: horizontal;  /* 12版 */ -webkit-flex-direction: row; -moz-flex-direction: row; -ms-flex-direction: row; -o-flex-direction: row; flex-direction: row; }
+/*column：主轴为垂直方向，起点在上沿。*/
+.flex-fx-c { -webkit-box-orient: vertical; -webkit-flex-direction: column; -moz-flex-direction: column; -ms-flex-direction: column; -o-flex-direction: column; flex-direction: column; }
+/*center： 水平居中*/
+.flex-r-c { -webkit-box-pack: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; -o-justify-content: center; justify-content: center; }
+/*center： 垂直居中*/
+.flex-c-c { -webkit-box-align: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; -o-align-items: center; align-items: center; }
+/*wrap：元素换行*/
+.flex-wrap { -webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; -ms-flex-wrap: wrap; -o-flex-wrap: wrap; flex-wrap: wrap; }
+.flex-items-c { -webkit-align-content: center; -moz-align-content: center; -ms-align-content: center; -o-align-content: center; align-content: center; }
+.flex-align-self { -webkit-align-self: center; -moz-align-self: center; -ms-align-self: center; -o-align-self: center; -align-self: center; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: #bbb;}
+input:-moz-placeholder, textarea:-moz-placeholder {color:#bbb;}
+input::-moz-placeholder, textarea::-moz-placeholder {color:#bbb;}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #bbb;
+}
+@media screen and (min-width: 320px) {
+    body {
+        font-size:12px!important;
+    }
+}
+@media screen and (min-width: 360px) {
+    body {
+        font-size:14px!important;
+    }
+}
+
+input::-webkit-input-placeholder{
+    font-size:0.2rem;
+    color: #A6A4A6;
+}
+.container-app img{display: block;}
+.container-app{max-width: 640px;margin:0 auto;background-color:#fff;    min-height: 100vh;box-sizing: border-box; }
+.ja-login-top{background: url(../img/login-top.png) no-repeat;background-size: 100% auto;height: 8.7rem}
+.ja-logo{margin-top: 1.2rem;width: 2.74rem;height: 2.74rem}
+.lg-user{width:0.6rem;height:0.8rem;background: url(../img/user.png) center top no-repeat; background-size: 100% auto}
+.lg-pwd{width:0.6rem;height:0.8rem;background: url(../img/pwd.png) center top no-repeat; background-size: 100% auto}
+.login-group{width:80%;border-bottom:1px solid #d6d6d6;margin:0.3rem auto; height: 1.1rem}
+.forget-pwd{text-align: right;width: 80%;margin:0 auto;}
+.forget-pwd a{color:#989898;}
+.login-group .login-input{height: 0.8rem;margin-left: 0.25rem;font-size: 0.45rem}
+.btn{border-radius:6rem;height: 1.1rem;width:4rem;border:none;background:#4396FF;text-align: center;line-height:1.1rem;font-size: 0.4rem;color:#fff; }
+.btn.login-btn{background: linear-gradient(to right, #4949FF , #4396FF);width: 85%;margin:0.5rem auto;box-shadow: 0 3px 11px #93bff7}
+.regist-user{text-align: center;font-size: 0.35rem;color:#A4A4A4;}
+.regist-user a{color: #606EFE;margin-left: 0.05rem}
+
+
+.wrapper03 {position:relative;height: 1rem;width: 100%;overflow: hidden;margin:0 auto;border-bottom:1px solid #F5F5F5}
+.wrapper03 .scroller {position:absolute}
+.wrapper03 .scroller li {height: 1rem;color:#333;float: left;line-height: 1rem;font-size: .4rem;text-align: center}
+.wrapper03 .scroller li a{color:#333;display:block;margin:0 .3rem;padding:0 .1rem}
+.wrapper03 .scroller li.cur a{color:#007FF4;height:.95rem;border-bottom:2px solid #007FF4}
+
+.new-list{margin:0.1rem 0.3rem 0;}
+.nlist-item{padding:0.2rem 0;border-bottom: 1px solid #F3F3F3}
+.nli-left{width: 2.9rem;height: 1.8rem;border-radius: 3px;overflow: hidden;}
+.nli-left img, .nli-left audio{width: 100%;height: 100%}
+.nli-right{margin-left: 0.3rem}
+.fb-time{text-align: right;}
+.fb-time select{border:none;width: 3.5rem;height: 1rem;color:#888888;}
+.nli-right{position: relative;}
+.nli-right .nli-tit{color:#404040;white-space: nowrap;  overflow: hidden;  text-overflow: ellipsis; display: block;width: 5.5rem;font-size: 0.4rem;margin-bottom: 0.2rem}
+.nli-type .nli-sp{background: #6F83BE;border-radius: 2px;padding: 0 .2rem;color:#fff;font-size: 0.35rem}
+.nli-type .nli-wz{background: #3B7782;border-radius: 2px;padding: 0 .2rem;color:#fff;font-size: 0.35rem}
+.nli-time span{color:#868686;margin-right: 0.2rem}
+.nli-fx{position: absolute;right: 0.1rem;top:0.1rem;width: 0.4rem;height: 0.4rem;background: url(../img/fx.png) no-repeat;background-size: 100% 100%}

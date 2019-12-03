@@ -403,14 +403,14 @@
                 })
                 .columns( [
                     {data: 'id',visible: false},
-                    {data: 'title',width: '25%'},
-                    {data: 'summary',width: '40%',
+                    {data: 'title',width: '18%'},
+                    {data: 'summary',width: '37%',
                         render:function(data, type, row){
                         var suf="...";
-                        if(data!=null && data.length<30){
+                        if(data!=null && data.length<28){
                             suf="";
                         }
-                            var ah="<a title='"+data+"'>"+data.substr(0,30)+suf+"</a>";
+                            var ah="<a title='"+data+"'>"+data.substr(0,28)+suf+"</a>";
                             return ah;
                         }
                     },
@@ -439,15 +439,19 @@
                     {
                         render: function (data, type, row) {
                             var btn = "";
-                            var editstr="";
-                            var delstr="";
-                            var addstr="";
+                            var editstr=""; //编辑
+                            var delstr="";  //删除
+                            var addstr="";  //预览
+                            var release=""; //发布
+                            var cancel="";  //撤销发布
 
                             addstr = '<button class="btn btn-success btn-sm row-detail" value="{id}" style="margin-right: 5px"><i class="fa fa-pencil"></i>预览</button>';
                             editstr = '<button onclick="getNewsCategory(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
                             delstr = zudp.template.delBtn;
-//                          addstr = '<button class="btn btn-sm btn-success" id="btn-overview">预览</button>';
-                            btn += addstr+editstr+delstr;
+                            release = '<button onclick="releaseBtn(this)" class="btn btn-sm btn-success" id="btn-overview" style="margin-left: -5px"><i class="fa fa-pencil"></i>发布</button>';
+                            cancel = '<button onclick="cancelBtn(this)" class="btn btn-danger btn-sm " id="btn-overview" style="margin-left: 5px"><i class="fa fa-close"></i>撤销发布</button>';
+
+                            btn += addstr+editstr+delstr+release+cancel;
                             return zudp.util.render(btn, row);
 
                         }
@@ -463,7 +467,20 @@
 
     });
 
+    //发布
+    function releaseBtn(obj){
 
+        //获取此行id值
+        var idstr = $(obj).val();
+    }
+
+    //撤销发布
+    function cancelBtn(obj) {
+
+        //获取此行id值
+        var idstr = $(obj).val();
+    }
+    
     <!--   动态获取新闻种类 -->
     function getNewsCategory(obj) {
 
@@ -490,6 +507,7 @@
         //读出类别表所有的类别字段
         $("#category").find("option").remove();
         zudp.ajax("/api/category/clist").get().then(function (value) {
+
 
             //循环读出
             for (var k = 0; k < value.length; k++) {
