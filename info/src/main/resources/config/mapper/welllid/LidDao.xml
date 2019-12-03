@@ -41,7 +41,7 @@
 
     <insert id="insert">
         INSERT INTO zmj_well_lid (
-        id,status,place,depict,timed
+        id,status,place,depict,timed,
         create_date,
         create_user,
         update_date,

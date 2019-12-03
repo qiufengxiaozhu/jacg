@@ -34,12 +34,12 @@
         <div class="col-sm-12">
             <div class="ibox">
                 <div class="ibox-content form-inline z-relative">
-                    <div class='col-sm-12'><#--
-                        <#--<@hasPermission name="oaManager:post:create">
+                    <div class='col-sm-12'>
+                        <@hasPermission name="oaManager:post:create">
                             <button class='btn btn-success' data-toggle='modal' id="add-btn">
                                 新建
                             </button>&nbsp;&nbsp;
-                        </@hasPermission>&ndash;&gt;-->
+                        </@hasPermission>
                         <@hasPermission name="oaManager:post:batchDelete">
                             <button class='btn btn-success btn-danger' id="delete-items">
                                 批量删除
@@ -272,7 +272,9 @@
                         delstr=zudp.template.delBtn;
                         </@hasPermission>
 
-                        btn += editstr+delstr;
+                        pqstr='<button class="btn btn-info btn-sm  updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>派遣</button>';
+
+                        btn += editstr+delstr+pqstr;
                         return zudp.util.render(btn, row);
                         //return "";
                     }
