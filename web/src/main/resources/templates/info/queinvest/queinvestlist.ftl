@@ -155,7 +155,7 @@
                 <h4 class="modal-title">添加</h4>
             </div>
             <small class="font-bold">
-                <div class="modal-body fix-height" style="height: 350px">
+                <div class="modal-body fix-height" >
                 <#--表单-->
                     <input type="hidden" id="add-type" class ="test001">
                     <table id="dataList" class="table my-table table-bordered dataTables-example">
@@ -448,10 +448,11 @@
             // 在模态框中，点击添加按钮，完成题目的导入，其实就是修改外键的值为问卷的id匹配上
             $(document).on("click", '#test-save-btn', function (e) { // 模态框中的保存按钮
                 var idJson = $("#addStr").val(); // 获取到id值  问卷的id值
-//                alert(idJson);
+//               alert(idJson);
                 // 遍历所有的复选框
                 var checks = document.getElementsByName("checkBtn");
                 // 所有被选中的复选框的对应的问题的id值
+//                var idsJson = [];
                 var idsJson = [];
                 for(var m = 0; m < value.length; m++){
                     if(checks[m].checked){ //如果被选中
@@ -460,11 +461,36 @@
                     }
 
                 }
+                //
+//                var ids = JSON.stringify(idsJson);
+//                var id = JSON.stringify(idJson);
+                var dataObject = {
+                    "idsJson":idsJson,
+                    "idJson":idJson
+                };
+
+                dataJson = JSON.stringify(dataObject);
+
+//
                 //将id值传入到后端  实现问卷中添加题目的效果
-                zudp.ajax("/api/queinvest/updateQuestion").post(idJson).then(function (value) {
-                     // 关闭模态框
+                zudp.ajax("/api/queinvest/updateQuestion").post(dataJson).then(function (value) {
+                    // 关闭模态框
                     $(".modal-form-content").modal("hide");
                 });
+
+
+
+//
+//                $.ajax({
+//                    type:"POST",
+//                    data:{
+//                        'idsJson':ids,
+//                        'idJson':idJson
+//                    },
+//                    url:"/api/queinvest/updateQuestion",
+//                    contentType: "application/json;charsetset=UTF-8"
+//
+//                });
 
 
             });
@@ -484,6 +510,7 @@
         }
         //获取到id
         var id = $("#publishStr").val();
+//        alert(id);
 
         zudp.ajax("/api/queinvest/updateStatus").post(id).then(function (value) {
             // 刷新页面
@@ -500,7 +527,7 @@
             window.e.cancelBubble = true;
         }
         //获取到id
-        var id = $("#update-btn").val();
+        var id = $("#unpublishStr").val();
 
         zudp.ajax("/api/queinvest/updateStatus02").post(id).then(function (value) {
             document.location.reload();

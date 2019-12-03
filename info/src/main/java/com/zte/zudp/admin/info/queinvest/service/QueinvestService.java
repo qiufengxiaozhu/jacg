@@ -32,9 +32,6 @@ public class QueinvestService extends BusinessService<Queinvest> {
         return queinvestDao.addQuestion();
     }
 
-    public void updateQuestion(String idJson) {
-        queinvestDao.updateQuestion(idJson);
-    }
 
     /**
      * 发布
@@ -53,5 +50,9 @@ public class QueinvestService extends BusinessService<Queinvest> {
 
     public List<Questions> findAllQuestion(String id) {
       return   queinvestDao.findAllQuestion(id);
+    }
+
+    public void updateQuestion(Object object, Object object02) {
+        queinvestDao.updateQuestion(object,object02);
     }
 }

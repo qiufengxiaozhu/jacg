@@ -23,7 +23,7 @@ public interface QueinvestDao extends AbstractDao<Queinvest> {
 
     List<Questions> addQuestion();
 
-    void updateQuestion(@Param("idJson") String idJson);
+
 
     /**
      * 发布
@@ -37,4 +37,6 @@ public interface QueinvestDao extends AbstractDao<Queinvest> {
     void updateStatus02(@Param("id")String id);
 
     List<Questions> findAllQuestion(String id);
+
+    void updateQuestion(@Param("object") Object object, @Param("object02") Object object02);
 }

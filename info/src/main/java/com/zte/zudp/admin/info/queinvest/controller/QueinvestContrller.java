@@ -13,7 +13,9 @@ import com.zte.zudp.admin.info.queinvest.service.QueinvestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
 
 /**
  *  问卷调查
@@ -93,14 +95,14 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
     @JSON
     @PostMapping(value = "/updateQuestion")
     @EndpointRest(id = "updateList", name = "ddd" )
-    public Integer updateQuestion( String idJson)  {
-//        String strList=request.getParameter("idsJson");
-//        System.out.println(strList);
-//        JSONObject result= new JSONObject();
-//        List<String> strList= (List<String>) result.get("idsJson");
-        queinvestService.updateQuestion(idJson);
+    public void updateQuestion(@RequestBody Map<String,Object> map)  {
+       List <String> idsArr=(List<String>) map.get("idsJson");
+        Object object02 = map.get("idJson");
+        for (int i=0;i<idsArr.size();i++) {
+            Object object= idsArr.get(i);
+            queinvestService.updateQuestion(object,object02);
+        }
 
-        return 1;
     }
 
     /**
@@ -122,7 +124,7 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
     @PostMapping(value = "/updateStatus02")
     @EndpointRest(id = "updateStatus02", name = "", authorizedType = AuthorizedType.GUEST)
 
-    public void updateStatus02(String id){
+    public void updateStatus02(@RequestBody String id){
         queinvestService.updateStatus02(id);
     }
 
