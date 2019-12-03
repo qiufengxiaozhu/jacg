@@ -35,6 +35,11 @@
              <artifactId>spring-context</artifactId>
              <version>5.0.4.RELEASE</version>
          </dependency>
+         <dependency>
+             <groupId>com.zte.zudp</groupId>
+             <artifactId>info</artifactId>
+             <version>1.0-SNAPSHOT</version>
+         </dependency>
      </dependencies>
     <!-- 子模块依赖  结束-->
 

@@ -196,7 +196,7 @@ $(document).ready(function () {
         if(!add){
             jQuery.validator.addMethod("isPhone",function (value, element, param) {
                 var length = value.length;
-                // var mobile = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
+                // var mm = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
                 return this.optional(element) || (length == 11 && zudp.util.checkStr(value, "phone"));
             }, "");
         }
