@@ -136,7 +136,7 @@
 
 <!--往问卷中添加题目   即是修改关联的外键的值即可-->
     <update id="updateQuestion">
-        update jacg_questions t1 set t1.queinvest_id = #{idJson}
+        update jacg_questions t1 set t1.queinvest_id = #{object}
     </update>
 
     <!--发布   发布状态-->

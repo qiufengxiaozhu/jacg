@@ -62,13 +62,13 @@ public List<Dictionary> getlist() {
     @EndpointRest(id = "listAttach", name = "问卷下拉", authorizedType = AuthorizedType.GUEST)
     public Questions getOneType(String id) {
         Questions question= questionService.get(id);
-//        if ((question.getQuestionType()).equals("0")) {
-//            question.setQuestionType("单选题");
-//        } else if ((question.getQuestionType()).equals("1")) {
-//            question.setQuestionType("多选题");
-//        } else if ((question.getQuestionType()).equals("2")) {
-//            question.setQuestionType("判断题");
-//        }
+        if ((question.getQuestionType()).equals("0")) {
+            question.setQuestionType("单选题");
+        } else if ((question.getQuestionType()).equals("1")) {
+            question.setQuestionType("多选题");
+        } else if ((question.getQuestionType()).equals("2")) {
+            question.setQuestionType("判断题");
+        }
         return question;
     }
 
