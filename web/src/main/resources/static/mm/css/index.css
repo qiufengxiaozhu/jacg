@@ -554,3 +554,21 @@ input::-webkit-input-placeholder{
 .right-ceil{
     width: 0.5rem;
 }
+
+
+
+/* 咨询 */
+.adv-header{width: 1rem;height: 1rem;border-radius: 50%;overflow: hidden;}
+.adv-speak{padding: 0.1rem 0.2rem;background: #fff;border-radius: 0.1rem;margin-left: 0.2rem;}
+.adv-box{height: 9rem;position: relative;}
+.adv-info{position: absolute;top:0.6rem;left:0.3rem;}
+.adv-footer{background: #fff;height: 7rem;position: fixed;bottom: 0;width: 100%;}
+.adv-bottom{padding: 0.1rem 0.2rem}
+.adv-yy{width: 0.8rem;margin:0 0.4rem;}
+.adv-input{height: 1rem;border-radius: 0.5rem;border:1px solid #ccc;background: #F6F6F6;box-sizing: border-box;padding: 0 0.1rem 0 0.3rem}
+.adv-input input{background: #F6F6F6;height: 0.8rem}
+.adv-bq{width: 0.7rem}
+.adv-close{width: 0.8rem;margin:0 0.4rem;}
+.adv-item{width: 33%;padding: 0.3rem 0.7rem;box-sizing: border-box;}
+.adv-item img{width: 50%;margin: auto;}
+.adv-item p{text-align: center;margin-top: 0.1rem}
