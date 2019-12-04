@@ -70,4 +70,35 @@ public class MMNewsController {
     public String survey(Model model) {
         return "/mm/news/survey";
     }
+
+    /**
+     * 个人中心
+     * @param model
+     * @return
+     */
+    @GetMapping("/pcenter")
+    public String pcenter(Model model) {
+        return "/mm/news/pcenter";
+    }
+
+    /**
+     * 公众投诉
+     * @param model
+     * @return
+     */
+    @GetMapping("/toadvice")
+    public String toadvice(Model model) {
+        return "/mm/advice/to-advice";
+    }
+
+
+    /**
+     * 调查详情
+     * @param model
+     * @return
+     */
+    @GetMapping("/investigation")
+    public String investigation(Model model) {
+        return "/mm/invest/investigation";
+    }
 }
