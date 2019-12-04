@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="/mm/css/index.css">
     <link rel="stylesheet" href="/mm/css/main.css">
     <title>Document</title>
+
+    <script>
+        function goIndex() {
+            window.location.href='/mm/news/index';
+        }
+    </script>
 </head>
 <body>
 <div class="content-box container-app" style="background: #F5F5F5">
@@ -83,10 +89,7 @@
 
     </div>
 </div>
+
 </body>
-<script>
-    function goIndex() {
-        window.location.url='/mm/news/index';
-    }
-</script>
+
 </html>

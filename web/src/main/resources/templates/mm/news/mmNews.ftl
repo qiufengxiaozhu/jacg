@@ -13,7 +13,7 @@
 	<div class="container-app">
         <div class="top flex flex-c-c">
             <div class="top-return"></div>
-            <div class="return">返回</div>
+            <div class="return" onclick="goIndex()">返回</div>
             <div class="advince">公众新闻</div>
         </div>
 		<div class="wrapper wrapper03" id="wrapper01">
@@ -301,6 +301,11 @@
                 }
             }
         }
+
+        function goIndex() {
+            window.location.href='/mm/news/index';
+        }
 	</script>
+
 </body>
 </html>

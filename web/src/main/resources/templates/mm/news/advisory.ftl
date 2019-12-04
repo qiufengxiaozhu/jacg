@@ -14,7 +14,7 @@
     <div class="container-app" style="background: #F6F6F6">
         <div class="top flex flex-c-c">
             <div class="top-return"></div>
-            <div class="return">返回</div>
+            <div class="return" onclick="goIndex()">返回</div>
             <div class="advince">公众咨询</div>
         </div>
         <div class="adv-box">
@@ -50,5 +50,10 @@
     </div>
 
 </div>
+<script>
+    function goIndex() {
+        window.location.href='/mm/news/index';
+    }
+</script>
 </body>
 </html>
