@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="content-box container-app" style="background: #F5F5F5">
-    <div class="top">
+    <div class="top flex flex-c-c">
         <div class="top-return"></div>
         <div class="return" onclick="goIndex()">首页</div>
         <div class="advince">排行榜</div>
