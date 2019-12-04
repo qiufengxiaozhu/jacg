@@ -19,30 +19,30 @@
         </div>
         <div class="adv-box">
             <div class="adv-info flex flex-c-c">
-                <div class="adv-header"><img src="img/head.png" alt="" class=""></div>
+                <div class="adv-header"><img src="/mm/img/head.png" alt="" class=""></div>
                 <div class="adv-speak">HI 请问你有什么能帮到你的</div>
             </div>
         </div>
         <div class="adv-footer">
             <div class="adv-bottom flex flex-c-c">
-                <div class="adv-yy"><img src="img/yy.png" alt=""></div>
+                <div class="adv-yy"><img src="/mm/img/yy.png" alt=""></div>
                 <div class="adv-input flex flex-c-c flex-1">
                     <input type="text" class="flex-1">
-                    <div class="adv-bq"><img src="img/xl.png" alt=""></div>
+                    <div class="adv-bq"><img src="/mm/img/xl.png" alt=""></div>
                 </div>
-                <div class="adv-close"><img src="img/adv-close.png" alt="" class=""></div>
+                <div class="adv-close"><img src="/mm/img/adv-close.png" alt="" class=""></div>
             </div>
             <div class="adv-gn flex flex-wrap">
                 <div class="adv-item">
-                    <img src="img/myimg.png" alt="" class="" style="margin:0.1rem auto 0.2rem">
+                    <img src="/mm/img/myimg.png" alt="" class="" style="margin:0.1rem auto 0.2rem">
                     <p>相册</p>
                 </div>
                 <div class="adv-item">
-                    <img src="img/myphone.png" alt="" class="">
+                    <img src="/mm/img/myphone.png" alt="" class="">
                     <p>拍照</p>
                 </div>
                 <div class="adv-item">
-                    <img src="img/vadio.png" alt="" class="">
+                    <img src="/mm/img/vadio.png" alt="" class="">
                     <p>视频</p>
                 </div>
             </div>
