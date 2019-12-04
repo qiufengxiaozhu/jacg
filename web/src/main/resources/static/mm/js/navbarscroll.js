@@ -46,6 +46,8 @@
 			_wrapper[0].addEventListener('touchmove',function (e){e.preventDefault();},false);
             function _init(thiObj){
                 var $this_obj=thiObj;
+                var a =$this_obj.attr("data");
+                getData(a);
                 var duibi=_opt.duibiScreenWidth*_win_width/10,this_index=$this_obj.index(),this_off_left=$this_obj.offset().left,this_pos_left=$this_obj.position().left,this_width=$this_obj.width(),this_prev_width=$this_obj.prev('li').width(),this_next_width=$this_obj.next('li').width();
                 var this_off_right=_win_width-this_off_left-this_width;
                 if(_scroller_w+2>_wrapper_width){

@@ -20,4 +20,54 @@ public class MMNewsController {
     public String mmNews(Model model) {
         return "/mm/news/mmNews";
     }
+
+    /**
+     * 首页
+     * @param model
+     * @return
+     */
+    @GetMapping("/index")
+    public String index(Model model) {
+        return "/mm/news/index";
+    }
+
+    /**
+     * 便民服务
+     * @param model
+     * @return
+     */
+    @GetMapping("/conven")
+    public String conven(Model model) {
+        return "/mm/news/convenience";
+    }
+
+    /**
+     * 公众咨询
+     * @param model
+     * @return
+     */
+    @GetMapping("/advisory")
+    public String advisory(Model model) {
+        return "/mm/news/advisory";
+    }
+
+
+    /**
+     * 排行榜
+     * @param model
+     * @return
+     */
+    @GetMapping("/ranking")
+    public String ranking(Model model) {
+        return "/mm/news/ranking";
+    }
+    /**
+     * 公众调查
+     * @param model
+     * @return
+     */
+    @GetMapping("/survey")
+    public String survey(Model model) {
+        return "/mm/news/survey";
+    }
 }
