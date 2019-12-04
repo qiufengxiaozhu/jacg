@@ -48,7 +48,7 @@
 </body>
 <script>
     function goIndex() {
-        window.location.url='/mm/news/index';
+        window.location.href='/mm/news/index';
     }
 </script>
 </html>

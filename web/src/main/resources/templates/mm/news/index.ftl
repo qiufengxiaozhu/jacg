@@ -185,10 +185,12 @@
     }
     function goPage(a){
         if(a==1){
+            //公众上报
             window.location.href='/mm/news/index';
         }
         if(a==2){
-            window.location.href='/mm/news/survey';
+            //公众投诉
+//            window.location.href='/mm/news/survey';
         }
         if(a==3){
             //公众咨询
