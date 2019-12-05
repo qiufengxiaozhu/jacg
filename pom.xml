@@ -23,8 +23,6 @@
     </modules>
 
     <name>zudp</name>
-    <description>ZUDP，中兴统一开发平台。</description>
-    <url>http://10.81.36.233/zudp/zudp.git</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -42,9 +40,11 @@
         </dependency>
     </dependencies>
 
+    <!-- 打jar包2-2  在parent模块 maven clean ,  maven package 或者maven install 即可打包  下面一个都不可删除 开始-->
     <build>
-        <finalName>${project.artifactId}</finalName>
+        <finalName>${project.artifactId}-${project.version}</finalName>
         <plugins>
+            <!-- compiler 编译  开始 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -55,34 +55,22 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
+            <!-- compiler 编译  结束 -->
+
+            <!-- 忽略单元测试 test 文件夹下的代码和配置文件 开始-->
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
             </plugin>
+            <!-- 忽略单元测试 test 文件夹下的代码和配置文件 结束-->
+
         </plugins>
     </build>
+    <!-- 打jar包2-2  在parent模块 maven clean ,  maven package 或者maven install 即可打包  下面一个都不可删除 结束-->
 
-    <developers>
-        <developer>
-            <id>piumnl</id>
-            <name>钟子奇</name>
-            <email>piumnl@foxmail.com</email>
-            <organization>研发管理中心研发一部</organization>
-            <timezone>+8</timezone>
-        </developer>
-        <developer>
-            <id>DW</id>
-            <name>代炜</name>
-            <email>m15879067251@163.com</email>
-            <organization>研发管理中心研发一部</organization>
-            <timezone>+8</timezone>
-        </developer>
-        <developer>
-            <id>pixel</id>
-            <name>万勋</name>
-            <email>422282486@qq.com</email>
-            <organization>研发管理中兴研发一部</organization>
-            <timezone>+8</timezone>
-        </developer>
-    </developers>
+
+
 </project>

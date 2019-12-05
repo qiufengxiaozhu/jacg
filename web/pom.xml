@@ -40,36 +40,30 @@
      </dependencies>
     <!-- 子模块依赖  结束-->
 
+
+    <!-- 打jar包2-1  在parent模块 maven clean ,  maven package 或者maven install 即可打包  下面一个都不可删除 开始-->
     <build>
-        <finalName>${project.finalName}</finalName>
+        <finalName>${project.artifactId}-${project.version}</finalName>
         <plugins>
-            <!-- 要将源码放上去，需要加入这个插件 -->
+            <!-- main方法指定，打所有 依赖包（包括子模块）到生成的jar中 其他兄弟模块不要打依赖包 所以放在web里的pom 开始 -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-source-plugin</artifactId>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <attach>true</attach>
+                    <!-- 指定该Main Class为全局的唯一入口 -->
+                    <mainClass>com.zte.zudp.admin.AdminApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
-                        <phase>compile</phase>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
                         </goals>
                     </execution>
                 </executions>
             </plugin>
+            <!-- main方法指定，打所有 依赖包（包括子模块）到生成的jar中 其他兄弟模块不要打依赖包 所以放在web里的pom 结束 -->
         </plugins>
-        <resources>
-            <resource>
-            <directory>src/main/java</directory>
-            <includes>
-                <include>**/*.xml</include>
-            </includes>
-            </resource>
-            <resource>
-                <directory>${project.basedir}/src/main/resources</directory>
-            </resource>
-        </resources>
     </build>
+    <!-- 打jar包2-1  在parent模块 maven clean ,  maven package 或者maven install 即可打包  下面一个都不可删除 结束-->
+
 </project>
