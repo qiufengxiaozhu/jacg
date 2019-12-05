@@ -19,9 +19,16 @@
     </div>
     <div class="ab-self ab-float">
         <div class="ab-center ab-float1">
-            <div class="ab-img ab-float1"><img src="/mm/img/head.png" alt=""></div>
+            <div class="ab-img ab-float1">
+                <#if mobile_user.avatar??>
+                    <img src="${mobile_user.avatar!''}" alt="">
+                <#else>
+                    <img src="/mm/img/head.png" alt="">
+                </#if>
+
+            </div>
             <div class="ab-float1">
-                <div class="ab-one">某某某</div>
+                <div class="ab-one">${mobile_user.name!""}</div>
                 <div class="ab-num" onclick="goRank()"><span class="ab-font">1430</span>&nbsp;&nbsp;积分</div>
             </div>
             <div class="ab-float1 ranks" onclick="goRank()"><span class="ab-font">240</span>&nbsp;&nbsp;名</div>
@@ -54,11 +61,27 @@
                 <div class="abs-changecolor">1.61.3</div>
             </div>
         </div>
+        <div class="ab-pas">
+            <div class="abs-float1" onclick="goExit()">&nbsp;退出</div>
+            <div class="abs-float2 flex">
+                <div class="abs-changecolor"></div>
+            </div>
+        </div>
     </div>
 </div>
 <script>
     function goRank(){
         window.location.href='/mm/news/ranking';
+    }
+    function goExit(){
+        $.ajax({
+            type: "GET",
+            url: "/mm/news/goout",
+            data: {},
+            success: function(){
+                window.location.href='/mm/news/index';
+
+        }});
     }
 </script>
 </body>
