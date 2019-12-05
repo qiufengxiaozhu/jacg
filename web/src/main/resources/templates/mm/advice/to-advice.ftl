@@ -37,7 +37,15 @@
                     </div>
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>内容&nbsp;:</span><input type="text" class="tab-input flex-1"
-                                                                                     placeholder="请输入您的诉求内容(20字以内)"></div>
+                                                                                     placeholder="请输入您的诉求内容(500字以内)"></div>
+                    </div>
+                    <div class="theme">
+                        <div class="port flex flex-c-c"><span>联系人&nbsp;:</span><input type="text" class="tab-input flex-1"
+                                                                                     placeholder="请输入您的姓名(20字以内)"></div>
+                    </div>
+                    <div class="theme">
+                        <div class="port flex flex-c-c"><span>联系电话&nbsp;:</span><input type="text" class="tab-input flex-1"
+                                                                                     placeholder="请输入您的电话(20字以内)"></div>
                     </div>
                     <div class="theme">
                         <div class="type">
@@ -45,9 +53,9 @@
                                 <span>反应类型&nbsp;:</span>
                                 &nbsp;&nbsp;
                                 <select class="selected">
-                                    <option value="">咨询</option>
-                                    <option value=""></option>
-                                    <option value=""></option>
+                                    <option value="0">咨询</option>
+                                    <option value="1">投诉</option>
+                                    <option value="2">建议</option>
                                 </select>
                             </div>
 
@@ -72,7 +80,7 @@
     </div>
     <script>
         function goIndex(){
-            window.location.href='/mm/news/index';
+            window.location.href='/mm/news/mytousu';
         }
     </script>
 </body>

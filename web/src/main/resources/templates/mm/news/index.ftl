@@ -190,7 +190,7 @@
         }
         if(a==2){
             //公众投诉
-            window.location.href='/mm/news/toadvice';
+            window.location.href='/mm/news/mytousu';
         }
         if(a==3){
             //公众咨询
