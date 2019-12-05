@@ -1,22 +1,11 @@
-/*
 package com.zte.zudp.admin.info.warning.dao;
 
 import com.zte.zudp.admin.common.persistence.dao.AbstractDao;
-import com.zte.zudp.admin.info.warning.entity.Options;
+import com.zte.zudp.admin.info.warning.entity.Warning;
 
-*/
-/**
- *
- *//*
 
-public interface WarningDao extends AbstractDao<Options> {
+public interface WarningDao extends AbstractDao<Warning> {
 
-    */
-/**
-     * 添加选项
-     * @param t
-     *//*
 
-    Integer addOption(Options t);
+    void updateStatus(String id);
 }
-*/

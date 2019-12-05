@@ -128,7 +128,7 @@
 
 
 <#--添加选项模态框-->
-<div class="modal inmodal fade modal-form-content" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+<div class="modal inmodal fade modal-form-content" id="addOption" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -139,13 +139,13 @@
             <small class="font-bold">
                 <div class="modal-body fix-height" style="height: 350px">
                 <#--表单-->
-                    <form class="form-horizontal" id="form">
+                    <form class="form-horizontal" id="form-addOption">
                         <input type="hidden" class="testId" name="id" id="id">
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项一：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText01" maxlength="64" id="name" placeholder="选项一" class="form-control">
+                                <input type="text" name="choiceText01"   maxlength="64" id="name" placeholder="选项一" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -313,55 +313,6 @@
         initForm(obj);
 
 
-        $(document).on("click", '#row-add-test', function (e) {
-            // button -->id
-            //清除冒泡
-            if (e && e.stopPropagation) {
-                e.stopPropagation();
-            } else {
-                window.e.cancelBubble = true;
-            }
-            var id = $("#row-add-test").val();
-//            alert(id);
-            // 模态框的弹出
-            $(".modal-form-content").modal("show");
-            $(".testId").val(id);
-            $(".modal-form-content").addClass("test-form").removeClass("create-form detail-form");
-           // 清空输入框的
-            zudp.plugin.form("#form").reset();
-        });
-
-            /*
-            zudp.ajax(updateUrl).get("").then(function (data) {
-                dataEcho(obj.formId, data);
-            }, function (error) {
-            });*!/
-            //设置禁用
-            for (var i = 0; i < obj.disabledName.length; i++) {
-                $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
-                    .attr("disabled", true);
-            }
-        });*/
-            //校验保存
-            /*var msgSuccess = zudp.util.render(obj.success, {"msg": "成功"});*/
-//            alert(1);
-            $(document).on("click", ".test-form #test-save-btn", function () {
-                alert(1);
-                var data = zudp.util.formData2json("form");
-                alert(data + (typeof data));
-                alert(JSON.stringify(data));
-//                exit(0);
-
-                zudp.ajax("/api/option/addOption").post(data).then(function (value) {
-//                    if (value.size >=0 ) {
-//                        zudp.plugin.dialog("success").alert("更新成功 ");
-                    // 关闭模态框
-                        $(".modal-form-content").modal("hide");
-//                    }
-                })
-            });
-
-    });
 
 
     //提示
@@ -413,44 +364,18 @@
                             var detailStr = "";
 
                             var addOptionStr="";
-                            if (data.questionType == '0' || data.questionType == '1' || data.questionType == '2') { // 添加选项按钮
-                            <#--<@hasPermission name="queManager:questionManager:question:update">-->
-                                <#--editStr = zudp.template.editBtn;-->
-                            <#--</@hasPermission>-->
-                                    editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
 
+                                editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
 
-                            <@hasPermission name="queManager:questionManager:question:update ">
                                 delStr = zudp.template.delBtn;
-                            </@hasPermission>
-                            <@hasPermission name="queManager:questionManager:question:get ">
                                 detailStr = zudp.template.detailBtn;
-                            </@hasPermission>
                                 //添加选项
-//                                addOptionStr='<button  data-toggle="modal" class=" btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>添加选项</button>';
-                                addOptionStr='<button  id="row-add-test" class="btn btn-info btn-sm  updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>添加选项</button>';
+                                addOptionStr='<button  id="row-add-test" class="btn btn-info btn-sm " value="{id}"><i class="fa fa-pencil"></i>添加选项</button>';
 
                                 btn += editStr + delStr + detailStr+addOptionStr;
                                 return zudp.util.render(btn, row);
-                            } else { //不添加 添加选项按钮
 
-                                // 编辑
-                            <@hasPermission name="queManager:questionManager:question:update">
-                                editStr = zudp.template.editBtn;
-                            </@hasPermission>
 
-                            <@hasPermission name="queManager:questionManager:question:update ">
-                                delStr = zudp.template.delBtn;
-                            </@hasPermission>
-                            <@hasPermission name="queManager:questionManager:question:get ">
-                                detailStr = zudp.template.detailBtn;
-                            </@hasPermission>
-                                //添加题目
-//                            addStr='<button class="btn btn-info btn-sm " data-toggle="modal_hjm" onclick="add()" value="{id}"><i class="fa fa-pencil"></i>添加题目</button>';
-
-                                btn += editStr + delStr + detailStr;
-                                return zudp.util.render(btn, row);
-                            }
                         }
                     }
 
@@ -459,67 +384,80 @@
 
     }
 
-    // 添加选项
-//    function addOption(obj) {
-//        //弹窗 模态框的弹出
-//        $(document).on("click", '#row-add-test', function (e) {
-//            // button -->id
-//            //清除冒泡
-//            if (e && e.stopPropagation) {
-//                e.stopPropagation();
-//            } else {
-//                window.e.cancelBubble = true;
-//            }
-//            // 模态框的弹出
-//            $(".modal-form-content").modal("show");
-//            $(".modal-form-content").addClass("edit-form").removeClass("create-form detail-form");
-//
-//            /*
-//            zudp.ajax(updateUrl).get("").then(function (data) {
-//                dataEcho(obj.formId, data);
-//            }, function (error) {
-//            });*!/
-//            //设置禁用
-//            for (var i = 0; i < obj.disabledName.length; i++) {
-//                $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
-//                    .attr("disabled", true);
-//            }
-//        });*/
-//            //校验保存
-//            /*var msgSuccess = zudp.util.render(obj.success, {"msg": "成功"});*/
-//            $(document).on("click", ".edit-form #save-btn", function () {
-//
-//                var data = zudp.util.formData2json("form");
-//                alert(data + (typeof data));
-//                exit(0);
-//                zudp.ajax("/api/option/insert").post(data).then(function (value) {
-//                     if (value == 1) {
-//                       zudp.plugin.dialog("success").alert("更新成功 ");
-//                        $(".modal-form-content").modal("hide");
+        $(document).on("click", '#row-add-test', function (e) {
+            // button -->id
+            //清除冒泡
+            if (e && e.stopPropagation) {
+                e.stopPropagation();
+            } else {
+                window.e.cancelBubble = true;
+            }
+            var id = $("#row-add-test").val();
+//            alert(id);
+            // 模态框的弹出
+            $(".modal-form-content").modal("show");
+            $(".testId").val(id);
+
+            /* $(".modal-form-content").addClass("test-form").removeClass("create-form detail-form");*/
+
+            //修改标题
+            var titleText = zudp.util.render(obj.title, {"type": "添加选项"});
+            $(".modal .modal-title").text("添加选项");
+
+            //取消禁用
+            for (var i = 0; i < obj.disabledName.length; i++) {
+                // 模态框的class ---> modal-form-content
+                $(".modal-form-content").find("*[name=" + obj.disabledName[i] + "]")
+                        .attr("disabled", false);
+            }
+
+            // 清空输入框的
+            zudp.plugin.form("#form-addOption").reset();
+        });
+
+        /*
+        zudp.ajax(updateUrl).get("").then(function (data) {
+            dataEcho(obj.formId, data);
+        }, function (error) {
+        });*!/
+        //设置禁用
+        for (var i = 0; i < obj.disabledName.length; i++) {
+            $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
+                .attr("disabled", true);
+        }
+    });*/
+        //校验保存
+        $(document).on("click", ".test-form #test-save-btn", function () {
+            var data = zudp.util.formData2json("form-addOption");
+
+            zudp.ajax("/api/option/addOption").post(data).then(function (value) {
+//                    if (value.size >=0 ) {
+//                        zudp.plugin.dialog("success").alert("更新成功 ");
+                // 关闭模态框
+                $(".modal-form-content").modal("hide");
 //                    }
-//                })
-//            })
-//
-//        });
-//        return this;
-//    };
+            })
+        });
+
+    });
+
+
+
 
 
     // 获取问卷类型的下拉框
     function getAllType(obj) {
-        var str = $(obj).parent().prev().prev().text();
-//        alert(str);
+        // 获取到问卷类型
+        var str = $(obj).parent().prev().text();
+        // 本条记录的id值
         var idstr = $(obj).val();
 
         var typeId = "";
 
-//        alert(idstr);
-//        alert(str);
         if (str != "") {
             // 查询单个
             zudp.ajax("/api/question/getOneType?id=" + idstr).get().then(function (value) {
-                typeId = value.queinvestType;
-//                alert(categoryId);
+                typeId = value.questionType;
             });
         }
         // 下拉的id -->categor
@@ -529,26 +467,24 @@
 //           $("#department").append("<option value='" + "'>" + "全部" + "</option>");
             for (var k = 0; k < value.length; k++) {
 
-                if (value[k].questionType  == null) {
-                    value[k].questionType = "";
+                if (value[k].label  == null) {
+                    value[k].label = "";
                 }else{
                     if (typeId != "") {
-                        if (value[k].questionType == typeId) {
-                            $("#category").append("<option value='" + value[k].questionType + "' selected='selected'>" + value[k].questionType+ "</option>");
+                        if (value[k].value == typeId) {
+                            $("#category").append("<option value='" + value[k].value + "' selected='selected'>" + value[k].label+ "</option>");
                         } else {
-                            $("#category").append("<option value='" + value[k].questionType+ "'>" + value[k].questionType  + "</option>");
+                            $("#category").append("<option value='" + value[k].value+ "'>" + value[k].label  + "</option>");
                         }
                     } else {
-                        $("#category").append("<option value='" + value[k].questionType+ "'>" + value[k].questionType  + "</option>");
+                        $("#category").append("<option value='" + value[k].value+ "'>" + value[k].label  + "</option>");
                     }
                 }
             }
-        }, function (reason) {
+        },function (reason) {
             zudp.plugin.dialog("error").alert("获取用户列表失败！", "提示");
         });
     };
-
-
 
 
     function initUpload(){

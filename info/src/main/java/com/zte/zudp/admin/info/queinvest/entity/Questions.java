@@ -2,6 +2,8 @@ package com.zte.zudp.admin.info.queinvest.entity;
 
 import com.zte.zudp.admin.common.persistence.entity.DataEntity;
 
+import java.util.List;
+
 /**
  * 题干实体类
  */
@@ -18,13 +20,31 @@ public class Questions extends DataEntity{
     private String number;
 
 
+
     /**
      * 题目类型id
      */
     private String questionType;
 
+    private String [] idsJson;
+    private String idJson;
+
+    public String getIdJson() {
+        return idJson;
+    }
+
+    public void setIdJson(String idJson) {
+        this.idJson = idJson;
+    }
 
 
+    public String[] getIdsJson() {
+        return idsJson;
+    }
+
+    public void setIdsJson(String[] idsJson) {
+        this.idsJson = idsJson;
+    }
 
     private String name;
 

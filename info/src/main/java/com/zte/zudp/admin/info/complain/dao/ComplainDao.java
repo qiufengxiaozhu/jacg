@@ -5,7 +5,7 @@ import com.zte.zudp.admin.info.complain.entity.ComplainEntity;
 
 /**
  * @Description 投诉表的增删查改
- * @Author ComplainDao
+ * @Author TotalDao
  * @Date 2019/11/26 18:46
  **/
 public interface ComplainDao extends AbstractDao<ComplainEntity> {

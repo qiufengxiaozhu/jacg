@@ -1,5 +1,6 @@
 package com.zte.zudp.admin.mm.svr;
 
+import com.zte.zudp.admin.info.attachDoc.service.FileBusinessService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,9 +16,16 @@ import com.zte.zudp.admin.mm.entity.PostEntity;
  */
 @Service
 @Transactional(readOnly = true, rollbackFor = Exception.class)
-public class PostService extends BusinessService<PostEntity>{
+public class PostService extends FileBusinessService<PostEntity> {
 
     private PostDao dao(){return (PostDao)dao;}
+
+    /**
+     * 初始化附件关联表名
+     */
+    public PostService(){
+        super.setTableName("oa_post");
+    }
 
     public boolean checkName(String name,String id) {
         return dao().checkName(name,id) == 0;

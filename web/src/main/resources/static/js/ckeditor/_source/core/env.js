@@ -77,10 +77,10 @@ if ( !CKEDITOR.env )
 			quirks : ( document.compatMode == 'BackCompat' ),
 
 			/**
-			 * Indicates that CKEditor is running on a mobile like environemnt.
+			 * Indicates that CKEditor is running on a mm like environemnt.
 			 * @type Boolean
 			 * @example
-			 * if ( CKEDITOR.env.mobile )
+			 * if ( CKEDITOR.env.mm )
 			 *     alert( "I'm running with CKEditor today!" );
 			 */
 			mobile : ( agent.indexOf( 'mobile' ) > -1 ),
@@ -249,7 +249,7 @@ if ( !CKEDITOR.env )
 		 */
 		env.isCompatible =
 
-			// White list of mobile devices that supports.
+			// White list of mm devices that supports.
 			env.iOS && version >= 534 ||
 
 			!env.mobile && (

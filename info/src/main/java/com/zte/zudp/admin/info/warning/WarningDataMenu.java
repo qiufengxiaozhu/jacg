@@ -1,4 +1,3 @@
-/*
 package com.zte.zudp.admin.info.warning;
 
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
@@ -9,10 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-*/
-/**
- * 问卷调查管理
- *//*
+
+
 
 
 @Controller
@@ -25,4 +22,4 @@ public class WarningDataMenu {
     public String processModeler(Model model) {
         return "/info/warning/warninglist";
     }
-}*/
+}

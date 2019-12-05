@@ -17,6 +17,25 @@
         <result column="content" property="content"/>
     </resultMap>
 
+    <insert id="insert">
+        INSERT INTO msq_dynamic_push (
+        id, title,push_type,author,pubdate,push_status,content,
+        create_date,
+        create_user,
+        update_date,
+        update_user,
+        del
+        )
+        VALUE (
+        #{id}, #{title}, #{pushType},#{createUser.loginName},#{pubdate},#{pushStatus},#{content},
+        #{createDate},
+        #{createUser.id},
+        #{updateDate},
+        #{updateUser.id},
+        '0'
+        )
+    </insert>
+
     <select id="findList" resultMap="dynamicPushMap">
         select *
         from msq_dynamic_push

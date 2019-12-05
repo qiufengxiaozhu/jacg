@@ -7,6 +7,7 @@ import com.zte.zudp.admin.common.enums.AuthorizedType;
 import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
 import com.zte.zudp.admin.info.queinvest.QueinvestMenu;
 import com.zte.zudp.admin.info.queinvest.QuestionMenu;
+import com.zte.zudp.admin.info.queinvest.entity.Dictionary;
 import com.zte.zudp.admin.info.queinvest.entity.Queinvest;
 import com.zte.zudp.admin.info.queinvest.entity.Questions;
 import com.zte.zudp.admin.info.queinvest.service.QuestionService;
@@ -36,17 +37,17 @@ public class QuestionContrller extends AbstractCRUDController<Questions>{
 @JSON
 @GetMapping(value = "/getAllType")
 @EndpointRest(id = "List01", name = "题目类型下拉", authorizedType = AuthorizedType.GUEST)
-public List<Questions> getlist() {
-    List<Questions> list = questionService.getList();
-    for (int i = 0; i < list.size(); i++) {
-        if (list.get(i).getQuestionType().equals("0")) { //0：行政类 1：生活类 2：经济类
-            list.get(i).setQuestionType("单选题");
-        } else if (list.get(i).getQuestionType().equals("1")) {
-            list.get(i).setQuestionType("多选题");
-        } else if (list.get(i).getQuestionType().equals("2")) {
-            list.get(i).setQuestionType("判断题");
-        }
-    }
+public List<Dictionary> getlist() {
+    List<Dictionary> list = questionService.getList();
+//    for (int i = 0; i < list.size(); i++) {
+//        if (list.get(i).getQuestionType().equals("0")) { //0：行政类 1：生活类 2：经济类
+//            list.get(i).setQuestionType("单选题");
+//        } else if (list.get(i).getQuestionType().equals("1")) {
+//            list.get(i).setQuestionType("多选题");
+//        } else if (list.get(i).getQuestionType().equals("2")) {
+//            list.get(i).setQuestionType("判断题");
+//        }
+//    }
     return list;
 }
 

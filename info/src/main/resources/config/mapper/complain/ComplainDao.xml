@@ -12,6 +12,8 @@
         <result column="tel" property="tel" />
         <result column="comment" property="comment" />
         <result column="reply" property="reply" />
+        <result column="reply_status" property="replyStatus"/>
+        <result column="total" property="total"/>
         <result column="create_user" property="createUser.id" />
         <result column="create_date" property="createDate" />
         <result column="update_user" property="updateUser.id" />
@@ -30,6 +32,8 @@
             z.tel,
             z.comment,
             z.reply,
+            z.reply_status,
+            z.total,
             z.create_user,
             z.create_date,
             z.update_user,
@@ -61,6 +65,8 @@
             tel,
             comment,
             reply,
+            reply_status,
+            total,
             create_user,
             create_date,
             del
@@ -75,6 +81,8 @@
             #{tel},
             #{comment},
             #{reply},
+            0,
+            0,
             #{createUser.id},
             #{createDate},
             0
@@ -82,7 +90,6 @@
     </insert>
 
     <!-- 更新数据
-
       department = #{department},
         topic = #{topic},
            type = #{type},
@@ -93,10 +100,13 @@
             update_date = #{createDate}
      -->
     <update id="update" parameterType="com.zte.zudp.admin.info.complain.entity.ComplainEntity">
+
         UPDATE
             zzb_complain
         SET
-            reply = #{reply}
+            reply = #{reply},
+            reply_status = #{replyStatus},
+            total = #{total}
         WHERE
             del != 1
         AND
@@ -136,6 +146,8 @@
             z.tel,
             z.comment,
             z.reply,
+            z.reply_status,
+            z.total,
             z.create_user,
             z.create_date,
             z.update_user,

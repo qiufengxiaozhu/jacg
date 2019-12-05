@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.total.dao.TotalDao">
+
+    <resultMap type="com.zte.zudp.admin.info.total.entity.TotalEntity" id="totalMap">
+        <id column="id" property="id"/>
+        <result column="department" property="department" />
+        <result column="topic" property="topic"/>
+        <result column="type" property="type" />
+        <result column="username" property="username" />
+        <result column="tel" property="tel" />
+        <result column="comment" property="comment" />
+        <result column="reply" property="reply" />
+        <result column="reply_status" property="replyStatus"/>
+        <result column="total" property="total"/>
+        <result column="create_user" property="createUser.id" />
+        <result column="create_date" property="createDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="del" property="del" />
+    </resultMap>
+
+    <!-- select All 查询所有信息 -->
+    <select id="findList" resultMap="totalMap" useCache="false">
+        select
+            id,
+            sum(total) as total,
+            tel,
+            username
+        from
+            zzb_complain
+        where
+            del != 1
+        AND
+            tel != null
+        or
+            tel != ""
+        group by tel
+        <if test="department != null and department != ''">
+            and `department` like concat('%', #{department}, '%')
+        </if>
+        <if test="department != null and department != ''">
+            OR `topic` like concat('%', #{department}, '%')
+        </if>
+        ORDER BY create_date desc
+    </select>
+
+    <!-- 插入数据 -->
+    <insert id="insert">
+        INSERT INTO
+            zzb_complain
+        (
+            id,
+            department,
+            topic,
+            type,
+            username,
+            tel,
+            comment,
+            reply,
+            reply_status,
+            total,
+            create_user,
+            create_date,
+            del
+        )
+        VALUE
+        (
+            #{id},
+            #{department},
+            #{topic},
+            #{type},
+            #{username},
+            #{tel},
+            #{comment},
+            #{reply},
+            0,
+            0,
+            #{createUser.id},
+            #{createDate},
+            0
+        )
+    </insert>
+
+    <!-- 更新数据
+      department = #{department},
+        topic = #{topic},
+           type = #{type},
+             username = #{username},
+             tel = #{tel},
+            comment = #{comment},
+                 update_user = #{createUser.id},
+            update_date = #{createDate}
+     -->
+    <update id="update" parameterType="com.zte.zudp.admin.info.complain.entity.ComplainEntity">
+
+        UPDATE
+            zzb_complain
+        SET
+            reply = #{reply},
+            reply_status = #{replyStatus},
+            total = #{total}
+        WHERE
+            del != 1
+        AND
+            id = #{id}
+    </update>
+
+    <!-- 删除数据 -->
+    <delete id="delete">
+        UPDATE
+            zzb_complain
+        SET del = 1
+        WHERE id = #{id}
+    </delete>
+
+    <!-- 批量删除 -->
+    <delete id="batchDelete">
+        UPDATE
+            zzb_complain
+        SET
+            del = 1
+        WHERE
+            id
+        IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </delete>
+
+    <!-- 点击编辑按钮 -->
+    <select id="get" resultMap="totalMap" >
+        select
+            z.id,
+            z.department,
+            z.topic,
+            z.type,
+            z.username,
+            z.tel,
+            z.comment,
+            z.reply,
+            z.reply_status,
+            z.total,
+            z.create_user,
+            z.create_date,
+            z.update_user,
+            z.update_date,
+            z.del
+        FROM
+            zzb_complain z
+        WHERE
+            z.del != 1
+        AND
+            id=#{id}
+    </select>
+
+    <select id="findTotal" resultMap="totalMap">
+        select
+            id,
+            sum(total) as total,
+            tel,
+            username
+        from
+            zzb_complain
+        where
+            tel != null
+        or
+            tel != ""
+        group by tel;
+    </select>
+</mapper>

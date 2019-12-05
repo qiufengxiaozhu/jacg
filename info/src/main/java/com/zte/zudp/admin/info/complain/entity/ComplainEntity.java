@@ -4,7 +4,7 @@ import com.zte.zudp.admin.common.persistence.entity.DataEntity;
 
 /**
  * @Description 投诉表，具体内容，但是（音频、视频），（定位）有专门的实体类
- * @Author ComplainEntity
+ * @Author TotalEntity
  * @Date 2019/11/26 10:09
  **/
 public class ComplainEntity extends DataEntity {
@@ -44,6 +44,32 @@ public class ComplainEntity extends DataEntity {
      * reply : 用户回复
      */
     private String reply;
+
+    /**
+     * replyStatus ： 回复状态，0 --> 未回复，1 --> 已回复
+     */
+    private String replyStatus;
+
+    /**
+     * total : 总积分数
+     */
+    private String total;
+
+    public String getReplyStatus() {
+        return replyStatus;
+    }
+
+    public void setReplyStatus(String replyStatus) {
+        this.replyStatus = replyStatus;
+    }
+
+    public String getTotal() {
+        return total;
+    }
+
+    public void setTotal(String total) {
+        this.total = total;
+    }
 
     public String getReply() {
         return reply;
@@ -105,13 +131,16 @@ public class ComplainEntity extends DataEntity {
 
     @Override
     public String toString() {
-        return "ComplainEntity{" +
+        return "TotalEntity{" +
+                "department='" + department + '\'' +
                 ", topic='" + topic + '\'' +
                 ", type=" + type +
                 ", username='" + username + '\'' +
                 ", tel='" + tel + '\'' +
                 ", comment='" + comment + '\'' +
                 ", reply='" + reply + '\'' +
+                ", replyStatus='" + replyStatus + '\'' +
+                ", total='" + total + '\'' +
                 '}';
     }
 }
