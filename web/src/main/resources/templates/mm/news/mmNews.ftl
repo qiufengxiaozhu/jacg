@@ -168,7 +168,7 @@
 			    for(var i=0;i<6;i++ ){
 			        if(i%2==0){
                          type="文章";
-                        temp+='<div class="nlist-item flex ">'+
+                        temp+='<div class="nlist-item flex " onclick="goNewDetail()">'+
                                 '<div class="nli-left">'+
                                 '<img src="'+imgsrc+'" alt="" class="">'+
                                 '</div>'+
@@ -186,7 +186,7 @@
                                 '</div>';
 					}else{
                          type="视频";
-                        temp+='<div class="nlist-item flex ">'+
+                        temp+='<div class="nlist-item flex " onclick="goNewDetail()">'+
                                 '<div class="nli-left">'+
                                 '<img src="'+imgsrc+'" alt="" class="">'+
                                 '</div>'+
@@ -215,7 +215,7 @@
                 for(var i=0;i<6;i++ ){
                     if(i%2==0){
                         type="会计";
-                        temp+='<div class="nlist-item flex ">'+
+                        temp+='<div class="nlist-item flex " onclick="goNewDetail()">'+
                                 '<div class="nli-left">'+
                                 '<img src="'+imgsrc+'" alt="" class="">'+
                                 '</div>'+
@@ -233,7 +233,7 @@
                                 '</div>';
                     }else{
                         type="会计1";
-                        temp+='<div class="nlist-item flex ">'+
+                        temp+='<div class="nlist-item flex " onclick="goNewDetail()">'+
                                 '<div class="nli-left">'+
                                 '<img src="'+imgsrc+'" alt="" class="">'+
                                 '</div>'+
@@ -262,7 +262,7 @@
                 for(var i=0;i<6;i++ ){
                     if(i%2==0){
                         type="社会";
-                        temp+='<div class="nlist-item flex ">'+
+                        temp+='<div class="nlist-item flex " onclick="goNewDetail()">'+
                                 '<div class="nli-left">'+
                                 '<img src="'+imgsrc+'" alt="" class="">'+
                                 '</div>'+
@@ -279,7 +279,7 @@
                                 '</div>'+
                                 '</div>';
                     }else{
-                        temp+='<div class="nlist-item flex ">'+
+                        temp+='<div class="nlist-item flex " onclick="goNewDetail()">'+
                                 '<div class="nli-left">'+
                                 '<img src="'+imgsrc+'" alt="" class="">'+
                                 '</div>'+
@@ -304,6 +304,13 @@
 
         function goIndex() {
             window.location.href='/mm/news/index';
+        }
+
+        /**
+         * 新闻详情
+         */
+        function goNewDetail(){
+            window.location.href='/mm/news/newsDetail?type=1';
         }
 	</script>
 

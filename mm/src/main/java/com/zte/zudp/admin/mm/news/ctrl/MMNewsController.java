@@ -21,6 +21,12 @@ public class MMNewsController {
         return "/mm/news/mmNews";
     }
 
+    @GetMapping("/newsDetail")
+    public String newsDetail(Model model,String type) {
+        model.addAttribute("type",type==null?"":type);
+        return "/mm/news/news-detail";
+    }
+
     /**
      * 首页
      * @param model
@@ -79,6 +85,25 @@ public class MMNewsController {
     @GetMapping("/pcenter")
     public String pcenter(Model model) {
         return "/mm/news/pcenter";
+    }
+
+    /**
+     * 我的投诉
+     * @param model
+     * @return
+     */
+    @GetMapping("/mytousu")
+    public String mytousu(Model model) {
+        return "/mm/advice/my-tousu";
+    }
+    /**
+     * 投诉详情
+     * @param model
+     * @return
+     */
+    @GetMapping("/tsdetail")
+    public String tsdetail(Model model) {
+        return "/mm/advice/tsdetail";
     }
 
     /**
