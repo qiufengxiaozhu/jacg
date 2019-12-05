@@ -821,11 +821,14 @@ input.tab-input::-webkit-input-placeholder {
 
 /* 点赞 */
 .li-add{
-    height: 0.5rem;
-    width: 0.5rem;
-    margin-top: 0.5rem;
-    margin-left: 7.5rem;
+    height: 0.7rem;
+    width: 0.7rem;
+    margin-top: 0.4rem;
+    position: absolute;
+    right: 0.3rem;
+    top:0;
 }
+.top{position: relative}
 .li-input{
     width: 94%;
     margin: auto;
