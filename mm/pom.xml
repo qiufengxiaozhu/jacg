@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.zte.zudp</groupId>
-    <artifactId>zudp</artifactId>
+    <artifactId>parent</artifactId>
     <version>3.0-SNAPSHOT</version>
   </parent>
   

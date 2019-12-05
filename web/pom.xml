@@ -6,8 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- 父模块 开始 -->
     <parent>
-        <artifactId>parent</artifactId>
         <groupId>com.zte.zudp</groupId>
+        <artifactId>parent</artifactId>
         <version>3.0-SNAPSHOT</version>
         <relativePath>../parent</relativePath>
     </parent>

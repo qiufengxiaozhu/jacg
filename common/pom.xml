@@ -6,7 +6,7 @@
     <!-- 父模块 开始 -->
   <parent>
     <groupId>com.zte.zudp</groupId>
-    <artifactId>zudp</artifactId>
+    <artifactId>parent</artifactId>
     <version>3.0-SNAPSHOT</version>
   </parent>
     <!-- 父模块 结束 -->
