@@ -4,41 +4,49 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <!-- 父模块 开始 -->
     <parent>
         <artifactId>parent</artifactId>
         <groupId>com.zte.zudp</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-
+        <version>3.0-SNAPSHOT</version>
         <relativePath>../parent</relativePath>
     </parent>
+    <!-- 父模块 结束 -->
 
-
+    <!-- 本模块 开始 -->
+    <groupId>com.zte.zudp</groupId>
     <artifactId>web</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.1-SNAPSHOT</version>
-
+    <version>3.0-SNAPSHOT</version>
     <name>web</name>
-    <description>ZUDP web manage project.</description>
+    <!-- 本模块 结束 -->
 
-	<!-- 子模块依赖  开始-->
-	 <dependencies>
+    <!-- 属性配置 开始 -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <!-- 属性配置 结束 -->
+
+    <dependencies>
+        <!-- 兄弟模块依赖  开始-->
         <dependency>
 			  <groupId>com.zte.zudp</groupId>
 			  <artifactId>common</artifactId>
-			  <version>1.0-SNAPSHOT</version>											
+			  <version>3.0-SNAPSHOT</version>
         </dependency>
         <dependency>
         	<groupId>com.zte.zudp</groupId>
 			<artifactId>mm</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>3.0-SNAPSHOT</version>
         </dependency>
        <dependency>
         	<groupId>com.zte.zudp</groupId>
 			<artifactId>info</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>3.0-SNAPSHOT</version>
         </dependency>
+        <!-- 兄弟模块依赖  结束 -->
      </dependencies>
-    <!-- 子模块依赖  结束-->
+
 
 
     <!-- 打jar包2-1  在parent模块 maven clean ,  maven package 或者maven install 即可打包  下面一个都不可删除 开始-->

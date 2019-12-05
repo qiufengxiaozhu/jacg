@@ -5,18 +5,24 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zte.zudp</groupId>
-    <artifactId>zudp</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-
+    <!-- 父模块 开始 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.12.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <!-- 父模块 结束 -->
 
+    <!-- 本模块 开始 -->
+    <groupId>com.zte.zudp</groupId>
+    <artifactId>zudp</artifactId>
+    <packaging>pom</packaging>
+    <version>3.0-SNAPSHOT</version>
+    <name>zudp</name>
+    <!-- 本模块 结束 -->
+
+    <!-- 子模块 开始 -->
     <modules>
         <module>parent</module>
         <module>common</module>
@@ -24,9 +30,10 @@
         <module>info</module>
         <module>web</module>
     </modules>
+    <!-- 子模块 结束 -->
 
-    <name>zudp</name>
-
+    <!-- 属性配置 开始  -->
+    <!-- 此处配置jdk1.8版本、配置项目编码UTF-8  不可删除，否则会报1.6jdk等低版本问题 -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -35,13 +42,16 @@
         <site.basedir>${project.basedir}</site.basedir>
         <java.version>1.8</java.version>
     </properties>
+    <!--  属性配置 结束 -->
 
+    <!-- 其他依赖模块 开始 -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
+    <!-- 其他依赖模块 结束 -->
 
     <!-- 打jar包2-2  在parent模块 maven clean ,  maven package 或者maven install 即可打包  下面一个都不可删除 开始-->
     <build>

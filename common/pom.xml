@@ -2,24 +2,24 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  
+
+    <!-- 父模块 开始 -->
   <parent>
     <groupId>com.zte.zudp</groupId>
     <artifactId>zudp</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>3.0-SNAPSHOT</version>
   </parent>
-  
+    <!-- 父模块 结束 -->
+
+    <!-- 本模块 开始 -->
   <groupId>com.zte.zudp</groupId>
   <artifactId>common</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>3.0-SNAPSHOT</version>
   <name>common</name>
-  <url>http://maven.apache.org</url>
-  
-  
+    <!-- 本模块 结束 -->
+
+    <!-- 属性配置 开始 -->
    <properties>
-   		 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-     	<!-- 项目名，控制打包后生成的 jar 的名字 -->
-        <project.finalName>zudp</project.finalName>
         <poi.version>3.17</poi.version>
         <commons-lang3.version>3.5</commons-lang3.version>
         <commons-codec.version>1.5</commons-codec.version>
@@ -31,17 +31,16 @@
         <cxf.starter.version>3.2.1</cxf.starter.version>
         <UserAgentUtils.version>1.20</UserAgentUtils.version>
   </properties>
-  
+    <!-- 属性配置 结束 -->
+
+
   <dependencies>
-  
-  <!-- 公用的jar 引入    开始  -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-  
    	<dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -99,14 +98,12 @@
             <artifactId>poi-ooxml-schemas</artifactId>
             <version>${poi.version}</version>
         </dependency>
-
         <!--解析requestHeader中userAgent-->
         <dependency>
             <groupId>eu.bitwalker</groupId>
             <artifactId>UserAgentUtils</artifactId>
             <version>${UserAgentUtils.version}</version>
         </dependency>
-        
         	<!--zudp引入zudp-upgrade的jar 和License许可证         开始 -->
         <dependency>
             <groupId>zte.zudp.sys</groupId>
@@ -119,9 +116,8 @@
 	        <version>1.33</version>
         </dependency>
         <!--zudp引入zudp-upgrade的jar 和License许可证         结束-->
-        
         </dependencies>
-        
+
         <repositories>
 	        <repository>
 	            <id>Nexus</id>
@@ -150,7 +146,6 @@
              <url>http://10.81.36.24:8081/repository/maven-releases/</url>
         </snapshotRepository>
     </distributionManagement>
-    
-    
-      <!-- 公用的jar 引入    结束 -->
+    <!-- 其他模块依赖 结束 -->
+
 </project>

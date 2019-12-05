@@ -5,12 +5,12 @@
   <parent>
     <groupId>com.zte.zudp</groupId>
     <artifactId>zudp</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>3.0-SNAPSHOT</version>
   </parent>
   
   <groupId>com.zte.zudp</groupId>
   <artifactId>info</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>3.0-SNAPSHOT</version>
   <name>info</name>
   
   <url>http://maven.apache.org</url>
@@ -29,7 +29,7 @@
         <dependency>
 		  <groupId>com.zte.zudp</groupId>
 		  <artifactId>common</artifactId>
-		  <version>1.0-SNAPSHOT</version>											
+		  <version>3.0-SNAPSHOT</version>
         </dependency>
      </dependencies>
     <!-- 子模块依赖  结束-->
