@@ -37,17 +37,17 @@
                 <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>便民服务</p></div></div>
             </div>
         </div>
-        <div class="thumbs">
+        <div class="thumbs" >
             <div><img src="/mm/img/mythumbs.png" class="thumbs-img2"></div>
-            <div><img src="/mm/img/thumbs.png" class="thumbs-img1"></div>
-            <div class="thumbs-right"><img src="/mm/img/right.png" class="thumbs-img3"></div>
+            <div onclick="goDianzan()"><img src="/mm/img/thumbs.png" class="thumbs-img1"></div>
+            <div onclick="goDianzan()" class="thumbs-right"><img src="/mm/img/right.png" class="thumbs-img3"></div>
         </div>
         <div class="thumbs">
-            <div class="thumbs-tit">公众新闻</div>
-            <div class="thumbs-right flex flex-c-c"><div class="" onclick="goNewPage()">更多</div><img src="/mm/img/right.png" class="thumbs-img3"></div>
+            <div class="thumbs-tit" onclick="goNewPage()">公众新闻</div>
+            <div class="thumbs-right flex flex-c-c"><div class="" onclick="goNewPage()">更多</div><img src="/mm/img/right.png" onclick="goNewPage()" class="thumbs-img3"></div>
         </div>
         <div class="new-list">
-            <div class="nlist-item flex ">
+            <div class="nlist-item flex " onclick="goNewDetail()">
                 <div class="nli-left">
                     <img src="/mm/img/login-top.png" alt="" class="">
                 </div>
@@ -62,7 +62,7 @@
                     </p>
                 </div>
             </div>
-            <div class="nlist-item flex ">
+            <div class="nlist-item flex " onclick="goNewDetail()">
                 <div class="nli-left">
                     <img src="/mm/img/login-top.png" alt="" class="">
                 </div>
@@ -77,7 +77,7 @@
                     </p>
                 </div>
             </div>
-            <div class="nlist-item flex ">
+            <div class="nlist-item flex " onclick="goNewDetail()">
                 <div class="nli-left">
                     <img src="/mm/img/login-top.png" alt="" class="">
                 </div>
@@ -190,7 +190,7 @@
         }
         if(a==2){
             //公众投诉
-//            window.location.href='/mm/news/survey';
+            window.location.href='/mm/news/toadvice';
         }
         if(a==3){
             //公众咨询
@@ -205,8 +205,22 @@
             window.location.href='/mm/news/survey';
         }
     }
+
+    /**
+     * 个人中心
+     */
     function goCenter(){
         window.location.href='/mm/news/pcenter';
+    }
+    function goDianzan() {
+        window.location.href='/mm/dz/dzlist';
+    }
+
+    /**
+     * 新闻详情
+     */
+    function goNewDetail(){
+        window.location.href='/mm/news/newsDetail';
     }
 </script>
 </html>
