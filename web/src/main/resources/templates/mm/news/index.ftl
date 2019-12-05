@@ -119,7 +119,7 @@
                 <p>统计管理</p>
             </div>
         </div>
-        <div class="flex-1">
+        <div class="flex-1" onclick="goCenter()">
             <div class="bot-mess">
                 <div class="bot-img bot-img5"></div>
                 <p>个人中心</p>
@@ -201,9 +201,12 @@
             window.location.href='/mm/news/conven';
         }
         if(a==6){
-            //便民服务
+            //公众调查
             window.location.href='/mm/news/survey';
         }
+    }
+    function goCenter(){
+        window.location.href='/mm/news/pcenter';
     }
 </script>
 </html>

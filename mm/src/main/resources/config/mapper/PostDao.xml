@@ -18,7 +18,9 @@
 
 
     <select id="findList" resultMap="postMap" useCache="false">
-        SELECT oa_post.id as id, oa_post.`name` as name,oa_post.mark as mark, identification as identification
+        SELECT oa_post.id as id, oa_post.`name` as name,oa_post.mark as mark,
+        content,contentnohtml,
+        identification as identification
         from oa_post
         where del!=1
         <if test="name!=null and name!=''">
@@ -27,7 +29,9 @@
         ORDER BY create_date desc
     </select>
     <select id="get" resultMap="postMap" >
-        SELECT id as id, `name` as name,mark as mark, identification as identification,
+        SELECT id as id, `name` as name,mark as mark,
+         identification as identification,
+         content,contentnohtml,
         create_date,create_user
         from oa_post
         where id=#{id}
@@ -53,6 +57,7 @@
     <insert id="insert">
         INSERT INTO oa_post (
         id, name,mark,
+        content,contentnohtml,
         create_date,
         create_user,
         update_date,
@@ -62,6 +67,7 @@
         )
         VALUE (
         #{id}, #{name}, #{mark},
+        #{content},#{contentnohtml},
         #{createDate},
         #{createUser.id},
         #{updateDate},
@@ -74,6 +80,8 @@
         UPDATE oa_post m SET
         m.name = #{name},
         m.mark = #{mark},
+        m.content = #{content},
+        m.contentnohtml = #{contentnohtml},
         m.update_date = #{updateDate},
         m.update_user = #{updateUser.id}
         <!--  m.identification = #{identification} -->

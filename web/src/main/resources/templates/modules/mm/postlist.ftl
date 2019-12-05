@@ -85,11 +85,13 @@
                 <h4 class="modal-title">添加</h4>
             </div>
             <small class="font-bold">
-                <div class="modal-body fix-height" style="height: 350px">
+                <div class="modal-body fix-height" >
                 <#--表单-->
                     <form class="form-horizontal" id="post_form">
                         <input type="hidden" name="id" id="id">
-
+                        <!-- 附件上传 隐藏传值  开始 -->
+                        <input id="attachIdss" type="hidden" />
+                        <!-- 附件上传 隐藏传值  结束 -->
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">岗位名称：</label>
                             <div class="col-sm-6">
@@ -109,11 +111,25 @@
                             <#--</div>-->
                         <#--</div>-->
                         <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label">内容：</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" rows="5" cols="" name="content" id="content"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label">描述：</label>
                             <div class="col-sm-6">
                                 <textarea class="form-control" rows="5" cols="" name="mark" id="mark"></textarea>
                             </div>
 
+                        </div>
+                        <div class="form-group" style="">
+                            <label class="col-sm-3 control-label my-control-label">附件：</label>
+                            <div style="width:80;height: 35px;position: relative;margin:0 auto">
+                                <div id="xg_rar">上传附件</div>
+                            </div>
+                            <div id="fileShowName" style="text-align: center;margin:0 auto"></div>
                         </div>
 
 
@@ -153,12 +169,50 @@
 <script src="/js/sys/avatar.js"></script>
 <script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
+<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+<script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
 <script>
  
     var dataTable;
     var urlstr="/api/post";
     var formIdStr="#post_form";
     var sys_url=window.location.host;
+
+    //初始化百度富文本框  id='content'
+    var ue = UE.getEditor('content',{
+
+        // initialFrameWidth :800,//设置编辑器宽度
+
+        initialFrameHeight:300,//设置编辑器高度
+
+        scaleEnabled:true});
+
+    UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
+    UE.Editor.prototype.getActionUrl = function(action) {
+        if (action == 'uploadimage' || action == 'uploadscrawl' || action == 'uploadimage' || action == 'uploadvideo' || action == 'uploadfile') {
+            return '/Ueditors/uploadimage';//指定访问路径
+        } else {
+            return this._bkGetActionUrl.call(this, action);
+        }
+
+
+    }
+    //获得编辑器带格式的内容
+    function getContent() {
+        return UE.getEditor('content').getContent();
+    }
+    //获得编辑器的纯文本内容
+    function getContentTxt() {
+        return UE.getEditor('content').getContentTxt();
+    }
+    /**
+     * //初始化百度富文本框  id='content'  end
+     */
+
     $(document).ready(function () {
 
         $("#post_form").validate({
@@ -186,30 +240,7 @@
                         }
                     }
                 },
-//                identification:{
-//                    required:true,
-//                    rangelength:[0,64],
-//                    remote: {
-//                        url:"/api/post/checkIdenty",
-//                        type:"get",
-//                        data: {
-//                            "identy":function () {
-//                                return $("#identification").val();
-//                            },
-//                            "id":function () {
-//                                return $("#id").val();
-//                            }
-//                        },
-//                        dataFilter: function(data, type) {
-//                            var da=JSON.parse(data).data;
-//                            if(zudp.util.isBoolean(da)){
-//                                return da;
-//                            }else{
-//                                return false;
-//                            }
-//                        }
-//                    }
-//                },
+
 
                 mark:{
                     rangelength:[0,1000]
@@ -231,7 +262,83 @@
         });
 
         findList();
+        var setValFun = function () {
+            $("#xg_rar").html('上传附件');
+            $("#fileShowName").html('');
+            $("#attachIdss").val('');
+            //清空文本框内容
+            UE.getEditor('content').setContent("");
+            //初始化上传工具
+            initUpload();
+        };
+        var setOtherVal = function () {
+            var id = $(formIdStr).find("input[name='id']").eq(0).val();
 
+            //取值回显
+            zudp.ajax(urlstr + "/" + id).get("").then(function (data) {
+                dataEcho(formIdStr, data);
+                if(data.content!=null && data.content.length>0){
+                    UE.getEditor('content').setContent(data.content);
+                }else{
+                    UE.getEditor('content').setContent("");
+                }
+
+                var d = data;
+                var attachPaths = d.attachPaths;
+                var attachNames = d.attachNames;
+                var attachIds = d.attachIdss;
+                var tmpAttachPath = "";
+                if (attachPaths) {
+                    for (var i = 0; i < attachPaths.length; i++) {
+                        tmpAttachPath += "<p>" +
+                                "<a href='//" + sys_url + "/" + attachPaths[i] + "' download='" + attachNames[i] + "'>" +
+                                attachNames[i] + "</a>" +
+                                "<input type='hidden' name='fid' value='" + attachIds[i] + "'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                                "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                                "<input type='hidden' name='attachPathed' value='" + attachPaths[i] + "'>" +
+                                "<input type='hidden' name='attachNameed' value='" + attachNames[i] + "'>	" +
+                                "</p>";
+                    }
+                }
+                $("#fileShowName").html(tmpAttachPath);//附件赋值
+            }, function (error) {
+            });
+
+            $("#xg_rar").html('上传附件');
+            //附件控件
+            initUpload();
+
+        };
+        var saveFormFun = function () {
+
+            if ($(formIdStr).valid()) {
+
+                var data = zudp.util.formData2json("form");
+                data = $.parseJSON(data);
+                var attachPaths = getAttachPath();//附件路径传参
+                var attachNames = getAttachName();//附件名称 传参
+                var attachIdss = getAttachIdss();//要删除掉的ids
+                data.attachPaths = attachPaths;
+                data.attachNames = attachNames;
+                data.attachIdss = attachIdss;
+
+                data.content=getContent();
+                data.contentnohtml=getContentTxt();
+                data = JSON.stringify(data);
+
+                var mymesg = "新建";
+                if ($("#id").val() != '') {
+                    mymesg = "修改";
+                }
+
+                zudp.ajax(urlstr).post(data).then(function (da) {
+
+                    zudp.plugin.dialog("success").alert(mymesg + "成功" + "！", "提示");
+                    dataTable.ajax.reload();
+                    $(".modal-form").modal("hide");
+                });
+            }
+        };
         var obj={
             url: urlstr,
             formId: formIdStr,
@@ -240,7 +347,10 @@
             error: "数据{msg}",
             disabledName: ["type", 'value'],
             hideInputName:[],
-            search: [".clear-input", "#search",".search-input"]
+            search: [".clear-input", "#search",".search-input"],
+            addBtnFun: setValFun,
+            editBtnFun: setOtherVal,
+            saveForm: saveFormFun
 
         };
         //初始化增删改查参数
@@ -279,6 +389,9 @@
                     {data: 'name'},
 //                    {data: 'identification'},
                     {data: 'mark',render:function(data, type, row){
+                        if(data==null){
+                            data="";
+                        }
                         var suf="...";
                         if(data!=null && data.length<20){
                             suf="";
@@ -337,10 +450,57 @@
             //debugger;
             var name = file.name;
             var fileurl = response.data;
-            $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");
+            $("#fileShowName").append("<p>" +
+                    "<a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a>" +
+                    "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                    "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                    "<input type='hidden' name='attachPath' value='"+fileurl+"'>" +
+                    "<input type='hidden' name='attachName' value='"+name+"'>" +
+                    "</p>");
 
             //change(response);
         });
+    }
+    //删除，删除节点
+    function deleteFile(obj) {
+        var fid = $(obj).parent().find("input[name='fid']").eq(0).val();
+        if (fid != '') {
+            var str = $("#attachIdss").val() + "," + fid;
+            if (str.indexOf(",") == 0) {
+                str = str.substr(1);
+            }
+            $("#attachIdss").val(str);
+        }
+        $(obj).parent().remove();
+    }
+
+    //获取在节点上的文件路径
+    function getAttachPath() {
+        var tempAttachPath = [];
+        var $attachPath = $("input[name='attachPath']");
+        $.each($attachPath, function (k, v) {
+            tempAttachPath.push($(v).val());
+        })
+        return tempAttachPath;
+    }
+    //获取在节点上的文件路名称
+    function getAttachName() {
+        var tempAttachName = [];
+        var $attachName = $("input[name='attachName']");
+        $.each($attachName, function (k, v) {
+            tempAttachName.push($(v).val());
+        })
+        return tempAttachName;
+    }
+
+    //获取所有附件Ids
+    function getAttachIdss() {
+        var tempAttachIdss = [];
+        var $attachIdss = $("#attachIdss").val().split(",");
+        $.each($attachIdss, function (k, v) {
+            tempAttachIdss.push(v);
+        })
+        return tempAttachIdss;
     }
 
 </script>
