@@ -3,28 +3,43 @@ package com.zte.zudp.admin.info.consultation.entity;
 
 import com.zte.zudp.admin.common.persistence.entity.DataEntity;
 
+import java.util.Date;
+
 /**
  * 咨询信息实体类
  */
 public class Consult extends DataEntity {
 
-    private String name;//咨询人姓名
-    private String telephone;//咨询人电话
+    private String name;//联系人姓名
+    private String telephone;//联系人电话
+    private String title;//标题
     private String picture;//咨询附带图片地址
     private String video;//咨询附带视频地址
     private String voice;//咨询附带语音地址
     private String content;//咨询内容
-    private long categoryId;//种类关联
+    private String consultId;//咨询人信息
+    private String replyUnitId;//咨询单位信息
+    private String consultDate;//咨询时间
     private String reply;//回复内容
-    private long state;
-    private ConsultCategory category;
+    private String replyId;//回复人信息
+    private String replyDate;//回复时间
+    private String startDate;//咨询时间筛选(起)
+    private String endDate;//咨询时间筛选(止)
 
-    public ConsultCategory getCategory() {
-        return category;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public void setCategory(ConsultCategory category) {
-        this.category = category;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
     public String getName() {
@@ -41,6 +56,14 @@ public class Consult extends DataEntity {
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getPicture() {
@@ -75,12 +98,28 @@ public class Consult extends DataEntity {
         this.content = content;
     }
 
-    public long getCategoryId() {
-        return categoryId;
+    public String getConsultId() {
+        return consultId;
     }
 
-    public void setCategoryId(long categoryId) {
-        this.categoryId = categoryId;
+    public void setConsultId(String consultId) {
+        this.consultId = consultId;
+    }
+
+    public String getReplyUnitId() {
+        return replyUnitId;
+    }
+
+    public void setReplyUnitId(String replyUnitId) {
+        this.replyUnitId = replyUnitId;
+    }
+
+    public String getConsultDate() {
+        return consultDate;
+    }
+
+    public void setConsultDate(String consultDate) {
+        this.consultDate = consultDate;
     }
 
     public String getReply() {
@@ -91,11 +130,19 @@ public class Consult extends DataEntity {
         this.reply = reply;
     }
 
-    public long getState() {
-        return state;
+    public String getReplyId() {
+        return replyId;
     }
 
-    public void setState(long state) {
-        this.state = state;
+    public void setReplyId(String replyId) {
+        this.replyId = replyId;
+    }
+
+    public String getReplyDate() {
+        return replyDate;
+    }
+
+    public void setReplyDate(String replyDate) {
+        this.replyDate = replyDate;
     }
 }
