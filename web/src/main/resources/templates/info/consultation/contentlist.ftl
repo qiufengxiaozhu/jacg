@@ -35,37 +35,74 @@
             <div class="ibox">
                 <div class="ibox-content form-inline z-relative">
                     <div class='col-sm-12'>
-                        <@hasPermission name="oaManager:post:create">
+                        <#--<@hasPermission name="oaManager:post:create">
                             <button class='btn btn-success' data-toggle='modal'  id="add-btn" onclick="hidden1(),typescenter()">
                                 新建
                             </button>&nbsp;&nbsp;
-                        </@hasPermission>
-                        <@hasPermission name="oaManager:post:batchDelete">
+                        </@hasPermission>-->
+                        <#--<@hasPermission name="oaManager:post:batchDelete">
                             <button class='btn btn-success btn-danger' id="delete-items">
                                 批量删除
                             </button>
-                        </@hasPermission>
-                        <div class='querybtn my-querybtn'>
-                            <input type='text' name='search' id='search_name' placeholder='请输入名称' class='form-control search-input'>
-                            <button class='btn btn-primary mgl my-mgl research-btn' >
-                                搜索
-                            </button>&nbsp;&nbsp;
-
+                        </@hasPermission>-->
+                        <div  class='querybtn my-querybtn '>
+                            <#--<input type="text" maxlength="255" name="serch"  placeholder="标题" class="form-control search-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" maxlength="255" name="telephone" id="telephone_select" placeholder="联系电话" class="form-control search-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" maxlength="255" name="name" id="name_select" placeholder="联系人" class="form-control search-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" maxlength="255" name="startDate" id="startDate_select" onfocus="this.blur()" startDate  placeholder="查询回复开始时间(起)" class="form-control search-input ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" maxlength="255" name="endDate" id="endDate_select" endDate  placeholder="查询回复时间(止)" class="form-control search-input ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+                            <input type='text' name='search' id='search_name' placeholder='标题' class='form-control search-input'>
+                            <button class='btn btn-primary mgl my-mgl research-btn' >搜索</button>
+                            <#--<button class="btn btn-primary mgl my-mgl clear-input" >清空</button>-->
+                            <button class="btn btn-primary select-query"  >高级搜索</button>
                         </div>
                     </div>
-                    <div id='search' class='search-group' style='display:none;'>
 
+                   <div id='search' class='search-group' style='display:none;'>
+                        <div class="form-group z-group">
+                            <div class="col-sm-12 z-group-pane">
+                                <label class="control-label my-control-label">标题：</label>
+                                <input type="text" maxlength="255" name="title" id="title_select" placeholder="联系电话" class="form-control search-input">
+                            </div>
+                        </div>
 
+                        <div class="form-group z-group">
+                            <div class="col-sm-12 z-group-pane">
+                                <label class="control-label my-control-label">联系电话：</label>
+                                <input type="text" maxlength="255" name="telephone" id="telephone_select" placeholder="联系电话" class="form-control ">
+                            </div>
+                        </div>
+
+                        <div class="form-group z-group">
+                            <div class="col-sm-12 z-group-pane">
+                                <label class="control-label my-control-label">联系人：</label>
+                                <input type="text" maxlength="255" name="name" id="name_select" placeholder="联系人" class="form-control ">
+                            </div>
+                        </div>
+
+                        <div class="form-group z-group">
+                            <div class="col-sm-12 z-group-pane">
+                                <label class="control-label my-control-label">开始时间：</label>
+                                <input type="text" maxlength="255" name="startDate" id="startDate_select" onfocus="this.blur()" startDate  placeholder="开始时间" class="form-control  ">
+                            </div>
+                        </div>
+
+                        <div class="form-group z-group">
+                            <div class="col-sm-12 z-group-pane">
+                                <label class="control-label my-control-label">结束时间：</label>
+                                <input type="text" maxlength="255" name="endDate" id="endDate_select" endDate  placeholder="结束时间" class="form-control  ">
+                            </div>
+                        </div>
+                    <button class="btn btn-danger mgl my-mgl clear-input" >清空</button>&nbsp;&nbsp;
                     </div>
+
                     <table id="post-list-table" class="table my-table table-bordered dataTables-example">
                         <thead>
                         <tr>
                             <th>id</th>
-                            <th>咨询人姓名</th>
-                            <th>咨询人电话</th>
-                            <th>咨询内容</th>
-                            <th>咨询类别</th>
-                            <th>回复内容</th>
+                            <th>标题</th>
+                            <th>咨询时间</th>
+                            <th>回复时间</th>
                             <th>操作</th>
                         </tr>
                         </thead>
@@ -97,7 +134,7 @@
                         <input type="hidden" name="id" id="id">
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">咨询人姓名：</label>
+                            <label class="col-sm-3 control-label my-control-label ">联系人：</label>
                             <div class="col-sm-6">
                                 <input  type="text" name="name" maxlength="64" id="name" placeholder="咨询人姓名" class="form-control">
                             </div>
@@ -107,12 +144,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">咨询人电话：</label>
+                            <label class="col-sm-3 control-label my-control-label ">联系电话：</label>
                             <div class="col-sm-6">
                                 <input  type="text" name="telephone" maxlength="64" id="telephone" placeholder="咨询人电话" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">标题：</label>
+                            <div class="col-sm-6">
+                                <input  type="text" name="title" maxlength="64" id="title" placeholder="咨询人电话" class="form-control">
                             </div>
                         </div>
 
@@ -124,6 +168,13 @@
                         </div>
 
                         <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">咨询时间：</label>
+                            <div class="col-sm-6">
+                                <input  type="text" name="consultDate" maxlength="64" id="consultDate" placeholder="咨询人电话" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">回复内容：</label>
                             <div class="col-sm-6">
                                 <textarea placeholder="回复内容" class="form-control" rows="2" cols="" name="reply" id="reply"></textarea>
@@ -131,17 +182,26 @@
                         </div>
 
                         <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">回复时间：</label>
+                            <div class="col-sm-6">
+                                <input  type="text" name="replyDate" maxlength="64" id="replyDate" placeholder="回复时间" class="form-control">
+                            </div>
+                        </div>
+
+
+
+                        <#--<div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">咨询种类：</label>
                             <div class="col-sm-6">
                                 <select class="form-control" id="categoryId" name="categoryId">
 
                                 </select>
                             </div>
-                        </div>
+                        </div>-->
 
                         <div class="form-group">
                             <div class="col-sm-6">
-                                <a  class="col-sm-3 control-label my-control-label " id="picture" name="picture" target="_blank" >附件图片</a>
+                                <a href="" class="col-sm-3 control-label my-control-label " id="picture" name="picture" target="_blank" >附件图片</a>
                             </div>
                         </div>
 
@@ -196,12 +256,14 @@
 <script src="/js/sys/avatar.js"></script>
 <script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
+<script src="/js/pluginInit/laydateInit.js"></script>
 <script>
 
     var dataTable;
     var urlstr="/api/consult";
     var formIdStr="#kind_form";
     var sys_url=window.location.host;
+    var startDate = new Date();
     $(document).ready(function () {
 
 
@@ -224,9 +286,34 @@
         //dataTable = zudp.component.initCURD(obj);
         //initForm(obj);
 
-        initForm(obj)
+        initForm(obj);
+
+
+
 
     });
+    function hiddensave(obj){
+        var id=$(obj).val();
+        zudp.ajax("/api/consult/"+id).get("").then(function (data){
+        if(data.reply!=null && data.reply!=""){
+              $("#save-btn").hide();
+            }else {
+                $("#save-btn").show();
+            }
+        })
+       /* $.ajax({
+            type:"get",
+            url:"/api/consult/"+id,
+            success:function(data){
+                alert(data);
+                if(data.reply!=null && data.reply!=""){
+                    $("#save-btn").hide();
+                }else {
+                    $("#save-btn").show();
+                }
+            }
+        })*/
+    }
 
     function hidden1() {
         $(".modal form").find("#picture").hide();
@@ -240,34 +327,64 @@
         $(".modal form").find("#voice").show();
         $(".modal form").find("#video").show();
 
-        $(".modal form").find("[name='name'],[name='telephone'],[name='content']").attr("disabled",true);
+        $(".modal form").find("[name='name'],[name='telephone'],[name='content'],[name='consultDate'],[name='replyDate'],[name='title']").attr("disabled",true);
     }
 
 
 
    function img(obj){
        var id=$(obj).val();
-        zudp.ajax("/api/consult/get?id="+id).get().then(function (value){
-        /* if (value.picture==null) {
-             //$("#picture").removeProp('href');
-             /!*$("#picture").prop("href", "#");
+        zudp.ajax("/api/consult/"+id).get().then(function (value){
+     if (value.picture==null || value.picture=='') {
+         //$("#picture").attr("href","javascript:void(0);");
+         //$("#picture").removeAttr("href");
+             $("#picture").prop("href", "#");
              $("#picture").click(function (event) {
-                 // 如果<a>定义了 target="_blank“ 需要这句来阻止打开新页面
-                 event.preventDefault();
-             });*!/
-         }else {
-         }*/
-        $("#picture").attr("href",value.picture);
+             // 如果<a>定义了 target="_blank" 需要这句来阻止打开新页面
+             event.preventDefault();
+         });}else {
+         $("#picture").attr("href",value.picture);
+         }
+
+      if (value.voice==null || value.voice=='')  {
+          $("#voice").prop("href", "#");
+          $("#voice").click(function (event) {
+              event.preventDefault();
+          });
+      }else{
+          $("#voice").attr("href",value.voice);
+      }
 
 
-        //$("#picture").attr("href","javascript:void(0);");
-        //$("#picture").removeAttr("href");
-
-        $("#voice").attr("href",value.voice);
-        $("#video").attr("href",value.video);
+        if (value.video==null || value.video=='')  {
+            $("#video").prop("href", "#");
+            $("#video").click(function (event) {
+                event.preventDefault();
+            });
+        }else{
+            $("#video").attr("href",value.video);
+        }
     });
     }
 
+    function replytitle(){
+        $(".modal .modal-title").text("回复咨询");
+    }
+
+    //时间格式转换
+    function formatDate(date) {
+        if (date == null) return "";
+        date = new Date(date);
+        var Y = date.getFullYear() + '-';
+        var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+        var D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()) + ' ';
+        var h=(date.getHours()< 10 ?'0'+(date.getHours()):date.getHours())+":";//获取时
+        var m=(date.getMinutes()<10?'0'+(date.getMinutes()):date.getMinutes())+":";//获取分
+        var s=(date.getSeconds()<10?'0'+(date.getSeconds()):date.getSeconds());//获取秒
+        return Y + M + D + h + m + s ;
+    };
+
+    //种类下拉框
     function typescenter(obj) {
         var ca=$(obj).parent().prev().prev().html();
         //$("#categoryId").find("option").remove();
@@ -306,14 +423,35 @@
             .url(urls)
             .search(function () {
                 return {
-                    "name":$("#search_name").val()
-
+                    "title":$("#title_select").val(),
+                    "name":$("#name_select").val(),
+                    "telephone":$("#telephone_select").val(),
+                    "startDate":$("#startDate_select").val(),
+                    "endDate":$("#endDate_select").val()
                 }
             })
             .columns( [
                 {data: 'id', visible: false},
+                {data:'title'},
+                {data:'consultDate',
+                    render: function (data, type, row) {
+                        if (data != null && data != '') {
+                            return formatDate(data);
+                        } else {
+                            return "";
+                        }
 
-                {data: 'name'},
+                    }},
+                {data:'replyDate',
+                    render: function (data, type, row) {
+                        if (data != null && data != '') {
+                            return formatDate(data);
+                        } else {
+                            return "";
+                        }
+
+                    }},
+                /*{data: 'name'},
 
                 {data: 'telephone'},
 
@@ -322,9 +460,9 @@
                         if(data!=null && data.length<20){
                             suf="";
                         }
-                        /*if(data!=null){
+                        /!*if(data!=null){
                             data=data.substr(0,20);
-                        }*/
+                        }*!/
                         var ah="<a title='"+data+"'>"+data.substr(0,20);+suf+"</a>";
                         return ah;
                     }
@@ -338,33 +476,33 @@
                         if(data!=null && data.length<20){
                             suf="";
                         }
-                        /*if(data!=null){
+                        /!*if(data!=null){
                             data=data.substr(0,20)
-                        }*/
+                        }*!/
                         var ah="<a title='"+data+"'>"+data.substr(0,20)+suf+"</a>";
                         return ah;
                     }
 
-                },
+                },*/
 
                 {
                     render: function (data, type, row) {
                         var btn = "";
                         var editstr="";
                         var  delstr="";
-                        <#--<@hasPermission name="oaManager:post:update">
+                       <#--<@hasPermission name="oaManager:post:update">
                         editstr=zudp.template.editBtn;
                         </@hasPermission>-->
-                        editstr='<button onclick="typescenter(this),show1()"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>';
+                        editstr='<button onclick="show1(),hiddensave(this),img(this),replytitle()"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
 
-                        <@hasPermission name="oaManager:post:delete">
+                        <#--<@hasPermission name="oaManager:post:delete">
                         delstr=zudp.template.delBtn;
-                        </@hasPermission>
+                        </@hasPermission>-->
 
-                       var detailStr='<button onclick="typescenter(this),img(this)" class="btn btn-info btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
+                       var detailStr='<button onclick="img(this)"  class="btn btn-success btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
 
 
-                        btn += editstr+delstr+detailStr;
+                        btn += editstr+detailStr;
                         return zudp.util.render(btn, row);
                         //return "";
                     }

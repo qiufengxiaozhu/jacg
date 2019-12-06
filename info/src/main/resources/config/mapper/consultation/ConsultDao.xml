@@ -7,33 +7,39 @@
         <id column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="telephone" property="telephone"/>
+        <result column="title" property="title" />
         <result column="picture" property="picture"/>
         <result column="video" property="video"/>
         <result column="voice" property="voice"/>
         <result column="content" property="content"/>
-        <result column="category_id" property="categoryId"/>
+        <result column="consult_id" property="consultId"/>
+        <result column="consult_date" property="consultDate"/>
         <result column="reply" property="reply"/>
+        <result column="reply_id" property="replyId"/>
+        <result column="reply_unit_id" property="replyUnitId" />
+        <result column="reply_date" property="replyDate"/>
+        <result column="start_date" property="startDate"/>
+        <result column="end_date" property="endDate"/>
         <result column="create_date" property="createDate" />
         <result column="create_user" property="createUser.id" />
         <result column="update_date" property="updateDate" />
         <result column="update_user" property="updateUser.id" />
         <result column="del" property="del" />
-        <association property="category" javaType="com.zte.zudp.admin.info.consultation.entity.ConsultCategory">
 
+        <!--<association property="category" javaType="com.zte.zudp.admin.info.consultation.entity.ConsultCategory">
             <id column="cid" property="id" />
             <result column="caname" property="name"/>
             <result column="cacreate_date" property="createDate" />
             <result column="cacreate_user" property="createUser.id" />
             <result column="caupdate_date" property="updateDate" />
             <result column="caupdate_user" property="updateUser.id" />
-
-        </association>
+        </association>-->
     </resultMap>
 
 
 
     <select id="findList" resultMap="consultMap" useCache="false">
-        SELECT distinct co.id,co.name,telephone,picture,video,
+       /* SELECT distinct co.id,co.name,telephone,picture,video,
         content,category_id,reply,ca.id as cid,ca.name as caname,
 
         ca.create_date as cacreate_date,ca.create_user as cacreate_user,
@@ -41,23 +47,32 @@
 
         from zmj_consult co join zmj_category ca
         on category_id=ca.id
-        where co.del!=1 and ca.del!=1
+        where co.del!=1 and ca.del!=1*/
+
+        SELECT  * FROM zmj_consult
+        WHERE  del!=1
         <if test="name!=null and name!=''">
-            and co.name like concat('%', #{name}, '%')
+            and name = #{name}
         </if>
-        <if test="name!=null and name!=''">
-            or ca.name like concat('%', #{name}, '%')
+        <if test="telephone!=null and telephone!=''">
+            and telephone =#{telephone}
         </if>
-        ORDER BY co.create_date desc
+        <if test="title!=null and title!=''">
+            and `title` LIKE concat('%', #{title}, '%')
+        </if>
+        <if test="startDate!=null and startDate!=''">
+            and `consult_date` >=#{startDate}
+        </if>
+        <if test="endDate!=null and endDate!=''">
+            and #{endDate} >= `consult_date`
+        </if>
+        ORDER BY create_date desc
     </select>
 
 
     <select id="get" resultMap="consultMap" >
-        SELECT distinct co.id,co.name,telephone,picture,video,voice,
-        content,category_id,reply,ca.id as cid,ca.name as caname
-        from zmj_consult co join zmj_category ca
-        on category_id=ca.id
-        where co.id=#{id}
+
+        SELECT  * FROM zmj_consult where id=#{id}
     </select>
 
     <!--<select id="checkName" resultType="java.lang.Integer">
@@ -69,7 +84,7 @@
         </if>
     </select>-->
 
-    <insert id="insert">
+    <!--<insert id="insert">
         INSERT INTO zmj_consult (
         id, name,telephone,content,category_id,reply,
         create_date,
@@ -86,14 +101,14 @@
         #{updateUser.id},
         0
         )
-    </insert>
+    </insert>-->
 
     <update id="update" parameterType="com.zte.zudp.admin.info.consultation.entity.Consult">
-        UPDATE zmj_consult co SET
-        co.category_id = #{categoryId},
-        co.reply = #{reply}
-        WHERE co.id = #{id}
-    </update>
+    UPDATE zmj_consult  SET
+    reply = #{reply},
+    reply_date = #{updateDate}
+    WHERE id = #{id}
+</update>
 
     <delete id="delete">
         UPDATE zmj_consult
