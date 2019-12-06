@@ -37,11 +37,11 @@ public class ComplainController extends AbstractCRUDController<ComplainEntity> {
     }
 
 
-    @JSON
+//    @JSON
+//    @RequestMapping(value = "/reply", method = RequestMethod.PUT)
+//    @EndpointRest(id = "reply", name = "保存功能", authorizedType = AuthorizedType.LOGIN)
+//    public int updateReply(@RequestBody ComplainEntity entity) {
+//        return service().myUpdate(entity);
+//    }
 
-    @RequestMapping(value = "/reply", method = RequestMethod.PUT)
-    @EndpointRest(id = "reply", name = "保存功能", authorizedType = AuthorizedType.LOGIN)
-    public int updateReply(@RequestBody ComplainEntity entity) {
-        return service().updateReply(entity);
-    }
 }
