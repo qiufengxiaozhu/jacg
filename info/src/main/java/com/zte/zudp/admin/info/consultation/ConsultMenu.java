@@ -38,7 +38,7 @@ public class ConsultMenu {
     }
 
 
-    @RequestMapping("/main")
+    /*@RequestMapping("/main")
     public String main(){
         return "/info/consultation/front/main";
     }
@@ -48,5 +48,5 @@ public class ConsultMenu {
         List<ConsultCategory> categories = consultCategoryService.showCategory();
         model.addAttribute("list",categories);
         return "/info/consultation/front/wyzx";
-    }
+    }*/
 }
