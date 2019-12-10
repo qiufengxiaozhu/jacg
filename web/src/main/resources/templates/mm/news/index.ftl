@@ -215,7 +215,7 @@
         }
         if(a==6){
             //公众调查
-            window.location.href='/mm/news/survey';
+            window.location.href='/mm/queinvest/survey';
         }
     }
 

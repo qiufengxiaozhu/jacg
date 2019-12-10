@@ -41,7 +41,7 @@
         val01)
     VALUES
     ( #{id},
-      #{questions.id},
+      #{idJson},
       #{choiceText01},
       #{choiceText02},
       #{choiceText03},

@@ -20,6 +20,15 @@ public class Questions extends DataEntity{
     private String number;
 
 
+    private String label;
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
 
     /**
      * 题目类型id
