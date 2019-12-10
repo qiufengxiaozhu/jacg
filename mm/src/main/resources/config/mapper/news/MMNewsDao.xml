@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.mm.news.dao.MMNewsDao">
+
+    <resultMap type="com.zte.zudp.admin.mm.news.entity.MMNews" id="mmnewsMap">
+        <id column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="contentnohtml" property="contentnohtml"/>
+        <result column="video" property="video"/>
+        <result column="status" property="status" />
+        <result column="time_zone" property="timeZone" />
+        <result column="news_Date" property="newsDate"/>
+        <result column="clicks" property="clicks"/>
+        <result column="category" property="category"/>
+        <result column="fk_categoryid" property="fk_categoryid"/>
+        <result column="create_date" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="del" property="del" />
+        <result column="summary" property="summary"/>
+        <result column="path" property="path"/>
+    </resultMap>
+
+    <!--查询三条-->
+    <select id="find_threeNews" resultMap="mmnewsMap" >
+        SELECT
+            n.id,
+            n.title,
+            n.content,
+            n.contentnohtml,
+            n.STATUS,
+            t2.category category,
+            n.time_zone,
+            DATE_FORMAT( n.news_date, "%Y-%m-%d %T" ) news_date,
+            n.clicks,
+            n.create_date ,
+            t3.path path
+        FROM
+          qgq_news n
+        left join   qgq_category t2 ON n.fk_categoryid = t2.id
+        left join sys_attachments t3  on  t3.billid  =  n.id
+
+        WHERE
+          n.del != 1
+        AND n.STATUS = "已发布状态"
+        ORDER BY
+          n.news_date DESC
+        LIMIT 3
+    </select>
+
+    <!--根据id查询指定新闻-->
+    <select id="find_news" resultMap="mmnewsMap" >
+        SELECT
+        id,
+        title,
+        content,
+        clicks,
+        DATE_FORMAT(news_date,"%Y-%m-%d %T") news_date
+        from qgq_news
+        where del!=1 and id = #{id} and status="已发布状态"
+    </select>
+
+    <!--将该新闻的点击量+1-->
+    <update id="add_newsClicks" >
+        UPDATE qgq_news  SET
+        clicks = clicks + 1
+        WHERE id = #{id}
+    </update>
+
+    <!--查询所有新闻-->
+    <select id="find_allNews" resultMap="mmnewsMap" >
+        SELECT
+        n.id,
+        n.title,
+        n.content,
+        n.contentnohtml,
+        n.status,
+        qgq_category.category category,
+        n.time_zone,
+        DATE_FORMAT(n.news_date,"%Y-%m-%d %T") news_date,
+        n.clicks,
+        n.create_date,
+        t3.path path
+        from qgq_news n
+        left join qgq_category on n.fk_categoryid = qgq_category.id
+        left join sys_attachments t3  on  t3.billid  =  n.id
+        where n.del!=1 and n.status="已发布状态"
+        ORDER BY n.news_date desc
+    </select>
+
+    <!--根据发布时间查询新闻-->
+    <select id="find_newsTime" resultMap="mmnewsMap" >
+        select
+            n.id,
+            n.title,
+            n.content,
+            n.contentnohtml,
+            n.status,
+            qgq_category.category category,
+            n.time_zone,
+            DATE_FORMAT(n.news_date,"%Y-%m-%d %T") news_date,
+            n.clicks,
+            n.create_date
+        from qgq_news n
+        left join qgq_category
+        on n.fk_categoryid = qgq_category.id
+        where n.del!=1 and n.status="已发布状态" and news_date like concat('%', #{newsDate}, '%')
+        ORDER BY n.news_date desc
+    </select>
+
+    <!--<select id="findList" resultMap="mmnewsMap" >-->
+        <!--SELECT n.id,n.title,n.summary,n.status,n.create_date,n.news_date,qgq_category.category-->
+        <!--from qgq_news n-->
+        <!--left join qgq_category-->
+        <!--on n.fk_categoryid = qgq_category.id-->
+        <!--where n.del!=1-->
+        <!--<if test="title!=null and title!=''">-->
+            <!--and `title` like concat('%', #{title}, '%')-->
+        <!--</if>-->
+        <!--<if test="fk_categoryid!=null and fk_categoryid!=''">-->
+            <!--and `fk_categoryid` like concat('%', #{fk_categoryid}, '%')-->
+        <!--</if>-->
+        <!--ORDER BY n.create_date desc-->
+    <!--</select>-->
+
+    <!--<select id="get" resultMap="mmnewsMap" >-->
+        <!--SELECT-->
+        <!--id,-->
+        <!--title,-->
+        <!--summary,-->
+        <!--content,-->
+        <!--news_Date,-->
+        <!--fk_categoryid,-->
+        <!--create_user,-->
+        <!--create_date-->
+        <!--from qgq_news-->
+        <!--where id=#{id}-->
+    <!--</select>-->
+
+    <!--&lt;!&ndash;<select id="checkName" resultType="java.lang.Integer">&ndash;&gt;-->
+        <!--&lt;!&ndash;SELECT COUNT(1) FROM oa_post&ndash;&gt;-->
+        <!--&lt;!&ndash;WHERE del =  '0'&ndash;&gt;-->
+        <!--&lt;!&ndash;AND `name` = #{name}&ndash;&gt;-->
+        <!--&lt;!&ndash;<if test="id!=null and id !=''">&ndash;&gt;-->
+            <!--&lt;!&ndash;AND id != #{id}&ndash;&gt;-->
+        <!--&lt;!&ndash;</if>&ndash;&gt;-->
+    <!--&lt;!&ndash;</select>&ndash;&gt;-->
+    <!--&lt;!&ndash;<select id="checkIdentification" resultType="java.lang.Integer">&ndash;&gt;-->
+        <!--&lt;!&ndash;SELECT COUNT(1) FROM oa_post&ndash;&gt;-->
+        <!--&lt;!&ndash;WHERE del = '0'&ndash;&gt;-->
+        <!--&lt;!&ndash;AND identification = #{identification}&ndash;&gt;-->
+        <!--&lt;!&ndash;<if test="id!=null and id !=''">&ndash;&gt;-->
+            <!--&lt;!&ndash;AND id != #{id}&ndash;&gt;-->
+        <!--&lt;!&ndash;</if>&ndash;&gt;-->
+    <!--&lt;!&ndash;</select>&ndash;&gt;-->
+
+    <!--<insert id="insert">-->
+        <!--INSERT INTO qgq_news (-->
+        <!--id, title, summary, content,news_Date,fk_categoryid,status,-->
+        <!--create_date,-->
+        <!--create_user,-->
+        <!--update_date,-->
+        <!--update_user,-->
+        <!--del-->
+        <!--)-->
+        <!--VALUE (-->
+        <!--#{id}, #{title}, #{summary},#{content},#{newsDate},#{fk_categoryid},'编辑状态',-->
+        <!--#{createDate},-->
+        <!--#{createUser.id},-->
+        <!--#{updateDate},-->
+        <!--#{updateUser.id},-->
+        <!--'0'-->
+        <!--)-->
+    <!--</insert>-->
+    <!--<update id="update">-->
+        <!--UPDATE qgq_news m SET-->
+        <!--m.title = #{title},-->
+        <!--m.summary = #{summary},-->
+        <!--m.content = #{content},-->
+        <!--m.fk_categoryid = #{fk_categoryid},-->
+        <!--m.news_Date = #{newsDate},-->
+        <!--m.update_date = #{updateDate},-->
+        <!--m.update_user = #{updateUser.id}-->
+        <!--WHERE m.id = #{id}-->
+    <!--</update>-->
+
+    <!--<delete id="delete">-->
+        <!--UPDATE qgq_news-->
+        <!--SET del = 1-->
+        <!--WHERE id = #{id}-->
+    <!--</delete>-->
+    <!--<delete id="batchDelete">-->
+        <!--UPDATE qgq_news SET del = 1-->
+        <!--WHERE id IN-->
+        <!--<foreach collection="array" item="i" separator="," open="(" close=")">-->
+            <!--#{i}-->
+        <!--</foreach>-->
+    <!--</delete>-->
+</mapper>

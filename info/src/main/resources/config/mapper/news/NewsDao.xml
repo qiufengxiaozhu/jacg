@@ -6,22 +6,36 @@
     <resultMap type="com.zte.zudp.admin.info.news.entity.News" id="newsMap">
         <id column="id" property="id"/>
         <result column="title" property="title"/>
-        <result column="summary" property="summary"/>
         <result column="content" property="content"/>
+        <result column="contentnohtml" property="contentnohtml"/>
+        <result column="video" property="video"/>
+        <result column="status" property="status" />
+        <result column="time_zone" property="timeZone" />
+        <result column="news_Date" property="newsDate"/>
+        <result column="clicks" property="clicks"/>
         <result column="fk_categoryid" property="fk_categoryid"/>
         <result column="create_date" property="createDate" />
         <result column="create_user" property="createUser.id" />
         <result column="update_date" property="updateDate" />
         <result column="update_user" property="updateUser.id" />
         <result column="del" property="del" />
-        <result column="status" property="status" />
-        <result column="news_Date" property="newsDate"></result>
+        <result column="summary" property="summary"/>
     </resultMap>
 
 
 
-    <select id="findList" resultMap="newsMap" useCache="false">
-        SELECT n.id,n.title,n.summary,n.status,n.create_date,n.news_date,qgq_category.category
+    <select id="findList" resultMap="newsMap" >
+        SELECT
+        n.id,
+        n.title,
+        n.content,
+        n.contentnohtml,
+        n.status,
+        qgq_category.category,
+        n.time_zone,
+        n.news_date,
+        n.clicks,
+        n.create_date
         from qgq_news n
         left join qgq_category
         on n.fk_categoryid = qgq_category.id
@@ -29,46 +43,55 @@
         <if test="title!=null and title!=''">
             and `title` like concat('%', #{title}, '%')
         </if>
-        <if test="fk_categoryid!=null and fk_categoryid!=''">
-            and `fk_categoryid` like concat('%', #{fk_categoryid}, '%')
+        <if test=" startTime !=null and startTime !=''">
+            and `news_date` >= #{startTime} and  n.status = '已发布状态'
+        </if>
+        <if test="endTime!=null and endTime!=''">
+            and  #{endTime} >= `news_date` and n.status = '已发布状态'
         </if>
         ORDER BY n.create_date desc
     </select>
 
     <select id="get" resultMap="newsMap" >
         SELECT
-        id,
-        title,
-        summary,
-        content,
-        news_Date,
-        fk_categoryid,
-        create_user,
-        create_date
-        from qgq_news
-        where id=#{id}
+            n.id,
+            n.title,
+            n.content,
+            n.news_date,
+            fk_categoryid,
+            n.contentnohtml,
+            n.time_zone,
+            n.create_user,
+            n.create_date
+        FROM
+            qgq_news n
+        WHERE
+            n.id = #{id}
     </select>
 
-    <!--<select id="checkName" resultType="java.lang.Integer">-->
-        <!--SELECT COUNT(1) FROM oa_post-->
-        <!--WHERE del =  '0'-->
-        <!--AND `name` = #{name}-->
-        <!--<if test="id!=null and id !=''">-->
-            <!--AND id != #{id}-->
-        <!--</if>-->
-    <!--</select>-->
-    <!--<select id="checkIdentification" resultType="java.lang.Integer">-->
-        <!--SELECT COUNT(1) FROM oa_post-->
-        <!--WHERE del = '0'-->
-        <!--AND identification = #{identification}-->
-        <!--<if test="id!=null and id !=''">-->
-            <!--AND id != #{id}-->
-        <!--</if>-->
-    <!--</select>-->
+    <select id="checkName" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM qgq_news
+        WHERE del =  '0'
+        AND `title` = #{title}
+        <if test="id!=null and id !=''">
+            AND id != #{id}
+        </if>
+    </select>
+    <select id="checkIdentification" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM oa_post
+        WHERE del = '0'
+        AND identification = #{identification}
+        <if test="id!=null and id !=''">
+            AND id != #{id}
+        </if>
+    </select>
 
     <insert id="insert">
         INSERT INTO qgq_news (
-        id, title, summary, content,news_Date,fk_categoryid,status,
+        id, title, content, contentnohtml,
+        status,fk_categoryid,
+        time_zone,
+        clicks,
         create_date,
         create_user,
         update_date,
@@ -76,7 +99,10 @@
         del
         )
         VALUE (
-        #{id}, #{title}, #{summary},#{content},#{newsDate},#{fk_categoryid},'编辑状态',
+        #{id}, #{title},#{content}, #{contentnohtml},
+        '编辑状态',#{fk_categoryid},
+        #{timeZone},
+        '0',
         #{createDate},
         #{createUser.id},
         #{updateDate},
@@ -87,10 +113,10 @@
     <update id="update" parameterType="com.zte.zudp.admin.info.news.entity.News">
         UPDATE qgq_news m SET
         m.title = #{title},
-        m.summary = #{summary},
         m.content = #{content},
+        m.contentnohtml = #{contentnohtml},
         m.fk_categoryid = #{fk_categoryid},
-        m.news_Date = #{newsDate},
+        m.time_zone=#{timeZone},
         m.update_date = #{updateDate},
         m.update_user = #{updateUser.id}
         WHERE m.id = #{id}
@@ -108,4 +134,17 @@
             #{i}
         </foreach>
     </delete>
+
+    <update id="updateRelease">
+        UPDATE qgq_news
+        SET status = '已发布状态',news_date = now()
+        WHERE id = #{id}
+    </update>
+
+    <update id="updateCancel">
+        UPDATE qgq_news
+        SET status = '未发布状态',news_date = null
+        WHERE id = #{id}
+    </update>
+
 </mapper>

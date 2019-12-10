@@ -5,37 +5,88 @@ import com.zte.zudp.admin.common.util.EncryptUtil;
 import com.zte.zudp.admin.common.util.StringUtil;
 import com.zte.zudp.admin.common.util.WebUtil;
 import com.zte.zudp.admin.info.news.service.NewsService;
+import com.zte.zudp.admin.mm.news.entity.MMNews;
+import com.zte.zudp.admin.mm.news.service.MMNewsService;
 import com.zte.zudp.admin.modules.sys.user.entity.User;
 import com.zte.zudp.admin.modules.sys.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.security.auth.Subject;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping(value = "/mm/news")
 public class MMNewsController {
 
     @Autowired
-    private NewsService newsService;
+    private MMNewsService newsService;
 
     @Autowired
     private UserService userService;
 
-
+    /**
+     * 查询所有新闻
+     * @param model
+     * @return
+     */
     @GetMapping("/mmNews")
     public String mmNews(Model model) {
+
+        //查询所有新闻
+        ArrayList<MMNews> newslist = newsService.find_allNews();
+
+        model.addAttribute("Newslist",newslist);
+
         return "/mm/news/mmNews";
     }
 
-    @GetMapping("/newsDetail")
-    public String newsDetail(Model model,String type) {
+    /**
+     * 根据id查找新闻
+     * @param model
+     * @param id
+     * @param type
+     * @return
+     */
+    @RequestMapping("/newsDetail/{obj}")
+    public String newsDetail(Model model,@PathVariable("obj") String id ,String type) {
+
+        //将该新闻的点击量+1
+        newsService.add_newsClicks(id);
+
+        //根据id查找新闻
+        MMNews news = newsService.find_news(id);
+
+//        System.out.println(news.getId()+"   "+news.getTitle()+"   "+news.getContent()+"   "+news.getNewsDate());
+
         model.addAttribute("type",type==null?"":type);
+        model.addAttribute("News",news);
+
         return "/mm/news/news-detail";
+    }
+
+    /**
+     * 根据发布时间查找新闻
+     * @param model
+     * @param newsDate
+     * @return
+     */
+    @RequestMapping("/queryNews")
+    public String queryNews(Model model, String newsDate) {
+
+        //根据发布时间查找新闻
+        ArrayList<MMNews> newslist = newsService.find_newsTime(newsDate);
+
+        model.addAttribute("Newslist",newslist);
+
+//        return "forward:/mm/news/mmNews";
+        return "/mm/news/mmNews";
     }
 
     /**
@@ -45,6 +96,12 @@ public class MMNewsController {
      */
     @GetMapping("/index")
     public String index(Model model) {
+
+        //获取前三条新闻
+        ArrayList<MMNews> newslist = newsService.find_threeNews();
+
+        model.addAttribute("Newslist",newslist);
+
         return "/mm/news/index";
     }
 
