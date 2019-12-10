@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.myneedlike.dao.likeDao">
+
+    <resultMap type="com.zte.zudp.admin.info.myneedlike.entity.likeEntity" id="likeMap">
+        <id column="id" property="id"/>
+        <result column="createDate" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="title" property="title" />
+        <result column="content" property="content" />
+        <result column="picture" property="picture" />
+        <result column="video" property="video" />
+        <result column="publishStatus" property="publishStatus" />
+        <result column="validTime" property="validTime" />
+        <result column="likeNum" property="likeNum" />
+        <result column="validStartTime" property="validStartTime" />
+        <result column="validStopTime" property="validStopTime" />
+        <result column="del" property="del" />
+    </resultMap>
+
+    <select id="findList" resultMap="likeMap" useCache="false">
+        SELECT
+        my_need_like.id as id,
+        my_need_like.content as content,
+        my_need_like.title as title,
+        my_need_like.like_num as likeNum,
+        my_need_like.picture as picture,
+        my_need_like.publish_status as publishStatus,
+        my_need_like.valid_time as validTime,
+        my_need_like.create_date as createDate,
+        my_need_like.video as video
+        from my_need_like
+        where del!=1
+        AND  valid_time > NOW()
+        <if test="title!=null and title!=''">
+            and my_need_like.title like concat('%', #{title}, '%')
+        </if>
+        <if test="validStartTime!=null and validStartTime !=''">
+           AND  valid_time &gt;= #{validStartTime}
+        </if>
+        <if test="validStopTime!=null and validStopTime !=''">
+            AND  valid_time &lt;= #{validStopTime}
+        </if>
+        ORDER BY create_date desc
+    </select>
+
+
+    <select id="get" resultMap="likeMap" >
+        SELECT
+            mnl.id as id,
+            mnl.content as content,
+            mnl.title as title,
+            mnl.like_num as likeNum,
+            mnl.picture as picture,
+            mnl.publish_status as publishStatus,
+            mnl.valid_time as validTime,
+            mnl.video as video
+        from my_need_like mnl
+        where mnl.id=#{id}
+    </select>
+
+    <select id="checkTitle" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM my_need_like
+        WHERE del =  '0'
+        AND title = #{title}
+        <if test="id!=null and id !=''">
+            AND id != #{id}
+        </if>
+    </select>
+
+
+    <insert id="insert">
+        INSERT INTO my_need_like (
+                id,
+                content,
+                title,
+                like_num,
+                picture,
+                publish_status,
+                video,
+                create_date,
+                create_user,
+                update_date,
+                update_user,
+                valid_time,
+                del
+        )
+        VALUE (
+        #{id},
+        #{content},
+        #{title},
+        '0',
+        #{picture},
+        '0',
+        #{video},
+        #{createDate},
+        #{createUser.id},
+        #{updateDate},
+        #{updateUser.id},
+        #{validTime},
+        '0'
+        )
+    </insert>
+    <update id="update" parameterType="com.zte.zudp.admin.info.myneedlike.entity.likeEntity">
+        UPDATE my_need_like m SET
+        m.title = #{title},
+        m.content = #{content},
+        m.picture = #{picture},
+        m.video = #{video},
+        m.valid_time = #{validTime},
+        m.update_date = #{updateDate},
+        m.update_user = #{updateUser.id}
+        <!--  m.identification = #{identification} -->
+        WHERE m.id = #{id}
+    </update>
+
+    <delete id="delete">
+        UPDATE my_need_like
+        SET del = 1
+        WHERE id = #{id}
+    </delete>
+    <delete id="batchDelete">
+        UPDATE my_need_like SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </delete>
+
+    <update id="updatePublish">
+        UPDATE my_need_like  SET
+        publish_status = '1'
+        WHERE id = #{id}
+    </update>
+
+    <update id="updateNoPublish">
+        UPDATE my_need_like m SET
+        m.publish_status = '0'
+        WHERE m.id = #{id}
+    </update>
+
+
+    <update id="updateLikeNum">
+        update
+            my_need_like m
+        SET
+            m.like_num = m.like_num + 1
+        where
+            m.id =  #{id}
+    </update>
+    
+    <select id="findValidTime" resultMap="likeMap">
+        select m.title,m.content
+        FROM my_need_like m
+        where valid_time
+    </select>
+</mapper>
