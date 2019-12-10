@@ -16,6 +16,39 @@ public class Answers extends DataEntity {
      */
     private String optionsId;
 
+    private String title;
+    private String contents;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContents() {
+        return contents;
+    }
+
+    public void setContents(String contents) {
+        this.contents = contents;
+    }
+
+    /**
+     * 所选中的答案
+     */
+    private String optContext;
+
+    public String getOptContext() {
+        return optContext;
+    }
+
+    public void setOptContext(String optContext) {
+        this.optContext = optContext;
+    }
+
+
     public String getQuestionsId() {
         return questionsId;
     }

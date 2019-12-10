@@ -6,7 +6,7 @@ import com.zte.zudp.admin.info.queinvest.entity.Questions;
 import org.apache.poi.ss.formula.functions.T;
 
 /**
- *
+ * 选项 信息
  */
 public interface OptionDao extends AbstractDao<Options> {
 
