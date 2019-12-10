@@ -18,7 +18,6 @@
     <link href="/css/third/webuploader.css" rel="stylesheet">
     <link href="/css/admin/avatar.css" rel="stylesheet">
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
-
     <style>
         .webuploader-container div {
             width:80px;
@@ -35,35 +34,48 @@
             <div class="ibox">
                 <div class="ibox-content form-inline z-relative">
                     <div class='col-sm-12'>
-                    <@hasPermission name="oaManager:post:create">
-                        <button class='btn btn-success' data-toggle='modal' id="add-btn" onclick="getDepartment(), hiddenInput()">
-                            新建
-                        </button>&nbsp;&nbsp;
-                    </@hasPermission>
-                    <@hasPermission name="oaManager:post:batchDelete">
-                        <button class='btn btn-success btn-danger' id="delete-items">
-                            批量删除
-                        </button>
-                    </@hasPermission>
                         <div class='querybtn my-querybtn'>
-                            <input type='text' name='search' id='search_name' placeholder='请输入名称' class='form-control search-input'>
+                            <input type='text' name='search' id='search_title' placeholder='请输入标题' class='form-control'>
                             <button class='btn btn-primary mgl my-mgl research-btn' >
                                 搜索
                             </button>&nbsp;&nbsp;
-
+                            <button class="btn btn-success select-query">高级搜索</button>
                         </div>
                     </div>
-                    <div id='search' class='search-group' style='display:none;'>
+                    <div id="search" class="search-group" style="display:none;">
+                        <div class="form-group z-group">
+                            <div class="col-sm-12 z-group-pane">
+                                <label class="control-label my-control-label">联系人：</label>
+                                <input type='text' name='search' id='search_contact' placeholder='请输入联系人' class='form-control search-input'>
+                            </div>
+                        </div>
 
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label class="control-label my-control-label">联系人手机：</label>
+                                <input type='text' name='search' id='search_phone' placeholder='请输入联系人手机' class='form-control search-input'>
+                            </div>
+                        </div>
 
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label class="control-label my-control-label">开始时间：</label>
+                                <input type='text' name='search' id='start_time' placeholder="开始时间" startDate onfocus="this.blur()" class='form-control search-input'>
+                                <label class="control-label my-control-label">结束世间：</label>
+                                <input type='text' name='search' id='end_time' placeholder="结束时间" endDate onfocus="this.blur()" class='form-control search-input'>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary mgl my-mgl clear-input" >清空</button>&nbsp;&nbsp;
                     </div>
                     <table id="public-list-table" class="table my-table table-bordered dataTables-example">
                         <thead>
                         <tr>
                             <th>id</th>
-                            <th>问题</th>
-                            <th>部门</th>
-                            <th>类别</th>
+                            <th>标题</th>
+                            <th>类型</th>
+                            <th>创建时间</th>
+                            <th>回复状态</th>
+                            <th>回复时间</th>
                             <th>操作</th>
                         </tr>
                         </thead>
@@ -89,62 +101,64 @@
                 <#--表单-->
                     <form class="form-horizontal" id="post_form">
                         <input type="hidden" name="id" id="id">
-                        <input type="hidden" name="replyStatus" id="replyStatus"/>
-                        <input type="hidden" name="total" id="total">
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">投诉部门：</label>
+                            <label class="col-sm-3 control-label my-control-label ">标题：</label>
                             <div class="col-sm-6">
-                                <select id="department" name="department" class="form-control">
-                                </select>
+                                <input type="text" name="title" maxlength="64" id="title" placeholder="标题" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">问题主题：</label>
+                            <label class="col-sm-3 control-label my-control-label ">问题描述：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="topic" maxlength="64" id="topic" placeholder="问题主题" class="form-control">
+                                <textarea name="description" maxlength="64" id="description" placeholder="问题描述" class="form-control"></textarea>
                             </div>
-                            <!--<div>-->
-                                <!--<i class="i_context my-i_context">*</i>-->
-                            <!--</div>-->
                         </div>
                         <div class="form-group"><!-- 投诉/建议 分类 -->
                             <label class="col-sm-3 control-label my-control-label ">投诉类别：</label>
                             <div class="col-sm-6">
                                 <label class="checkbox-inline col-sm-3">
-                                    <input type="radio" name="type" id="optionsRadios3" value="0" checked> <b class="text-danger">投诉</b>
+                                    <input type="radio" name="type" id="optionsRadios3" value="0" checked> <b>投诉</b>
                                 </label>
                                 <label class="checkbox-inline col-sm-3">
-                                    <input type="radio" name="type" id="optionsRadios4" value="1"> <b class="text-danger">建议</b>
+                                    <input type="radio" name="type" id="optionsRadios4" value="1"> <b>建议</b>
                                 </label>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">姓名：</label>
+                            <label class="col-sm-3 control-label my-control-label">联系人：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="username" maxlength="64" id="username" placeholder="姓名" class="form-control">
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">电话：</label>
-                            <div class="col-sm-6">
-                                <input type="text" name="tel" maxlength="64" id="tel" placeholder="电话" class="form-control">
+                                <input type="text" name="contact" maxlength="64" id="contact" placeholder="联系人" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">详细问题：</label>
+                            <label class="col-sm-3 control-label my-control-label">联系电话：</label>
                             <div class="col-sm-6">
-                                <!--<input type="text" name="comment" maxlength="64" id="comment" placeholder="详细问题" class="form-control">-->
-                                <textarea name="comment" id="comment" placeholder="详细问题" class="form-control"></textarea>
+                                <input type="text" name="phone" maxlength="64" id="phone" placeholder="联系电话" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label" id="label-reply">回复：</label>
+                            <label class="col-sm-3 control-label my-control-label">创建时间：</label>
                             <div class="col-sm-6">
-                                <!--<input type="text" name="comment" maxlength="64" id="comment" placeholder="详细问题" class="form-control">-->
-                                <textarea name="reply" rows="6" id="reply" placeholder="回复" class="form-control"></textarea>
+                                <input type="text" name="complainDate" id="complainDate" placeholder="创建时间" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label" id="label-reply-status">回复状态：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="replyStatus" id="replyStatus" placeholder="回复状态" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label" id="label-reply-date">回复时间：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="replyDate" id="replyDate" placeholder="回复时间" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label" id="label-reply-content">回复内容：</label>
+                            <div class="col-sm-6">
+                                <textarea name="replyContent" id="replyContent" placeholder="回复内容" class="form-control"></textarea>
                             </div>
                         </div>
                     </form>
@@ -183,83 +197,15 @@
 <script src="/js/sys/avatar.js"></script>
 <script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
+<script src="/js/pluginInit/laydateInit.js"></script>
 <script>
- 
+
     var dataTable;
     var urlstr="/api/p";
     var formIdStr="#post_form";
     var sys_url=window.location.host;
     $(document).ready(function () {
-
-        $("#post_form").validate({
-            rules: {
-                name:{
-                    required:true,
-                    remote: {
-                        url:"/api/post/checkName",
-                        type:"get",
-                        data: {
-                            "name":function () {
-                                return $("#name").val();
-                            },
-                            "id":function () {
-                                return $("#id").val();
-                            }
-                        },
-                        dataFilter: function(data, type) {
-                            var da=JSON.parse(data).data;
-                            if(zudp.util.isBoolean(da)){
-                                return da;
-                            }else{
-                                return false;
-                            }
-                        }
-                    }
-                },
-//                identification:{
-//                    required:true,
-//                    rangelength:[0,64],
-//                    remote: {
-//                        url:"/api/post/checkIdenty",
-//                        type:"get",
-//                        data: {
-//                            "identy":function () {
-//                                return $("#identification").val();
-//                            },
-//                            "id":function () {
-//                                return $("#id").val();
-//                            }
-//                        },
-//                        dataFilter: function(data, type) {
-//                            var da=JSON.parse(data).data;
-//                            if(zudp.util.isBoolean(da)){
-//                                return da;
-//                            }else{
-//                                return false;
-//                            }
-//                        }
-//                    }
-//                },
-
-                mark:{
-                    rangelength:[0,1000]
-                }
-            },
-            messages: {
-                name: {
-                    required: "请输入岗位名称",
-                    remote: "岗位名称已存在"
-                },
-//                identification: {
-//                    required: "请输入岗位标识",
-//                    remote: "岗位标识已存在"
-//                },
-                mark: {
-                    rangelength:"字符个数不能超过1000"
-                }
-            },ignore: []
-        });
-
+        //校验
         findList();
 
         var obj={
@@ -268,74 +214,81 @@
             title: "{type}",
             success: "数据{msg}",
             error: "数据{msg}",
-            disabledName: ["type", 'value'],
+            disabledName: [],
             hideInputName:[],
             search: [".clear-input", "#search",".search-input"]
-
         };
+
         //初始化增删改查参数
-        init(obj);
-//
+        initForm(obj);
     });
 
+    function disabledInput(obj) {
+        var id = $(obj).val();
+        zudp.ajax("/api/p/" + id).get("").then(function (data) {
+            $(".modal").find("*[name]").prop("disabled", false);
+            //当未回复时，id， replyContent， replyStatus 不设置禁用
+            //当已回复时，大多数字段禁用
+            //设置禁用
+            var disabledList = $(".modal").find("*[name]");
+            var noDisabled = new Array("id");//不禁用字段
+            if (data.replyStatus == "未回复") {
+                noDisabled.push("replyStatus", "replyContent");
+                //设置readonly
+                $(".modal").find("[name = 'replyStatus']").attr("readonly", "readonly");
+                $(".modal #save-btn").show();
+            }
+            if (data.replyStatus == '已回复') {
 
-
-    function hiddenInput() {
-        $(".modal").find("#label-reply").hide();
-        $(".modal").find("#reply").hide();
-
-        $(".modal").find("*[name]").prop("disabled", false);
-        $(".modal").find("[name = 'tel']").removeAttr("readonly");
+                $(".modal #save-btn").hide();
+            }
+            for (var i = 0; i < disabledList.length; i++) {
+                if (noDisabled.indexOf($(disabledList[i]).attr("name")) == -1)
+                    $(".modal form").find("[name=" + $(disabledList[i]).attr("name") + "]").attr("disabled", true);
+            }
+        });
     }
-//
-    function showInput() {
-        $(".modal").find("#label-reply").show();
-        $(".modal").find("#reply").show();
-//
-        $(".modal").find("[name = 'department'], [name = 'topic'], [name = 'type'], [name = 'username'], [name = 'comment']").prop("disabled", true);
-        $(".modal").find("[name = 'tel']").attr("readonly", "readonly");
-//        $(".modal").find("#department").prop("disabled", true);
-//        $(".modal").find("#department").prop("disabled", true);
-//        $(".modal").find("#department").prop("disabled", true);
-//        $(".modal").find("#department").prop("disabled", true);
 
-    }
+    Date.prototype.format = function(fmt) {
+        var o = {
+            "M+" : this.getMonth()+1, //月份
+            "d+" : this.getDate(), //日
+            "h+" : this.getHours()%12 == 0 ? 12 : this.getHours()%12, //小时
+            "H+" : this.getHours(), //小时
+            "m+" : this.getMinutes(), //分
+            "s+" : this.getSeconds(), //秒
+            "q+" : Math.floor((this.getMonth()+3)/3), //季度
+            "S" : this.getMilliseconds() //毫秒
+        };
+        if(/(y+)/.test(fmt))
+            fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+        for(var k in o) {
+            if (new RegExp("(" + k + ")").test(fmt)) {
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            }
+        }
+        return fmt;
+    };
 
     //列表数据初始化方法
     function findList() {
-
         var urls="/api/p";
         dataTable=zudp.plugin.table('#public-list-table')
                 .url(urls)
                 .search(function () {
                     return {
-                        "department":$("#search_name").val()
-
+                        "title": $("#search_title").val(),
+                        "phone": $("#search_phone").val(),
+                        "contact": $("#search_contact").val(),
+                        "startTime": $("#start_time").val(),
+                        "endTime": $("#end_time").val()
                     }
                 })
                 .columns( [
-//                    <th>id</th>
-//                    <th>问题</th>
-//                    <th>部门</th>
-//                    <th>类别</th>
-//                    <th>操作</th>
                     {data: 'id', visible: false},
-                    {data: 'topic',
-                        render:function(data, type, row){
-                            var suf="...";
-                            var ah = "";
-                            if(data!=null && data.length<20){
-                                suf = "";
-                                ah = "<a title='"+data+"'>"+data.substr(0,20)+suf+"</a>";
-                            } else if (data!=null && data.length >= 20) {
-                                ah = "<a title='"+data+"'>"+data.substr(0,20)+suf+"</a>";
-                            }
-                            return ah;
-                        }
-                    },
-                    {data: 'department'},
+                    {data: 'title'},
                     {data: 'type',
-                        render:function(data, type, row){
+                        render: function (data, type, row) {
                             var temp="";
                             if(data == '0'){
                                 temp = "投诉";
@@ -346,285 +299,36 @@
                             return temp;
                         }
                     },
+                    {data: 'complainDate'},
+                    {data: 'replyStatus'},
+                    {data: 'replyDate',
+                        render: function (data, type, row) {
+                            var temp = data;
+                            if (typeof (temp) === "number") {
+                                temp = new Date(data).format("yyyy-MM-dd HH:mm:ss");
+                            }
+                            return temp;
+                        }},
                     {
                         render: function (data, type, row) {
                             var btn = "";
                             var editstr = "";
-                            var delstr = "";
+                            var detailstr = "";
 //                            var detailstr = "";
 
 //                            detailstr = '<button onclick="getDepartment(this)" class="btn btn-info btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>&nbsp;&nbsp;';
 
-                            editstr='<button onclick="getDepartment(this), showInput()" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>';
+                            detailstr = '<button class="btn btn-success btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>&nbsp;&nbsp;';
 
-                            delstr = '<button class="btn btn-danger btn-sm row-delete mgl my-mgl" value="{id}"><i class="fa fa-close"></i>删除</button>&nbsp;&nbsp;';
+                            editstr='<button onclick="disabledInput(this)" class="btn btn-danger btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>';
 
-                            btn +=  editstr + delstr ;
+                            btn +=  detailstr + editstr ;
                             return zudp.util.render(btn, row);
                             //return "";
                         }
                     }
                 ])
                 .then();
-
-    }
-
-
-    <!--   动态获取部门种类 -->
-    function getDepartment(obj) {
-        var str = $(obj).parent().prev().prev().text();
-
-        $("#department").find("option").remove();
-        zudp.ajax("/api/dept/deptList").get().then(function (value) {
-
-//           $("#department").append("<option value='" + "'>" + "全部" + "</option>");
-            for (var k = 0; k < value.length; k++) {
-
-                if (value[k].department == null) {
-                   value[k].department = "";
-               } else {
-                    if (value[k].department == str) {
-                        $("#department").append("<option value='" + value[k].department + "' selected='selected'>" + value[k].department + "</option>");
-                    } else {
-                        $("#department").append("<option value='" + value[k].department+ "'>" + value[k].department + "</option>");
-                    }
-                }
-            }
-            //  gettypemin();
-        }, function (reason) {
-            zudp.plugin.dialog("error").alert("获取用户列表失败！", "提示");
-        });
-    }
-
-    function init(obj){
-        //弹窗
-        $(document).on("click", "#add-btn", function () {
-            $(".modal-form").modal("show");
-            $(".modal-form").addClass("create-form").removeClass("edit-form detail-form");
-            $(".create-form").find("#save-btn").show();
-            $(".create-form").find(".my-i_context").show();
-            zudp.plugin.form(obj.formId).reset();
-            if(obj.addBtnFun!=undefined){
-                obj.addBtnFun();
-            }
-            //修改标题
-            var titleText = zudp.util.render(obj.title, {"type": "新建"});
-            $(".modal .modal-title").text(titleText);
-            //取消禁用
-            for (var i = 0; i < obj.disabledName.length; i++) {
-                $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
-                    .attr("disabled", false);
-            }
-            //设置隐藏组件
-            for (var i = 0; i < obj.hideInputName.length; i++) {
-                $(".modal form").find("*[name=" + obj.hideInputName[i] + "]").parents('.form-group').css("display", 'block');
-            }
-            //    如果页面中有radio button 点击
-            if($(".modal-form input[type=radio]").length != 0) {
-                $(".modal-form input[type=radio]:first").prop("checked","checked");
-            }
-        });
-
-        //修改提示
-        var msgSuccess = zudp.util.render(obj.success, {"msg": "成功"});
-
-        $(document).on("click", ".create-form #save-btn", function () {
-            if(obj.saveForm!=undefined){
-                obj.saveForm();
-            }else{
-                if ($(obj.formId).valid()) {
-                    var data = zudp.util.formData2json("form");
-                    zudp.ajax(obj.url).post(data).then(function () {
-                        zudp.plugin.dialog("success").alert("新建" + msgSuccess + "！", "提示");
-                        dataTable.ajax.reload();
-                        $(".modal-form").modal("hide");
-                    });
-                    obj.callback.create(data);
-                }
-            }
-
-        });
-
-        //弹窗
-        var updateUrl ='';
-        $(document).on("click", '.row-edit', function (e) {
-            //清除冒泡
-            if (e && e.stopPropagation) {
-                e.stopPropagation();
-            } else {
-                window.e.cancelBubble = true;
-            }
-            $(".modal-form").modal("show");
-            $(".modal-form").addClass("edit-form").removeClass("create-form detail-form");
-            $(".edit-form").find("#save-btn").show();
-            $(".edit-form").find(".my-i_context").show();
-            zudp.plugin.form(obj.formId).reset();
-            updateUrl = obj.url + '/' + $(this).val();
-            //修改标题
-            var titleText = zudp.util.render(obj.title, {"type": "编辑"});
-            $(".modal .modal-title").text(titleText);
-            //设置隐藏组件
-            for (var i = 0; i < obj.hideInputName.length; i++) {
-                $(".modal form").find("*[name=" + obj.hideInputName[i] + "]").parents('.form-group').css("display", 'none');
-            }
-            $(obj.formId).find("input[name='id']").eq(0).val($(this).val());
-            if(obj.editBtnFun!=undefined){
-                obj.editBtnFun();
-            }else{
-                //取值回显
-                zudp.ajax(updateUrl).get("").then(function (data) {
-                    dataEcho(obj.formId, data);
-
-                }, function (error) {
-                });
-            }
-
-            //设置禁用
-            for (var i = 0; i < obj.disabledName.length; i++) {
-                $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
-                    .attr("disabled", true);
-            }
-        });
-        //详情
-        $(document).on("click", '.row-detail', function (e) {
-            //清除冒泡
-            if (e && e.stopPropagation) {
-                e.stopPropagation();
-            } else {
-                window.e.cancelBubble = true;
-            }
-            $(".modal-form").modal("show");
-            $(".modal-form").addClass("detail-form").removeClass("create-form edit-form");
-            $(".detail-form").find("#save-btn").hide();
-            $(".detail-form").find(".my-i_context").hide();
-            updateUrl = obj.url + '/' + $(this).val();
-            //修改标题
-            var titleText = zudp.util.render(obj.title, {"type": "详情"});
-            $(".modal .modal-title").text("详情");
-            //设置隐藏组件
-            for (var i = 0; i < obj.hideInputName.length; i++) {
-                $(".modal form").find("*[name=" + obj.hideInputName[i] + "]").parents('.form-group').css("display", 'none');
-            }
-            $(obj.formId).find("input[name='id']").eq(0).val($(this).val());
-            if(obj.editBtnFun!=undefined){
-                obj.editBtnFun();
-            }else{
-                //取值回显
-                zudp.ajax(updateUrl).get("").then(function (data) {
-                    dataEcho(obj.formId, data);
-
-                }, function (error) {
-                });
-            }
-            $(".modal form").find("*[name]").prop("disabled", true);
-            //设置禁用
-            for (var i = 0; i < obj.disabledName.length; i++) {
-                $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
-                    .attr("disabled", true);
-            }
-            $(document).on("click",".detail-form .btn[data-dismiss='modal'], .close[data-dismiss='modal'] ",function () {
-                $(".modal-form").find("#save-btn").show();
-                $(".detail-form").find(".my-i_context").show();
-                $(".modal-form *[name]").prop("disabled",false);
-            })
-        });
-        //校验保存
-        var msgSuccess = zudp.util.render(obj.success, {"msg": "成功"});
-        $(document).on("click", ".edit-form #save-btn", function () {
-            if(obj.saveForm!=undefined){
-                obj.saveForm();
-            }else{
-                if ($(obj.formId).valid()) {
-                    var data = zudp.util.formData2json("form");
-                    zudp.ajax("/api/p/reply").put(data).then(function () {
-                        zudp.plugin.dialog("success").alert("更新" + msgSuccess + "！", "提示");
-                        dataTable.ajax.reload();
-                        $(".modal-form").modal("hide");
-                    });
-                    obj.callback.update(data);
-                }
-            }
-
-        });
-
-        $(document).on("click", '.row-delete', function (e) {
-            //清除冒泡
-            if (e && e.stopPropagation) {
-                e.stopPropagation();
-            } else {
-                window.e.cancelBubble = true;
-            }
-            var msgSuccess = zudp.util.render(obj.success, {"msg": "删除成功"});
-            var msgError = zudp.util.render(obj.error, {"msg": "删除失败"});
-            var rowData = dataTable.row($(this).parents('tr')).data();
-            var deleteUrl = obj.url + '/' + $(this).val();
-            zudp.plugin.dialog("warning").confirm("确认要删除吗？", "确认", function () {
-                zudp.ajax(deleteUrl).del('').then(function (da) {
-                    zudp.plugin.dialog("success").alert(msgSuccess + "!", "提示");
-                    dataTable.ajax.reload();
-                }, function (error) {
-                    zudp.plugin.dialog("warning").alert(msgError + "!", "警告");
-                    dataTable.ajax.reload();
-                });
-            });
-            obj.callback.delete(rowData);
-        });
-
-        $(document).on("click", "#delete-items", function () {
-            var data = dataTable.rows('.evenSelect').data();
-            var ids = [];
-            for (var k = 0; k < data.length; k++) {
-                ids.push(data[k].id);
-            }
-            if (ids.length == 0) {
-                zudp.plugin.dialog("warning").confirm("数据未选中", "关闭")
-                return;
-            }
-            var msgSuccess = zudp.util.render(obj.success, {"msg": "批量删除成功"});
-            var msgError = zudp.util.render(obj.error, {"msg": "批量删除失败"});
-            zudp.plugin.dialog("warning").confirm("确认要删除吗？", "确认", function () {
-                zudp.ajax(obj.url).del(JSON.stringify(ids)).then(function (da) {
-                    zudp.plugin.dialog("success").alert(msgSuccess + "!", "提示");
-                    dataTable.ajax.reload();
-                }, function (error) {
-                    zudp.plugin.dialog("warning").alert(msgError + "!", "警告");
-                    dataTable.ajax.reload();
-                });
-            });
-            obj.callback.deleteMore(data);
-        });
-
-        var searchDom=''
-        var searchInput=''
-        if (obj.search.length == 3) {
-            searchDom=obj.search[1];
-            searchInput=obj.search[2];
-            zudp.plugin.clearFormData(obj.search[0], obj.search[1]);
-        }
-        $(document).on("click", ".research-btn", function () {
-            dataTable.ajax.reload();
-            //$(searchDom).slideUp(300);
-        });
-        $(document).on('keydown', function (event) {
-            if (event.keyCode == 13) {
-                dataTable.ajax.reload();
-                $(searchDom).slideUp(300);
-                return false;
-            }
-        });
-        $(".my-querybtn "+searchInput).on('keyup change',function() {
-            var value = $(".my-querybtn "+searchInput).val();
-            $(searchDom+" "+searchInput).val(value);
-        });
-        $(searchDom+" "+searchInput).on('keyup change',function() {
-            $(".my-querybtn "+searchInput).val($(searchDom+" "+searchInput).val());
-        });
-        $(document).on("click", '.select-query', function () {
-            $(searchDom).slideToggle("fast", function () {
-            });
-        });
-        var rowData = dataTable.row($(this).parents('tr')).data();
-        // obj.callback.search(rowData);
     }
 
     //提示

@@ -1,14 +1,16 @@
-package com.zte.zudp.admin.info.complain.dao;
+package com.zte.zudp.admin.mm.complain.dao;
 
 import com.zte.zudp.admin.common.persistence.dao.AbstractDao;
-import com.zte.zudp.admin.info.complain.entity.ComplainEntity;
+import com.zte.zudp.admin.mm.complain.entity.MMComplainEntity;
+
+import java.util.List;
 
 /**
  * @Description 投诉表的增删查改
  * @Author TotalDao
  * @Date 2019/11/26 18:46
  **/
-public interface ComplainDao extends AbstractDao<ComplainEntity> {
+public interface MMComplainDao extends AbstractDao<MMComplainEntity> {
 
     //findList() -- List<T>
 
@@ -21,4 +23,7 @@ public interface ComplainDao extends AbstractDao<ComplainEntity> {
     //delete(int id) --int
 
     //batchDelete(String[] id) -- int
+
+    List<MMComplainEntity> getAllByContactUser(String contactUser);
+    MMComplainEntity getOneById(String id);
 }

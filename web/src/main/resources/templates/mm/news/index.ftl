@@ -203,7 +203,7 @@
         }
         if(a==2){
             //公众投诉
-            window.location.href='/mm/news/mytousu';
+            window.location.href='/mm/news/myComplain';
         }
         if(a==3){
             //公众咨询

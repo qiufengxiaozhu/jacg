@@ -1,18 +1,13 @@
-package com.zte.zudp.admin.info.complain.entity;
+package com.zte.zudp.admin.mm.complain.entity;
 
-import com.zte.zudp.admin.common.persistence.entity.DataEntity;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.logging.SimpleFormatter;
+import com.zte.zudp.admin.common.persistence.entity.FileEntity;
 
 /**
  * @Description 投诉表，具体内容，但是（音频、视频），（定位）有专门的实体类
  * @Author TotalEntity
  * @Date 2019/11/26 10:09
  **/
-public class ComplainEntity extends DataEntity {
+public class MMComplainEntity extends FileEntity {
 
     /**
      * title ：标题
@@ -96,15 +91,15 @@ public class ComplainEntity extends DataEntity {
 
     /**
      * 一下是 dto 字段，不对应complain 表中的数据
-     * 用于做时间范围查询
-     * startTime ： 开始时间
+     * 用于做显示时间
+     * yearAndMonth ： 完整的 yyyy-MM-dd HH:mm:ss 只要 yyyy-MM
      */
-    private String startTime;
+    private String yearAndMonth;
 
     /**
-     * endTime ： 结束插件
+     * day ： 完整的 yyyy-MM-dd HH:mm:ss 只要 dd
      */
-    private String endTime;
+    private String day;
 
 
     /**
@@ -185,14 +180,6 @@ public class ComplainEntity extends DataEntity {
     }
 
     public String getComplainDate() {
-        if (complainDate != null && !complainDate.equals("")) {
-            try {
-                Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").parse(complainDate);
-                complainDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-        }
         return complainDate;
     }
 
@@ -201,22 +188,6 @@ public class ComplainEntity extends DataEntity {
     }
 
     public String getReplyStatus() {
-        if (this.replyStatus != null) {
-            switch (this.replyStatus) {
-                case "0":
-                    this.replyStatus = "未回复";
-                    break;
-                case "1":
-                    this.replyStatus = "已回复";
-                    break;
-                case "未回复":
-                    this.replyStatus = "1";
-                    break;
-                case "已回复":
-                    this.replyStatus = "1";
-                    break;
-            }
-        }
         return replyStatus;
     }
 
@@ -233,16 +204,6 @@ public class ComplainEntity extends DataEntity {
     }
 
     public String getReplyDate() {
-        if (this.replyDate == null || this.replyDate.equals(""))
-            this.replyDate = "您还未回复";
-        else
-            try {
-                Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").parse(replyDate);
-                replyDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-
         return replyDate;
     }
 
@@ -282,20 +243,20 @@ public class ComplainEntity extends DataEntity {
         this.address = address;
     }
 
-    public String getStartTime() {
-        return startTime;
+    public String getYearAndMonth() {
+        return yearAndMonth;
     }
 
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
+    public void setYearAndMonth(String yearAndMonth) {
+        this.yearAndMonth = yearAndMonth;
     }
 
-    public String getEndTime() {
-        return endTime;
+    public String getDay() {
+        return day;
     }
 
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
+    public void setDay(String day) {
+        this.day = day;
     }
 
     @Override
@@ -318,8 +279,8 @@ public class ComplainEntity extends DataEntity {
                 ", longitude='" + longitude + '\'' +
                 ", latitude='" + latitude + '\'' +
                 ", address='" + address + '\'' +
-                ", address='" + startTime + '\'' +
-                ", address='" + endTime + '\'' +
+                ", address='" + yearAndMonth + '\'' +
+                ", address='" + day + '\'' +
                 '}';
     }
 }
