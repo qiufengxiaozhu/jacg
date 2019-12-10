@@ -20,15 +20,15 @@
     <div class="inv-bottom">
         <div class="flex inv-cont">
             <div class="">标题:</div>
-            <div class="inv-right">文章标题文章标题</div>
+            <div class="inv-right">${News.title}</div>
         </div>
         <div class="flex inv-cont">
             <div class="">发布时间:</div>
-            <div class="inv-right">2019-12-1</div>
+            <div class="inv-right">${News.newsDate}</div>
         </div>
         <div class="inv-cont inv-special">
             <div class="">内容描述:</div>
-            <div class="inv-right inv-right-special">测试用的，萨克斯两三点地方的范德萨范德萨是的撒趁现在撒倒萨发送到发送到</div>
+            <div class="inv-right inv-right-special">${News.content}</div>
         </div>
 
 
