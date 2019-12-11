@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+/**
+ * 公众新闻类别控制器
+ */
 @RestController
 @EndpointModule(name = "岗位管理", id = "category", order = 19, icon = "bookmark")
 @RequestMapping(value = "/category")
