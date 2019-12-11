@@ -43,11 +43,9 @@
 
 <#list queinvestList! as queinvest>
 
-    <div class="center" id = "queinvestDiv" onclick="startQueinvest('${queinvest.id!}')">
-        <#--<input type = "hidden" name = ${queinvest.id!}  class ="queinvestClass">-->
+    <div class="center" id = "queinvestDiv">
 
-
-        <div class="flex sum-work">
+        <div class="flex sum-work" onclick="startQueinvest('${queinvest.id!}')">
             <div class="flex-2">
                 <p class="date-year">${queinvest.yearStr!""}</p>
                 <p class="date-day">${queinvest.dayStr!}</p>
@@ -79,7 +77,7 @@
     function startQueinvest(id) {
 //        alert("id : " + id);
 //        zudp.ajax("/mm/queinvest/startQueinvest").post(id).then(function (value) {
-                alert(id);
+//                alert(id);
 //        });
     window.location.href='/mm/queinvest/startQueinvest/'+id;
     };
