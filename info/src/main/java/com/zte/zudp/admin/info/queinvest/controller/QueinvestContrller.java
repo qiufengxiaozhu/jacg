@@ -142,6 +142,40 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
     }
 
 
+    /**
+     * 修改操作  撤销发布
+     */
+    @JSON
+    @PostMapping(value = "/getDetail")
+    @EndpointRest(id = "getDetail", name = "", authorizedType = AuthorizedType.GUEST)
+
+    public Queinvest getDetail(@RequestBody String id){
+        return  queinvestService.getDetail(id);
+    }
+
+    /**
+     * 查看详情
+     * @param id
+     * @return
+     */
+    @Override
+    public Queinvest get(@PathVariable String id) {
+
+        Queinvest queinvest=queinvestService.get(id);
+        if(queinvest.getStatus()!=null){ // 不为空
+           if(queinvest.getStatus().equals("0")){ // 如果是0  临时状态
+               queinvest.setStatus("临时状态");
+           }
+           if(queinvest.getStatus().equals("1")){ // 如果是1   未发布
+               queinvest.setStatus("未发布");
+           }
+           if(queinvest.getStatus().equals("2")){ // 2   发布
+               queinvest.setStatus("发布");
+
+           }
+        }
+        return queinvest;
+    }
 }
 
 

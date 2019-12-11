@@ -6,6 +6,17 @@ import com.zte.zudp.admin.common.persistence.entity.DataEntity;
  * 选项实体类
  */
 public class Options extends DataEntity {
+
+    private String idJson;
+
+    public String getIdJson() {
+        return idJson;
+    }
+
+    public void setIdJson(String idJson) {
+        this.idJson = idJson;
+    }
+
     /**
      * 选项编号
      */
