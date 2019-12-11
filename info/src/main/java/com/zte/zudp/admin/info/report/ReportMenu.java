@@ -29,13 +29,10 @@ public class ReportMenu {
         return "/info/report/reportlist";
     }
 
-    /**
-     * 跳转到前台H5页面
-     * @return 公众上报页面
-     */
-    @GetMapping("/submit")
+
+    /*@GetMapping("/submit")
     public String submit()
     {
         return "/info/report/report";
-    }
+    }*/
 }

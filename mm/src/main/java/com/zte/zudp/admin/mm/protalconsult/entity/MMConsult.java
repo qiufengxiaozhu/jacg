@@ -1,15 +1,12 @@
-package com.zte.zudp.admin.info.consultation.entity;
+package com.zte.zudp.admin.mm.protalconsult.entity;
 
 
-import com.zte.zudp.admin.common.persistence.entity.DataEntity;
-import com.zte.zudp.admin.info.attachDoc.entity.AttachDoc;
-
-import java.util.List;
+import com.zte.zudp.admin.common.persistence.entity.FileEntity;
 
 /**
  * 咨询信息实体类
  */
-public class Consult extends DataEntity {
+public class MMConsult extends FileEntity {
 
     private String name;//联系人姓名
     private String telephone;//联系人电话
@@ -23,8 +20,8 @@ public class Consult extends DataEntity {
     private String replyDate;//回复时间
     private String startDate;//咨询时间筛选(起)
     private String endDate;//咨询时间筛选(止)
-
-    private List<AttachDoc> attachDocList;
+    private String yearStr;//截取咨询时间年月
+    private String dayStr;//截取咨询时间日
 
     public String getName() {
         return name;
@@ -122,11 +119,19 @@ public class Consult extends DataEntity {
         this.endDate = endDate;
     }
 
-    public List<AttachDoc> getAttachDocList() {
-        return attachDocList;
+    public String getYearStr() {
+        return yearStr;
     }
 
-    public void setAttachDocList(List<AttachDoc> attachDocList) {
-        this.attachDocList = attachDocList;
+    public void setYearStr(String yearStr) {
+        this.yearStr = yearStr;
+    }
+
+    public String getDayStr() {
+        return dayStr;
+    }
+
+    public void setDayStr(String dayStr) {
+        this.dayStr = dayStr;
     }
 }
