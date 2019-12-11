@@ -51,7 +51,7 @@
             <#list Newslist! as news >
                 <div class="nlist-item flex " onclick="goNewDetail('${news.id}')">
                     <div class="nli-left">
-                        <img src="/mm/img/login-top.png" alt="" class="">
+                        <img src='${news.path!"/mm/img/login-top.png"}' alt="" class="">
                     </div>
                     <div class="nli-right flex-1">
                         <p class="nli-tit">${news.title!""}</p>

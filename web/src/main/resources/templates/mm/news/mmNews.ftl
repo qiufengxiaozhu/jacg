@@ -34,24 +34,50 @@
 
         <div class="new-list">
             <#list Newslist! as news >
-                <div class="nlist-item flex " onclick="goNewDetail('${news.id}')">
-                    <div class="nli-left">
-                        <img src="/mm/img/login-top.png" alt="" class="">
+
+                <div class="nlist-item flex " >
+                    <div class="nli-left" onclick="goNewDetail('${news.id}')">
+                        <img src='${news.path!"/mm/img/login-top.png"}' alt="" class="">
                     </div>
-                    <div class="nli-right flex-1">
-                        <p class="nli-tit">${news.title!""}</p>
-                        <div class="nli-type flex flex-c-c">
-                            <div class="nli-sp">${news.category!}</div>
+                    <div class="nli-right flex-1" >
+                        <div onclick="goNewDetail('${news.id}')"
+                            <p class="nli-tit">${news.title!""}</p>
+                            <div class="nli-type flex flex-c-c">
+                                <div class="nli-sp">${news.category!}</div>
+                            </div>
+                            <p class="nli-time">
+                                <span>${news.clicks!}人观看</span>
+                                <span>${news.newsDate!""}</span>
+                            </p>
                         </div>
-                        <p class="nli-time">
-                            <span>${news.clicks!}人观看</span>
-                            <span>${news.newsDate!""}</span>
-                        </p>
+                        <div class="nli-fx"></div>
                     </div>
                 </div>
+
+
             </#list>
         </div>
+        <div class="fx-fixed" style="display: none">
+            <div class="mask"></div>
+            <div class="fx-fbox">
+                <p class="fx-ftit">分享</p>
+                <div class="fx-cnt flex flex-wrap">
+                    <div class="fx-item" style="float: left" id="weixin">
+                        <img src="/mm/img/pyq.png" alt="" class="" >
+                        <p class="">  朋友圈 </p>
+                    </div>
+                    <div class="fx-item" style="float: left" id="weibo">
+                        <img src="/mm/img/LOGO_48x48.png" alt="" class="" >
+                        <p class="">新浪微博</p>
+                    </div>
+                    <div class="fx-item" style="float: left" id="cancel-btn">
+                        <img src="/mm/img/adv-close.png" alt="" class="" >
+                        <p class="">取消分享</p>
+                    </div>
 
+                </div>
+            </div>
+        </div>
 
 	</div>
 	<script type="text/javascript" src="/mm/js/iscroll.js"></script>
@@ -64,6 +90,22 @@
         //执行一个laydate实例
         laydate.render({
             elem: '#test1' //指定元素
+        });
+
+        //分享按钮
+        $(".nli-fx").on("click",function(){
+            $(".fx-fixed").show();
+        });
+        $("#weixin").on("click",function(){
+            alert("微信分享");
+
+        });
+        $("#weibo").on("click",function(){
+            alert("微博分享");
+
+        });
+        $("#cancel-btn").on("click",function(){
+            $(".fx-fixed").hide();
         });
 
         //查询时间

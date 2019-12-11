@@ -1,4 +1,4 @@
-package com.zte.zudp.admin.info.news.entity;
+package com.zte.zudp.admin.mm.news.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.zte.zudp.admin.common.persistence.entity.DataEntity;
@@ -10,29 +10,23 @@ import java.util.Date;
 /**
  * 新闻实体类
  */
-public class News extends FileEntity {
+public class MMNews extends FileEntity {
 
+    /**
 
+     * 封面路径
+     */
+    private String path;
 
+    /**
+     * 查询时起始时间
+     */
     private String  startTime;
+
+    /**
+     * 查询时终止时间
+     */
     private String endTime;
-
-
-    public String getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
-    }
-
-    public String getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
-    }
 
     /**
 
@@ -45,7 +39,10 @@ public class News extends FileEntity {
      */
     private String content;
 
-    private String contentnohtml;//内容 去格式
+    /**
+     * //内容 去格式
+     */
+    private String contentnohtml;
 
     /**
      * 视频
@@ -65,7 +62,7 @@ public class News extends FileEntity {
     /**
      * 创建时间
      */
-    private Date newsDate;
+    private String newsDate;
 
     /**
      * 点击量
@@ -78,19 +75,26 @@ public class News extends FileEntity {
     private String fk_categoryid;
 
     /**
+     * 新闻类别
+     */
+    private String category;
+
+    /**
      * 新闻摘要
      */
     private String summary;
 
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    public Date getNewsDate() {
+//    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+//    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    public String getNewsDate() {
         return newsDate;
     }
 
-    public void setNewsDate(Date newsDate) {
+    public void setNewsDate(String newsDate) {
         this.newsDate = newsDate;
     }
+
+
 
     public String getStatus() {
         return status;
@@ -163,4 +167,57 @@ public class News extends FileEntity {
     public void setTimeZone(String timeZone) {
         this.timeZone = timeZone;
     }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    @Override
+    public String toString() {
+        return "MMNews{" +
+                "path='" + path + '\'' +
+                ", startTime='" + startTime + '\'' +
+                ", endTime='" + endTime + '\'' +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", contentnohtml='" + contentnohtml + '\'' +
+                ", video='" + video + '\'' +
+                ", status='" + status + '\'' +
+                ", timeZone='" + timeZone + '\'' +
+                ", newsDate='" + newsDate + '\'' +
+                ", clicks=" + clicks +
+                ", fk_categoryid='" + fk_categoryid + '\'' +
+                ", category='" + category + '\'' +
+                ", summary='" + summary + '\'' +
+                '}';
+    }
+
 }

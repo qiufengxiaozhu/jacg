@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * 岗位管理
+ * 新闻类别管理
  * User: wlf
  * Date: 2019/1/16
  * Time: 14:00
