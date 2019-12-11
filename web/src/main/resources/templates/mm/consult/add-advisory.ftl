@@ -219,7 +219,7 @@
             });
         }
         function goIndex() {
-            window.location.href = '/mm/news/advisory';
+            window.location.href = '/mm/news/index';
         }
 
         //删除，删除节点

@@ -15,9 +15,6 @@
         <div class="top-return"></div>
         <div class="return" onclick="goIndex()">返回</div>
         <div class="advince">我的咨询</div>
-        <div class="li-add flex-1" style="text-align: right" onclick="goAdd()">
-            <img src="/mm/img/add.png" alt="" class="">
-        </div>
     </div>
     <div class="center">
         <#list list as consult>
@@ -58,9 +55,6 @@
         window.location.href='/consult/zxdetail/'+id;
     }
 
-    function goAdd(){
-        window.location.href='/mm/news/addadvisory';
-    }
 </script>
 </body>
 </html>
