@@ -73,7 +73,7 @@
 </form>
 <script>
     function goMyComplain() {
-        $("#ret_my_complain_form").attr("action", "/mm/news/retMyComplain").submit();
+        $("#ret_my_complain_form").attr("action", "/mm/complain/retMyComplain").submit();
     }
 </script>
 </body>

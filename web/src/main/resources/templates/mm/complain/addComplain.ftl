@@ -31,7 +31,7 @@
             <div class="return" onclick="goIndex()">返回</div>
             <div class="advince">公众投诉</div>
         </div>
-        <form id="add_form" action="/mm/news/addComplaining" method="post">
+        <form id="add_form" action="/mm/complain/addComplaining" method="post">
             <div class="header-img">
                 <div class="ts-table">
                     <div class="put">
@@ -87,13 +87,13 @@
                                 <input type="text" id="address" name="address" class="tab-input flex-1">
                             </div>
                         </div>
-<#--                        <div class="theme">-->
-<#--                            <div class="port">添加附件&nbsp;:</div>-->
-<#--                                <a href="#"><img src="/mm/img/file.png" alt=""></a>-->
-<#--                                <a href="#"><img src="/mm/img/music.png" alt=""></a>-->
-<#--                                <a href="#"><img src="/mm/img/arr15.png" alt=""></a>-->
-<#--                            </div>-->
-<#--                        </div>-->
+                        <#--                        <div class="theme">-->
+                        <#--                            <div class="port">添加附件&nbsp;:</div>-->
+                        <#--                                <a href="#"><img src="/mm/img/file.png" alt=""></a>-->
+                        <#--                                <a href="#"><img src="/mm/img/music.png" alt=""></a>-->
+                        <#--                                <a href="#"><img src="/mm/img/arr15.png" alt=""></a>-->
+                        <#--                            </div>-->
+                        <#--                        </div>-->
                         <div class="theme">
                             <div style="width:80;height: 35px;position: relative;margin:0 auto">
                                 <div id="xg_rar">上传附件</div>
@@ -108,7 +108,7 @@
     </div>
     <form id="ret_my_complain_form" action="" method="post">
         <!--<input type="hidden" name="_method" value="DELETE"/>-->
-        <input type="hidden" name="contactUser" id="contactUser" value='${contactUser}'>
+        <input type="hidden" name="contactUser" id="contactUser" value='${contactUser!}'>
     </form>
     <script type="text/javascript" src="/mm/js/rem.js"></script>
     <script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
@@ -119,7 +119,7 @@
         $(function () {
             //前端校验
             $("#add_form").submit(function () {
-                return checktitle()&&checkcontent()&&checkname()&&checktelephone();
+                return checktitle() && checkcontent() && checkname() && checktelephone();
             });
             $("input[name='title']").blur(function () {
                 checktitle();
@@ -143,63 +143,63 @@
 
 
         //检验标题
-        function checktitle(){
-            var title=$("input[name='title']").val();
-            var reg_title= /^.{1,50}$/;
-            var flag=reg_title.test(title)
-            if(title!=null && title!='' &&flag){
-                $("#sp_title").css("color","green").html("√");
+        function checktitle() {
+            var title = $("input[name='title']").val();
+            var reg_title = /^.{1,50}$/;
+            var flag = reg_title.test(title)
+            if (title != null && title != '' && flag) {
+                $("#sp_title").css("color", "green").html("√");
                 return true;
-            }else{
-                $("#sp_title").css("color","red").html("×");
+            } else {
+                $("#sp_title").css("color", "red").html("×");
                 return false;
             }
         }
 
         //检验内容
-        function checkcontent(){
-            var content=$("input[name='description']").val();
-            var reg_content= /^.{1,2000}$/;
-            var flag=reg_content.test(content);
-            if(content!=null && content!='' &&flag){
-                $("#sp_description").css("color","green").html("√");
+        function checkcontent() {
+            var content = $("input[name='description']").val();
+            var reg_content = /^.{1,2000}$/;
+            var flag = reg_content.test(content);
+            if (content != null && content != '' && flag) {
+                $("#sp_description").css("color", "green").html("√");
                 return true;
-            }else{
-                $("#sp_description").css("color","red").html("×");
+            } else {
+                $("#sp_description").css("color", "red").html("×");
                 return false;
             }
         }
 
         //检验联系人
-        function checkname(){
-            var name=$("input[name='contact']").val();
-            var reg_name=/^([\u4e00-\u9fa5]){2,7}$/;
-            var flag=reg_name.test(name);
-            if (flag){
-                $("#sp_contact").css("color","green").html("√");
+        function checkname() {
+            var name = $("input[name='contact']").val();
+            var reg_name = /^([\u4e00-\u9fa5]){2,7}$/;
+            var flag = reg_name.test(name);
+            if (flag) {
+                $("#sp_contact").css("color", "green").html("√");
                 return true;
-            }else{
-                $("#sp_contact").css("color","red").html("×");
+            } else {
+                $("#sp_contact").css("color", "red").html("×");
                 return false;
             }
         }
 
         //检查手机号
-        function checktelephone(){
-            var telephone=$("input[name='phone']").val();
-            var reg_telephonr= /^(((13|14|15|18|17)\d{9}))$/;
-            var flag=reg_telephonr.test(telephone);
-            if (flag){
-                $("#sp_phone").css("color","green").html("√");
+        function checktelephone() {
+            var telephone = $("input[name='phone']").val();
+            var reg_telephonr = /^(((13|14|15|18|17)\d{9}))$/;
+            var flag = reg_telephonr.test(telephone);
+            if (flag) {
+                $("#sp_phone").css("color", "green").html("√");
                 return true;
-            }else{
-                $("#sp_phone").css("color","red").html("×");
+            } else {
+                $("#sp_phone").css("color", "red").html("×");
                 return false;
             }
         }
 
         function goIndex() {
-            $("#ret_my_complain_form").attr("action", "/mm/news/retMyComplain").submit();
+            window.location.href = '/mm/news/index';
         }
 
         function initUpload() {

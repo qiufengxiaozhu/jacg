@@ -15,9 +15,6 @@
         <div class="top-return"></div>
         <div class="return" onclick="goIndex()">返回</div>
         <div class="advince">我的投诉</div>
-        <a href="/mm/news/addComplain" class="li-add flex-1" style="text-align: right" id="addComplain">
-            <img src="/mm/img/add.png" alt="" class="">
-        </a>
     </div>
     <div class="center">
         <#if complainEntity?exists && complainEntity??>
@@ -63,10 +60,6 @@
         </#if>
     </div>
 </div>
-<form id="add_form" action="" method="post">
-    <!--<input type="hidden" name="_method" value="DELETE"/>-->
-    <input type="hidden" name="contactUser"  value='${contactUser!}'>
-</form>
 <form id="detail_form" action="" method="post">
     <!--<input type="hidden" name="_method" value="DELETE"/>-->
     <input type="hidden" name="id" id="id"/>
@@ -75,19 +68,10 @@
 <script src="/js/zudp.js"></script>
 <script>
 
-    $(document).ready(function () {
-        $("#addComplain").click(function () {
-            var href = $(this).attr("href");
-            $("#add_form").attr("action", href).submit();
-            /*定义表单提交的地址*/
-            return false;
-        });
-    });
-
 
     function goDetail(id) {
         $("#id").val(id);
-        $("#detail_form").attr("action", "/mm/news/detail").submit();
+        $("#detail_form").attr("action", "/mm/complain/detail").submit();
     }
 
     function goIndex() {
@@ -101,7 +85,7 @@
         };
 //        alert(data.contactUser);
         var dataJSON = JSON.stringify(data);
-        zudp.ajax("/mm/news/addComplain").post(dataJSON).then(function (result) {
+        zudp.ajax("/mm/complain/addComplain").post(dataJSON).then(function (result) {
 //            debugger;
 //            alert(result);
 //            window.location.href = '${path!""}';

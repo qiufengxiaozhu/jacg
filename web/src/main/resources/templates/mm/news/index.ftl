@@ -93,7 +93,7 @@
         <div class="center">
             <div class="flex public">
                 <div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我的上报</p></div></div>
-                <div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>
+                <div class="" onclick="goPage(7)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>
                 <div class="" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>
             </div>
         </div>
@@ -204,11 +204,15 @@
         }
         if(a==2){
             //公众投诉
+            window.location.href='/mm/news/addComlain';
+        }
+        if(a==7){
+            //我的投诉
             window.location.href='/mm/news/myComplain';
         }
         if(a==3){
             //公众咨询
-            window.location.href='/mm/news/advisory';
+            window.location.href='/mm/news/addComplain';
         }
         if(a==4){
             //便民服务

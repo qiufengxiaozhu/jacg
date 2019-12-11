@@ -24,7 +24,7 @@ import java.util.Map;
  * @Date 2019/11/26 11:45
  **/
 @Controller
-@RequestMapping(value = "/mm/news")
+@RequestMapping(value = "/mm/complain")
 public class MMComplainController {
 
     @Autowired
@@ -76,7 +76,7 @@ public class MMComplainController {
      * @param map 投诉人账户信息 投诉人账户信息的 id
      * @return
      */
-    @RequestMapping(value = "/addComplain", method = RequestMethod.POST)
+    @RequestMapping(value = "/addComplain", method = RequestMethod.GET)
     public String addComplain(@RequestParam Map<String, Object> map,
                               Model model) {
         model.addAttribute("contactUser", map.get("contactUser"));
@@ -96,7 +96,7 @@ public class MMComplainController {
         int i = service.saveOne(complainEntity);
         redirectAttributes.addFlashAttribute("contactUser", complainEntity.getContactUser());
 
-        return "redirect:/mm/news/myComplain";
+        return "redirect:/mm/complain/myComplain";
     }
 
     /**
@@ -108,7 +108,7 @@ public class MMComplainController {
     public String retMyComplain(@RequestParam Map<String, Object> map,
                                 RedirectAttributes redirectAttributes) {
         redirectAttributes.addFlashAttribute("contactUser", map.get("contactUser"));
-        return "redirect:/mm/news/myComplain";
+        return "redirect:/mm/complain/myComplain";
     }
 
 
