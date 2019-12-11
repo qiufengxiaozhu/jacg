@@ -22,6 +22,20 @@ public class Questions extends DataEntity{
 
     private String label;
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * 题目状态
+     */
+
+    private String status;
+
     public String getLabel() {
         return label;
     }
