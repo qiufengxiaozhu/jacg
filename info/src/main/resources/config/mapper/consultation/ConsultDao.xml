@@ -8,9 +8,6 @@
         <result column="name" property="name"/>
         <result column="telephone" property="telephone"/>
         <result column="title" property="title" />
-        <result column="picture" property="picture"/>
-        <result column="video" property="video"/>
-        <result column="voice" property="voice"/>
         <result column="content" property="content"/>
         <result column="consult_id" property="consultId"/>
         <result column="consult_date" property="consultDate"/>
@@ -26,14 +23,16 @@
         <result column="update_user" property="updateUser.id" />
         <result column="del" property="del" />
 
-        <!--<association property="category" javaType="com.zte.zudp.admin.info.consultation.entity.ConsultCategory">
-            <id column="cid" property="id" />
-            <result column="caname" property="name"/>
-            <result column="cacreate_date" property="createDate" />
-            <result column="cacreate_user" property="createUser.id" />
-            <result column="caupdate_date" property="updateDate" />
-            <result column="caupdate_user" property="updateUser.id" />
-        </association>-->
+        <collection property="attachDocList" ofType="com.zte.zudp.admin.info.attachDoc.entity.AttachDoc">
+            <id column="fid" property="id" />
+            <result column="billid" property="billid"/>
+            <result column="billtype" property="billtype"/>
+            <result column="fname" property="name"/>
+            <result column="path" property="path"/>
+            <result column="f_create_user" property="createUser.id"/>
+            <result column="f_create_date" property="createDate"/>
+            <result column="f_del" property="del"/>
+        </collection>
     </resultMap>
 
 
@@ -71,8 +70,18 @@
 
 
     <select id="get" resultMap="consultMap" >
+        SELECT  z.*
+        FROM zmj_consult z
+        where z.id=#{id}
+    </select>
 
-        SELECT  * FROM zmj_consult where id=#{id}
+    <select id="getFj" resultMap="consultMap" >
+        SELECT  DISTINCT z.*,f.id fid,f.name fname,path,
+        f.create_user f_create_user,f.create_date f_create_date,
+        f.del f_del
+        FROM zmj_consult z JOIN sys_attachments f
+        on z.id=billid
+        where z.id=#{id}
     </select>
 
     <!--<select id="checkName" resultType="java.lang.Integer">

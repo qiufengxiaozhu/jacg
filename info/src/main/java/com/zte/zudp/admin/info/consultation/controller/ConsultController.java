@@ -6,6 +6,7 @@ import com.zte.zudp.admin.info.consultation.ConsultMenu;
 import com.zte.zudp.admin.info.consultation.entity.Consult;
 import com.zte.zudp.admin.info.consultation.service.ConsultService;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -15,4 +16,15 @@ import javax.annotation.Resource;
 public class ConsultController extends AbstractCRUDController<Consult> {
     @Resource
     private ConsultService consultService;
+
+    /**
+     * 获取咨询信息附件
+     * @param id
+     * @return
+     */
+    @RequestMapping("/getFj")
+    @ResponseBody
+    public Consult getFj(String id){
+        return consultService.getFj(id);
+    }
 }

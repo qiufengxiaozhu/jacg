@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.mm.protalconsult.dao.MMConsultDao">
+
+    <resultMap type="com.zte.zudp.admin.mm.protalconsult.entity.MMConsult" id="consultMap">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="telephone" property="telephone"/>
+        <result column="title" property="title" />
+        <result column="picture" property="picture"/>
+        <result column="video" property="video"/>
+        <result column="voice" property="voice"/>
+        <result column="content" property="content"/>
+        <result column="consult_id" property="consultId"/>
+        <result column="consult_date" property="consultDate"/>
+        <result column="reply" property="reply"/>
+        <result column="reply_id" property="replyId"/>
+        <result column="reply_unit_id" property="replyUnitId" />
+        <result column="reply_date" property="replyDate"/>
+        <result column="start_date" property="startDate"/>
+        <result column="end_date" property="endDate"/>
+        <result column="create_date" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="del" property="del" />
+    </resultMap>
+
+
+
+    <select id="selAll" resultMap="consultMap" useCache="false">
+        SELECT  id,content,title,reply,
+        DATE_FORMAT(consult_date,'%Y-%m') as yearStr,
+        DATE_FORMAT(consult_date,'%d') as dayStr
+        FROM zmj_consult
+        WHERE  del!=1
+        ORDER BY consult_date desc
+    </select>
+
+    <select id="selById" resultMap="consultMap">
+        SELECT  *
+        FROM zmj_consult
+        WHERE  id=#{id}
+    </select>
+
+    <select id="get" resultMap="consultMap">
+        SELECT  *
+        FROM zmj_consult
+        WHERE  id=#{id}
+    </select>
+
+    <insert id="insConsult">
+        INSERT INTO zmj_consult(
+        id,name,title,telephone,content,consult_date,
+        create_date,
+        create_user,
+        update_date,
+        update_user,
+        del
+        )
+        VALUE (
+        #{id}, #{name},#{title},#{telephone}, #{content},NOW(),
+        #{createDate},
+        #{createUser.id},
+        #{updateDate},
+        #{updateUser.id},
+        0
+        )
+    </insert>
+
+
+    <update id="update" parameterType="com.zte.zudp.admin.info.consultation.entity.Consult">
+    UPDATE zmj_consult  SET
+    reply = #{reply},
+    reply_date = #{updateDate}
+    WHERE id = #{id}
+</update>
+
+    <delete id="delete">
+        UPDATE zmj_consult
+        SET del = 1
+        WHERE id = #{id}
+    </delete>
+
+    <delete id="batchDelete">
+        UPDATE zmj_consult SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </delete>
+
+</mapper>

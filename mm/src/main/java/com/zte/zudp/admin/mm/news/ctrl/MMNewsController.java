@@ -59,13 +59,24 @@ public class MMNewsController {
     }
 
     /**
-     * 公众咨询
+     * 我的咨询
      * @param model
      * @return
      */
     @GetMapping("/advisory")
     public String advisory(Model model) {
-        return "/mm/news/advisory";
+
+        return "/consult/myadvisory";
+    }
+
+    /**
+     *公众咨询
+     * @param model
+     * @return
+     */
+    @GetMapping("/addadvisory")
+    public String addadvisory(Model model){
+        return "/mm/consult/add-advisory";
     }
 
 
