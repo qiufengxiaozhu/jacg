@@ -1,10 +1,17 @@
 package com.zte.zudp.admin.info.complain.service;
 
 import com.zte.zudp.admin.common.persistence.service.BusinessService;
+import com.zte.zudp.admin.info.attachDoc.entity.AttachDoc;
+import com.zte.zudp.admin.info.attachDoc.service.AttachDocService;
+import com.zte.zudp.admin.info.attachDoc.service.FileBusinessService;
 import com.zte.zudp.admin.info.complain.dao.ComplainDao;
 import com.zte.zudp.admin.info.complain.entity.ComplainEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Date;
+import java.util.List;
 
 /**
  * @Description ${}
@@ -15,26 +22,31 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class ComplainService extends BusinessService<ComplainEntity> {
 
+    @Autowired
+    private AttachDocService attachDocService;
+
     private ComplainDao dao() {
         return (ComplainDao) dao;
     }
 
-    /**
-     * 业务需求，tel == "", 不更改 reply_status 和 total
-     * 如果有 tel , 判断 reply_status 的值，为1，不做操作，为0，赋值为 1，且 total = 3.
-     * @param entity
-     * @return
-     */
-    public int updateReply(ComplainEntity entity) {
-        if (entity.getTel() != null && !entity.getTel().equals("")) {
-            //如果 reply_status == 0, reply_status = 1, total = 3;
-            //如果 reply_status == 1, 不变
-            if (entity.getReplyStatus().equals("0")) {
-                entity.setReplyStatus("1");
-                entity.setTotal("3");
+
+    public ComplainEntity getOne(String id) {
+        ComplainEntity entity = dao().get(id);
+        AttachDoc attachDoc = new AttachDoc();
+        attachDoc.setBillid(id);
+        List<AttachDoc> attachDocList = attachDocService.findList(attachDoc);
+        int size = attachDocList.size();
+        if (size > 0) {
+            String[] attachPaths = new String[size];
+            String[] attachNames = new String[size];
+            for (int i = 0; i < size; i++) {
+                AttachDoc tempAttachDoc = attachDocList.get(i);
+                attachPaths[i] = tempAttachDoc.getPath();
+                attachNames[i] = tempAttachDoc.getName();
             }
+            entity.setAttachPaths(attachPaths);
+            entity.setAttachNames(attachNames);
         }
-        int i = dao().update(entity);
-        return i;
+        return entity;
     }
 }

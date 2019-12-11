@@ -44,7 +44,7 @@
                         </button>
                     </@hasPermission>
                         <div class='querybtn my-querybtn'>
-                            <input type='text' name='search' id='search_name' placeholder='请输入名称' class='form-control search-input'>
+                            <input type='text' name='search' id='search_name' placeholder='请输入题目内容' class='form-control search-input'>
                             <button class='btn btn-primary mgl my-mgl research-btn' >
                                 搜索
                             </button>&nbsp;&nbsp;
@@ -108,6 +108,49 @@
                         </div>
 
 
+                        <div class="form-group" id="choiceText01">
+                            <label class="col-sm-3 control-label my-control-label ">选项一：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="choiceText01" maxlength="64" id="choiceText010" placeholder="选项一" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" id="choiceText02">
+                            <label class="col-sm-3 control-label my-control-label ">选项二：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="choiceText02" maxlength="64" id="choiceText021" placeholder="选项二" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="choiceText03">
+                            <label class="col-sm-3 control-label my-control-label ">选项三：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="choiceText03" maxlength="64" id="choiceText032" placeholder="选项三" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" id="choiceText04">
+                            <label class="col-sm-3 control-label my-control-label ">选项四：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="choiceText04" maxlength="64" id="choiceText043" placeholder="选项四" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
                     </form>
                 </div>
 
@@ -145,7 +188,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项一：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText01"   maxlength="64" id="name" placeholder="选项一" class="form-control">
+                                <input type="text" name="choiceText01"   maxlength="64" id="choiceText01" placeholder="选项一" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -155,7 +198,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项二：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText02" maxlength="64" id="telephone" placeholder="选项二" class="form-control">
+                                <input type="text" name="choiceText02" maxlength="64" id="choiceText02" placeholder="选项二" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -165,7 +208,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项三：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText03" maxlength="64" id="telephone" placeholder="选项三" class="form-control">
+                                <input type="text" name="choiceText03" maxlength="64" id="choiceText03" placeholder="选项三" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -175,7 +218,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项四：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText04" maxlength="64" id="telephone" placeholder="选项四" class="form-control">
+                                <input type="text" name="choiceText04" maxlength="64" id="choiceText04" placeholder="选项四" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -227,74 +270,27 @@
     var sys_url=window.location.host;
     $(document).ready(function () {
 
-//        $("#post_form").validate({
-//            rules: {
-//                name:{
-//                    required:true,
-//                    remote: {
-//                        url:"/api/post/checkName",
-//                        type:"get",
-//                        data: {
-//                            "name":function () {
-//                                return $("#name").val();
-//                            },
-//                            "id":function () {
-//                                return $("#id").val();
-//                            }
-//                        },
-//                        dataFilter: function(data, type) {
-//                            var da=JSON.parse(data).data;
-//                            if(zudp.util.isBoolean(da)){
-//                                return da;
-//                            }else{
-//                                return false;
-//                            }
-//                        }
-//                    }
-//                },
-////                identification:{
-////                    required:true,
-////                    rangelength:[0,64],
-////                    remote: {
-////                        url:"/api/post/checkIdenty",
-////                        type:"get",
-////                        data: {
-////                            "identy":function () {
-////                                return $("#identification").val();
-////                            },
-////                            "id":function () {
-////                                return $("#id").val();
-////                            }
-////                        },
-////                        dataFilter: function(data, type) {
-////                            var da=JSON.parse(data).data;
-////                            if(zudp.util.isBoolean(da)){
-////                                return da;
-////                            }else{
-////                                return false;
-////                            }
-////                        }
-////                    }
-////                },
-//
-//                mark:{
-//                    rangelength:[0,1000]
-//                }
-//            },
-//            messages: {
-//                name: {
-//                    required: "请输入岗位名称",
-//                    remote: "岗位名称已存在"
-//                },
-////                identification: {
-////                    required: "请输入岗位标识",
-////                    remote: "岗位标识已存在"
-////                },
-//                mark: {
-//                    rangelength:"字符个数不能超过1000"
-//                }
-//            },ignore: []
-//        });
+
+        // 新建  验证
+        $("#post_form").validate({
+            rules: {
+                // 必填项
+
+                contents: "required",
+                questionType:"required",
+
+                // 提示信息
+                messages: {
+                    contents: {
+                        required: "请输入题目内容",
+                        remote: "题目已存在"
+                    },
+                    questionType: "请选择题目类型"
+                }
+            }
+        });
+
+
 
         findList();
 
@@ -304,7 +300,7 @@
             title: "{type}题目",
             success: "数据{msg}",
             error: "数据{msg}",
-            disabledName: ["type", 'value'],
+            disabledName: ["type", 'value','type02'],
             hideInputName:[],
             search: [".clear-input", "#search",".search-input"]
 
@@ -335,7 +331,7 @@
                 .url(urls)
                 .search(function () {
                     return {
-                        "name":$("#search_name").val()
+                        "contents":$("#search_name").val()
 
                     }
                 })
@@ -365,6 +361,7 @@
 
                             var addOptionStr="";
 
+
                                 editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
 
                                 delStr = zudp.template.delBtn;
@@ -372,8 +369,14 @@
                                 //添加选项
                                 addOptionStr='<button  id="row-add-test" class="btn btn-info btn-sm " value="{id}"><i class="fa fa-pencil"></i>添加选项</button>';
 
-                                btn += editStr + delStr + detailStr+addOptionStr;
+                            if(data.status == '0'){ // 0->此题目没有选项的状态
+                                btn += editStr +"&nbsp;" + delStr +"&nbsp;" + detailStr +"&nbsp;"+addOptionStr;
                                 return zudp.util.render(btn, row);
+                            }
+                            else { // 有选项的状态
+                                btn += editStr + "&nbsp;" + delStr + "&nbsp;" + detailStr ;
+                                return zudp.util.render(btn, row);
+                            }
 
 
                         }
@@ -401,42 +404,44 @@
             /* $(".modal-form-content").addClass("test-form").removeClass("create-form detail-form");*/
 
             //修改标题
-            var titleText = zudp.util.render(obj.title, {"type": "添加选项"});
+            var titleText = zudp.util.render(obj.title, {"type02": "添加选项"});
             $(".modal .modal-title").text("添加选项");
 
-            //取消禁用
-            for (var i = 0; i < obj.disabledName.length; i++) {
-                // 模态框的class ---> modal-form-content
-                $(".modal-form-content").find("*[name=" + obj.disabledName[i] + "]")
-                        .attr("disabled", false);
-            }
+            // 全部解除禁用
+            $("#addOption").find("*[name]").prop("disabled", false);
 
-            // 清空输入框的
-            zudp.plugin.form("#form-addOption").reset();
+
+//            alert("1");
         });
 
-        /*
-        zudp.ajax(updateUrl).get("").then(function (data) {
-            dataEcho(obj.formId, data);
-        }, function (error) {
-        });*!/
-        //设置禁用
-        for (var i = 0; i < obj.disabledName.length; i++) {
-            $(".modal form").find("*[name=" + obj.disabledName[i] + "]")
-                .attr("disabled", true);
-        }
-    });*/
-        //校验保存
-        $(document).on("click", ".test-form #test-save-btn", function () {
-            var data = zudp.util.formData2json("form-addOption");
 
-            zudp.ajax("/api/option/addOption").post(data).then(function (value) {
-//                    if (value.size >=0 ) {
-//                        zudp.plugin.dialog("success").alert("更新成功 ");
+        //校验保存
+        $(document).on("click", "#test-save-btn", function () {
+//            var data = zudp.util.formData2json("form-addOption");
+           var choiceText01= $("#choiceText01").val();
+           var choiceText02= $("#choiceText02").val();
+           var choiceText03= $("#choiceText03").val();
+           var choiceText04= $("#choiceText04").val();
+            var idJson = $("#row-add-test").val();
+
+            var obj = {
+                choiceText01:choiceText01,
+                choiceText02:choiceText02,
+                choiceText03:choiceText03,
+                choiceText04:choiceText04,
+                idJson:idJson
+            };
+
+            var objJson = JSON.stringify(obj);
+
+            zudp.ajax("/api/option/addOption").post(objJson).then(function (value) {
                 // 关闭模态框
                 $(".modal-form-content").modal("hide");
+                // 清空输入框的
+                zudp.plugin.form("#form-addOption").reset();
 //                    }
             })
+
         });
 
     });
@@ -485,6 +490,17 @@
             zudp.plugin.dialog("error").alert("获取用户列表失败！", "提示");
         });
     };
+
+
+    // 隐藏选项输入框  新建
+    $(document).on("click", '#add-btn', function () {
+        $("#choiceText01").css("display","none");	//隐藏选项
+        $("#choiceText02").css("display","none");	//隐藏选项
+        $("#choiceText03").css("display","none");	//隐藏选项
+        $("#choiceText04").css("display","none");	//隐藏选项
+
+    });
+
 
 
     function initUpload(){

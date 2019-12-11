@@ -72,10 +72,10 @@
         </div>
         <div class="center">
             <div class="flex public">
-                <div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>公众调查</p></div></div>
-                <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>公众上报</p></div></div>
+                <div class="" onclick="goPage(6)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>公众调查</p></div></div>
+                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>公众上报</p></div></div>
                 <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>公众投诉</p></div></div>
-                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>便民咨询</p></div></div>
+                <div class="flex-1" onclick="goPage(5)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>便民咨询</p></div></div>
             </div>
         </div>
         <div class="center">
@@ -93,8 +93,8 @@
         <div class="center">
             <div class="flex public">
                 <div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我的上报</p></div></div>
-                <div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>
-                <div class="" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>
+                <div class="" onclick="goPage(7)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>
+                <div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>
             </div>
         </div>
 
@@ -107,6 +107,7 @@
                 <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>地图服务</p></div></div>
                 <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>便民服务</p></div></div>
                 <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>系统自检</p></div></div>
+                <#--<div class="flex-1" onclick="goPage(6)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>调查</p></div></div>-->
             </div>
         </div>
     </div>
@@ -202,20 +203,28 @@
             window.location.href='/mm/news/index';
         }
         if(a==2){
-            //公众投诉
-            window.location.href='/mm/news/mytousu';
-        }
-        if(a==3){
-            //公众咨询
+            //我的咨询
             window.location.href='/mm/news/advisory';
         }
+        if(a==5){
+            //公众咨询
+            window.location.href='/mm/news/addadvisory';
+        }
+        if(a==7){
+            //我的投诉
+            window.location.href='/mm/news/myComplain';
+    }
+    if(a==3){
+        //公众投诉
+        window.location.href='/mm/news/addComplain';
+    }
         if(a==4){
             //便民服务
             window.location.href='/mm/news/conven';
         }
         if(a==6){
             //公众调查
-            window.location.href='/mm/news/survey';
+            window.location.href='/mm/queinvest/survey';
         }
     }
 

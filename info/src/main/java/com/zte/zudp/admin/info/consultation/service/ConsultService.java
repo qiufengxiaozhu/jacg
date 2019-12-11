@@ -15,4 +15,12 @@ public class ConsultService extends BusinessService<Consult>{
     @Resource
     private ConsultDao consultDao;
 
+    /**
+     * 获取咨询信息附件
+     * @param id
+     * @return
+     */
+    public Consult getFj(String id){
+        return consultDao.getFj(id);
+    }
 }

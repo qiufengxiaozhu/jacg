@@ -3,21 +3,21 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zte.zudp.admin.info.queinvest.dao.QuestionDao">
 
-    <resultMap type="com.zte.zudp.admin.info.queinvest.entity.Questions" id="questionMap">
-        <id column="id" property="id"/>
-        <result column="create_date" property="createDate" />
-        <result column="create_user" property="createUser.id" />
-        <result column="update_date" property="updateDate" />
-        <result column="update_user" property="updateUser.id" />
-        <result column="del" property="del" />
+    <!--<resultMap type="com.zte.zudp.admin.info.queinvest.entity.Questions" id="questionMap">-->
+        <!--<id column="id" property="id"/>-->
+        <!--<result column="create_date" property="createDate" />-->
+        <!--<result column="create_user" property="createUser.id" />-->
+        <!--<result column="update_date" property="updateDate" />-->
+        <!--<result column="update_user" property="updateUser.id" />-->
+        <!--<result column="del" property="del" />-->
 
-        <result column="contents" property="contents" />
-        <result column="questionType" property="questionType" />
-
-
+        <!--<result column="contents" property="contents" />-->
+        <!--<result column="questionType" property="questionType" />-->
 
 
-    </resultMap>
+
+
+    <!--</resultMap>-->
 
 
 
@@ -32,7 +32,7 @@
         update_user,
         update_date,
         del,
-        val01)
+        status)
     VALUES
     ( #{id},
       #{contents},
@@ -42,7 +42,7 @@
       #{updateUser.id},
       #{updateDate},
       '0',
-      '预留字段'
+      '0'
      )
 
     </insert>
@@ -52,7 +52,8 @@
         SELECT
         t1.id id,
         t1.contents contents,
-        t1.questionType questionType
+        t1.questionType questionType,
+        t1.status status
 
         FROM `jacg_questions` t1
 

@@ -6,6 +6,7 @@ import com.zte.zudp.admin.info.queinvest.entity.Dictionary;
 import com.zte.zudp.admin.info.queinvest.entity.Queinvest;
 import com.zte.zudp.admin.info.queinvest.entity.Questions;
 import org.apache.ibatis.annotations.Param;
+import org.apache.poi.ss.formula.functions.T;
 
 import java.util.List;
 
@@ -39,4 +40,6 @@ public interface QueinvestDao extends AbstractDao<Queinvest> {
     List<Questions> findAllQuestion(String id);
 
     void updateQuestion(@Param("object") Object object, @Param("object02") Object object02);
+
+    Queinvest getDetail(@Param("id") String id);
 }

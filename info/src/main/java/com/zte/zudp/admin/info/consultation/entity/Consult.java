@@ -2,8 +2,9 @@ package com.zte.zudp.admin.info.consultation.entity;
 
 
 import com.zte.zudp.admin.common.persistence.entity.DataEntity;
+import com.zte.zudp.admin.info.attachDoc.entity.AttachDoc;
 
-import java.util.Date;
+import java.util.List;
 
 /**
  * 咨询信息实体类
@@ -13,9 +14,6 @@ public class Consult extends DataEntity {
     private String name;//联系人姓名
     private String telephone;//联系人电话
     private String title;//标题
-    private String picture;//咨询附带图片地址
-    private String video;//咨询附带视频地址
-    private String voice;//咨询附带语音地址
     private String content;//咨询内容
     private String consultId;//咨询人信息
     private String replyUnitId;//咨询单位信息
@@ -26,21 +24,7 @@ public class Consult extends DataEntity {
     private String startDate;//咨询时间筛选(起)
     private String endDate;//咨询时间筛选(止)
 
-    public String getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
-    }
-
-    public String getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
-    }
+    private List<AttachDoc> attachDocList;
 
     public String getName() {
         return name;
@@ -64,30 +48,6 @@ public class Consult extends DataEntity {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getPicture() {
-        return picture;
-    }
-
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
-    public String getVideo() {
-        return video;
-    }
-
-    public void setVideo(String video) {
-        this.video = video;
-    }
-
-    public String getVoice() {
-        return voice;
-    }
-
-    public void setVoice(String voice) {
-        this.voice = voice;
     }
 
     public String getContent() {
@@ -144,5 +104,29 @@ public class Consult extends DataEntity {
 
     public void setReplyDate(String replyDate) {
         this.replyDate = replyDate;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public List<AttachDoc> getAttachDocList() {
+        return attachDocList;
+    }
+
+    public void setAttachDocList(List<AttachDoc> attachDocList) {
+        this.attachDocList = attachDocList;
     }
 }

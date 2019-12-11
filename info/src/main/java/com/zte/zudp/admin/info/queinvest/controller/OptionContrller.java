@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -33,13 +34,15 @@ public class OptionContrller extends AbstractCRUDController<Options>{
      */
    @JSON
     @RequestMapping(value = "/addOption", method =RequestMethod.POST )
-    public Integer addOption(@RequestBody Options t) {
-       int i=1;
-//        Options option=new Options();
-//        if(option.getId()==null) {
-//            t.setId(UUID.randomUUID().toString());
-                    optionService.addOption(t);
-                    return 1;
+    public void addOption(@RequestBody Options t) {
+       if(t.getId()==null){// 如果为空
+           String uuid =UUID.randomUUID().toString();
+           t.setId(uuid);
+
+           System.out.println(t.getId());
+
+       }
+       optionService.addOption(t);
 //        }
     }
 

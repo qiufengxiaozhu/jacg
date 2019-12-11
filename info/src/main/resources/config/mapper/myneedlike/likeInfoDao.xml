@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.myneedlike.dao.likeInfoDao">
+
+    <resultMap type="com.zte.zudp.admin.info.myneedlike.entity.likeInfoEntity" id="likeInfoMap">
+        <id column="id" property="id"/>
+        <result column="create_date" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="icon" property="icon" />
+        <result column="comment" property="comment" />
+        <result column="likePID" property="likePID" />
+        <result column="likeContentId" property="likeContentId" />
+        <result column="likeTime" property="likeTime" />
+        <result column="likeCNum" property="likeCNum"/>
+        <result column="del" property="del" />
+    </resultMap>
+
+
+    <select id="findList" resultMap="likeInfoMap" useCache="false">
+        SELECT
+        id as id,
+        icon as icon,
+        comment as comment,
+        like_p_id as likePID,
+        like_conten_id as likeContentId,
+        like_time as likeTime,
+        like_c_num as likeCNum
+        from like_info
+        where del!=1   and comment != ''
+        <if test="likeContentId!=null and likeContentId!=''">
+            and like_conten_id = #{likeContentId}
+        </if>
+        ORDER BY create_date desc
+    </select>
+
+
+    <select id="get" resultMap="likeInfoMap" >
+        SELECT
+        id as id,
+        icon as icon,
+        comment as comment,
+        like_p_id as likePID,
+        like_conten_id as likeContentId,
+        like_time as likeTime,
+        like_c_num as likeCNum
+        from like_info
+        where id=#{id}
+    </select>
+
+
+
+    <insert id="insert">
+        INSERT INTO like_info (
+        id,
+        icon,
+        comment,
+        like_p_id,
+        like_conten_id,
+        like_time,
+        del,
+        like_c_num
+        )
+        VALUE (
+        #{id},
+        #{icon},
+        #{comment},
+        #{likePID},
+        #{likeContentId},
+        #{likeTime},
+        '0',
+        0
+        )
+    </insert>
+
+    <delete id="delete">
+        UPDATE like_info
+        SET del = 1
+        WHERE id = #{id}
+    </delete>
+
+    <update id="updateLikeCNum">
+        update
+        like_info
+        SET
+        like_info.like_c_num = like_c_num + 1
+        where
+        like_info.id = #{id}
+    </update>
+</mapper>

@@ -21,5 +21,4 @@ public interface ComplainDao extends AbstractDao<ComplainEntity> {
     //delete(int id) --int
 
     //batchDelete(String[] id) -- int
-
 }

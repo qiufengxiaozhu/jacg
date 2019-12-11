@@ -116,13 +116,24 @@ public class MMNewsController {
     }
 
     /**
-     * 公众咨询
+     * 我的咨询
      * @param model
      * @return
      */
     @GetMapping("/advisory")
     public String advisory(Model model) {
-        return "/mm/news/advisory";
+
+        return "/consult/myadvisory";
+    }
+
+    /**
+     *公众咨询
+     * @param model
+     * @return
+     */
+    @GetMapping("/addadvisory")
+    public String addadvisory(Model model){
+        return "/mm/consult/add-advisory";
     }
 
 
@@ -165,9 +176,9 @@ public class MMNewsController {
      * @param model
      * @return
      */
-    @GetMapping("/mytousu")
+    @GetMapping("/myComplain")
     public String mytousu(Model model) {
-        return "/mm/advice/my-tousu";
+        return "forward:/mm/complain/myComplain";
     }
     /**
      * 投诉详情
@@ -184,9 +195,9 @@ public class MMNewsController {
      * @param model
      * @return
      */
-    @GetMapping("/toadvice")
+    @GetMapping("/addComplain")
     public String toadvice(Model model) {
-        return "/mm/advice/to-advice";
+        return "forward:/mm/complain/addComplain";
     }
 
 
