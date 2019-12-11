@@ -8,6 +8,11 @@
     <script type="text/javascript" src="/mm/js/rem.js"></script>
     <script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="/mm/css/index.css">
+    <style>
+            .well-peopel p{overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;width:5.5rem;display: inline-block}
+    </style>
 </head>
 <body>
 <div class="content-box container-app" style="background: #F6F6F6">
@@ -21,9 +26,6 @@
         <img src="/mm/img/find.png">
     </div>
     <div class="fb-time">
-        <select name="" id="" style="background: none">
-            <option value="">点赞时间段</option>
-        </select>
     </div>
 
     <div id = "summaryContent">
@@ -31,6 +33,7 @@
     </div>
 </div>
 <script>
+
     function goIndex(){
         window.location.href='/mm/news/index';
     }
@@ -73,7 +76,7 @@
                                     '        <div class="flex-6">\n' +
                                     '            <div class="">\n' +
                                     '                <p class="violation">'+commentInfo.title+'</p>\n' +
-                                    '                <p class="well-peopel">'+commentInfo.content+'</p>\n' +
+                                    '                <div class="well-peopel">'+commentInfo.content+'</div>\n' +
                                     '                <div class="add-pic flex">\n' +
                                     '                    <div class="flex flex-1 flex-c-c">' +
                                     "<img src='/mm/img/good.png' onclick =\"like(\'"+commentInfo.id+"\')\" >"+
@@ -108,7 +111,8 @@
             dataType: 'json',
             success: function (data) {
                if (data != null){
-                   location.reload();
+                   var likeInfo = data.data;
+                  $("#"+id).html(likeInfo.likeNum+"人");
                }
             },
             error: function () {
@@ -150,7 +154,6 @@
                         for(var i = 0; i < list.length; i++) { // 这里的i是代表数组的下标
                             var commentInfo = list[i];
                            var creatTime =  format(commentInfo.createDate);
-                            console.log(commentInfo);
                             var id  = String(commentInfo.id);
                             tableContent += '  <div class="flex sum-work"  >\n' +
                                     '        <div class="flex-2">\n' + creatTime+
@@ -158,11 +161,12 @@
                                     '        <div class="flex-6">\n' +
                                     '            <div class="">\n' +
                                     '                <p class="violation">'+commentInfo.title+'</p>\n' +
-                                    '                <p class="well-peopel">'+commentInfo.content+'</p>\n' +
+                                    '                <div class="well-peopel">'+commentInfo.content+'</div>\n' +
                                     '                <div class="add-pic flex">\n' +
                                     '                    <div class="flex flex-1 flex-c-c">' +
                                     "<img src='/mm/img/good.png' onclick =\"like(\'"+id+"\')\" >"+
-                                    '<div class="li-num1">'+commentInfo.likeNum+'人</div></div>\n' +
+                                    '<div class="li-num1" id="'+commentInfo.id+'"' +
+                                    '>'+commentInfo.likeNum+'人</div></div>\n' +
                                     '                </div>\n' +
                                     '            </div>\n' +
                                     '        </div>\n' +

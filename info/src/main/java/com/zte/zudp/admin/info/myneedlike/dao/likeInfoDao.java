@@ -3,6 +3,7 @@ package com.zte.zudp.admin.info.myneedlike.dao;
 
 import com.zte.zudp.admin.common.persistence.dao.AbstractDao;
 import com.zte.zudp.admin.info.myneedlike.entity.likeInfoEntity;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 点赞详情dao
@@ -12,5 +13,7 @@ import com.zte.zudp.admin.info.myneedlike.entity.likeInfoEntity;
  */
 public interface likeInfoDao extends AbstractDao<likeInfoEntity> {
 
+    //评论点赞数增加
+    void updateLikeCNum(@Param("id") String id);
 
 }

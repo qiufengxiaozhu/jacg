@@ -5,6 +5,7 @@ import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointRest;
 import com.zte.zudp.admin.common.enums.AuthorizedType;
 import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
+import com.zte.zudp.admin.common.util.IDUtil;
 import com.zte.zudp.admin.info.myneedlike.entity.likeEntity;
 import com.zte.zudp.admin.info.myneedlike.entity.likeInfoEntity;
 import com.zte.zudp.admin.info.myneedlike.service.likeInfoService;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.List;
 
 
@@ -52,13 +54,40 @@ public class likeInfoController extends AbstractCRUDController<likeInfoEntity> {
     @JSON
     @PostMapping(value = "/likeInfoList" )
     @EndpointRest(id = "likeInfoList", name = "", authorizedType = AuthorizedType.GUEST)
-    public List<likeInfoEntity> findInfoList(String contentId){
+    public List<likeInfoEntity> findInfoList(String contentID){
         likeInfoEntity likeInfoEntity = new likeInfoEntity();
-        likeInfoEntity.setLikeContentId(contentId);
+        likeInfoEntity.setLikeContentId(contentID);
         return  likeInfoService.findList(likeInfoEntity);
     }
 
 
+    /*
+    * 评论点赞数
+    * */
+    @JSON
+    @PostMapping(value = "/updateLikeCNum" )
+    @EndpointRest(id = "updateLikeCNum", name = "", authorizedType = AuthorizedType.GUEST)
+    public likeInfoEntity updateLikeCNum(String id){
+     likeInfoService.updateLikeCNum(id);
+     return likeInfoService.get(id);
+    }
+
+    /*
+    * 评论提交
+    * */
+    @JSON
+    @GetMapping(value = "/commentSubmit" )
+    @EndpointRest(id = "commentSubmit", name = "", authorizedType = AuthorizedType.GUEST)
+    public void commentSubmit(String contentID,String matter){
+        likeInfoEntity likeInfoEntity = new likeInfoEntity();
+        likeInfoEntity.setId(String.valueOf(IDUtil.simpleId()));
+        likeInfoEntity.setLikeTime(new Date());
+        likeInfoEntity.setLikeContentId(contentID);
+        likeInfoEntity.setLikePID("最帅的人");
+        likeInfoEntity.setComment(matter);
+        likeInfoEntity.setIcon("1");
+       likeInfoService.insert(likeInfoEntity);
+    }
 
 
 

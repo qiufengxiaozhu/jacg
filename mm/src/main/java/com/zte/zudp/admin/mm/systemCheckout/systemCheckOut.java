@@ -1,15 +1,19 @@
-package com.zte.zudp.admin.info.systemCheckout;
+package com.zte.zudp.admin.mm.systemCheckout;
 
-import ch.qos.logback.core.util.TimeUtil;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
-import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -21,10 +25,14 @@ import java.io.InputStreamReader;
 @RestController
 @EndpointModule(name = "系统自检", id = "xtCheckOut" )
 @RequestMapping(value = "/xtCheckOut")
-public class systemCheckOut{
+public class systemCheckOut {
 
-    public boolean isConnect(){
-        boolean connect = false;
+    @ResponseBody
+    @RequestMapping(value  = "/isConnect", method = RequestMethod.POST)
+    public Object isConnect(){
+        List<Object>  list = new ArrayList<>();
+        //创建Map对象
+        Map<String, String> map = new HashMap<String,String>();
         Runtime runtime = Runtime.getRuntime();
         Process process;
         try {
@@ -43,27 +51,23 @@ public class systemCheckOut{
             isr.close();
             br.close();
             if (null != result   && !result  .toString().equals("")) {
-                String logString = "";
                 if (result  .toString().indexOf("TTL") > 0) {
                     // 网络畅通
-                    connect = true;
+                    map.put("message","200");
+                    map.put("connect","true");
+                    list.add(map);
+
                 } else {
-                    // 网络不畅通
-                    connect = false;
+                    map.put("message","300");
+                    map.put("connect","false");
+                    list.add(map);
                 }
-
-
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return connect;
+        return  map;
     }
 
-    public static void main(String[] args) {
-        systemCheckOut netState = new systemCheckOut();
-        System.out.println(netState.isConnect());
-
-    }
 
 }

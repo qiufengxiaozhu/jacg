@@ -11,9 +11,10 @@
         <result column="update_user" property="updateUser.id" />
         <result column="icon" property="icon" />
         <result column="comment" property="comment" />
-        <result column="like_p_id" property="likePID" />
-        <result column="like_conten_id" property="likeContentId" />
-        <result column="like_time" property="likeTime" />
+        <result column="likePID" property="likePID" />
+        <result column="likeContentId" property="likeContentId" />
+        <result column="likeTime" property="likeTime" />
+        <result column="likeCNum" property="likeCNum"/>
         <result column="del" property="del" />
     </resultMap>
 
@@ -25,12 +26,10 @@
         comment as comment,
         like_p_id as likePID,
         like_conten_id as likeContentId,
-        like_time as likeTime
+        like_time as likeTime,
+        like_c_num as likeCNum
         from like_info
-        where del!=1
-        <if test="comment!=null and comment!=''">
-            and comment like concat('%', #{comment}, '%')
-        </if>
+        where del!=1   and comment != ''
         <if test="likeContentId!=null and likeContentId!=''">
             and like_conten_id = #{likeContentId}
         </if>
@@ -45,7 +44,8 @@
         comment as comment,
         like_p_id as likePID,
         like_conten_id as likeContentId,
-        like_time as likeTime
+        like_time as likeTime,
+        like_c_num as likeCNum
         from like_info
         where id=#{id}
     </select>
@@ -60,7 +60,8 @@
         like_p_id,
         like_conten_id,
         like_time,
-        del
+        del,
+        like_c_num
         )
         VALUE (
         #{id},
@@ -69,7 +70,8 @@
         #{likePID},
         #{likeContentId},
         #{likeTime},
-        '0'
+        '0',
+        0
         )
     </insert>
 
@@ -79,5 +81,12 @@
         WHERE id = #{id}
     </delete>
 
-
+    <update id="updateLikeCNum">
+        update
+        like_info
+        SET
+        like_info.like_c_num = like_c_num + 1
+        where
+        like_info.id = #{id}
+    </update>
 </mapper>

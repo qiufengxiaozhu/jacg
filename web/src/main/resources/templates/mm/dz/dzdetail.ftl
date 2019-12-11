@@ -8,57 +8,92 @@
     <script type="text/javascript" src="/mm/js/rem.js"></script>
     <script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="/mm/css/index.css">
-    <link rel="stylesheet" href="/mm/css/main.css">
     <title>Document</title>
 </head>
 <body>
-<div class="content-box container-app">
-    <div class="top flex flex-c-c">
-        <div class="top-return"></div>
+<div class="content-box container-app sum-background">
+    <div class="top get-fix">
+        <div class="top-ret"></div>
         <div class="return" onclick="goList()">返回</div>
         <div class="advince">点赞详情</div>
     </div>
-    <div class="inv-bottom" style="position: relative">
-        <div class="flex inv-cont">
-            <div class="" >标题:</div>
-            <p class="inv-right" id="title"></p>
-        </div>
-        <div class="inv-cont inv-special">
-            <div class="">有效时间:</div>
-            <div class="inv-right inv-right-special" id="validTime"></div>
-        </div>
-        <div class="inv-cont inv-special">
-            <div class="">内容描述:</div>
-            <div class="inv-right inv-right-special" id="content"></div>
-        </div>
-        <div class="inv-cont inv-pic" style="border-bottom: none">
-            <div class="">相关附件:</div>
-            <div class="inv-right" id="accessory">
-            <#--<img src="/mm/img/arr15.png" alt="">
-                <img src="/mm/img/arr12.png" class="inv-pic2" alt="">-->
+    <div class="de-top">
+        <div class="de-text">
+            <div class="de-title" id = "title" ></div>
+            <div class="de-demo"><span>有效时间:</span><span class="de-xxx" id="likePID"></span></div>
+            <div class="de-main" id="content">
+
+            </div>
+            <div class="flex de-good">
+                <div><img src="/mm/img/good.png" alt=""></div>&nbsp;
+                <div id="likeNum"></div>
             </div>
         </div>
-        <div class="clearfix">
-            <div class="dz-box flex flex-c-c">
-                <img src="/mm/img/mythumbs.png" alt="" class="">
-                <p id="likeNum"></p>人
+        <div class="de-center">
+            <div class="de-relative">相关附件:</div>
+            <div class="flex de-getimg" id="accessory">
+               <#-- <div class="de-img de-img1"><img src="img/arr22.png" alt=""></div>
+                <div class="de-img de-img2"><img src="img/arr15.png" alt=""></div>
+                <div class="de-img de-img3"><img src="img/arr15.png" alt=""></div>-->
             </div>
         </div>
-        <div class="flex inv-cont">
-            <div class="">点赞人:<p id="likePID"></p></div>
-            <p class="inv-right" id ="comment"></p>
+    </div>
+    <div class="de-bottom" id="comment">
+          <#--  <div class="de-getlists flex">
+                <div class="de-stat"><img src="/mm/img/star.jpg" alt=""></div>
+                <div class="de-sum">
+                    <div class="de-name">某某某</div>
+                    <div class="de-cont">好的，我会竭力配合</div>
+                </div>
+                <div class="de-time flex">
+                    <div class="flex de-getcont">
+                        <div class="de-pic"><img src="/mm/img/good.png" alt=""></div>&nbsp;
+                        <div class="de-num">43200</div>
+                    </div>
+                    <div class="de-year">2019.12.05</div>
+                    <div class="de-month">8:00</div>
+                </div>
+            </div>
+            <div class="de-getlists flex">
+                <div class="de-stat"><img src="/mm/img/star.jpg" alt=""></div>
+                <div class="de-sum">
+                    <div class="de-name">某某某</div>
+                    <div class="de-cont">好的，我会竭力配合</div>
+                </div>
+                <div class="de-time flex">
+                    <div class="flex de-getcont">
+                        <div class="de-pic"><img src="/mm/img/good.png" alt=""></div>&nbsp;
+                        <div class="de-num">43200</div>
+                    </div>
+                    <div class="de-year">2019.12.05</div>
+                    <div class="de-month">8:00</div>
+                </div>
+            </div>-->
         </div>
+    </div>
 
-        <div class="flex inv-cont">
-            <textarea class="ts-txtarea">评论内容:</textarea>
-            <input type="button" id = "submitBtn" onclick="submit()" />
+<div class="cover" style="dis">
+    <div class="alert-center">
+        <div class="slow">写下评论</div>
+        <div class="input-area"><textarea id="matter" cols="45" rows="5" class="text-area"  ></textarea></div>
+        <div class="judge flex">
+            <div class="agrement flex-1" onclick="commentSubmit()">确定</div>
+            <div class="cancel flex-1">取消</div>
         </div>
-
-
     </div>
 </div>
 <script>
     var contentID;
+    //评论框
+    $(function(){
+        $('.cover').hide();
+        $(document).on('click','.de-listright',function(){
+            $('.cover').show();
+        })
+        $('.cancel').click(function(){
+            $('.cover').hide();
+        })
+    })
     //跳转
     function goList() {
         window.location.href='/mm/dz/dzlist';
@@ -69,15 +104,78 @@
         var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
         if(r!=null)return  unescape(r[2]); return null;
     }
+    //评论提交
+    function commentSubmit() {
+        $('.cover').hide();
+      var matterValue= $("#matter").val();
+      console.log(matterValue);
+      console.log(contentID);
+        $.ajax({
+            url: "/api/likeInfo/commentSubmit",
+            type: "get",
+            data: {
+                "contentID":contentID,
+                "matter":matterValue
+            },
+            dataType: 'json',
+            success: function (data) {
+                console.log(data)
+                dzListInfo(); //评论列表更新
+            }
+        });
+    }
+    //评论点赞数增加
+    function commentLike(id) {
+        $.ajax({
+            url: "/api/likeInfo/updateLikeCNum",
+            type: "post",
+            data: {"id":id},
+            dataType: 'json',
+            success: function (data) {
+                console.log(data)
+                $("#"+id).html(data.data.likeCNum);
+            }
+        });
+    }
     //点赞列表初始化
     function dzListInfo(){
         $.ajax({
-            url: "/api/like/getLikeInfo",
+            url: "/api/likeInfo/likeInfoList",
             type: "post",
-            data: {"likeContentId":contentID},
+            data: {"contentID":contentID},
             dataType: 'json',
             success: function (data) {
-
+               console.log(data)
+                if(data != null){
+                   var infoList  = data.data;
+                   var likeName = '';
+                   var likeCommten = ' <div class="de-lists">\n' +
+                           '            <div class="de-list">\n' +
+                           '                <div class="de-line de-float"></div>\n' +
+                           '                <div class="de-listleft de-float">评论</div>\n' +
+                           '                <div class="de-listright de-float1">立即评论</div>\n' +
+                           '        </div>';
+                   for(var i=0;i<infoList.length;i++){
+                       var info = infoList[i];
+                       likeTime = info.validTime;
+                       likeCommten += '  <div class="de-getlists flex">\n' +
+                               '                <div class="de-stat"><img src="/mm/img/star.jpg" alt=""></div>\n' +
+                               '                <div class="de-sum">\n' +
+                               '                    <div class="de-name">'+info.likePID+'</div>\n' +
+                               '                    <div class="de-cont">'+info.comment+'</div>\n' +
+                               '                </div>\n' +
+                               '                <div class="de-time flex">\n' +
+                               '                    <div class="flex de-getcont">\n' +
+                               "                        <div class='de-pic'><img src='/mm/img/good.png' onclick=\"commentLike(\'"+info.id+"\')\"></div>&nbsp;\n" +
+                               '                        <div class="de-num"  id = "'+info.id+'">'+info.likeCNum+'</div>\n' +
+                               '                    </div>\n' +
+                               '                    <div class="de-year" >'+format(info.likeTime)+'</div>\n' +
+                               '                </div>\n' +
+                               '            </div>';
+                   }
+                    $("#likePID").html(likeTime);
+                    $("#comment").html(likeCommten);
+                }
             }
         });
     }
@@ -98,26 +196,24 @@
                     var gif = /gif/i;
                     var mp4 = /mp4/i;
                     var mp3 = /mp3/i;
-                    console.log(likeInfo);
                     for(var i=0;i<likeInfo.attachPaths.length;i++) {
                         var attachPaths = likeInfo.attachPaths[i];
                         if(img.test(attachPaths)||jpg.test(attachPaths)||png.test(attachPaths)||gif.test(attachPaths)){
-                            accessory   +=  '<img src="'+attachPaths+'" class="inv-pic2" alt="">';
+                            accessory   +=  '<div class="de-img de-img1"><img src="'+attachPaths+'"  alt=""></div>';
                         }else if(mp4.test(attachPaths)){
-                            accessory   +=  '<video width="100" height="100" controls>\n' +
+                            accessory   +=  '<div class="de-img de-img1"><video width="100" height="100" controls>\n' +
                                     '  <source src="'+attachPaths+'" type="video/mp4">\n' +
-                                    '</video>\n';
+                                    '</video></div>\n';
                         }else if(mp3.test(attachPaths)){
-                            accessory   +=  '<audio width="100" height="100" src="'+attachPaths+'" controls="controls">\n' +
-                                    '</audio>';
+                            accessory   +=  '<div class="de-img de-img1"><audio width="100" height="100" src="'+attachPaths+'" controls="controls">\n' +
+                                    '</audio></div>';
                         }
                         $("#accessory").html(accessory);
                     }
                     $("#title").text(likeInfo.title);
                     $("#content").html(likeInfo.content);
                     $("#likeNum").html(likeInfo.likeNum);
-                    $("#likePID").html(likeInfo.likePID);
-                    $("#validTime").html(format(likeInfo.validTime));
+                  /*  $("#validTime").html(format(likeInfo.validTime));*/
                 }
             },
             error: function () {
@@ -139,14 +235,15 @@
         var second = date.getSeconds();
         minute = minute < 10 ? ('0' + minute) : minute;
         second = second < 10 ? ('0' + second) : second;
-        var fortime = '<p class="date-year">'+y+' - '+ m +'</p><p class="date-day">'+d+'</p>';
+        var fortime = y+":"+m+":"+d;
         return fortime;
     }
     //预加载
     $(document).ready(function(){
         // 初始化内容
       contentID  =  GetQueryString("likeContentId");
-      getinfo()
+      getinfo();
+      dzListInfo();
     });
 </script>
 </body>
