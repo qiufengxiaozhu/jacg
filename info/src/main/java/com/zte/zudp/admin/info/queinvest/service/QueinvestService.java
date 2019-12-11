@@ -55,4 +55,9 @@ public class QueinvestService extends BusinessService<Queinvest> {
     public void updateQuestion(Object object, Object object02) {
         queinvestDao.updateQuestion(object,object02);
     }
+
+    public Queinvest getDetail(String id) {
+      return   queinvestDao.getDetail(id);
+
+    }
 }

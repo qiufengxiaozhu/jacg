@@ -6,6 +6,7 @@ import com.zte.zudp.admin.common.annotation.endpoint.EndpointRest;
 import com.zte.zudp.admin.common.enums.AuthorizedType;
 import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
 import com.zte.zudp.admin.info.queinvest.QuestionMenu;
+import com.zte.zudp.admin.info.warning.WarningDataMenu;
 import com.zte.zudp.admin.info.warning.entity.Warning;
 import com.zte.zudp.admin.info.warning.service.WarningService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@EndpointModule(name = "报警管理", id = "warning", parent = QuestionMenu.class, order = 1, icon = "home")
+@EndpointModule(name = "报警管理", id = "warning", parent = WarningDataMenu.class, order = 1, icon = "home")
 @RequestMapping(value = "/warning")
 public class WarningContrller extends AbstractCRUDController<Warning>{
 

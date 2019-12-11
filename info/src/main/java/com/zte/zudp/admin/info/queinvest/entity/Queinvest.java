@@ -1,6 +1,10 @@
 package com.zte.zudp.admin.info.queinvest.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.zte.zudp.admin.common.persistence.entity.DataEntity;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 /**
  * 问卷实体类
@@ -29,15 +33,48 @@ public class Queinvest  extends DataEntity{
      */
     private String description;
 
-    private String valid;
+    private Date valid;
 
     private String status;
 
-    public String getValid() {
+    private Date pubdate;
+
+    private String startTime;
+    private String endTime;
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    public Date getPubdate() {
+        return pubdate;
+    }
+
+    public void setPubdate(Date pubdate) {
+        this.pubdate = pubdate;
+    }
+
+//    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+//    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    public Date getValid() {
         return valid;
     }
 
-    public void setValid(String valid) {
+    public void setValid(Date valid) {
         this.valid = valid;
     }
 

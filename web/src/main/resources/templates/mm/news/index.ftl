@@ -7,8 +7,16 @@
     <script type="text/javascript" src="/mm/js/rem.js"></script>
     <script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="/mm/js/swiper.min.js"></script>
+    <script src="/mm/js/zudp.js"></script>
+    <script src="/mm/js/toastr.min.js"></script>
+
     <link rel="stylesheet" href="/mm/css/index.css">
     <link rel="stylesheet" href="/mm/css/swiper.min.css">
+    <style>
+        .thumbs{margin-top:0;border-bottom: 1px solid #efefef}
+        .public>div{border-right: 1px solid #efefef;width: 25%;text-align: center}
+        .public>div:last-child{border-right: none}
+    </style>
 </head>
 <body>
 <div class="container-app content">
@@ -18,7 +26,8 @@
         <div class="dex-float"><img src="/mm/img/around.png" class="img-float img-3"><img src="/mm/img/phone.png" class="img-float img-4"></div>
     </div>
     <div class="in-center">
-        <div class="center">
+
+        <#--<div class="center">
 
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -29,68 +38,75 @@
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
+        </div>-->
 
-            <div class="flex public">
-                <div class="flex-1" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>公众上报</p></div></div>
-                <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>公众投诉</p></div></div>
-                <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>公众咨询</p></div></div>
-                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>便民服务</p></div></div>
-            </div>
-        </div>
-        <div class="thumbs" >
-            <div><img src="/mm/img/mythumbs.png" class="thumbs-img2"></div>
-            <div onclick="goDianzan()"><img src="/mm/img/thumbs.png" class="thumbs-img1"></div>
-            <div onclick="goDianzan()" class="thumbs-right"><img src="/mm/img/right.png" class="thumbs-img3"></div>
-        </div>
         <div class="thumbs">
-            <div class="thumbs-tit" onclick="goNewPage()">公众新闻</div>
+            <div class="thumbs-tit" onclick="goNewPage()" style="border:none">公众新闻</div>
             <div class="thumbs-right flex flex-c-c"><div class="" onclick="goNewPage()">更多</div><img src="/mm/img/right.png" onclick="goNewPage()" class="thumbs-img3"></div>
         </div>
+
+        <#--//新闻列表，展示，取前三条-->
+
         <div class="new-list">
-            <div class="nlist-item flex " onclick="goNewDetail()">
-                <div class="nli-left">
-                    <img src="/mm/img/login-top.png" alt="" class="">
-                </div>
-                <div class="nli-right flex-1">
-                    <p class="nli-tit">视频视频视频视频视频视频视频视频</p>
-                    <div class="nli-type flex flex-c-c">
-                        <div class="nli-sp">视频</div>
+            <#list Newslist! as news >
+                <div class="nlist-item flex " onclick="goNewDetail('${news.id}')">
+                    <div class="nli-left">
+                        <img src="/mm/img/login-top.png" alt="" class="">
                     </div>
-                    <p class="nli-time">
-                        <span>12.4万人观看</span>
-                        <span>8:11</span>
-                    </p>
+                    <div class="nli-right flex-1">
+                        <p class="nli-tit">${news.title!""}</p>
+                        <div class="nli-type flex flex-c-c">
+                            <div class="nli-sp">${news.category!}</div>
+                        </div>
+                        <p class="nli-time">
+                            <span>${news.clicks!}人观看</span>
+                            <span>${news.newsDate!""}</span>
+                        </p>
+                    </div>
                 </div>
+            </#list>
+        </div>
+
+        <div class="thumbs">
+            <div class="thumbs-tit" onclick="goNewPage()" style="border:none">公众服务</div>
+        </div>
+        <div class="center">
+            <div class="flex public">
+                <div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>公众调查</p></div></div>
+                <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>公众上报</p></div></div>
+                <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>公众投诉</p></div></div>
+                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>便民咨询</p></div></div>
             </div>
-            <div class="nlist-item flex " onclick="goNewDetail()">
-                <div class="nli-left">
-                    <img src="/mm/img/login-top.png" alt="" class="">
-                </div>
-                <div class="nli-right flex-1">
-                    <p class="nli-tit">视频视频视频视频视频视频视频视频</p>
-                    <div class="nli-type flex flex-c-c">
-                        <div class="nli-wz">文章</div>
-                    </div>
-                    <p class="nli-time">
-                        <span>12.4万人观看</span>
-                        <span>8:11</span>
-                    </p>
-                </div>
+        </div>
+        <div class="center">
+            <div class="flex public">
+                <div class="flex-1" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我要点赞</p></div></div>
+                <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>积分管理</p></div></div>
+                <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>排行榜</p></div></div>
+                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>统计管理</p></div></div>
             </div>
-            <div class="nlist-item flex " onclick="goNewDetail()">
-                <div class="nli-left">
-                    <img src="/mm/img/login-top.png" alt="" class="">
-                </div>
-                <div class="nli-right flex-1">
-                    <p class="nli-tit">视频视频视频视频视频视频视频视频</p>
-                    <div class="nli-type flex flex-c-c">
-                        <div class="nli-sp">视频</div>
-                    </div>
-                    <p class="nli-time">
-                        <span>12.4万人观看</span>
-                        <span>8:11</span>
-                    </p>
-                </div>
+        </div>
+
+        <div class="thumbs">
+            <div class="thumbs-tit" onclick="goNewPage()" style="border:none">我的案件</div>
+        </div>
+        <div class="center">
+            <div class="flex public">
+                <div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我的上报</p></div></div>
+                <div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>
+                <div class="" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>
+            </div>
+        </div>
+
+        <div class="thumbs">
+            <div class="thumbs-tit" onclick="goNewPage()" style="border:none">我的案件</div>
+        </div>
+        <div class="center">
+            <div class="flex public">
+                <div class="flex-1" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>周边雷达</p></div></div>
+                <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>地图服务</p></div></div>
+                <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>便民服务</p></div></div>
+                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>系统自检</p></div></div>
             </div>
         </div>
     </div>
@@ -155,6 +171,7 @@
 </body>
 <script>
     $(function(){
+
         var mySwiper = new Swiper('.swiper-container',{
             direction: 'horizontal',
             loop: true,
@@ -179,10 +196,6 @@
         })
     })
 
-
-    function goNewPage(){
-        window.location.href='/mm/news/mmNews';
-    }
     function goPage(a){
         if(a==1){
             //公众上报
@@ -202,7 +215,7 @@
         }
         if(a==6){
             //公众调查
-            window.location.href='/mm/news/survey';
+            window.location.href='/mm/queinvest/survey';
         }
     }
 
@@ -217,10 +230,17 @@
     }
 
     /**
-     * 新闻详情
+     * 所有已发布新闻列表
+    */
+    function goNewPage(){
+        window.location.href='/mm/news/mmNews';
+    }
+
+    /**
+     * 进入新闻详情页面
      */
-    function goNewDetail(){
-        window.location.href='/mm/news/newsDetail';
+    function goNewDetail(obj){
+        window.location.href='/mm/news/newsDetail/'+obj;
     }
 </script>
 </html>
