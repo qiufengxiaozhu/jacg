@@ -108,6 +108,49 @@
                         </div>
 
 
+                        <div class="form-group" id="choiceText01">
+                            <label class="col-sm-3 control-label my-control-label ">选项一：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="choiceText01" maxlength="64" id="choiceText010" placeholder="选项一" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" id="choiceText02">
+                            <label class="col-sm-3 control-label my-control-label ">选项二：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="choiceText02" maxlength="64" id="choiceText021" placeholder="选项二" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="choiceText03">
+                            <label class="col-sm-3 control-label my-control-label ">选项三：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="choiceText03" maxlength="64" id="choiceText032" placeholder="选项三" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" id="choiceText04">
+                            <label class="col-sm-3 control-label my-control-label ">选项四：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="choiceText04" maxlength="64" id="choiceText043" placeholder="选项四" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
                     </form>
                 </div>
 
@@ -318,6 +361,7 @@
 
                             var addOptionStr="";
 
+
                                 editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
 
                                 delStr = zudp.template.delBtn;
@@ -325,8 +369,14 @@
                                 //添加选项
                                 addOptionStr='<button  id="row-add-test" class="btn btn-info btn-sm " value="{id}"><i class="fa fa-pencil"></i>添加选项</button>';
 
+                            if(data.status == '0'){ // 0->此题目没有选项的状态
                                 btn += editStr +"&nbsp;" + delStr +"&nbsp;" + detailStr +"&nbsp;"+addOptionStr;
                                 return zudp.util.render(btn, row);
+                            }
+                            else { // 有选项的状态
+                                btn += editStr + "&nbsp;" + delStr + "&nbsp;" + detailStr ;
+                                return zudp.util.render(btn, row);
+                            }
 
 
                         }
@@ -440,6 +490,17 @@
             zudp.plugin.dialog("error").alert("获取用户列表失败！", "提示");
         });
     };
+
+
+    // 隐藏选项输入框  新建
+    $(document).on("click", '#add-btn', function () {
+        $("#choiceText01").css("display","none");	//隐藏选项
+        $("#choiceText02").css("display","none");	//隐藏选项
+        $("#choiceText03").css("display","none");	//隐藏选项
+        $("#choiceText04").css("display","none");	//隐藏选项
+
+    });
+
 
 
     function initUpload(){

@@ -18,7 +18,7 @@
           left join jacg_questions t3  on  t1.questions_id = t3.id
 
           where 1=1
-      <if test="tittle != null and title != '' ">
+      <if test="title != null and title != '' ">
           and t1.title = #{title}
       </if>
 
