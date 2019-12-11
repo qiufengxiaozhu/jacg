@@ -161,6 +161,11 @@
                                 <textarea name="replyContent" id="replyContent" placeholder="回复内容" class="form-control"></textarea>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label">附件：</label>
+                        </div><div class="form-group">
+                            <div id="fileShowName" style="text-align: center;margin:0 auto"></div>
+                        </div>
                     </form>
                 </div>
 
@@ -208,6 +213,37 @@
         //校验
         findList();
 
+        var editBtnValue = function() {
+
+            var id = $(formIdStr).find("input[name='id']").eq(0).val();
+            var updateUrl = urlstr + '/getAttach/' + id;
+            //取值回显
+            zudp.ajax(updateUrl).get("").then(function (data) {
+
+                dataEcho(formIdStr, data);
+
+                var d = data;
+                var attachPaths = d.attachPaths;
+                var attachNames = d.attachNames;
+                var tmpAttachPath = "";
+                if (attachPaths) {
+                    for (var i = 0; i < attachPaths.length; i++) {
+                        tmpAttachPath += "<p>" +
+                            "<a href='//" + sys_url + "/" + attachPaths[i] + "' download='" + attachNames[i] + "'>" +
+                            attachNames[i] + "</a>" +
+                            "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                            "<input type='hidden' name='attachPaths' value='" + attachPaths[i] + "'>" +
+                            "<input type='hidden' name='attachNames' value='" + attachNames[i] + "'>" +
+                            "</p>";
+                    }
+                } else {
+                    tmpAttachPath = '<p class="text-center">无附件</p>';
+                }
+                $("#fileShowName").html(tmpAttachPath);//附件赋值
+            }, function (error) {
+            });
+        }
+
         var obj={
             url: urlstr,
             formId: formIdStr,
@@ -216,12 +252,14 @@
             error: "数据{msg}",
             disabledName: [],
             hideInputName:[],
-            search: [".clear-input", "#search",".search-input"]
+            search: [".clear-input", "#search",".search-input"],
+            editBtnFun: editBtnValue
         };
 
         //初始化增删改查参数
         initForm(obj);
     });
+
 
     function disabledInput(obj) {
         var id = $(obj).val();
@@ -231,7 +269,7 @@
             //当已回复时，大多数字段禁用
             //设置禁用
             var disabledList = $(".modal").find("*[name]");
-            var noDisabled = new Array("id");//不禁用字段
+            var noDisabled = new Array("id", "attachPaths", "attachNames");//不禁用字段
             if (data.replyStatus == "未回复") {
                 noDisabled.push("replyStatus", "replyContent");
                 //设置readonly
@@ -370,7 +408,12 @@
             //debugger;
             var name = file.name;
             var fileurl = response.data;
-            $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");
+            $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a>" +
+                "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                "<input type='hidden' name='attachPaths' value='"+fileurl+"'>" +
+                "<input type='hidden' name='attachNames' value='"+name+"'>" +
+                "</p>");
 
             //change(response);
         });

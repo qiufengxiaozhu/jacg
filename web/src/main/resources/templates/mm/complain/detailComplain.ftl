@@ -22,7 +22,7 @@
         <#if entity?exists && entity??>
             <div class="flex inv-cont">
                 <div class="">标题:</div>
-                <div class="inv-right">${entity.title}</div>
+                <div class="inv-right">${entity.title!}</div>
             </div>
             <div class="flex inv-cont">
                 <div class="">类型:</div>
@@ -34,27 +34,42 @@
                     </#if>
                 </div>
             </div>
+            <div class="flex inv-cont">
+                <div class="">联系人:</div>
+                <div class="inv-right">${entity.contact!}</div>
+            </div>
+            <div class="flex inv-cont">
+                <div class="">联系电话:</div>
+                <div class="inv-right">${entity.phone!}</div>
+            </div>
+            <div class="flex inv-cont">
+                <div class="">回复时间:</div>
+                <div class="inv-right">${entity.replyDate!}</div>
+            </div>
             <div class="inv-cont inv-special">
                 <div class="">内容描述:</div>
-                <div class="inv-right inv-right-special">${entity.description}</div>
+                <div class="inv-right inv-right-special">${entity.description!}</div>
             </div>
             <div class="inv-cont inv-pic">
                 <div class="">相关附件:</div>
                 <div class="inv-right">
-                    <img src="/mm/img/arr15.png" alt="">
-                    <img src="/mm/img/arr12.png" class="inv-pic2" alt="">
+                    <#if entity.attachPaths?exists && entity.attachPaths??>
+                        <#list 0..(entity.attachPaths!?size-1) as i>
+                            <img src='${entity.attachPaths[i]!}' class="inv-pic2" title="${entity.attachNames[i]!}">
+                        </#list>
+                    </#if>
                 </div>
             </div>
             <div class="inv-cont inv-special">
-                <div class="">投诉回复:</div>
-                <div class="inv-right inv-right-special">${entity.replyContent}</div>
+                <div class="">回复内容:</div>
+                <div class="inv-right inv-right-special">${entity.replyContent!}</div>
             </div>
         </#if>
     </div>
 </div>
 <form id="ret_my_complain_form" action="" method="post">
     <!--<input type="hidden" name="_method" value="DELETE"/>-->
-    <input type="hidden" name="contactUser" id="contactUser" value='${contactUser}'>
+    <input type="hidden" name="contactUser" id="contactUser" value='${contactUser!}'>
 </form>
 <script>
     function goMyComplain() {
