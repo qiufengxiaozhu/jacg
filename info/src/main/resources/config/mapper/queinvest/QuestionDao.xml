@@ -32,7 +32,7 @@
         update_user,
         update_date,
         del,
-        val01)
+        status)
     VALUES
     ( #{id},
       #{contents},
@@ -42,7 +42,7 @@
       #{updateUser.id},
       #{updateDate},
       '0',
-      '预留字段'
+      '0'
      )
 
     </insert>
@@ -52,7 +52,8 @@
         SELECT
         t1.id id,
         t1.contents contents,
-        t1.questionType questionType
+        t1.questionType questionType,
+        t1.status status
 
         FROM `jacg_questions` t1
 
