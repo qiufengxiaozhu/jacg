@@ -24,4 +24,12 @@ public class likeInfoService extends BusinessService<likeInfoEntity> {
         return (likeInfoDao) dao;
     }
 
+    //评论点赞数更新
+    @Transactional(rollbackFor = Exception.class)
+    public void updateLikeCNum(String id){
+        likeInfoDao.updateLikeCNum(id);
+    }
+
+
+
 }

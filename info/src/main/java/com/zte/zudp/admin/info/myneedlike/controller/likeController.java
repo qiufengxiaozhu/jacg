@@ -72,19 +72,17 @@ public class likeController extends AbstractCRUDController<likeEntity>{
     @JSON
     @PostMapping(value = "/likeNum" )
     @EndpointRest(id = "likeNum", name = "", authorizedType = AuthorizedType.GUEST)
-    public void like(String id,String comment){
+    public likeEntity like(String id,String comment){
         likeInfoEntity likeInfoEntity = new likeInfoEntity();
         likeInfoEntity.setId(String.valueOf(IDUtil.simpleId()));
         likeInfoEntity.setLikeTime(new Date());
         likeInfoEntity.setLikeContentId(id);
         likeInfoEntity.setLikePID("最帅的人");
-        if(comment != null && comment.equals("")){
-            likeInfoEntity.setComment("666666666666666666666");
-            likeInfoEntity.setIcon("1");
-        }
+        likeInfoEntity.setComment("666666666666666666666");
+        likeInfoEntity.setIcon("1");
         likeInfoService.insert(likeInfoEntity);
         likeService.updateLikeNum(id);
-
+        return   likeService.get(id);
     }
 
    /*
