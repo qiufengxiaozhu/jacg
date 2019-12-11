@@ -46,26 +46,13 @@
                             </button>
                         </@hasPermission>-->
                         <div  class='querybtn my-querybtn '>
-                            <#--<input type="text" maxlength="255" name="serch"  placeholder="标题" class="form-control search-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="text" maxlength="255" name="telephone" id="telephone_select" placeholder="联系电话" class="form-control search-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="text" maxlength="255" name="name" id="name_select" placeholder="联系人" class="form-control search-input">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="text" maxlength="255" name="startDate" id="startDate_select" onfocus="this.blur()" startDate  placeholder="查询回复开始时间(起)" class="form-control search-input ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="text" maxlength="255" name="endDate" id="endDate_select" endDate  placeholder="查询回复时间(止)" class="form-control search-input ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
                             <input type='text' name='search' id='search_name' placeholder='标题' class='form-control search-input'>
                             <button class='btn btn-primary mgl my-mgl research-btn' >搜索</button>
-                            <#--<button class="btn btn-primary mgl my-mgl clear-input" >清空</button>-->
                             <button class="btn btn-primary select-query"  >高级搜索</button>
                         </div>
                     </div>
 
                    <div id='search' class='search-group' style='display:none;'>
-                        <div class="form-group z-group">
-                            <div class="col-sm-12 z-group-pane">
-                                <label class="control-label my-control-label">标题：</label>
-                                <input type="text" maxlength="255" name="title" id="title_select" placeholder="联系电话" class="form-control search-input">
-                            </div>
-                        </div>
-
                         <div class="form-group z-group">
                             <div class="col-sm-12 z-group-pane">
                                 <label class="control-label my-control-label">联系电话：</label>
@@ -83,14 +70,14 @@
                         <div class="form-group z-group">
                             <div class="col-sm-12 z-group-pane">
                                 <label class="control-label my-control-label">开始时间：</label>
-                                <input type="text" maxlength="255" name="startDate" id="startDate_select" onfocus="this.blur()" startDate  placeholder="开始时间" class="form-control  ">
+                                <input type="text" maxlength="255" name="startDate" id="startDate_select" onfocus="this.blur()" startDate  placeholder="咨询筛选时间(起)" class="form-control  ">
                             </div>
                         </div>
 
                         <div class="form-group z-group">
                             <div class="col-sm-12 z-group-pane">
                                 <label class="control-label my-control-label">结束时间：</label>
-                                <input type="text" maxlength="255" name="endDate" id="endDate_select" endDate  placeholder="结束时间" class="form-control  ">
+                                <input type="text" maxlength="255" name="endDate" id="endDate_select" endDate  placeholder="咨询筛选时间(止)" class="form-control  ">
                             </div>
                         </div>
                     <button class="btn btn-danger mgl my-mgl clear-input" >清空</button>&nbsp;&nbsp;
@@ -199,9 +186,9 @@
                             </div>
                         </div>-->
 
-                        <div class="form-group">
+                        <#--<div class="form-group">
                             <div class="col-sm-6">
-                                <a href="" class="col-sm-3 control-label my-control-label " id="picture" name="picture" target="_blank" >附件图片</a>
+                                <a href="" class="col-sm-3 control-label my-control-label" id="picture" name="picture" target="_blank" >附件图片</a>
                             </div>
                         </div>
 
@@ -214,6 +201,13 @@
                         <div class="form-group">
                             <div class="col-sm-6">
                                 <a href="" class="col-sm-3 control-label my-control-label " id="video" name="video" target="_blank" >附件视频</a>
+                            </div>
+                        </div>-->
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">附件：</label>
+                            <div class="col-sm-6" id="fj">
+
                             </div>
                         </div>
 
@@ -287,10 +281,6 @@
         //initForm(obj);
 
         initForm(obj);
-
-
-
-
     });
     function hiddensave(obj){
         var id=$(obj).val();
@@ -301,36 +291,37 @@
                 $("#save-btn").show();
             }
         })
-       /* $.ajax({
-            type:"get",
-            url:"/api/consult/"+id,
-            success:function(data){
-                alert(data);
-                if(data.reply!=null && data.reply!=""){
-                    $("#save-btn").hide();
-                }else {
-                    $("#save-btn").show();
-                }
-            }
-        })*/
     }
 
     function hidden1() {
-        $(".modal form").find("#picture").hide();
+        /*$(".modal form").find("#picture").hide();
         $(".modal form").find("#voice").hide();
-        $(".modal form").find("#video").hide();
+        $(".modal form").find("#video").hide();*/
         $(".modal form").find("[name='name'],[name='telephone'],[name='content']").attr("disabled",false);
     }
 
     function show1() {
-        $(".modal form").find("#picture").show();
+        /*$(".modal form").find("#picture").show();
         $(".modal form").find("#voice").show();
-        $(".modal form").find("#video").show();
+        $(".modal form").find("#video").show();*/
 
         $(".modal form").find("[name='name'],[name='telephone'],[name='content'],[name='consultDate'],[name='replyDate'],[name='title']").attr("disabled",true);
     }
 
-
+    function img2(obj){
+        var id=$(obj).val();
+        $("#fj").html("");
+        zudp.ajax("/api/consult/getFj?id="+id).get().then(function (value){
+            if (value!=null) {
+                var fj = value.attachDocList;
+                for (var i = 0; i < (value.attachDocList).length; i++) {
+                    $("#fj").append(
+                            "<a href='//" + sys_url + "/" + fj[i].path + "'  download='" + fj[i].name + "'>" + fj[i].name + "</a>" + "<br>"
+                    )
+                }
+            }
+        })
+    }
 
    function img(obj){
        var id=$(obj).val();
@@ -423,7 +414,7 @@
             .url(urls)
             .search(function () {
                 return {
-                    "title":$("#title_select").val(),
+                    "title":$("#search_name").val(),
                     "name":$("#name_select").val(),
                     "telephone":$("#telephone_select").val(),
                     "startDate":$("#startDate_select").val(),
@@ -493,13 +484,13 @@
                        <#--<@hasPermission name="oaManager:post:update">
                         editstr=zudp.template.editBtn;
                         </@hasPermission>-->
-                        editstr='<button onclick="show1(),hiddensave(this),img(this),replytitle()"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
+                        editstr='<button onclick="show1(),img2(this),hiddensave(this),replytitle()"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
 
                         <#--<@hasPermission name="oaManager:post:delete">
                         delstr=zudp.template.delBtn;
                         </@hasPermission>-->
 
-                       var detailStr='<button onclick="img(this)"  class="btn btn-success btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
+                       var detailStr='<button onclick="img2(this)"  class="btn btn-success btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
 
 
                         btn += editstr+detailStr;

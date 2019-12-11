@@ -53,7 +53,7 @@ public List<Dictionary> getlist() {
 
 
     /**
-     *
+     * 问卷下拉
      * @param id
      * @return
      */

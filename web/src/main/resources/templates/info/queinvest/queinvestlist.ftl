@@ -50,7 +50,11 @@
 
                     <#--搜索条件(用于模糊查询)  名称 标题 上报人  -->
                         <div class='querybtn my-querybtn'>
-                            <input type='text' name='name' id='search_name' placeholder='请输入名称' class='form-control search-input'>
+                            <input type='text' name='name' id='search_name' placeholder='请输入问卷名称' class='form-control search-input'>
+
+
+                            <input type="text" name="startTime" id="startTime" startDate placeholder="发布开始时间" class="form-control">
+                            <input type="text" name="endTime" id="endTime" endDate placeholder="发布结束时间" class="form-control">
 
                             <button class='btn btn-primary mgl my-mgl research-btn' >
                                 搜索
@@ -68,6 +72,7 @@
                             <th>id</th>
                             <th>问卷名称</th>
                             <th>问卷描述</th>
+                            <th>问卷发布时间</th>
                             <th>问卷有效期</th>
                             <th>问卷类型</th>
                             <th>问卷状态</th>
@@ -96,29 +101,65 @@
                 <h4 class="modal-title">添加</h4>
             </div>
             <small class="font-bold">
-                <div class="modal-body fix-height" style="height: 350px">
+                <div class="modal-body fix-height" style="height: 350px" id ="myForm">
                 <#--表单-->
                     <form class="form-horizontal" id="post_form">
-                        <input type="hidden" name="id" id="id">
+                        <input type="hidden" name="id" id="id" value="id" class = "testId002">
 
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">问卷名称：</label>
+                        <div class="form-group" id ="nameDiv">
+                            <label class="col-sm-3 control-label my-control-label id= "qname" ">问卷名称：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="title" maxlength="64" placeholder="问卷名称" class="form-control">
+                                <input id="title" type="text" name="title" maxlength="64" placeholder="问卷名称" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context " id = "label">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id = "descDiv">
+                            <label class="col-sm-3 control-label my-control-label ">问卷描述：</label>
+                            <div class="col-sm-6">
+                                <input id="description" type="text" name="description" maxlength="64" placeholder="问卷描述" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">问卷描述：</label>
+
+
+                        <div class="form-group" id = "validDiv">
+                            <label class="col-sm-3 control-label my-control-label ">问卷有效期：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="description" maxlength="64" placeholder="问卷描述" class="form-control">
+                                <input type="text" name="valid" id="valid" startDate placeholder="问卷有效期" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" id = "statusDiv">
+                            <label class="col-sm-3 control-label my-control-label ">问卷状态：</label>
+                            <div class="col-sm-6">
+                                <input id="status" type="text" name="status" maxlength="64" placeholder="问卷状态" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id = "timeDiv">
+                            <label class="col-sm-3 control-label my-control-label ">问卷发布时间：</label>
+                            <div class="col-sm-6" id ="timeDiv">
+                                <input id="pubdate" type="text" name="pubdate" maxlength="64" placeholder="问卷发布时间" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" id = "typeDiv">
                             <label class="col-sm-3 control-label my-control-label ">问卷类型：</label>
                             <div class="col-sm-6">
                                 <select id="category" name="queinvestType" class="form-control"><select>
@@ -127,6 +168,7 @@
                                 <i class="i_context my-i_context">*</i>
                             </div>
                         </div>
+
 
                     </form>
                 </div>
@@ -146,7 +188,7 @@
 </div>
 
 <#--往问卷中添加题目 模态框-->
-<div class="modal inmodal fade modal-form-content" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+<div class="modal inmodal fade modal-form-content" id="my" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -163,6 +205,7 @@
                         <tr>
                             <th ># </th>
                             <th >题目名称</th>
+                            <th >题目类型</th>
                         </tr>
                         <thead>
                 </div>
@@ -180,6 +223,8 @@
     <small class="font-bold">
     </small>
 </div>
+
+
 
 
 
@@ -202,6 +247,8 @@
 <script src="/js/sys/avatar.js"></script>
 <script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
+
+<script src="/js/pluginInit/laydateInit.js"></script>
 <script>
 
     var dataTable;
@@ -210,12 +257,32 @@
     var sys_url=window.location.host;
     $(document).ready(function () {
 
+        // 新建  验证
+        $("#post_form").validate({
+            rules: {
+                // 必填项
+                title: "required",
+                description: "required",
+                queinvestType: "required"
+            },
+
+                // 提示信息
+            messages: {
+                title: {
+                    required: "请输入问卷名称",
+                    remote: "问卷名称已存在"
+                },
+                description: "请输入问卷描述信息",
+                queinvestType: "请选择问卷类型"
+            }
+        });
+
         findList();
 
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}岗位",
+            title: "{type}问卷",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],
@@ -225,6 +292,7 @@
         };
         //初始化增删改查参数
         initForm(obj);
+//        dataTable = zudp.component.initCURD(obj);
 
     });
 
@@ -251,6 +319,8 @@
                     return {
                         //模糊查询的返回结果
                         "title":$("#search_name").val(),
+                        "startTime" :$("#startTime").val(),
+                        "endTime" :$("#endTime").val()
                     }
                 })
                 .columns( [
@@ -258,22 +328,49 @@
                     {data:'id', visible: false},
                     {data:'title'},
                     {data:'description'},
-                    {data:'valid'},
+                    {
+                        render: function (data, type, row) {
+                            if (data.status == '2') {// 发布状态
+                                return data.pubdate;
+                            } else { //未发布
+                                return "无";
+                            }
+
+                        }
+
+                    },
+//                    {data:'valid'},
+                    {
+                        data: 'valid', width: '11%',
+                        render: function (data, type, row) {
+                            if (data != null && data != '') {
+                                return formatDate(data);
+                            } else {
+                                return "";
+                            }
+
+                        }
+                    },
                     {data:'queinvestType'},
 
-//                    {
-//                        render: function (data, type, row) {
-//                            if (data.queinvestType == '0') { //选择题
-//                                return "行政类";
-//                            } else if (data.queinvestType == '1') { //多选题
-//                                return "生活类";
-//                            } else if (data.queinvestType == '2') {// 判断题
-//                                return "经济类";
-//                            }
-//                        }
-//                    },
 
-                    {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {
                         render: function (data, type, row) {
                             if (data.status == '0') {// 临时状态
                                 return "临时状态";
@@ -300,26 +397,30 @@
                             if(data.status == '0' || data.status == '1'){// 临时状态 未发布状态
                                 // 编辑
                                 editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
-                                // 删除
+                                // 详情
+                                    detailStr= zudp.template.detailBtn;
+                                        // 删除
                                 delStr=zudp.template.delBtn;
                                 //添加题目
-                                addStr='<button id="addStr" class="btn btn-info btn-sm " data-toggle="modal_hjm" value="{id}"><i class="fa fa-pencil"></i>添加题目</button>';
+                                addStr='<button id="addStr" class="btn btn-success btn-sm " data-toggle="modal_hjm" value="{id}"><i class="fa fa-pencil"></i>添加题目</button>';
                                 // 发布
                                 publicStr= '<button id= "publishStr" class="btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>发布</button>';
 //                                publicStr='<button id="publishStr" class="btn btn-info btn-sm " data-toggle="modal_public"  value="{id}"><i class="fa fa-pencil"></i>发布</button>';
                                 // 预览
-                                overviewStr='<button id="overview" class="btn btn-info btn-sm " data-toggle="modal_overview" onclick="overview()" value="{id}"><i class="fa fa-pencil"></i>预览</button>';
+//                                overviewStr='<button id="overview" class="btn btn-info btn-sm " data-toggle="modal_overview" onclick="overview()" value="{id}"><i class="fa fa-pencil"></i>预览</button>';
                                     // 编辑   删除   添加题目  预览     发布
-                                btn+=editStr+delStr+addStr+overviewStr+publicStr;
+                                btn+=editStr+ "&nbsp;"+delStr + "&nbsp;"+addStr + "&nbsp;"+overviewStr + "&nbsp;"+publicStr +"&nbsp;"+detailStr ;
                                 return zudp.util.render(btn, row);
                             }else { // 发布状态
                                 // 预览
-                                overviewStr='<button class="btn btn-info btn-sm " data-toggle="modal_overview" onclick="overview()" value="{id}"><i class="fa fa-pencil"></i>预览</button>';
+//                                overviewStr='<button class="btn btn-info btn-sm " data-toggle="modal_overview" onclick="overview()" value="{id}"><i class="fa fa-pencil"></i>预览</button>';
                                 // 撤销发布
-                                unpublicStr= '<button id= "unpublishStr" class="btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>撤销发布</button>';
-//                                unpublicStr='<button class="btn btn-info btn-sm " data-toggle="modal_unpublic" onclick="unpublic()" value="{id}"><i class="fa fa-pencil"></i>撤销发布</button>';
-                                    // 预览        撤销发布
-                                btn+= overviewStr + unpublicStr;
+                                unpublicStr= '<button id= "unpublishStr" class="btn btn-danger btn-sm "  value="{id}"><i class="fa fa-pencil"></i>撤销发布</button>';
+                                // 详情
+//                                detailStr= '<button id="detailStr" class="btn btn-info btn-sm  " value="{id}"><i class="fa fa-pencil"></i>详情</button>';
+                                detailStr= zudp.template.detailBtn;
+                                // 预览        撤销发布
+                                btn+= overviewStr + "&nbsp;"+ unpublicStr + "&nbsp;"+ detailStr;
                                 return zudp.util.render(btn, row);
 
                             }
@@ -334,46 +435,6 @@
 
     }
 
-// 添加题目
-//    $(document).on("click", '#addQuestion_btn', function (e) {  // addQuestion_btn --->btn id
-//        //清除冒泡
-//        if (e && e.stopPropagation) {
-//            e.stopPropagation();
-//        } else {
-//            window.e.cancelBubble = true;
-//        }
-//        // 模态框的弹出
-//        $(".modal-form-content").modal("show");  //  modal-form-content -->模态框  class
-//        // 给模态框添加class --->add-form
-//        $(".modal-form-content").addClass("add-form").removeClass("create-form detail-form");
-//        // 清空输入框的
-////        zudp.plugin.form("#form").reset();
-//
-//        // 发送ajax请求  查询出所有的题目
-//        zudp.ajax("/api/question/findList").post().then(function (value) {
-//                alert(value);
-//    });
-//
-//
-//    //校验保存  指向模态框的保存按钮   #test-save-btn-->保存按钮的id
-//    $(document).on("click", ".add-form #test-save-btn", function () {
-////        alert(1);
-////        var data = zudp.util.formData2json("form");
-////        alert(data + (typeof data));
-//
-//        //将字符串转成json格式的字符串
-//        alert(JSON.stringify(data));
-//
-//        zudp.ajax("/api/question/addQuestion").post(data).then(function (value) {
-////                    if (value.size >=0 ) {
-////                        zudp.plugin.dialog("success").alert("更新成功 ");
-//            // 关闭模态框
-//            $(".modal-form-content").modal("hide");
-////                    }
-//        })
-//    });
-//
-//    });
 
 
     // 获取问卷类型的下拉框
@@ -428,6 +489,9 @@
 //        var id = $("#row-add-test").val();
         // 模态框的弹出
         $(".modal-form-content").modal("show");
+
+//        var titleText = zudp.util.render(obj.title, {"type": "添加题目"});
+        $(".modal .modal-title").text("添加题目");
 //
 
         // 查询出所有的题目
@@ -441,14 +505,19 @@
                 table.append(
                         "<tr>"+
                         '<td>'+'<input id="selall" type="checkbox" name ="checkBtn" class= "myChecked"  />' + '</td>'+
-                        "<td>"+value[i].contents+"</td>"
+                        "<td>"+value[i].contents+"</td>" +
+                        "<td>"+value[i].label+"</td>"
                         +"<tr/>");
             }
 
             // 在模态框中，点击添加按钮，完成题目的导入，其实就是修改外键的值为问卷的id匹配上
             $(document).on("click", '#test-save-btn', function (e) { // 模态框中的保存按钮
+//                var idJson02 = $(".testId002").val();
+//                alert("id02"+idJson02);
+//                var idces = document.getElementById("id").value;
+//                alert(idces);
                 var idJson = $("#addStr").val(); // 获取到id值  问卷的id值
-//               alert(idJson);
+//                alert(idJson);
                 // 遍历所有的复选框
                 var checks = document.getElementsByName("checkBtn");
                 // 所有被选中的复选框的对应的问题的id值
@@ -481,18 +550,7 @@
 
 
 //
-//                $.ajax({
-//                    type:"POST",
-//                    data:{
-//                        'idsJson':ids,
-//                        'idJson':idJson
-//                    },
-//                    url:"/api/queinvest/updateQuestion",
-//                    contentType: "application/json;charsetset=UTF-8"
 //
-//                });
-
-
             });
 
         });
@@ -535,26 +593,37 @@
     });
 
 
-    // 预览
-    //添加题目到问卷中       弹出可以选择题目的页面
-    $(document).on("click", '#overview', function (e) {
-        //清除冒泡
-        if (e && e.stopPropagation) {
-            e.stopPropagation();
-        } else {
-            window.e.cancelBubble = true;
-        }
-//        var id = $("#row-add-test").val();
-        // 模态框的弹出
-        $(".modal-form-content").modal("show");
+    $(document).on("click", '#add-btn', function () {
 
-        zudp.ajax("/api/queinvest/findAllQuestion").post(id).then(function (value) {
-            $(".modal-form-content").modal("hide");
-        });
+        $("#timeDiv").css("display","none");	//隐藏时间
+        $("#statusDiv").css("display","none");	//隐藏状态
 
     });
-//
 
+
+    $(document).on("click", '.row-edit', function () {
+
+        $("#timeDiv").css("display","none");	//隐藏时间
+        $("#statusDiv").css("display","none");	//隐藏状态
+
+    });
+
+    $(document).on("click", '.row-detail', function () {
+
+        $("#timeDiv").css("display","block");	//出现时间
+        $("#statusDiv").css("display","block");	//出现状态
+
+    });
+
+// 转换时间
+    function formatDate(date) {
+        if (date == null) return "";
+        date = new Date(date);
+        var Y = date.getFullYear() + '-';
+        var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+        var D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()) + ' ';
+        return Y + M + D;
+    };
 
 
      // 初始化上传

@@ -3,61 +3,71 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>公共上报列表</title>
+    <title>种类管理</title>
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link href="/css/third/bootstrap.min.css" rel="stylesheet">
     <link href="/css/third/font-awesome.min.css" rel="stylesheet">
     <link href="/css/third/custom.css" rel="stylesheet">
+    <link href="/css/third/layers/default/layer.css" rel="stylesheet">
     <link href="/css/third/dataTables.bootstrap.css" rel="stylesheet">
     <link href="/css/third/animate.min.css" rel="stylesheet">
     <link href="/css/third/sweetalert.css" rel="stylesheet"/>
     <link href="/css/third/toastr.min.css" rel="stylesheet"/>
     <link href="/css/style.min.css" rel="stylesheet">
+    <link href="/css/third/zTree/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+    <link href="/css/third/webuploader.css" rel="stylesheet">
+    <link href="/css/admin/avatar.css" rel="stylesheet">
+    <link href="/css/third/bootstrap-select.css" rel="stylesheet">
+
+    <style>
+        .webuploader-container div {
+            width:80px;
+        }
+        .dropdown-menu.open .inner.open{height:200px}
+        .dropdown-menu.open{width: 100%;}
+    </style>
 </head>
+
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         <div class="col-sm-12">
             <div class="ibox">
-                <div class="ibox-content form-inline ">
+                <div class="ibox-content form-inline z-relative">
                     <div class='col-sm-12'>
-                        <button class='btn btn-success btn-danger' id="delete-items">
-                            批量删除
-                        </button>
 
-                        <div class='querybtn my-querybtn'>
-                            <label class='control-label my-control-label'>案发位置：</label>
-                            <input type='text' name='location' id="location_input" placeholder='案发位置' class='form-control search-input'>
-                            <label class='control-label my-control-label'>案件类型：</label>
-                            <select class="form-control" name="caseType" id="caseType_select">
+                        <div  class='querybtn my-querybtn '>
+                            上报标题：
+                            <input type='text' name='search' id='search_name' placeholder='标题' class='form-control search-input'>&nbsp;&nbsp;&nbsp;&nbsp;
+                            上报类型：
+                            <select id="category_select" name="category" class='form-control search-input'>
                                 <option value="">全部</option>
-                                <option value="民事纠纷">民事纠纷</option>
-                                <option value="刑事案件">刑事案件</option>
-                                <option value="行政诉讼">行政诉讼</option>
-                                <option value="经济纠纷">经济纠纷</option>
+                                <option value="垃圾">垃圾</option>
+                                <option value="广告乱贴">广告乱贴</option>
+                                <option value="摊位乱摆">摊位乱摆</option>
+                                <option value="车辆乱停">车辆乱停</option>
+                                <option value="工地乱象">工地乱象</option>
+                                <option value="河道乱污">河道乱污</option>
+                                <option value="违法构筑乱">违法构筑乱</option>
                             </select>
-                            <button class='btn btn-primary mgl my-mgl research-btn'>
-                                搜索
-                            </button>&nbsp;&nbsp;
-                            <#--<button class='btn btn-primary select-query'>
-                                高级搜索
-                            </button>&nbsp;&nbsp;-->
+                            <button class='btn btn-primary mgl my-mgl research-btn' >搜索</button>
                         </div>
                     </div>
-                    <div id='search' class='search-group' style='display:none;'>
-                    </div>
-                    <table id="landinfo-list-table" class="my-table table table-bordered dataTables-example">
+
+
+                    <table id="post-list-table" class="table my-table table-bordered dataTables-example">
                         <thead>
                         <tr>
                             <th>id</th>
-                            <th>上报人呢称</th>
-                            <th>案件类型</th>
-                            <th>案发位置</th>
+                            <th>标题</th>
+                            <th>上报类型</th>
+                            <th>上报时间</th>
+                            <th>回复时间</th>
+                            <th>回复状态</th>
                             <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
-
                         </tbody>
                     </table>
                 </div>
@@ -65,74 +75,131 @@
         </div>
     </div>
 </div>
-<#--以下是详情模态框-->
-<div class="modal inmodal fade modal-form" id="detail" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+
+
+
+
+<#--以下是模态框-->
+<div class="modal inmodal fade modal-form" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                            class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel22">公众案件上报详情</h4>
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title">添加</h4>
             </div>
             <small class="font-bold">
-                <div class="modal-body">
-                    <#--表单-->
-                    <form class="form-horizontal" id="form">
+                <div class="modal-body fix-height" >
+                <#--表单-->
+                    <form class="form-horizontal" id="kind_form">
+                        <input type="hidden" name="id" id="id">
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">上报人昵称：</label>
+                            <label class="col-sm-3 control-label my-control-label ">联系人：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="nickName"
-                                       readonly="readonly" class="form-control">
+                                <input  type="text" name="name" maxlength="64" id="name" placeholder="上报人姓名" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">案件类型：</label>
+                            <label class="col-sm-3 control-label my-control-label ">上报类型：</label>
                             <div class="col-sm-6">
-                                <select class="form-control" name="caseType" disabled="disabled">
-                                    <option value="刑事案件">刑事案件</option>
-                                    <option value="民事纠纷">民事纠纷</option>
-                                    <option value="行政诉讼">行政诉讼</option>
-                                    <option value="经济纠纷">经济纠纷</option>
-                                </select>
+                                <input  type="text" name="category" maxlength="64" id="category"  class="form-control">
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">案发位置：</label>
+                            <label class="col-sm-3 control-label my-control-label ">联系电话：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="location"
-                                       readonly="readonly" class="form-control">
+                                <input  type="text" name="telephone" maxlength="64" id="telephone" placeholder="上报人电话" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">坐标经纬度：</label>
+                            <label class="col-sm-3 control-label my-control-label ">标题：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="coordinate"
-                                       readonly="readonly" class="form-control">
+                                <input  type="text" name="title" maxlength="64" id="title"  class="form-control">
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">案件描述：</label>
+                            <label class="col-sm-3 control-label my-control-label ">上报内容：</label>
                             <div class="col-sm-6">
-                                <textarea maxlength="500" name="description" readonly="readonly" class="form-control"></textarea>
+                                <textarea  class="form-control" rows="2" cols="" name="content" id="content"></textarea>
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">附件下载：</label>
+                            <label class="col-sm-3 control-label my-control-label ">地点：</label>
                             <div class="col-sm-6">
-                                <a href="#">附件下载</a>
+                                <textarea  class="form-control" rows="2" cols="" name="place" id="place"></textarea>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">上报时间：</label>
+                            <div class="col-sm-6">
+                                <input  type="text" name="reportDate" maxlength="64" id="reportDate" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">回复内容：</label>
+                            <div class="col-sm-6">
+                                <textarea placeholder="回复内容" class="form-control" rows="2" cols="" name="reply" id="reply"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">回复时间：</label>
+                            <div class="col-sm-6">
+                                <input  type="text" name="replyDate" maxlength="64" id="replyDate" placeholder="回复时间" class="form-control">
+                            </div>
+                        </div>
+
+
+
+
+
+                       <#-- <div class="form-group">
+                            <div class="col-sm-6">
+                                <a href="" class="col-sm-3 control-label my-control-label " id="picture" name="picture" target="_blank" >附件图片</a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <a href="" class="col-sm-3 control-label my-control-label " id="voice" name="voice" target="_blank" >附件语音</a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <a href="" class="col-sm-3 control-label my-control-label " id="video" name="video" target="_blank" >附件视频</a>
+                            </div>
+                        </div>-->
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">附件：</label>
+                            <div class="col-sm-6" id="fj">
+
+                            </div>
+                        </div>
+
                     </form>
-
                 </div>
 
                 <div class="modal-footer">
-                    <input type="hidden" id="user_add_type">
+                    <input type="hidden" id="add-type">
                     <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="save-btn">保存</button>
                 </div>
-
             </small>
         </div>
         <small class="font-bold">
@@ -146,31 +213,41 @@
 <script src="/js/third/jquery.min.js"></script>
 <script src="/js/pluginInit/animation.js"></script>
 <script src="/js/third/bootstrap.min.js"></script>
-<script src="/js/third/bootstrap-suggest.min.js"></script>
 <script src="/js/third/jquery.validate.min.js"></script>
 <script src="/js/third/jquery.dataTables.min.js"></script>
 <script src="/js/third/dataTables.bootstrap.js"></script>
+<script src="/js/third/layer/layer.min.js"></script>
 <script src="/js/third/icheck.min.js"></script>
 <script src="/js/third/sweetalert.min.js"></script>
 <script src="/js/third/toastr.min.js"></script>
 <script src="/js/third/laydate/laydate.js"></script>
+<script src="/js/pluginInit/dataecho.js"></script>
+<script src="/js/third/laydate/laydate.js"></script>
 <script src="/js/zudp.js"></script>
+<script type="text/javascript" src="/js/third/jquery.ztree.all.js"></script>
+<script src="/js/third/bootstrap-suggest.min.js"></script>
+<script src="/js/sys/avatar.js"></script>
+<script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
 <script src="/js/pluginInit/laydateInit.js"></script>
-<script src="/js/pluginInit/dataecho.js"></script>
 <script>
 
     var dataTable;
     var urlstr="/api/report";
-    var formIdStr="#form";
-    // var sys_url=window.location.host;
-
+    var formIdStr="#kind_form";
+    var sys_url=window.location.host;
+    var startDate = new Date();
     $(document).ready(function () {
+
+
+
+
         findList();
+
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}岗位",
+            title: "{type}咨询",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],
@@ -178,78 +255,217 @@
             search: [".clear-input", "#search",".search-input"]
 
         };
+
+
         //初始化增删改查参数
+        //dataTable = zudp.component.initCURD(obj);
+        //initForm(obj);
+
         initForm(obj);
+
+
+
+
     });
+    function hiddensave(obj){
+        var id=$(obj).val();
+        zudp.ajax("/api/report/"+id).get("").then(function (data){
+            if(data.reply!=null && data.reply!=""){
+                $("#save-btn").hide();
+            }else {
+                $("#save-btn").show();
+            }
+        })
+    }
+
+
+    <#--<#if mm.attachPaths?exists && mm.attachPaths??>
+        <#list 0..(mm.attachPaths!?size-1) as i>
+        <img src='${mm.attachPaths[i]!}' class="inv-pic2" title="${mm.attachNames[i]!}">
+        </#list>
+    </#if>-->
+
+    function img2(obj){
+        var id=$(obj).val();
+        $("#fj").html("");
+        zudp.ajax("/api/report/getFj?id="+id).get().then(function (value){
+            var fjpath = value.attachPaths;
+            var fjname=value.attachNames;
+            if (value!=null) {
+                for (var i = 0; i < (value.attachPaths).length; i++) {
+                    $("#fj").append(
+                            "<a href='//" + sys_url + "/" + fjpath[i] + "'  download='" + fjname[i] + "'>" + fjname[i]+ "</a>" + "<br>"
+                    )
+                }
+            }
+        })
+    }
+
+    function hidden1() {
+        /*$(".modal form").find("#picture").hide();
+        $(".modal form").find("#voice").hide();
+        $(".modal form").find("#video").hide();*/
+
+        $(".modal form").find("[name='name'],[name='telephone'],[name='content']").attr("disabled",false);
+    }
+
+    function show1() {
+        /*$(".modal form").find("#picture").show();
+        $(".modal form").find("#voice").show();
+        $(".modal form").find("#video").show();*/
+
+        $(".modal form").find("[name='name'],[name='telephone'],[name='content'],[name='consultDate'],[name='replyDate'],[name='title'],[name='place'],[name='category'],[name='reportDate']").attr("disabled",true);
+    }
+
+
+
+    function replytitle(){
+        $(".modal .modal-title").text("回复咨询");
+    }
+
+    //时间格式转换
+    function formatDate(date) {
+        if (date == null) return "";
+        date = new Date(date);
+        var Y = date.getFullYear() + '-';
+        var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+        var D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()) + ' ';
+        var h=(date.getHours()< 10 ?'0'+(date.getHours()):date.getHours())+":";//获取时
+        var m=(date.getMinutes()<10?'0'+(date.getMinutes()):date.getMinutes())+":";//获取分
+        var s=(date.getSeconds()<10?'0'+(date.getSeconds()):date.getSeconds());//获取秒
+        return Y + M + D + h + m + s ;
+    };
+
+    //种类下拉框
+    function typescenter(obj) {
+        var ca=$(obj).parent().prev().prev().html();
+        //$("#categoryId").find("option").remove();
+        $("#categoryId").html("");
+        zudp.ajax("/api/consultCategory/clist").get().then(function (value) {
+
+            $("#categoryId").append("<option value='"+ "'>"+ "全部"+"</option>");
+            for (var k = 0; k < value.length; k++) {
+
+                if (value[k].name == null) {
+                    value[k].name = "";
+                }else{
+                    if (value[k].name==ca) {
+                        $("#categoryId").append("<option selected='selected' value='"+ value[k].id+"'>"+ value[k].name+"</option>");
+                    }else{
+                        $("#categoryId").append("<option value='"+ value[k].id+"'>"+ value[k].name+"</option>");
+                    }
+                }
+            }
+
+
+            //  gettypemin();
+        }, function (reason) {
+            zudp.plugin.dialog("error").alert("获取用户列表失败！", "提示");
+        });
+    }
+
+
+
 
     //列表数据初始化方法
     function findList() {
+
         var urls="/api/report";
-        dataTable=zudp.plugin.table('#landinfo-list-table')
-            .url(urls)
-            .search(function () {
-                return {
-                    "location":$("#location_input").val(),
-                    "caseType":$("#caseType_select").val()
-                }
-            })
-            .columns( [
-                {data: 'id', visible: false},
-                {data: 'nickName'},
-                {data: 'caseType'},
-                {data: 'location'},
-                {
-                    render: function (data, type, row) {
-                        var btn = "";
-                        var detailstr="";
-                        var  delstr="";
-                        <#--<@hasPermission name="oaManager:post:update">-->
-                        detailstr=zudp.template.detailBtn;
-                        <#--</@hasPermission>-->
-                        <#--<@hasPermission name="oaManager:post:delete">-->
-                        delstr=zudp.template.delBtn;
-                        <#--</@hasPermission>-->
-                        btn += detailstr+delstr;
-                        return zudp.util.render(btn, row);
-                        //return "";
+        dataTable=zudp.plugin.table('#post-list-table')
+                .url(urls)
+                .search(function () {
+                    return {
+                        "title":$("#search_name").val(),
+                        "category":$("#category_select").val(),
+
                     }
-                }
-            ])
-            .then();
+                })
+                .columns( [
+                    {data: 'id', visible: false},
+                    {data:'title'},
+                    {data:'category'},
+                    {data:'reportDate',
+                        render: function (data, type, row) {
+                            if (data != null && data != '') {
+                                return formatDate(data);
+                            } else {
+                                return "";
+                            }
+
+                        }},
+                    {data:'replyDate',
+                        render: function (data, type, row) {
+                            if (data != null && data != '') {
+                                return formatDate(data);
+                            } else {
+                                return "";
+                            }
+
+                        }},
+                    {data:'replyStatus'},
+                    {
+                        render: function (data, type, row) {
+                            var btn = "";
+                            var editstr="";
+                            var  delstr="";
+                        <#--<@hasPermission name="oaManager:post:update">
+                         editstr=zudp.template.editBtn;
+                         </@hasPermission>-->
+                            editstr='<button onclick="show1(),img2(this),hiddensave(this)"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
+
+                        <#--<@hasPermission name="oaManager:post:delete">
+                        delstr=zudp.template.delBtn;
+                        </@hasPermission>-->
+
+                            var detailStr='<button onclick="img2(this)" class="btn btn-success btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
+
+
+                            btn += editstr+detailStr;
+                            return zudp.util.render(btn, row);
+                            //return "";
+                        }
+                    }
+                ])
+                .then();
 
     }
-    // //详情
-    // $(document).on("click", '.row-detail1', function (e) {
-    //     if($(this).val()!=''){
-    //         zudp.ajax("/api/landTransactionInfoController/"+$(this).val()).get("").then(function (data) {
-    //             data.transferDate=formatTime(data.transferDate);
-    //             data.commencementDate=formatTime(data.commencementDate);
-    //             data.completionDate=formatTime(data.completionDate);
-    //             data.fillingDate=formatTime(data.fillingDate);
-    //             dataEcho("#form", data);
-    //         });
-    //     }
-    //     $("#detail").modal("show");
-    // });
 
-    /**
-     * 时间格式化
-     * */
-    function formatTime(date) {
-        if(date==null || date==""){
-            return "";
-        }
-        date = new Date(date);
-        var Y = date.getFullYear() + '-';
-        var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
-        var D = (date.getDate() <10 ? "0"+(date.getDate()) : date.getDate()) + ' ';
-        var h = (date.getHours() >= 10?date.getHours():('0'+date.getHours())) + ':';
-        var m = (date.getMinutes() >= 10?date.getMinutes():('0'+date.getMinutes())) + ':';
-        var s = date.getSeconds() >= 10?date.getSeconds():('0'+date.getSeconds());
 
-        return Y + M + D ;
+
+    function initUpload(){
+
+        var uploader = WebUploader.create({
+            // swf文件路径
+            swf: '/css/third/Uploader.swf',
+            auto: true,
+            // 文件接收服务端。
+            server: '/upload/custom',
+
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: '#xg_rar',
+
+            // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+            resize: false,
+            //重复上传
+            duplicate :true,
+            accept:{
+                extensions:'bmp,jpg,png,rar,gif,zip,xls,xlsx,doc,docx',
+                title:'file',
+                mimeTypes:'*/*'
+            }
+        });
+        // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+        uploader.on( 'uploadSuccess', function( file,response) {
+            //debugger;
+            var name = file.name;
+            var fileurl = response.data;
+            $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");
+
+            //change(response);
+        });
     }
+
 </script>
-
 </body>
 </html>

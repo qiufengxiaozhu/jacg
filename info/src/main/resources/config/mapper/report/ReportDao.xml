@@ -9,40 +9,49 @@
         <result column="update_user" property="updateUser.id"/>
         <result column="update_date" property="updateDate"/>
         <result column="del" property="del"/>
-        <result column="case_type" property="caseType"/>
-        <result column="location" property="location"/>
-        <result column="coordinate" property="coordinate"/>
-        <result column="description" property="description"/>
-        <result column="nick_name" property="nickName"/>
+
+        <result column="report_id" property="reportId"/>
+        <result column="report_date" property="reportDate"/>
+        <result column="reply_status" property="replyStatus"/>
+        <result column="reply_date" property="replyDate"/>
+        <result column="reply_id" property="replyId"/>
     </resultMap>
 
     <select id="findList" resultMap="reportMap">
         select *
-        from msq_report
+        from zmj_report
         where del=0
-        <if test="location!=null and location!=''">
-            and location like concat('%', #{location}, '%')
+        <if test="category!=null and category!=''">
+            and category like concat('%', #{category}, '%')
         </if>
-        <if test="caseType!=null and caseType!=''">
-            and case_type like concat('%', #{caseType}, '%')
+        <if test="title!=null and title!=''">
+            and title like concat('%', #{title}, '%')
         </if>
         ORDER BY id desc
     </select>
 
     <select id="get" resultMap="reportMap">
         select *
-        from msq_report
+        from zmj_report
         where id=#{id}
     </select>
 
+    <update id="update" parameterType="com.zte.zudp.admin.info.report.entity.Report">
+        UPDATE zmj_report  SET
+        reply = #{reply},
+        reply_date = #{updateDate},
+        reply_status='已回复'
+        WHERE id = #{id}
+    </update>
+
     <update id="delete">
-        UPDATE msq_report
+        UPDATE zmj_report
         SET del = 1
         WHERE id = #{id}
     </update>
 
     <update id="batchDelete">
-        UPDATE msq_report SET del = 1
+        UPDATE zmj_report SET del = 1
         WHERE id IN
         <foreach collection="array" item="i" separator="," open="(" close=")">
             #{i}

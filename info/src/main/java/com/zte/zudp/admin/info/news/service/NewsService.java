@@ -1,6 +1,7 @@
 package com.zte.zudp.admin.info.news.service;
 
-import com.zte.zudp.admin.common.persistence.service.BusinessService;
+import com.zte.zudp.admin.common.persistence.Subject;
+import com.zte.zudp.admin.common.security.SubjectUtil;
 import com.zte.zudp.admin.common.util.IDUtil;
 import com.zte.zudp.admin.info.attachDoc.service.FileBusinessService;
 import com.zte.zudp.admin.info.news.dao.NewsDao;
@@ -8,6 +9,8 @@ import com.zte.zudp.admin.info.news.entity.News;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Date;
 
 /**
  * 公众新闻业务层
@@ -43,12 +46,22 @@ public class NewsService extends FileBusinessService<News>{
 
     public int saveNews(News news) {
 //        IDUtil.simpleId();
-        int i = newsDao.insert(news);
+        int i = newsDao.insert(getEntity(news));
 
         if (i > 0) {
             this.afterInsert(news);
     }
         return i;
+    }
+
+    private News getEntity(News t) {
+        t.setId(String.valueOf(IDUtil.simpleId()));
+        Subject user = SubjectUtil.getSubject();
+        t.setCreateUser(user);
+        t.setUpdateUser(user);
+        t.setCreateDate(new Date());
+        t.setUpdateDate(t.getCreateDate());
+        return t;
     }
 
     public static void main(String[] args) {

@@ -4,12 +4,15 @@ import com.zte.zudp.admin.common.annotation.JSON;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointRest;
 import com.zte.zudp.admin.common.enums.AuthorizedType;
+import com.zte.zudp.admin.common.persistence.entity.DataEntity;
 import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
 import com.zte.zudp.admin.info.complain.CategoryMenu;
 import com.zte.zudp.admin.info.complain.entity.ComplainEntity;
 import com.zte.zudp.admin.info.complain.entity.DeptEntity;
 import com.zte.zudp.admin.info.complain.service.ComplainService;
 import com.zte.zudp.admin.info.complain.service.DeptService;
+import org.apache.poi.ss.formula.functions.T;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -38,10 +41,9 @@ public class ComplainController extends AbstractCRUDController<ComplainEntity> {
 
 
     @JSON
-
-    @RequestMapping(value = "/reply", method = RequestMethod.PUT)
-    @EndpointRest(id = "reply", name = "保存功能", authorizedType = AuthorizedType.LOGIN)
-    public int updateReply(@RequestBody ComplainEntity entity) {
-        return service().updateReply(entity);
+    @GetMapping({"/getAttach/{id}"})
+    public ComplainEntity getAttach(@PathVariable("id") String id) {
+        return service().getOne(id);
     }
+
 }

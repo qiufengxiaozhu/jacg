@@ -7,6 +7,9 @@
     <script type="text/javascript" src="/mm/js/rem.js"></script>
     <script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="/mm/js/swiper.min.js"></script>
+    <script src="/mm/js/zudp.js"></script>
+    <script src="/mm/js/toastr.min.js"></script>
+
     <link rel="stylesheet" href="/mm/css/index.css">
     <link rel="stylesheet" href="/mm/css/swiper.min.css">
     <style>
@@ -20,7 +23,7 @@
     <div class="top">
         <div class="top-ret in-float"><img src="/mm/img/position.png" class="img-float img-1"><div  class="img-float img-font">吉安</div><img src="/mm/img/pull.png" class="img-float img-2"></div>
         <div class="advince">首页</div>
-        <div class="dex-float"><img src="/mm/img/around.png" class="img-float img-3"><a href="tel:12319"><img src="/mm/img/phone.png" class="img-float img-4"></a></div>
+        <div class="dex-float"><img src="/mm/img/around.png" class="img-float img-3"><img src="/mm/img/phone.png" class="img-float img-4"></div>
     </div>
     <div class="in-center">
 
@@ -48,7 +51,7 @@
             <#list Newslist! as news >
                 <div class="nlist-item flex " onclick="goNewDetail('${news.id}')">
                     <div class="nli-left">
-                        <img src="/mm/img/login-top.png" alt="" class="">
+                        <img src='${news.path!"/mm/img/login-top.png"}' alt="" class="">
                     </div>
                     <div class="nli-right flex-1">
                         <p class="nli-tit">${news.title!""}</p>
@@ -69,15 +72,15 @@
         </div>
         <div class="center">
             <div class="flex public">
-                <div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>公众调查</p></div></div>
-                <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>公众上报</p></div></div>
+                <div class="" onclick="goPage(6)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>公众调查</p></div></div>
+                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>公众上报</p></div></div>
                 <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>公众投诉</p></div></div>
-                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>便民咨询</p></div></div>
+                <div class="flex-1" onclick="goPage(5)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>便民咨询</p></div></div>
             </div>
         </div>
         <div class="center">
             <div class="flex public">
-                <div class="flex-1" onclick="goDianzan()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我要点赞</p></div></div>
+                <div class="flex-1" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我要点赞</p></div></div>
                 <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>积分管理</p></div></div>
                 <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>排行榜</p></div></div>
                 <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>统计管理</p></div></div>
@@ -90,8 +93,8 @@
         <div class="center">
             <div class="flex public">
                 <div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我的上报</p></div></div>
-                <div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>
-                <div class="" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>
+                <div class="" onclick="goPage(7)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>
+                <div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>
             </div>
         </div>
 
@@ -103,7 +106,8 @@
                 <div class="flex-1" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>周边雷达</p></div></div>
                 <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>地图服务</p></div></div>
                 <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>便民服务</p></div></div>
-                <div class="flex-1" onclick="goSystemCheck()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>系统自检</p></div></div>
+                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>系统自检</p></div></div>
+                <#--<div class="flex-1" onclick="goPage(6)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>调查</p></div></div>-->
             </div>
         </div>
     </div>
@@ -148,13 +152,19 @@
             <div class="city-pos city-selected">吉安</div>
         </div>
         <div>
-            <div class="city-place">其它城市</div>
+            <div class="city-place">热门城市</div>
             <div class="place-float clearfix">
-                <div class="city-pos city-selected" id="city1">吉安市</div>
-                <div class="city-pos"  id="city2">吉州区</div>
-                <div class="city-pos"  id="city3">青原区</div>
-                <div class="city-pos"  id="city4">庐陵新区</div>
-                <div class="city-pos"  id="city5">井开区</div>
+                <div class="city-pos">北京</div>
+                <div class="city-pos city-selected">上海</div>
+                <div class="city-pos">北京</div>
+                <div class="city-pos">上海</div>
+                <div class="city-pos">北京</div>
+                <div class="city-pos">上海</div>
+                <div class="city-pos">北京</div>
+                <div class="city-pos">上海</div>
+                <div class="city-pos">上海</div>
+                <div class="city-pos">北京</div>
+                <div class="city-pos">上海</div>
             </div>
         </div>
     </div>
@@ -162,6 +172,7 @@
 </body>
 <script>
     $(function(){
+
         var mySwiper = new Swiper('.swiper-container',{
             direction: 'horizontal',
             loop: true,
@@ -180,17 +191,10 @@
         $(".top-ret").on("click",function(){
             $(".slt-city").toggle()
         })
-
         $(".place-float .city-pos").on("click",function(){
             var index = $(".place-float .city-pos").index($(this));
             $(".place-float .city-pos").removeClass("city-selected").eq(index).addClass("city-selected");
         })
-
-        $(".alert").mouseover(function(){
-            $(".alert").hidden;
-            alert($(".city-selected").text());
-            $(".city-selected").html($(".city-selected").text());
-        });
     })
 
     function goPage(a){
@@ -199,20 +203,28 @@
             window.location.href='/mm/news/index';
         }
         if(a==2){
-            //公众投诉
-            window.location.href='/mm/news/mytousu';
-        }
-        if(a==3){
-            //公众咨询
+            //我的咨询
             window.location.href='/mm/news/advisory';
         }
+        if(a==5){
+            //公众咨询
+            window.location.href='/mm/news/addadvisory';
+        }
+        if(a==7){
+            //我的投诉
+            window.location.href='/mm/news/myComplain';
+    }
+    if(a==3){
+        //公众投诉
+        window.location.href='/mm/news/addComplain';
+    }
         if(a==4){
             //便民服务
             window.location.href='/mm/news/conven';
         }
         if(a==6){
             //公众调查
-            window.location.href='/mm/news/survey';
+            window.location.href='/mm/queinvest/survey';
         }
     }
 
@@ -238,28 +250,6 @@
      */
     function goNewDetail(obj){
         window.location.href='/mm/news/newsDetail/'+obj;
-    }
-
-    /*
-    * 进入系统自检
-    * */
-    function goSystemCheck(){
-        $.ajax({
-            url: "/xtCheckOut/isConnect",
-            type: "post",
-            dataType: 'json',
-            contentType: 'application/json',
-            success: function (data) {
-              console.log(data);
-              var msg = data.data;
-              if(msg.connect){
-                  alert("网络无比畅通，尽情使用");
-              }else{
-                  alert("网络有点小问题哦，请检查");
-
-              }
-            }
-        });
     }
 </script>
 </html>
