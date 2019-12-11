@@ -108,9 +108,9 @@ public class MMNewsController {
      * @param model
      * @return
      */
-    @GetMapping("/mytousu")
+    @GetMapping("/myComplain")
     public String mytousu(Model model) {
-        return "/mm/advice/my-tousu";
+        return "forward:/mm/complain/myComplain";
     }
     /**
      * 投诉详情
@@ -127,9 +127,9 @@ public class MMNewsController {
      * @param model
      * @return
      */
-    @GetMapping("/toadvice")
+    @GetMapping("/addComplain")
     public String toadvice(Model model) {
-        return "/mm/advice/to-advice";
+        return "forward:/mm/complain/addComplain";
     }
 
 

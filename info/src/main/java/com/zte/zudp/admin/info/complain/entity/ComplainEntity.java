@@ -1,18 +1,18 @@
 package com.zte.zudp.admin.info.complain.entity;
 
 import com.zte.zudp.admin.common.persistence.entity.DataEntity;
+import com.zte.zudp.admin.common.persistence.entity.FileEntity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
 /**
  * @Description 投诉表，具体内容，但是（音频、视频），（定位）有专门的实体类
  * @Author TotalEntity
  * @Date 2019/11/26 10:09
  **/
-public class ComplainEntity extends DataEntity {
+public class ComplainEntity extends FileEntity {
 
     /**
      * title ：标题

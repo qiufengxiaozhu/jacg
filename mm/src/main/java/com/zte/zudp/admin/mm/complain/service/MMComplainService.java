@@ -20,47 +20,40 @@ import java.util.List;
  * @Date 2019/11/26 19:19
  **/
 @Service
-@Transactional
+@Transactional(rollbackFor = Exception.class)
 public class MMComplainService extends FileBusinessService<MMComplainEntity> {
 
     private MMComplainDao dao() {
         return (MMComplainDao) dao;
     }
 
+    public MMComplainService() {
+        super();
+        this.setTableName("zzb_complain");
+    }
+
     public int saveOne(MMComplainEntity entity) {
-        return dao().insert(getEntity(entity));
+        int i = dao().insert(getEntity(entity));
+        if (i >= 0) {
+            this.afterInsert(entity);
+        }
+        return i;
     }
 
     /**
      * 通过 contactUser 得到当前用户的所有投诉信息
-     * @param contactUser
-     * @return
+     * 被自身的业务父类实现了
      */
-    public List<MMComplainEntity> getAllByContactUser(String contactUser) {
-        return transform(dao().getAllByContactUser(contactUser));
-    }
+//    public List<MMComplainEntity> getAllByContactUser(String contactUser) {
+//
+//        return transform(dao().findList(contactUser));
+//    }
+//
+//    public MMComplainEntity getOneById(String id) {
+//        return dao().get(id);
+//    }
 
-    public MMComplainEntity getOneById(String id) {
-        return dao().getOneById(id);
-    }
 
-    //字符串过长，裁切掉 ,修改时间格式
-    private List<MMComplainEntity> transform(List<MMComplainEntity> list) {
-        for (MMComplainEntity entity : list) {
-            String title = entity.getTitle();
-            if (title != null && !title.equals(""))
-                if (title.length() > 12)
-                    title = title.substring(0, 12) + "...";
-            entity.setTitle(title);
-
-            String description = entity.getDescription();
-            if (description != null && !description.equals(""))
-                if (description.length() > 12)
-                    description = description.substring(0, 24) + "...";
-            entity.setDescription(description);
-        }
-        return list;
-    }
 
     //模仿系统为字段注入 id
     private MMComplainEntity getEntity(MMComplainEntity entity) {

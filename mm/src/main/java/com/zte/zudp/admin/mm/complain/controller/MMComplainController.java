@@ -24,7 +24,7 @@ import java.util.Map;
  * @Date 2019/11/26 11:45
  **/
 @Controller
-@RequestMapping(value = "/mm/news")
+@RequestMapping(value = "/mm/complain")
 public class MMComplainController {
 
     @Autowired
@@ -41,8 +41,9 @@ public class MMComplainController {
         //如果是从 /mm/news/index 过来的 contact == ""，因为我也不知道怎么把用户账号信息写好
         if (contactUser == null || contactUser.equals(""))
             contactUser = "123";
-
-        List<MMComplainEntity> contactUserList = service.getAllByContactUser(contactUser);
+        MMComplainEntity entity = new MMComplainEntity();
+        entity.setContactUser(contactUser);
+        List<MMComplainEntity> contactUserList = service.findList(entity);
 
 
         model.addAttribute("contactUser", contactUser);
@@ -64,7 +65,7 @@ public class MMComplainController {
         String contactUser = (String) map.get("contactUser");
         MMComplainEntity complainEntity = null;
         if (id != null && !id.equals(""))
-            complainEntity = service.getOneById(id);
+            complainEntity = service.get(id);
         model.addAttribute("contactUser", contactUser);
         model.addAttribute("entity", complainEntity);
         return "/mm/complain/detailComplain";
@@ -75,7 +76,7 @@ public class MMComplainController {
      * @param map 投诉人账户信息 投诉人账户信息的 id
      * @return
      */
-    @RequestMapping(value = "/addComplain", method = RequestMethod.POST)
+    @RequestMapping(value = "/addComplain", method = RequestMethod.GET)
     public String addComplain(@RequestParam Map<String, Object> map,
                               Model model) {
         model.addAttribute("contactUser", map.get("contactUser"));
@@ -92,13 +93,10 @@ public class MMComplainController {
     @RequestMapping(value = "/addComplaining", method = RequestMethod.POST)
     public String addComplaining(MMComplainEntity complainEntity,
                                  RedirectAttributes redirectAttributes) {
-        System.out.println(complainEntity);
         int i = service.saveOne(complainEntity);
-        System.out.println("--------------------------" + i);
-
         redirectAttributes.addFlashAttribute("contactUser", complainEntity.getContactUser());
 
-        return "redirect:/mm/news/myComplain";
+        return "redirect:/mm/complain/myComplain";
     }
 
     /**
@@ -106,9 +104,29 @@ public class MMComplainController {
      * @param map
      * @return
      */
-    @RequestMapping(value = "retMyComplain", method = RequestMethod.POST)
-    public String retMyComplain(@RequestParam Map<String, Object> map, RedirectAttributes redirectAttributes) {
+    @RequestMapping(value = "retMyComplain")
+    public String retMyComplain(@RequestParam Map<String, Object> map,
+                                RedirectAttributes redirectAttributes) {
         redirectAttributes.addFlashAttribute("contactUser", map.get("contactUser"));
-        return "redirect:/mm/news/myComplain";
+        return "redirect:/mm/complain/myComplain";
+    }
+
+
+    //字符串过长，裁切掉
+    private List<MMComplainEntity> transform(List<MMComplainEntity> list) {
+        for (MMComplainEntity entity : list) {
+            String title = entity.getTitle();
+            if (title != null && !title.equals(""))
+                if (title.length() > 12)
+                    title = title.substring(0, 12) + "...";
+            entity.setTitle(title);
+
+            String description = entity.getDescription();
+            if (description != null && !description.equals(""))
+                if (description.length() > 12)
+                    description = description.substring(0, 24) + "...";
+            entity.setDescription(description);
+        }
+        return list;
     }
 }

@@ -2,7 +2,10 @@ package com.zte.zudp.admin.mm.complain.dao;
 
 import com.zte.zudp.admin.common.persistence.dao.AbstractDao;
 import com.zte.zudp.admin.mm.complain.entity.MMComplainEntity;
+import org.apache.ibatis.annotations.Param;
+import org.apache.poi.ss.formula.functions.T;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,18 +15,5 @@ import java.util.List;
  **/
 public interface MMComplainDao extends AbstractDao<MMComplainEntity> {
 
-    //findList() -- List<T>
-
-    //get(int id) -- T
-
-    //insert(T t) -- int
-
-    //update(T t) -- int
-
-    //delete(int id) --int
-
-    //batchDelete(String[] id) -- int
-
-    List<MMComplainEntity> getAllByContactUser(String contactUser);
-    MMComplainEntity getOneById(String id);
+    List<MMComplainEntity> findList(@Param("contactUser") String contactUser);
 }
