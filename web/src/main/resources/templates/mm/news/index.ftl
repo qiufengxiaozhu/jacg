@@ -21,9 +21,9 @@
 <body>
 <div class="container-app content">
     <div class="top">
-        <div class="top-ret in-float"><img src="/mm/img/position.png" class="img-float img-1"><div  class="img-float img-font">吉安</div><img src="/mm/img/pull.png" class="img-float img-2"></div>
+        <div class="top-ret in-float"><img src="/mm/img/position.png" class="img-float img-1"><div  class="img-float img-font" id="address1">吉安</div><img src="/mm/img/pull.png" class="img-float img-2"></div>
         <div class="advince">首页</div>
-        <div class="dex-float"><img src="/mm/img/around.png" class="img-float img-3"><img src="/mm/img/phone.png" class="img-float img-4"></div>
+        <div class="dex-float"><img src="/mm/img/around.png" class="img-float img-3"><a href="tel:12319"><img src="/mm/img/phone.png" class="img-float img-4"></a></div>
     </div>
     <div class="in-center">
 
@@ -80,7 +80,7 @@
         </div>
         <div class="center">
             <div class="flex public">
-                <div class="flex-1" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我要点赞</p></div></div>
+                <div class="flex-1" onclick="goDianzan()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我要点赞</p></div></div>
                 <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>积分管理</p></div></div>
                 <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>排行榜</p></div></div>
                 <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>统计管理</p></div></div>
@@ -106,7 +106,7 @@
                 <div class="flex-1" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>周边雷达</p></div></div>
                 <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>地图服务</p></div></div>
                 <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>便民服务</p></div></div>
-                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>系统自检</p></div></div>
+                <div class="flex-1" onclick="goSystemCheck()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>系统自检</p></div></div>
                 <#--<div class="flex-1" onclick="goPage(6)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>调查</p></div></div>-->
             </div>
         </div>
@@ -149,30 +149,25 @@
     <div class="alert">
         <div class="this-city">
             <div class="city-place">当前定位城市</div>
-            <div class="city-pos city-selected">吉安</div>
+            <div class="city-pos" id="address">吉安</div>
         </div>
         <div>
-            <div class="city-place">热门城市</div>
+            <div class="city-place">其他市区</div>
             <div class="place-float clearfix">
-                <div class="city-pos">北京</div>
-                <div class="city-pos city-selected">上海</div>
-                <div class="city-pos">北京</div>
-                <div class="city-pos">上海</div>
-                <div class="city-pos">北京</div>
-                <div class="city-pos">上海</div>
-                <div class="city-pos">北京</div>
-                <div class="city-pos">上海</div>
-                <div class="city-pos">上海</div>
-                <div class="city-pos">北京</div>
-                <div class="city-pos">上海</div>
+                <div class="city-pos city-selected" id="1">吉安市</div>
+                <div class="city-pos" id="2">吉州区</div>
+                <div class="city-pos" id="3">青原区</div>
+                <div class="city-pos" id="4">庐陵新区</div>
+                <div class="city-pos" id="5">井开区</div>
             </div>
         </div>
+
     </div>
 </div>
 </body>
 <script>
+    var coord;
     $(function(){
-
         var mySwiper = new Swiper('.swiper-container',{
             direction: 'horizontal',
             loop: true,
@@ -190,10 +185,35 @@
         });
         $(".top-ret").on("click",function(){
             $(".slt-city").toggle()
-        })
+        });
+        $(".mask").on("click",function(){
+            $(".slt-city").hide();
+            var coord = $(".place-float .city-selected").attr("id");
+            alert(coord);
+            $.ajax({
+                url: "/mm/news/index",
+                type: "get",
+                data: {"coord":coord},
+                dataType: 'json',
+                contentType: 'application/json',
+                success: function (data){
+                   /* location.reload();//页面刷新*/
+                },
+                error:function () {
+                   // alert("请刷新页面")
+                }
+            });
+        });
         $(".place-float .city-pos").on("click",function(){
             var index = $(".place-float .city-pos").index($(this));
+            console.log(index);
+            $("#address").html("");
             $(".place-float .city-pos").removeClass("city-selected").eq(index).addClass("city-selected");
+          var address =  $(".city-selected").text();
+            console.log(address);
+            $("#address").text(address);
+            $("#address").addClass("city-selected");
+            $("#address1").text(address);
         })
     })
 
@@ -250,6 +270,27 @@
      */
     function goNewDetail(obj){
         window.location.href='/mm/news/newsDetail/'+obj;
+    }
+    /*
+  * 进入系统自检
+  * */
+    function goSystemCheck(){
+        $.ajax({
+            url: "/xtCheckOut/isConnect",
+            type: "post",
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                console.log(data);
+                var msg = data.data;
+                if(msg.connect){
+                    alert("网络无比畅通，尽情使用");
+                }else{
+                    alert("网络有点小问题哦，请检查");
+
+                }
+            }
+        });
     }
 </script>
 </html>
