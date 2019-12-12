@@ -68,7 +68,7 @@ public class MMConsultController {
         //插入咨询附件
         mmConsultService.afterInsert(mmConsult);
         if (i>0){
-            return "/consult/myadvisory";
+            return "redirect:/mm/news/index";
         }
         return null;
     }

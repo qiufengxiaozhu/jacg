@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.mm.protalreport.dao.MMReportDao">
+
+
+
+    <select id="selAll" resultType="java.util.List" useCache="false">
+        SELECT  id,title,category,name,telephone,place
+        FROM zmj_report
+        WHERE  del!=1
+        ORDER BY consult_date desc
+    </select>
+
+    <select id="selById" resultType="com.zte.zudp.admin.mm.protalreport.entity.MMReport">
+        SELECT  *
+        FROM zmj_report
+        WHERE  id=#{id}
+    </select>
+
+    <select id="get" resultType="com.zte.zudp.admin.mm.protalreport.entity.MMReport">
+        SELECT  *
+        FROM zmj_report
+        WHERE  id=#{id}
+    </select>
+
+    <insert id="insReport">
+        INSERT INTO zmj_report(
+        id,category,place,name,title,telephone,content,reply_status,report_date,
+        create_date,
+        create_user,
+        update_date,
+        update_user,
+        del
+        )
+        VALUE (
+        #{id},#{category},#{place},#{name},#{title},#{telephone},#{content},'未回复',NOW(),
+        #{createDate},
+        #{createUser.id},
+        #{updateDate},
+        #{updateUser.id},
+        0
+        )
+    </insert>
+
+
+    <update id="update" parameterType="com.zte.zudp.admin.mm.protalreport.entity.MMReport">
+    UPDATE zmj_report  SET
+    reply = #{reply},
+    reply_date = #{updateDate}
+    WHERE id = #{id}
+</update>
+
+
+</mapper>
