@@ -154,7 +154,7 @@ public class MMNewsController {
      */
     @GetMapping("/addreport")
     public String addreport(Model model){
-        return "/mm/report/add-advisory";
+        return "/mm/report/add-report";
     }
 
 

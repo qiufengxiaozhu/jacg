@@ -253,7 +253,7 @@
             window.location.href='/mm/queinvest/survey';
         }
         if(a==10){
-            //公众上报
+            //积分管理
             window.location.href='/mm/integrate/integrateList';
         }
     }

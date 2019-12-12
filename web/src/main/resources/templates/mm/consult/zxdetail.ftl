@@ -51,13 +51,30 @@
                 <#--<img src="/mm/img/arr12.png" class="inv-pic2" alt="">-->
                 <#if mm.attachPaths?exists && mm.attachPaths??>
                     <#list 0..(mm.attachPaths!?size-1) as i>
+                    <#if mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".bmp" ||
+                        mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".png" ||
+                    mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".jpg" ||
+                    mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".gif" ||
+                    mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".jpeg"
+                    >
                         <img src='${mm.attachPaths[i]!}' class="inv-pic2" title="${mm.attachNames[i]!}">
+                    <#elseif mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".mp3">
+                        <audio controls>
+                            <source src='${mm.attachPaths[i]!}' type="audio/mpeg">
+                            您的浏览器不支持 audio 元素。
+                        </audio>
+                    <#else >
+                        <video  width="150" height="100" controls="controls" >
+                            <source  src="${mm.attachPaths[i]!}" type="video/mp4" />
+                        </video>
+                    </#if>
+
                     </#list>
                 </#if>
             </div>
         </div>
 
-
+        <br><br>
         <div class="inv-cont inv-special">
             <div class="">咨询回复:</div>
             <div class="inv-right inv-right-special" id="content">${mm.reply!}</div>

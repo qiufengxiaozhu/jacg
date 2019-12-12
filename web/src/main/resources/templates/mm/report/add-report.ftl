@@ -29,7 +29,7 @@
     <script>
         $(function () {
             $("form").submit(function () {
-                return checktitle()&&checkcontent()&&checkname()&&checktelephone();
+                return checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace();
             })
             $("input[name='title']").blur(function () {
                         checktitle();
@@ -44,6 +44,9 @@
             });
             $("input[name='telephone']").blur(function () {
                 checktelephone();
+            });
+            $("input[name='place']").blur(function () {
+                checkplace();
             });
         });
 
@@ -60,7 +63,19 @@
                 return false;
             }
         }
-
+        //检验案发地点
+        function checkplace(){
+            var place=$("input[name='place']").val();
+            var reg_place= /^.{1,20}$/;
+            var flag=reg_place.test(place)
+            if(place!=null && place!='' &&flag){
+                $("#sp_place").css("color","green").html("√");
+                return true;
+            }else{
+                $("#sp_place").css("color","red").html("×");
+                return false;
+            }
+        }
         //检验内容
         function checkcontent(){
             var content=$("input[name='content']").val();
@@ -114,7 +129,7 @@
             <div class="return" onclick="goIndex()">返回</div>
             <div class="advince">公众上报</div>
         </div>
-    <form id="addadvisory" action="/consult/addadvisory" method="post">
+    <form id="addadvisory" action="/report/addreport" method="post">
         <div class="header-img">
             <div class="ts-table">
                 <div class="put">
@@ -132,8 +147,8 @@
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>案发事件位置&nbsp;:</span><br>
-                            <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的咨询内容(500字以内)">
-                            <span id="sp_content"></span>
+                            <input type="text" name="place" class="tab-input flex-1" placeholder="案发地点">
+                            <span id="sp_place"></span>
                         </div>
                     </div>
 
@@ -141,23 +156,22 @@
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>案发描述&nbsp;:</span><br>
-                            <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的咨询内容(500字以内)">
+                            <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的咨询内容(100字以内)">
                             <span id="sp_content"></span>
                         </div>
                     </div>
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>类型&nbsp;:</span>
-                            <select>
-                                <option>垃圾</option>
-                                <option>广告乱贴</option>
-                                <option>摊位乱摆</option>
-                                <option>车辆乱停</option>
-                                <option>工地乱象</option>
-                                <option>河道乱污</option>
-                                <option>违法构筑乱</option>
+                            <select name="category">
+                                <option value="垃圾">垃圾</option>
+                                <option value="广告乱贴">广告乱贴</option>
+                                <option value="摊位乱摆">摊位乱摆</option>
+                                <option value="车辆乱停">车辆乱停</option>
+                                <option value="工地乱象">工地乱象</option>
+                                <option value="河道乱污">河道乱污</option>
+                                <option value="违法构筑乱">违法构筑乱</option>
                             </select>
-                            <span id="sp_title"></span>
                         </div>
                     </div>
 
@@ -224,7 +238,7 @@
                 //重复上传
                 duplicate: true,
                 accept: {
-                    extensions: 'bmp,jpg,png,rar,gif,zip,xls,xlsx,doc,docx,mp4',
+                    extensions: 'bmp,jpg,jpeg,png,gif,mp3,mp4',
                     title: 'file',
                     mimeTypes: '*/*'
                 }
@@ -233,13 +247,36 @@
                 //debugger;
                 var name = file.name;
                 var fileurl = response.data;
-                $("#fileShowName").append("<p>" +
-                        "<a href='//" + sys_url + "/" + fileurl + "' download='" + name + "'>" + name + "</a>" +
-                        "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
-                        "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
-                        "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
-                        "<input type='hidden' name='attachNames' value='" + name + "'>" +
-                        "</p>");
+                var jw=fileurl.substring(fileurl.lastIndexOf('.'));
+                if(jw=='.bmp' || jw=='.jpg' || jw=='.gif'|| jw=='.jpeg'||jw=='.png'){
+                    $("#fileShowName").append("<p>" +
+                            "<img src='"+fileurl+"' height='100px' width='50' > "+
+                            "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                            "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                            "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
+                            "<input type='hidden' name='attachNames' value='" + name + "'>" +
+                            "</p>");
+                }else if(jw=='.mp3'){
+                    $("#fileShowName").append("<p>" +
+                            "<audio controls>"+
+                            "<source src='"+fileurl+"' type='audio/mpeg'>"+
+                            "</audio>"+
+                            "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                            "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                            "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
+                            "<input type='hidden' name='attachNames' value='" + name + "'>" +
+                            "</p>");
+                }else if(jw=='.mp4'){
+                    $("#fileShowName").append("<p>" +
+                            "<video  width='150' height='100' controls='controls' >"+
+                            "<source  src='"+fileurl+"' type='video/mp4' />"+
+                            "</video>"+
+                            "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                            "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                            "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
+                            "<input type='hidden' name='attachNames' value='" + name + "'>" +
+                            "</p>");
+                }
             });
         }
         function goIndex() {
