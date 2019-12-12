@@ -49,7 +49,7 @@
 
         <div class="new-list">
             <#list Newslist! as news >
-                <div class="nlist-item flex " onclick="goNewDetail('${news.id}')">
+                <div class="nlist-item flex " onclick="goNewDetail('${news.id}')"  id="${news.timeZone}">
                     <div class="nli-left">
                         <img src='${news.path!"/mm/img/login-top.png"}' alt="" class="">
                     </div>
@@ -166,7 +166,7 @@
 </div>
 </body>
 <script>
-    var coord;
+    var timeZone;//当前时区
     $(function(){
         var mySwiper = new Swiper('.swiper-container',{
             direction: 'horizontal',
@@ -188,8 +188,10 @@
         });
         $(".mask").on("click",function(){
             $(".slt-city").hide();
-            var coord = $(".place-float .city-selected").attr("id");
-            alert(coord);
+            timeZone = $(".place-float .city-selected").attr("id");
+            alert("timeZone:"+timeZone)
+
+          /*  alert(coord);
             $.ajax({
                 url: "/mm/news/index",
                 type: "get",
@@ -197,12 +199,12 @@
                 dataType: 'json',
                 contentType: 'application/json',
                 success: function (data){
-                   /* location.reload();//页面刷新*/
+                   /!* location.reload();//页面刷新*!/
                 },
                 error:function () {
                    // alert("请刷新页面")
                 }
-            });
+            });*/
         });
         $(".place-float .city-pos").on("click",function(){
             var index = $(".place-float .city-pos").index($(this));
