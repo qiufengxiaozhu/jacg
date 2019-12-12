@@ -118,11 +118,11 @@
                             <label class="col-sm-3 control-label my-control-label ">所在时区：</label>
                             <div class="col-sm-6">
                                 <select id="timeZone" name="timeZone" class="form-control">
-                                    <#--<option value="0" selected="selected">选择时区</option>-->
-                                    <option value="1" selected="selected">第一时区</option>
-                                    <option value="2">第二时区</option>
-                                    <option value="3">第三时区</option>
-                                    <option value="4">第四时区</option>
+                                    <option value="1" selected>吉安市</option>
+                                    <option value="2">吉州区</option>
+                                    <option value="3">青原区</option>
+                                    <option value="4">庐陵新区</option>
+                                    <option value="5">井开区</option>
                                 </select>
                             </div>
                             <div>
@@ -220,6 +220,10 @@
 
 <script>
 
+//    $(document).ready(function () {
+//        $("#timeZone").val('1');//设置value为xx的option选项为默认选中
+//    });
+
     //图片上传预览    IE是用了滤镜。
     function previewImage(file)
     {
@@ -313,6 +317,8 @@
 
     $(document).ready(function () {
 
+//        $("#timeZone").val('1');//设置value为xx的option选项为默认选中
+
         $("#post_form").validate({
             rules: {
                 title:{
@@ -338,6 +344,8 @@
                         }
                     }
                 },
+                timeZone:"required",
+
 //                identification:{
 //                    required:true,
 //                    rangelength:[0,64],
@@ -372,6 +380,7 @@
                     required: "请输入新闻标题",
                     remote: "新闻标题已存在"
                 },
+                timeZone: "时区不能为空",
 //                identification: {
 //                    required: "请输入岗位标识",
 //                    remote: "岗位标识已存在"
@@ -808,7 +817,7 @@
             swf: '/css/third/Uploader.swf',
             auto: true, //自动提交保存
             // 文件接收服务端。
-            server: '/upload/custom',
+            server: '/upoladOfGuest/custom',
 
             // 选择文件的按钮。可选。
             // 内部根据当前运行是创建，可能是input元素，也可能是flash.
