@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.rank.dao.RankDao">
+
+    <!-- 得到所有人的积分排行，根据电话号码累计积分 -->
+    <select id="findList" resultType="com.zte.zudp.admin.info.rank.entity.RankEntity">
+        select
+	        id, points, telephone, (@a := @a + 1) rank
+        from
+            (
+                select
+                    id, SUM(points) points, telephone
+                FROM
+                    jacg_integrate
+                WHERE
+                    del != "1"
+                GROUP BY
+                    telephone
+            ) alias_integrate, (select @a := 0) alias_a
+
+        ORDER BY
+            points desc
+    </select>
+</mapper>
