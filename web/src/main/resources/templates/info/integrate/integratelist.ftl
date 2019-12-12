@@ -37,7 +37,7 @@
                     <div class='col-sm-12'>
 
                         <div class='querybtn my-querybtn'>
-                            <input type='text' name='phoneNumber' id='search_name' placeholder='请输入用户的电话号码' class='form-control search-input'>
+                            <input type='text' name='telephone' id='search_name' placeholder='请输入用户的电话号码' class='form-control search-input'>
                             <button class='btn btn-primary mgl my-mgl research-btn' >
                                 搜索
                             </button>&nbsp;&nbsp;
@@ -53,8 +53,9 @@
                         <tr>
                             <th>id</th>
                             <th>上报人手机号</th>
+                            <th>上报标题</th>
+                            <th>上报时间</th>
                             <th>积分数</th>
-                            <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -84,7 +85,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">上报人手机号：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="phoneNumber" maxlength="64" id="phoneNumber" placeholder="上报人手机号" class="form-control">
+                                <input type="text" name="telephone" maxlength="64" id="telephone" placeholder="上报人手机号" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -187,46 +188,48 @@
             .search(function () {
                 return {
                     // 查询条件
-                    "phoneNumber":$("#search_name").val()
+                    "telephone":$("#search_name").val()
 
                 }
             })
             .columns( [
                 {data: 'id', visible: false},
-                {data: 'phoneNumber'},
+                {data: 'telephone'},
+                {data: 'title'},
+                {data: 'reportDate'},
                 {data: 'points'},
 
 
-                {
-                    render: function (data, type, row) {
-                        var btn = "";
-                        var detailstr = "";
-
-                        detailstr=zudp.template.detailBtn;
-                        btn += detailstr;
-                        return zudp.util.render(btn, row);
-                    }
-                }
+//                {
+//                    render: function (data, type, row) {
+//                        var btn = "";
+//                        var detailstr = "";
+//
+//                        detailstr=zudp.template.detailBtn;
+//                        btn += detailstr;
+//                        return zudp.util.render(btn, row);
+//                    }
+//                }
             ])
             .then();
 
     }
 
 
-$(document).on("click", '#update-btn', function (e) {
-
-    if (e && e.stopPropagation) {
-        e.stopPropagation();
-    } else {
-        window.e.cancelBubble = true;
-    }
-    //获取到id
-    var id = $("#update-btn").val();
-
-    zudp.ajax("/api/warning/updateStatus").post(id).then(function (value) {
-        document.location.reload();
-    });
-});
+//$(document).on("click", '#update-btn', function (e) {
+//
+//    if (e && e.stopPropagation) {
+//        e.stopPropagation();
+//    } else {
+//        window.e.cancelBubble = true;
+//    }
+//    //获取到id
+//    var id = $("#update-btn").val();
+//
+//    zudp.ajax("/api/warning/updateStatus").post(id).then(function (value) {
+//        document.location.reload();
+//    });
+//});
 
     function initUpload(){
         var uploader = WebUploader.create({
