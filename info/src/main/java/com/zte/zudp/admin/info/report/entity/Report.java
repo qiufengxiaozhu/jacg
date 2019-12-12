@@ -23,6 +23,35 @@ public class Report extends FileEntity{
     private String replyDate;//回复日期
     private String replyId;//回复人信息
     private String place;//地点
+    //以下字段为统计管理使用
+    private int sbSum;//公众上报总数
+    private int replyYes;//已回复数
+    private int repleNo;//未回复数
+
+    public void setSbSum(int sbSum) {
+        this.sbSum = sbSum;
+    }
+
+    public void setReplyYes(int replyYes) {
+        this.replyYes = replyYes;
+    }
+
+    public void setRepleNo(int repleNo) {
+        this.repleNo = repleNo;
+    }
+
+    public int getSbSum() {
+
+        return sbSum;
+    }
+
+    public int getReplyYes() {
+        return replyYes;
+    }
+
+    public int getRepleNo() {
+        return repleNo;
+    }
 
     public String getTitle() {
         return title;
