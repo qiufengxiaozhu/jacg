@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.mm.rank.dao.MMRankDao">
+
+    <!-- 得到自己积分排名，根据上面的表作为结果集表 -->
+    <select id="myRank" parameterType="java.lang.String"
+            resultType="com.zte.zudp.admin.mm.rank.entity.MMRankEntity">
+        select
+	        id, points, telephone, rank
+        from
+            (
+                select
+                    id, points, telephone, (@a := @a + 1) rank
+                from
+                    (
+                        select
+                            id, SUM(points) points, telephone
+                        FROM
+                            jacg_integrate
+                        WHERE
+                            del != "1"
+                        GROUP BY
+                            telephone
+                    ) alias_integrate, (select @a := 0) alias_a
+
+                ORDER BY
+                    points desc
+            ) alias_rank
+        WHERE
+            telephone = #{telephone}
+    </select>
+
+    <!-- 得到所有人的积分排行，根据电话号码累计积分并限制查询数据条数 只查询 number 条数据 -->
+    <select id="rankListOfLimit" parameterType="java.lang.String"
+            resultType="com.zte.zudp.admin.mm.rank.entity.MMRankEntity">
+        select
+			id, points, telephone, (@a := @a + 1) rank
+        from
+            (
+                select
+                        id, SUM(points) points, telephone
+                FROM
+                        jacg_integrate
+                WHERE
+                        del != "1"
+                GROUP BY
+                        telephone
+            ) alias_integrate, (select @a := 0) alias_a
+        ORDER BY
+                points desc
+        limit ${number}
+    </select>
+</mapper>
