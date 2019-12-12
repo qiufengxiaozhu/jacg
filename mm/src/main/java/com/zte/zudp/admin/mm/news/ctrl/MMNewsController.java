@@ -138,6 +138,27 @@ public class MMNewsController {
 
 
     /**
+     *我的上报
+     * @param model
+     * @return
+     */
+    @GetMapping("/report")
+    public String report(Model model){
+        return "/report/myreport";
+    }
+
+    /**
+     *公众上报
+     * @param model
+     * @return
+     */
+    @GetMapping("/addreport")
+    public String addreport(Model model){
+        return "/mm/report/add-advisory";
+    }
+
+
+    /**
      * 排行榜
      * @param model
      * @return
