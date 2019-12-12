@@ -49,7 +49,7 @@
 
         <div class="new-list">
             <#list Newslist! as news >
-                <div class="nlist-item flex " onclick="goNewDetail('${news.id}')">
+                <div class="nlist-item flex " onclick="goNewDetail('${news.id}')"  id="${news.timeZone}">
                     <div class="nli-left">
                         <img src='${news.path!"/mm/img/login-top.png"}' alt="" class="">
                     </div>
@@ -82,7 +82,7 @@
             <div class="flex public">
                 <div class="flex-1" onclick="goDianzan()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我要点赞</p></div></div>
                 <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>积分管理</p></div></div>
-                <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>排行榜</p></div></div>
+                <div class="flex-1" onclick="goPage(0)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>排行榜</p></div></div>
                 <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>统计管理</p></div></div>
             </div>
         </div>
@@ -166,7 +166,7 @@
 </div>
 </body>
 <script>
-    var coord;
+    var timeZone;//当前时区
     $(function(){
         var mySwiper = new Swiper('.swiper-container',{
             direction: 'horizontal',
@@ -188,8 +188,10 @@
         });
         $(".mask").on("click",function(){
             $(".slt-city").hide();
-            var coord = $(".place-float .city-selected").attr("id");
-            alert(coord);
+            timeZone = $(".place-float .city-selected").attr("id");
+            alert("timeZone:"+timeZone)
+
+          /*  alert(coord);
             $.ajax({
                 url: "/mm/news/index",
                 type: "get",
@@ -197,12 +199,12 @@
                 dataType: 'json',
                 contentType: 'application/json',
                 success: function (data){
-                   /* location.reload();//页面刷新*/
+                   /!* location.reload();//页面刷新*!/
                 },
                 error:function () {
                    // alert("请刷新页面")
                 }
-            });
+            });*/
         });
         $(".place-float .city-pos").on("click",function(){
             var index = $(".place-float .city-pos").index($(this));
@@ -237,11 +239,15 @@
         if(a==7){
             //我的投诉
             window.location.href='/mm/news/myComplain';
-    }
-    if(a==3){
-        //公众投诉
-        window.location.href='/mm/news/addComplain';
-    }
+        }
+        if(a==3){
+            //公众投诉
+            window.location.href='/mm/news/addComplain';
+        }
+        if (a == 0) {
+            //排行榜
+            window.location.href='/mm/rank/ranklist';
+        }
         if(a==6){
             //公众调查
             window.location.href='/mm/queinvest/survey';
