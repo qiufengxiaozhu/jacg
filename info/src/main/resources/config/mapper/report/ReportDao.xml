@@ -15,6 +15,11 @@
         <result column="reply_status" property="replyStatus"/>
         <result column="reply_date" property="replyDate"/>
         <result column="reply_id" property="replyId"/>
+
+        <!--统计管理使用字段-->
+        <result column="sbSum" property="sbSum"/>
+        <result column="repleNo" property="repleNo"/>
+        <result column="repleYes" property="repleYes"/>
     </resultMap>
 
     <select id="findList" resultMap="reportMap">
@@ -57,4 +62,18 @@
             #{i}
         </foreach>
     </update>
+
+
+    <!--统计管理-->
+    <select id="countManage" resultMap="reportMap" >
+        SELECT
+          reply_id,
+	      count(case when del!=1 THEN 1 END) as sbSum,
+	      count( CASE WHEN reply_status = '未回复' THEN 1 END ) AS repleNo,
+	      count( CASE WHEN reply_status = '已回复' THEN 1 END ) AS replyYes
+        FROM
+	       zmj_report
+        GROUP BY
+	       reply_id
+    </select>
 </mapper>
