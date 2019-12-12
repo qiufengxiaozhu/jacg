@@ -50,7 +50,7 @@
                                 <span>${news.newsDate!""}</span>
                             </p>
                         </div>
-                        <div class="nli-fx"></div>
+                        <div class="nli-fx" onclick="getNews('${news.id}','${news.title!}','${news.category!}','${news.path!}')"></div>
                     </div>
                 </div>
 
@@ -85,6 +85,19 @@
     <script type="text/javascript" src="/laydate/laydate.js"></script>
 	<script>
 
+        //定义全局变量 新闻id、标题、正文、图片路径
+        var myId = "";
+        var myTitle = "";
+        var myHref = "";
+        var myUrl = "";
+        var myIp = '${ResultIP!}' + ':8080';
+
+        //分享内容的链接,链接一定要用encodeURIComponent处理一下，不然分享之后的链接会没有参数
+//        window.shareUrl = encodeURIComponent(location.href);
+//        alert(window.shareUrl);
+//        alert(location.href);
+
+
         //日历控件
         lay('#version').html('-v'+ laydate.v);
         //执行一个laydate实例
@@ -92,23 +105,55 @@
             elem: '#test1' //指定元素
         });
 
-        //分享按钮
-        $(".nli-fx").on("click",function(){
+        /**
+         *  新闻分享单击事件
+         */
+        function getNews(id,title, url, picurl) {
+
+            <#--alert("title : " + title+"   "+'${ResultIP!}');-->
+//            alert(myPicurl);
             $(".fx-fixed").show();
-        });
+            myId = id;
+            myTitle = title;
+            myUrl = url;
+            myPicurl = myIp + picurl;
+            window.shareUrl = '/mm/news/newsDetail/'+myId+'?type=1';
+        }
+
+        /**
+         * 微信分享
+         */
         $("#weixin").on("click",function(){
             alert("微信分享");
 
         });
+
+        /**
+         *  微博分享
+         */
         $("#weibo").on("click",function(){
-            alert("微博分享");
+            var d= window;
+//            alert(myTitle + myUrl + myPicurl);    //http://service.weibo.com/share/share.php? //http://v.t.sina.com.cn/share/share.php?
+                var sharesinastring='http://service.weibo.com/share/share.php?' +
+                        'title='+myTitle+
+                        '&url='+d.+
+                        '&content=utf-8' +
+                        '&sourceUrl='+myUrl+
+                        '&pic='+myPicurl;
+                window.open(sharesinastring,'newwindow','height=400,width=400,top=100,left=100');
 
         });
+
+        /**
+         *  取消分享
+         */
         $("#cancel-btn").on("click",function(){
             $(".fx-fixed").hide();
         });
 
-        //查询时间
+        /**
+         * 根据时间查询
+         */
         $(document).ready(function(){
 
             $("#date").click(function () {
@@ -130,6 +175,8 @@
          * 进入新闻详情页面
          */
         function goNewDetail(obj){
+
+//            alert(obj);
 
             window.location.href='/mm/news/newsDetail/'+obj+'?type=1';
 
