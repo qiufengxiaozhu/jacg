@@ -199,8 +199,12 @@
 
     function goPage(a){
         if(a==1){
+            //我的上报
+            window.location.href='/mm/news/report';
+        }
+        if(a==4){
             //公众上报
-            window.location.href='/mm/news/index';
+            window.location.href='/mm/news/addreport';
         }
         if(a==2){
             //我的咨询
@@ -218,10 +222,6 @@
         //公众投诉
         window.location.href='/mm/news/addComplain';
     }
-        if(a==4){
-            //便民服务
-            window.location.href='/mm/news/conven';
-        }
         if(a==6){
             //公众调查
             window.location.href='/mm/queinvest/survey';
