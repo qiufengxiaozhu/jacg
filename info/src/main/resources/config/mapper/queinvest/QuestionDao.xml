@@ -66,13 +66,16 @@
     </select>
 
     <!--编辑-->
-    <update id="update">
-       update jacg_questions t1 set
+    <update id="update" >
+       update jacg_questions t1
+       left join jacg_options t2 on t1.id = t2.questions_id
+       set
         t1.contents = #{contents},
         t1.questionType = #{questionType},
-        t1.update_date = #{updateDate},
-        t1.update_user = #{updateUser.id}
-
+        t2.choiceText01 =#{choiceText01},
+        t2.choiceText02 =#{choiceText02},
+        t2.choiceText03 =#{choiceText03},
+        t2.choiceText04 =#{choiceText04}
         where t1.id=#{id}
     </update>
 

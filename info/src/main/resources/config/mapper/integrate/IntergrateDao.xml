@@ -9,26 +9,31 @@
 
          CASE
          WHEN
-         t1.type = 0 THEN
+         t1.type = '0' THEN
          ( SELECT t2.title FROM zzb_complain t2 WHERE t2.id = t1.foreign_id )
-         WHEN t1.type = 1 THEN
+         WHEN t1.type = '1' THEN
          ( SELECT t2.title FROM zmj_report t2 WHERE t2.id = t1.foreign_id )
          END AS title,
 
          CASE
-         WHEN t1.type = 0 THEN
+         WHEN t1.type = '0' THEN
          ( SELECT DATE_FORMAT(t2.complain_date,"%Y-%m-%d %T") FROM zzb_complain t2 WHERE t2.id = t1.foreign_id )
-         WHEN t1.type = 1 THEN
+         WHEN t1.type = '1' THEN
          ( SELECT DATE_FORMAT(t2.report_date,"%Y-%m-%d %T") FROM zmj_report t2 WHERE t2.id = t1.foreign_id )
          END AS reportDate,
+
 
 
          t1.id id,
          t1.points points,
          t1.telephone telephone
          FROM
-         jacg_integrate t1;
+         jacg_integrate t1
 
+         where 1=1
+         <if test="telephone != null and telephone != '' ">
+            and t1.telephone like concat('%', #{telephone}, '%')
+         </if>
 
 
 
@@ -61,7 +66,8 @@
           telephone,
           type,
           foreign_id,
-          points
+          points,
+          del
 
         )
         VALUES (
@@ -69,7 +75,8 @@
         #{tel},
         #{type},
         #{fId},
-        '0',
+        '1',
+        '0'
 
         )
     </insert>

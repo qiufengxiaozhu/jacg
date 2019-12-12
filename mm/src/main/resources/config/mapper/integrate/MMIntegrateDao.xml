@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.mm.integrate.dao.MMIntegrateDao">
+
+    <!--查询出所有的积分信息  type->0投诉表   1->上报表  其他表中查询标题，上报时间-->
+    <select id="selectAll" resultType="com.zte.zudp.admin.mm.integrate.entity.MMIntegrate">
+        SELECT
+
+        CASE
+        WHEN
+        t1.type = '0' THEN
+        ( SELECT t2.title FROM zzb_complain t2 WHERE t2.id = t1.foreign_id )
+        WHEN t1.type = '1' THEN
+        ( SELECT t2.title FROM zmj_report t2 WHERE t2.id = t1.foreign_id )
+        END AS title,
+
+        CASE
+        WHEN t1.type = '0' THEN
+        ( SELECT DATE_FORMAT(t2.complain_date,"%Y-%m-%d %T") FROM zzb_complain t2 WHERE t2.id = t1.foreign_id )
+        WHEN t1.type = '1' THEN
+        ( SELECT DATE_FORMAT(t2.report_date,"%Y-%m-%d %T") FROM zmj_report t2 WHERE t2.id = t1.foreign_id )
+        END AS reportDate,
+
+
+
+        t1.id id,
+        t1.points points,
+        t1.telephone telephone
+        FROM
+        jacg_integrate t1
+
+        where 1=1
+        <if test="telephone != null and telephone != '' ">
+            and t1.telephone like concat('%', #{telephone}, '%')
+        </if>
+
+
+
+    </select>
+
+
+
+
+</mapper>
