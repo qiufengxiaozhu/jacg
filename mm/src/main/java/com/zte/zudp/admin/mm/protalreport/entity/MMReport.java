@@ -1,16 +1,13 @@
-package com.zte.zudp.admin.info.report.entity;
+package com.zte.zudp.admin.mm.protalreport.entity;
 
-import com.zte.zudp.admin.common.persistence.entity.DataEntity;
 import com.zte.zudp.admin.common.persistence.entity.FileEntity;
-
-import java.util.List;
 
 /**
  * 公共上报实体类
  * @author
  */
 
-public class Report extends FileEntity{
+public class MMReport extends FileEntity{
     private String title;//上报标题
     private String content;//上报内容
     private String category;//上报类型
@@ -23,35 +20,6 @@ public class Report extends FileEntity{
     private String replyDate;//回复日期
     private String replyId;//回复人信息
     private String place;//地点
-    //以下字段为统计管理使用
-    private int sbSum;//公众上报总数
-    private int replyYes;//已回复数
-    private int repleNo;//未回复数
-
-    public void setSbSum(int sbSum) {
-        this.sbSum = sbSum;
-    }
-
-    public void setReplyYes(int replyYes) {
-        this.replyYes = replyYes;
-    }
-
-    public void setRepleNo(int repleNo) {
-        this.repleNo = repleNo;
-    }
-
-    public int getSbSum() {
-
-        return sbSum;
-    }
-
-    public int getReplyYes() {
-        return replyYes;
-    }
-
-    public int getRepleNo() {
-        return repleNo;
-    }
 
     public String getTitle() {
         return title;

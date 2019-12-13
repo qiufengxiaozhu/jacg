@@ -81,9 +81,9 @@
         <div class="center">
             <div class="flex public">
                 <div class="flex-1" onclick="goDianzan()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我要点赞</p></div></div>
-                <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>积分管理</p></div></div>
+                <div class="flex-1" onclick="goPage(10)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>积分管理</p></div></div>
                 <div class="flex-1" onclick="goPage(0)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>排行榜</p></div></div>
-                <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>统计管理</p></div></div>
+                <div class="flex-1" onclick="goCountManage()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>统计管理</p></div></div>
             </div>
         </div>
 
@@ -130,7 +130,7 @@
                 <p>地图功能</p>
             </div>
         </div>
-        <div class="flex-1">
+        <div class="flex-1" onclick="goCountManage()">
             <div class="bot-mess">
                 <div class="bot-img bot-img4"></div>
                 <p>统计管理</p>
@@ -252,6 +252,10 @@
             //公众调查
             window.location.href='/mm/queinvest/survey';
         }
+        if(a==10){
+            //积分管理
+            window.location.href='/mm/integrate/integrateList';
+        }
     }
 
     /**
@@ -297,6 +301,13 @@
                 }
             }
         });
+    }
+
+    /**
+     * 进入统计管理
+     */
+    function goCountManage(){
+        window.location.href='/mm/dz/cmanage';
     }
 </script>
 </html>

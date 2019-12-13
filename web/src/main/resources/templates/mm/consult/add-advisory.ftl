@@ -189,7 +189,7 @@
                 swf: '/css/third/Uploader.swf',
                 auto: true,
                 // 文件接收服务端。
-                server: '/upload/custom',
+                server: '/uploadOfGuest/custom',
 
                 // 选择文件的按钮。可选。
                 // 内部根据当前运行是创建，可能是input元素，也可能是flash.
@@ -200,22 +200,46 @@
                 //重复上传
                 duplicate: true,
                 accept: {
-                    extensions: 'bmp,jpg,png,rar,gif,zip,xls,xlsx,doc,docx,mp4',
+                    extensions: 'bmp,jpg,png,gif,jpeg,mp3,mp4',
                     title: 'file',
                     mimeTypes: '*/*'
                 }
             });
+            /*"<a href='//" + sys_url + "/" + fileurl + "' download='" + name + "'>" + name + "</a>" +*/
             uploader.on('uploadSuccess', function (file, response) {
                 //debugger;
                 var name = file.name;
                 var fileurl = response.data;
+                var jw=fileurl.substring(fileurl.lastIndexOf('.'));
+                if(jw=='.bmp' || jw=='.jpg' || jw=='.gif'|| jw=='.jpeg'||jw=='.png'){
                 $("#fileShowName").append("<p>" +
-                        "<a href='//" + sys_url + "/" + fileurl + "' download='" + name + "'>" + name + "</a>" +
+                        "<img src='"+fileurl+"' height='100px' width='50' > "+
                         "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
                         "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
                         "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
                         "<input type='hidden' name='attachNames' value='" + name + "'>" +
                         "</p>");
+                }else if(jw=='.mp3'){
+                $("#fileShowName").append("<p>" +
+                        "<audio controls>"+
+                                "<source src='"+fileurl+"' type='audio/mpeg'>"+
+                        "</audio>"+
+                        "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                        "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                        "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
+                        "<input type='hidden' name='attachNames' value='" + name + "'>" +
+                        "</p>");
+                }else if(jw=='.mp4'){
+                    $("#fileShowName").append("<p>" +
+                            "<video  width='150' height='100' controls='controls' >"+
+                            "<source  src='"+fileurl+"' type='video/mp4' />"+
+                            "</video>"+
+                            "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                            "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                            "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
+                            "<input type='hidden' name='attachNames' value='" + name + "'>" +
+                            "</p>");
+                }
             });
         }
         function goIndex() {

@@ -30,7 +30,7 @@ public class IntegrateContrller extends AbstractCRUDController<Integrate>{
     @PostMapping("/insertToIntegrate")
     public Result insertToIntegrate(@RequestParam String type,
                                     @RequestParam String fId,
-                                    @RequestParam String tel){ //type：0-投诉 1-...
+                                    @RequestParam String tel){ //type：0-投诉 1-上报
 
         try {
             // 新增到积分表中
