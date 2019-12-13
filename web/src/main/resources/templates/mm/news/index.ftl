@@ -18,6 +18,8 @@
             margin: 0 auto;
             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
         }
+        .inner-pic{width: 100%;height: auto;text-align: center}
+        .inner-pic img{width: 60%;margin:auto}
     </style>
     <link rel="stylesheet" href="/mm/css/css-loader.css">
     <style>
