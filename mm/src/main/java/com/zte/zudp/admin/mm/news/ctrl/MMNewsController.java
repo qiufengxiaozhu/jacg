@@ -18,7 +18,12 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.security.auth.Subject;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.List;
 
 @Controller
@@ -39,8 +44,40 @@ public class MMNewsController {
     @GetMapping("/mmNews")
     public String mmNews(Model model) {
 
+        //        //根据时区查询所有新闻
+        //        ArrayList<MMNews> newslist = newsService.find_allNews(timeZone);
+
         //查询所有新闻
         ArrayList<MMNews> newslist = newsService.find_allNews();
+
+        //动态获取IP地址
+        Enumeration<NetworkInterface> allNetInterfaces = null;
+        String resultIP=null;
+        try {
+            allNetInterfaces = NetworkInterface.getNetworkInterfaces();
+        } catch (SocketException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        InetAddress ip = null;
+        while (allNetInterfaces.hasMoreElements())
+        {
+            NetworkInterface netInterface = (NetworkInterface) allNetInterfaces.nextElement();
+            System.out.println(netInterface.getName());
+            Enumeration<InetAddress> addresses = netInterface.getInetAddresses();
+            while (addresses.hasMoreElements())
+            {
+                ip = (InetAddress) addresses.nextElement();
+                if (ip != null && ip instanceof Inet4Address)
+                {
+                    if(resultIP==null)
+                        resultIP= ip.getHostAddress();
+                    System.out.println("本机地址是："+ip.getHostAddress());
+                    model.addAttribute("ResultIP",ip.getHostAddress());
+                }
+            }
+        }
+
 
         model.addAttribute("Newslist",newslist);
 

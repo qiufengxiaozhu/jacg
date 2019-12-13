@@ -51,6 +51,39 @@
         LIMIT 3
     </select>
 
+    <!--根据时区查询三条-->
+    <select id="find_threeNewsTime" resultMap="mmnewsMap" >
+        SELECT
+        n.id,
+        n.title,
+        n.content,
+        n.contentnohtml,
+        n.STATUS,
+        t2.category category,
+        n.time_zone,
+        DATE_FORMAT( n.news_date, "%Y-%m-%d %T" ) news_date,
+        n.clicks,
+        n.create_date ,
+        t3.path path
+        FROM
+        qgq_news n
+        left join   qgq_category t2 ON n.fk_categoryid = t2.id
+        left join sys_attachments t3  on  t3.billid  =  n.id
+
+        WHERE
+        n.del != 1
+        AND n.STATUS = "已发布状态"
+        <if test="timeZone == '1' ">
+            and 1=1
+        </if>
+        <if test="timeZone != '1' ">
+            and `n.time_zone` = #{timeZone}
+        </if>
+        ORDER BY
+        n.news_date DESC
+        LIMIT 3
+    </select>
+
     <!--根据id查询指定新闻-->
     <select id="find_news" resultMap="mmnewsMap" >
         SELECT

@@ -220,64 +220,6 @@
 
 <script>
 
-//    $(document).ready(function () {
-//        $("#timeZone").val('1');//设置value为xx的option选项为默认选中
-//    });
-
-    //图片上传预览    IE是用了滤镜。
-    function previewImage(file)
-    {
-        var MAXWIDTH  = 90;
-        var MAXHEIGHT = 90;
-        var div = document.getElementById('preview');
-        if (file.files && file.files[0])
-        {
-            div.innerHTML ='<img id=imghead onclick=$("#previewImg").click()>';
-            var img = document.getElementById('imghead');
-            img.onload = function(){
-                var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
-                img.width  =  rect.width;
-                img.height =  rect.height;
-//                 img.style.marginLeft = rect.left+'px';
-                img.style.marginTop = rect.top+'px';
-            }
-            var reader = new FileReader();
-            reader.onload = function(evt){img.src = evt.target.result;}
-            reader.readAsDataURL(file.files[0]);
-//            alert(reader.readAsDataURL(file.files[0]));
-        }
-        else //兼容IE
-        {
-            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
-            file.select();
-            var src = document.selection.createRange().text;
-            div.innerHTML = '<img id=imghead>';
-            var img = document.getElementById('imghead');
-            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
-            var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
-            status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
-            div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
-        }
-    }
-    function clacImgZoomParam( maxWidth, maxHeight, width, height ){
-        var param = {top:0, left:0, width:width, height:height};
-        if( width>maxWidth || height>maxHeight ){
-            rateWidth = width / maxWidth;
-            rateHeight = height / maxHeight;
-
-            if( rateWidth > rateHeight ){
-                param.width =  maxWidth;
-                param.height = Math.round(height / rateWidth);
-            }else{
-                param.width = Math.round(width / rateHeight);
-                param.height = maxHeight;
-            }
-        }
-        param.left = Math.round((maxWidth - param.width) / 2);
-        param.top = Math.round((maxHeight - param.height) / 2);
-        return param;
-    }
-    //图片上传预览    IE是用了滤镜。上传图片代码到此截止
 
     var dataTable;
     var urlstr="/api/news";
@@ -317,33 +259,32 @@
 
     $(document).ready(function () {
 
-//        $("#timeZone").val('1');//设置value为xx的option选项为默认选中
 
         $("#post_form").validate({
             rules: {
-                title:{
-                    required:true,
-                    remote: {
-                        url:"/api/news/checkName",
-                        type:"get",
-                        data: {
-                            "title":function () {
-                                return $("#title").val();
-                            },
-                            "id":function () {
-                                return $("#id").val();
-                            }
-                        },
-                        dataFilter: function(data, type) {
-                            var da=JSON.parse(data).data;
-                            if(zudp.util.isBoolean(da)){
-                                return da;
-                            }else{
-                                return false;
-                            }
-                        }
-                    }
-                },
+//                title:{
+//                    required:true,
+//                    remote: {
+//                        url:"/api/news/checkName",
+//                        type:"get",
+//                        data: {
+//                            "title":function () {
+//                                return $("#title").val();
+//                            },
+//                            "id":function () {
+//                                return $("#id").val();
+//                            }
+//                        },
+//                        dataFilter: function(data, type) {
+//                            var da=JSON.parse(data).data;
+//                            if(zudp.util.isBoolean(da)){
+//                                return da;
+//                            }else{
+//                                return false;
+//                            }
+//                        }
+//                    }
+//                },
                 timeZone:"required",
 
 //                identification:{
@@ -376,10 +317,10 @@
                 }
             },
             messages: {
-                title: {
-                    required: "请输入新闻标题",
-                    remote: "新闻标题已存在"
-                },
+//                title: {
+//                    required: "请输入新闻标题",
+//                    remote: "新闻标题已存在"
+//                },
                 timeZone: "时区不能为空",
 //                identification: {
 //                    required: "请输入岗位标识",
@@ -419,8 +360,8 @@
                 }else{
                     UE.getEditor('content').setContent("");
                 }
-
                 var d = data;
+                console.info(data);
                 var attachPaths = d.attachPaths;
                 var attachNames = d.attachNames;
                 var attachIds = d.attachIdss;
@@ -463,19 +404,21 @@
                 data.contentnohtml=getContentTxt();
                 data = JSON.stringify(data);
 
-//                debugger
                 var mymesg = "新建";
                 var id=$("#id").val();
-                if ($("#id").val() != '') {
+                if ($("#id").val() != '') { //编辑的保存按钮
+                    alert("修改");
+                    console.info(data);
                     mymesg = "修改";
-                    var data = zudp.util.formData2json("form");
                     zudp.ajax(urlstr +'/'+id).put(data).then(function (da) {
 
                         zudp.plugin.dialog("success").alert(mymesg + "成功" + "！", "提示");
                         dataTable.ajax.reload();
                         $(".modal-form").modal("hide");
                     });
-                }else {
+                }else {     //新增的保存按钮
+                    alert("新建");
+                    console.info(data);
                     zudp.ajax(urlstr + "/saveNews").post(data).then(function (da) {
 
                         zudp.plugin.dialog("success").alert(mymesg + "成功" + "！", "提示");
@@ -817,7 +760,7 @@
             swf: '/css/third/Uploader.swf',
             auto: true, //自动提交保存
             // 文件接收服务端。
-            server: '/upoladOfGuest/custom',
+            server: '/uploadOfGuest/custom',
 
             // 选择文件的按钮。可选。
             // 内部根据当前运行是创建，可能是input元素，也可能是flash.
@@ -878,7 +821,7 @@
         var $attachPath = $("input[name='attachPath']");
         $.each($attachPath, function (k, v) {
             tempAttachPath.push($(v).val());
-        })
+        });
         return tempAttachPath;
     }
     //获取在节点上的文件路名称
@@ -887,17 +830,17 @@
         var $attachName = $("input[name='attachName']");
         $.each($attachName, function (k, v) {
             tempAttachName.push($(v).val());
-        })
+        });
         return tempAttachName;
     }
 
     //获取所有附件Ids
     function getAttachIdss() {
         var tempAttachIdss = [];
-        var $attachIdss = $("#attachIdss").val().split(",");
-        $.each($attachIdss, function (k, v) {
-            tempAttachIdss.push(v);
-        })
+        var fid = $("input[name='fid']");
+        $.each(fid, function (k, v) {
+            tempAttachIdss.push($(v).val());
+        });
         return tempAttachIdss;
     }
 

@@ -22,6 +22,11 @@ public class MMNewsService extends FileBusinessService<MMNews> {
         return newsDao.find_threeNews();
     }
 
+//    //根据时区查询前三条数据
+//    public ArrayList<MMNews> find_threeNewsTime(String timeZone){
+//        return newsDao.find_threeNewsTime(timeZone);
+//    }
+
     /**
      * 根据id查找新闻
      */
@@ -34,6 +39,13 @@ public class MMNewsService extends FileBusinessService<MMNews> {
      */
     public void add_newsClicks(String id){ newsDao.add_newsClicks(id);
     }
+
+//    /**
+//     * 根据时区查询所有
+//     */
+//    public ArrayList<MMNews> find_allNews(String timeZone){
+//        return newsDao.find_allNews(timeZone);
+//    }
 
     /**
      * 查询所有
