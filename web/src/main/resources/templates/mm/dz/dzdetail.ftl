@@ -154,7 +154,7 @@
                        var info = infoList[i];
                        likeCommten += '  <div class="de-getlists flex">\n' +
                                '                <div class="de-stat"><img src="/mm/img/star.jpg" alt=""></div>\n' +
-                               '                <div class="de-sum">\n' +
+                               '                <div class="de-sum flex-1">\n' +
                                '                    <div class="de-name">'+info.likePID+'</div>\n' +
                                '                    <div class="de-cont">'+info.comment+'</div>\n' +
                                '                </div>\n' +
