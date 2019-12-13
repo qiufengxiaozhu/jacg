@@ -13,10 +13,21 @@ public interface MMNewsDao extends AbstractDao<MMNews>{
 
     public ArrayList<MMNews> find_threeNews();
 
+//    /**
+//     * 根据时区查询前三条数据
+//     */
+//    public ArrayList<MMNews> find_threeNewsTime(String timeZone);
+
+
     /**
      * 根据id查找新闻
      */
     public MMNews find_news(String id);
+
+//    /**
+//     * 根据时区查询所有
+//     */
+//    public ArrayList<MMNews> find_allNews(String timeZone);
 
     /**
      * 查询所有

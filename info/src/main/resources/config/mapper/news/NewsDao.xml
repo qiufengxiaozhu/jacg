@@ -49,14 +49,6 @@
         <if test="endTime!=null and endTime!=''">
             and  #{endTime} >= `news_date` and n.status = '已发布状态'
         </if>
-        <if test="timeZone!=null and timeZone!=''">
-            <if test="timeZone == '1' ">
-                and 1=1
-            </if>
-            <if test="timeZone != '1' ">
-                and `time_zone` = #{timeZone}
-            </if>
-        </if>
         ORDER BY n.news_date desc
     </select>
 

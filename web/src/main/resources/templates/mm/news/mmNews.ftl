@@ -75,15 +75,37 @@
                         <p class="">取消分享</p>
                     </div>
 
+                    <div class="bdsharebuttonbox">
+                        <a href="#" class="bds_more" data-cmd="more"></a>
+                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                        <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                    </div>
+
                 </div>
             </div>
         </div>
 
 	</div>
+
+
+
 	<script type="text/javascript" src="/mm/js/iscroll.js"></script>
 	<script type="text/javascript" src="/mm/js/navbarscroll.js"></script>
     <script type="text/javascript" src="/laydate/laydate.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
 	<script>
+
+        window._bd_share_config={
+            "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},
+            "share":{},
+            "image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},
+            "selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}
+        };
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=
+                'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 
         //定义全局变量 新闻id、标题、正文、图片路径
         var myId = "";
@@ -91,12 +113,6 @@
         var myHref = "";
         var myUrl = "";
         var myIp = '${ResultIP!}' + ':8080';
-
-        //分享内容的链接,链接一定要用encodeURIComponent处理一下，不然分享之后的链接会没有参数
-//        window.shareUrl = encodeURIComponent(location.href);
-//        alert(window.shareUrl);
-//        alert(location.href);
-
 
         //日历控件
         lay('#version').html('-v'+ laydate.v);
@@ -110,15 +126,17 @@
          */
         function getNews(id,title, url, picurl) {
 
-            <#--alert("title : " + title+"   "+'${ResultIP!}');-->
-//            alert(myPicurl);
             $(".fx-fixed").show();
             myId = id;
             myTitle = title;
             myUrl = url;
             myPicurl = myIp + picurl;
-            window.shareUrl = '/mm/news/newsDetail/'+myId+'?type=1';
+            myHref = 'http://'+myIp+'/mm/news/newsDetail/'+myId+'?type=1';
         }
+
+
+
+
 
         /**
          * 微信分享
@@ -126,7 +144,42 @@
         $("#weixin").on("click",function(){
             alert("微信分享");
 
+//            var fg = true; //防止微信二维码重复生成的bug
+//            var path = window.document.location.href;
+//            $('.new_qrcode').fadeIn(500);
+//            if(fg){
+//                $("#qrcode").qrcode({
+//                    text: path,
+//                    //设置二维码内容
+//                     pic: "https://lenzetech.com/public/static/upload/image/aboutUs/news-01.png",
+//                     render: "table", //设置渲染方式
+//                     width: 200,    // 设置宽度,默认生成的二维码大小是 256×256
+//                     height: 200,      // 设置高度
+//                     argin: "auto",
+//                     typeNumber: -1,   //计算模式
+//                     background: "#fff", //背景颜色
+//                     foreground: "#000" //前景颜色
+//                     });
+//            }
+//            fg = false;
+
+            function weixinShareTimeline(title,desc,link,imgUrl){
+                WeixinJSBridge.invoke('shareTimeline',{
+                    "img_url":imgUrl,
+                    //"img_width":"640",
+                    //"img_height":"640",
+                    "link":link,
+                    "desc": desc,
+                    "title":title
+                });
+            }
+
+
         });
+
+
+
+
 
         /**
          *  微博分享
@@ -135,11 +188,11 @@
             var d= window;
 //            alert(myTitle + myUrl + myPicurl);    //http://service.weibo.com/share/share.php? //http://v.t.sina.com.cn/share/share.php?
                 var sharesinastring='http://service.weibo.com/share/share.php?' +
-                        'title='+myTitle+
-                        '&url='+d.+
-                        '&content=utf-8' +
-                        '&sourceUrl='+myUrl+
-                        '&pic='+myPicurl;
+                    'title='+myTitle+
+                    '&url='+d.myHref+
+                    '&content=utf-8' +
+                    '&sourceUrl='+myUrl+
+                    '&pic='+myPicurl;
                 window.open(sharesinastring,'newwindow','height=400,width=400,top=100,left=100');
 
         });
@@ -175,9 +228,6 @@
          * 进入新闻详情页面
          */
         function goNewDetail(obj){
-
-//            alert(obj);
-
             window.location.href='/mm/news/newsDetail/'+obj+'?type=1';
 
         }
