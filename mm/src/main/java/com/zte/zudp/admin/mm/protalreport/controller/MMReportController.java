@@ -9,10 +9,12 @@ import com.zte.zudp.admin.mm.integrate.service.MMIntegrateService;
 import com.zte.zudp.admin.mm.protalreport.entity.MMReport;
 import com.zte.zudp.admin.mm.protalreport.service.MMReportService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping(value = "/report")
@@ -38,6 +40,13 @@ public class MMReportController {
                 return "redirect:/mm/news/index";
         }
         return null;
+    }
+
+    @RequestMapping("/myreport")
+    public String myReport(Model model){
+        List<MMReport> report = mmReportService.show();
+        model.addAttribute("list",report);
+        return "/mm/report/my-report";
     }
 
     /**

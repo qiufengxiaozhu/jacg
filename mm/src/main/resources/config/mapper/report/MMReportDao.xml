@@ -6,10 +6,12 @@
 
 
     <select id="selAll" resultType="java.util.List" useCache="false">
-        SELECT  id,title,category,name,telephone,place
+        SELECT  id,title,category,name,telephone,place,
+        DATE_FORMAT(report_date,'%Y-%m') as yearStr,
+        DATE_FORMAT(report_date,'%d') as dayStr
         FROM zmj_report
         WHERE  del!=1
-        ORDER BY consult_date desc
+        ORDER BY report_date desc
     </select>
 
     <select id="selById" resultType="com.zte.zudp.admin.mm.protalreport.entity.MMReport">
