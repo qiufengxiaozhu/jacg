@@ -92,6 +92,8 @@ public class MMComplainController {
     @RequestMapping(value = "/addComplaining", method = RequestMethod.POST)
     public String addComplaining(MMComplainEntity complainEntity,
                                  RedirectAttributes redirectAttributes) {
+        if (complainEntity.getContactUser() == null || "".equals(complainEntity.getContactUser()))
+            complainEntity.setContactUser("123");
         int i = service.saveOne(complainEntity);
         redirectAttributes.addFlashAttribute("contactUser", complainEntity.getContactUser());
 
