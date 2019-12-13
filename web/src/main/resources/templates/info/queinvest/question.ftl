@@ -90,7 +90,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">题目名称：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="contents" maxlength="64" id="name" placeholder="题目名称" class="form-control">
+                                <input type="text" name="contents" maxlength="64" id="contents" placeholder="题目名称" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -100,7 +100,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">题目类型：</label>
                             <div class="col-sm-6">
-                                <select id="category" name="questionType" class="form-control"><select>
+                                <select id="category" name="questionType" class="form-control" ><select>
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -108,10 +108,10 @@
                         </div>
 
 
-                        <div class="form-group" id="choiceText01">
+                        <div class="form-group" id="ct1">
                             <label class="col-sm-3 control-label my-control-label ">选项一：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText01" maxlength="64" id="choiceText010" placeholder="选项一" class="form-control">
+                                <input type="text" name="choiceText01" maxlength="64" id="choiceText011" placeholder="选项一" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -119,7 +119,7 @@
                         </div>
 
 
-                        <div class="form-group" id="choiceText02">
+                        <div class="form-group" id="ct2">
                             <label class="col-sm-3 control-label my-control-label ">选项二：</label>
                             <div class="col-sm-6">
                                 <input type="text" name="choiceText02" maxlength="64" id="choiceText021" placeholder="选项二" class="form-control">
@@ -129,10 +129,10 @@
                             </div>
                         </div>
 
-                        <div class="form-group" id="choiceText03">
+                        <div class="form-group" id="ct3">
                             <label class="col-sm-3 control-label my-control-label ">选项三：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText03" maxlength="64" id="choiceText032" placeholder="选项三" class="form-control">
+                                <input type="text" name="choiceText03" maxlength="64" id="choiceText031" placeholder="选项三" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -140,10 +140,10 @@
                         </div>
 
 
-                        <div class="form-group" id="choiceText04">
+                        <div class="form-group" id="ct4">
                             <label class="col-sm-3 control-label my-control-label ">选项四：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText04" maxlength="64" id="choiceText043" placeholder="选项四" class="form-control">
+                                <input type="text" name="choiceText04" maxlength="64" id="choiceText041" placeholder="选项四" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -184,6 +184,29 @@
                 <#--表单-->
                     <form class="form-horizontal" id="form-addOption">
                         <input type="hidden" class="testId" name="id" id="id">
+
+
+                        <#--<div class="form-group">-->
+                            <#--<label class="col-sm-3 control-label my-control-label ">题目名称：</label>-->
+                            <#--<div class="col-sm-6">-->
+                                <#--<input type="text" name="contents" maxlength="64" id="contents02" placeholder="题目名称" class="form-control">-->
+                            <#--</div>-->
+                            <#--<div>-->
+                                <#--<i class="i_context my-i_context">*</i>-->
+                            <#--</div>-->
+                        <#--</div>-->
+
+                        <#--<div class="form-group">-->
+                            <#--<label class="col-sm-3 control-label my-control-label ">题目类型：</label>-->
+                            <#--<div class="col-sm-6">-->
+                                <#--<select id="category" name="questionType" class="form-control" ><select>-->
+                            <#--</div>-->
+                            <#--<div>-->
+                                <#--<i class="i_context my-i_context">*</i>-->
+                            <#--</div>-->
+                        <#--</div>-->
+
+
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项一：</label>
@@ -291,7 +314,6 @@
         });
 
 
-
         findList();
 
         var obj={
@@ -362,12 +384,14 @@
                             var addOptionStr="";
 
 
-                                editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
+                                editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}" id="edit"><i class="fa fa-pencil"></i>编辑</button>';
 
                                 delStr = zudp.template.delBtn;
-                                detailStr = zudp.template.detailBtn;
-                                //添加选项
-                                addOptionStr='<button  id="row-add-test" class="btn btn-info btn-sm " value="{id}"><i class="fa fa-pencil"></i>添加选项</button>';
+//                                detailStr = zudp.template.detailBtn;
+                            detailStr = '<button class="btn btn-info btn-sm row-detail" value="{id}" id="detail"><i class="fa fa-pencil"></i>详情</button>';
+
+                                    //添加选项
+                                addOptionStr='<button id="row-add-test" class="btn btn-info btn-sm " value="{id}"><i class="fa fa-pencil"></i>添加选项</button>';
 
                             if(data.status == '0'){ // 0->此题目没有选项的状态
                                 btn += editStr +"&nbsp;" + delStr +"&nbsp;" + detailStr +"&nbsp;"+addOptionStr;
@@ -387,8 +411,9 @@
 
     }
 
+
+// 添加选项
         $(document).on("click", '#row-add-test', function (e) {
-            // button -->id
             //清除冒泡
             if (e && e.stopPropagation) {
                 e.stopPropagation();
@@ -396,12 +421,9 @@
                 window.e.cancelBubble = true;
             }
             var id = $("#row-add-test").val();
-//            alert(id);
             // 模态框的弹出
             $(".modal-form-content").modal("show");
             $(".testId").val(id);
-
-            /* $(".modal-form-content").addClass("test-form").removeClass("create-form detail-form");*/
 
             //修改标题
             var titleText = zudp.util.render(obj.title, {"type02": "添加选项"});
@@ -410,44 +432,53 @@
             // 全部解除禁用
             $("#addOption").find("*[name]").prop("disabled", false);
 
-
-//            alert("1");
         });
 
 
         //校验保存
         $(document).on("click", "#test-save-btn", function () {
-//            var data = zudp.util.formData2json("form-addOption");
+
            var choiceText01= $("#choiceText01").val();
            var choiceText02= $("#choiceText02").val();
            var choiceText03= $("#choiceText03").val();
            var choiceText04= $("#choiceText04").val();
             var idJson = $("#row-add-test").val();
+            var contents = $("#contents02").val();
+            var questionType = $("#category").val();
 
             var obj = {
                 choiceText01:choiceText01,
                 choiceText02:choiceText02,
                 choiceText03:choiceText03,
                 choiceText04:choiceText04,
-                idJson:idJson
+                idJson:idJson,
+                contents:contents,
+                questionType:questionType
             };
 
             var objJson = JSON.stringify(obj);
 
+            // 添加题目 并且更新题目状态
             zudp.ajax("/api/option/addOption").post(objJson).then(function (value) {
-                // 关闭模态框
+
+
+                    // 关闭模态框
                 $(".modal-form-content").modal("hide");
                 // 清空输入框的
                 zudp.plugin.form("#form-addOption").reset();
-//                    }
-            })
 
-        });
+//                document.location.reload();
+                location.reload();
+
+                })
+
+
+
 
     });
 
 
-
+    });
 
 
     // 获取问卷类型的下拉框
@@ -491,13 +522,30 @@
         });
     };
 
-
     // 隐藏选项输入框  新建
     $(document).on("click", '#add-btn', function () {
-        $("#choiceText01").css("display","none");	//隐藏选项
-        $("#choiceText02").css("display","none");	//隐藏选项
-        $("#choiceText03").css("display","none");	//隐藏选项
-        $("#choiceText04").css("display","none");	//隐藏选项
+        $("#ct1").css("display","none");	//隐藏选项
+        $("#ct2").css("display","none");	//隐藏选项
+        $("#ct3").css("display","none");	//隐藏选项
+        $("#ct4").css("display","none");	//隐藏选项
+
+    });
+
+
+    // 隐藏选项输入框  编辑
+    $(document).on("click", '#edit', function () {
+        $("#ct1").css("display","none");	//隐藏选项
+        $("#ct2").css("display","none");	//隐藏选项
+        $("#ct3").css("display","none");	//隐藏选项
+        $("#ct4").css("display","none");	//隐藏选项
+
+    });
+    // 隐藏选项输入框  详情
+    $(document).on("click", '#detail', function () {
+        $("#ct1").css("display","block");	//隐藏选项
+        $("#ct2").css("display","block");	//隐藏选项
+        $("#ct3").css("display","block");	//隐藏选项
+        $("#ct4").css("display","block");	//隐藏选项
 
     });
 

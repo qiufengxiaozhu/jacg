@@ -29,12 +29,16 @@ public class OptionContrller extends AbstractCRUDController<Options>{
     @Autowired
     private OptionService optionService;
 
+    @Autowired
+    private QuestionService questionService;
+
     /**
      * 添加选项
      */
    @JSON
     @RequestMapping(value = "/addOption", method =RequestMethod.POST )
     public void addOption(@RequestBody Options t) {
+       String idJson = t.getIdJson();
        if(t.getId()==null){// 如果为空
            String uuid =UUID.randomUUID().toString();
            t.setId(uuid);
@@ -43,6 +47,8 @@ public class OptionContrller extends AbstractCRUDController<Options>{
 
        }
        optionService.addOption(t);
+       questionService.updateQuestionStatus(idJson);
+
 //        }
     }
 

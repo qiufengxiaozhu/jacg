@@ -9,6 +9,45 @@ import java.util.List;
  */
 public class Questions extends DataEntity{
 
+
+
+    private String choiceText01;
+    private String choiceText02;
+    private String choiceText03;
+    private String choiceText04;
+
+    public String getChoiceText01() {
+        return choiceText01;
+    }
+
+    public void setChoiceText01(String choiceText01) {
+        this.choiceText01 = choiceText01;
+    }
+
+    public String getChoiceText02() {
+        return choiceText02;
+    }
+
+    public void setChoiceText02(String choiceText02) {
+        this.choiceText02 = choiceText02;
+    }
+
+    public String getChoiceText03() {
+        return choiceText03;
+    }
+
+    public void setChoiceText03(String choiceText03) {
+        this.choiceText03 = choiceText03;
+    }
+
+    public String getChoiceText04() {
+        return choiceText04;
+    }
+
+    public void setChoiceText04(String choiceText04) {
+        this.choiceText04 = choiceText04;
+    }
+
     /**
      * 题干
      */
@@ -71,42 +110,6 @@ public class Questions extends DataEntity{
 
     private String name;
 
-    private String choiceText01;
-    private String choiceText02;
-    private String choiceText03;
-    private String choiceText04;
-
-    public String getChoiceText01() {
-        return choiceText01;
-    }
-
-    public void setChoiceText01(String choiceText01) {
-        this.choiceText01 = choiceText01;
-    }
-
-    public String getChoiceText02() {
-        return choiceText02;
-    }
-
-    public void setChoiceText02(String choiceText02) {
-        this.choiceText02 = choiceText02;
-    }
-
-    public String getChoiceText03() {
-        return choiceText03;
-    }
-
-    public void setChoiceText03(String choiceText03) {
-        this.choiceText03 = choiceText03;
-    }
-
-    public String getChoiceText04() {
-        return choiceText04;
-    }
-
-    public void setChoiceText04(String choiceText04) {
-        this.choiceText04 = choiceText04;
-    }
 
 
     public String getName() {

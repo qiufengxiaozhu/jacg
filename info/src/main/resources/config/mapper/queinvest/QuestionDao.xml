@@ -114,93 +114,13 @@
         left join  jacg_options t2 on t1.id = t2.questions_id
         where t1.id=#{id}
     </select>
-
-<!--新增简单题-->
-    <!--<insert id="saveContents" >-->
-<!--insert into jacg_questions-->
-         <!--(id,-->
-        <!--contents,-->
-        <!--create_user,-->
-        <!--create_date,-->
-        <!--update_user,-->
-        <!--update_date,-->
-        <!--del,-->
-        <!--val01)-->
-    <!--VALUES-->
-    <!--( #{id},-->
-      <!--#{contents},-->
-      <!--#{number} ,-->
-      <!--#{createUser.id},-->
-      <!--#{createDate},-->
-      <!--#{updateUser.id},-->
-      <!--#{updateDate},-->
-      <!--'0',-->
-      <!--'预留字段'-->
-     <!--);-->
-    <!--</insert>-->
-
-
-
-    <!--<select id="checkName" resultType="java.lang.Integer">-->
-    <!--SELECT COUNT(1) FROM oa_post-->
-    <!--WHERE del =  '0'-->
-    <!--AND `name` = #{name}-->
-    <!--<if test="id!=null and id !=''">-->
-    <!--AND id != #{id}-->
-    <!--</if>-->
-    <!--</select>-->
-    <!--<select id="checkIdentification" resultType="java.lang.Integer">-->
-    <!--SELECT COUNT(1) FROM oa_post-->
-    <!--WHERE del = '0'-->
-    <!--AND identification = #{identification}-->
-    <!--<if test="id!=null and id !=''">-->
-    <!--AND id != #{id}-->
-    <!--</if>-->
-    <!--</select>-->
-
-    <!--<insert id="insert">-->
-    <!--INSERT INTO oa_post (-->
-    <!--id, name,mark,-->
-    <!--create_date,-->
-    <!--create_user,-->
-    <!--update_date,-->
-    <!--update_user,-->
-    <!--del,-->
-    <!--identification-->
-    <!--)-->
-    <!--VALUE (-->
-    <!--#{id}, #{name}, #{mark},-->
-    <!--#{createDate},-->
-    <!--#{createUser.id},-->
-    <!--#{updateDate},-->
-    <!--#{updateUser.id},-->
-    <!--'0',-->
-    <!--'111'-->
-    <!--)-->
-    <!--</insert>-->
-    <!--<update id="update" parameterType="com.zte.zudp.admin.modules.mm.entity.PostEntity">-->
-    <!--UPDATE oa_post m SET-->
-    <!--m.name = #{name},-->
-    <!--m.mark = #{mark},-->
-    <!--m.update_date = #{updateDate},-->
-    <!--m.update_user = #{updateUser.id}-->
-    <!--&lt;!&ndash;  m.identification = #{identification} &ndash;&gt;-->
-    <!--WHERE m.id = #{id}-->
-    <!--</update>-->
-
-    <!--<delete id="delete">-->
-    <!--UPDATE oa_post-->
-    <!--SET del = 1-->
-    <!--WHERE id = #{id}-->
-    <!--</delete>-->
-    <!--<delete id="batchDelete">-->
-    <!--UPDATE oa_post SET del = 1-->
-    <!--WHERE id IN-->
-    <!--<foreach collection="array" item="i" separator="," open="(" close=")">-->
-    <!--#{i}-->
-    <!--</foreach>-->
-    <!--</delete>-->
-
+<!--修改题目状态-->
+<update id="updateQuestionStatus">
+    update
+    jacg_questions t1
+     set t1.status = '1'
+      where t1.id =#{idJson}
+</update>
 
 
 
