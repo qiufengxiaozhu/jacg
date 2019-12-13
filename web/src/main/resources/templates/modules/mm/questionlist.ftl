@@ -1,3 +1,4 @@
+<#--
 <!DOCTYPE>
 <html>
 <head>
@@ -49,7 +50,7 @@
                     </button>
                     </@hasPermission>
 
-                    <#--搜索条件(用于模糊查询)  名称 标题 上报人  -->
+                    &lt;#&ndash;搜索条件(用于模糊查询)  名称 标题 上报人  &ndash;&gt;
                         <div class='querybtn my-querybtn'>
                             <input type='text' name='name' id='search_name' placeholder='请输入题目内容' class='form-control search-input'>
 
@@ -84,7 +85,7 @@
 
 
 
-<#--新增题目 模态框-->
+&lt;#&ndash;新增题目 模态框&ndash;&gt;
 <div class="modal_a inmodal fade modal-form" id="add-btn" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -95,9 +96,9 @@
             </div>
             <small class="font-bold">
                 <div class="modal-body fix-height" style="height: 350px">
-                <#--表单-->
+                &lt;#&ndash;表单&ndash;&gt;
                     <form class="form-horizontal" id="post_form">
-                      <#--  <input type="hidden" name="id" id="id">-->
+                      &lt;#&ndash;  <input type="hidden" name="id" id="id">&ndash;&gt;
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label my-control-label ">题目内容：</label>
@@ -123,7 +124,7 @@
                 </div>
 
                 <div class="modal-footer">
-                <#--<input type="hidden" id="add-type">-->
+                &lt;#&ndash;<input type="hidden" id="add-type">&ndash;&gt;
                     <button type="button" class="btn btn-white" data-dismiss="modal_a">关闭</button>
                     <button type="button" class="btn btn-primary" id="save-btn">保存</button>
                 </div>
@@ -426,3 +427,4 @@
 </script>
 </body>
 </html>
+-->
