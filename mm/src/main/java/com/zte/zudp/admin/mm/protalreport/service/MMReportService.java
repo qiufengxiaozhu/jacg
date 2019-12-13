@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -27,6 +28,10 @@ public class MMReportService  extends FileBusinessService<MMReport>{
      */
     public int insConsult(MMReport mmReport) {
         return mmReportDao.insReport(mmReport);
+    }
+
+    public List<MMReport> show(){
+        return mmReportDao.selAll();
     }
 
     @Override
