@@ -94,11 +94,33 @@
                         <#--                                <a href="#"><img src="/mm/img/arr15.png" alt=""></a>-->
                         <#--                            </div>-->
                         <#--                        </div>-->
+                        <#--                        <div class="theme">-->
+                        <#--                            <div style="width:80;height: 35px;position: relative;margin:0 auto">-->
+                        <#--                                <div id="xg_rar">上传附件</div>-->
+                        <#--                            </div>-->
+                        <#--                            <div id="fileShowName" class="port" style="text-align: center;margin:0 auto"></div>-->
+                        <#--                        </div>-->
                         <div class="theme">
-                            <div style="width:80;height: 35px;position: relative;margin:0 auto">
-                                <div id="xg_rar">上传附件</div>
+                            <div class="form-group" style="">
+                                <div style="width:80;height: 35px;position: relative;margin:0 auto">
+                                    <div id="xg_rar">上传图片附件</div>
+                                </div>
+                                <div id="fileShowName" style="text-align: center;margin:0 auto"></div>
                             </div>
-                            <div id="fileShowName" class="port" style="text-align: center;margin:0 auto"></div>
+
+                            <div class="form-group" style="">
+                                <div style="width:80;height: 35px;position: relative;margin:0 auto">
+                                    <div id="yy">上传语音附件</div>
+                                </div>
+                                <div id="yyfileShowName" style="text-align: center;margin:0 auto"></div>
+                            </div>
+
+                            <div class="form-group" style="">
+                                <div style="width:80;height: 35px;position: relative;margin:0 auto">
+                                    <div id="sp">上传视频附件</div>
+                                </div>
+                                <div id="spfileShowName" style="text-align: center;margin:0 auto"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -137,8 +159,6 @@
             });
 
 
-            //初始化 webUploader
-            initUpload();
         });
 
 
@@ -202,8 +222,40 @@
             window.location.href = '/mm/news/index';
         }
 
-        function initUpload() {
+        var sys_url=window.location.host;
+        var tp="#xg_rar";
+        var tpgs="bmp,jpg,png,gif,jpeg";
+
+        var yy="#yy";
+        var yygs="mp3";
+
+        var sp="#sp";
+        var spgs="mp4";
+
+        $(function () {
+            $("#xg_rar").html('上传图片附件');
+            $("#fileShowName").html("<br>");
+
+            $("#yy").html('上传语音附件');
+            $("#yyfileShowName").html("<br>");
+
+            $("#sp").html('上传视频附件');
+            $("#spfileShowName").html("<br>");
+
+            $("#attachIdss").val('');
+            //初始化上传工具
+            initUpload(tp,tpgs,3,1*1024*1024);
+            initUpload(yy,yygs,2,5*1024*1024);
+            initUpload(sp,spgs,2,10*1024*1024);
+        });
+        function initUpload(dz,gs,num,singleSize) {
             var uploader = WebUploader.create({
+                //上传数量限制
+                fileNumLimit: num,
+
+                //限制上传单个文件大小
+                fileSingleSizeLimit: singleSize,
+
                 // swf文件路径
                 swf: '/css/third/Uploader.swf',
                 auto: true,
@@ -212,33 +264,66 @@
 
                 // 选择文件的按钮。可选。
                 // 内部根据当前运行是创建，可能是input元素，也可能是flash.
-                pick: '#xg_rar',
+                pick: dz,
 
                 // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
                 resize: false,
                 //重复上传
                 duplicate: true,
                 accept: {
-                    extensions: 'bmp,jpg,png',
+                    extensions: gs,
                     title: 'file',
                     mimeTypes: '*/*'
                 }
             });
-            // 文件上传成功，给item添加成功class, 用样式标记上传成功。
             uploader.on('uploadSuccess', function (file, response) {
+                //debugger;
                 var name = file.name;
                 var fileurl = response.data;
-                $("#fileShowName").append("<p>" +
-                    "<b>" + name + "</b>" +
-                    "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
-                    "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
-                    "<input type='hidden' name='attachNames' value='" + name + "'>" +
-                    "</p>");
+                var jw = fileurl.substring(fileurl.lastIndexOf('.'));
+                if (jw == '.bmp' || jw == '.jpg' || jw == '.gif' || jw == '.jpeg' || jw == '.png') {
+                    $("#fileShowName").append("<p>" +
+                        "<img src='" + fileurl + "' height='100px' width='50' > " +
+                        "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                        "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                        "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
+                        "<input type='hidden' name='attachNames' value='" + name + "'>" +
+                        "</p>");
+                } else if (jw == '.mp3') {
+                    $("#yyfileShowName").append("<p>" +
+                        "<audio controls>" +
+                        "<source src='" + fileurl + "' type='audio/mpeg'>" +
+                        "</audio>" +
+                        "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                        "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                        "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
+                        "<input type='hidden' name='attachNames' value='" + name + "'>" +
+                        "</p>");
+                } else if (jw == '.mp4') {
+                    $("#spfileShowName").append("<p>" +
+                        "<video  width='150' height='100' controls='controls' >" +
+                        "<source  src='" + fileurl + "' type='video/mp4' />" +
+                        "</video>" +
+                        "<input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;" +
+                        "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
+                        "<input type='hidden' name='attachPaths' value='" + fileurl + "'>" +
+                        "<input type='hidden' name='attachNames' value='" + name + "'>" +
+                        "</p>");
+                }
+            });
 
-                //change(response);
+            uploader.on("error", function (type) {
+                if (type == "Q_TYPE_DENIED") {
+                    alert("请上传" + gs + "格式文件");
+                } else if (type == "F_EXCEED_SIZE") {
+                    alert("单个文件大小不能超过" + singleSize / 1024 / 1024 + "M");
+                } else if (type == "Q_EXCEED_NUM_LIMIT") {
+                    alert("超出最大上传数量" + num - 1);
+                } else {
+                    alert("上传错误" + type)
+                }
             });
         }
-
         //删除，删除节点
         function deleteFile(obj) {
             var fid = $(obj).parent().find("input[name='fid']").eq(0).val();
@@ -251,6 +336,8 @@
             }
             $(obj).parent().remove();
         }
+
+
     </script>
 </body>
 </html>

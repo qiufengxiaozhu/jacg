@@ -232,8 +232,8 @@
                             "<a href='//" + sys_url + "/" + attachPaths[i] + "' download='" + attachNames[i] + "'>" +
                             attachNames[i] + "</a>" +
                             "<span style='color:red' onclick='deleteFile(this)'>删除</span>" +
-                            "<input type='hidden' name='attachPaths' value='" + attachPaths[i] + "'>" +
-                            "<input type='hidden' name='attachNames' value='" + attachNames[i] + "'>" +
+                            "<input type='hidden' value='" + attachPaths[i] + "'>" +
+                            "<input type='hidden' value='" + attachNames[i] + "'>" +
                             "</p>";
                     }
                 } else {

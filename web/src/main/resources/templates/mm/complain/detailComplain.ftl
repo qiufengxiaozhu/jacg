@@ -55,7 +55,23 @@
                 <div class="inv-right">
                     <#if entity.attachPaths?exists && entity.attachPaths??>
                         <#list 0..(entity.attachPaths!?size-1) as i>
-                            <img src='${entity.attachPaths[i]!}' class="inv-pic2" title="${entity.attachNames[i]!}">
+                            <#if entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".bmp" ||
+                            entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".png" ||
+                            entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".jpg" ||
+                            entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".gif" ||
+                            entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".jpeg"
+                            >
+                                <img src='${entity.attachPaths[i]!}' class="inv-pic2" title="${entity.attachNames[i]!}">
+                            <#elseif entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".mp3">
+                                <audio controls>
+                                    <source src='${entity.attachPaths[i]!}' type="audio/mpeg">
+                                    您的浏览器不支持 audio 元素。
+                                </audio>
+                            <#else >
+                                <video  width="150" height="100" controls="controls" >
+                                    <source  src="${entity.attachPaths[i]!}" type="video/mp4" />
+                                </video>
+                            </#if>
                         </#list>
                     </#if>
                 </div>
