@@ -9,9 +9,17 @@
     <script type="text/javascript" src="/mm/js/swiper.min.js"></script>
     <script src="/mm/js/zudp.js"></script>
     <script src="/mm/js/toastr.min.js"></script>
-
     <link rel="stylesheet" href="/mm/css/index.css">
     <link rel="stylesheet" href="/mm/css/swiper.min.css">
+    <style>
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="/mm/css/css-loader.css">
     <style>
         .thumbs{margin-top:0;border-bottom: 1px solid #efefef}
         .public>div{border-right: 1px solid #efefef;width: 25%;text-align: center}
@@ -164,10 +172,13 @@
 
     </div>
 </div>
+<!-- Loader -->
+<div class="loader loader-smartphone is-active" data-screen="检测中..." id="checkIng"></div>
 </body>
 <script>
     var timeZone;//当前时区
     $(function(){
+        $("#checkIng").hide();
         var mySwiper = new Swiper('.swiper-container',{
             direction: 'horizontal',
             loop: true,
@@ -190,21 +201,6 @@
             $(".slt-city").hide();
             timeZone = $(".place-float .city-selected").attr("id");
             alert("timeZone:"+timeZone)
-
-          /*  alert(coord);
-            $.ajax({
-                url: "/mm/news/index",
-                type: "get",
-                data: {"coord":coord},
-                dataType: 'json',
-                contentType: 'application/json',
-                success: function (data){
-                   /!* location.reload();//页面刷新*!/
-                },
-                error:function () {
-                   // alert("请刷新页面")
-                }
-            });*/
         });
         $(".place-float .city-pos").on("click",function(){
             var index = $(".place-float .city-pos").index($(this));
@@ -217,7 +213,7 @@
             $("#address").addClass("city-selected");
             $("#address1").text(address);
         })
-    })
+    });
 
     function goPage(a){
         if(a==1){
@@ -285,6 +281,7 @@
   * 进入系统自检
   * */
     function goSystemCheck(){
+        $("#checkIng").show();
         $.ajax({
             url: "/xtCheckOut/isConnect",
             type: "post",
@@ -292,6 +289,7 @@
             contentType: 'application/json',
             success: function (data) {
                 console.log(data);
+                $("#checkIng").hide();
                 var msg = data.data;
                 if(msg.connect){
                     alert("网络无比畅通，尽情使用");

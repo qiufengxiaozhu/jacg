@@ -44,6 +44,7 @@ public class likeInfoController extends AbstractCRUDController<likeInfoEntity> {
     * */
     @PostMapping(value = "/findList")
     public List<likeEntity> findList(likeEntity likeEntity){
+        likeEntity.setPublishStatus("1");
         return likeService.findList(likeEntity);
     }
 

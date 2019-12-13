@@ -108,8 +108,6 @@
     function commentSubmit() {
         $('.cover').hide();
       var matterValue= $("#matter").val();
-      console.log(matterValue);
-      console.log(contentID);
         $.ajax({
             url: "/api/likeInfo/commentSubmit",
             type: "get",
@@ -119,7 +117,6 @@
             },
             dataType: 'json',
             success: function (data) {
-                console.log(data)
                 dzListInfo(); //评论列表更新
             }
         });
@@ -132,7 +129,6 @@
             data: {"id":id},
             dataType: 'json',
             success: function (data) {
-                console.log(data)
                 $("#"+id).html(data.data.likeCNum);
             }
         });
@@ -145,7 +141,6 @@
             data: {"contentID":contentID},
             dataType: 'json',
             success: function (data) {
-               console.log(data)
                 if(data != null){
                    var infoList  = data.data;
                    var likeName = '';
@@ -157,7 +152,6 @@
                            '        </div>';
                    for(var i=0;i<infoList.length;i++){
                        var info = infoList[i];
-                       likeTime = info.validTime;
                        likeCommten += '  <div class="de-getlists flex">\n' +
                                '                <div class="de-stat"><img src="/mm/img/star.jpg" alt=""></div>\n' +
                                '                <div class="de-sum">\n' +
@@ -173,7 +167,6 @@
                                '                </div>\n' +
                                '            </div>';
                    }
-                    $("#likePID").html(likeTime);
                     $("#comment").html(likeCommten);
                 }
             }
@@ -213,6 +206,7 @@
                     $("#title").text(likeInfo.title);
                     $("#content").html(likeInfo.content);
                     $("#likeNum").html(likeInfo.likeNum);
+                    $("#likePID").html(format(likeInfo.validTime));
                   /*  $("#validTime").html(format(likeInfo.validTime));*/
                 }
             },

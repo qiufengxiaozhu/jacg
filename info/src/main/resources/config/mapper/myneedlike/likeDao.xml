@@ -18,6 +18,8 @@
         <result column="likeNum" property="likeNum" />
         <result column="validStartTime" property="validStartTime" />
         <result column="validStopTime" property="validStopTime" />
+        <result column="likeStartTime" property="likeStartTime" />
+        <result column="likeStopTime" property="likeStopTime" />
         <result column="del" property="del" />
     </resultMap>
 
@@ -43,6 +45,23 @@
         </if>
         <if test="validStopTime!=null and validStopTime !=''">
             AND  valid_time &lt;= #{validStopTime}
+        </if>
+        <if test="likeStartTime!=null and likeStartTime !=''">
+            AND id IN (
+            SELECT
+            l.like_conten_id
+            FROM
+            like_info l
+            WHERE
+            del!=1
+            AND l.like_time >= #{likeStartTime}
+            AND l.like_time &lt;= #{likeStopTime}
+            GROUP BY
+            like_conten_id
+            )
+        </if>
+        <if test="publishStatus!=null and publishStatus !=''">
+            AND  publish_status = #{publishStatus}
         </if>
         ORDER BY create_date desc
     </select>
