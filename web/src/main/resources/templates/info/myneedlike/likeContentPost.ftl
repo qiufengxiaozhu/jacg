@@ -49,8 +49,8 @@
                             <input type='text' name='search' id='search_name' placeholder='请输入标题' class='form-control search-input'>
                             <input type="text" name="validStartTime" maxlength="64" id="validStartTime" placeholder="有效开始时间" class="form-control search-input">
                             <input type="text" name="validStopTime" maxlength="64" id="validStopTime" placeholder="有效结束时间" class="form-control search-input">
-                            <#--<input type="text" name="likeStratTime" maxlength="64" id="likeStratTime" placeholder="开始点赞时间" class="form-control search-input">-->
-                            <#--<input type="text" name="likeStopTime" maxlength="64" id="likeStopTime" placeholder="结束点赞时间" class="form-control search-input">-->
+                            <input type="text" name="likeStartTime" maxlength="64" id="likeStartTime" placeholder="点赞开始时间" class="form-control search-input">
+                            <input type="text" name="likeStopTime" maxlength="64" id="likeStopTime" placeholder="点赞结束时间" class="form-control search-input">
                             <button class='btn btn-primary mgl my-mgl research-btn' >
                                 搜索
                             </button>&nbsp;&nbsp;
@@ -245,10 +245,18 @@
         });
         //点赞时间  搜索框
         laydate.render({
-            elem: '#likeTime' //指定元素
-            ,range: true
-            ,change: function(value){
-                $('#likeTime').val(value);
+            elem: '#likeStartTime' //指定元素
+            ,format: 'yyyy/MM/dd'
+            ,done: function(value, date, endDate){
+                $('#likeStartTime').val(value);
+            }
+        });
+        //点赞时间  搜索框
+        laydate.render({
+            elem: '#likeStopTime' //指定元素
+            ,format: 'yyyy/MM/dd'
+            ,done: function(value, date, endDate){
+                $('#likeStopTime').val(value);
             }
         });
         $("#post_form").validate({
@@ -298,7 +306,6 @@
                 }
             },ignore: []
         });
-
         findList();
         var setValFun = function () {
             $("#xg_rar").html('上传附件');
@@ -400,11 +407,8 @@
             saveForm: saveFormFun,
 
         };
-
-
         //初始化增删改查参数
         initForm(obj);
-
     });
 
     //提示
@@ -427,27 +431,27 @@
             window.e.cancelBubble = true;
         }
         //获取到id
-        var id = $("#publishStr").val();
+        var id = $(this).val();
         zudp.ajax("/api/like/updatePublish").post(id).then(function (value) {
             // 刷新页面
-            document.location.reload();
+           document.location.reload();
         });
     });
 
     // 撤销发布
     $(document).on("click", '#noPublishStr', function (e) {
-
         if (e && e.stopPropagation) {
             e.stopPropagation();
         } else {
             window.e.cancelBubble = true;
         }
         //获取到id
-        var id = $("#noPublishStr").val();
+        var id = $(this).val();
         zudp.ajax("/api/like/updateNoPublish").post(id).then(function (value) {
             document.location.reload();
+            });
         });
-    });
+
 
     //列表数据初始化方法
     function findList() {
@@ -459,7 +463,9 @@
                     return {
                         "title":$("#search_name").val(),
                         "validStartTime":$("#validStartTime").val(),
-                        "validStopTime":$("#validStopTime").val()
+                        "validStopTime":$("#validStopTime").val(),
+                        "likeStartTime":$("#likeStartTime").val(),
+                        "likeStopTime":$("#likeStopTime").val()
                     }
                 })
                 .columns( [
@@ -604,7 +610,7 @@
         var $attachIdss = $("#attachIdss").val().split(",");
         $.each($attachIdss, function (k, v) {
             tempAttachIdss.push(v);
-        })
+        });
         return tempAttachIdss;
     }
 

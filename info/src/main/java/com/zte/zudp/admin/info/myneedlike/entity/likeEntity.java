@@ -27,6 +27,24 @@ public class likeEntity extends FileEntity {
     private long likeNum; //点赞数
     private String validStartTime; //有效开始时间
     private String validStopTime; //有效结束时间
+    private String likeStartTime; //点赞开始时间
+    private String likeStopTime; //点赞结束时间
+
+    public void setLikeStartTime(String likeStartTime) {
+        this.likeStartTime = likeStartTime;
+    }
+
+    public void setLikeStopTime(String likeStopTime) {
+        this.likeStopTime = likeStopTime;
+    }
+
+    public String getLikeStartTime() {
+        return likeStartTime;
+    }
+
+    public String getLikeStopTime() {
+        return likeStopTime;
+    }
 
     public void setValidStartTime(String validStartTime) {
         this.validStartTime = validStartTime;
@@ -70,13 +88,6 @@ public class likeEntity extends FileEntity {
 
     public void setLikeNum(long likeNum) {
         this.likeNum = likeNum;
-    }
-
-
-
-    public static long getSerialVersionUID() {
-
-        return serialVersionUID;
     }
 
     public String getTitle() {
