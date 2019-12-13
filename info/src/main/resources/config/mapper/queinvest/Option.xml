@@ -55,6 +55,27 @@
      )
 
     </insert>
+<!--<update id="addOption">
+    update jacg_options t1
+    left join  jacg_questions t2 on t2.id = t1.questions_id
 
+    set t1.id= #{id},
+        t1.questions_id =#{idJson},
+        t1.choiceText01 =#{choiceText01},
+        t1.choiceText02 =#{choiceText02},
+        t1.choiceText03=#{choiceText03},
+        t1.choiceText04=#{choiceText04},
+        t1.create_user= #{createUser.id},
+        t1.create_date = #{createDate},
+        t1.update_user =#{updateUser.id},
+        t1.update_date = #{updateDate},
+        t1.del ='0',
+        t1.val01 = '预留字段',
+        t2.contents = #{contents},
+        t2.questionType = #{questionType}
+
+        where t2.id = #{idJson}
+
+</update>-->
 
 </mapper>

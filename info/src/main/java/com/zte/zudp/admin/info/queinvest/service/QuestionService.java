@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional(readOnly = true, rollbackFor = Exception.class)
+@Transactional
 public class QuestionService extends BusinessService<Questions> {
 
     @Autowired
@@ -32,5 +32,13 @@ public class QuestionService extends BusinessService<Questions> {
      */
     public List<Dictionary> getList() {
         return  questionDao.getList();
+    }
+
+    /**
+     * 修改题目状态
+     * @param idJson
+     */
+    public void updateQuestionStatus(String idJson) {
+        questionDao.updateQuestionStatus(idJson);
     }
 }

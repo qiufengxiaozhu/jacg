@@ -4,6 +4,7 @@ import com.zte.zudp.admin.common.annotation.JSON;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointRest;
 import com.zte.zudp.admin.common.enums.AuthorizedType;
+import com.zte.zudp.admin.common.persistence.Result;
 import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
 import com.zte.zudp.admin.info.queinvest.QueinvestMenu;
 import com.zte.zudp.admin.info.queinvest.QuestionMenu;
@@ -13,10 +14,12 @@ import com.zte.zudp.admin.info.queinvest.entity.Questions;
 import com.zte.zudp.admin.info.queinvest.service.QuestionService;
 import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -39,15 +42,6 @@ public class QuestionContrller extends AbstractCRUDController<Questions>{
 @EndpointRest(id = "List01", name = "题目类型下拉", authorizedType = AuthorizedType.GUEST)
 public List<Dictionary> getlist() {
     List<Dictionary> list = questionService.getList();
-//    for (int i = 0; i < list.size(); i++) {
-//        if (list.get(i).getQuestionType().equals("0")) { //0：行政类 1：生活类 2：经济类
-//            list.get(i).setQuestionType("单选题");
-//        } else if (list.get(i).getQuestionType().equals("1")) {
-//            list.get(i).setQuestionType("多选题");
-//        } else if (list.get(i).getQuestionType().equals("2")) {
-//            list.get(i).setQuestionType("判断题");
-//        }
-//    }
     return list;
 }
 
@@ -70,6 +64,16 @@ public List<Dictionary> getlist() {
             question.setQuestionType("判断题");
         }
         return question;
+    }
+
+    /**
+     * 成功题目之后更新题目状态
+     * @param idJson
+     */
+    @PostMapping("/updateQuestionStatus")
+    public void updateQuestionStatus(@RequestParam("idJson") String idJson){
+         questionService.updateQuestionStatus(idJson);
+
     }
 
 
