@@ -59,7 +59,7 @@
 
         <div class="new-list">
             <#list Newslist! as news >
-                <div class="nlist-item flex " onclick="goNewDetail('${news.id}')"  id="${news.timeZone}">
+                <div class="nlist-item flex " onclick="goNewDetail('${news.id}')"  id="${news.timeZone!}">
                     <div class="nli-left">
                         <img src='${news.path!"/mm/img/login-top.png"}' alt="" class="">
                     </div>
