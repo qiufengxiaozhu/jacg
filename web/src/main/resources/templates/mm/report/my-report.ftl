@@ -14,7 +14,7 @@
     <div class="top flex flex-c-c">
         <div class="top-return"></div>
         <div class="return" onclick="goIndex()">返回</div>
-        <div class="advince">我的咨询</div>
+        <div class="advince">我的上报</div>
     </div>
     <div class="center">
         <#list list as report>
@@ -47,12 +47,16 @@
         </#list>
     </div>
 </div>
+        <form id="detail_form" action="/report/detail" method="post">
+            <input type="hidden" name="id" id="id"/>
+        </form>
 <script>
     function goIndex(){
         window.location.href='/mm/news/index';
     }
     function goDetail(id){
-        window.location.href='/consult/zxdetail/'+id;
+        $("#id").val(id);
+        $("#detail_form").submit();
     }
 
 </script>
