@@ -16,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.List;
 
@@ -72,14 +73,18 @@ public class likeController extends AbstractCRUDController<likeEntity>{
     @JSON
     @PostMapping(value = "/likeNum" )
     @EndpointRest(id = "likeNum", name = "", authorizedType = AuthorizedType.GUEST)
-    public likeEntity like(String id,String comment){
+    public likeEntity like(HttpSession session,String id, String comment){
         likeInfoEntity likeInfoEntity = new likeInfoEntity();
         likeInfoEntity.setId(String.valueOf(IDUtil.simpleId()));
         likeInfoEntity.setLikeTime(new Date());
         likeInfoEntity.setLikeContentId(id);
-        likeInfoEntity.setLikePID("最帅的人");
-        likeInfoEntity.setComment("666666666666666666666");
+        likeInfoEntity.setLikePID((String) session.getAttribute("userName"));
+        likeInfoEntity.setLikePhone((String) session.getAttribute("userPhone"));
         likeInfoEntity.setIcon("1");
+        List<likeInfoEntity> list = likeInfoService.findList(likeInfoEntity);
+        if(list.toArray().length > 0){
+            return likeService.get(id);
+        }
         likeInfoService.insert(likeInfoEntity);
         likeService.updateLikeNum(id);
         return   likeService.get(id);

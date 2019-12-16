@@ -15,6 +15,7 @@
         <result column="likeContentId" property="likeContentId" />
         <result column="likeTime" property="likeTime" />
         <result column="likeCNum" property="likeCNum"/>
+        <result column="likePhone" property="likePhone"/>
         <result column="del" property="del" />
     </resultMap>
 
@@ -27,11 +28,15 @@
         like_p_id as likePID,
         like_conten_id as likeContentId,
         like_time as likeTime,
-        like_c_num as likeCNum
+        like_c_num as likeCNum,
+        like_phone as likePhone
         from like_info
-        where del!=1   and comment != ''
+        where del!=1
         <if test="likeContentId!=null and likeContentId!=''">
             and like_conten_id = #{likeContentId}
+        </if>
+        <if test="likePID!=null and likePID!=''">
+            and like_p_id = #{likePID}
         </if>
         ORDER BY create_date desc
     </select>
@@ -45,7 +50,8 @@
         like_p_id as likePID,
         like_conten_id as likeContentId,
         like_time as likeTime,
-        like_c_num as likeCNum
+        like_c_num as likeCNum,
+        like_phone as likePhone
         from like_info
         where id=#{id}
     </select>
@@ -61,7 +67,8 @@
         like_conten_id,
         like_time,
         del,
-        like_c_num
+        like_c_num,
+        like_phone
         )
         VALUE (
         #{id},
@@ -71,7 +78,8 @@
         #{likeContentId},
         #{likeTime},
         '0',
-        0
+        0,
+        #{likePhone}
         )
     </insert>
 
@@ -89,4 +97,14 @@
         where
         like_info.id = #{id}
     </update>
+
+    <select id="chekeLike" resultMap="likeInfoMap">
+      SELECT
+	  *
+      FROM
+	like_info
+     WHERE
+	like_conten_id = #{likeContentId}
+	AND like_p_id = #{likePID}
+    </select>
 </mapper>
