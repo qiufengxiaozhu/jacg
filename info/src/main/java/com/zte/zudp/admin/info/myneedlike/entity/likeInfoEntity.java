@@ -19,6 +19,15 @@ public class likeInfoEntity extends DataEntity {
     private String likeContentId; //点赞内容ID
     private Date likeTime; //点赞时间
     private long likeCNum;// 评论点赞数
+    private String likePhone;//点赞人手机号
+
+    public String getLikePhone() {
+        return likePhone;
+    }
+
+    public void setLikePhone(String likePhone) {
+        this.likePhone = likePhone;
+    }
 
     public void setLikeCNum(long likeCNum) {
         this.likeCNum = likeCNum;

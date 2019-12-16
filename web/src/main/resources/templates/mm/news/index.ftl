@@ -9,6 +9,7 @@
     <script type="text/javascript" src="/mm/js/swiper.min.js"></script>
     <script src="/mm/js/zudp.js"></script>
     <script src="/mm/js/toastr.min.js"></script>
+    <script src="/mm/js/JquerySession.js"></script>
     <link rel="stylesheet" href="/mm/css/index.css">
     <link rel="stylesheet" href="/mm/css/swiper.min.css">
     <style>
@@ -113,7 +114,7 @@
         </div>
         <div class="center">
             <div class="flex public">
-                <div class="flex-1" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>周边雷达</p></div></div>
+                <div class="flex-1" onclick="getSession()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>周边雷达</p></div></div>
                 <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>地图服务</p></div></div>
                 <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>便民服务</p></div></div>
                 <div class="flex-1" onclick="goSystemCheck()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>系统自检</p></div></div>
@@ -214,7 +215,7 @@
             $("#address").text(address);
             $("#address").addClass("city-selected");
             $("#address1").text(address);
-        })
+        });
     });
 
     function goPage(a){
@@ -308,6 +309,17 @@
      */
     function goCountManage(){
         window.location.href='/mm/dz/cmanage';
+    }
+    /*
+     获取session传入的值
+    * */
+    function getSession(){
+        var userName =  ""+${Session.userName};
+        var userPhone = ${Session.userPhone};
+        console.log("userName:"+userName+"---userPhone:"+userPhone);
+    /*   var userName =  "<%=session.getAttribute("userName")%>";
+       var userPhone =  "<%=session.getAttribute("userPhone")%>";
+       alert("userName:"+userName+"---userPhone:"+userPhone);*/
     }
 </script>
 </html>

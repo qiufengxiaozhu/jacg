@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 
 /**
  * 我要点赞详情service
@@ -29,6 +31,19 @@ public class likeInfoService extends BusinessService<likeInfoEntity> {
     public void updateLikeCNum(String id){
         likeInfoDao.updateLikeCNum(id);
     }
+
+    //检查是否有点过赞
+    public List<likeInfoEntity> chekeLike(likeInfoEntity likeInfoEntity){
+        return likeInfoDao.chekeLike(likeInfoEntity);
+    }
+
+
+
+
+
+
+
+
 
 
 
