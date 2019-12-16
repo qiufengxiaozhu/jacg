@@ -4,6 +4,7 @@ import com.zte.zudp.admin.common.persistence.Subject;
 import com.zte.zudp.admin.common.security.SubjectUtil;
 import com.zte.zudp.admin.common.util.IDUtil;
 import com.zte.zudp.admin.info.integrate.service.IntegrateService;
+import com.zte.zudp.admin.mm.complain.entity.MMComplainEntity;
 import com.zte.zudp.admin.mm.integrate.ctrl.MMIntegrateController;
 import com.zte.zudp.admin.mm.integrate.service.MMIntegrateService;
 import com.zte.zudp.admin.mm.protalreport.entity.MMReport;
@@ -11,10 +12,13 @@ import com.zte.zudp.admin.mm.protalreport.service.MMReportService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/report")
@@ -47,6 +51,15 @@ public class MMReportController {
         List<MMReport> report = mmReportService.show();
         model.addAttribute("list",report);
         return "/mm/report/my-report";
+    }
+
+    @RequestMapping(value = "/detail", method = RequestMethod.POST)
+    public String reportDetail(@RequestParam Map<String, Object> map,
+                                 Model model) {
+        String id = (String) map.get("id");
+        MMReport mmReport = mmReportService.get(id);
+        model.addAttribute("mm",mmReport);
+        return "/mm/report/report-detail";
     }
 
     /**
