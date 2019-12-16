@@ -53,7 +53,7 @@
             <div class="inv-cont inv-pic">
                 <div class="">相关附件:</div>
                 <div class="inv-right">
-                    <#if entity.attachPaths?exists && entity.attachPaths??>
+                    <#if entity.attachPaths?exists && entity.attachPaths?? && ((entity.attachPaths!?size)>0)>
                         <#list 0..(entity.attachPaths!?size-1) as i>
                             <#if entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".bmp" ||
                             entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".png" ||
