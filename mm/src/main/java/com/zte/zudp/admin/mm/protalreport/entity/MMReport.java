@@ -23,6 +23,26 @@ public class MMReport extends FileEntity{
     private String yearStr;//截取上报时间年月
     private String dayStr;//截取上报时间日
 
+
+    private String userName;
+    private String userPhone;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserPhone() {
+        return userPhone;
+    }
+
+    public void setUserPhone(String userPhone) {
+        this.userPhone = userPhone;
+    }
+
     public String getYearStr() {
         return yearStr;
     }

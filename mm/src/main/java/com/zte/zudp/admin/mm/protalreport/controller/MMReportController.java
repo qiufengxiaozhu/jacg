@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -36,6 +37,7 @@ public class MMReportController {
      */
     @RequestMapping("/addreport")
     public String addAdvisory(MMReport mmReport){
+
         mmReport=getEntity(mmReport);
         integrateService.insertToIntegrate("1",mmReport.getId(),mmReport.getTelephone());
         int i = mmReportService.insConsult(mmReport);
@@ -47,8 +49,10 @@ public class MMReportController {
     }
 
     @RequestMapping("/myreport")
-    public String myReport(Model model){
-        List<MMReport> report = mmReportService.show();
+    public String myReport(Model model,HttpServletRequest request){
+        Object name = request.getSession().getAttribute("name");
+        Object phone = request.getSession().getAttribute("phone");
+        List<MMReport> report = mmReportService.show(phone,name);
         model.addAttribute("list",report);
         return "/mm/report/my-report";
     }
