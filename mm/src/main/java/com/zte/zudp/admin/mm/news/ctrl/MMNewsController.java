@@ -7,8 +7,6 @@ import com.zte.zudp.admin.common.util.WebUtil;
 import com.zte.zudp.admin.info.news.service.NewsService;
 import com.zte.zudp.admin.mm.news.entity.MMNews;
 import com.zte.zudp.admin.mm.news.service.MMNewsService;
-import com.zte.zudp.admin.mm.protalconsult.service.MMConsultService;
-import com.zte.zudp.admin.mm.protalreport.service.MMReportService;
 import com.zte.zudp.admin.modules.sys.user.entity.User;
 import com.zte.zudp.admin.modules.sys.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,16 +36,6 @@ public class MMNewsController {
 
     @Autowired
     private UserService userService;
-
-    /**
-     * 注入公众上报
-     */
-    @Autowired
-    private MMReportService mmReportService;
-    /**
-     * 注入公众咨询
-     */
-    private MMConsultService mmConsultService;
 
     /**
      * 查询所有新闻
@@ -162,7 +150,8 @@ public class MMNewsController {
      */
     @GetMapping("/conven")
     public String conven(Model model) {
-        return "/mm/news/convenience";
+
+        return "forward:/mm/mmConvenient/getConvenientType";
     }
 
     /**
@@ -171,19 +160,18 @@ public class MMNewsController {
      * @return
      */
     @GetMapping("/advisory")
-    public String advisory(HttpServletRequest request,Model model,@RequestParam("userName")String userName,@RequestParam("userPhone")String userPhone) {
-        request.getSession().setAttribute("userName",userName);
-        request.getSession().setAttribute("userPhone",userPhone);
+    public String advisory(Model model) {
+
         return "/consult/myadvisory";
     }
 
     /**
      *公众咨询
-     * @param
+     * @param model
      * @return
      */
     @GetMapping("/addadvisory")
-    public String addadvisory(){
+    public String addadvisory(Model model){
         return "/mm/consult/add-advisory";
     }
 
@@ -194,24 +182,17 @@ public class MMNewsController {
      * @return
      */
     @GetMapping("/report")
-    public String report(HttpServletRequest request,Model model,@RequestParam("name")String name,@RequestParam("phone")String phone){
-        request.getSession().setAttribute("name",name);
-        request.getSession().setAttribute("phone",phone);
+    public String report(Model model){
         return "/report/myreport";
     }
 
     /**
      *公众上报
-     * @param
+     * @param model
      * @return
      */
     @GetMapping("/addreport")
-    public String addreport(){
-        //System.out.println(userName+"-->"+userPhone);
-
-        //去数据库中匹配电话和用户名称
-        List<Map> list = mmReportService.checkUserAndPhone();
-
+    public String addreport(Model model){
         return "/mm/report/add-report";
     }
 
@@ -256,7 +237,17 @@ public class MMNewsController {
      * @return
      */
     @GetMapping("/myComplain")
-    public String mytousu(Model model) {
+    public String mytousu( Model model, @RequestParam("phone") String phone) {
+
+        String telephone = "";
+        //没有参数就写死
+
+        if(phone != null || phone != ""){
+            telephone = phone;
+        }
+        else {
+            telephone = "110";
+        }
         return "forward:/mm/complain/myComplain";
     }
     /**
@@ -276,7 +267,6 @@ public class MMNewsController {
      */
     @GetMapping("/addComplain")
     public String toadvice(Model model) {
-
         return "forward:/mm/complain/addComplain";
     }
 

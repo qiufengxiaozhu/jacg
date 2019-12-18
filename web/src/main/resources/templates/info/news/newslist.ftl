@@ -407,7 +407,7 @@
                 var mymesg = "新建";
                 var id=$("#id").val();
                 if ($("#id").val() != '') { //编辑的保存按钮
-                    alert("修改");
+//                    alert("修改");
                     console.info(data);
                     mymesg = "修改";
                     zudp.ajax(urlstr +'/'+id).put(data).then(function (da) {
@@ -417,7 +417,7 @@
                         $(".modal-form").modal("hide");
                     });
                 }else {     //新增的保存按钮
-                    alert("新建");
+//                    alert("新建");
                     console.info(data);
                     zudp.ajax(urlstr + "/saveNews").post(data).then(function (da) {
 
@@ -571,13 +571,31 @@
 //        $("#publicTime").css("display","none");
 //        $("#newsDate").css("display","none");
 //        $("#publicDate").css("display","none");
+
+//        ue.setEnabled();
     }
+
+    //编辑按钮
+    $(document).on("click", '.row-edit', function (e) {
+        ue.setEnabled();
+    });
+    //新建按钮
+    $(document).on("click", '#add-btn', function (e) {
+        ue.setEnabled();
+    });
+    //详情按钮
+    $(document).on("click", '.row-detail', function (e) {
+        ue.setDisabled();
+    });
 
     //详情
     function detailsstrBtn() {
 //        $("#publicTime").css("display","block");
 //        $("#newsDate").css("display","block");
         $("#publicDate").css("display","block");
+
+//        ue.setDisabled();
+
 //        $("#xg_rar").attr("disabled", "disabled");
 //        $("#newsContent").attr("disabled", "disabled");
 //        $("#newsTable").attr("disabled", "disabled");
@@ -767,7 +785,7 @@
             pick: '#xg_rar',
 
             // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
-            resize: false,
+            resize: true,
 
 //            fileNumLimit: 1, 规定上传数量
             //重复上传
