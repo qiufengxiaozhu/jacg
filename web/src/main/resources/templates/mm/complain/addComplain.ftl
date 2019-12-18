@@ -56,7 +56,7 @@
                             <div class="port flex flex-c-c">
                                 <span>联系人&nbsp;:</span>
                                 <input type="text" name="contact" id="contact" class="tab-input flex-1"
-                                       placeholder="请输入您的姓名(20字以内)">
+                                       placeholder="请输入您的姓名(20字以内)" value="${Session.userName}">
                                 <span id="sp_contact"></span>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                             <div class="port flex flex-c-c">
                                 <span>联系电话&nbsp;:</span>
                                 <input type="text" name="phone" id="phone" class="tab-input flex-1"
-                                       placeholder="请输入您的电话(20字以内)">
+                                       placeholder="请输入您的电话(20字以内)"value="${Session.userPhone}">
                                 <span id="sp_phone"></span>
                             </div>
                         </div>
@@ -193,7 +193,7 @@
         //检验联系人
         function checkname() {
             var name = $("input[name='contact']").val();
-            var reg_name = /^([\u4e00-\u9fa5]){2,7}$/;
+            var reg_name = /^{2,7}$/;
             var flag = reg_name.test(name);
             if (flag) {
                 $("#sp_contact").css("color", "green").html("√");
