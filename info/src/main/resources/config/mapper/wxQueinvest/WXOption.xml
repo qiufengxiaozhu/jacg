@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.weixinQueinvest.dao.WXOptionDao">
+
+
+
+
+    <!--添加选项-->
+    <insert id="addOption" >
+  insert into jacg_weixin_options
+        (id,
+        questions_id,
+        choiceText01,
+        choiceText02,
+        choiceText03,
+        choiceText04,
+        create_user,
+        create_date,
+        update_user,
+        update_date,
+        del,
+        val01)
+    VALUES
+    ( #{id},
+      #{idJson},
+      #{choiceText01},
+      #{choiceText02},
+      #{choiceText03},
+      #{choiceText04},
+      #{createUser.id},
+      #{createDate},
+      #{updateUser.id},
+      #{updateDate},
+      '0',
+      '预留字段'
+     )
+
+    </insert>
+
+</mapper>

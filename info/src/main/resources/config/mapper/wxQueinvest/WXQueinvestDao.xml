@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.weixinQueinvest.dao.WXQueinvestDao">
+
+
+
+    <!--新建问卷-->
+    <insert id="insert" >
+     insert into jacg_weixin_queinvest
+        (id,
+        title,
+        description,
+        queinvestType,
+        create_user,
+        create_date,
+        update_user,
+        update_date,
+        del,
+        valid,
+        status)
+    VALUES
+    ( #{id},
+      #{title},
+      #{description},
+      #{queinvestType},
+      #{createUser.id},
+      #{createDate},
+      #{updateUser.id},
+      #{updateDate},
+      '0',
+      #{valid},
+      '0'
+     );
+
+    </insert>
+
+    <!--查询所有   显示所有的问卷的题目和描述-->
+    <select id="findList" resultType="com.zte.zudp.admin.info.weixinQueinvest.entity.WXQueinvest">
+        SELECT
+        t1.id id,
+        t1.title title,
+        t1.`description` description,
+
+        t1.valid valid,
+        t1.status status,
+        /*问卷类型*/
+        t2.label  queinvestType,
+
+        t1.pubdate pubdate
+
+        FROM jacg_weixin_queinvest t1
+        left join sys_dict t2 on t1.queinvestType = t2.value and t2.type = 'queinvestType' /*字典项*/
+
+        where t1.del!=1
+        <if test="title!=null and title!=''">
+            and `title` like concat('%', #{title}, '%')
+        </if>
+
+        <if test="startTime!=null and startTime!=''">
+            and  pubdate >=  #{startTime} and t1.status = '2'
+        </if>
+
+        <if test="endTime!=null and endTime!=''">
+            and #{endTime}  >= pubdate and  t1.status = '2'
+        </if>
+
+    </select>
+
+    <!--编辑-->
+    <update id="update">
+       update jacg_weixin_queinvest t1 set
+        t1.title = #{title},
+        t1.valid = #{valid},
+        t1.queinvestType = #{queinvestType},
+        t1.description = #{description},
+        t1.update_date = #{updateDate},
+        t1.update_user = #{updateUser.id}
+
+        where t1.id=#{id}
+    </update>
+
+    <!--删除-->
+    <delete id="delete">
+    UPDATE jacg_weixin_queinvest
+    SET del = 1
+    WHERE id = #{id}
+    </delete>
+
+
+    <!--批量删除-->
+    <delete id="batchDelete">
+    UPDATE jacg_weixin_queinvest SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+
+    </delete>
+
+    <!--数据回显-->
+    <select id="get" resultType="com.zte.zudp.admin.info.weixinQueinvest.entity.WXQueinvest">
+         SELECT
+        t1.id id,
+        t1.title title,
+        t1.`description` description,
+          t1.valid valid,
+        t1.queinvestType queinvestType,
+       t1.status status,
+        t1.pubdate pubdate
+
+        FROM jacg_weixin_queinvest t1
+
+        where t1.id=#{id}
+    </select>
+
+    <!--问卷类型下拉-->
+    <select id="getList" resultType="com.zte.zudp.admin.info.queinvest.entity.Dictionary" >
+         select
+         t1.label,
+         t1.value
+        from sys_dict t1 where  t1.type = "queinvestType"
+    </select>
+
+<!--查询出所有的题目-->
+    <select id="addQuestion" resultType="com.zte.zudp.admin.info.weixinQueinvest.entity.WXQuestions">
+         select
+          t1.id id,
+          t1.contents contents,
+          t2.label label
+        from jacg_weixin_questions t1
+        left join  sys_dict t2  on t1.questionType = t2.value and t2.type = 'questionType'
+
+        where
+        t1.queinvest_id is null
+    </select>
+
+
+<!--往问卷中添加题目   即是修改关联的外键的值即可-->
+    <update id="updateQuestion">
+        update jacg_weixin_questions t1 set t1.queinvest_id = #{object02}
+        where t1.id =#{object}
+    </update>
+
+    <!--发布   发布状态-->
+    <update id="updateStatus">
+        update
+        `jacg_weixin_queinvest` t1
+        set
+        t1.status = '2' ,
+        t1.pubdate = now()
+        where t1.id =#{id}
+    </update>
+
+    <!--撤销发布  未发布状态-->
+    <update id="updateStatus02">
+        update `jacg_weixin_queinvest` t1 set t1.status = '1' where t1.id = #{id}
+    </update>
+
+
+    <select id="findAllQuestion" resultType="com.zte.zudp.admin.info.weixinQueinvest.entity.WXQuestions">
+        select
+        t1.id id,
+        t1.contents contents
+        from jacg_weixin_questions t1
+        where t1.id =#{id}
+
+    </select>
+
+    <select id="getDetail" resultType="com.zte.zudp.admin.info.weixinQueinvest.entity.WXQueinvest">
+
+           SELECT
+        t1.id id,
+        t1.title title,
+        t1.`description` description,
+        t1.queinvestType queinvestType
+
+        FROM `jacg_weixin_queinvest` t1
+
+        where t1.id=#{id}
+
+    </select>
+
+
+
+</mapper>

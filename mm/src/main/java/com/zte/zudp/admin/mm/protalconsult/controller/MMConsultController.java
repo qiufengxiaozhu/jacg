@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.Date;
 import java.util.List;
@@ -30,9 +31,11 @@ public class MMConsultController {
      * @return
      */
     @RequestMapping("/myadvisory")
-    public String myadvisory(Model model){
+    public String myadvisory(Model model, HttpServletRequest request){
+        Object userName = request.getSession().getAttribute("userName");
+        Object userPhone = request.getSession().getAttribute("userPhone");
         //所有咨询
-        List<MMConsult> list = mmConsultService.show(null);
+        List<MMConsult> list = mmConsultService.showAndCheck(userName,userPhone);
         model.addAttribute("list",list);
         return "/mm/consult/my-advisory";
         /*String path = "/mm/consult/my-advisory";

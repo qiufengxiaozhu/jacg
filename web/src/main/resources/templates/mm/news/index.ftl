@@ -179,6 +179,7 @@
 <div class="loader loader-smartphone is-active" data-screen="检测中..." id="checkIng"></div>
 </body>
 <script>
+
     var timeZone;//当前时区
     $(function(){
         $("#checkIng").hide();
@@ -221,17 +222,25 @@
     function goPage(a){
         if(a==1){
             //我的上报
-            window.location.href='/mm/news/report';
+            var name ='${Session.userName}';
+            var phone = '${Session.userPhone}';
+            window.location.href='/mm/news/report?name='+name+"&phone="+phone;
         }
         if(a==4){
+            // 用户名称 、电话名称
+
             //公众上报
             window.location.href='/mm/news/addreport';
         }
         if(a==2){
+            var userName ='${Session.userName}';
+            var userPhone = '${Session.userPhone}';
             //我的咨询
-            window.location.href='/mm/news/advisory';
+            window.location.href='/mm/news/advisory?userName='+userName+"&userPhone="+userPhone;
         }
         if(a==5){
+
+
             //公众咨询
             window.location.href='/mm/news/addadvisory';
         }
