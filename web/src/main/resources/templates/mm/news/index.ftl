@@ -118,7 +118,7 @@
                 <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>地图服务</p></div></div>
                 <div class="flex-1" onclick="goPage(8)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>便民服务</p></div></div>
                 <div class="flex-1" onclick="goSystemCheck()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>系统自检</p></div></div>
-                <#--<div class="flex-1" onclick="goPage(6)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>调查</p></div></div>-->
+                <div class="flex-1" onclick="goPage(20)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>问题上报</p></div></div>
             </div>
         </div>
     </div>
