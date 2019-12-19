@@ -25,6 +25,7 @@ import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/mm/news")
@@ -149,7 +150,8 @@ public class MMNewsController {
      */
     @GetMapping("/conven")
     public String conven(Model model) {
-        return "/mm/news/convenience";
+
+        return "forward:/mm/mmConvenient/getConvenientType";
     }
 
     /**
@@ -190,7 +192,12 @@ public class MMNewsController {
      * @return
      */
     @GetMapping("/addreport")
-    public String addreport(Model model){
+    public String addreport(){
+        //System.out.println(userName+"-->"+userPhone);
+
+        //去数据库中匹配电话和用户名称
+//        List<Map> list = mmReportService.checkUserAndPhone();
+
         return "/mm/report/add-report";
     }
 
@@ -235,7 +242,17 @@ public class MMNewsController {
      * @return
      */
     @GetMapping("/myComplain")
-    public String mytousu(Model model) {
+    public String mytousu( Model model, @RequestParam("phone") String phone) {
+
+        String telephone = "";
+        //没有参数就写死
+
+        if(phone != null || phone != ""){
+            telephone = phone;
+        }
+        else {
+            telephone = "110";
+        }
         return "forward:/mm/complain/myComplain";
     }
     /**

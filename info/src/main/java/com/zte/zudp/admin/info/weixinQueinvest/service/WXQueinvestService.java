@@ -1,0 +1,69 @@
+package com.zte.zudp.admin.info.weixinQueinvest.service;
+
+import com.zte.zudp.admin.common.persistence.service.BusinessService;
+import com.zte.zudp.admin.info.queinvest.dao.QueinvestDao;
+import com.zte.zudp.admin.info.queinvest.dao.QuestionDao;
+import com.zte.zudp.admin.info.queinvest.entity.Dictionary;
+import com.zte.zudp.admin.info.queinvest.entity.Queinvest;
+import com.zte.zudp.admin.info.queinvest.entity.Questions;
+import com.zte.zudp.admin.info.weixinQueinvest.dao.WXQueinvestDao;
+import com.zte.zudp.admin.info.weixinQueinvest.entity.WXQueinvest;
+import com.zte.zudp.admin.info.weixinQueinvest.entity.WXQuestions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+
+/**
+ * 微信公众调查
+ */
+@Service
+@Transactional
+public class WXQueinvestService extends BusinessService<WXQueinvest> {
+
+
+    @Autowired
+    private WXQueinvestDao wxQueinvestDao;
+    /**
+     *  下拉 问卷类型
+     * @return
+     */
+    public List<Dictionary> getList() {
+        return wxQueinvestDao.getList();
+    }
+
+
+    public List<WXQuestions> addQuestion() {
+        return wxQueinvestDao.addQuestion();
+    }
+
+
+    /**
+     * 发布
+     * @param id
+     */
+    public void updateStatus(String id) {
+        wxQueinvestDao.updateStatus(id);
+    }
+    /**
+     * 撤销发布
+     * @param id
+     */
+    public void updateStatus02(String id) {
+        wxQueinvestDao.updateStatus02(id);
+    }
+
+    public List<WXQuestions> findAllQuestion(String id) {
+      return   wxQueinvestDao.findAllQuestion(id);
+    }
+
+    public void updateQuestion(Object object, Object object02) {
+        wxQueinvestDao.updateQuestion(object,object02);
+    }
+
+    public WXQueinvest getDetail(String id) {
+      return   wxQueinvestDao.getDetail(id);
+
+    }
+}

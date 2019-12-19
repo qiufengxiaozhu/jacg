@@ -28,115 +28,54 @@
             <span class="border-left"></span><h3>便民服务</h3>
         </div>
 
-        <div class="bottom-content">
-            <ul class="list flex">
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">加油站</a>
-                </li>
+            <#list 0..(ListType!?size-1) as i>
 
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">医院</a>
-                </li>
+                <#if i % 4 == 0>
 
+                    <div class="bottom-content">
+                        <ul class="list flex">
 
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">学校</a>
-                </li>
+                            <#if i < ListType?size >
+                                <li class="flex flex-c-c">
+                                    <span class="space"></span>
 
+                                    <a href="#">${ListType[i].label!}</a>
+                                </li>
+                            </#if>
+                            <#if i+1 < ListType?size >
+                                    <li class="flex flex-c-c">
+                                        <span class="space"></span>
+                                        <a href="#">${ListType[i+1].label!}</a>
+                                    </li>
+                            </#if>
+                            <#if i+2 < ListType?size >
+                                    <li class="flex flex-c-c">
+                                        <span class="space"></span>
+                                        <a href="#">${ListType[i+2].label!}</a>
+                                    </li>
+                            </#if>
+                            <#if i+3 < ListType?size >
+                                <li class="flex flex-c-c">
+                                    <span class="space"></span>
+                                    <a href="#">${ListType[i+3].label!}</a>
+                                </li>
+                            </#if>
+                        </ul>
+                    </div>
 
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">银行</a>
-                </li>
-            </ul>
-        </div>
-        <div class="bottom-content">
-            <ul class="list flex">
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">加油站</a>
-                </li>
+                </#if>
+            </#list>
 
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">医院</a>
-                </li>
-
-
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">学校</a>
-                </li>
-
-
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">银行</a>
-                </li>
-            </ul>
-        </div>
-        <div class="bottom-content">
-            <ul class="list flex">
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">加油站</a>
-                </li>
-
-
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">医院</a>
-                </li>
-
-
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">学校</a>
-                </li>
-
-
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">银行</a>
-                </li>
-            </ul>
-        </div>
-        <div class="bottom-content">
-            <ul class="list flex">
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">加油站</a>
-                </li>
-
-
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">医院</a>
-                </li>
-
-
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">学校</a>
-                </li>
-
-
-                <li class="flex flex-c-c">
-                    <span class="space"></span>
-                    <a href="#">银行</a>
-                </li>
-            </ul>
-        </div>
     </div>
 </div>
 
 </body>
 <script>
+
     function goIndex() {
+
         window.location.href='/mm/news/index';
     }
+
 </script>
 </html>

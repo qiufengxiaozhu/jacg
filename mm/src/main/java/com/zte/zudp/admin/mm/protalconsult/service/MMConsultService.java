@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 
 @Service
@@ -64,5 +65,25 @@ public class MMConsultService extends FileBusinessService<MMConsult> {
     @Override
     public synchronized void afterInsert(MMConsult mmConsult) {
         super.afterInsert(mmConsult);
+    }
+
+    /**
+     * 去数据库中匹配电话和用户名称
+     * @param
+     * @param
+     * @return
+     */
+    public List<Map> checkUserAndPhone02(String name, String phone) {
+       return mmConsultDao.checkUserAndPhone02(name,phone);
+    }
+
+    /**
+     * 去数据库中匹配电话和用户名称
+     * @param
+     * @param
+     * @return
+     */
+    public List<MMConsult> showAndCheck(Object userName, Object userPhone) {
+        return mmConsultDao.showAndCheck(userName,userPhone);
     }
 }

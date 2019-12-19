@@ -116,9 +116,9 @@
             <div class="flex public">
                 <div class="flex-1" onclick="getSession()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>周边雷达</p></div></div>
                 <div class="flex-1" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>地图服务</p></div></div>
-                <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>便民服务</p></div></div>
+                <div class="flex-1" onclick="goPage(8)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>便民服务</p></div></div>
                 <div class="flex-1" onclick="goSystemCheck()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>系统自检</p></div></div>
-                <#--<div class="flex-1" onclick="goPage(6)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>调查</p></div></div>-->
+                <div class="flex-1" onclick="goPage(20)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>问题上报</p></div></div>
             </div>
         </div>
     </div>
@@ -237,7 +237,7 @@
         }
         if(a==7){
             //我的投诉
-            window.location.href='/mm/news/myComplain';
+            window.location.href='/mm/news/myComplain?phone='+'${Session.userPhone}';
         }
         if(a==3){
             //公众投诉
@@ -245,7 +245,7 @@
         }
         if (a == 0) {
             //排行榜
-            window.location.href='/mm/rank/ranklist';
+            window.location.href='/mm/rank/ranklist/?phone='+'${Session.userPhone}';
         }
         if(a==6){
             //公众调查
@@ -254,6 +254,10 @@
         if(a==10){
             //积分管理
             window.location.href='/mm/integrate/integrateList';
+        }
+        if(a==8){
+            //便民服务
+            window.location.href='/mm/news/conven';
         }
     }
 

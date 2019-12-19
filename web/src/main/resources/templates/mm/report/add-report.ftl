@@ -134,6 +134,9 @@
             <div class="ts-table">
                 <div class="put">
 
+                    <#--用户名称和电话号码-->
+                    <#--<input id="userName" type="hidden" value="${Session.userName}" />-->
+                    <#--<input id="userPhone" type="hidden" value="${Session.userPhone}" />-->
                     <!-- 附件上传 隐藏传值  开始 -->
                     <input id="attachIdss" type="hidden" />
                     <!-- 附件上传 隐藏传值  结束 -->
@@ -177,14 +180,14 @@
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>联系人&nbsp;:</span>
-                        <input type="text" name="name" class="tab-input flex-1" placeholder="请输入您的真实姓名">
+                        <input type="text" name="name" class="tab-input flex-1" placeholder="请输入您的真实姓名" value="${Session.userName!}">
                         <span id="sp_name"></span>
                         </div>
                     </div>
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>联系电话&nbsp;:</span>
-                        <input type="text" name="telephone" class="tab-input flex-1" placeholder="请输入您的电话(11位数字)">
+                        <input type="text" name="telephone" class="tab-input flex-1" placeholder="请输入您的电话(11位数字)" value="${Session.userPhone!}">
                         <span id="sp_telephone"></span>
                         </div>
                     </div>

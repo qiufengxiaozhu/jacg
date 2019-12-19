@@ -11,6 +11,12 @@
         DATE_FORMAT(report_date,'%d') as dayStr
         FROM zmj_report
         WHERE  del!=1
+        <if test="name != null and name != '' ">
+           and name = #{name}
+        </if>
+        <if test="phone != null and phone != '' ">
+            and telephone = #{phone}
+        </if>
         ORDER BY report_date desc
     </select>
 
@@ -52,6 +58,10 @@
     reply_date = #{updateDate}
     WHERE id = #{id}
 </update>
+
+
+
+
 
 
 </mapper>
