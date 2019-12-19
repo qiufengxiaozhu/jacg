@@ -30,34 +30,16 @@
                         </@hasPermission>
                         <div class="querybtn my-querybtn">
                             <label id="click"></label>
-                            <input type="text" name="search" maxlength="255"  placeholder="用户名" class="form-control search-input">
+                            <input type="text" name="search" maxlength="255" id="user_loginName_select_first"  placeholder="用户名" class="form-control search-input">
+                            <input type="text" name="name" maxlength="255" id="user_name_select" placeholder="姓名" class="form-control">
+                            <input type="text" name="phone" id="user_phone_select" placeholder="电话号码" class="form-control">
                             <button class="btn btn-primary mgl my-mgl research-btn" >搜索</button>
-                            <button class="btn btn-primary select-query"  >高级搜索</button>
+                            <button class="btn btn-primary mgl my-mgl clear-input" >清空</button>&nbsp;&nbsp;
                         </div>
                     </div>
-                    <div id="search" class="search-group" style="display:none;">
-                        <div class="form-group z-group">
-                            <div class="col-sm-12 z-group-pane">
-                                <label class="control-label my-control-label">用户名：</label>
-                                <input type="text" maxlength="255" name="loginName" id="user_loginName_select" placeholder="用户名" class="form-control search-input">
-                                </div>
-                            </div>
+                   <#-- <div id="search" class="search-group" style="display:none;">
 
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <label class="control-label my-control-label">姓名：</label>
-                                <input type="text" name="name" maxlength="255" id="user_name_select" placeholder="姓名" class="form-control">
-                                </div>
-                            </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <label class="control-label my-control-label">电话号码：</label>
-                                 <input type="text" name="phone" id="user_phone_select" placeholder="电话号码" class="form-control">
-                                </div>
-                            </div>
-                        <button class="btn btn-primary mgl my-mgl clear-input" >清空</button>&nbsp;&nbsp;
-                    </div>
+                    </div>-->
                     <table id="user-list-table" class="table my-table table-bordered dataTables-example">
                         <thead>
                         <tr>
@@ -335,7 +317,7 @@
                 id: '#user-list-table',
                 search: function () {
                     return {
-                        "loginName":$("#user_loginName_select").val(),
+                        "loginName":$("#user_loginName_select_first").val(),
                         "name":$("#user_name_select").val(),
                         "phone":$("#user_phone_select").val()
                     }
@@ -394,6 +376,72 @@
         var length = value.length;
         return this.optional(element) || (length <= 32  && length >= 6);
     }, "请输入6到16位密码");
+
+</script>
+<script>
+    function clearOther(){
+        $("#user_loginName_select_first").val('');
+        $("#user_name_select").val('');
+        $("#user_phone_select").val('');
+        dataTable.ajax.reload();
+    }
+
+    /**  修改密码 js 开始 */
+    function updatePassword(id) {
+        document.getElementById("pwd").reset();
+        $("#pwId").val(id);
+        $('#role_member2').modal({show: true, backdrop: 'static'});
+    }
+
+    function upwordpass(){
+        $("#pwdspan").html("");
+        $("#rewppwdspan").html("");
+        var gid = $("#pwId").val();
+        var pwd = $("#uppwd").val();
+        var reuppwd = $("#reuppwd").val();
+        if(pwd == null || pwd == "" ){
+            $("#pwdspan").html("请输入密码");
+
+            return "";
+        }
+        if(reuppwd != pwd){
+            $("#rewppwdspan").html("两次密码不一致");
+            return "";
+        }
+        var da = {id: gid,password:pwd};
+        zudp.ajax("/api/user/updatePassword").get(da).then(function (value) {
+            zudp.plugin.dialog("success").alert("修改成功！", "提示");
+            $("#role_member2").modal("hide");
+        }, function (reason) {
+            zudp.plugin.dialog("error").alert("修改失败！", "提示");
+            $("#role_member2").modal("hide");
+        });
+    }
+    /**  修改密码 js 结束 */
+
+    /** 禁用 启动  开始 */
+    function translates(id) {
+        debugger;
+        var da = {id: id,status:1};
+        zudp.ajax("/api/user/updateUserStatus").get(da).then(function (value) {
+            zudp.plugin.dialog("success").alert("激活成功！", "提示");
+            zudp.plugin.table("#user-list-table").then().ajax.reload();
+        }, function (reason) {
+            zudp.plugin.dialog("error").alert("修改失败！", "提示");
+            zudp.plugin.table("#user-list-table").then().ajax.reload();
+        });
+    }
+
+    function translateNo(id) {
+        var da = {id: id,status:0};
+        zudp.ajax("/api/user/updateUserStatus").get(da).then(function (value) {
+            zudp.plugin.dialog("success").alert("禁用成功！", "提示");
+            zudp.plugin.table("#user-list-table").then().ajax.reload();
+        }, function (reason) {
+            zudp.plugin.dialog("error").alert("禁用失败！", "提示");
+        });
+    }
+    /** 禁用 启动  结束 */
 
 </script>
 </body>

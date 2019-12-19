@@ -101,10 +101,10 @@
                                                               <td class='group_td'>组织状态</td>
                                                               <td id="group_status"></td>
                                                           </tr>
-                                                          <tr>
+                                                        <#--  <tr>
                                                               <td class='group_td'>排序</td>
                                                               <td id="group_weight"></td>
-                                                          </tr>
+                                                          </tr>-->
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -259,7 +259,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <#--<div class="form-group">
                             <label class="col-sm-3 control-label">排序：</label>
                             <div class="col-sm-6">
                                 <input type="text" name="weight" id="org_weight" placeholder="排序" class="form-control">
@@ -267,7 +267,7 @@
                             <div>
                                 <i class="i_context my-i_context">*</i>
                             </div>
-                        </div>
+                        </div>-->
 
                     </form>
                 </div>
