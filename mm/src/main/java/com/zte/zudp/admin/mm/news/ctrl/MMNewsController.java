@@ -210,7 +210,7 @@ public class MMNewsController {
         //System.out.println(userName+"-->"+userPhone);
 
         //去数据库中匹配电话和用户名称
-        List<Map> list = mmReportService.checkUserAndPhone();
+//        List<Map> list = mmReportService.checkUserAndPhone();
 
         return "/mm/report/add-report";
     }

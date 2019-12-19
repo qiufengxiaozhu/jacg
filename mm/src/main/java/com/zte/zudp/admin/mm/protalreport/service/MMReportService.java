@@ -34,19 +34,19 @@ public class MMReportService  extends FileBusinessService<MMReport>{
     public List<MMReport> show(Object phone,Object name){
         return mmReportDao.selAll(phone,name);
     }
-
+//
     @Override
     public synchronized void afterInsert(MMReport mmReport) {
         super.afterInsert(mmReport);
     }
-
-    /**
-     * 去数据库中匹配电话和用户名称
-     * @param userName
-     * @param userPhone
-     * @return
-     */
-    public List<Map> checkUserAndPhone( ) {
-        return  mmReportDao.checkUserAndPhone( );
-    }
+//
+//    /**
+//     * 去数据库中匹配电话和用户名称
+//     * @param userName
+//     * @param userPhone
+//     * @return
+//     */
+//    public List<Map> checkUserAndPhone( ) {
+//        return  mmReportDao.checkUserAndPhone( );
+//    }
 }

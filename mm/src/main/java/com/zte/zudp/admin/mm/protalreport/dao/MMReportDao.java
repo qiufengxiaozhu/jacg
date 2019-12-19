@@ -22,12 +22,12 @@ public interface MMReportDao extends AbstractDao<MMReport>{
      * @return
      */
     public List<MMReport> selAll(@Param("phone") Object phone,@Param("name") Object name);
-
-    /**
-     * 去数据库中匹配电话和用户名称
-     * @param userName
-     * @param userPhone
-     * @return
-     */
-    List<Map> checkUserAndPhone( );
+//
+//    /**
+//     * 去数据库中匹配电话和用户名称
+//     * @param userName
+//     * @param userPhone
+//     * @return
+//     */
+//    List<Map> checkUserAndPhone( );
 }
