@@ -22,7 +22,7 @@
                 <div class="rankimg">
                     <img src="/mm/img/head.png" alt="">
                 </div>
-                <div class="xxx">${rankEntity.name!rankEntity.telephone}</div>
+                <div class="xxx">${rankEntity.telephone!}</div>
                 积分:${rankEntity.points!}
             </div>
             <div class="flex-1">

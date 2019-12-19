@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.convenient.dao.ConvenientDao">
+
+    <resultMap type="com.zte.zudp.admin.info.convenient.entity.Convenient" id="convenientMap">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="location" property="location"/>
+        <result column="longitude" property="longitude"/>
+        <result column="latitude" property="latitude"/>
+        <result column="description" property="description"/>
+        <result column="category" property="category"/>
+        <result column="create_date" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="del" property="del" />
+    </resultMap>
+
+    <select id="findList" resultMap="convenientMap">
+        SELECT n.id,n.name,n.location,n.description,n.category,n.longitude,n.latitude
+        from qgq_convenient n
+        where n.del!=1
+        <if test="name!=null and name!=''">
+            and `name` like concat('%', #{name}, '%')
+        </if>
+        <if test="category!=null and category!=''">
+            and category  =  #{category }
+        </if>
+        ORDER BY n.create_date desc
+    </select>
+
+    <select id="getTypeList" resultType="com.zte.zudp.admin.info.queinvest.entity.Dictionary">
+        SELECT id,type,label,value
+        from sys_dict
+        where del!='1' and type = 'qgq_convenientType'
+
+    </select>
+
+    <!--<select id="getConvenientList" resultMap="convenientMap">-->
+        <!--SELECT n.id,n.name,n.location,n.description,n.category-->
+        <!--from qgq_convenient n-->
+        <!--where n.del!=1 and n.category = #{0}-->
+        <!--ORDER BY n.create_date desc-->
+    <!--</select>-->
+
+    <select id="get" resultMap="convenientMap" >
+        SELECT
+        id,
+        name,
+        location,
+        description,
+        category,
+        longitude,
+        latitude,
+        create_user,
+        create_date
+        from qgq_convenient
+        where id=#{id}
+    </select>
+
+    <insert id="insert">
+        INSERT INTO qgq_convenient (
+        id, name,location, description,category,
+        longitude,
+        latitude,
+        create_date,
+        create_user,
+        update_date,
+        update_user,
+        del
+        )
+        VALUE (
+        #{id}, #{name}, #{location}, #{description}, #{category},
+        #{longitude},
+        #{latitude},
+        #{createDate},
+        #{createUser.id},
+        #{updateDate},
+        #{updateUser.id},
+        0
+        )
+    </insert>
+    <update id="update" parameterType="com.zte.zudp.admin.info.convenient.entity.Convenient">
+        UPDATE qgq_convenient m SET
+        m.name = #{name},
+        m.location = #{location},
+        m.description = #{description},
+        m.category = #{category},
+        m.longitude = #{longitude},
+        m.latitude = #{latitude},
+        m.update_date = #{updateDate},
+        m.update_user = #{updateUser.id}
+        WHERE m.id = #{id}
+    </update>
+
+    <delete id="delete">
+        UPDATE qgq_convenient
+        SET del = 1
+        WHERE id = #{id}
+    </delete>
+    <delete id="batchDelete">
+        UPDATE qgq_convenient SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </delete>
+</mapper>
