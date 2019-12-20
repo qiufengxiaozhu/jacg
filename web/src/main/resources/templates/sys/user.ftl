@@ -22,10 +22,10 @@
             <div class="ibox">
                 <div class="ibox-content form-inline ">
                     <div class=" col-sm-12">
-                        <@hasPermission name="sys:user:create">
+                        <@hasPermission name="sys:groupSetting:user:create">
                         <button class="btn btn-success" data-toggle="modal" id="add-btn" >新增</button>&nbsp;&nbsp;
                         </@hasPermission>
-                        <@hasPermission name="sys:user:batchDelete">
+                        <@hasPermission name="sys:groupSetting:user:batchDelete">
                         <button class="btn btn-success btn-danger" id="delete-items" >批量删除</button>
                         </@hasPermission>
                         <div class="querybtn my-querybtn">
@@ -341,8 +341,16 @@
                     },
                     {
                         render: function (data, type, row) {
-                            var btn = <@hasPermission name="sys:user:update">zudp.template.editBtn</@hasPermission><@hasPermission name="sys:user:delete"> + zudp.template.delBtn</@hasPermission>
-                            return zudp.util.render(btn, row);
+                            var update_btn = <@hasPermission name="sys:groupSetting:user:update">zudp.template.editBtn</@hasPermission>+"";
+                            var delete_btn =   <@hasPermission name="sys:groupSetting:user:delete">zudp.template.delBtn</@hasPermission>+"";
+                            var updatePassword_btn = <@hasPermission name="sys:groupSetting:user:updatePassword"> "<button class=\"btn btn-info btn-sm  btn-img\" onclick=\"updatePassword('" + row.id + "')\" title='修改密码'>修改密码</button>"</@hasPermission>+"";
+                            var updateUserStatus_btn = "";
+                            if(data.status == '1'){
+                                updateUserStatus_btn =  <@hasPermission name="sys:groupSetting:user:updateUserStatus"> "&nbsp;<button class=\"btn btn-success btn-sm  btn-img\" onclick=\"translateNo('" + row.id + "')\" title='禁用'>禁用</button>"</@hasPermission>+"";
+                            }else{
+                                updateUserStatus_btn =  <@hasPermission name="sys:groupSetting:user:updateUserStatus"> "&nbsp;<button class=\"btn btn-warning btn-sm  btn-img\" onclick=\"translates('" + row.id + "')\" title='激活'>激活</button>"</@hasPermission>+"";
+                            }
+                            return zeroToSpace(update_btn)+zeroToSpace(delete_btn)+zeroToSpace(updatePassword_btn)+zeroToSpace(updateUserStatus_btn);                        }
                         }
                     }
                 ]

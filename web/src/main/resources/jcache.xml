@@ -9,7 +9,7 @@
         <jsr107:defaults enable-management="true" enable-statistics="true" default-template="zudpCache"/>
     </service>
 
-    <persistence directory="./cache"/>
+    <persistence directory="zudp-cache-log/cache"/>
 
     <!-- 请查看 com.zte.zudp.admin.common.enums.CacheName 匹配 alias 值 -->
     <cache alias="PASSWORD_ERROR_COUNT" uses-template="passwordErrorCount-Cache"/>

@@ -49,7 +49,7 @@
                                             <div class="form-group">
                                                 <div class='col-sm-12' id="btns">
                                                     <#--<button class='btn btn-primary role_add' data-toggle='modal' style="display: none" data-target='#org_modal' id="addBtn">新增子节点</button>&nbsp;&nbsp;-->
-                                                    <@hasPermission name="sys:group:groupInsert">
+                                                    <@hasPermission name="sys:groupSetting:group:groupInsert">
                                                     <div class="btn-group" id="insert-select-div">
                                                         <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">新增<span class="caret" style="margin-left:4px;"></span>
                                                         </button>
@@ -59,16 +59,16 @@
                                                         </ul>
                                                     </div>&nbsp;&nbsp;
                                                     </@hasPermission>
-                                                    <@hasPermission name="sys:group:update">
+                                                    <@hasPermission name="sys:groupSetting:group:update">
                                                     <button class='btn btn-info role_update' style="display: none" data-toggle='modal' data-target='#org_modal' id="updateBtn">编辑</button>&nbsp;&nbsp;
                                                     </@hasPermission>
-                                                    <@hasPermission name="sys:group:revokeId">
+                                                    <@hasPermission name="sys:groupSetting:group:revokeId">
                                                     <button class='btn btn-warning role_delete' style="display: none" id="revoke">撤销</button>
                                                     </@hasPermission>
-                                                    <@hasPermission name="sys:group:enableGroup">
+                                                    <@hasPermission name="sys:groupSetting:group:enableGroup">
                                                     <button class='btn btn-success role_delete' style="display: none" id="enable-btn">启用</button>
                                                     </@hasPermission>
-                                                    <@hasPermission name="sys:group:cascadeId">
+                                                    <@hasPermission name="sys:groupSetting:group:cascadeId">
                                                     <button class='btn btn-danger role_delete' style="display: none" id="deleteBtn">删除</button>
                                                     </@hasPermission>
                                                 </div>
@@ -101,10 +101,10 @@
                                                               <td class='group_td'>组织状态</td>
                                                               <td id="group_status"></td>
                                                           </tr>
-                                                        <#--  <tr>
+                                                        <tr>
                                                               <td class='group_td'>排序</td>
                                                               <td id="group_weight"></td>
-                                                          </tr>-->
+                                                          </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -125,13 +125,13 @@
                                                         </div>
                                                         <div class='form-group' style='float: right'>
                                                             <div class='col-sm-12'>
-                                                                <@hasPermission name="sys:group:groupUserList">
+                                                                <@hasPermission name="sys:groupSetting:group:groupUserList">
                                                                 <button class='btn btn-primary mgl' id="select_group_details">搜索</button>&nbsp;&nbsp;
                                                                 </@hasPermission>
-                                                                <@hasPermission name="sys:group:updateUserGroup">
+                                                                <@hasPermission name="sys:groupSetting:group:updateUserGroup">
                                                                 <button class='btn btn-success' id="update_group_insert">新增</button>&nbsp;&nbsp;
                                                                 </@hasPermission>
-                                                                <@hasPermission name="sys:group:deleteUserGroup">
+                                                                <@hasPermission name="sys:groupSetting:group:deleteUserGroup">
                                                                 <button class='btn btn-danger' id="update_group_details">批量删除</button>
                                                                 </@hasPermission>
                                                             </div>
@@ -247,7 +247,7 @@
                             <div class="col-sm-6">
                                 <div class="input-group">
                                     <input type="text" class="form-control" name="primaryUser" style="display: none" id="org_charges">
-                                    <input type="text" class="form-control" placeholder="负责人" id="org_charge">
+                                    <input type="text" class="form-control"  name="primaryUserTemp" placeholder="负责人" id="org_charge">
                                     <div class="input-group-btn">
                                         <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
                                             <span class="caret"></span>
@@ -257,9 +257,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
                         </div>
 
-                        <#--<div class="form-group">
+                        <div class="form-group">
                             <label class="col-sm-3 control-label">排序：</label>
                             <div class="col-sm-6">
                                 <input type="text" name="weight" id="org_weight" placeholder="排序" class="form-control">
@@ -267,7 +270,7 @@
                             <div>
                                 <i class="i_context my-i_context">*</i>
                             </div>
-                        </div>-->
+                        </div>
 
                     </form>
                 </div>
@@ -316,7 +319,7 @@
                          {
                              render: function (data, type, row) {
                                  var html =
-                                     '<@hasPermission name="sys:user:update"><button class="btn btn-success btn-sm add-user-to-group" value="{id}">新增</button>&nbsp;&nbsp;</@hasPermission>';
+                                     '<@hasPermission name="sys:groupSetting:groupSetting:user:update"><button class="btn btn-success btn-sm add-user-to-group" value="{id}">新增</button>&nbsp;&nbsp;</@hasPermission>';
                                  return zudp.util.render(html, row);
                              }
                          }
@@ -343,7 +346,7 @@
                          {
                              render: function (data, type, row) {
                                  var html =
-                                     '<@hasPermission name="sys:group:deleteUserGroup"><button class="btn btn-danger btn-sm updateUserToGroup " value="{id}">删除</button>&nbsp;&nbsp;</@hasPermission>';
+                                     '<@hasPermission name="sys:groupSetting:group:deleteUserGroup"><button class="btn btn-danger btn-sm updateUserToGroup " value="{id}">删除</button>&nbsp;&nbsp;</@hasPermission>';
                                  return zudp.util.render(html, row);
                              }
                          }

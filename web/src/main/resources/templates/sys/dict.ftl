@@ -22,12 +22,12 @@
             <div class="ibox">
                 <div class="ibox-content form-inline z-relative">
                     <div class='col-sm-12'>
-                        <@hasPermission name="sys:dict:create">
+                        <@hasPermission name="sys:sysSetting:dict:create">
                         <button class='btn btn-success' data-toggle='modal' id="add-btn">
                             新增
                         </button>&nbsp;&nbsp;
                         </@hasPermission>
-                        <@hasPermission name="sys:dict:batchDelete">
+                        <@hasPermission name="sys:sysSetting:dict:batchDelete">
                         <button class='btn btn-success btn-danger' id="delete-items">
                             批量删除
                         </button>
@@ -260,7 +260,7 @@
                     {data: 'weight'},
                     {
                         render: function (data, type, row) {
-                            var btn = <@hasPermission name="sys:dict:update">zudp.template.editBtn</@hasPermission><@hasPermission name="sys:dict:delete"> + zudp.template.delBtn</@hasPermission>
+                            var btn = <@hasPermission name="sys:sysSetting:dict:update">zudp.template.editBtn</@hasPermission><@hasPermission name="sys:sysSetting:dict:delete"> + zudp.template.delBtn</@hasPermission>
                             return zudp.util.render(btn, row);
                         }
                     }

@@ -1891,3 +1891,12 @@ zudp.global = {
     msg: {
     }
 };
+
+
+function zeroToSpace(str){
+    if(str =='0'){
+        return "";
+    }else{
+        return str;
+    }
+}
