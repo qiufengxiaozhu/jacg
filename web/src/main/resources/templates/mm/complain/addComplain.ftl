@@ -35,7 +35,7 @@
             <div class="header-img">
                 <div class="ts-table">
                     <div class="put">
-                        <input type="hidden" name="contactUser" id="contact_user" value='${contactUser!""}'>
+                        <input type="hidden" name="contactUser" id="contact_user" value='${Session.userPhone}'>
                         <div class="theme">
                             <div class="port flex flex-c-c">
                                 <span>主题&nbsp;:</span>

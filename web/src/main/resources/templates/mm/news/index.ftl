@@ -107,6 +107,7 @@
                 <div class="" onclick="goPage(7)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>
                 <div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>
                 <div class="" onclick="goPage(21)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的问题上报</p></div></div>
+                <div class="" onclick="goPage(9)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>市民评论</p></div></div>
             </div>
         </div>
 
@@ -275,6 +276,10 @@
             var reportPhone = '${Session.userPhone}';
             //我的问题上报
             window.location.href='/mm/issueReport/toMyReportList?reportName='+reportName+"&reportPhone="+reportPhone;
+        }
+        if(a==9) {
+            //市民评论
+            window.location.href = '/mm/comment/selectAll/';
         }
     }
 
