@@ -106,6 +106,7 @@
                 <div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我的上报</p></div></div>
                 <div class="" onclick="goPage(7)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>
                 <div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>
+                <div class="" onclick="goPage(21)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的问题上报</p></div></div>
             </div>
         </div>
 
@@ -221,15 +222,19 @@
     function goPage(a){
         if(a==1){
             //我的上报
-            window.location.href='/mm/news/report';
+            var name ='${Session.userName}';
+            var phone = '${Session.userPhone}';
+            window.location.href='/mm/news/report?name='+name+"&phone="+phone;
         }
         if(a==4){
             //公众上报
             window.location.href='/mm/news/addreport';
         }
         if(a==2){
+            var userName ='${Session.userName}';
+            var userPhone = '${Session.userPhone}';
             //我的咨询
-            window.location.href='/mm/news/advisory';
+            window.location.href='/mm/news/advisory?userName='+userName+"&userPhone="+userPhone;
         }
         if(a==5){
             //公众咨询
@@ -258,6 +263,18 @@
         if(a==8){
             //便民服务
             window.location.href='/mm/news/conven';
+        }
+        if(a==20){
+            //问题上报
+            window.location.href='/mm/issueReport/toMyIndex';
+        }
+
+        if(a==21){
+            // 校验用户名和电话号码
+            var reportName ='${Session.userName}';
+            var reportPhone = '${Session.userPhone}';
+            //我的问题上报
+            window.location.href='/mm/issueReport/toMyReportList?reportName='+reportName+"&reportPhone="+reportPhone;
         }
     }
 

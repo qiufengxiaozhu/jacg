@@ -50,8 +50,8 @@ public class MMReportController {
 
     @RequestMapping("/myreport")
     public String myReport(Model model,HttpServletRequest request){
-        Object name = request.getSession().getAttribute("name");
-        Object phone = request.getSession().getAttribute("phone");
+        Object name = request.getSession().getAttribute("userName");
+        Object phone = request.getSession().getAttribute("userPhone");
         List<MMReport> report = mmReportService.show(phone,name);
         model.addAttribute("list",report);
         return "/mm/report/my-report";
