@@ -495,7 +495,7 @@
 //
 
         // 查询出所有的题目
-        zudp.ajax("/api/queinvest/addQuestion").post().then(function (value) {
+        zudp.ajax("/api/wxqueinvest/addQuestion").post().then(function (value) {
 
 //
             //获取到table
@@ -545,6 +545,8 @@
                 zudp.ajax("/api/wxqueinvest/updateQuestion").post(dataJson).then(function (value) {
                     // 关闭模态框
                     $(".modal-form-content").modal("hide");
+                    dataTable.ajax.reload();
+                    zudp.plugin.form("#add-type").reset();
                 });
 
 
