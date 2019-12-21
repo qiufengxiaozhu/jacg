@@ -92,15 +92,15 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
      * 添加题目到问卷中去
      * @return
      */
-    @JSON
     @PostMapping(value = "/updateQuestion")
-    @EndpointRest(id = "updateList", name = "ddd" )
     public void updateQuestion(@RequestBody Map<String,Object> map)  {
+        // 题目id数组
        List <String> idsArr=(List<String>) map.get("idsJson");
-        Object object02 = map.get("idJson");
+       // 问卷id
+       String queinId = map.get("idJson").toString();
         for (int i=0;i<idsArr.size();i++) {
-            Object object= idsArr.get(i);
-            queinvestService.updateQuestion(object,object02);
+            String questionId= idsArr.get(i).toString();
+            queinvestService.updateQuestion(questionId,queinId);
         }
 
     }

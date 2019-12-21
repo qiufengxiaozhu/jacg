@@ -39,7 +39,7 @@ public interface QueinvestDao extends AbstractDao<Queinvest> {
 
     List<Questions> findAllQuestion(String id);
 
-    void updateQuestion(@Param("object") Object object, @Param("object02") Object object02);
+    void updateQuestion(@Param("queinId") String  queinId, @Param("questionId") String questionId);
 
     Queinvest getDetail(@Param("id") String id);
 }

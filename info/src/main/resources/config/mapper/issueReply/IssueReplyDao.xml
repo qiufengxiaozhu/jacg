@@ -31,7 +31,7 @@
          t1.issueQuestionType issueQuestionType,
          t1.contact contact,
          t1.phone phone,
-         t1.complainDate complainDate,
+         DATE_FORMAT(t1.complainDate,'%Y-%m-%d %T') complainDate,
          t1.address address,
          t1.replyContent replyContent,
          t1.replyDate replyDate,
@@ -43,7 +43,7 @@
     <update id="update">
         UPDATE jacg_issuereport  SET
         replyContent = #{replyContent},
-        replyDate = now(),
+        replyDate =DATE_FORMAT(now(),'%Y-%m-%d %T'),
         replyUserId =#{replyUserId},
         replyStatus='1'
         WHERE id = #{id}

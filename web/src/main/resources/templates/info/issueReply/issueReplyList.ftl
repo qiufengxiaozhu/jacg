@@ -244,7 +244,7 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}咨询",
+            title: "回复",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],
@@ -277,7 +277,7 @@
     function img2(obj){
         // 获取到按钮的id 记录的id
         var id=$(obj).val();
-        alert(id);
+//        alert(id);
         $("#fj").html("");
         zudp.ajax("/api/issueReply/getFj?id="+id).get().then(function (value){
             var fjpath = value.attachPaths;

@@ -517,7 +517,7 @@
 //                var idces = document.getElementById("id").value;
 //                alert(idces);
                 var idJson = $("#addStr").val(); // 获取到id值  问卷的id值
-//                alert(idJson);
+                alert("问卷id"+idJson);
                 // 遍历所有的复选框
                 var checks = document.getElementsByName("checkBtn");
                 // 所有被选中的复选框的对应的问题的id值
@@ -572,7 +572,8 @@
 
         zudp.ajax("/api/queinvest/updateStatus").post(id).then(function (value) {
             // 刷新页面
-            document.location.reload();
+//            document.location.reload();
+            dataTable.ajax.reload();
         });
     });
 
@@ -588,7 +589,8 @@
         var id = $("#unpublishStr").val();
 
         zudp.ajax("/api/queinvest/updateStatus02").post(id).then(function (value) {
-            document.location.reload();
+//            document.location.reload();
+            dataTable.ajax.reload();
         });
     });
 

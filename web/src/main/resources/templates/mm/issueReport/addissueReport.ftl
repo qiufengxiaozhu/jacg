@@ -45,9 +45,7 @@
             $("input[name='phone']").blur(function () {
                 checktelephone();
             });
-//            $("input[name='place']").blur(function () {
-//                checkplace();
-//            });
+//
         });
 
         //检验标题
@@ -138,7 +136,7 @@
                     <#--<input id="userName" type="hidden" value="${Session.userName}" />-->
                     <#--<input id="userPhone" type="hidden" value="${Session.userPhone}" />-->
                     <!-- 附件上传 隐藏传值  开始 -->
-                    <input id="attachIdss" type="hidden" />
+                    <#--<input id="attachIdss" type="hidden" />-->
                     <!-- 附件上传 隐藏传值  结束 -->
 
                     <div class="theme">
@@ -216,6 +214,7 @@
 </div>
     <script>
         var sys_url=window.location.host;
+        // 定义图片、语音、视频文件的格式
         var tp="#xg_rar";
         var tpgs="bmp,jpg,png,gif,jpeg";
 
@@ -225,6 +224,7 @@
         var sp="#sp";
         var spgs="mp4";
 
+        // 页面加载即执行
         $(function () {
             $("#xg_rar").html('上传图片附件');
             $("#fileShowName").html("<br>");
@@ -241,6 +241,7 @@
             initUpload(yy,yygs,2,5*1024*1024);
             initUpload(sp,spgs,2,10*1024*1024);
         })
+        //            dz:文件类型  gs:文件格式 num：上传文件数量:num  单个文件大小:singleSize
         function initUpload(dz,gs,num,singleSize) {
             var uploader = WebUploader.create({
                 //上传数量限制
@@ -273,6 +274,7 @@
                 //debugger;
                 var name = file.name;
                 var fileurl = response.data;
+                // 截取后缀名
                 var jw=fileurl.substring(fileurl.lastIndexOf('.'));
                 if(jw=='.bmp' || jw=='.jpg' || jw=='.gif'|| jw=='.jpeg'||jw=='.png'){
                     $("#fileShowName").append("<p>" +
@@ -324,45 +326,51 @@
 
         //删除，删除节点
         function deleteFile(obj) {
+            //
             var fid = $(obj).parent().find("input[name='fid']").eq(0).val();
+            // 附件id不为空  则先判断是否是要去除第一个 ','
             if (fid != '') {
+                // 前面定义了附件的id为空字符串
                 var str = $("#attachIdss").val() + "," + fid;
+                // 如果 ','处于第一位(第一次添加附件)，那么就新的字符串从一开始截取
                 if (str.indexOf(",") == 0) {
                     str = str.substr(1);
                 }
+                // 不是第一次添加，，就不需要去除第一个 开始的 ','
                 $("#attachIdss").val(str);
             }
+            // 为空  则不需要进行判断
             $(obj).parent().remove();
         }
 
         //获取在节点上的文件路径
-        function getAttachPath() {
-            var tempAttachPath = [];
-            var $attachPath = $("input[name='attachPath']");
-            $.each($attachPath, function (k, v) {
-                tempAttachPath.push($(v).val());
-            })
-            return tempAttachPath;
-        }
+//        function getAttachPath() {
+//            var tempAttachPath = [];
+//            var $attachPath = $("input[name='attachPath']");
+//            $.each($attachPath, function (k, v) {
+//                tempAttachPath.push($(v).val());
+//            })
+//            return tempAttachPath;
+//        }
         //获取在节点上的文件路名称
-        function getAttachName() {
-            var tempAttachName = [];
-            var $attachName = $("input[name='attachName']");
-            $.each($attachName, function (k, v) {
-                tempAttachName.push($(v).val());
-            })
-            return tempAttachName;
-        }
+//        function getAttachName() {
+//            var tempAttachName = [];
+//            var $attachName = $("input[name='attachName']");
+//            $.each($attachName, function (k, v) {
+//                tempAttachName.push($(v).val());
+//            })
+//            return tempAttachName;
+//        }
 
         //获取所有附件Ids
-        function getAttachIdss() {
-            var tempAttachIdss = [];
-            var $attachIdss = $("#attachIdss").val().split(",");
-            $.each($attachIdss, function (k, v) {
-                tempAttachIdss.push(v);
-            })
-            return tempAttachIdss;
-        }
+//      function getAttachIdss() {
+//            var tempAttachIdss = [];
+//            var $attachIdss = $("#attachIdss").val().split(",");
+//            $.each($attachIdss, function (k, v) {
+//                tempAttachIdss.push(v);
+//            })
+//            return tempAttachIdss;
+//        }
     </script>
 </body>
 </html>

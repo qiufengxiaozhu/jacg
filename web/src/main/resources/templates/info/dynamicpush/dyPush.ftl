@@ -122,14 +122,18 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
-                    <div class="testSave02">
-                    <button type="button" class="btn btn-primary" id="save-btn-test">保存</button>
+
+                <div class="modal-footer testSave02" style="float: right">
+                    <button type="button" class="btn btn-primary" id="save-btn-test" style="float: right">保存</button>
                     </div>
-                    <div class="testSave">
-                    <button type="button" class="btn btn-primary" id="save-btn">保存</button>
+                <div class="modal-footer testSave" style="float: right">
+                    <button type="button" class="btn btn-primary" id="save-btn" style="float: right">保存</button>
                     </div>
+                    <div class="modal-footer" style="float: right">
+                        <button type="button" class="btn btn-white" data-dismiss="modal" style="float: right">关闭</button>
                     </div>
+                </div>
+
             </small>
         </div>
         <small class="font-bold">
@@ -173,11 +177,16 @@
     var formIdStr="#dy_form";
     var sys_url=window.location.host;
 
-
+// 点击新建  隐藏自带的保存按钮
     $(document).on("click", '#add-btn', function (value) {
+        // 恢复富文本框的编辑功能
         ue.setEnabled();
+        // save-btn-test save-btn
         $(".testSave").css("display","none");
         $(".testSave02").css("display","block");
+
+//        $("#save-btn").hide();
+//        $("#save-btn-test").hide();
         UE.getEditor('contents').setContent("");
         dataTable.ajax.reload();
 
@@ -371,18 +380,18 @@
                         var unpushstr="";
 
                        // 详情
-                        detailstr= '<button class="btn btn-info btn-sm row-detail" value="{id}" onclick= ="editTest()" id ="detailId"><i class="fa fa-pencil"></i>详情</button>';
+                        detailstr= '<button class="btn btn-info btn-sm row-detail" value="{id}" onclick= ="editTest()" id ="detailId"><i class="fa fa-pencil"></i>详情</button>&nbsp;';
                         // 编辑
-                        editstr= '<button class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}" id = "editId"><i class="fa fa-pencil"></i>编辑</button>';
+                        editstr= '<button class="btn btn-primary btn-sm row-edit updateOpBtn" value="{id}" id = "editId"><i class="fa fa-pencil"></i>编辑</button>&nbsp;';
                        // 删除
                         delstr =zudp.template.delBtn;
                         // 推送
-                        pushstr = '<button class="btn btn-info btn-sm" value="{id}" id = "pushId"><i class="fa fa-pencil"></i>推送</button>';
+                        pushstr = '<button class="btn btn-info btn-sm" value="{id}" id = "pushId"><i class="fa fa-pencil"></i>推送</button>&nbsp;';
                         // 撤销推送
-                        unpushstr = '<button class="btn btn-info btn-sm " value="{id}" id = "unpushId"><i class="fa fa-pencil"></i>撤销推送</button>';
+                        unpushstr = '<button class="btn btn-info btn-sm  btn-danger " value="{id}" id = "unpushId"><i class="fa fa-pencil"></i>撤销推送</button>&nbsp;';
                           //    详情      编辑    删除   推送    撤销推送
                         // 未推送状态
-                        btn += detailstr+editstr+delstr+pushstr;
+                        btn += detailstr +editstr+delstr+pushstr;
                         // 推送状态
                         btn02 += detailstr+unpushstr;
 
