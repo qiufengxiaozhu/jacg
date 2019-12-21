@@ -34,6 +34,10 @@ public class MMReportService  extends FileBusinessService<MMReport>{
     public List<MMReport> show(Object phone,Object name){
         return mmReportDao.selAll(phone,name);
     }
+
+    public List<MMReport> showAll(){
+        return mmReportDao.selAll();
+    }
 //
     @Override
     public synchronized void afterInsert(MMReport mmReport) {

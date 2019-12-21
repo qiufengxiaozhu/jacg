@@ -187,8 +187,16 @@ public class MMNewsController {
     }
 
     /**
+     * 我的上报（不加查询条件，查询所有人）
+     */
+    @GetMapping("/reportAll")
+    public String reportAll(Model model){
+        return "/report/allreport";
+    }
+
+    /**
      *公众上报
-     * @param model
+     * @param
      * @return
      */
     @GetMapping("/addreport")
