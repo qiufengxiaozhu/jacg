@@ -64,6 +64,7 @@
                             <th>上报时间</th>
                             <th>回复时间</th>
                             <th>回复状态</th>
+                            <#--<th>评论id</th>-->
                             <th>评论状态</th>
                             <th>操作</th>
                         </tr>
@@ -173,16 +174,6 @@
                             </div>
                         </div>
 
-                        <#--<div class="form-group">-->
-                            <#--<label class="col-sm-3 control-label my-control-label ">回复单位：</label>-->
-                            <#--<div class="col-sm-6">-->
-                                <#--<input  type="text" name="replyDate" maxlength="64" id="replyDate" placeholder="回复单位" class="form-control" value="吉安城管办事处">-->
-                            <#--</div>-->
-                        <#--</div>-->
-
-
-
-
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">附件：</label>
                             <div class="col-sm-6" id="fj">
@@ -190,6 +181,9 @@
                             </div>
                         </div>
 
+                        <div class="form-group" id="commentText">
+
+                        </div>
                     </form>
                 </div>
 
@@ -234,7 +228,6 @@
     var urlstr="/api/comment";
     var formIdStr="#kind_form";
     var sys_url=window.location.host;
-//    var startDate = new Date();
     $(document).ready(function () {
 
 
@@ -245,7 +238,7 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}咨询",
+            title: "{type}评论",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],
@@ -265,7 +258,7 @@
     });
     function hiddensave(obj){
         var id=$(obj).val();
-        zudp.ajax("/api/report/"+id).get("").then(function (data){
+        zudp.ajax("/api/comment/"+id).get("").then(function (data){
             if(data.reply!=null && data.reply!=""){
                 $("#save-btn").hide();
             }else {
@@ -278,7 +271,7 @@
     function img2(obj){
         // 获取到按钮的id 记录的id
         var id=$(obj).val();
-        alert(id);
+//        alert(id);
         $("#fj").html("");
         zudp.ajax("/api/comment/getFj?id="+id).get().then(function (value){
             var fjpath = value.attachPaths;
@@ -310,6 +303,56 @@
         $(".modal .modal-title").text("市民评论");
     };
 
+    /**
+     * 获取评论
+     */
+    function getComment(obj) {
+        var id = $(obj).val();
+
+        zudp.ajax("/api/comment/getComment?id="+id).get().then(function (value){
+
+            var arr=value;
+            for(var i=0;i<value.length;i++){
+                var name=arr[i].name;
+                var content=arr[i].content;
+                var time=arr[i].publicTime;
+
+                $("#commentText").append("<div class='col-md-8 control-label my-control-label' style='float: left'>" +
+                        "<div style='float: left;margin-left:165'>回复者："+"<input type='text' value='"+name+"' id='textName' >"+"</div>" +"<br>"+"<br>"+
+                        "<div style='float: left;margin-left:165'>回复内容："+"<input type='text' value='"+content+"' id='textContent'>"+"</div>" +"<br>"+"<br>"+
+                        "<div style='float: left;margin-left:165'>回复时间："+"<input type='text' value='"+time+"' id='textTime'>"+"</div>" +"<br>"+"<br>"+"<hr>"+
+                        "</div>"+"<br>"+"<br>"+"<br>"+"<br>");
+
+//                $("#textName").val(name);
+//                $("#textContent").val(content);
+//                $("#textTime").val(time);
+
+            }
+
+
+
+//            if (commentList!=null) {
+//                for (var i = 0; i < commentList.length; i++) {
+//
+//                    var name = commentList.name[i];
+//                    alert(name);
+//
+////                    $("#commentText").append(
+////
+////                        "<label class=\"col-sm-3 control-label my-control-label \">评论者：</label>\n" +
+////                            "  <div class=\"col-sm-6\">\n" +
+////                            "       <input  type=\"text\" name=\"replyUserId\" maxlength=\"64\" id=\"replyUserId\" value='value.get(i).name' class=\"form-control\" >\n" +
+////                            "  </div>"
+////                    )
+//                }
+//            }
+
+
+        })
+
+
+    }
+
     //列表数据初始化方法
     function findList() {
 
@@ -324,19 +367,29 @@
                     }
                 })
                 .columns( [
-                    {data: 'id', visible: false},
+                    {data: 'replyId', visible: false},
                     {data:'title'},
                     {data:'issueQuestionType'},/*问题类型*/
                     {data:'complainDate'},/*投诉时间*/
                     {data:'replyDate'},/*回复时间*/
-//                    {data:'replyStatus'},/*回复状态*/
                     {
                         render: function (data, type, row) {
-                                if(data.replyStatus == '0'){ // 未回复
+                                if(data.replyStatus == '0' ){ // 未回复
                                         return "未回复";
                                 }else{ // 已回复
                                     return "已回复";
                                 }
+                        }
+                    },
+//                    {data:'id'},
+//                    {data:'commentType'},
+                    {
+                        render: function (data, type, row) {
+                            if(data.commentType == null){ //未评论
+                                return "未评论";
+                            }else{ // 已评论
+                                return "已评论";
+                            }
                         }
                     },
                     {
@@ -347,15 +400,15 @@
                             var  detailStr="";
 
                             // 编辑(回复)
-                            editstr='<button onclick="show1(),img2(this),hiddensave(this)"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
+                            editstr='<button onclick="show1(),img2(this),hiddensave(this)"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{replyId}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
                            // 详情
-                            detailStr='<button onclick="img2(this)" class="btn btn-success btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
+                            detailStr='<button onclick="img2(this),getComment(this)" class="btn btn-success btn-sm row-detail" value="{replyId}"><i class="fa fa-pencil"></i>详情</button>';
 
                             btn += editstr+detailStr;
                             btn02 += detailStr;
-                            if(data.replyStatus == '0'){ // 未回复
+                            if(data.commentType == null){ // 未评论
                                 return zudp.util.render(btn, row);
-                            }else{ // 已回复
+                            }else{ // 已评论
                                 return zudp.util.render(btn02, row);
                             }
 
@@ -364,42 +417,6 @@
                 ])
                 .then();
 
-    }
-
-
-
-    function initUpload(){
-
-        var uploader = WebUploader.create({
-            // swf文件路径
-            swf: '/css/third/Uploader.swf',
-            auto: true,
-            // 文件接收服务端。
-            server: '/upload/custom',
-
-            // 选择文件的按钮。可选。
-            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
-            pick: '#xg_rar',
-
-            // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
-            resize: false,
-            //重复上传
-            duplicate :true,
-            accept:{
-                extensions:'bmp,jpg,png,rar,gif,zip,xls,xlsx,doc,docx',
-                title:'file',
-                mimeTypes:'*/*'
-            }
-        });
-        // 文件上传成功，给item添加成功class, 用样式标记上传成功。
-        uploader.on( 'uploadSuccess', function( file,response) {
-            //debugger;
-            var name = file.name;
-            var fileurl = response.data;
-            $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");
-
-            //change(response);
-        });
     }
 
 </script>

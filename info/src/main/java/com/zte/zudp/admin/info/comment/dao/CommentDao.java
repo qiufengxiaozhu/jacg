@@ -16,33 +16,7 @@ import java.util.Map;
 public interface CommentDao extends AbstractDao<Comment> {
 
     /**
-     * 根据具体的问题上报查询具体的评论
+     * 获取该上报的所有评论
      */
-    public List<Comment> getDetail(@Param("id") String id);
-
-    /**
-     * 查询所有问题上报
-     * @return
-     */
-    List<Map> selectAll();
-
-    /**
-     * 根据id查询具体问题上报
-     * @param id
-     * @return
-     */
-    Map getReport(@Param("id") String id);
-
-    /**
-     * 新增评论
-     * @param comment
-     * @return
-     */
-    int addComment(Comment comment);
-
-    /**
-     * 点赞数加1
-     * @return
-     */
-    int addClicks(@Param("commentId") String commentId);
+    List<Comment> getComment(@Param("id") String id);
 }

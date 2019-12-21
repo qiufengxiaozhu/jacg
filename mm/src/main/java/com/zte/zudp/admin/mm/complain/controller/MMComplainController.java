@@ -43,6 +43,7 @@ public class MMComplainController {
         //如果是从 /mm/news/index 过来的 contact == ""，因为我也不知道怎么把用户账号信息写好
 //        if (contactUser == null || contactUser.equals(""))
 //            contactUser = "123";
+        System.out.println(phone);
         if (phone == null || phone.equals(""))
             phone = "123456";
         MMComplainEntity entity = new MMComplainEntity();

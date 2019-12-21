@@ -2,6 +2,7 @@ package com.zte.zudp.admin.info.comment.controller;
 
 import com.zte.zudp.admin.common.annotation.JSON;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
+import com.zte.zudp.admin.common.persistence.Page;
 import com.zte.zudp.admin.common.persistence.Subject;
 import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
 import com.zte.zudp.admin.common.security.SubjectUtil;
@@ -36,6 +37,9 @@ public class CommentController extends AbstractCRUDController<Comment> {
     @Autowired
     private CommentService commentService;
 
+    @Autowired
+    private IssueReplyService issueReplyService;
+
     /**
      * 获取问题上报信息的附件
      * @param id
@@ -43,7 +47,19 @@ public class CommentController extends AbstractCRUDController<Comment> {
      */
     @RequestMapping("/getFj")
     @ResponseBody
-    public Comment getFj(String id){
-        return commentService.get(id);
+    public IssueReply getFj(String id){
+        return issueReplyService.get(id);
+    }
+
+    /**
+     * 获取该上报的所有评论
+     */
+    @RequestMapping(value = "/getComment",method = RequestMethod.GET)
+    @ResponseBody
+    public List<Comment> getComment( String id){
+
+        List<Comment> commentList = commentService.getComment(id);
+
+        return commentList;
     }
 }

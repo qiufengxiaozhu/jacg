@@ -4,17 +4,20 @@
 <mapper namespace="com.zte.zudp.admin.info.comment.dao.CommentDao">
 
     <!--查询所有-->
-    <select id="findList" resultType="com.zte.zudp.admin.info.issueReport.entity.IssueReply">
-        select
-        t1.id,
+    <select id="findList" resultType="com.zte.zudp.admin.info.comment.entity.Comment">
+        SELECT DISTINCT
+        t1.id replyId,
         t1.title,
         t1.issueQuestionType,
-        DATE_FORMAT(t1.complainDate,'%Y-%m-%d %T')  complainDate,
-        DATE_FORMAT(t1.replyDate,'%Y-%m-%d %T')  replyDate,
-        t1.replyStatus
-        from jacg_issuereport t1
-        left join   qgq_comment t2 ON n.fk_categoryid = t2.id
-        where del='0'
+        DATE_FORMAT( t1.complainDate, '%Y-%m-%d %T' ) complainDate,
+        DATE_FORMAT( t1.replyDate, '%Y-%m-%d %T' ) replyDate,
+        t1.replyStatus,
+        t2.fk_issuereportId commentType
+        FROM
+        jacg_issuereport t1
+        LEFT JOIN qgq_comment t2 ON t2.fk_issuereportId = t1.id
+        WHERE
+        t1.del = '0'
         <if test="issueQuestionType!=null and issueQuestionType!=''">
             and t1.issueQuestionType like concat('%', #{issueQuestionType}, '%')
         </if>
@@ -41,94 +44,16 @@
         where id=#{id}
     </select>
 
-    <select id="getDetail" resultType="com.zte.zudp.admin.info.comment.entity.Comment">
+    <select id="getComment" resultType="com.zte.zudp.admin.info.comment.entity.Comment">
         SELECT
-            id, content, name, phone, clicks,
-            DATE_FORMAT( public_time, "%Y-%m-%d %T" ) publicTime,
-            fk_issuereportid
+        id, content, name, phone, clicks,
+        DATE_FORMAT( public_time, "%Y-%m-%d %T" ) publicTime,
+        fk_issuereportid
         FROM qgq_comment
         WHERE  del!=1
         <if test="id != null and id != '' ">
-           and fk_issuereportid = #{id}
+            and fk_issuereportid = #{id}
         </if>
         ORDER BY public_time desc
     </select>
-
-
-    <select id="selectAll" resultType="java.util.Map">
-        select
-            id, title, description, issueQuestionType,
-
-            contact, phone, complainDate, replyStatus, replyContent,
-
-            replyDate, replyUserId, longitude, latitude, address,
-
-            DATE_FORMAT( complainDate, "%Y-%m" ) yearAndMonth,
-
-            DATE_FORMAT( complainDate, "%d" ) day
-        FROM
-          jacg_issuereport
-        WHERE
-          del != 1
-        ORDER BY complainDate DESC
-</select>
-
-    <select id="getReport" resultType="java.util.Map">
-        select
-            id, title, description, issueQuestionType,
-
-            contact, phone, complainDate, replyStatus, replyContent,
-
-            replyDate, replyUserId, longitude, latitude, address,
-
-            DATE_FORMAT( complainDate, "%Y-%m" ) yearAndMonth,
-
-            DATE_FORMAT( complainDate, "%d" ) day
-        FROM
-            jacg_issuereport
-        WHERE
-            del != 1
-            <if test="id != null and id != '' ">
-                and id = #{id}
-            </if>
-        ORDER BY complainDate DESC
-    </select>
-
-    <insert id="addComment">
-        INSERT  INTO qgq_comment (
-            id, content, name, phone, clicks,
-            public_time,
-            fk_issuereportid,
-            create_time,
-            create_user,
-            update_time,
-            update_user,
-            del
-        )
-        VALUE (
-            #{id}, #{content},#{name}, #{phone},'0',
-            Now(),
-            #{fk_issuereportId},
-            #{createDate},
-            #{createUser.id},
-            #{updateDate},
-            #{updateUser.id},
-            '0'
-          )
-    </insert>
-
-    <update id="addClicks">
-        UPDATE
-            qgq_comment
-        set
-            clicks = clicks + 1
-        WHERE
-            del!=1
-        <if test="commentId != null and commentId != '' ">
-            and id = #{commentId}
-        </if>
-    </update>
-
-
-
 </mapper>
