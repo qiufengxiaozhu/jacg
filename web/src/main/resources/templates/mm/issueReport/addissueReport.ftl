@@ -321,7 +321,7 @@
 
         }
         function goIndex() {
-            window.location.href = '/mm/news/index';
+            window.location.href = '/mm/wxindex/index';
         }
 
         //删除，删除节点

@@ -18,9 +18,8 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * 公众调查
+ * 公众调查  微信端
  */
-
 @Controller
 @RequestMapping(value = "/mm/wxqueinvest")
 public class WXMMQueinvestController {
@@ -38,7 +37,7 @@ public class WXMMQueinvestController {
     public String survey(Model model) {
         List<WXMMQueinvest> queinvestList=wxmmQueinvestService.selectAll();
         model.addAttribute("queinvestList",queinvestList);
-        return "mm/news/survey";
+        return "mm/wxindex/survey";
     }
 
     /**
@@ -46,8 +45,8 @@ public class WXMMQueinvestController {
      * @param model
      * @return
      */
-    @RequestMapping("/startQueinvest/{id}")
-    public String startQueinvest(Model model,@PathVariable("id")String id) {
+    @RequestMapping("/start/{id}")
+    public String startQueinvest(Model model,@PathVariable("id") String id) {
         List<WXMMQueinvest> list = wxmmQueinvestService.startQueinvest(id);
 
         for (int i = 0; i < list.size(); i++) {
@@ -58,7 +57,7 @@ public class WXMMQueinvestController {
         }
             model.addAttribute("list", list);
 
-            return "mm/queinvest/queinvestDetail";
+            return "mm/wxqueinvest/wxqueinvestDetail";
         }
 
 
@@ -112,7 +111,7 @@ public class WXMMQueinvestController {
             }
 
 
-            return "/mm/news/index";
+            return "/mm/wxindex/index";
 
         }
 
