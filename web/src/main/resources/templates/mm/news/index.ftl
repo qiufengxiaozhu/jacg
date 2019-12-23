@@ -205,7 +205,7 @@
         $(".mask").on("click",function(){
             $(".slt-city").hide();
             timeZone = $(".place-float .city-selected").attr("id");
-            alert("timeZone:"+timeZone)
+//            alert("timeZone:"+timeZone)
         });
         $(".place-float .city-pos").on("click",function(){
             var index = $(".place-float .city-pos").index($(this));
@@ -297,7 +297,12 @@
      * 所有已发布新闻列表
     */
     function goNewPage(){
-        window.location.href='/mm/news/mmNews';
+
+        var time = timeZone;
+        if(time == null )
+            time = 1;
+//        alert("timeZone:"+time);
+        window.location.href='/mm/news/mmNews?timeZone='+time;
     }
 
     /**

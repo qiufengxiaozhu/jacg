@@ -2,6 +2,7 @@ package com.zte.zudp.admin.mm.news.dao;
 
 import com.zte.zudp.admin.common.persistence.dao.AbstractDao;
 import com.zte.zudp.admin.mm.news.entity.MMNews;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.ArrayList;
 
@@ -24,10 +25,6 @@ public interface MMNewsDao extends AbstractDao<MMNews>{
      */
     public MMNews find_news(String id);
 
-//    /**
-//     * 根据时区查询所有
-//     */
-//    public ArrayList<MMNews> find_allNews(String timeZone);
 
     /**
      * 查询所有
@@ -35,13 +32,22 @@ public interface MMNewsDao extends AbstractDao<MMNews>{
     public ArrayList<MMNews> find_allNews();
 
     /**
-     * 根据发布时间查找新闻
+     * 根据发布时间及时区查找新闻
      */
-    public ArrayList<MMNews> find_newsTime(String newsDate);
+    public ArrayList<MMNews> find_newsTime(@Param("newsDate") String newsDate,@Param("TimeZone") String TimeZone);
 
     /**
      * 将该新闻的点击量+1
      */
     public void add_newsClicks(String id);
 
+    /**
+     * 根据时区查询所有
+     */
+    ArrayList<MMNews> find_allNewsList(@Param("timeZone") String timeZone);
+
+    /**
+     * 根据发布时间查找新闻
+     */
+    ArrayList<MMNews> find_newsList(@Param("newsDate")String newsDate);
 }

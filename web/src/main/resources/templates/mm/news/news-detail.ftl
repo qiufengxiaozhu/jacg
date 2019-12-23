@@ -38,7 +38,7 @@
 <script>
     function golist() {
         if('${type!""}'=='1'){
-            window.location.href='/mm/news/mmNews';
+            window.location.href="javascript:history.go(-1)";
         }else{
             window.location.href='/mm/news/index';
         }

@@ -43,14 +43,23 @@ public class MMNewsController {
      * @return
      */
     @GetMapping("/mmNews")
-    public String mmNews(Model model) {
+    public String mmNews(Model model,@RequestParam("timeZone") String timeZone) {
 
-        //        //根据时区查询所有新闻
+        //
         //        ArrayList<MMNews> newslist = newsService.find_allNews(timeZone);
 
-        //查询所有新闻
-        ArrayList<MMNews> newslist = newsService.find_allNews();
+        System.out.println(timeZone);
 
+        ArrayList<MMNews> newslist = null;
+
+        //查询所有新闻
+        if("1".equals(timeZone) || timeZone == null) {
+            newslist = newsService.find_allNews();
+        }
+        //根据时区查询所有新闻
+        else{
+            newslist = newsService.find_allNewsList(timeZone);
+        }
         //动态获取IP地址
         Enumeration<NetworkInterface> allNetInterfaces = null;
         String resultIP=null;
@@ -81,6 +90,7 @@ public class MMNewsController {
 
 
         model.addAttribute("Newslist",newslist);
+        model.addAttribute("TimeZone",timeZone);
 
         return "/mm/news/mmNews";
     }
@@ -116,12 +126,51 @@ public class MMNewsController {
      * @return
      */
     @RequestMapping("/queryNews")
-    public String queryNews(Model model, String newsDate) {
+    public String queryNews(Model model, String newsDate,String TimeZone) {
 
-        //根据发布时间查找新闻
-        ArrayList<MMNews> newslist = newsService.find_newsTime(newsDate);
+
+//        System.out.println("日期："+newsDate+"  时区："+TimeZone);
+        ArrayList<MMNews> newslist = null;
+        if("1".equals(TimeZone)) {
+            //根据发布时间查找新闻
+            newslist = newsService.find_newsList(newsDate);
+        }
+        else{
+            //根据发布时间及时区查找新闻
+            newslist = newsService.find_newsTime(newsDate, TimeZone);
+        }
+
+        //动态获取IP地址
+        Enumeration<NetworkInterface> allNetInterfaces = null;
+        String resultIP=null;
+        try {
+            allNetInterfaces = NetworkInterface.getNetworkInterfaces();
+        } catch (SocketException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        InetAddress ip = null;
+        while (allNetInterfaces.hasMoreElements())
+        {
+            NetworkInterface netInterface = (NetworkInterface) allNetInterfaces.nextElement();
+            System.out.println(netInterface.getName());
+            Enumeration<InetAddress> addresses = netInterface.getInetAddresses();
+            while (addresses.hasMoreElements())
+            {
+                ip = (InetAddress) addresses.nextElement();
+                if (ip != null && ip instanceof Inet4Address)
+                {
+                    if(resultIP==null)
+                        resultIP= ip.getHostAddress();
+                    System.out.println("本机地址是："+ip.getHostAddress());
+                    model.addAttribute("ResultIP",ip.getHostAddress());
+                }
+            }
+        }
 
         model.addAttribute("Newslist",newslist);
+        model.addAttribute("TimeZone",TimeZone);
+
 
 //        return "forward:/mm/news/mmNews";
         return "/mm/news/mmNews";
