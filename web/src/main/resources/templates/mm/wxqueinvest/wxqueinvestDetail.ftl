@@ -34,7 +34,7 @@
 
 <body ontouchstart>
 <header class="ui-header ui-header-stable ui-border-b">
-    <i class="ui-icon-return" onclick="history.back()"></i>
+    <i class="ui-icon-return" onclick="goIndex()"></i>
     <h1>调查问卷</h1>
 </header>
 <footer class="ui-footer ui-footer-btn" style="height: 44px">
@@ -79,6 +79,14 @@
     function check() {
         alert("感谢您参与本次问卷调查");
         return true;
+    }
+
+
+    /**
+     * 返回首页
+     */
+    function goIndex() {
+        window.location.href = '/mm/wxindex/index';
     }
 
 

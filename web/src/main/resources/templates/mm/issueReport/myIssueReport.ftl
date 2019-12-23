@@ -53,7 +53,7 @@
         </form>
 <script>
     function goIndex(){
-        window.location.href='/mm/news/index';
+        window.location.href='/mm/wxindex/index';
     }
     function goDetail(id){
         $("#id").val(id);
