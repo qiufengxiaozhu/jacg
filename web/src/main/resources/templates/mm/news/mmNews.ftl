@@ -29,6 +29,7 @@
 
 		<div class="fb-time">
             <input type="text" class="demo-input" placeholder="请选择日期" id="test1" style="border: 1px ;height:20px">
+            <input type="hidden" value="${TimeZone}" id="timeText">
             <input type="button" id="date" onclick="selectDate()" style="color: blue;background-color: whitesmoke;border: #fafffa;margin-right: 10px" value="查询">
         </div>
 
@@ -211,8 +212,9 @@
 
             $("#date").click(function () {
                 var date = $("#test1").val();
-//                alert("日期为：  "+date);
-                window.location.href='/mm/news/queryNews?newsDate='+date;
+                var time = $("#timeText").val();
+//                alert("时区为：  "+time);
+                window.location.href='/mm/news/queryNews?newsDate='+date+'&TimeZone='+time;
             });
         });
 

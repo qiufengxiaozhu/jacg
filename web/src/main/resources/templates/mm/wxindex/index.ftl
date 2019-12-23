@@ -93,7 +93,7 @@
                 <#--<div class="" onclick="goPage(7)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>-->
                 <#--<div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>-->
                 <div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的问题上报</p></div></div>
-                <#--<div class="" onclick="goPage(9)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>市民评论</p></div></div>-->
+                <div class="" onclick="goPage(9)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>市民评论</p></div></div>
             </div>
         </div>
 
@@ -104,7 +104,7 @@
             <div class="flex public">
                 <div class="flex-1" onclick="getSession()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>等待开发..</p></div></div>
                 <div class="flex-1" onclick="goPage()"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>等待开发..</p></div></div>
-                <div class="flex-1" onclick="goPage()"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>等待开发..</p></div></div>
+
                 <div class="flex-1" onclick="goSystemCheck()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>等待开发..</p></div></div>
                 <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>问题上报</p></div></div>
             </div>
@@ -218,6 +218,10 @@
         if(a==3){
             //问题上报
             window.location.href='/mm/issueReport/toMyIndex';
+        }
+        if(a==9) {
+            //市民评论
+            window.location.href = '/mm/comment/selectAll/';
         }
 
 
