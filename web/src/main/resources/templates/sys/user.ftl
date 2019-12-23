@@ -351,7 +351,6 @@
                                 updateUserStatus_btn =  <@hasPermission name="sys:groupSetting:user:updateUserStatus"> "&nbsp;<button class=\"btn btn-warning btn-sm  btn-img\" onclick=\"translates('" + row.id + "')\" title='激活'>激活</button>"</@hasPermission>+"";
                             }
                             return zeroToSpace(update_btn)+zeroToSpace(delete_btn)+zeroToSpace(updatePassword_btn)+zeroToSpace(updateUserStatus_btn);                        }
-                        }
                     }
                 ]
             },
