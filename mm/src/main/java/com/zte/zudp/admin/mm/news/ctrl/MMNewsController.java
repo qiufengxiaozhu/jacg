@@ -354,6 +354,17 @@ public class MMNewsController {
         model.addAttribute("laterurl",laterurl==null?"":laterurl);
         return "/mm/news/login";
     }
+    /**
+     * 注册页
+     * @param model
+     * @return
+     */
+    @GetMapping("/toreg")
+    public String toreg(Model model,String laterurl) {
+
+//        model.addAttribute("laterurl",laterurl==null?"":laterurl);
+        return "/mm/reg";
+    }
 
     /**
      * 登录
@@ -385,6 +396,15 @@ public class MMNewsController {
 
         //设置session
         request.getSession(true).setAttribute("mobile_user", user);
+        return "ok";
+
+    }
+    @JSON
+    @PostMapping("/regsave")
+    public String regsave(@RequestBody User t) {
+
+        userService.save(t,true);
+        t.setStatus(User.STATUS_INACTIVATED);
         return "ok";
 
     }

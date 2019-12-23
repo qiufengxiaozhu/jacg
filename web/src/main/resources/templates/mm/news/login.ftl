@@ -36,7 +36,7 @@
             <div class="btn login-btn" onclick="login()">立即登录</div>
             <div class="regist-user">
                 <span>还没有账号?</span>
-                <a href="#">马上注册</a>
+                <a href="/mm/news/toreg">马上注册</a>
             </div>
         </div>
     </div>
@@ -53,7 +53,9 @@
 
             if(da=='ok'){
                 $("#msg-show").html("登录成功");
-                window.location.href='${laterurl!""}';
+                ///mm/wxindex/index
+                <#--window.location.href='${laterurl!""}';-->
+                window.location.href='/mm/wxindex/index';
             }else if(da=='noperson'){
                 $("#msg-show").html("用户不存在");
             }else if(da=='noactive'){
