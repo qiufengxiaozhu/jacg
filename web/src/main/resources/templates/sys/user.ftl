@@ -341,8 +341,8 @@
                     },
                     {
                         render: function (data, type, row) {
-                            var update_btn = <@hasPermission name="sys:groupSetting:user:update">zudp.template.editBtn</@hasPermission>+"";
-                            var delete_btn =   <@hasPermission name="sys:groupSetting:user:delete">zudp.template.delBtn</@hasPermission>+"";
+                            var update_btn = <@hasPermission name="sys:groupSetting:user:update">'<button class="btn btn-info btn-sm row-edit updateOpBtn" value="' + row.id + '">编辑</button>'</@hasPermission>+"";
+                            var delete_btn =   <@hasPermission name="sys:groupSetting:user:delete">'<button class="btn btn-danger btn-sm row-delete mgl my-mgl" value="' + row.id + '">删除</button>'</@hasPermission>+"";
                             var updatePassword_btn = <@hasPermission name="sys:groupSetting:user:updatePassword"> "<button class=\"btn btn-info btn-sm  btn-img\" onclick=\"updatePassword('" + row.id + "')\" title='修改密码'>修改密码</button>"</@hasPermission>+"";
                             var updateUserStatus_btn = "";
                             if(data.status == '1'){
