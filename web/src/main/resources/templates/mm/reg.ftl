@@ -97,7 +97,7 @@
         });
     }
     function saveReg(){
-        debugger;
+        // debugger;
         var flag1=$("#name_error_flag").val();
         var flag2=$("#pwd_error_flag").val();
         var name=$("#new_user_name").val();

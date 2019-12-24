@@ -178,7 +178,7 @@
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>联系电话&nbsp;:</span>
-                        <input type="text" name="phone" class="tab-input flex-1" placeholder="请输入您的电话(11位数字)" value="${Session.userPhone!}">
+                        <input type="text" name="phone" class="tab-input flex-1" placeholder="请输入您的电话(11位数字)" value="${Session.userName!}">
                         <span id="sp_telephone"></span>
                         </div>
                     </div>
