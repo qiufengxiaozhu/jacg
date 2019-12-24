@@ -31,11 +31,11 @@
 </head>
 <body>
 <div class="container-app content">
-    <div class="top">
-        <div class="top-ret in-float"><img src="/mm/img/position.png" class="img-float img-1"><div  class="img-float img-font" id="address1">吉安</div><img src="/mm/img/pull.png" class="img-float img-2"></div>
-        <div class="advince">首页</div>
-        <div class="dex-float"><img src="/mm/img/around.png" class="img-float img-3"><a href="tel:12319"><img src="/mm/img/phone.png" class="img-float img-4"></a></div>
-    </div>
+    <#--<div class="top">-->
+        <#--<div class="top-ret in-float"><img src="/mm/img/position.png" class="img-float img-1"><div  class="img-float img-font" id="address1">吉安</div><img src="/mm/img/pull.png" class="img-float img-2"></div>-->
+        <#--<div class="advince">首页</div>-->
+        <#--<div class="dex-float"><img src="/mm/img/around.png" class="img-float img-3"><a href="tel:12319"><img src="/mm/img/phone.png" class="img-float img-4"></a></div>-->
+    <#--</div>-->
     <div class="in-center">
 
 
@@ -73,74 +73,81 @@
         <div class="center">
             <div class="flex public">
                 <div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>问卷调查</p></div></div>
-            </div>
-        </div>
-        <div class="center">
-            <div class="flex public">
-                <#--<div class="flex-1" onclick="goDianzan()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我要点赞</p></div></div>-->
-                <#--<div class="flex-1" onclick="goPage(10)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>积分管理</p></div></div>-->
-                <#--<div class="flex-1" onclick="goPage(0)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>排行榜</p></div></div>-->
-                <#--<div class="flex-1" onclick="goCountManage()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>统计管理</p></div></div>-->
-            </div>
-        </div>
 
-        <div class="thumbs">
-            <div class="thumbs-tit" onclick="goNewPage()" style="border:none">我的案件</div>
-        </div>
-        <div class="center">
-            <div class="flex public">
-                <#--<div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我的上报</p></div></div>-->
-                <#--<div class="" onclick="goPage(7)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>-->
-                <#--<div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>-->
+
+
                 <div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的问题上报</p></div></div>
+
                 <div class="" onclick="goPage(9)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>市民评论</p></div></div>
-            </div>
-        </div>
 
-        <div class="thumbs">
-            <div class="thumbs-tit" onclick="goNewPage()" style="border:none">我的案件</div>
+                <div class="" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>问题上报</p></div></div>
+            </div>
         </div>
-        <div class="center">
-            <div class="flex public">
-                <div class="flex-1" onclick="getSession()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>等待开发..</p></div></div>
-                <div class="flex-1" onclick="goPage()"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>等待开发..</p></div></div>
+        <#--<div class="center">-->
+            <#--<div class="flex public">-->
+                <#--&lt;#&ndash;<div class="flex-1" onclick="goDianzan()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我要点赞</p></div></div>&ndash;&gt;-->
+                <#--&lt;#&ndash;<div class="flex-1" onclick="goPage(10)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>积分管理</p></div></div>&ndash;&gt;-->
+                <#--&lt;#&ndash;<div class="flex-1" onclick="goPage(0)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>排行榜</p></div></div>&ndash;&gt;-->
+                <#--&lt;#&ndash;<div class="flex-1" onclick="goCountManage()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>统计管理</p></div></div>&ndash;&gt;-->
+            <#--</div>-->
+        <#--</div>-->
 
-                <div class="flex-1" onclick="goSystemCheck()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>等待开发..</p></div></div>
-                <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>问题上报</p></div></div>
-            </div>
-        </div>
-    </div>
-    <div class="in-bottom flex">
-        <div class="flex-1">
-            <div class="bot-mess on">
-                <div class="bot-img bot-img1"></div>
-                <p>首页</p>
-            </div>
-        </div>
-        <div class="flex-1">
-            <div class="bot-mess">
-                <div class="bot-img bot-img2"></div>
-                <p>我的案件</p>
-            </div>
-        </div>
-        <div class="flex-1">
-            <div class="bot-mess">
-                <div class="bot-img bot-img3"></div>
-                <p>地图功能</p>
-            </div>
-        </div>
-        <div class="flex-1" onclick="goCountManage()">
-            <div class="bot-mess">
-                <div class="bot-img bot-img4"></div>
-                <p>统计管理</p>
-            </div>
-        </div>
-        <div class="flex-1" onclick="goCenter()">
-            <div class="bot-mess">
-                <div class="bot-img bot-img5"></div>
-                <p>个人中心</p>
-            </div>
-        </div>
+        <#--<div class="thumbs">-->
+            <#--<div class="thumbs-tit" onclick="goNewPage()" style="border:none">我的案件</div>-->
+        <#--</div>-->
+        <#--<div class="center">-->
+            <#--<div class="flex public">-->
+                <#--&lt;#&ndash;<div class="" onclick="goPage(1)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>我的上报</p></div></div>&ndash;&gt;-->
+                <#--&lt;#&ndash;<div class="" onclick="goPage(7)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>我的投诉</p></div></div>&ndash;&gt;-->
+                <#--&lt;#&ndash;<div class="" onclick="goPage(2)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>我的咨询</p></div></div>&ndash;&gt;-->
+                <#---->
+            <#--</div>-->
+        <#--</div>-->
+
+        <#--<div class="thumbs">-->
+            <#--<div class="thumbs-tit" onclick="goNewPage()" style="border:none">我的案件</div>-->
+        <#--</div>-->
+        <#--<div class="center">-->
+            <#--<div class="flex public">-->
+                <#--<div class="flex-1" onclick="getSession()"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>等待开发..</p></div></div>-->
+                <#--<div class="flex-1" onclick="goPage()"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>等待开发..</p></div></div>-->
+
+                <#--<div class="flex-1" onclick="goSystemCheck()"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>等待开发..</p></div></div>-->
+                <#---->
+            <#--</div>-->
+        <#--</div>-->
+    <#--</div>-->
+    <#--<div class="in-bottom flex">-->
+        <#--<div class="flex-1">-->
+            <#--<div class="bot-mess on">-->
+                <#--<div class="bot-img bot-img1"></div>-->
+                <#--<p>首页</p>-->
+            <#--</div>-->
+        <#--</div>-->
+        <#--<div class="flex-1">-->
+            <#--<div class="bot-mess">-->
+                <#--<div class="bot-img bot-img2"></div>-->
+                <#--<p>我的案件</p>-->
+            <#--</div>-->
+        <#--</div>-->
+        <#--<div class="flex-1">-->
+            <#--<div class="bot-mess">-->
+                <#--<div class="bot-img bot-img3"></div>-->
+                <#--<p>地图功能</p>-->
+            <#--</div>-->
+        <#--</div>-->
+        <#--<div class="flex-1" onclick="goCountManage()">-->
+            <#--<div class="bot-mess">-->
+                <#--<div class="bot-img bot-img4"></div>-->
+                <#--<p>统计管理</p>-->
+            <#--</div>-->
+        <#--</div>-->
+        <#--<div class="flex-1" onclick="goCenter()">-->
+            <#--<div class="bot-mess">-->
+                <#--<div class="bot-img bot-img5"></div>-->
+                <#--<p>个人中心</p>-->
+            <#--</div>-->
+        <#--</div>-->
     </div>
 </div>
 <div class="slt-city" style="display: none">
