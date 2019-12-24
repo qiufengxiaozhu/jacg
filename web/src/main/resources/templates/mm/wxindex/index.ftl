@@ -171,7 +171,7 @@
     </div>
 </div>
 <!-- Loader -->
-<#--<div class="loader loader-smartphone is-active" data-screen="检测中..." id="checkIng"></div>-->
+<#--<div class="loader loader-smartphone is-active" data-bigscreen="检测中..." id="checkIng"></div>-->
 <#--</body>-->
 <script>
     var timeZone;//当前时区
