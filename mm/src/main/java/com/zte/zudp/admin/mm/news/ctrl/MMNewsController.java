@@ -376,6 +376,9 @@ public class MMNewsController {
     public String login(@RequestBody User t) {
         String username=t.getLoginName();
         String pwd=t.getPassword();
+//        String phone = t.getPhone();
+//        System.out.println(phone);
+
         HttpServletRequest request = WebUtil.getHttpRequest();
         User user = userService.getUserWithNoActiveByLoginName(username);
 
@@ -396,6 +399,11 @@ public class MMNewsController {
 
         //设置session
         request.getSession(true).setAttribute("mobile_user", user);
+
+        // 电话号码
+        request.getSession(true).setAttribute("userName", username);
+        request.getSession(true).setAttribute("userPhone", pwd);
+
         return "ok";
 
     }

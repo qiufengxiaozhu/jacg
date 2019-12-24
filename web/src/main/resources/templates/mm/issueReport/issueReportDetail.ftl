@@ -82,7 +82,7 @@
 
         <div class="flex inv-cont">
             <div class="">回复人:</div>
-            <div class="inv-right"  id="replyDate">${mmIssueReport.replyUserId}</div>
+            <div class="inv-right"  id="replyDate">${mmIssueReport.replyUserId!}</div>
         </div>
 
         <div class="flex inv-cont">

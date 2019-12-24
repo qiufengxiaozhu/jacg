@@ -51,7 +51,7 @@ public class MMIssueReportController {
         int i = mmIssueReportService.insConsult(mmIssueReport);
         mmIssueReportService.afterInsert(mmIssueReport);
         if (i>0){
-                return "redirect:/mm/news/index";
+                return "redirect:/mm/wxindex/index";
         }
         return null;
     }
@@ -60,7 +60,8 @@ public class MMIssueReportController {
     public String myReportList(Model model,HttpServletRequest request){
         // 传入电话号码 、用户名称，进行校验
         Object name = request.getSession().getAttribute("userName");
-        Object phone = request.getSession().getAttribute("userPhone");
+        //
+        String phone = request.getSession().getAttribute("userPhone").toString();
 
         List<MMIssueReport> reportList = mmIssueReportService.myReportList(phone,name);
         model.addAttribute("reportList",reportList);

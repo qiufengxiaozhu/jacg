@@ -356,20 +356,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         {
                         render: function (data, type, row) {
                             if (data.status == '0') {// 临时状态
@@ -398,7 +384,9 @@
                                 // 编辑
                                 editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
                                 // 详情
-                                    detailStr= zudp.template.detailBtn;
+//                                    detailStr= zudp.template.detailBtn;
+                                detailStr = '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
+
                                         // 删除
                                 delStr=zudp.template.delBtn;
                                 //添加题目
@@ -417,8 +405,9 @@
                                 // 撤销发布
                                 unpublicStr= '<button id= "unpublishStr" class="btn btn-danger btn-sm "  value="{id}"><i class="fa fa-pencil"></i>撤销发布</button>';
                                 // 详情
-//                                detailStr= '<button id="detailStr" class="btn btn-info btn-sm  " value="{id}"><i class="fa fa-pencil"></i>详情</button>';
-                                detailStr= zudp.template.detailBtn;
+//                                detailStr= zudp.template.detailBtn;
+                                detailStr = '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
+
                                 // 预览        撤销发布
                                 btn+= overviewStr + "&nbsp;"+ unpublicStr + "&nbsp;"+ detailStr;
                                 return zudp.util.render(btn, row);
@@ -512,10 +501,6 @@
 
             // 在模态框中，点击添加按钮，完成题目的导入，其实就是修改外键的值为问卷的id匹配上
             $(document).on("click", '#test-save-btn', function (e) { // 模态框中的保存按钮
-//                var idJson02 = $(".testId002").val();
-//                alert("id02"+idJson02);
-//                var idces = document.getElementById("id").value;
-//                alert(idces);
                 var idJson = $("#addStr").val(); // 获取到id值  问卷的id值
                 alert("问卷id"+idJson);
                 // 遍历所有的复选框
@@ -530,9 +515,6 @@
                     }
 
                 }
-                //
-//                var ids = JSON.stringify(idsJson);
-//                var id = JSON.stringify(idJson);
                 var dataObject = {
                     "idsJson":idsJson,
                     "idJson":idJson
@@ -549,8 +531,6 @@
 
 
 
-//
-//
             });
 
         });
@@ -594,7 +574,7 @@
         });
     });
 
-
+    // 隐藏
     $(document).on("click", '#add-btn', function () {
 
         $("#timeDiv").css("display","none");	//隐藏时间
@@ -602,14 +582,14 @@
 
     });
 
-
+    // 隐藏
     $(document).on("click", '.row-edit', function () {
 
         $("#timeDiv").css("display","none");	//隐藏时间
         $("#statusDiv").css("display","none");	//隐藏状态
 
     });
-
+    // 隐藏
     $(document).on("click", '.row-detail', function () {
 
         $("#timeDiv").css("display","block");	//出现时间

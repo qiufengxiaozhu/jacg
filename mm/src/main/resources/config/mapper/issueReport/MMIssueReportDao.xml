@@ -16,10 +16,7 @@
         FROM jacg_issuereport t1
         WHERE  del!=1
         <if test="name != null and name != '' ">
-           and contact = #{name}
-        </if>
-        <if test="phone != null and phone != '' ">
-            and phone = #{phone}
+            and phone = #{name}
         </if>
         ORDER BY t1.complainDate desc
     </select>
