@@ -46,6 +46,9 @@
     function login(){
         var name=$("#username").val();
         var pwd = $("#passwd").val();
+
+
+
         var data={loginName:name,password:pwd};
         data = JSON.stringify(data);
         $("#msg-show").html("正在登陆中...");
