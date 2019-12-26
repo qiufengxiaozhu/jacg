@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  *
  * 吉安大屏业务处理层
@@ -23,4 +26,12 @@ public class ScreenService extends FileBusinessService<Screen> {
     private ScreenDao screenDao;
 
 
+    /**
+     * 趋势分析  统计记录
+     * @param time
+     * @return
+     */
+    public List<Map> trendAnaly(String time) {
+        return screenDao.trendAnaly(time);
+    }
 }
