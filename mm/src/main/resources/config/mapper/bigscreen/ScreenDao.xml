@@ -4,6 +4,30 @@
 <mapper namespace="com.zte.zudp.admin.mm.bigscreen.dao.ScreenDao">
 
 
+    <!--趋势分析-->
+<!--<select id="trendAnaly" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">-->
+<select id="trendAnaly" resultType="java.util.Map">
+select * from(
+    select
+        month,
+        count(RECID) as num,
+        DISTRICTNAME dest
+    from
+        (
+        select
+         DATE_FORMAT(NEWINSTTIME,'%Y-%m') as month,
+         DISTRICTNAME,
+         RECID
+    from tocgcase
 
+    where 1=1
+       and DATE_FORMAT(NEWINSTTIME,'%Y')= '2018'
+        ) t
+    group by month,dest
+    order by month) t2
+    group by dest,month
+
+
+</select>
 
 </mapper>

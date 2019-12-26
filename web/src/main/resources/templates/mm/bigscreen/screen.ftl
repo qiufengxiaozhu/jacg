@@ -1,16 +1,37 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/rem.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/echarts.min.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="/mm/bigscreen/css/index.css">
+    <link rel="stylesheet" href="/mm/bigscreen/css/main.css">
+    <script src="/mm/bigscreen/js/rem.js"></script>
+    <script src="/mm/bigscreen/js/jquery-3.3.1.min.js"></script>
+    <script src="/mm/bigscreen/js/echarts.min.js"></script>
+    <script src="/mm/bigscreen/js/main.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=F0i6SrLmHquLVNLCqpExxPrj8mWVdFwx"></script>
+    <script src="/js/third/jquery.min.js"></script>
+    <script src="/js/pluginInit/animation.js"></script>
+    <script src="/js/third/bootstrap.min.js"></script>
+    <script src="/js/third/jquery.validate.min.js"></script>
+    <script src="/js/third/jquery.dataTables.min.js"></script>
+    <script src="/js/third/dataTables.bootstrap.js"></script>
+    <script src="/js/third/layer/layer.min.js"></script>
+    <script src="/js/third/icheck.min.js"></script>
+    <script src="/js/third/sweetalert.min.js"></script>
+    <script src="/js/third/toastr.min.js"></script>
+    <script src="/js/third/laydate/laydate.js"></script>
+    <script src="/js/pluginInit/dataecho.js"></script>
+    <script src="/js/third/laydate/laydate.js"></script>
+    <script src="/js/zudp.js"></script>
+    <script type="text/javascript" src="/js/third/jquery.ztree.all.js"></script>
+    <script src="/js/third/bootstrap-suggest.min.js"></script>
+    <script src="/js/sys/avatar.js"></script>
+    <script src="/js/third/webuploader.js"></script>
+    <script src="/js/rest.js"></script>
+
     <title>Document</title>
 </head>
 <body>
@@ -93,19 +114,30 @@
                         </div>
                     </div>
                 </div>
-                <div class="frequency">
-                    <div class="flex">
-                        <div class="fr-text">案发频率趋势图</div>
-                        <div>
-                            <select name="" id="" class="fr-sel">
-                                <option value="">1月1日——12.16日</option>
-                            </select>
+                <#--<div class="frequency">-->
+
+                    <#--<div class="flex">-->
+                        <#--<div class="fr-text">案发频率趋势图</div>-->
+                        <#--<div>-->
+<#--                            <select name="" id="" class="fr-sel">-->
+<#--                                <option value="">1月1日——12.16日</option>-->
+<#--                            </select>-->
+<#--                        </div>-->
+<#--                    </div>-->
+<#--                    <div class="fr-bg" id = "myChart" >-->
+<#--                      <div class="chart" id="myChart"></div>-->
+<#--                    </div>-->
+
+<#--                    <div class="fr-bg" id = "myChart" >-->
+<#--                    </div>-->
+                        <label>案发频率趋势图</label>
+                    <div class="fr-bg" >
+                    <div id="myChart" style="width: 310px;height:250px;"></div>
                         </div>
-                    </div>
-                    <div class="fr-bg">
-                      <div class="chart" id="chart"></div>
-                    </div>
-                </div>
+
+                <#--</div>-->
+
+
             </div>
             <div class="center">
                 <div class="center-cen flex">
@@ -180,5 +212,145 @@
             </div>
         </div>
     </div>
+
+
+
+<script>
+
+    // 获取到图表的div,并初始化
+    var myChart = echarts.init(document.getElementById('myChart'));
+
+    option = {
+        // 标题
+//        title: {
+//            text: '趋势分析图'
+//        },
+        // tooltip: {
+        //     trigger: 'axis'
+        // },
+        tooltip: {},
+        // 曲线类型名称
+        color:['#2db7f5','#ff6600','#808bc6','FFA500'],
+        legend: {
+            textStyle:{
+                color: '#ffffff'//字体颜色
+            },
+            data: ['庐陵新区', '青原区', '吉州区', '井开区']
+        },
+        // grid: {
+        //     left: '3%',
+        //     right: '4%',
+        //     bottom: '3%',
+        //     containLabel: true
+        // },
+        // toolbox: {
+        //     feature: {
+        //         saveAsImage: {}
+        //     }
+        // },
+        // 横坐标
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+//
+            data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+            axisLine:{
+                lineStyle:{
+                    color:'#FFA500',
+                }
+            }
+
+        },
+        // 纵坐标
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#FFA500',
+                }
+            }
+            },
+            series: [
+
+                {
+                    name: '庐陵新区',
+                    type: 'line',
+                    data: []
+
+                },
+                {
+                    name: '青原区',
+                    type: 'line',
+                    data: []
+                },
+                {
+                    name: '吉州区',
+                    type: 'line',
+                    data: []
+                },
+                {
+                    name: '井开区',
+                    type: 'line',
+                    data: []
+                }
+            ]
+        };
+    // 导入设置
+    myChart.setOption(option);
+        // 发送ajax请求到后台，获取到数据
+
+
+    $(document).ready(function () {
+        getData();
+
+    });
+
+    // 存放数据的数组
+    var strList01 =[];
+    var strList02 =[];
+    var strList03 =[];
+    var strList04 =[];
+    // var strList001 =[];
+    // var strList002 =[];
+    // var strList003 =[];
+    // var strList004=[];
+    function getData() {
+        zudp.ajax("/mm/screen/trendAnaly").post().then(function (value) {
+            strList01 =  value.strList01;
+            strList02 =  value.strList02;
+            strList03 =  value.strList03;
+            strList04 =  value.strList04;
+            myChart.setOption({
+                series:[{name:"庐陵新区",data:strList01},
+                    {name:"青原区",data:strList02},
+                    {name:"吉州区",data:strList03},
+                    {name:"井开区",data:strList04},
+                ]
+            });
+            // strList001 =  value.strList001;
+            // strList002 =  value.strList002;
+            // strList003 =  value.strList003;
+            // strList004 =  value.strList004;
+
+
+
+
+
+
+
+        });
+    };
+
+
+
+
+
+
+
+</script>
+
+
+
+
 </body>
 </html>
