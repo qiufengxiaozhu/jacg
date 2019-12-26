@@ -31,8 +31,8 @@
     <script src="/js/sys/avatar.js"></script>
     <script src="/js/third/webuploader.js"></script>
     <script src="/js/rest.js"></script>
-
-    <title>吉安大屏</title>
+    <script src="/screen/rightscreen.js"></script>
+    <title>Document</title>
 </head>
 <body>
     <div class="sum-bg" id="container"></div>
@@ -191,7 +191,7 @@
                         </div>
                     </div>
                     <div class="ri-bg">
-                        <div class="chart2" id="chart2"></div>
+                        <div id="myChart2" style="width: 310px;height:250px;"></div>
                     </div>
                 </div>
                 <div class="right-top">
@@ -202,7 +202,7 @@
                         </div>
                     </div>
                     <div class="ri-bg">
-                        <div class="chart2" id="chart3"></div>
+                        <div class="chart3" id="chart3" style="width: 310px;height:250px;"></div>
                     </div>
                 </div>
                 <div class="right-top">
@@ -212,14 +212,7 @@
                     <div class="ri-bg">
                         <div class="ri-query flex">
                             <div class="ri-left flex">
-                                <div class="ri-icon">
-                                </div>
-                                <img src="/mm/bigscreen/img/arr4.png" class="ri-min">
-                                <img src="/mm/bigscreen/img/arr22.png" class="ri-min">
-                                <img src="/mm/bigscreen/img/arr10.png" class="ri-min">
-                            </div>
-                                <div class="ri-text">青园区花园小区监控</div>
-                            </div>
+                                <div class="chart4" id="chart4" style="width: 310px;height:250px;"></div>
                         </div>                      
                     </div>
                 </div>
@@ -315,7 +308,7 @@
                 {
                     name: '井开区',
                     type: 'line',
-                    data: []
+                    data: ['1500','300','500','800','3000','1500','300','500','800','3000','2000','2400']
                 }
             ]
         };
@@ -326,7 +319,9 @@
 
     $(document).ready(function () {
         getData();
-
+        rightglfx();
+        rightEvenType();
+        getrightCaseNum();
     });
 
     // 存放数据的数组
@@ -348,7 +343,7 @@
                 series:[{name:"庐陵新区",data:strList01},
                     {name:"青原区",data:strList02},
                     {name:"吉州区",data:strList03},
-                    {name:"井开区",data:strList04},
+//                    {name:"井开区",data:strList04},
                 ]
             });
             // strList001 =  value.strList001;

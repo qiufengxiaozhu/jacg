@@ -53,4 +53,61 @@ public class ScreenService extends FileBusinessService<Screen> {
 
         return screenDao.countCase();
     }
+
+
+    /**
+     * 查询最大类型的案件数
+     *
+     * @return
+     */
+    public List<Map> findType(){
+
+        return screenDao.findType();
+    }
+
+    /**
+     * 查询区域
+     *
+     * @return
+     */
+    public List<Map> findAreaList(){
+
+        return screenDao.findAreaList();
+    }
+
+    /**
+     * 查询区域 案件总数
+     *
+     * @return
+     */
+    public Integer findAreaCountList(String area,String type){
+
+        return screenDao.findAreaCountList(area,type);
+    }
+
+    /**
+     * 查询类型统计
+     *
+     * @return
+     */
+    public List<Map> getrightEvenType(){
+
+        return screenDao.getrightEvenType();
+    }
+
+    /**
+     *  区域案件报警
+     *
+     * @return
+     */
+    public List<Map> getrightCaseNum(){
+
+        return screenDao.getrightCaseNum();
+    }
+
+
+
+
+
+
 }

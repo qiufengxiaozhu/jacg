@@ -35,4 +35,43 @@ public interface ScreenDao extends AbstractDao<Screen> {
      * @return
      */
     List<Screen> countCase();
+
+
+    /**
+     * 查询最大类型的案件数
+     *
+     * @return
+     */
+    public List<Map> findType();
+
+    /**
+     * 查询区域
+     *
+     * @return
+     */
+    public List<Map> findAreaList();
+
+
+    /**
+     * 查询区域 案件总数
+     *
+     * @return
+     */
+    public Integer findAreaCountList(@Param("area")String area,@Param("type")String type);
+
+
+    /**
+     * 查询类型统计
+     *
+     * @return
+     */
+    public List<Map> getrightEvenType();
+
+
+    /**
+     *  区域案件报警
+     *
+     * @return
+     */
+    public List<Map> getrightCaseNum();
 }
