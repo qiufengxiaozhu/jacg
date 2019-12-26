@@ -40,32 +40,31 @@
         <div class="center-top"><div class="data-city">吉安城市管理大数据平台</div></div>
         <div class="sum-center flex">
             <div class="left-top">
-                <div class="case"><span class="case-tell">案情展示</span><span class="case-time">1月1日——12.16日</span><span class="case-sum">案件总数<span class="case-num">&nbsp;40</span></span></div>
-                <div class="case-show">
+                <div class="case"><span class="case-tell">案情展示</span><span class="case-time">1月1日—12.16日</span><span class="case-sum">案件总数<span class="case-num">&nbsp;${Total!""}</span></span></div>                <div class="case-show">
                     <div class="radius flex">
                         <div class="case-one flex-1">
                             <div class="circle-1">
-                              <div class="circle-center case-tex">10起</div>
+                                <div class="circle-center case-tex">${Number1!""}起</div>
                             </div>
-                            <div class="case-tex">清远区</div>
+                            <div class="case-tex">吉州区</div>
                         </div>
                         <div class="case-one flex-1">
                             <div class="circle-1 ch-co-ye">
-                                <div class="circle-center tex-ye">10起</div>
+                                <div class="circle-center tex-ye">${Number2!""}起</div>
                             </div>
-                            <div class="case-tex">清远区</div>
+                            <div class="case-tex">庐陵新区</div>
                         </div>
                         <div class="case-one flex-1">
                             <div class="circle-1 ch-co-qi">
-                                <div class="circle-center tex-qi">10起</div>
+                                <div class="circle-center tex-qi">${Number3!""}起</div>
                             </div>
-                            <div class="case-tex">清远区</div>
+                            <div class="case-tex">青原区</div>
                         </div>
                         <div class="case-one flex-1">
                             <div class="circle-1 ch-co-ys">
-                                <div class="circle-center tex-ys">10起</div>
+                                <div class="circle-center tex-ys">${Number4!""}起</div>
                             </div>
-                            <div class="case-tex">清远区</div>
+                            <div class="case-tex">井开区</div>
                         </div>
                     </div>
                     <div class="new-case">
@@ -73,45 +72,69 @@
                             <div class="case-the">最新案件</div>
                             <div class="case-cont">详情</div>
                         </div>
-                        <div class="case-thing">
-                            <div class="case-usal">
-                                <div class="flex case-hot">
-                                    <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>案发事件:火灾报警</div></div>
-                                    <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间:2019年12月16日</div></div>
+
+
+                        <#list ScreenList as screen>
+                            <div class="case-thing">
+                                <div class="case-usal">
+                                    <div class="flex case-hot">
+
+                                        <#if (screen.EVENTDESC?? && screen.EVENTDESC?length>30)>
+                                            <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>问题描述：${screen.EVENTDESC?substring(0,17)}...</div></div>
+                                        <#else>
+                                            <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>问题描述：${screen.EVENTDESC!""}</div></div>
+                                        </#if>
+
+                                    </div>
+                                    <div class="flex case-hot">
+                                        <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间：${screen.NEWINSTTIME!""}</div></div>
+                                    </div>
+                                    <div class="flex case-hot">
+                                        <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>大类：${screen.MAINTYPENAME!""}</div></div>
+                                    </div>
                                 </div>
-                                <div class="flex case-hot">
-                                    <div class="flex-1 flex"><div class="min-radius"></div><div>报警人:刘娜娜</div></div>
-                                    <div class="flex-1 flex"><div class="min-radius"></div><div>联系电话:13768789955</div></div>
-                                </div>
-                                <div class="case-hot ch-col flex"><div class="min-radius"></div><div>案发地址:吉安市冀州区华彩大厦2栋32楼405市</div></div>
                             </div>
-                        </div>
-                        <div class="case-thing">
-                            <div class="case-usal">
-                                <div class="flex case-hot">
-                                    <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>案发事件:火灾报警</div></div>
-                                    <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间:2019年12月16日</div></div>
-                                </div>
-                                <div class="flex case-hot">
-                                    <div class="flex-1 flex"><div class="min-radius"></div><div>报警人:刘娜娜</div></div>
-                                    <div class="flex-1 flex"><div class="min-radius"></div><div>联系电话:13768789955</div></div>
-                                </div>
-                                <div class="case-hot ch-col flex"><div class="min-radius"></div><div>案发地址:吉安市冀州区华彩大厦2栋32楼405市</div></div>
-                            </div>
-                        </div>
-                        <div class="case-thing">
-                            <div class="case-usal">
-                                <div class="flex case-hot">
-                                    <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>案发事件:火灾报警</div></div>
-                                    <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间:2019年12月16日</div></div>
-                                </div>
-                                <div class="flex case-hot">
-                                    <div class="flex-1 flex"><div class="min-radius"></div><div>报警人:刘娜娜</div></div>
-                                    <div class="flex-1 flex"><div class="min-radius"></div><div>联系电话:13768789955</div></div>
-                                </div>
-                                <div class="case-hot ch-col flex"><div class="min-radius"></div><div>案发地址:吉安市冀州区华彩大厦2栋32楼405市</div></div>
-                            </div>
-                        </div>
+                        </#list>
+
+<#--                        <div class="case-thing">-->
+<#--                            <div class="case-usal">-->
+<#--                                <div class="flex case-hot">-->
+<#--                                    <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>案发事件:火灾报警</div></div>-->
+<#--                                    <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间:2019年12月16日</div></div>-->
+<#--                                </div>-->
+<#--                                <div class="flex case-hot">-->
+<#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>报警人:刘娜娜</div></div>-->
+<#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>联系电话:13768789955</div></div>-->
+<#--                                </div>-->
+<#--                                <div class="case-hot ch-col flex"><div class="min-radius"></div><div>案发地址:吉安市冀州区华彩大厦2栋32楼405市</div></div>-->
+<#--                            </div>-->
+<#--                        </div>-->
+<#--                        <div class="case-thing">-->
+<#--                            <div class="case-usal">-->
+<#--                                <div class="flex case-hot">-->
+<#--                                    <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>案发事件:火灾报警</div></div>-->
+<#--                                    <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间:2019年12月16日</div></div>-->
+<#--                                </div>-->
+<#--                                <div class="flex case-hot">-->
+<#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>报警人:刘娜娜</div></div>-->
+<#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>联系电话:13768789955</div></div>-->
+<#--                                </div>-->
+<#--                                <div class="case-hot ch-col flex"><div class="min-radius"></div><div>案发地址:吉安市冀州区华彩大厦2栋32楼405市</div></div>-->
+<#--                            </div>-->
+<#--                        </div>-->
+<#--                        <div class="case-thing">-->
+<#--                            <div class="case-usal">-->
+<#--                                <div class="flex case-hot">-->
+<#--                                    <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>案发事件:火灾报警</div></div>-->
+<#--                                    <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间:2019年12月16日</div></div>-->
+<#--                                </div>-->
+<#--                                <div class="flex case-hot">-->
+<#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>报警人:刘娜娜</div></div>-->
+<#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>联系电话:13768789955</div></div>-->
+<#--                                </div>-->
+<#--                                <div class="case-hot ch-col flex"><div class="min-radius"></div><div>案发地址:吉安市冀州区华彩大厦2栋32楼405市</div></div>-->
+<#--                            </div>-->
+<#--                        </div>-->
                     </div>
                 </div>
                 <#--<div class="frequency">-->
@@ -190,10 +213,11 @@
                         <div class="ri-query flex">
                             <div class="ri-left flex">
                                 <div class="ri-icon">
-                                    <img src="img/arr4.png" class="ri-min">
-                                    <img src="img/arr22.png" class="ri-min">
-                                    <img src="img/arr10.png" class="ri-min">
                                 </div>
+                                <img src="/mm/bigscreen/img/arr4.png" class="ri-min">
+                                <img src="/mm/bigscreen/img/arr22.png" class="ri-min">
+                                <img src="/mm/bigscreen/img/arr10.png" class="ri-min">
+                            </div>
                                 <div class="ri-text">青园区花园小区监控</div>
                             </div>
                         </div>                      

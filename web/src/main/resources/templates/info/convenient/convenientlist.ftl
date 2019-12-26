@@ -1,5 +1,5 @@
 <!DOCTYPE>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -125,7 +125,7 @@
                         <input id="attachIdss" type="hidden" />
                         <!-- 附件上传 隐藏传值  结束 -->
 
-                        <div id="left_div" style="float: left; width: 500px">
+                        <div id="left_div" style="float: left; width: 45% ;border: 0px solid blue;">
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label my-control-label ">名称：</label>
@@ -157,7 +157,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label my-control-label ">经度：</label>
                                 <div class="col-sm-6">
-                                    <input type="text" name="longitude" maxlength="64" id="longitude" placeholder="经度" class="form-control">
+                                    <input type="text" name="longitude" readonly="readonly" maxlength="64" id="lng" placeholder="经度" class="form-control">
                                 </div>
                                 <div>
                                     <i class="i_context my-i_context">*</i>
@@ -167,7 +167,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label my-control-label ">纬度：</label>
                                 <div class="col-sm-6">
-                                    <input type="text" name="latitude" maxlength="64" id="latitude" placeholder="纬度" class="form-control">
+                                    <input type="text" name="latitude" readonly="readonly" maxlength="64" id="lat" placeholder="纬度" class="form-control">
                                 </div>
                                 <div>
                                     <i class="i_context my-i_context">*</i>
@@ -198,14 +198,25 @@
                         </div>
 
 
-                        <div id="right_div" style="height: 400px; border-color: #0aa6e0; border: 1px solid whitesmoke;">
+                        <#--放置地图-->
+                        <div id="right_div" style="float: right; width: 50%; height: 350px; border-color: #0aa6e0; border: 0px solid blue;">
+
+
+                            <div class="main-div">
+                                <div>
+<#--                                    <input type="text" value="定位" name="定位">-->
+                                    <label style="font-size: 20px" id="myLocation">点我定位</label>
+                                </div>
+                                <div id='allmap' style='width: 48%; height: 350px; position: absolute;'></div>
+                            </div>
+
                         </div>
 
 
                     </form>
                 </div>
 
-                <div class="modal-footer">
+                <div class="modal-footer" style="margin-top: 400px;">
                     <input type="hidden" id="add-type">
                     <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
                     <button type="button" class="btn btn-primary" id="save-btn" onclick="typeId_btn()">保存</button>
@@ -238,6 +249,9 @@
 <script src="/js/sys/avatar.js"></script>
 <script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
+
+<!-- 将百度地图API引入，设置好自己的key -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7a6QKaIilZftIMmKGAFLG7QT1GLfIncg"></script>
 
 <script>
 
@@ -333,7 +347,7 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}岗位",
+            title: "{type}便民服务",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],
@@ -496,6 +510,90 @@
         });
         return tempAttachIdss;
     }
+
+    //***************************************************************************
+
+
+
+
+    //百度地图
+    function validate() {
+        var sever_add = document.getElementsByName('sever_add')[0].value;
+        if (isNull(sever_add)) {
+            alert('请选择地址');
+            return false;
+        }
+        return true;
+    }
+    //判断是否是空
+    function isNull(a) {
+        return (a == '' || typeof(a) == 'undefined' || a == null) ? true : false;
+    }
+
+    var map = new BMap.Map("allmap");
+    var geoc = new BMap.Geocoder();  //地址解析对象
+    var markersArray = [];
+    var geolocation = new BMap.Geolocation();
+    var point = new BMap.Point(114.67806931222913, 27.811967294005495);
+    map.centerAndZoom(point, 12); // 中心点
+    map.addEventListener("click", showInfo);
+
+
+    //地图缩小放大
+    geolocation.getCurrentPosition(function (r) {
+        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+            var mk = new BMap.Marker(r.point);
+            map.addOverlay(mk);
+            map.panTo(r.point);
+            map.enableScrollWheelZoom(true);
+        }
+        else {
+            alert('failed' + this.getStatus());
+        }
+    }, {enableHighAccuracy: true})
+
+    //清除标识
+    function clearOverlays() {
+        if (markersArray) {
+            for (i in markersArray) {
+                map.removeOverlay(markersArray[i])
+            }
+        }
+    }
+    //地图上标注
+    function addMarker(point) {
+        var marker = new BMap.Marker(point);
+        markersArray.push(marker);
+        clearOverlays();
+        map.addOverlay(marker);
+    }
+    //点击地图时间处理
+    function showInfo(e) {
+        document.getElementById('lng').value = e.point.lng;
+        document.getElementById('lat').value = e.point.lat;
+        geoc.getLocation(e.point, function (rs) {
+            var addComp = rs.addressComponents;
+            var address = addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber;
+            if (confirm("确定要地址是" + address + "?")) {
+                // document.getElementById('allmap').style.display = 'none';
+                document.getElementById('location').value = address;
+            }
+        });
+        addMarker(e.point);
+    }
+
+    // 用经纬度设置地图中心点
+    $(document).ready(function() {
+        $("#myLocation").click(function() {
+            if (document.getElementById("lng").value != "" && document.getElementById("lat").value != "") {
+                map.clearOverlays();
+                var new_point = new BMap.Point(document.getElementById("lng").value, document.getElementById("lat").value);
+                var marker = new BMap.Marker(new_point); // 创建标注
+                map.addOverlay(marker); // 将标注添加到地图中
+                map.panTo(new_point);
+            }
+        });
+    });
 
 </script>
 </body>

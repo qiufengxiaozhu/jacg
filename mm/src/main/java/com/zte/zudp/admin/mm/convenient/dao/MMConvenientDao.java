@@ -1,9 +1,10 @@
 package com.zte.zudp.admin.mm.convenient.dao;
 
 import com.zte.zudp.admin.common.persistence.dao.AbstractDao;
-import com.zte.zudp.admin.info.convenient.entity.Convenient;
 import com.zte.zudp.admin.info.queinvest.entity.Dictionary;
 import com.zte.zudp.admin.mm.convenient.entity.MMConvenient;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ import java.util.List;
 /**
  * 便民服务持久层
  */
+@Repository
 public interface MMConvenientDao extends AbstractDao<MMConvenient> {
 
 
@@ -28,5 +30,5 @@ public interface MMConvenientDao extends AbstractDao<MMConvenient> {
      * 根据类别查找服务
      * @return
      */
-//    public List<Convenient> getConvenientList(String id);
+    public List<MMConvenient> getConvenientList(@Param("id") String id);
 }

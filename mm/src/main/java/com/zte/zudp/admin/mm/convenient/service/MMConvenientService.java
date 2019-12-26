@@ -1,8 +1,6 @@
 package com.zte.zudp.admin.mm.convenient.service;
 
 import com.zte.zudp.admin.info.attachDoc.service.FileBusinessService;
-import com.zte.zudp.admin.info.convenient.dao.ConvenientDao;
-import com.zte.zudp.admin.info.convenient.entity.Convenient;
 import com.zte.zudp.admin.info.queinvest.entity.Dictionary;
 import com.zte.zudp.admin.mm.convenient.dao.MMConvenientDao;
 import com.zte.zudp.admin.mm.convenient.entity.MMConvenient;
@@ -25,12 +23,7 @@ public class MMConvenientService extends FileBusinessService<MMConvenient> {
     @Autowired
     private MMConvenientDao mmConvenientDao;
 
-    /**
-     * 初始化附件关联表名
-     */
-//    public MMConvenientService(){
-//        super.setTableName("qgq_convenient");
-//    }
+
 
     /**
      * 查询所有类别
@@ -44,8 +37,8 @@ public class MMConvenientService extends FileBusinessService<MMConvenient> {
      * 根据类别查找服务
      * @return
      */
-//    public List<Convenient> getConvenientList(String id){
-//            return convenientDao.getConvenientList(id);
-//    }
+    public List<MMConvenient> getConvenientList(String id){
+            return mmConvenientDao.getConvenientList(id);
+    }
 
 }

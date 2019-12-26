@@ -22,4 +22,17 @@ public interface ScreenDao extends AbstractDao<Screen> {
      * @return
      */
     List<Map> trendAnaly(@Param("time") String time);
+
+    /**
+     * 显示最近一个月数据，显示三条
+     * @return
+     */
+    List<Screen> selectCase();
+
+    /**
+     * 统计每个区的最近一个月数据
+     *
+     * @return
+     */
+    List<Screen> countCase();
 }

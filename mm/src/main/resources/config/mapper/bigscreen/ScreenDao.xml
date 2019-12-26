@@ -30,4 +30,34 @@ select * from(
 
 </select>
 
+
+    <select id="selectCase" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
+
+        SELECT
+            RECID,
+            EVENTDESC,
+            MAINTYPENAME,
+            DATE_FORMAT( NEWINSTTIME, "%Y-%m" ) NEWINSTTIME
+        FROM
+            tocgcase
+        WHERE
+            date( NEWINSTTIME ) >= DATE_SUB( CURDATE( ), INTERVAL 12 MONTH )
+        ORDER BY
+            NEWINSTTIME DESC
+            LIMIT 3
+    </select>
+
+    <select id="countCase" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
+
+        SELECT
+            DISTRICTNAME,
+            COUNT( RECID ) as NUMBER
+        FROM
+            tocgcase
+        WHERE
+            date( NEWINSTTIME ) >= DATE_SUB( CURDATE( ), INTERVAL 12 MONTH )
+        GROUP BY DISTRICTNAME
+
+    </select>
+
 </mapper>

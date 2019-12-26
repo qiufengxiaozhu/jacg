@@ -9,7 +9,7 @@ CKEDITOR.tools.extend( CKEDITOR.editor.prototype,
 {
 	/**
 	 * Opens Browser in a popup. The "width" and "height" parameters accept
-	 * numbers (pixels) or percent (of screen size) values.
+	 * numbers (pixels) or percent (of bigscreen size) values.
 	 * @param {String} url The url of the external file browser.
 	 * @param {String} width Popup window width.
 	 * @param {String} height Popup window height.

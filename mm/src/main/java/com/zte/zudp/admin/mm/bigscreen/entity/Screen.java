@@ -131,6 +131,20 @@ public class Screen extends FileEntity {
      */
     private String SYNFLAG;
 
+    /**
+     * 一定时间内的案发数量
+     * @return
+     */
+    private String NUMBER;
+
+    public String getNUMBER() {
+        return NUMBER;
+    }
+
+    public void setNUMBER(String NUMBER) {
+        this.NUMBER = NUMBER;
+    }
+
     public String getRECID() {
         return RECID;
     }
@@ -341,6 +355,7 @@ public class Screen extends FileEntity {
                 ", DISPOSEOPINION='" + DISPOSEOPINION + '\'' +
                 ", FUNCPARTNAME='" + FUNCPARTNAME + '\'' +
                 ", SYNFLAG='" + SYNFLAG + '\'' +
+                ", NUMBER='" + NUMBER + '\'' +
                 '}';
     }
 }
