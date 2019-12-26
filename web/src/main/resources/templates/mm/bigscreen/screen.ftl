@@ -32,7 +32,7 @@
     <script src="/js/third/webuploader.js"></script>
     <script src="/js/rest.js"></script>
 
-    <title>Document</title>
+    <title>吉安大屏</title>
 </head>
 <body>
     <div class="sum-bg" id="container"></div>
