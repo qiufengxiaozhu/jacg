@@ -1,17 +1,20 @@
 package com.zte.zudp.admin.mm.bigscreen.controller;
 
-import com.sun.tools.internal.ws.processor.model.Model;
 import com.zte.zudp.admin.common.annotation.JSON;
 import com.zte.zudp.admin.mm.bigscreen.entity.Screen;
 import com.zte.zudp.admin.mm.bigscreen.service.ScreenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -34,7 +37,45 @@ public class ScreenController {
      * @return
      */
     @RequestMapping("/toBigScreen")
-    public String toBigScreen(){
+    public String toBigScreen(Model model){
+
+        //显示最近一个月数据，显示三条
+        List<Screen> screenList =  screenService.selectCase();
+
+        //统计每个区的最近一个月数据
+        List<Screen> list = screenService.countCase();
+
+        String number1 = "0", number2 = "0", number3 = "0", number4 = "0";
+        for (int i = 0; i < list.size(); i++) {
+
+            if (list.get(i).getDISTRICTNAME() != null || list.get(i).getDISTRICTNAME() != "") {
+
+                if("吉州区".equals(list.get(i).getDISTRICTNAME())){
+                    number1 = list.get(i).getNUMBER();
+                }
+                else if("庐陵新区".equals(list.get(i).getDISTRICTNAME())){
+                    number2 = list.get(i).getNUMBER();
+                }
+                else if("青原区".equals(list.get(i).getDISTRICTNAME())){
+                    number3 = list.get(i).getNUMBER();
+                }
+                else if("井开区".equals(list.get(i).getDISTRICTNAME())){
+                    number4 = list.get(i).getNUMBER();
+                }
+            }
+        }
+
+        //四个区最近一个月案发总数
+        int total = Integer.parseInt(number1) + Integer.parseInt(number2)
+                + Integer.parseInt(number3) + Integer.parseInt(number4);
+
+        model.addAttribute("ScreenList",screenList);
+        model.addAttribute("Number1",number1);
+        model.addAttribute("Number2",number2);
+        model.addAttribute("Number3",number3);
+        model.addAttribute("Number4",number4);
+        model.addAttribute("Total",total);
+
         return "mm/bigscreen/screen";
     }
 
@@ -109,6 +150,51 @@ public class ScreenController {
         return map;
     }
 
+    /**
+     * 整合后台代码，将数据封装到前台
+     * @return
+     */
+//    @RequestMapping(value = "/selectAll", method = RequestMethod.GET)
+//    public String selectCase(Model model){
 
+//        //显示最近一个月数据，显示三条
+//        List<Screen> screenList =  screenService.selectCase();
+//
+//        //统计每个区的最近一个月数据
+//        List<Screen> list = screenService.countCase();
+//
+//        String number1 = "0", number2 = "0", number3 = "0", number4 = "0";
+//        for (int i = 0; i < list.size(); i++) {
+//
+//            if (list.get(i).getDISTRICTNAME() != null || list.get(i).getDISTRICTNAME() != "") {
+//
+//                if("吉州区".equals(list.get(i).getDISTRICTNAME())){
+//                    number1 = list.get(i).getNUMBER();
+//                }
+//                else if("庐陵新区".equals(list.get(i).getDISTRICTNAME())){
+//                    number2 = list.get(i).getNUMBER();
+//                }
+//                else if("青原区".equals(list.get(i).getDISTRICTNAME())){
+//                    number3 = list.get(i).getNUMBER();
+//                }
+//                else if("井开区".equals(list.get(i).getDISTRICTNAME())){
+//                    number4 = list.get(i).getNUMBER();
+//                }
+//            }
+//        }
+//
+//        //四个区最近一个月案发总数
+//        int total = Integer.parseInt(number1) + Integer.parseInt(number2)
+//                + Integer.parseInt(number3) + Integer.parseInt(number4);
+//
+//        model.addAttribute("ScreenList",screenList);
+//        model.addAttribute("Number1",number1);
+//        model.addAttribute("Number2",number2);
+//        model.addAttribute("Number3",number3);
+//        model.addAttribute("Number4",number4);
+//        model.addAttribute("Total",total);
+//
+//        return "/mm/bigscreen/screen";
+//    }
 
 }

@@ -34,4 +34,23 @@ public class ScreenService extends FileBusinessService<Screen> {
     public List<Map> trendAnaly(String time) {
         return screenDao.trendAnaly(time);
     }
+
+
+    /**
+     * 显示最近一个月数据，显示三条
+     * @return
+     */
+    public List<Screen> selectCase() {
+        return screenDao.selectCase();
+    }
+
+    /**
+     * 统计每个区的最近一个月数据
+     *
+     * @return
+     */
+    public List<Screen> countCase(){
+
+        return screenDao.countCase();
+    }
 }

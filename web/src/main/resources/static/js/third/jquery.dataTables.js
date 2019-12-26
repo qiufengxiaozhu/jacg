@@ -10855,7 +10855,7 @@
 	
 		/**
 		 * This function allows you to 'post process' each row after it have been
-		 * generated for each table draw, but before it is rendered on screen. This
+		 * generated for each table draw, but before it is rendered on bigscreen. This
 		 * function might be used for setting the row class name etc.
 		 *  @type function
 		 *  @param {node} row "TR" element for the current row

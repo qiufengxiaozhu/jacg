@@ -1974,7 +1974,7 @@ CKEDITOR.DIALOG_RESIZE_BOTH = 3;
 
 	var resizeCover;
 	// Caching resuable covers and allowing only one cover
-	// on screen.
+	// on bigscreen.
 	var covers = {},
 		currentCover;
 

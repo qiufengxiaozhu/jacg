@@ -18,18 +18,7 @@
         <result column="del" property="del" />
     </resultMap>
 
-    <select id="findList" resultMap="MMConvenientMap">
-        SELECT n.id,n.name,n.location,n.description,n.category,n.longitude,n.latitude
-        from qgq_convenient n
-        where n.del!=1
-        <if test="name!=null and name!=''">
-            and `name` like concat('%', #{name}, '%')
-        </if>
-        <if test="category!=null and category!=''">
-            and category  =  #{category }
-        </if>
-        ORDER BY n.create_date desc
-    </select>
+
 
     <select id="getConvenientType" resultType="com.zte.zudp.admin.info.queinvest.entity.Dictionary">
         SELECT id,type,label,value
@@ -38,73 +27,25 @@
 
     </select>
 
-    <!--<select id="getConvenientList" resultMap="convenientMap">-->
-        <!--SELECT n.id,n.name,n.location,n.description,n.category-->
-        <!--from qgq_convenient n-->
-        <!--where n.del!=1 and n.category = #{0}-->
-        <!--ORDER BY n.create_date desc-->
-    <!--</select>-->
-
-    <select id="get" resultMap="MMConvenientMap" >
+    <select id="getConvenientList" resultType="com.zte.zudp.admin.mm.convenient.entity.MMConvenient">
         SELECT
-        id,
-        name,
-        location,
-        description,
-        category,
-        longitude,
-        latitude,
-        create_user,
-        create_date
-        from qgq_convenient
-        where id=#{id}
+            n.id,
+            n.NAME,
+            n.location,
+            n.description,
+            n.longitude,
+            n.latitude,
+            n.category
+        FROM
+            qgq_convenient n
+        WHERE
+            n.del != 1
+            <if test="id !='' and id != null">
+                AND n.category = #{id}
+            </if>
+        ORDER BY
+            n.create_date DESC
     </select>
 
-    <insert id="insert">
-        INSERT INTO qgq_convenient (
-        id, name,location, description,category,
-        longitude,
-        latitude,
-        create_date,
-        create_user,
-        update_date,
-        update_user,
-        del
-        )
-        VALUE (
-        #{id}, #{name}, #{location}, #{description}, #{category},
-        #{longitude},
-        #{latitude},
-        #{createDate},
-        #{createUser.id},
-        #{updateDate},
-        #{updateUser.id},
-        0
-        )
-    </insert>
-    <update id="update" parameterType="com.zte.zudp.admin.mm.convenient.entity.MMConvenient">
-        UPDATE qgq_convenient m SET
-        m.name = #{name},
-        m.location = #{location},
-        m.description = #{description},
-        m.category = #{category},
-        m.longitude = #{longitude},
-        m.latitude = #{latitude},
-        m.update_date = #{updateDate},
-        m.update_user = #{updateUser.id}
-        WHERE m.id = #{id}
-    </update>
 
-    <delete id="delete">
-        UPDATE qgq_convenient
-        SET del = 1
-        WHERE id = #{id}
-    </delete>
-    <delete id="batchDelete">
-        UPDATE qgq_convenient SET del = 1
-        WHERE id IN
-        <foreach collection="array" item="i" separator="," open="(" close=")">
-            #{i}
-        </foreach>
-    </delete>
 </mapper>
