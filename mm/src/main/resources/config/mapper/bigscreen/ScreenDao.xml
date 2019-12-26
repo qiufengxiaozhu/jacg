@@ -60,4 +60,44 @@ select * from(
 
     </select>
 
+
+
+    <select id="findType" resultType="java.util.Map">
+        SELECT
+        t.MAINTYPENAME as name,t.num
+        FROM
+        (
+        SELECT
+        MAINTYPENAME,
+        COUNT(1) AS num
+        FROM
+        tocgcase
+        GROUP BY
+        MAINTYPENAME
+        ) t
+        ORDER BY
+        t.num DESC limit 0,5;
+ </select>
+
+
+    <select id="findAreaList" resultType="java.util.Map">
+        select DISTRICTNAME as name from tocgcase GROUP BY DISTRICTNAME;
+   </select>
+
+    <select id="findAreaCountList" resultType="java.lang.Integer">
+       select COUNT(*) from tocgcase where DISTRICTNAME=  #{area} and MAINTYPENAME= #{type}
+   </select>
+
+
+
+    <select id="getrightEvenType" resultType="java.util.Map">
+        select EVENTTYPENAME as name,COUNT(*) as num from tocgcase GROUP BY EVENTTYPENAME
+   </select>
+
+
+    <select id="getrightCaseNum" resultType="java.util.Map">
+select DISTRICTNAME as name,COUNT(*) as num from tocgcase where tocgcase.CREATETIME LIKE '%2017-12%'  GROUP BY DISTRICTNAME
+   </select>
+
+
 </mapper>

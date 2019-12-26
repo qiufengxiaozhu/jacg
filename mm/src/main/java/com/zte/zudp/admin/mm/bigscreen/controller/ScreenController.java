@@ -3,13 +3,11 @@ package com.zte.zudp.admin.mm.bigscreen.controller;
 import com.zte.zudp.admin.common.annotation.JSON;
 import com.zte.zudp.admin.mm.bigscreen.entity.Screen;
 import com.zte.zudp.admin.mm.bigscreen.service.ScreenService;
+import com.zte.zudp.admin.modules.sys.dict.entity.Dict;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -196,5 +194,82 @@ public class ScreenController {
 //
 //        return "/mm/bigscreen/screen";
 //    }
+
+
+
+    /**
+     *  关联 分析
+     *  //案发时间 柱状图
+     * @return
+     */
+    @JSON
+    @GetMapping(value = "/getIndex")
+    public Map getIndex() {
+        //大类最大 前五条
+        List<Map> listtype = screenService.findType();
+
+        //社区遍历
+        List<Map> list= screenService.findAreaList();
+        //保存值
+        List<Map> listMap=new ArrayList<>();
+        //根据类型遍历
+        for (int i = 0; i < listtype.size(); i++) {
+            Map map1= listtype.get(i);
+            Map map=new HashMap();
+            //遍历社区
+            for (int j = 0; j < list.size(); j++) {
+                Map map2=list.get(j);
+                Integer counts= screenService.findAreaCountList(map2.get("name").toString(),map1.get("name").toString());
+                map.put(map2.get("name"),counts);
+            }
+            map.put("name",map1.get("name").toString());
+            listMap.add(map);
+
+        }
+
+
+     Map map=new HashMap();
+     map.put("listMap",listMap);
+     map.put("listdit",listtype);
+     map.put("listArea",list);
+     return  map;
+
+    }
+
+
+    /**
+     *  案发频率趋势图
+     *
+     * @return
+     */
+    @JSON
+    @GetMapping(value = "/getrightEvenType")
+    public  List<Map>  getrightEvenType() {
+
+        //遍历
+        List<Map> list = screenService.getrightEvenType();
+
+        return list;
+
+    }
+
+
+
+
+    /**
+     *  区域案件报警
+     * 显示 前2周的数据 每个区域 前5条
+     * @return
+     */
+    @JSON
+    @GetMapping(value = "/getrightCaseNum")
+    public  List<Map>  getrightCaseNum() {
+
+        //遍历
+        List<Map> list = screenService.getrightCaseNum();
+
+        return list;
+
+    }
 
 }
