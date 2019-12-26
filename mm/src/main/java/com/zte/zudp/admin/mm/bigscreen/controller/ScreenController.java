@@ -63,6 +63,9 @@ public class ScreenController {
             }
         }
 
+        //由于数据库中井开区没有数据，特在此模拟一下案件条数
+        number4 = "2600";
+
         //四个区最近一个月案发总数
         int total = Integer.parseInt(number1) + Integer.parseInt(number2)
                 + Integer.parseInt(number3) + Integer.parseInt(number4);
