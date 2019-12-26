@@ -18,7 +18,7 @@ function rightglfx() {
     });
 
     zudp.ajax("/mm/screen/getIndex" ).get().then(function (value) {
-        debugger;
+        
         var categorys = [];
         for(var i=0;i<value.listdit.length;i++){
             var dit  =value.listdit[i];
@@ -125,7 +125,7 @@ function rightEvenType() {
 
 
     zudp.ajax("/mm/screen/getrightEvenType" ).get().then(function (value) {
-        debugger;
+        
         var data = [];
         var datas = [];
         for(var i=0;i<value.length;i++){
@@ -213,7 +213,7 @@ function getrightCaseNum() {
 
 
     zudp.ajax("/mm/screen/getrightEvenType" ).get().then(function (value) {
-        debugger;
+        
         var data = [];
         var datas = [];
         for(var i=0;i<value.length;i++){
