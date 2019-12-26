@@ -315,7 +315,7 @@
                 {
                     name: '井开区',
                     type: 'line',
-                    data: []
+                    data: ['1500','300','500','800','3000','1500','300','500','800','3000','2000','2400']
                 }
             ]
         };
@@ -348,7 +348,7 @@
                 series:[{name:"庐陵新区",data:strList01},
                     {name:"青原区",data:strList02},
                     {name:"吉州区",data:strList03},
-                    {name:"井开区",data:strList04},
+//                    {name:"井开区",data:strList04},
                 ]
             });
             // strList001 =  value.strList001;
