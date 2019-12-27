@@ -40,7 +40,7 @@
         <div class="center-top"><div class="data-city">吉安城市管理大数据平台</div></div>
         <div class="sum-center flex">
             <div class="left-top">
-                <div class="case" style="width: 4.5rem;"><span class="case-tell">案情展示</span><span class="case-time">1月1日—12.16日</span><span class="case-sum">案件总数<span class="case-num">&nbsp;${Total!""}</span></span></div>                <div class="case-show">
+                <div class="case" style="width: 4.5rem;"><#--<span class="case-tell">案情展示</span><span class="case-time">1月1日—12.16日</span><span class="case-sum">案件总数<span class="case-num">&nbsp;${Total!""}</span></span>--></div>                <div class="case-show">
                     <div class="radius flex">
                         <div class="case-one flex-1">
                             <div class="circle-1">
@@ -182,13 +182,13 @@
             <div class="right">
                 <div class="right-top">
                     <div class="flex crime">
-                        <div class="fr-text">案发时间柱状图</div>
-                        <div>
+                        <div class="fr-text">关联分析</div>
+                       <#-- <div>
                             <select name="" id="" class="ri-selected1"><option value="">16日</option></select>
                         </div>
                         <div>
                             <select name="" id="" class="ri-selected2"><option value="">8:00-18:00</option></select>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="ri-bg">
                         <div id="myChart2" style="width: 280px;height:180px;"></div>
@@ -196,10 +196,10 @@
                 </div>
                 <div class="right-top">
                     <div class="flex crime">
-                        <div class="fr-text">案发频率趋势图</div>
-                        <div>
+                        <div class="fr-text">案件类型统计</div>
+                       <#-- <div>
                             <select name="" id="" class="ri-selected1"><option value="">1月1日——11月16日</option></select>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="ri-bg">
                         <div class="chart3" id="chart3" style="width: 280px;height:180px;"></div>
@@ -207,7 +207,7 @@
                 </div>
                 <div class="right-top">
                     <div class="flex crime">
-                        <div class="fr-text">案件监控</div>
+                        <div class="fr-text">区域案件预警</div>
                     </div>
                     <div class="ri-bg">
                         <div class="ri-query flex">
@@ -231,25 +231,25 @@
 
 
 
-            <div class="modal-ly" style="display: none;"  id="company_amoun">
-                <div class="mask"></div>
-                <div class="modal-cnt flex flex-fx-c" style="height: 25rem;">
-                    <div class="g-info-tit flex flex-c-c">
-                        <i class="i-icon icon-tb"></i>
-                        <span class="flex-1" id="qyssfx">企业税收分析</span>
-                        <div class="m-close"  >×</div>
-                    </div>
-                    <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
-                        <iframe id="company_amoun_iframe" width="100%" height="100%" frameborder="0"></iframe>
 
-                    </div>
-                </div>
-            </div>
 
 
     </div>
 
+        <div class="modal-ly" style="display: none;"  id="company_amoun">
+            <div class="mask"></div>
+            <div class="modal-cnt flex flex-fx-c" style="height: 25rem;">
+                <div class="g-info-tit flex flex-c-c">
+                    <i class="i-icon icon-tb"></i>
+                    <span class="flex-1" id="qyssfx">企业税收分析</span>
+                    <div class="m-close"  >×</div>
+                </div>
+                <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
+                    <iframe id="company_amoun_iframe" width="100%" height="100%" frameborder="0"></iframe>
 
+                </div>
+            </div>
+        </div>
 
 
 <script>
