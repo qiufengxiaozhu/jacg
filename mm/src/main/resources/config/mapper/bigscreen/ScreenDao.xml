@@ -84,8 +84,8 @@ select * from(
         select DISTRICTNAME as name from tocgcase GROUP BY DISTRICTNAME;
    </select>
 
-    <select id="findAreaCountList" resultType="java.lang.Integer">
-       select COUNT(*) from tocgcase where DISTRICTNAME=  #{area} and MAINTYPENAME= #{type}
+    <select id="findareacountList" resultType="java.lang.Integer">
+       select COUNT(*) from tocgcase where DISTRICTNAME=  #{area} and  tocgcase.CREATETIME <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
    </select>
 
 
@@ -96,7 +96,16 @@ select * from(
 
 
     <select id="getrightCaseNum" resultType="java.util.Map">
-select DISTRICTNAME as name,COUNT(*) as num from tocgcase where tocgcase.CREATETIME LIKE '%2017-12%'  GROUP BY DISTRICTNAME
+    select DISTRICTNAME as name,COUNT(*) as num from tocgcase where tocgcase.CREATETIME LIKE '%2017-12%'  GROUP BY DISTRICTNAME
+   </select>
+
+
+    <select id="getrightCasetypeNum" resultType="java.util.Map">
+        select DISTRICTNAME as name,MAINTYPENAME as type,COUNT(*) as num  from tocgcase where DISTRICTNAME= #{name}
+          and  tocgcase.CREATETIME <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
+          GROUP BY DISTRICTNAME,MAINTYPENAME
+         ORDER BY COUNT(*) DESC
+
    </select>
 
 

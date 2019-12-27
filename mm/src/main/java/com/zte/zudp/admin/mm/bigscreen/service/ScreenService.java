@@ -81,8 +81,22 @@ public class ScreenService extends FileBusinessService<Screen> {
      * @return
      */
     public Integer findAreaCountList(String area,String type){
-
-        return screenDao.findAreaCountList(area,type);
+        String StartDate="";
+        String EndDate="";
+        if (type.equals("第一季度")){
+            StartDate="2019-01";
+            EndDate="2019-03";
+        }else if (type.equals("第二季度")){
+            StartDate="2019-04";
+            EndDate="2019-06";
+        }else if (type.equals("第三季度")){
+            StartDate="2019-07";
+            EndDate="2019-09";
+        }else if (type.equals("第四季度")){
+            StartDate="2019-10";
+            EndDate="2019-12";
+        }
+        return screenDao.findareacountList(area,StartDate,EndDate);
     }
 
     /**
@@ -103,6 +117,31 @@ public class ScreenService extends FileBusinessService<Screen> {
     public List<Map> getrightCaseNum(){
 
         return screenDao.getrightCaseNum();
+    }
+
+    /**
+     *  区域案件类型报警
+     *
+     * @return
+     */
+    public List<Map> getrightCasetypeNum(String name,String type){
+
+        String StartDate="";
+        String EndDate="";
+        if (type.equals("第一季度")){
+            StartDate="2019-01";
+            EndDate="2019-03";
+        }else if (type.equals("第二季度")){
+            StartDate="2019-04";
+            EndDate="2019-06";
+        }else if (type.equals("第三季度")){
+            StartDate="2019-07";
+            EndDate="2019-09";
+        }else if (type.equals("第四季度")){
+            StartDate="2019-10";
+            EndDate="2019-12";
+        }
+        return screenDao.getrightCasetypeNum(name,StartDate,EndDate);
     }
 
 

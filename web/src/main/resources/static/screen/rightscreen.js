@@ -99,15 +99,15 @@ function rightglfx() {
         if (option1 && typeof option1 === "object") {
             myChart2.setOption(option1, true);
 
-      /*      myChart2.on('click', function (params) {
+          myChart2.on('click', function (params) {
 
-                var frameSrc = "/companyMaking/companyMakingyearshyLeader?name="+params.name;
+                var frameSrc = "/mm/screen/glarea?name="+params.name;
                 $("#company_amoun_iframe").attr("src", frameSrc);
                 $('#company_amoun').show();
                 $('#company_amoun').css("display","block");
 
             });
-*/
+
 
         }
 
