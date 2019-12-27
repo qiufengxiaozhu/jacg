@@ -40,7 +40,7 @@
         <div class="center-top"><div class="data-city">吉安城市管理大数据平台</div></div>
         <div class="sum-center flex">
             <div class="left-top">
-                <div class="case"><span class="case-tell">案情展示</span><span class="case-time">1月1日—12.16日</span><span class="case-sum">案件总数<span class="case-num">&nbsp;${Total!""}</span></span></div>                <div class="case-show">
+                <div class="case" style="width: 4.5rem;"><span class="case-tell">案情展示</span><span class="case-time">1月1日—12.16日</span><span class="case-sum">案件总数<span class="case-num">&nbsp;${Total!""}</span></span></div>                <div class="case-show">
                     <div class="radius flex">
                         <div class="case-one flex-1">
                             <div class="circle-1">
@@ -153,9 +153,9 @@
 
 <#--                    <div class="fr-bg" id = "myChart" >-->
 <#--                    </div>-->
-                        <label>案发频率趋势图</label>
+                        <label class="case-tell">案发频率趋势图</label>
                     <div class="fr-bg" >
-                    <div id="myChart" style="width: 310px;height:250px;"></div>
+                    <div id="myChart" style="width: 280px;height:180px;"></div>
                         </div>
 
                 <#--</div>-->
@@ -191,7 +191,7 @@
                         </div>
                     </div>
                     <div class="ri-bg">
-                        <div id="myChart2" style="width: 310px;height:250px;"></div>
+                        <div id="myChart2" style="width: 280px;height:180px;"></div>
                     </div>
                 </div>
                 <div class="right-top">
@@ -202,7 +202,7 @@
                         </div>
                     </div>
                     <div class="ri-bg">
-                        <div class="chart3" id="chart3" style="width: 310px;height:250px;"></div>
+                        <div class="chart3" id="chart3" style="width: 280px;height:180px;"></div>
                     </div>
                 </div>
                 <div class="right-top">
@@ -212,8 +212,8 @@
                     <div class="ri-bg">
                         <div class="ri-query flex">
                             <div class="ri-left flex">
-                                <div class="chart4" id="chart4" style="width: 310px;height:250px;"></div>
-                        </div>                      
+                                <div class="chart4" id="chart4" style="width:280px;height:160px"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -228,7 +228,27 @@
                 <div class="flex-1"><div class="bo-bg">待开发</div></div>
             </div>
         </div>
+
+
+
+            <div class="modal-ly" style="display: none;"  id="company_amoun">
+                <div class="mask"></div>
+                <div class="modal-cnt flex flex-fx-c" style="height: 25rem;">
+                    <div class="g-info-tit flex flex-c-c">
+                        <i class="i-icon icon-tb"></i>
+                        <span class="flex-1" id="qyssfx">企业税收分析</span>
+                        <div class="m-close"  >×</div>
+                    </div>
+                    <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
+                        <iframe id="company_amoun_iframe" width="100%" height="100%" frameborder="0"></iframe>
+
+                    </div>
+                </div>
+            </div>
+
+
     </div>
+
 
 
 
@@ -254,12 +274,12 @@
             },
             data: ['庐陵新区', '青原区', '吉州区', '井开区']
         },
-        // grid: {
-        //     left: '3%',
-        //     right: '4%',
-        //     bottom: '3%',
-        //     containLabel: true
-        // },
+        grid: {
+            left: '4%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
         // toolbox: {
         //     feature: {
         //         saveAsImage: {}

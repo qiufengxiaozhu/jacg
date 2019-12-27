@@ -68,19 +68,29 @@ function rightglfx() {
             grid: {
                 left: '3%',
                 right: '4%',
-                bottom: '3%',
+                bottom: '12%',
                 containLabel: true
             },
             xAxis : [
                 {
                     type : 'category',
-                    data : areaname
+                    data : areaname,
+                    axisLine:{
+                        lineStyle:{
+                            color:'#FFA500'
+                        }
+                    }
 
                 }
             ],
             yAxis : [
                 {
-                    type : 'value'
+                    type : 'value',
+                    axisLine:{
+                        lineStyle:{
+                            color:'#FFA500'
+                        }
+                    }
                 }
             ],
             series : series
@@ -88,6 +98,17 @@ function rightglfx() {
 
         if (option1 && typeof option1 === "object") {
             myChart2.setOption(option1, true);
+
+      /*      myChart2.on('click', function (params) {
+
+                var frameSrc = "/companyMaking/companyMakingyearshyLeader?name="+params.name;
+                $("#company_amoun_iframe").attr("src", frameSrc);
+                $('#company_amoun').show();
+                $('#company_amoun').css("display","block");
+
+            });
+*/
+
         }
 
 
@@ -145,14 +166,19 @@ function rightEvenType() {
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             legend: {
-                data: data
+                orient: 'vertical',
+                data: data,
+                top:'5%',
+                align: 'right',
+                right:"0"
+
             },
 
 
             series: [{
                 name: '销量',
                 type: 'pie',
-                radius: ['50%', '70%'],
+                radius: ['30%', '50%'],
                 avoidLabelOverlap: false,
                 symbol: 'none',
                 lineStyle: {
@@ -231,16 +257,27 @@ function getrightCaseNum() {
                 formatter:'{c}'　　　　//这是关键，在需要的地方加上就行了
             },
             grid: {
-                borderWidth: 0,
-                y: 80,
-                y2: 60
+                left:"17 q%",
+                right:"3%",
+                top:"6%",
+                bottom:"13%"
             },
             xAxis: {
                 type: 'category',
-                data: data
+                data: data,
+                axisLine:{
+                    lineStyle:{
+                        color:'#FFA500'
+                    }
+                }
             },
             yAxis: {
-                type: 'value'
+                type: 'value',
+                axisLine:{
+                    lineStyle:{
+                        color:'#FFA500'
+                    }
+                }
             },
             series: [{
                 data: datas,
