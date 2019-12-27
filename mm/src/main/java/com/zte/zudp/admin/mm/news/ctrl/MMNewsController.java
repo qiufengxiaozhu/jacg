@@ -408,8 +408,7 @@ public class MMNewsController {
     @PostMapping("/regsave")
     public String regsave(@RequestBody User t) {
 
-        userService.save(t,true);
-        t.setStatus(User.STATUS_INACTIVATED);
+        userService.save(t,false);
         return "ok";
 
     }
