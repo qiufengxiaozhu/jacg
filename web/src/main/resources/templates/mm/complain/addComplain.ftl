@@ -192,7 +192,7 @@
 
         //检验联系人
         function checkname() {
-            var name = $("input[name='contact']").val();
+            /*var name = $("input[name='contact']").val();
             var reg_name = /^{2,7}$/;
             var flag = reg_name.test(name);
             if (flag) {
@@ -201,7 +201,8 @@
             } else {
                 $("#sp_contact").css("color", "red").html("×");
                 return false;
-            }
+            }*/
+            return true;
         }
 
         //检查手机号

@@ -92,7 +92,7 @@
 
         //检验联系人
         function checkname(){
-            var name=$("input[name='name']").val();
+          /*  var name=$("input[name='name']").val();
             var reg_name=/^([\u4e00-\u9fa5]){2,7}$/;
             var flag=reg_name.test(name);
             if (flag){
@@ -101,7 +101,8 @@
             }else{
                 $("#sp_name").css("color","red").html("×");
                 return false;
-            }
+            }*/
+          return true;
         }
 
         //检查手机号

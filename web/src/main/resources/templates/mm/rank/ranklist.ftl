@@ -91,7 +91,7 @@
                         <div class="last-ran flex last-num">
                             <div class="flex-1">
                                 <div class="last-ra-img">${mmRankEntityList[i].rank!}</div>
-                                <div class="last-ra-font">${mmRankEntityList[i].name!mmRankEntityList[i].telephone}</div>
+                                <div class="last-ra-font">${mmRankEntityList[i].name!}</div>
                             </div>
                             <div class="flex-1">
                                 <div class="last-ra-num">${mmRankEntityList[i].points!}</div>
