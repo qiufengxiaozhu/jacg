@@ -91,7 +91,7 @@ select * from(
 
 
     <select id="getrightEvenType" resultType="java.util.Map">
-        select EVENTTYPENAME as name,COUNT(*) as num from tocgcase GROUP BY EVENTTYPENAME
+        select EVENTTYPENAME as name,round((COUNT(*)/10000),2)  as num from tocgcase GROUP BY EVENTTYPENAME
    </select>
 
 
