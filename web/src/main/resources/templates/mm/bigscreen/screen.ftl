@@ -238,14 +238,14 @@
 
         <div class="modal-ly" style="display: none;"  id="company_amoun">
             <div class="mask"></div>
-            <div class="modal-cnt flex flex-fx-c" style="height: 25rem;">
+            <div class="modal-cnt flex flex-fx-c" style="">
                 <div class="g-info-tit flex flex-c-c">
                     <i class="i-icon icon-tb"></i>
-                    <span class="flex-1" id="qyssfx">企业税收分析</span>
-                    <div class="m-close"  >×</div>
+                    <span class="flex-1" id="qyssfx">关联分析类型案件统计</span>
+                    <div class="m-closes"  onclick="notshow()" >×</div>
                 </div>
                 <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
-                    <iframe id="company_amoun_iframe" width="100%" height="100%" frameborder="0"></iframe>
+                    <iframe id="company_amoun_iframe" width="100%" height="99%" frameborder="0"></iframe>
 
                 </div>
             </div>
@@ -381,7 +381,10 @@
     };
 
 
+function notshow() {
 
+    $('#company_amoun').hide();
+}
 
 
 

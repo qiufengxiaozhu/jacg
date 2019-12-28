@@ -47,7 +47,18 @@ function rightglfx() {
                 type:'bar',
                 barWidth : 30,
                 stack: '分宜',
-                data:data
+                data:data,
+                itemStyle : {
+                    normal : {
+                        label: {
+                            show: true,
+                            position: 'top',
+                            textStyle: {
+                                color: 'white'
+                            }
+                        }
+                    },
+                }
             }
             series.push(serie);
         }
@@ -99,15 +110,15 @@ function rightglfx() {
         if (option1 && typeof option1 === "object") {
             myChart2.setOption(option1, true);
 
-      /*      myChart2.on('click', function (params) {
+          myChart2.on('click', function (params) {
 
-                var frameSrc = "/companyMaking/companyMakingyearshyLeader?name="+params.name;
+                var frameSrc = "/mm/screen/glarea?name="+params.name;
                 $("#company_amoun_iframe").attr("src", frameSrc);
                 $('#company_amoun').show();
                 $('#company_amoun').css("display","block");
 
             });
-*/
+
 
         }
 
@@ -254,7 +265,7 @@ function getrightCaseNum() {
 
             tooltip: {
                 trigger: 'item',
-                formatter:'{c}'　　　　//这是关键，在需要的地方加上就行了
+                formatter:'{c}万'　　　　//这是关键，在需要的地方加上就行了
             },
             grid: {
                 left:"17 q%",
@@ -265,6 +276,7 @@ function getrightCaseNum() {
             xAxis: {
                 type: 'category',
                 data: data,
+
                 axisLine:{
                     lineStyle:{
                         color:'#FFA500'
@@ -273,15 +285,33 @@ function getrightCaseNum() {
             },
             yAxis: {
                 type: 'value',
+                name:'万',
                 axisLine:{
                     lineStyle:{
                         color:'#FFA500'
+                    }
+                },
+                axisLabel:{  //增加这个对其进行你想要的格式转换
+                    formatter:function(value,index){
+                        debugger;
+                        return value+"万";
                     }
                 }
             },
             series: [{
                 data: datas,
-                type: 'bar'
+                type: 'bar',
+                itemStyle : {
+                    normal : {
+                        label: {
+                            show: true,
+                            position: 'top',
+                            textStyle: {
+                                color: 'white'
+                            }
+                        }
+                    },
+                }
             }]
 
 
