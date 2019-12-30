@@ -118,7 +118,7 @@
         where id = #{id}
     </update>
 
-    <!--批量删除-->
+    <!--&lt;!&ndash;批量删除&ndash;&gt;-->
     <delete id="batchDelete">
         UPDATE jacg_dynamicpush  SET del = 1
         WHERE id IN

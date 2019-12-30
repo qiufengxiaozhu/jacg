@@ -17,7 +17,7 @@
     <link href="/css/third/zTree/zTreeStyle/zTreeStyle.css" rel="stylesheet">
     <link href="/css/third/webuploader.css" rel="stylesheet">
     <link href="/css/admin/avatar.css" rel="stylesheet">
-<#--    <link href="/css/third/bootstrap-select.css" rel="stylesheet">-->
+    <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
         .webuploader-container div {

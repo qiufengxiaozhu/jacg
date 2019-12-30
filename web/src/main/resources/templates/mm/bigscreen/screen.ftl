@@ -32,6 +32,10 @@
     <script src="/js/third/webuploader.js"></script>
     <script src="/js/rest.js"></script>
     <script src="/screen/rightscreen.js"></script>
+    <#--之最 js文件 -->
+    <script src="/screen/mostOfThe.js"></script>
+<#--之最 js文件 -->
+    <script src="/screen/findAllCases.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -137,22 +141,7 @@
 <#--                        </div>-->
                     </div>
                 </div>
-                <#--<div class="frequency">-->
 
-                    <#--<div class="flex">-->
-                        <#--<div class="fr-text">案发频率趋势图</div>-->
-                        <#--<div>-->
-<#--                            <select name="" id="" class="fr-sel">-->
-<#--                                <option value="">1月1日——12.16日</option>-->
-<#--                            </select>-->
-<#--                        </div>-->
-<#--                    </div>-->
-<#--                    <div class="fr-bg" id = "myChart" >-->
-<#--                      <div class="chart" id="myChart"></div>-->
-<#--                    </div>-->
-
-<#--                    <div class="fr-bg" id = "myChart" >-->
-<#--                    </div>-->
                         <label class="case-tell">案发频率趋势图</label>
                     <div class="fr-bg" >
                     <div id="myChart" style="width: 280px;height:180px;"></div>
@@ -221,8 +210,8 @@
         <div class="bottom">
             <div class="bo-text flex">
                 <div class="flex-1"><div class="bo-bg">井盖</div></div>
-                <div class="flex-1"><div class="bo-bg">案件</div class="bo-bg"></div>
-                <div class="flex-1"><div class="bo-bg">之最</div class="bo-bg"></div>
+                <div class="flex-1"><div class="bo-bg" onclick="findAllCases()">案件</div class="bo-bg"></div>
+                <div class="flex-1"><div class="bo-bg" onclick="mostOfThe()">之最</div class="bo-bg"></div>
                 <div class="flex-1"><div class="bo-bg">监控</div class="bo-bg"></div>
                 <div class="flex-1"><div class="bo-bg">待开发</div class="bo-bg"></div>
                 <div class="flex-1"><div class="bo-bg">待开发</div></div>
@@ -238,18 +227,66 @@
 
         <div class="modal-ly" style="display: none;"  id="company_amoun">
             <div class="mask"></div>
-            <div class="modal-cnt flex flex-fx-c" style="">
+            <div class="modal-cnt flex flex-fx-c" style="height: 25rem;">
                 <div class="g-info-tit flex flex-c-c">
                     <i class="i-icon icon-tb"></i>
-                    <span class="flex-1" id="qyssfx">关联分析类型案件统计</span>
-                    <div class="m-closes"  onclick="notshow()" >×</div>
+                    <span class="flex-1" id="qyssfx">企业税收分析</span>
+                    <div class="m-close"  >×</div>
                 </div>
                 <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
-                    <iframe id="company_amoun_iframe" width="100%" height="99%" frameborder="0"></iframe>
+                    <iframe id="company_amoun_iframe" width="100%" height="100%" frameborder="0"></iframe>
 
                 </div>
             </div>
         </div>
+
+
+
+
+    <#--模态框 开始 之最-->
+        <div class="modal inmodal fade modal-form" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true" style="display: none; ">
+            <div class="modal-dialog modal-lg"  >
+                <div class="modal-body"  >
+                <#--列表-->
+                    <div id="theNew">
+                        <label>最新</label>
+                    </div>
+
+                    <div id="theLength" >
+                        <label>最长</label>
+                    </div>
+
+                    <div id="theFrequent">
+                        <label>最频繁</label>
+                    </div>
+
+                </div>
+                <small class="font-bold">
+                </small>
+            </div>
+        </div>
+    <#--模态框 结束 之最-->
+
+
+        <#--案件  表格开始-->
+        <div class="modal inmodal fade modal-form" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true" style="display: none; ">
+            <div class="modal-dialog modal-lg"  >
+                <div class="modal-body"  >
+        <table class="table table-bordered" id='tableList'>
+            <tr>
+                <th>id</th>
+                <th>问题描述</th>
+                <th>大类名称</th>
+                <th>立案时间</th>
+            </tr>
+        </table>
+
+                </div>
+                <small class="font-bold">
+                </small>
+            </div>
+        </div>
+        <#--案件  表格结束-->
 
 
 <script>
@@ -275,8 +312,8 @@
             data: ['庐陵新区', '青原区', '吉州区', '井开区']
         },
         grid: {
-            left: '4%',
-            right: '4%',
+            left: '0%',
+            right: '10%',
             bottom: '3%',
             containLabel: true
         },
@@ -287,10 +324,11 @@
         // },
         // 横坐标
         xAxis: {
+            axisLabel:{interval: 0},
             type: 'category',
             boundaryGap: false,
 //
-            data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+            data: ['一季度', '二季度', '三季度','四季度'],
             axisLine:{
                 lineStyle:{
                     color:'#FFA500',
@@ -328,7 +366,8 @@
                 {
                     name: '井开区',
                     type: 'line',
-                    data: ['1500','300','500','800','3000','1500','300','500','800','3000','2000','2400']
+//                    data: ['1500','300','500','800','3000','1500','300','500','800','3000','2000','2400']
+                    data:[]
                 }
             ]
         };
@@ -363,7 +402,7 @@
                 series:[{name:"庐陵新区",data:strList01},
                     {name:"青原区",data:strList02},
                     {name:"吉州区",data:strList03},
-//                    {name:"井开区",data:strList04},
+                    {name:"井开区",data:strList04},
                 ]
             });
             // strList001 =  value.strList001;
@@ -381,10 +420,7 @@
     };
 
 
-function notshow() {
 
-    $('#company_amoun').hide();
-}
 
 
 

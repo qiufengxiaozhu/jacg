@@ -29,8 +29,17 @@
 
     <!--根据id来查询详情-->
     <select id="get" resultType="com.zte.zudp.admin.mm.issueReport.entity.MMIssueReport">
-        SELECT  *
-        FROM jacg_issuereport
+        SELECT
+        t1.title,
+        t1.description,
+        DATE_FORMAT(t1.complainDate,'%Y-%m-%d %T') complainDate,
+        t1.contact,
+        t1.phone,
+        t1.replyContent,
+        t1.replyUserId,
+        DATE_FORMAT(t1.replyDate,'%Y-%m-%d %T') replyDate
+
+        FROM jacg_issuereport t1
         WHERE  id=#{id}
     </select>
 <!--新增上报信息-->

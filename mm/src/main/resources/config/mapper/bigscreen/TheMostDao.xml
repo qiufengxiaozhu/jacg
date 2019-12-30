@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.mm.bigscreen.dao.TheMostDao">
+
+
+    <!--最新-->
+    <select id="findMostNew" resultType="java.util.Map">
+        SELECT
+        DATE_FORMAT(NEWINSTTIME,'%Y-%m-%d %T')  time,
+        MAINTYPENAME name,
+        (CASE WHEN LENGTH(EVENTDESC)>20
+        THEN CONCAT(SUBSTRING(EVENTDESC,1,20),'...')
+        ELSE EVENTDESC END
+        ) AS description
+
+        FROM tocgcase
+        where    date(NEWINSTTIME) >= DATE_SUB(CURDATE(), INTERVAL 18 month)
+        ORDER BY NEWINSTTIME desc
+        LIMIT 3
+
+
+    </select>
+    <!--最长-->
+    <select id="findMostLength" resultType="java.util.Map">
+        SELECT
+         USEDTIME  maxTime,
+         DATE_FORMAT(NEWINSTTIME,'%Y-%m-%d %T')  time,
+        MAINTYPENAME name,
+        (CASE WHEN LENGTH(EVENTDESC)>20
+        THEN CONCAT(SUBSTRING(EVENTDESC,1,20),'...')
+        ELSE EVENTDESC END
+        ) AS description
+
+        FROM tocgcase
+        where   date(NEWINSTTIME) >= DATE_SUB(CURDATE(), INTERVAL 18 month)
+        ORDER BY USEDTIME desc
+        LIMIT 3
+
+
+    </select>
+    <!--最频繁-->
+    <select id="findMostFrequent" resultType="java.util.Map">
+        SELECT
+        count(MAINTYPENAME) num,
+         DATE_FORMAT(NEWINSTTIME,'%Y-%m-%%d %T')  time,
+        MAINTYPENAME name,
+        (CASE WHEN LENGTH(EVENTDESC)>20
+        THEN CONCAT(SUBSTRING(EVENTDESC,1,20),'...')
+        ELSE EVENTDESC END
+        ) AS description
+
+        FROM tocgcase
+        where  date(NEWINSTTIME)  >=  DATE_SUB(CURDATE(), INTERVAL 18 month)
+        GROUP BY MAINTYPENAME
+        ORDER BY  count(MAINTYPENAME) desc
+        LIMIT 3
+
+
+
+    </select>
+
+
+</mapper>
