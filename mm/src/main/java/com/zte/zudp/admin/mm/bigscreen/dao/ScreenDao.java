@@ -82,4 +82,11 @@ public interface ScreenDao extends AbstractDao<Screen> {
      */
     public List<Map> getrightCasetypeNum(@Param("name")String name,@Param("startdate")String startdate,@Param("enddate")String enddate);
 
+    /**
+     *  区域案件报警(社区 下钻)
+     *
+     * @return
+     */
+    public List<Map> glCommunityList(@Param("name")String name);
+
 }

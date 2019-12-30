@@ -72,6 +72,7 @@ function rightglfx() {
                 axisPointer : {            // 坐标轴指示器，坐标轴触发有效
                     type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
                 }
+
             },
             legend: {
                 data:categorys
@@ -196,6 +197,15 @@ function rightEvenType() {
                     width: 0,
                     color: 'rgba(0, 0, 0, 0)'
                 },
+                itemStyle:{
+                    normal:{
+                        label:{
+                            show: true,
+                            formatter: '{b} : {c} ({d}%)'
+                        },
+                        labelLine :{show:true}
+                    }
+                },
                 data:datas,
                 barWidth : 20,
                 barGap:'-50%',
@@ -261,58 +271,55 @@ function getrightCaseNum() {
 
         option4 = null;
         myChart4.hideLoading();
+
         option4 =  {
 
+
             tooltip: {
-                trigger: 'item',
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                },
                 formatter:'{c}万'　　　　//这是关键，在需要的地方加上就行了
             },
+            legend: {
+                data: ['统计']
+            },
             grid: {
-                left:"17 q%",
-                right:"3%",
-                top:"6%",
-                bottom:"13%"
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
             },
             xAxis: {
-                type: 'category',
-                data: data,
-
-                axisLine:{
-                    lineStyle:{
-                        color:'#FFA500'
-                    }
-                }
-            },
-            yAxis: {
                 type: 'value',
-                name:'万',
-                axisLine:{
-                    lineStyle:{
-                        color:'#FFA500'
-                    }
-                },
-                axisLabel:{  //增加这个对其进行你想要的格式转换
+                boundaryGap: [0, 0.01],
+                axisLabel: {
+                    textStyle: {
+                        color: '#FFFFFF'
+                    },
                     formatter:function(value,index){
-                        debugger;
                         return value+"万";
                     }
                 }
             },
-            series: [{
-                data: datas,
-                type: 'bar',
-                itemStyle : {
-                    normal : {
-                        label: {
-                            show: true,
-                            position: 'top',
-                            textStyle: {
-                                color: 'white'
-                            }
-                        }
-                    },
+            yAxis: {
+                type: 'category',
+                data: data,
+                axisLabel: {
+                    textStyle: {
+                        color: '#FFFFFF'
+                    }
                 }
-            }]
+
+            },
+            series: [
+                {
+                    name: '2011年',
+                    type: 'bar',
+                    data: datas
+                }
+            ]
 
 
 
@@ -320,6 +327,15 @@ function getrightCaseNum() {
 
         if (option4 && typeof option4 === "object") {
             myChart4.setOption(option4, true);
+            myChart4.on('click', function (params) {
+
+                var frameSrc = "/mm/screen/glCommunity?name="+params.name;
+                $("#company_amoun_iframe").attr("src", frameSrc);
+                $('#company_amoun').show();
+                $('#company_amoun').css("display","block");
+
+            });
+
         }
 
     }, function (reason) {

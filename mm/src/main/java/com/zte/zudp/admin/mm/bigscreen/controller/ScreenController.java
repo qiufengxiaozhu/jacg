@@ -320,4 +320,29 @@ public class ScreenController {
         return list;
     }
 
+    /**
+     * 跳转到关联下钻
+     * @return
+     */
+    @RequestMapping("/glCommunity")
+    public String glCommunity(Model model,String name){
+        model.addAttribute("name",name);
+        return "mm/bigscreen/glcommunity";
+    }
+
+    /**
+     * 跳转到关联下钻列表
+     * @return
+     */
+    @JSON
+    @RequestMapping("/glCommunityList")
+    public  List<Map>  glCommunityList(String name){
+        //新增
+        List<Map> list = screenService.glCommunityList(name);
+
+
+        return list;
+    }
+
+
 }
