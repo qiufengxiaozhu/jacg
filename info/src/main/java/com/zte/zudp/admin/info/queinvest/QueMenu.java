@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@EndpointModule(id = "queManager", name = "问卷调查管理", order = 300, icon = "home")
+@EndpointModule(id = "queManager", name = "公众调查", order = 20, icon = "home")
 @RequestMapping("/queMenu")
 public class QueMenu {
 

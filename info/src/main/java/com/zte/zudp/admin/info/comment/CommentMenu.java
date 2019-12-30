@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@EndpointModule(id="CommentManage",name = "市民评论", order = 190,icon = "home")
+@EndpointModule(id="CommentManage",name = "微信市民评论管理", order = 330,icon = "home")
 @RequestMapping("/CommentMenu")
 public class CommentMenu {
 

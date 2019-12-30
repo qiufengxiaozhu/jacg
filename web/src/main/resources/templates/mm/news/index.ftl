@@ -86,7 +86,7 @@
                 <div class="" onclick="goPage(6)"><div class="inner-pic"><img src="/mm/img/arr9.png" alt=""><p>公众调查</p></div></div>
                 <div class="flex-1" onclick="goPage(4)"><div class="inner-pic"><img src="/mm/img/arr10.png" alt=""><p>公众上报</p></div></div>
                 <div class="flex-1" onclick="goPage(3)"><div class="inner-pic"><img src="/mm/img/arr11.png" alt=""><p>公众投诉</p></div></div>
-                <div class="flex-1" onclick="goPage(5)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>便民咨询</p></div></div>
+                <div class="flex-1" onclick="goPage(5)"><div class="inner-pic"><img src="/mm/img/arr12.png" alt=""><p>公众咨询</p></div></div>
             </div>
         </div>
         <div class="center">

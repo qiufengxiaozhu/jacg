@@ -3,6 +3,7 @@ package com.zte.zudp.admin.info.rank;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointPage;
 import com.zte.zudp.admin.common.annotation.endpoint.Menu;
+import com.zte.zudp.admin.info.integrate.IntegrateMenu;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Date 2019/12/11 21:03
  **/
 @Controller
-@EndpointModule(id = "rankManager", name = "排行榜", order = 355, icon = "home")
+@EndpointModule(id = "rankManager", name = "排行榜", order = 80, icon = "home",parent = IntegrateMenu.class)
 @RequestMapping("/rank")
 public class RankMenu {
 

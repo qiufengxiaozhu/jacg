@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
     <link href="/css/third/zTree/zTreeStyle/zTreeStyle.css" rel="stylesheet">
     <link href="/css/third/webuploader.css" rel="stylesheet">
     <link href="/css/admin/avatar.css" rel="stylesheet">
-    <link href="/css/third/bootstrap-select.css" rel="stylesheet">
+<#--    <link href="/css/third/bootstrap-select.css" rel="stylesheet">-->
 
     <style>
         .webuploader-container div {
@@ -380,7 +380,7 @@
                         var unpushstr="";
 
                        // 详情
-                        detailstr= '<button class="btn btn-info btn-sm row-detail" value="{id}" onclick= ="editTest()" id ="detailId"><i class="fa fa-pencil"></i>详情</button>&nbsp;';
+                        detailstr= '<button class="btn btn-info btn-sm row-detail" value="{id}" onclick="editTest()" id ="detailId"><i class="fa fa-pencil"></i>详情</button>&nbsp;';
                         // 编辑
                         editstr= '<button class="btn btn-primary btn-sm row-edit updateOpBtn" value="{id}" id = "editId"><i class="fa fa-pencil"></i>编辑</button>&nbsp;';
                        // 删除
