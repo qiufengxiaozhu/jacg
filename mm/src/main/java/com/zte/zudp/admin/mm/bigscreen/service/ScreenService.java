@@ -15,7 +15,7 @@ import java.util.Map;
  * 吉安大屏业务处理层
  * @Description ${}
  * @Author ScreenService
- * @Date 2019/12/24 15:11
+ * @Date 2018/12/24 15:11
  **/
 
 @Service
@@ -84,17 +84,17 @@ public class ScreenService extends FileBusinessService<Screen> {
         String StartDate="";
         String EndDate="";
         if (type.equals("第一季度")){
-            StartDate="2019-01";
-            EndDate="2019-03";
+            StartDate="2018-01";
+            EndDate="2018-03";
         }else if (type.equals("第二季度")){
-            StartDate="2019-04";
-            EndDate="2019-06";
+            StartDate="2018-04";
+            EndDate="2018-06";
         }else if (type.equals("第三季度")){
-            StartDate="2019-07";
-            EndDate="2019-09";
+            StartDate="2018-07";
+            EndDate="2018-09";
         }else if (type.equals("第四季度")){
-            StartDate="2019-10";
-            EndDate="2019-12";
+            StartDate="2018-10";
+            EndDate="2018-12";
         }
         return screenDao.findareacountList(area,StartDate,EndDate);
     }
@@ -129,22 +129,31 @@ public class ScreenService extends FileBusinessService<Screen> {
         String StartDate="";
         String EndDate="";
         if (type.equals("第一季度")){
-            StartDate="2019-01";
-            EndDate="2019-03";
+            StartDate="2018-01";
+            EndDate="2018-03";
         }else if (type.equals("第二季度")){
-            StartDate="2019-04";
-            EndDate="2019-06";
+            StartDate="2018-04";
+            EndDate="2018-06";
         }else if (type.equals("第三季度")){
-            StartDate="2019-07";
-            EndDate="2019-09";
+            StartDate="2018-07";
+            EndDate="2018-09";
         }else if (type.equals("第四季度")){
-            StartDate="2019-10";
-            EndDate="2019-12";
+            StartDate="2018-10";
+            EndDate="2018-12";
         }
         return screenDao.getrightCasetypeNum(name,StartDate,EndDate);
     }
 
 
+    /**
+     *  区域案件报警(社区 下钻)
+     *
+     * @return
+     */
+    public List<Map> glCommunityList(String name){
+
+        return screenDao.glCommunityList(name);
+    }
 
 
 

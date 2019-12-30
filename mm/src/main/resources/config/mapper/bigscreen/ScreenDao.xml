@@ -91,8 +91,9 @@ select * from(
 
 
     <select id="getrightEvenType" resultType="java.util.Map">
-        select EVENTTYPENAME as name,round((COUNT(*)/10000),2)  as num from tocgcase GROUP BY EVENTTYPENAME
-   </select>
+         select COMMUNITYNAME as name,round((COUNT(*)/10000),2)  as num from tocgcase GROUP BY COMMUNITYNAME ORDER BY
+        round((COUNT(*)/10000),2) DESC limit 0,5;
+     </select>
 
 
     <select id="getrightCaseNum" resultType="java.util.Map">
@@ -108,5 +109,9 @@ select * from(
 
    </select>
 
+    <select id="glCommunityList" resultType="java.util.Map">
+        select DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME  from  tocgcase
+        where COMMUNITYNAME=#{name}  GROUP BY DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME
+    </select>
 
 </mapper>
