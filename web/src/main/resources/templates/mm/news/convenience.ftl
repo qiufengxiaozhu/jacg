@@ -62,25 +62,38 @@
                                 <li class="flex flex-c-c">
                                     <span class="space"></span>
 
-                                    <a href="/mm/mmConvenient/getConvenientList?id=${ListType[i].id!}">${ListType[i].label!}</a>
+                                    <img src="/mm/convenience/${ListType[i].label!}.png">
+                                    &nbsp;
+                                    <a href="/mm/mmConvenient/getConvenientList?id=${ListType[i].id!}" style="white-space:nowrap">${ListType[i].label!}</a>
+
                                 </li>
                             </#if>
                             <#if i+1 < ListType?size >
                                     <li class="flex flex-c-c">
                                         <span class="space"></span>
-                                        <a href="/mm/mmConvenient/getConvenientList?id=${ListType[i+1].id!}">${ListType[i+1].label!}</a>
+
+                                        <img src="/mm/convenience/${ListType[i+1].label!}.png">
+                                        &nbsp;
+                                        <a href="/mm/mmConvenient/getConvenientList?id=${ListType[i+1].id!}" style="white-space:nowrap">${ListType[i+1].label!}</a>
                                     </li>
                             </#if>
                             <#if i+2 < ListType?size >
                                     <li class="flex flex-c-c">
                                         <span class="space"></span>
-                                        <a href="/mm/mmConvenient/getConvenientList?id=${ListType[i+2].id!}">${ListType[i+2].label!}</a>
+
+                                        <img src="/mm/convenience/${ListType[i+2].label!}.png">
+                                        &nbsp;
+                                        <a href="/mm/mmConvenient/getConvenientList?id=${ListType[i+2].id!}" style="white-space:nowrap">${ListType[i+2].label!}</a>
+
                                     </li>
                             </#if>
                             <#if i+3 < ListType?size >
                                 <li class="flex flex-c-c">
                                     <span class="space"></span>
-                                    <a href="/mm/mmConvenient/getConvenientList?id=${ListType[i+3].id!}">${ListType[i+3].label!}</a>
+
+                                    <img src="/mm/convenience/${ListType[i+3].label!}.png">
+                                    &nbsp;
+                                    <a href="/mm/mmConvenient/getConvenientList?id=${ListType[i+3].id!}" style="white-space:nowrap">${ListType[i+3].label!}</a>
                                 </li>
                             </#if>
                         </ul>

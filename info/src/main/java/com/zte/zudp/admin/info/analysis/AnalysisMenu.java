@@ -3,6 +3,7 @@ package com.zte.zudp.admin.info.analysis;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointPage;
 import com.zte.zudp.admin.common.annotation.endpoint.Menu;
+import com.zte.zudp.admin.info.OtherMenu;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-@EndpointModule(id="analysisManage",name = "统计分析",order = 100, icon = "home")
+@EndpointModule(id="analysisManage",name = "统计分析",order = 100, icon = "home",parent = OtherMenu.class)
 @RequestMapping("/analysisMenu")
 public class AnalysisMenu {
 

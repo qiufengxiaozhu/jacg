@@ -182,7 +182,8 @@
                         </div>
 
                         <div class="form-group" id="commentText">
-
+<#--                            <div class='col-md-8 control-label my-control-label' id='tempText' style='float: left'>-->
+<#--                            </div>-->
                         </div>
                     </form>
                 </div>
@@ -309,6 +310,19 @@
     function getComment(obj) {
         var id = $(obj).val();
 
+        //保存
+        // var temp=$("#commentText");
+        //删除
+        // var content=document.getElementsByClassName("tempText");
+        // var i ;
+        // for ( i = 0; i <content.length ; i++) {
+        //
+        //     content[i].remove();
+        // }
+        // alert("总共有"+i+"个评论")
+        //恢复
+        $("#commentText").empty();  //清空该div中的内容
+
         zudp.ajax("/api/comment/getComment?id="+id).get().then(function (value){
 
             var arr=value;
@@ -317,8 +331,8 @@
                 var content=arr[i].content;
                 var time=arr[i].publicTime;
 
-                $("#commentText").append("<div class='col-md-8 control-label my-control-label' style='float: left'>" +
-                        "<div style='float: left;margin-left:165'>回复者："+"<input type='text' value='"+name+"' id='textName' >"+"</div>" +"<br>"+"<br>"+
+                $("#commentText").append("<div class='col-md-8 control-label my-control-label tempText' id='tempText' style='float: left'>" +
+                        "<div style='float: left;margin-left:165'>回 复 者 ："+"<input type='text' value='"+name+"' id='textName' >"+"</div>" +"<br>"+"<br>"+
                         "<div style='float: left;margin-left:165'>回复内容："+"<input type='text' value='"+content+"' id='textContent'>"+"</div>" +"<br>"+"<br>"+
                         "<div style='float: left;margin-left:165'>回复时间："+"<input type='text' value='"+time+"' id='textTime'>"+"</div>" +"<br>"+"<br>"+"<hr>"+
                         "</div>"+"<br>"+"<br>"+"<br>"+"<br>");
@@ -400,17 +414,17 @@
                             var  detailStr="";
 
                             // 编辑(回复)
-                            editstr='<button onclick="show1(),img2(this),hiddensave(this)"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{replyId}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
+                            editstr='<button class="btn btn-info btn-sm " <i class="fa fa-pencil"></i>未评论</button>&nbsp;&nbsp;&nbsp;';
                            // 详情
                             detailStr='<button onclick="img2(this),getComment(this)" class="btn btn-success btn-sm row-detail" value="{replyId}"><i class="fa fa-pencil"></i>详情</button>';
 
-                            btn += editstr+detailStr;
+                            // btn += editstr+detailStr;
                             btn02 += detailStr;
-                            if(data.commentType == null){ // 未评论
-                                return zudp.util.render(btn, row);
-                            }else{ // 已评论
+                            // if(data.commentType == null){ // 未评论
+                            //     return zudp.util.render(btn, row);
+                            // }else{ // 已评论
                                 return zudp.util.render(btn02, row);
-                            }
+                            // }
 
                         }
                     }

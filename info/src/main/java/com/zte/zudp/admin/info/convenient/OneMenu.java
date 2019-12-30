@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  **/
 
 @Controller
-@EndpointModule(id = "OneManager", name = "便民服务", order = 201, icon = "home")
+@EndpointModule(id = "OneManager", name = "便民服务", order = 80, icon = "home")
 @RequestMapping("/OneMenu")
 public class OneMenu {
 
