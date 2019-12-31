@@ -18,7 +18,7 @@
     -webkit-box-reflect: below 0.07rem -webkit-linear-gradient(transparent,transparent 70%,rgba(255,255,255,0.6));
 }
 .left-top{
-    height: 8.2rem;
+    height: 92%;
     width: 4rem;
     margin-left: 0.3rem;
     z-index: 999;
@@ -41,7 +41,7 @@
     color: #FEB85E;
 }
 .case-show{
-    height: 4rem;
+    height: 55%;
     width: 4rem;
     background: url(../img/arr3.png);
     background-size: 100% 100%;
@@ -49,7 +49,7 @@
     overflow: hidden;
 }
 .radius{
-    margin-top: 0.2rem;
+    margin-top: 10%;
 }
 .circle-1{
     height: 0.4rem;
@@ -147,7 +147,7 @@
     color: #F3B162;
 }
 .frequency{
-    height: 3.8rem;
+    height: 40%;
     width: 4rem;
     margin-top: 0.3rem;
     z-index: 999;
@@ -168,7 +168,7 @@
     margin-left: 0.1rem;
 }
 .fr-bg{
-    height: 3rem;
+    height: 46%;
     width: 4rem;
     background: url(../img/arr2.png);
     background-size: 100% 100%;
@@ -178,7 +178,7 @@
     padding: 0.2rem 0.3rem;
 }
 .chart{
-    height: 2.8rem;
+    height:  100%;
     width: 92%;
     margin: auto;
 }
@@ -214,7 +214,7 @@
 .right{
     float: right;
     margin-right: 0;
-    height: 8rem;
+    height: 93%;
     width: 4rem;
     z-index: 999;
     color: #fff;
@@ -238,14 +238,14 @@
     margin-top: 0.12rem;
 }
 .ri-bg{
-    height: 2.3rem;
+    height: 85%;
     width: 4rem;
     background: url(../img/arr1.png);
     background-size: 100% 100%;
 }
 .chart2{
     width: 86%;
-    height: 1.7rem;
+    height:  90%;
     /* border: 1px solid #fff; */
     margin-top: 0.3rem;
     margin-left: 0.26rem;
@@ -303,6 +303,10 @@
     width: 100%;
     position: absolute;
 }
+.sum-center{
+    height: 93%;
+    width: 100%;
+}
 .map-log{
     height: 1.5rem;
     width: 2.2rem;
@@ -320,4 +324,21 @@
     border-left: 1px solid #fff;
     padding-left: 0.1rem;
     margin-top: 0.05rem;
+}
+.map-img{
+    height: 0.5rem;
+    width: 0.4rem;
+    background: url(../img/arr27.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.map-radio{
+    height: 0.25rem;
+    width: 0.25rem;
+    border-radius: 50%;
+    background: #fff;
+}
+.right-top{
+    height: 35.5%;
 }

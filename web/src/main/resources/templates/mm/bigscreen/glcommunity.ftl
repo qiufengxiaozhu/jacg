@@ -79,10 +79,10 @@
     findlist();
 
     function findlist() {
-        debugger;
+        
         var s="${name}";
         zudp.ajax("/mm/screen/glCommunityList?name="+s ).get().then(function (value) {
-            debugger;
+            
             for(var i=0;i<value.length;i++){
                 var data  =value[i];
                 var div ='<tr>';
