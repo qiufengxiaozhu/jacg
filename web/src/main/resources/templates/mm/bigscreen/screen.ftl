@@ -394,19 +394,7 @@
             $('#company_amoun').hide();
         }
 
-        debugger;
-        var p0=225.97494469845103;
-        var  p1=27.107669511617193;
-        var gpsPoint = new BMap.Point(p0, p1);
-        BMap.Convertor.translate(gpsPoint,0,function(point){
-            debugger;
 
-
-            console.log("GPS经纬度："+p0+","+p1);
-            console.log("百度经纬度："+point.lng+","+point.lat);
-
-
-        });
 
     </script>
 

@@ -157,5 +157,37 @@ public class ScreenService extends FileBusinessService<Screen> {
 
 
 
+    /**
+     *  案件坐标定位展示
+     *
+     * @return
+     */
+    public List<Map> glCaseList(String name){
+
+        return screenDao.glCaseList(name);
+    }
+
+
+    /**
+     *  案件点击事件列表
+     *
+     * @return
+     */
+    public List<Map> glindexCaseList(String name,int pages){
+
+        return screenDao.glindexCaseList(name,pages);
+    }
+
+    /**
+     *  案件点击事件列表(汇总)
+     *
+     * @return
+     */
+    public Integer glindexCaseListCount(String name){
+
+        return screenDao.glindexCaseListCount(name);
+    }
+
+
 
 }

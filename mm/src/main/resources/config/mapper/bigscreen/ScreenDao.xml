@@ -5,6 +5,9 @@
 
 
 
+
+
+
     <!--趋势分析-->
     <select id="trendAnaly" resultType="java.util.Map">
         SELECT
@@ -129,6 +132,21 @@
         select DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME  from  tocgcase
         where COMMUNITYNAME=#{name}  GROUP BY DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME
     </select>
+
+    <select id="glCaseList" resultType="java.util.Map">
+        select DISTRICTNAME,STREETNAME ,MAX(COORDINATEX),MAX(COORDINATEY) from  tocgcase where STREETNAME is not null  GROUP BY DISTRICTNAME,STREETNAME
+    </select>
+
+    <select id="glindexCaseList" resultType="java.util.Map">
+   select DISTRICTNAME,STREETNAME,MAINTYPENAME,EVENTDESC,DEADLINE  from  tocgcase where STREETNAME=#{name}
+    limit ${pages},10;
+   </select>
+
+
+    <select id="glindexCaseListCount" resultType="java.lang.Integer">
+   select COUNT(*)  from  tocgcase where STREETNAME=#{name}
+   </select>
+
 
 
 </mapper>

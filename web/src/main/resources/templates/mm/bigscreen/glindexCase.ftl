@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>岗位管理</title>
+    <title>大屏案件点击下钻</title>
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link href="/css/third/bootstrap.min.css" rel="stylesheet">
     <link href="/css/third/font-awesome.min.css" rel="stylesheet">
@@ -25,6 +25,8 @@
         }
         .dropdown-menu.open .inner.open{height:200px}
         .dropdown-menu.open{width: 100%;}
+
+
     </style>
 
     <style>
@@ -42,7 +44,6 @@
         .yt-tab-cnt{width: 100%;padding-top: 3rem}
     </style>
 
-
 </head>
 
 <body class="gray-bg">
@@ -55,19 +56,28 @@
                         <thead>
                         <tr>
                             <th>区名</th>
-                            <th>季度</th>
+                            <th>街道</th>
                             <th>大类名称</th>
-                            <th>案件量</th>
-
+                            <th>问题描述</th>
+                            <th>案件截止时间</th>
 
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tables">
                         </tbody>
                     </table>
 
+                    <div class="page-list ">
+                        <a onclick="firstPage()" class="page-li page-prev">首页</a>
+                        <a  onclick="uppers()" class="page-li on">上一页</a>
+                        <a onclick="lowers()" class="page-li">下一页</a>
+                        <a onclick="endpage()" class="page-li page-next">尾页</a>
+                    </div>
+
+
 
                 </div>
+
 
 
             </div>
@@ -98,20 +108,63 @@
 
 <script>
 
+    var page=1;
+    var sumpage=${listsize};
+
+    //尾页
+    function endpage() {
+        page=sumpage;
+        search();
+    }
+    //首页
+    function firstPage() {
+        page=1;
+        search();
+    }
+
+    //上一页
+    function uppers() {
+        if(page==1){
+            alert("已经是首页哦")
+        }else{
+            page=page-1;
+            search();
+        }
+    }
+
+    //下一页
+    function lowers() {
+        if(sumpage==page){
+            alert("已是尾页");
+        }else {
+            page=page+1;
+            search();
+        }
+    }
+
+    search();
 
     function search() {
-        debugger;
+        var main = $('#tables');
+       main.empty();
         var s="${name}";
-        zudp.ajax("/mm/screen/glareaList?name="+s).get().then(function (value) {
-            debugger;
+        zudp.ajax("/mm/screen/glindexCaseList?name="+s+"&page="+page ).get().then(function (value) {
+            
             for(var i=0;i<value.length;i++){
                 var data  =value[i];
-                var div ='<tr>';
-                div=div +'   <td>'+data.name+'</td>';
-                div=div +'   <td>'+data.jd+'</td>';
-                div=div +'   <td>'+data.type+'</td>';
-                div=div +'   <td>'+data.num+'</td>';
 
+                var  title=value[i].EVENTDESC;
+
+                if (title.length>15){
+                    title=title.substr(0,25)+"...";
+                }
+
+                var div ='<tr>';
+                div=div +'   <td>'+data.DISTRICTNAME+'</td>';
+                div=div +'   <td>'+data.STREETNAME+'</td>';
+                div=div +'   <td>'+data.MAINTYPENAME+'</td>';
+                div=div +'   <td>'+title+'</td>';
+                div=div +'   <td>'+data.DEADLINE+'</td>';
 
                 $('#post-list-table').append(div)
 
