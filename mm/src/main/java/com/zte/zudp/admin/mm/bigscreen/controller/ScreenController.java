@@ -3,7 +3,6 @@ package com.zte.zudp.admin.mm.bigscreen.controller;
 import com.zte.zudp.admin.common.annotation.JSON;
 import com.zte.zudp.admin.mm.bigscreen.entity.Screen;
 import com.zte.zudp.admin.mm.bigscreen.service.ScreenService;
-import com.zte.zudp.admin.modules.sys.dict.entity.Dict;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,10 +36,10 @@ public class ScreenController {
     @RequestMapping("/toBigScreen")
     public String toBigScreen(Model model){
 
-        //显示最近一个月数据，显示三条
-        List<Screen> screenList =  screenService.selectCase();
+        //统计2019年1月份所有区前十条案件
+        List<Screen> screenList =  screenService.selectAllCase();
 
-        //统计每个区的最近一个月数据
+        //统计近一年每个区发生的事件有多少起
         List<Screen> list = screenService.countCase();
 
         String number1 = "0", number2 = "0", number3 = "0", number4 = "0";
@@ -64,9 +63,9 @@ public class ScreenController {
         }
 
         //由于数据库中井开区没有数据，特在此模拟一下案件条数
-        number4 = "2600";
+//        number4 = "2600";
 
-        //四个区最近一个月案发总数
+        //四个区在2019年1月案发总数
         int total = Integer.parseInt(number1) + Integer.parseInt(number2)
                 + Integer.parseInt(number3) + Integer.parseInt(number4);
 

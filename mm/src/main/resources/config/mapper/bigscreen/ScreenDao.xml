@@ -30,7 +30,7 @@
         time
     </select>
 
-
+    <!--显示最近12个月数据，显示三条-->
     <select id="selectCase" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
 
         SELECT
@@ -47,6 +47,24 @@
             LIMIT 3
     </select>
 
+    <!--统计2019年1月份所有区前十条案件-->
+    <select id="selectAllCase" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
+
+        SELECT
+            RECID,
+            EVENTDESC,
+            MAINTYPENAME,
+            DATE_FORMAT( NEWINSTTIME, "%Y-%m" ) NEWINSTTIME
+        FROM
+            tocgcase
+        WHERE
+            NEWINSTTIME like '%2019-01%'
+        ORDER BY
+            NEWINSTTIME DESC
+            LIMIT 10
+    </select>
+
+    <!--统计近一年每个区发生的事件有多少起-->
     <select id="countCase" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
 
         SELECT

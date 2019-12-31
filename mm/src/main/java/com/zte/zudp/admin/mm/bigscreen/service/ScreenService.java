@@ -40,8 +40,8 @@ public class ScreenService extends FileBusinessService<Screen> {
      * 显示最近一个月数据，显示三条
      * @return
      */
-    public List<Screen> selectCase() {
-        return screenDao.selectCase();
+    public List<Screen> selectAllCase() {
+        return screenDao.selectAllCase();
     }
 
     /**

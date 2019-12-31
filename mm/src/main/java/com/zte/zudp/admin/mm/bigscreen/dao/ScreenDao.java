@@ -3,6 +3,7 @@ package com.zte.zudp.admin.mm.bigscreen.dao;
 import com.zte.zudp.admin.common.persistence.dao.AbstractDao;
 import com.zte.zudp.admin.mm.bigscreen.entity.Screen;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;
@@ -14,6 +15,7 @@ import java.util.Map;
  * @Author ScreenDao
  * @Date 2019/12/24 15:10
  **/
+@Repository
 public interface ScreenDao extends AbstractDao<Screen> {
 
     /**
@@ -24,13 +26,19 @@ public interface ScreenDao extends AbstractDao<Screen> {
     List<Map> trendAnaly(@Param("time") String time);
 
     /**
-     * 显示最近一个月数据，显示三条
+     * 显示最近12个月数据，显示三条
      * @return
      */
     List<Screen> selectCase();
 
     /**
-     * 统计每个区的最近一个月数据
+     * 统计2019年1月份所有区前十条案件
+     * @return
+     */
+    List<Screen> selectAllCase();
+
+    /**
+     * 统计近一年每个区发生的事件有多少起
      *
      * @return
      */
