@@ -1,10 +1,12 @@
 $(function(){
+    $('.map-log').hide();
     var map = new BMap.Map("container");
     // 创建地图实例  
-    var point = new BMap.Point(116.304, 39.888);
+    var point = new BMap.Point(114.991136,27.115032);
     // 创建点坐标  
-    map.disableDragging();
+   // map.disableDragging();
     map.centerAndZoom(point, 15);
+    map.enableScrollWheelZoom();
     var  mapStyle ={ 
         features: ["road", "building","water","land"],//隐藏地图上的poi
         style : "dark"  //设置地图风格为高端黑
@@ -15,35 +17,19 @@ $(function(){
       }
       ComplexCustomOverlay.prototype = new BMap.Overlay();
       ComplexCustomOverlay.prototype.initialize = function(map){
-        this._map = map;
-        var div = this._div = document.createElement("div");
-        div.classList.add("map-log");
-        var divA = document.createElement("div");
-        divA.classList.add("A");
-        var div2 = document.createElement("div");
-        div2.classList.add("map-text");
-        var div3 = document.createElement("div");
-        div3.classList.add("map-cont");
-        var div4 = document.createElement("div");
-        var div5 = document.createElement("div");
-        var div6 = document.createElement("div");
-        var div7 = document.createElement("div");
-        div3.innerHTML = '当前状态';
-        div4.innerHTML = '案件: &nbsp;电话报警';
-        div5.innerHTML = '案件状态: &nbsp;处理中';
-        div6.innerHTML = '案件负责人: &nbsp;刘青云';
-        div7.innerHTML = '操作:';
 
-        div.appendChild(div2);
-        div2.appendChild(div3);
-        div2.appendChild(div4);
-        div2.appendChild(div5);
-        div2.appendChild(div6);
-        div2.appendChild(div7);
-        
-        map.getPanes().labelPane.appendChild(div);
-        map.getPanes().labelPane.appendChild(divA);
-        return div;
+          this._map = map;
+          var div = this._div = document.createElement("div");
+          div.classList.add("map-radio");
+
+          var divA = this._divA = document.createElement("div");
+          divA.classList.add("map-img");
+
+          map.getPanes().labelPane.appendChild(div);
+          map.getPanes().labelPane.appendChild(divA);
+          var arr = [div,divA];
+          return div;
+
       }
       ComplexCustomOverlay.prototype.draw = function(){
         var map = this._map;
@@ -53,12 +39,30 @@ $(function(){
 
         this._div.parentNode.style.left = pixel.x +"px";
         this._div.parentNode.style.top  = pixel.y + "px";
+
+          this._divA.parentNode.style.left = pixel.x +"px";
+          this._divA.parentNode.style.top  = pixel.y + "px";
         console.log(this._div)
       }
         var myCompOverlay1 = new ComplexCustomOverlay(new BMap.Point(116.304, 39.888));
         map.addOverlay(myCompOverlay1);
 
 
+
+
+    /**
+     * 地图上点击事件
+     //  */
+    var temp = true;
+    $('.map-img').on('click',function(){
+        if(temp){
+            $('.map-log').show();
+            temp = false;
+        }else{
+            $('.map-log').hide();
+            temp = true;
+        }
+    })
 
 
     var myChart = echarts.init(document.getElementById('chart'));
@@ -255,4 +259,7 @@ $(function(){
             }],
         };
         myChart3.setOption(option3);
+
+
+
 })

@@ -12,6 +12,7 @@
     <script src="/mm/bigscreen/js/echarts.min.js"></script>
     <script src="/mm/bigscreen/js/main.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=F0i6SrLmHquLVNLCqpExxPrj8mWVdFwx"></script>
+    <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
     <script src="/js/third/jquery.min.js"></script>
     <script src="/js/pluginInit/animation.js"></script>
     <script src="/js/third/bootstrap.min.js"></script>
@@ -40,7 +41,7 @@
 </head>
 <body>
     <div class="sum-bg" id="container"></div>
-    <div>
+    <div style="height:100%;width: 100%;">
         <div class="center-top"><div class="data-city">吉安城市管理大数据平台</div></div>
         <div class="sum-center flex">
             <div class="left-top">
@@ -158,7 +159,7 @@
                     <div class="area-2">路岭新区</div>
                     <div class="area-2">经开区</div>
                 </div>
-                <!-- <div class="map-log">
+               <div class="map-log">
                   <div class="map-text">
                       <div class="map-cont">当前状态</div>
                       <div>案件: &nbsp;电话报警</div>
@@ -166,7 +167,7 @@
                       <div>案件负责人: &nbsp;刘青云</div>
                       <div>操作:</div>
                   </div>
-                </div> -->
+                </div>
             </div>
             <div class="right">
                 <div class="right-top">
@@ -422,8 +423,19 @@
 
 
 
+debugger;
+    var p0=225.97494469845103;
+    var  p1=27.107669511617193;
+    var gpsPoint = new BMap.Point(p0, p1);
+    BMap.Convertor.translate(gpsPoint,0,function(point){
+        debugger;
 
 
+        console.log("GPS经纬度："+p0+","+p1);
+        console.log("百度经纬度："+point.lng+","+point.lat);
+
+
+    });
 
 </script>
 
