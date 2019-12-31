@@ -324,5 +324,100 @@ public class ScreenController {
     }
 
 
+    /**
+     * 案件坐标定位展示
+     * @return
+     */
+    @JSON
+    @RequestMapping("/glCaseList")
+    public  List<Map>  glCaseList(String name){
+        //新增
+        List<Map> list2=new ArrayList<>();
+        //展示
+        List<Map> list = screenService.glCaseList(name);
+        for (int i = 0; i < list.size(); i++) {
+             Map map=list.get(i);
+             String s=list.get(i).get("DISTRICTNAME").toString()+list.get(i).get("STREETNAME").toString();
+             if(s.equals("吉州区习溪桥街道")){
+                 map.put("x",114.982592);
+                 map.put("y",27.122108);
+             }else if(s.equals("吉州区二街街道")){//???
+                 map.put("x",114.97829);
+                 map.put("y",27.092633);
+             }else if(s.equals("吉州区北门街道")){
+                 map.put("x",114.982592);
+                 map.put("y",27.122108);
+             }else if(s.equals("吉州区古南街道")){
+                 map.put("x",114.998605);
+                 map.put("y",27.131434);
+             }else if(s.equals("吉州区文山街道")){
+                 map.put("x",114.992923);
+                 map.put("y",27.113601);
+             }else if(s.equals("吉州区樟山镇")){
+                 map.put("x",115.051361);
+                 map.put("y",27.186478);
+             }else if(s.equals("吉州区永叔街道")){
+                 map.put("x",114.992819);
+                 map.put("y",27.108012);
+             }else if(s.equals("吉州区白塘街道")){
+                 map.put("x",114.978635);
+                 map.put("y",27.126267);
+             }else if(s.equals("庐陵新区滨江街道")){
+                 map.put("x",115.018175);
+                 map.put("y",27.115362);
+             }else if(s.equals("庐陵新区禾埠乡政府")){
+                 map.put("x",114.974037);
+                 map.put("y",27.104343);
+             }else if(s.equals("庐陵新区禾埠街道")){//  ?????
+                 map.put("x",114.95223);
+                 map.put("y",27.100417);
+             }else if(s.equals("青原区天玉镇")){
+                 map.put("x",115.067342);
+                 map.put("y",27.14425);
+             }else if(s.equals("青原区河东街道")){
+                 map.put("x",115.033676);
+                 map.put("y",27.096904);
+             }
+
+            list2.add(map);
+
+        }
+
+
+
+        return list2;
+    }
+
+    /**
+     * 跳转到关联下钻(案件点击事件)
+     * @return
+     */
+    @RequestMapping("/glindexCase")
+    public String glindexCase(Model model,String name){
+        model.addAttribute("name",name);
+        //新增
+        int listsize = screenService.glindexCaseListCount(name);
+        int totalPageNum = (listsize  +  10  - 1) / 10;
+        model.addAttribute("listsize",String.valueOf(totalPageNum));
+        return "mm/bigscreen/glindexCase";
+    }
+
+    /**
+     * 跳转到关联下钻(案件点击事件列表)
+     * @return
+     */
+    @JSON
+    @RequestMapping("/glindexCaseList")
+    public  List<Map>  glindexCaseList(String name,String page){
+        int pages=Integer.valueOf(page);
+        if(null != page && !"".equals(page)){
+            pages = (pages -1) * 10;
+        }
+        //新增 (page-1)*5
+        List<Map> list = screenService.glindexCaseList(name,pages);
+
+
+        return list;
+    }
 
 }

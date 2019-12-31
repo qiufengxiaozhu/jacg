@@ -97,4 +97,26 @@ public interface ScreenDao extends AbstractDao<Screen> {
      */
     public List<Map> glCommunityList(@Param("name")String name);
 
+
+    /**
+     *  案件坐标定位展示
+     *
+     * @return
+     */
+    public List<Map> glCaseList(String name);
+
+    /**
+     *  案件点击事件列表
+     *
+     * @return
+     */
+    public List<Map> glindexCaseList(@Param("name")String name,@Param("pages")int pages);
+
+    /**
+     *  案件点击事件列表(汇总)
+     *
+     * @return
+     */
+    public Integer glindexCaseListCount(String name);
+
 }
