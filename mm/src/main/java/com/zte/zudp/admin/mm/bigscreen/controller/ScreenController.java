@@ -186,8 +186,12 @@ public class ScreenController {
     @JSON
     @GetMapping(value = "/getIndex")
     public Map getIndex() {
-        //大类最大 前五条
-        List<Map> listtype = screenService.findType();
+        //季度
+        List listtype=new ArrayList<>();
+        listtype.add("第一季度");
+        listtype.add("第二季度");
+        listtype.add("第三季度");
+        listtype.add("第四季度");
 
         //社区遍历
         List<Map> list= screenService.findAreaList();
@@ -195,25 +199,26 @@ public class ScreenController {
         List<Map> listMap=new ArrayList<>();
         //根据类型遍历
         for (int i = 0; i < listtype.size(); i++) {
-            Map map1= listtype.get(i);
+
             Map map=new HashMap();
             //遍历社区
             for (int j = 0; j < list.size(); j++) {
                 Map map2=list.get(j);
-                Integer counts= screenService.findAreaCountList(map2.get("name").toString(),map1.get("name").toString());
+                Integer counts= screenService.findAreaCountList(map2.get("name").toString(),listtype.get(i).toString());
                 map.put(map2.get("name"),counts);
             }
-            map.put("name",map1.get("name").toString());
+            map.put("name",listtype.get(i));
             listMap.add(map);
 
         }
 
 
-     Map map=new HashMap();
-     map.put("listMap",listMap);
-     map.put("listdit",listtype);
-     map.put("listArea",list);
-     return  map;
+        Map map=new HashMap();
+        map.put("listMap",listMap);
+        map.put("listdit",listtype);
+        map.put("listArea",list);
+        return  map;
+
 
     }
 
@@ -251,6 +256,72 @@ public class ScreenController {
 
         return list;
 
+    }
+
+
+    /**
+     * 跳转到关联下钻
+     * @return
+     */
+    @RequestMapping("/glarea")
+    public String glarea(Model model,String name){
+        model.addAttribute("name",name);
+        return "mm/bigscreen/glarea";
+    }
+
+    /**
+     * 跳转到关联下钻列表
+     * @return
+     */
+    @JSON
+    @RequestMapping("/glareaList")
+    public  List<Map>  glareaList(String name){
+        //季度
+        List listtype=new ArrayList<>();
+        listtype.add("第一季度");
+        listtype.add("第二季度");
+        listtype.add("第三季度");
+        listtype.add("第四季度");
+
+        //新增
+        List<Map> list=new ArrayList<>();
+        for (int j = 0; j < listtype.size(); j++) {
+            //遍历
+            List<Map> list2 = screenService.getrightCasetypeNum(name,listtype.get(j).toString());
+            for (int k = 0; k < list2.size(); k++) {
+                Map map2= list2.get(k);
+                map2.put("jd",listtype.get(j).toString());
+                list.add(map2);
+            }
+
+        }
+
+
+        return list;
+    }
+
+    /**
+     * 跳转到关联下钻
+     * @return
+     */
+    @RequestMapping("/glCommunity")
+    public String glCommunity(Model model,String name){
+        model.addAttribute("name",name);
+        return "mm/bigscreen/glcommunity";
+    }
+
+    /**
+     * 跳转到关联下钻列表
+     * @return
+     */
+    @JSON
+    @RequestMapping("/glCommunityList")
+    public  List<Map>  glCommunityList(String name){
+        //新增
+        List<Map> list = screenService.glCommunityList(name);
+
+
+        return list;
     }
 
 
