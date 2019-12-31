@@ -41,7 +41,14 @@
     <div class="center-top"><div class="data-city">吉安城市管理大数据平台</div></div>
     <div class="sum-center flex">
         <div class="left-top">
-            <div class="case" style="width: 4.5rem;"><#--<span class="case-tell">案情展示</span><span class="case-time">1月1日—12.16日</span><span class="case-sum">案件总数<span class="case-num">&nbsp;${Total!""}</span></span>--></div>                <div class="case-show">
+            <div class="case" style="width: 4.5rem;">
+                <span class="case-tell">案情展示</span>
+                <span class="case-time">1月1日—12.16日</span>
+                <span class="case-sum">案件总数
+                    <span class="case-num">&nbsp;${Total!""}</span>
+                </span>
+            </div>
+            <div class="case-show">
                 <div class="radius flex">
                     <div class="case-one flex-1">
                         <div class="circle-1">
@@ -71,7 +78,7 @@
                 <div class="new-case">
                     <div class="case-fl">
                         <div class="case-the">最新案件</div>
-                        <div class="case-cont">详情</div>
+<#--                        <div class="case-cont">详情</div>-->
                     </div>
 
 
@@ -80,7 +87,7 @@
                         <div class="case-usal">
                         <div class="flex case-hot">
 
-                        <#if (screen.EVENTDESC?? && screen.EVENTDESC?length>30)>
+                        <#if (screen.EVENTDESC?? && screen.EVENTDESC?length>17)>
                             <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>问题描述：${screen.EVENTDESC?substring(0,17)}...</div></div>
                         <#else>
                             <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>问题描述：${screen.EVENTDESC!""}</div></div>
