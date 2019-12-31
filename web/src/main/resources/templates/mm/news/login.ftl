@@ -23,7 +23,7 @@
         <div class="login-box">
             <div class="login-group flex flex-c-c">
                 <div class="lg-user"></div>
-                <input type="text" id="username" class="login-input flex-1" placeholder="请输入手机号/邮箱">
+                <input type="text" id="username" class="login-input flex-1" placeholder="请输入手机号">
             </div>
             <div class="login-group flex flex-c-c">
                 <div class="lg-pwd"></div>

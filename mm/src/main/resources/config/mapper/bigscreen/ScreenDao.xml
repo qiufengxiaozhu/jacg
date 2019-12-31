@@ -4,31 +4,31 @@
 <mapper namespace="com.zte.zudp.admin.mm.bigscreen.dao.ScreenDao">
 
 
+
     <!--趋势分析-->
-<!--<select id="trendAnaly" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">-->
-<select id="trendAnaly" resultType="java.util.Map">
-select * from(
-    select
-        month,
-        count(RECID) as num,
-        DISTRICTNAME dest
-    from
-        (
-        select
-         DATE_FORMAT(NEWINSTTIME,'%Y-%m') as month,
-         DISTRICTNAME,
-         RECID
-    from tocgcase
-
-    where 1=1
-       and DATE_FORMAT(NEWINSTTIME,'%Y')= '2018'
+    <select id="trendAnaly" resultType="java.util.Map">
+        SELECT
+            num,
+            time,
+            dest
+        FROM
+            (
+            SELECT
+                COUNT( RECID ) AS num,
+                QUARTER ( NEWINSTTIME ) AS time,
+                DISTRICTNAME dest
+            FROM
+                tocgcase
+            WHERE
+                NEWINSTTIME like '%2018%'
+            GROUP BY
+                QUARTER (NEWINSTTIME),
+                DISTRICTNAME
         ) t
-    group by month,dest
-    order by month) t2
-    group by dest,month
-
-
-</select>
+        GROUP BY
+        dest,
+        time
+    </select>
 
 
     <select id="selectCase" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
@@ -85,7 +85,7 @@ select * from(
    </select>
 
     <select id="findareacountList" resultType="java.lang.Integer">
-       select COUNT(*) from tocgcase where DISTRICTNAME=  #{area} and  tocgcase.CREATETIME <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
+       select COUNT(*) from tocgcase where DISTRICTNAME=  #{area} and MAINTYPENAME= #{type}
    </select>
 
 
@@ -95,23 +95,14 @@ select * from(
         round((COUNT(*)/10000),2) DESC limit 0,5;
      </select>
 
-
     <select id="getrightCaseNum" resultType="java.util.Map">
     select DISTRICTNAME as name,COUNT(*) as num from tocgcase where tocgcase.CREATETIME LIKE '%2017-12%'  GROUP BY DISTRICTNAME
-   </select>
-
-
-    <select id="getrightCasetypeNum" resultType="java.util.Map">
-        select DISTRICTNAME as name,MAINTYPENAME as type,COUNT(*) as num  from tocgcase where DISTRICTNAME= #{name}
-          and  tocgcase.CREATETIME <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
-          GROUP BY DISTRICTNAME,MAINTYPENAME
-         ORDER BY COUNT(*) DESC
-
    </select>
 
     <select id="glCommunityList" resultType="java.util.Map">
         select DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME  from  tocgcase
         where COMMUNITYNAME=#{name}  GROUP BY DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME
     </select>
+
 
 </mapper>

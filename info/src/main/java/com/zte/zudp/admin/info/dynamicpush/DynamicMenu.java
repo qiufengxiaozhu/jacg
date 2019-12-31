@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@EndpointModule(id="dynamicManage",name = "动态推送管理", order = 2,icon = "home")
+@EndpointModule(id="dynamicManage",name = "微信动态推送管理", order = 310,icon = "home")
 @RequestMapping("/dynamicMenu")
 public class DynamicMenu {
 }

@@ -95,15 +95,8 @@ public class ScreenController {
         List strList03 = new ArrayList();
         List strList04 = new ArrayList();
 
-
-        List strList001 = new ArrayList();
-        List strList002 = new ArrayList();
-        List strList003= new ArrayList();
-        List strList004= new ArrayList();
-
         // 创建map
         HashMap map = new HashMap();
-
 
         System.out.println(list);
         for (int i = 0; i < list.size(); i++) {
@@ -114,20 +107,16 @@ public class ScreenController {
                     if(list.get(i).get("dest").equals("庐陵新区")){ //
                       // 存放到数组中
                         strList01.add(list.get(i).get("num").toString());
-                        strList001.add(list.get(i).get("month").toString());
                         // 存放到map中
                     }else if(list.get(i).get("dest").equals("青原区")){ //
                     // 存放到数组中
                     strList02.add(list.get(i).get("num").toString());
-                    strList002.add(list.get(i).get("month").toString());
                 }else if(list.get(i).get("dest").equals("吉州区")){ //
                         // 存放到数组中
                         strList03.add(list.get(i).get("num").toString());
-                        strList003.add(list.get(i).get("month").toString());
                     }else if(list.get(i).get("dest").equals("井开区")){ //
                         // 存放到数组中
                         strList04.add(list.get(i).get("num").toString());
-                        strList004.add(list.get(i).get("month").toString());
                     }
             }
         }
@@ -137,18 +126,7 @@ public class ScreenController {
         map.put("strList03",strList03);
         map.put("strList04",strList04);
 
-        // 每个区的横坐标
-        map.put("strList001",strList001);
-        map.put("strList002",strList002);
-        map.put("strList003",strList003);
-        map.put("strList004",strList004);
-
-
-
-
-
-
-        return map;
+                return map;
     }
 
     /**
@@ -208,12 +186,8 @@ public class ScreenController {
     @JSON
     @GetMapping(value = "/getIndex")
     public Map getIndex() {
-        //季度
-        List listtype=new ArrayList<>();
-        listtype.add("第一季度");
-        listtype.add("第二季度");
-        listtype.add("第三季度");
-        listtype.add("第四季度");
+        //大类最大 前五条
+        List<Map> listtype = screenService.findType();
 
         //社区遍历
         List<Map> list= screenService.findAreaList();
@@ -221,15 +195,15 @@ public class ScreenController {
         List<Map> listMap=new ArrayList<>();
         //根据类型遍历
         for (int i = 0; i < listtype.size(); i++) {
-
+            Map map1= listtype.get(i);
             Map map=new HashMap();
             //遍历社区
             for (int j = 0; j < list.size(); j++) {
                 Map map2=list.get(j);
-                Integer counts= screenService.findAreaCountList(map2.get("name").toString(),listtype.get(i).toString());
+                Integer counts= screenService.findAreaCountList(map2.get("name").toString(),map1.get("name").toString());
                 map.put(map2.get("name"),counts);
             }
-            map.put("name",listtype.get(i));
+            map.put("name",map1.get("name").toString());
             listMap.add(map);
 
         }
@@ -278,72 +252,6 @@ public class ScreenController {
         return list;
 
     }
-
-    /**
-     * 跳转到关联下钻
-     * @return
-     */
-    @RequestMapping("/glarea")
-    public String glarea(Model model,String name){
-        model.addAttribute("name",name);
-        return "mm/bigscreen/glarea";
-    }
-
-    /**
-     * 跳转到关联下钻列表
-     * @return
-     */
-    @JSON
-    @RequestMapping("/glareaList")
-    public  List<Map>  glareaList(String name){
-        //季度
-        List listtype=new ArrayList<>();
-        listtype.add("第一季度");
-        listtype.add("第二季度");
-        listtype.add("第三季度");
-        listtype.add("第四季度");
-
-        //新增
-        List<Map> list=new ArrayList<>();
-        for (int j = 0; j < listtype.size(); j++) {
-            //遍历
-            List<Map> list2 = screenService.getrightCasetypeNum(name,listtype.get(j).toString());
-            for (int k = 0; k < list2.size(); k++) {
-                Map map2= list2.get(k);
-                map2.put("jd",listtype.get(j).toString());
-                list.add(map2);
-            }
-
-        }
-
-
-        return list;
-    }
-
-    /**
-     * 跳转到关联下钻
-     * @return
-     */
-    @RequestMapping("/glCommunity")
-    public String glCommunity(Model model,String name){
-        model.addAttribute("name",name);
-        return "mm/bigscreen/glcommunity";
-    }
-
-    /**
-     * 跳转到关联下钻列表
-     * @return
-     */
-    @JSON
-    @RequestMapping("/glCommunityList")
-    public  List<Map>  glCommunityList(String name){
-        //新增
-        List<Map> list = screenService.glCommunityList(name);
-
-
-        return list;
-    }
-
 
 
 

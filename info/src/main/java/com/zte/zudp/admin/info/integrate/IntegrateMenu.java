@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
   */
 
 @Controller
-@EndpointModule(id = "integrateManager", name = "积分管理", order = 300, icon = "home")
+@EndpointModule(id = "integrateManager", name = "积分管理", order = 70, icon = "home")
 @RequestMapping("/integrateMenu")
 public class IntegrateMenu {
 

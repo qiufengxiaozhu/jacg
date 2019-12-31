@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since on 2018-02-05.
  */
 @Controller
-@EndpointModule(id = "mainManager", name = "新闻管理", order = 200, icon = "home")
+@EndpointModule(id = "mainManager", name = "公众新闻", order = 10, icon = "home")
 @RequestMapping("/mainMenu")
 public class MainMenu {
 
