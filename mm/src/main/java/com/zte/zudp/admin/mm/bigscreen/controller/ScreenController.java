@@ -433,5 +433,17 @@ public class ScreenController {
 
 
 
+    /**
+     * 井盖 列表
+     * @return
+     */
+    @JSON
+    @RequestMapping("/glindexManholeis")
+    public  List<Map>  glindexManholeis(String id){
+        List<Map> list = screenService.glindexManholeis();
+
+        return list;
+    }
+
 
 }
