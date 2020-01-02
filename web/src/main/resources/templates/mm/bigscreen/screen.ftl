@@ -5,18 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="stylesheet" href="/mm/bigscreen/css/index.css">
     <link rel="stylesheet" href="/mm/bigscreen/css/main.css">
-
-    <link rel="stylesheet" href="/zhizui/css/index.css">
-    <link rel="stylesheet" href="/zhizui/css/main.css">
-    <script src="/zhizui/js/rem.js"></script>
-    <script src="/zhizui/js/jquery-3.3.1.min.js"></script>
-    <script src="/zhizui/js/echarts.min.js"></script>
-    <script src="/zhizui/js/main.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=F0i6SrLmHquLVNLCqpExxPrj8mWVdFwx"></script>
-    <script src="/zhizui/js/jquery.SuperSlide.2.1.3.js"></script>
-
 
     <script src="/mm/bigscreen/js/rem.js"></script>
     <script src="/mm/bigscreen/js/jquery-3.3.1.min.js"></script>
