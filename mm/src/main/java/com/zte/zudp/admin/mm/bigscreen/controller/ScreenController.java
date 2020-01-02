@@ -80,6 +80,23 @@ public class ScreenController {
     }
 
     /**
+     * 效能分析
+     */
+    @ResponseBody
+    @RequestMapping(value = "/analysis",method = RequestMethod.POST)
+    public List<Screen> analysis(){
+
+        List<Screen> analysisList =  screenService.analysis();
+
+        for (int i = 0; i <analysisList.size() ; i++) {
+
+            System.out.println(analysisList.get(i).toString());
+        }
+
+        return analysisList;
+    }
+
+    /**
      * 趋势分析  数据统计
      * @return
      */
