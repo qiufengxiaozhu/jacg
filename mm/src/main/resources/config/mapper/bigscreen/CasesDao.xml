@@ -9,15 +9,45 @@
         SELECT
 	      RECID id,
 	      (CASE WHEN LENGTH( EVENTDESC ) > 20 THEN CONCAT( SUBSTRING( EVENTDESC, 1, 20 ), '...' ) ELSE EVENTDESC END ) AS description,
+          EVENTDESC as description02,
 	      MAINTYPENAME name,
+          SUBTYPENAME littleName,
 	      DATE_FORMAT( NEWINSTTIME, '%Y-%m-%d %T' ) time
         FROM
 	      tocgcase
+	    where NEWINSTTIME like '%2018%'
+	    <if test="startTime != null and startTime != '' ">
+           and  NEWINSTTIME >= #{startTime}
+        </if>
+	    <if test="endTime != null and endTime != '' ">
+           and #{endTime} >= NEWINSTTIME
+        </if>
+	    <if test="description != null and description != '' ">
+            and `EVENTDESC` like concat('%', #{description}, '%')
+        </if>
         ORDER BY  NEWINSTTIME DESC
+        limit ${pages},10
 
     </select>
 
+<select id="findCaseById" resultType="java.util.Map">
+      SELECT
+        MAINTYPENAME name,
+        SUBTYPENAME littleName,
+        ADDRESS address,
+         DATE_FORMAT( DEADLINE, '%Y-%m-%d %T') deadTime,
+         DATE_FORMAT( ENDTIME, '%Y-%m-%d %T') endTime,
+         DISPOSEDEPARTNAME department,
+          DATE_FORMAT( DEALTIME, '%Y-%m-%d %T') dealTime,
+         DISPOSEOPINION adv,
+         EVENTDESC as description
+     FROM   tocgcase
+     where RECID = #{id}
 
+
+
+
+</select>
 
 
 

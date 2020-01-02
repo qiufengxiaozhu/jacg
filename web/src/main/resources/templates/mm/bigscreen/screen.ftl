@@ -7,6 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/mm/bigscreen/css/index.css">
     <link rel="stylesheet" href="/mm/bigscreen/css/main.css">
+
+    <link rel="stylesheet" href="/zhizui/css/index.css">
+    <link rel="stylesheet" href="/zhizui/css/main.css">
+    <script src="/zhizui/js/rem.js"></script>
+    <script src="/zhizui/js/jquery-3.3.1.min.js"></script>
+    <script src="/zhizui/js/echarts.min.js"></script>
+    <script src="/zhizui/js/main.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=F0i6SrLmHquLVNLCqpExxPrj8mWVdFwx"></script>
+    <script src="/zhizui/js/jquery.SuperSlide.2.1.3.js"></script>
+
+
     <script src="/mm/bigscreen/js/rem.js"></script>
     <script src="/mm/bigscreen/js/jquery-3.3.1.min.js"></script>
     <script src="/mm/bigscreen/js/echarts.min.js"></script>
@@ -32,7 +43,14 @@
     <script src="/js/sys/avatar.js"></script>
     <script src="/js/third/webuploader.js"></script>
     <script src="/js/rest.js"></script>
+    <#--引入时间控件-->
+    <script src="/js/pluginInit/laydateInit.js"></script>
+
     <script src="/screen/rightscreen.js"></script>
+    <#--引入之最 js文件-->
+    <script src="/screen/mostOfThe.js"></script>
+    <#--引入案件 js文件-->
+    <script src="/screen/findAllCases.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -165,10 +183,6 @@
                 <div class="fr-bg" >
                     <div id="myChart" style="width: 280px;height:180px;"></div>
                 </div>
-
-            <#--</div>-->
-
-
         </div>
         <div class="center">
             <div class="center-cen flex">
@@ -228,20 +242,14 @@
         </div>
         <div class="bottom">
             <div class="bo-text flex">
-                <div class="flex-1"><div class="bo-bg" onclick="showManhole()">井盖</div></div>
-                <div class="flex-1"><div class="bo-bg">案件</div class="bo-bg"></div>
-                <div class="flex-1"><div class="bo-bg">之最</div class="bo-bg"></div>
-                <div class="flex-1"><div class="bo-bg">监控</div class="bo-bg"></div>
+                <div class="flex-1"><div class="bo-bg">井盖</div></div>
+                <div class="flex-1"><div class="bo-bg t-most" onclick="findAllCases()">案件</div class="bo-bg"></div>
+                <div class="flex-1"><div class="bo-bg t-most" onclick="mostOfThe()">之最</div class="bo-bg"></div>
+                <div class="flex-1"><div class="bo-bg" >监控</div class="bo-bg"></div>
                 <div class="flex-1"><div class="bo-bg">待开发</div class="bo-bg"></div>
                 <div class="flex-1"><div class="bo-bg">待开发</div></div>
             </div>
         </div>
-
-
-
-
-
-
     </div>
 
     <div class="modal-ly" style="display: none;"  id="company_amoun">
@@ -259,147 +267,254 @@
         </div>
     </div>
 
+</div>
+<#--之最  模态框开始-->
+<div class="map-log" style="display: none;"  id="modal01">
+    <div class="close"><img src="/zhizui/img/close.png"></div>
+    <div class="modal-cnt flex flex-fx-c" style="">
+        <div class="g-info-tit flex flex-c-c">
+        </div>
+        <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
+        <div class="flex get-tab">
+            <div class="show-tab tab1">最新</div>
+            <div class="show-tab tab2 ch-color">最长</div>
+            <div class="show-tab tab3 ch-color">最频繁</div>
+        </div>
+        <table class="gridtable show-hide0" id ="table002">
+            <tr>
+                <th>大类</th>
+                <th>问题描述</th>
+                <th>时间</th>
+            </tr>
+        </table>
+        <table class="gridtable show-hide1" id ="table003">
+            <tr>
+                <th>大类</th>
+                <th>问题描述</th>
+                <th>时间</th>
+                <th>持续时间</th>
+            </tr>
+        </table>
+        <table class="gridtable show-hide2" id ="table004">
+            <tr>
+                <th>大类</th>
+                <th>问题描述</th>
+                <th>时间</th>
+                <th>案件数量</th>
+            </tr>
+        </table>
 
-    <script>
-        var manholeis=0;//不显示
-        // 获取到图表的div,并初始化
-        var myChart = echarts.init(document.getElementById('myChart'));
+    </div>
+    </div>
+</div>
+<#--之最  模态框结束-->
+<#--案件信息  模态框开始-->
+<div class="map-log" style="display: none;"  id="modal02">
+    <div class="close"><img src="/zhizui/img/close.png"></div>
+    <div class="modal-cnt flex flex-fx-c" style="">
+        <div class="g-info-tit flex flex-c-c">
+        </div>
+        <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
+            <#--案件 时间段-->
+              <table class="gridtable show-hide0" id ="tableList">
+                  <input class="ge-put" type="text" name="startTime" id="startTime" startDate placeholder="案件立案开始时间" class="form-control">
+                  <input class="ge-put" type="text" name="endTime" id="endTime" endDate placeholder="案件立案结束时间" class="form-control">
+              <#--问题描述-->
+                  <input class="ge-put" type="text" name="description" id="description" placeholder="问题描述" class="form-control">
+                   <input class="btn" type="button" id="searchId" onclick="findAllCases()" value="搜索"/>
+                  <tr>
+                    <th>问题描述</th>
+                    <th>大类</th>
+                    <th>时间</th>
+                </tr>
+            </table>
+            <div class="page-list ">
+                <a onclick="firstPage()" class="page-li page-prev">首页</a>
+                <a  onclick="uppers()" class="page-li on">上一页</a>
+                <a onclick="lowers()" class="page-li">下一页</a>
+                <a onclick="endpage()" class="page-li page-next">尾页</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mess">
+    <div class="close me-close"><img src="/zhizui/img/close.png"></div>
+    <div class="me-relative">
+        <div class="be-center">案件详情</div>
+        <div class="me-first">
+            <div class="me-high">
+                <#--<div class="me-fl-left" id ="name">案件名称:&nbsp;XXXXX</div>-->
+                    <div class="me-fl-right flex" >案件类型:<div id="nameId01"></div>&nbsp;&nbsp;<div id="nameId02"></div></div>
+            </div>
+            <div class="me-high" id="addressId">地址:&nbsp;东湖区莎莎街道659号</div>
+            <div class="me-high">
+                <div class="me-fl-left" id="deadTimeId">案件截止时间: 2019.12.01</div>
+                <div class="me-fl-right" id="endTimeId">案件结束时间: 2019.12.01</div>
+            </div>
+            <div class="me-high">
+                <div class="me-fl-left" id="departmentId">处理部门:&nbsp;XXX</div>
+                <div class="me-fl-right" id="dealTimeId">部门处理时间:&nbsp;2019.12.01</div>
+            </div>
+            <div class="me-resolve me-line">
+                <div class="me-getres" id="advId">处理意见:</div>
+                <div>深刻的较高的是快乐跟你说的圣诞节很谨慎的感觉到石圪节多斯拉克发货的世界观恢复健康该数据库定时关机看电视关键是读后感可接受的时代峻峰好大风交互的</div>
+            </div>
+            <div class="me-resolve">
+                <div class="me-getres" id="descriptionId">问题描述:</div>
+                <div class="put-tex"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<#--案件信息  模态框结束-->
+<script>
 
-        option = {
-            // 标题
+    // 获取到图表的div,并初始化
+    var myChart = echarts.init(document.getElementById('myChart'));
+
+    option = {
+        // 标题
 //        title: {
 //            text: '趋势分析图'
 //        },
-            // tooltip: {
-            //     trigger: 'axis'
-            // },
-            tooltip: {},
-            // 曲线类型名称
-            color:['#2db7f5','#ff6600','#808bc6','FFA500'],
-            legend: {
-                textStyle:{
-                    color: '#ffffff'//字体颜色
-                },
-                data: ['庐陵新区', '青原区', '吉州区', '井开区']
+        // tooltip: {
+        //     trigger: 'axis'
+        // },
+        tooltip: {},
+        // 曲线类型名称
+        color:['#2db7f5','#ff6600','#808bc6','FFA500'],
+        legend: {
+            textStyle:{
+                color: '#ffffff'//字体颜色
             },
-            grid: {
-                left: '4%',
-                right: '4%',
-                bottom: '3%',
-                containLabel: true
-            },
-            // toolbox: {
-            //     feature: {
-            //         saveAsImage: {}
-            //     }
-            // },
-            // 横坐标
-            xAxis: {
-                type: 'category',
-                boundaryGap: false,
+            data: ['庐陵新区', '青原区', '吉州区', '井开区']
+        },
+        grid: {
+            left: '0%',
+            right: '7%',
+            bottom: '3%',
+            containLabel: true
+        },
+        // toolbox: {
+        //     feature: {
+        //         saveAsImage: {}
+        //     }
+        // },
+        // 横坐标
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
 //
-                data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
-                axisLine:{
-                    lineStyle:{
-                        color:'#FFA500',
-                    }
+            data: ['一季度', '二季度', '三季度', '四季度'],
+            axisLine:{
+                lineStyle:{
+                    color:'#FFA500',
                 }
+            }
+
+        },
+        // 纵坐标
+        yAxis: {
+            type: 'value',
+            axisLine:{
+                lineStyle:{
+                    color:'#FFA500',
+                }
+            }
+        },
+        series: [
+
+            {
+                name: '庐陵新区',
+                type: 'line',
+                data: []
 
             },
-            // 纵坐标
-            yAxis: {
-                type: 'value',
-                axisLine:{
-                    lineStyle:{
-                        color:'#FFA500',
-                    }
-                }
+            {
+                name: '青原区',
+                type: 'line',
+                data: []
             },
-            series: [
-
-                {
-                    name: '庐陵新区',
-                    type: 'line',
-                    data: []
-
-                },
-                {
-                    name: '青原区',
-                    type: 'line',
-                    data: []
-                },
-                {
-                    name: '吉州区',
-                    type: 'line',
-                    data: []
-                },
-                {
-                    name: '井开区',
-                    type: 'line',
-                    data: ['1500','300','500','800','3000','1500','300','500','800','3000','2000','2400']
-                }
-            ]
-        };
-        // 导入设置
-        myChart.setOption(option);
-        // 发送ajax请求到后台，获取到数据
+            {
+                name: '吉州区',
+                type: 'line',
+                data: []
+            },
+            {
+                name: '井开区',
+                type: 'line',
+                data: []
+            }
+        ]
+    };
+    // 导入设置
+    myChart.setOption(option);
+    // 发送ajax请求到后台，获取到数据
 
 
-        $(document).ready(function () {
-            getData();
-            rightglfx();
-            rightEvenType();
-            getrightCaseNum();
-        });
+    $(document).ready(function () {
+        getData();
+        rightglfx();
+        rightEvenType();
+        getrightCaseNum();
+    });
 
-        // 存放数据的数组
-        var strList01 =[];
-        var strList02 =[];
-        var strList03 =[];
-        var strList04 =[];
-        // var strList001 =[];
-        // var strList002 =[];
-        // var strList003 =[];
-        // var strList004=[];
-        function getData() {
-            zudp.ajax("/mm/screen/trendAnaly").post().then(function (value) {
-                strList01 =  value.strList01;
-                strList02 =  value.strList02;
-                strList03 =  value.strList03;
-                strList04 =  value.strList04;
-                myChart.setOption({
-                    series:[{name:"庐陵新区",data:strList01},
-                        {name:"青原区",data:strList02},
-                        {name:"吉州区",data:strList03},
-//                    {name:"井开区",data:strList04},
-                    ]
-                });
-                // strList001 =  value.strList001;
-                // strList002 =  value.strList002;
-                // strList003 =  value.strList003;
-                // strList004 =  value.strList004;
-
-
-
-
-
-
-
+    // 存放数据的数组
+    var strList01 =[];
+    var strList02 =[];
+    var strList03 =[];
+    var strList04 =[];
+    // var strList001 =[];
+    // var strList002 =[];
+    // var strList003 =[];
+    // var strList004=[];
+    function getData() {
+        zudp.ajax("/mm/screen/trendAnaly").post().then(function (value) {
+            strList01 =  value.strList01;
+            strList02 =  value.strList02;
+            strList03 =  value.strList03;
+            strList04 =  value.strList04;
+            myChart.setOption({
+                series:[{name:"庐陵新区",data:strList01},
+                    {name:"青原区",data:strList02},
+                    {name:"吉州区",data:strList03},
+                    {name:"井开区",data:strList04},
+                ]
             });
-        };
-
-
-        function notshow() {
-
-            $('#company_amoun').hide();
-        }
-
-
-
-    </script>
+            // strList001 =  value.strList001;
+            // strList002 =  value.strList002;
+            // strList003 =  value.strList003;
+            // strList004 =  value.strList004;
 
 
 
 
+
+
+
+        });
+    };
+
+
+    function notshow() {
+
+        $('#company_amoun').hide();
+    }
+
+//        debugger;
+    var p0=225.97494469845103;
+    var  p1=27.107669511617193;
+    var gpsPoint = new BMap.Point(p0, p1);
+    BMap.Convertor.translate(gpsPoint,0,function(point){
+//            debugger;
+
+
+        console.log("GPS经纬度："+p0+","+p1);
+        console.log("百度经纬度："+point.lng+","+point.lat);
+
+
+    });
+
+</script>
 </body>
 </html>

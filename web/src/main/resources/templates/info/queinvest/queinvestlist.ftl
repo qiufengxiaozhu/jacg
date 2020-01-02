@@ -358,10 +358,10 @@
 
         {
                         render: function (data, type, row) {
-                            if (data.status == '0') {// 临时状态
-                                return "临时状态";
+                            if (data.status == '0') {// 未发布
+                                return "未发布状态";
                             } else if (data.status == '1') { //未发布
-                                return "未发布";
+                                return "未发布状态";
                             } else if (data.status == '2') { //已发布
                                 return "已发布";
                             }
@@ -476,6 +476,7 @@
             window.e.cancelBubble = true;
         }
 //        var id = $("#row-add-test").val();
+        $("#dataList").empty();
         // 模态框的弹出
         $(".modal-form-content").modal("show");
 

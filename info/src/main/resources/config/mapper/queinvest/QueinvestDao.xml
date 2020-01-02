@@ -95,6 +95,7 @@
         <foreach collection="array" item="i" separator="," open="(" close=")">
             #{i}
         </foreach>
+        and status != '2'
 
     </delete>
 
