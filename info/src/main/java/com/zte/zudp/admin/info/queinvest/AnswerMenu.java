@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@EndpointModule(id = "answerManager", name = "答案管理",parent =  QueMenu.class, order = 1029 ,icon = "cogs")
+@EndpointModule(id = "answerManager", name = "答案管理",parent =  QueMenu.class, order = 3 ,icon = "cogs")
 @RequestMapping("/answer")
 public class AnswerMenu {
     @Menu
     @GetMapping("/alist")
-    @EndpointPage(id = "answerlist", name = "答案列表", order = 1,icon = "cog")
+    @EndpointPage(id = "answerlist", name = "答案列表", order = 3,icon = "cog")
     public String processModeler(Model model) {
         return "/info/queinvest/answerlist";
     }
