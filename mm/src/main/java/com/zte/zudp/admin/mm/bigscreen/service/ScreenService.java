@@ -199,5 +199,16 @@ public class ScreenService extends FileBusinessService<Screen> {
     }
 
 
+    /**
+     *  井盖
+     *
+     * @return
+     */
+    public List<Map> glindexManholeis(){
+
+        return screenDao.glindexManholeis();
+    }
+
+
 
 }

@@ -4,7 +4,7 @@ $(function(){
     $('.map-log').hide();
     map = new BMap.Map("container");
     // 创建地图实例  
-    var point = new BMap.Point(115.001315,27.150205);
+    var point = new BMap.Point(114.995314,27.110965);
     // 创建点坐标  
     // map.disableDragging();
     map.centerAndZoom(point, 15);
@@ -357,21 +357,14 @@ ComplexCustomOverlay.prototype.draw = function(){
 function showManhole() {
     if (manholeis==0){
         debugger;
-        zudp.ajax("/mm/screen/glCaseList" ).get().then(function (value) {
+        zudp.ajax("/mm/screen/glindexManholeis" ).get().then(function (value) {
             debugger;
-            // 随机向地图添加25个标注
-            var bounds = map.getBounds();
-            var sw = 114.993448;
-            var ne = 27.119917;
+            for(var i=0;i<value.length;i++){
+                var s= value[i].XY;
+                var strs= new Array(); //定义一数组
+                strs=s.split(","); //字符分割
 
-            for(var i=0;i<100;i++){
-                var point = new BMap.Point(sw +  (Math.random() * 0.1), ne - (Math.random() * 0.1));
-                var label = new BMap.Label(".",{offset:new BMap.Size(20,-10)});
-                addMarker(point,label);
-            }
-
-            for(var i=0;i<100;i++){
-                var point = new BMap.Point(sw -  (Math.random() * 0.1), ne + (Math.random() * 0.1));
+                var point = new BMap.Point(strs[0],strs[1]);
                 var label = new BMap.Label(".",{offset:new BMap.Size(20,-10)});
                 addMarker(point,label);
             }
@@ -386,6 +379,7 @@ function showManhole() {
     } else {
 
         deletePoint();
+        addCase();
         manholeis=0;//隐藏
     }
 
@@ -401,7 +395,7 @@ function showManhole() {
 // 编写自定义函数,创建标注
 function addMarker(point,label){
     var marker = new BMap.Marker(point);
-    var myIcon = new BMap.Icon("../bigscreen/img/arrjg.png", new BMap.Size(10,14));
+    var myIcon = new BMap.Icon("../bigscreen/img/arrjg.png", new BMap.Size(20,35));
     var marker2 = new BMap.Marker(point,{icon:myIcon});  // 创建标注
     map.addOverlay(marker2);
     marker.setLabel(label);
@@ -424,7 +418,7 @@ function deletePoint(){
     }*/
 }
 
-function addCase(){
+function addCase(casetype){
 
     zudp.ajax("/mm/screen/glCaseList" ).get().then(function (value) {
       debugger;
@@ -437,7 +431,7 @@ function addCase(){
         for(var i=0;i<value.length;i++){
             var point = new BMap.Point(value[i].x ,value[i].y );
             var label = new BMap.Label("我是id="+i,{offset:new BMap.Size(20,-10)});
-            addMarkercase(point,value[i].STREETNAME,label);
+            addMarkercase(point,value[i].STREETNAME,label,casetype);
         }
 
 
@@ -452,10 +446,28 @@ function addCase(){
 }
 
 // 编写自定义函数,创建标注
-function addMarkercase(point,name){
+function addMarkercase(point,name,casetype){
     debugger;
     var marker = new BMap.Marker(point);
-    var myIcon = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
+    var myIcon="";
+    if (casetype!=null){
+        if (casetype==1) { //青原区
+            myIcon  = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
+        }else  if (casetype==2) { //蓟州区
+            myIcon  = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
+        }else  if (casetype==3) {//路岭新区
+            myIcon  = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
+        }else  if (casetype==4) {//经开区
+            myIcon  = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
+        }else {
+            myIcon  = new BMap.Icon("../bigscreen/img/arr29.png", new BMap.Size(40,50));
+        }
+    } else{
+        myIcon  = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
+    }
+
+
+
     var marker2 = new BMap.Marker(point,{icon:myIcon});  // 创建标注
     map.addOverlay(marker2);
     addClickHandler(name,marker2);
@@ -481,4 +493,9 @@ function openInfo(content,e){
     var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
     var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象
     map.openInfoWindow(infoWindow,point); //开启信息窗口
+}
+
+function casenow(casetype) {
+
+    addCase(casetype);
 }

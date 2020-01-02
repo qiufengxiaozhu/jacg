@@ -177,10 +177,10 @@
         </div>
         <div class="center">
             <div class="center-cen flex">
-                <div class="area-2">青原区</div>
-                <div class="area-2">蓟州区</div>
-                <div class="area-2">路岭新区</div>
-                <div class="area-2">经开区</div>
+                <div class="area-2" onclick="casenow('青原区')">青原区</div>
+                <div class="area-2" onclick="casenow('吉州区')">蓟州区</div>
+                <div class="area-2" onclick="casenow('庐陵新区')">路岭新区</div>
+                <div class="area-2" onclick="casenow('井开区')">经开区</div>
             </div>
             <div class="map-log">
                 <div class="map-text">
@@ -328,7 +328,7 @@
         </div>
     </div>
 </div>
-<div class="mess">
+<div class="mess" style="display: none;">
     <div class="close me-close"><img src="/zhizui/img/close.png"></div>
     <div class="me-relative">
         <div class="be-center">案件详情</div>
@@ -359,7 +359,7 @@
 </div>
 <#--案件信息  模态框结束-->
 <script>
-
+    var manholeis=0;
     // 获取到图表的div,并初始化
     var myChart = echarts.init(document.getElementById('myChart'));
 

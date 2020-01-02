@@ -167,4 +167,8 @@
     </select>
 
 
+    <select id="glindexManholeis" resultType="java.util.Map">
+      select * from tomanholeis
+   </select>
+
 </mapper>

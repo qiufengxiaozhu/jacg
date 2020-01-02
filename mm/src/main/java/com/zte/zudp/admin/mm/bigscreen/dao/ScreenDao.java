@@ -127,4 +127,11 @@ public interface ScreenDao extends AbstractDao<Screen> {
      */
     public Map glindexCaseid(String id);
 
+    /**
+     *  井盖
+     *
+     * @return
+     */
+    public List<Map> glindexManholeis();
+
 }
