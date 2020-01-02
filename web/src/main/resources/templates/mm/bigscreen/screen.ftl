@@ -37,6 +37,10 @@
     <#--引入时间控件-->
     <script src="/js/pluginInit/laydateInit.js"></script>
 
+    <#--滚动用的js-->
+    <script src="/mm/bigscreen/js/jquery.SuperSlide.2.1.3.js"></script>
+    <script src="/mm/bigscreen/js/analysis.js"></script>
+
     <script src="/screen/rightscreen.js"></script>
     <#--引入之最 js文件-->
     <script src="/screen/mostOfThe.js"></script>
@@ -91,67 +95,44 @@
                     </div>
 
 
-                    <#list ScreenList as screen>
-                        <div class="case-thing">
-                        <div class="case-usal">
-                        <div class="flex case-hot">
+                    <div class="scroll">
+                        <#list ScreenList as screen>
+                            <div class="case-thing">
+                                <div class="case-usal">
+                                    <#--第一行-->
+                                    <div class="flex case-hot case-top wheel">
+                                        <#if (screen.EVENTDESC?? && screen.EVENTDESC?length>17)>
+                                            <div class="flex-1 case-hot2 flex">
+                                                <div class="min-radius"></div>
+                                                <div>问题描述：${screen.EVENTDESC?substring(0,17)}...</div>
+                                            </div>
+                                        <#else>
+                                            <div class="flex-1 case-hot2 flex">
+                                                <div class="min-radius"></div>
+                                                <div>问题描述：${screen.EVENTDESC!""}</div>
+                                            </div>
+                                        </#if>
+                                    </div>
+                                    <#--第二行-->
+                                    <div class="flex case-hot wheel">
+                                        <div class="flex-1 flex">
+                                            <div class="min-radius"></div>
+                                            <div>案发时间：${screen.NEWINSTTIME!""}</div>
+                                        </div>
+                                    </div>
+                                    <#--第三行-->
+                                    <div class="flex case-hot wheel">
+                                        <div class="flex-1 flex">
+                                            <div class="min-radius"></div>
+                                            <div>大类：${screen.MAINTYPENAME!""}</div>
+                                        </div>
+                                    </div>
 
-                        <#if (screen.EVENTDESC?? && screen.EVENTDESC?length>17)>
-                            <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>问题描述：${screen.EVENTDESC?substring(0,17)}...</div></div>
-                        <#else>
-                            <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>问题描述：${screen.EVENTDESC!""}</div></div>
-                        </#if>
+                                </div>
+                            </div>
+                        </#list>
+                    </div>
 
-                        </div>
-                        <div class="flex case-hot">
-                        <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间：${screen.NEWINSTTIME!""}</div></div>
-                        </div>
-                        <div class="flex case-hot">
-                        <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>大类：${screen.MAINTYPENAME!""}</div></div>
-                        </div>
-                        </div>
-                        </div>
-                    </#list>
-
-                    <#--                        <div class="case-thing">-->
-                    <#--                            <div class="case-usal">-->
-                    <#--                                <div class="flex case-hot">-->
-                    <#--                                    <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>案发事件:火灾报警</div></div>-->
-                    <#--                                    <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间:2019年12月16日</div></div>-->
-                    <#--                                </div>-->
-                    <#--                                <div class="flex case-hot">-->
-                    <#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>报警人:刘娜娜</div></div>-->
-                    <#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>联系电话:13768789955</div></div>-->
-                    <#--                                </div>-->
-                    <#--                                <div class="case-hot ch-col flex"><div class="min-radius"></div><div>案发地址:吉安市冀州区华彩大厦2栋32楼405市</div></div>-->
-                    <#--                            </div>-->
-                    <#--                        </div>-->
-                    <#--                        <div class="case-thing">-->
-                    <#--                            <div class="case-usal">-->
-                    <#--                                <div class="flex case-hot">-->
-                    <#--                                    <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>案发事件:火灾报警</div></div>-->
-                    <#--                                    <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间:2019年12月16日</div></div>-->
-                    <#--                                </div>-->
-                    <#--                                <div class="flex case-hot">-->
-                    <#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>报警人:刘娜娜</div></div>-->
-                    <#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>联系电话:13768789955</div></div>-->
-                    <#--                                </div>-->
-                    <#--                                <div class="case-hot ch-col flex"><div class="min-radius"></div><div>案发地址:吉安市冀州区华彩大厦2栋32楼405市</div></div>-->
-                    <#--                            </div>-->
-                    <#--                        </div>-->
-                    <#--                        <div class="case-thing">-->
-                    <#--                            <div class="case-usal">-->
-                    <#--                                <div class="flex case-hot">-->
-                    <#--                                    <div class="flex-1 case-hot2 flex"><div class="min-radius"></div><div>案发事件:火灾报警</div></div>-->
-                    <#--                                    <div class="flex-1 case-hot3 flex"><div class="min-radius"></div><div>案发时间:2019年12月16日</div></div>-->
-                    <#--                                </div>-->
-                    <#--                                <div class="flex case-hot">-->
-                    <#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>报警人:刘娜娜</div></div>-->
-                    <#--                                    <div class="flex-1 flex"><div class="min-radius"></div><div>联系电话:13768789955</div></div>-->
-                    <#--                                </div>-->
-                    <#--                                <div class="case-hot ch-col flex"><div class="min-radius"></div><div>案发地址:吉安市冀州区华彩大厦2栋32楼405市</div></div>-->
-                    <#--                            </div>-->
-                    <#--                        </div>-->
                 </div>
             </div>
             <#--<div class="frequency">-->
@@ -237,9 +218,39 @@
                 <div class="flex-1"><div class="bo-bg t-most" onclick="findAllCases()">案件</div></div>
                 <div class="flex-1"><div class="bo-bg t-most" onclick="mostOfThe()">之最</div></div>
                 <div class="flex-1"><div class="bo-bg" >监控</div class="bo-bg"></div>
-                <div class="flex-1"><div class="bo-bg">待开发</div class="bo-bg"></div>
-                <div class="flex-1"><div class="bo-bg">待开发</div></div>
+                <div class="flex-1"><div class="bo-bg analysis">效能</div class="bo-bg"></div>
+                <#--<div class="flex-1"><div class="bo-bg">待开发</div></div>-->
             </div>
+        </div>
+
+    </div>
+
+    <#--效能分析模态框-->
+    <div class="map-log" style="display: none;"  id="analysis">
+        <div class="close"><img src="/mm/bigscreen/img/close.png"></div>
+        <div class="be-relative" style="">
+            <div class="map-cont">2018年1月-2018年12月案件统计</div>
+            <#-- <div class="put-div">
+                 <input type="text" id="startTime" placeholder="起始时间" maxlength="60px" class="put-tex" />
+                 <input type="text" id="endTime" placeholder="结束时间" maxlength="60px" class="put-tex" />
+                 <input type="button" value="查询" class="btn">
+             </div>-->
+
+
+            <div class="center-tab">
+                <div class="flex get-tab">
+                    <table class="grid show-hide1" id ="table-analysis">
+                        <tr>
+                            <th>部门</th>
+                            <th>案件数量</th>
+                            <th>结案率</th>
+                            <th>按期结案率</th>
+                            <th>超期结案率</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </div>
 

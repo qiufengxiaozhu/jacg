@@ -54,6 +54,13 @@ public class ScreenService extends FileBusinessService<Screen> {
         return screenDao.countCase();
     }
 
+    /**
+     * 效能分析
+     */
+    public List<Screen> analysis(){
+
+        return screenDao.analysis();
+    }
 
     /**
      * 查询最大类型的案件数

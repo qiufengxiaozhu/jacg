@@ -137,13 +137,35 @@ public class Screen extends FileEntity {
      */
     private String NUMBER;
 
-    public String getNUMBER() {
-        return NUMBER;
-    }
+    /**
+     * 部门名称
+     */
+    private String department;
 
-    public void setNUMBER(String NUMBER) {
-        this.NUMBER = NUMBER;
-    }
+    /**
+     * 案件总数
+     */
+    private String total;
+
+    /**
+     * 成功结案的件数
+     */
+    private String endNumber;
+
+    /**
+     * 结案率
+     */
+    private Double caseRate;
+
+    /**
+     * 按期结案率
+     */
+    private Double onTimeRate;
+
+    /**
+     * 超期结案率
+     */
+    private Double overTimeRate;
 
     public String getRECID() {
         return RECID;
@@ -329,6 +351,62 @@ public class Screen extends FileEntity {
         this.SYNFLAG = SYNFLAG;
     }
 
+    public String getNUMBER() {
+        return NUMBER;
+    }
+
+    public void setNUMBER(String NUMBER) {
+        this.NUMBER = NUMBER;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getTotal() {
+        return total;
+    }
+
+    public void setTotal(String total) {
+        this.total = total;
+    }
+
+    public String getEndNumber() {
+        return endNumber;
+    }
+
+    public void setEndNumber(String endNumber) {
+        this.endNumber = endNumber;
+    }
+
+    public Double getCaseRate() {
+        return caseRate;
+    }
+
+    public void setCaseRate(Double caseRate) {
+        this.caseRate = caseRate;
+    }
+
+    public Double getOnTimeRate() {
+        return onTimeRate;
+    }
+
+    public void setOnTimeRate(Double onTimeRate) {
+        this.onTimeRate = onTimeRate;
+    }
+
+    public Double getOverTimeRate() {
+        return overTimeRate;
+    }
+
+    public void setOverTimeRate(Double overTimeRate) {
+        this.overTimeRate = overTimeRate;
+    }
+
     @Override
     public String toString() {
         return "Screen{" +
@@ -356,6 +434,12 @@ public class Screen extends FileEntity {
                 ", FUNCPARTNAME='" + FUNCPARTNAME + '\'' +
                 ", SYNFLAG='" + SYNFLAG + '\'' +
                 ", NUMBER='" + NUMBER + '\'' +
+                ", department='" + department + '\'' +
+                ", total='" + total + '\'' +
+                ", endNumber='" + endNumber + '\'' +
+                ", caseRate=" + caseRate +
+                ", onTimeRate=" + onTimeRate +
+                ", overTimeRate=" + overTimeRate +
                 '}';
     }
 }

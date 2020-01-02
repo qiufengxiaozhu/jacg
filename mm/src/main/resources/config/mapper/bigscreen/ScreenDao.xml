@@ -81,7 +81,17 @@
 
     </select>
 
+    <!--效能分析-->
+    <select id="analysis" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
 
+        SELECT
+            *
+        FROM
+            qgq_case
+        ORDER BY
+            onTimeRate desc
+            LIMIT 0,10
+    </select>
 
     <select id="findType" resultType="java.util.Map">
         SELECT

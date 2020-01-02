@@ -44,6 +44,10 @@ public interface ScreenDao extends AbstractDao<Screen> {
      */
     List<Screen> countCase();
 
+    /**
+     * 效能分析
+     */
+    List<Screen> analysis();
 
     /**
      * 查询最大类型的案件数
