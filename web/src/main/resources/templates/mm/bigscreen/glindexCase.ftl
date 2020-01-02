@@ -25,7 +25,12 @@
         }
         .dropdown-menu.open .inner.open{height:200px}
         .dropdown-menu.open{width: 100%;}
-
+        .gray-bg, .ibox-content, .table-bordered>thead>tr>th {
+            background-color: transparent;
+            border: none;
+        }
+        .bs-table>tbody>tr>td, .bs-table>thead>tr>th{border: 1px solid #00fcff;color:#fff}
+        .bs-table{ border: 1px solid #00fcff;   border-collapse: collapse;box-shadow: 0px 0px 12px #00fcff;}
     </style>
 
     <style>
@@ -41,6 +46,9 @@
             border-radius: 50%;}
         .yt-main{max-height: 100%;}
         .yt-tab-cnt{width: 100%;padding-top: 3rem}
+        .modal-content{background: transparent}
+        .inmodal .modal-body { background: transparent;  }
+        .modal-title, .my-control-label{color: #fff}
     </style>
 
 </head>
@@ -51,7 +59,7 @@
         <div class="col-sm-12">
             <div class="ibox">
                 <div class="ibox-content form-inline z-relative">
-                    <table id="post-list-table" class="table my-table table-bordered dataTables-example">
+                    <table id="post-list-table" class="table my-table dataTables-example bs-table">
                         <thead>
                         <tr>
                             <th>区名</th>
@@ -87,7 +95,7 @@
 
 <#--以下是模态框-->
 <div class="modal inmodal fade modal-form" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog mbox modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span

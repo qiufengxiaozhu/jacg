@@ -186,7 +186,7 @@
         </div>
         <div class="center">
             <div class="center-cen flex">
-                <div class="area-1">青原区</div>
+                <div class="area-2">青原区</div>
                 <div class="area-2">蓟州区</div>
                 <div class="area-2">路岭新区</div>
                 <div class="area-2">经开区</div>
@@ -242,9 +242,9 @@
         </div>
         <div class="bottom">
             <div class="bo-text flex">
-                <div class="flex-1"><div class="bo-bg">井盖</div></div>
-                <div class="flex-1"><div class="bo-bg t-most" onclick="findAllCases()">案件</div class="bo-bg"></div>
-                <div class="flex-1"><div class="bo-bg t-most" onclick="mostOfThe()">之最</div class="bo-bg"></div>
+                <div class="flex-1"><div class="bo-bg" onclick="showManhole()">井盖</div></div>
+                <div class="flex-1"><div class="bo-bg t-most" onclick="findAllCases()">案件</div></div>
+                <div class="flex-1"><div class="bo-bg t-most" onclick="mostOfThe()">之最</div></div>
                 <div class="flex-1"><div class="bo-bg" >监控</div class="bo-bg"></div>
                 <div class="flex-1"><div class="bo-bg">待开发</div class="bo-bg"></div>
                 <div class="flex-1"><div class="bo-bg">待开发</div></div>
@@ -254,13 +254,13 @@
 
     <div class="modal-ly" style="display: none;"  id="company_amoun">
         <div class="mask"></div>
-        <div class="modal-cnt flex flex-fx-c" style="">
+        <div class="modal-cnt mbox flex flex-fx-c" style="">
             <div class="g-info-tit flex flex-c-c">
                 <i class="i-icon icon-tb"></i>
                 <span class="flex-1" id="qyssfx">关联分析类型案件统计</span>
                 <div class="m-closes"  onclick="notshow()" >×</div>
             </div>
-            <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
+            <div class="modal-main flex-1" style="overflow: auto;">
                 <iframe id="company_amoun_iframe" width="100%" height="99%" frameborder="0"></iframe>
 
             </div>
@@ -501,20 +501,14 @@
         $('#company_amoun').hide();
     }
 
-//        debugger;
-    var p0=225.97494469845103;
-    var  p1=27.107669511617193;
-    var gpsPoint = new BMap.Point(p0, p1);
-    BMap.Convertor.translate(gpsPoint,0,function(point){
-//            debugger;
+        $(".area-2").on("click",function(){
+            var index = $(".area-2").index($(this));
+            $(".area-2").removeClass("on").eq(index).addClass("on")
+        })
+    </script>
 
 
-        console.log("GPS经纬度："+p0+","+p1);
-        console.log("百度经纬度："+point.lng+","+point.lat);
 
 
-    });
-
-</script>
 </body>
 </html>
