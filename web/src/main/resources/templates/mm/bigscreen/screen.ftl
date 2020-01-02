@@ -246,13 +246,13 @@
 
     <div class="modal-ly" style="display: none;"  id="company_amoun">
         <div class="mask"></div>
-        <div class="modal-cnt flex flex-fx-c" style="">
+        <div class="modal-cnt mbox flex flex-fx-c" style="">
             <div class="g-info-tit flex flex-c-c">
                 <i class="i-icon icon-tb"></i>
                 <span class="flex-1" id="qyssfx">关联分析类型案件统计</span>
                 <div class="m-closes"  onclick="notshow()" >×</div>
             </div>
-            <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
+            <div class="modal-main flex-1" style="overflow: auto;">
                 <iframe id="company_amoun_iframe" width="100%" height="99%" frameborder="0"></iframe>
 
             </div>

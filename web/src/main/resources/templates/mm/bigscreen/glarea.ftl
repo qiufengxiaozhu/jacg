@@ -40,6 +40,12 @@
             border-radius: 50%;}
         .yt-main{max-height: 100%;}
         .yt-tab-cnt{width: 100%;padding-top: 3rem}
+        .gray-bg, .ibox-content, .table-bordered>thead>tr>th {
+            background-color: transparent;
+            border: none;
+        }
+        .bs-table>tbody>tr>td, .bs-table>thead>tr>th{border: 1px solid #00fcff;color:#fff}
+        .bs-table{ border: 1px solid #00fcff;   border-collapse: collapse;box-shadow: 0px 0px 12px #00fcff;}
     </style>
 
 
@@ -51,7 +57,7 @@
         <div class="col-sm-12">
             <div class="ibox">
                 <div class="ibox-content form-inline z-relative">
-                    <table id="post-list-table" class="table my-table table-bordered dataTables-example">
+                    <table id="post-list-table" class="table my-table  dataTables-example bs-table">
                         <thead>
                         <tr>
                             <th>区名</th>
