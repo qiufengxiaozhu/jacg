@@ -26,7 +26,6 @@
         .dropdown-menu.open .inner.open{height:200px}
         .dropdown-menu.open{width: 100%;}
 
-
     </style>
 
     <style>
@@ -60,7 +59,7 @@
                             <th>大类名称</th>
                             <th>问题描述</th>
                             <th>案件截止时间</th>
-
+                            <th>操作</th>
                         </tr>
                         </thead>
                         <tbody id="tables">
@@ -83,6 +82,165 @@
             </div>
         </div>
     </div>
+</div>
+
+
+<#--以下是模态框-->
+<div class="modal inmodal fade modal-form" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                            class="sr-only">Close</span></button>
+                <h4 class="modal-title">查看</h4>
+            </div>
+            <small class="font-bold">
+                <div class="modal-body fix-height" >
+                    <#--表单-->
+                    <form class="form-horizontal" id="post_form">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">区名：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="DISTRICTNAME" maxlength="64" id="DISTRICTNAME" placeholder="区名" class="form-control"  readonly="true" >
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">街道：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="STREETNAME" maxlength="64" id="STREETNAME" placeholder="街道" class="form-control"  readonly="true">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">问题来源：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="EVENTSRCNAME" maxlength="64" id="EVENTSRCNAME" placeholder="问题来源" class="form-control"  readonly="true">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">大类名称：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="MAINTYPENAME" maxlength="64" id="MAINTYPENAME" placeholder="大类名称" class="form-control"  readonly="true">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">小类名称：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="SUBTYPENAME" maxlength="64" id="SUBTYPENAME" placeholder="小类名称" class="form-control"  readonly="true">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label">问题描述：</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" rows="5" cols="" name="EVENTDESC" id="EVENTDESC"  readonly="true"></textarea>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">地址：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="ADDRESS" maxlength="64" id="ADDRESS" placeholder="地址" class="form-control"  readonly="true">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">案件截止时间：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="DEADLINE" maxlength="64" id="DEADLINE" placeholder="案件截止时间" class="form-control"  readonly="true">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">案件结束时间：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="ENDTIME" maxlength="64" id="ENDTIME" placeholder="案件结束时间" class="form-control"  readonly="true">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label">处理意见：</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" rows="5" cols="" name="DISPOSEOPINION" id="DISPOSEOPINION"  readonly="true"></textarea>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">处理部门：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="DISPOSEDEPARTNAME" maxlength="64" id="DISPOSEDEPARTNAME" placeholder="处理部门" class="form-control"  readonly="true">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">部门处理时间：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="DEALTIME" maxlength="64" id="DEALTIME" placeholder="部门处理时间" class="form-control" readonly="true">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                    </form>
+                </div>
+
+            </small>
+        </div>
+        <small class="font-bold">
+        </small>
+    </div>
+    <small class="font-bold">
+    </small>
 </div>
 
 
@@ -164,7 +322,13 @@
                 div=div +'   <td>'+data.STREETNAME+'</td>';
                 div=div +'   <td>'+data.MAINTYPENAME+'</td>';
                 div=div +'   <td>'+title+'</td>';
-                div=div +'   <td>'+data.DEADLINE+'</td>';
+                if (data.DEADLINE!=null) {
+                    div=div +'   <td>'+(data.DEADLINE)+'</td>';
+                }else {
+                    div=div +'   <td>'+""+'</td>';
+                }
+                var pubstr= "<button class=\"btn btn-info btn-sm\" onclick=\"pubBtn('"+data.RECID+"')\">查看</button>";
+                div=div +'   <td>'+pubstr+'</td>';
 
                 $('#post-list-table').append(div)
 
@@ -178,7 +342,32 @@
 
     }
 
+    function pubBtn(id) {
 
+        zudp.ajax("/mm/screen/glindexCaseid?id="+id ).get().then(function (value) {
+            debugger;
+            $("#DISTRICTNAME").val(value.DISTRICTNAME);
+            $("#STREETNAME").val(value.STREETNAME);
+            $("#EVENTSRCNAME").val(value.EVENTSRCNAME);
+            $("#MAINTYPENAME").val(value.MAINTYPENAME);
+            $("#SUBTYPENAME").val(value.SUBTYPENAME);
+            $("#EVENTDESC").val(value.EVENTDESC);
+            $("#ADDRESS").val(value.ADDRESS);
+            $("#DEADLINE").val(value.DEADLINE);
+            $("#ENDTIME").val(value.ENDTIME);
+            $("#DISPOSEOPINION").val(value.DISPOSEOPINION);
+            $("#DISPOSEDEPARTNAME").val(value.DISPOSEDEPARTNAME);
+            $("#DEALTIME").val(value.DEALTIME);
+            debugger;
+            $("#myModal5").modal("show");//显示div
+
+
+        },function (reason) {
+            zudp.plugin.dialog("error").alert("查询失败！", "提示");
+        });
+
+
+    }
 
 </script>
 </body>

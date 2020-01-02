@@ -138,15 +138,33 @@
     </select>
 
     <select id="glindexCaseList" resultType="java.util.Map">
-   select DISTRICTNAME,STREETNAME,MAINTYPENAME,EVENTDESC,DEADLINE  from  tocgcase where STREETNAME=#{name}
+   select RECID,DISTRICTNAME,STREETNAME,MAINTYPENAME,EVENTDESC,DATE_FORMAT(DEADLINE,'%Y-%m-%d' ) as DEADLINE  from  tocgcase where STREETNAME=#{name}
     limit ${pages},10;
    </select>
 
 
     <select id="glindexCaseListCount" resultType="java.lang.Integer">
-   select COUNT(*)  from  tocgcase where STREETNAME=#{name}
+    select COUNT(*)  from  tocgcase where STREETNAME=#{name}
    </select>
 
+    <select id="glindexCaseid" resultType="java.util.Map">
+        SELECT
+            IFNULL(DISTRICTNAME,'') as DISTRICTNAME,
+            IFNULL(STREETNAME,'') as STREETNAME,
+            IFNULL(EVENTSRCNAME,'') as EVENTSRCNAME,
+            IFNULL(MAINTYPENAME,'') as MAINTYPENAME,
+            IFNULL(SUBTYPENAME,'') as SUBTYPENAME,
+            IFNULL(EVENTDESC,'') as EVENTDESC,
+            IFNULL(ADDRESS,'') as ADDRESS,
+            IFNULL(DATE_FORMAT(DEADLINE,'%Y-%m-%d %H:%i:%S'),'') as DEADLINE,
+            IFNULL(DATE_FORMAT(ENDTIME,'%Y-%m-%d %H:%i:%S'),'') as ENDTIME,
+            IFNULL(DISPOSEOPINION,'') as DISPOSEOPINION,
+            IFNULL(DISPOSEDEPARTNAME,'') as DISPOSEDEPARTNAME,
+            IFNULL(DATE_FORMAT(DEALTIME,'%Y-%m-%d %H:%i:%S'),'') as DATEFORMAT
+        FROM
+            tocgcase
+        where RECID=#{id}
+    </select>
 
 
 </mapper>

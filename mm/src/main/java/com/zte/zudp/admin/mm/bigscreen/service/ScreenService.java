@@ -188,6 +188,16 @@ public class ScreenService extends FileBusinessService<Screen> {
         return screenDao.glindexCaseListCount(name);
     }
 
+    /**
+     *  案件点击事件查看
+     *
+     * @return
+     */
+    public Map glindexCaseid(String id){
+
+        return screenDao.glindexCaseid(id);
+    }
+
 
 
 }
