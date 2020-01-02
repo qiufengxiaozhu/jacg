@@ -431,7 +431,7 @@ function addCase(casetype){
         for(var i=0;i<value.length;i++){
             var point = new BMap.Point(value[i].x ,value[i].y );
             var label = new BMap.Label("我是id="+i,{offset:new BMap.Size(20,-10)});
-            addMarkercase(point,value[i].STREETNAME,label,casetype);
+            addMarkercase(point,value[i].STREETNAME,casetype,value[i].DISTRICTNAME);
         }
 
 
@@ -446,21 +446,15 @@ function addCase(casetype){
 }
 
 // 编写自定义函数,创建标注
-function addMarkercase(point,name,casetype){
+function addMarkercase(point,name,casetype,nametype){
     debugger;
     var marker = new BMap.Marker(point);
     var myIcon="";
     if (casetype!=null){
-        if (casetype==1) { //青原区
-            myIcon  = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
-        }else  if (casetype==2) { //蓟州区
-            myIcon  = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
-        }else  if (casetype==3) {//路岭新区
-            myIcon  = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
-        }else  if (casetype==4) {//经开区
+        if (nametype==casetype) {
             myIcon  = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
         }else {
-            myIcon  = new BMap.Icon("../bigscreen/img/arr29.png", new BMap.Size(40,50));
+            myIcon  = new BMap.Icon("../bigscreen/img/arrhide.png", new BMap.Size(40,50));
         }
     } else{
         myIcon  = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
@@ -496,6 +490,6 @@ function openInfo(content,e){
 }
 
 function casenow(casetype) {
-
+    map.clearOverlays();
     addCase(casetype);
 }
