@@ -46,6 +46,9 @@
             border-radius: 50%;}
         .yt-main{max-height: 100%;}
         .yt-tab-cnt{width: 100%;padding-top: 3rem}
+        .modal-content{background: transparent}
+        .inmodal .modal-body { background: transparent;  }
+        .modal-title, .my-control-label{color: #fff}
     </style>
 
 </head>
@@ -92,7 +95,7 @@
 
 <#--以下是模态框-->
 <div class="modal inmodal fade modal-form" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog mbox modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span

@@ -201,15 +201,22 @@
     text-align: center;
     letter-spacing: 0.1rem;
     line-height: 0.45rem;
+    box-sizing: border-box;
+    padding-left: 0.1rem;
 }
-.area-1{
-    background: url(../img/arr9.png);
-    background-size: 100% 100%;
-}
+
 .area-2{
     background: url(../img/arr8.png);
     background-size: 100% 100%;
     margin-left: 0.2rem; 
+}
+.area-2.on{
+    background: url(../img/arr9.png);
+    background-size: 100% 100%;
+}
+.area-2:hover{
+    background: url(../img/arr9.png);
+    background-size: 100% 100%;
 }
 .right{
     float: right;

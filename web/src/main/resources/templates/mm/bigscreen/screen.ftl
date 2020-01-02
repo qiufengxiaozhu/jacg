@@ -172,7 +172,7 @@
         </div>
         <div class="center">
             <div class="center-cen flex">
-                <div class="area-1">青原区</div>
+                <div class="area-2">青原区</div>
                 <div class="area-2">蓟州区</div>
                 <div class="area-2">路岭新区</div>
                 <div class="area-2">经开区</div>
@@ -395,7 +395,10 @@
         }
 
 
-
+        $(".area-2").on("click",function(){
+            var index = $(".area-2").index($(this));
+            $(".area-2").removeClass("on").eq(index).addClass("on")
+        })
     </script>
 
 
