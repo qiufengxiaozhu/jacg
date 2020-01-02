@@ -1,12 +1,15 @@
+var map;
+
 $(function(){
     $('.map-log').hide();
-    var map = new BMap.Map("container");
+    map = new BMap.Map("container");
     // 创建地图实例  
-    var point = new BMap.Point(114.991136,27.115032);
+    var point = new BMap.Point(115.001315,27.150205);
     // 创建点坐标  
     // map.disableDragging();
     map.centerAndZoom(point, 15);
     map.enableScrollWheelZoom();
+    map.disableDoubleClickZoom(true);
     var  mapStyle ={
         features: ["road", "building","water","land"],//隐藏地图上的poi
         style : "dark"  //设置地图风格为高端黑
@@ -47,7 +50,6 @@ $(function(){
     var myCompOverlay1 = new ComplexCustomOverlay(new BMap.Point(116.304, 39.888));
     map.addOverlay(myCompOverlay1);
 
-
     zudp.ajax("/mm/screen/glCaseList" ).get().then(function (value) {
 
         // 随机向地图添加25个标注
@@ -58,16 +60,18 @@ $(function(){
         var latSpan = Math.abs(ne.lat - sw.lat);
         for(var i=0;i<value.length;i++){
             var point = new BMap.Point(value[i].x ,value[i].y );
-            addMarker(point,value[i].STREETNAME);
+            var label = new BMap.Label("我是id="+i,{offset:new BMap.Size(20,-10)});
+            addMarker(point,value[i].STREETNAME,label);
         }
 
-        // 编写自定义函数,创建标注
+// 编写自定义函数,创建标注
         function addMarker(point,name){
             var marker = new BMap.Marker(point);
             var myIcon = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
             var marker2 = new BMap.Marker(point,{icon:myIcon});  // 创建标注
             map.addOverlay(marker2);
             addClickHandler(name,marker2);
+            marker.setLabel(label);
         }
 
 
@@ -75,13 +79,13 @@ $(function(){
         function addClickHandler(content,marker){
             marker.addEventListener("click",function(e){
 
-                var frameSrc = "/mm/screen/glindexCase?name="+content;
-                document.getElementById("qyssfx").innerText=content;
-                $("#company_amoun_iframe").attr("src", frameSrc);
-                $('#company_amoun').show();
-                $('#company_amoun').css("display","block");
+                    var frameSrc = "/mm/screen/glindexCase?name="+content;
+                    document.getElementById("qyssfx").innerText=content;
+                    $("#company_amoun_iframe").attr("src", frameSrc);
+                    $('#company_amoun').show();
+                    $('#company_amoun').css("display","block");
 
-               }
+                }
             );
         }
         function openInfo(content,e){
@@ -93,10 +97,10 @@ $(function(){
 
 
 
+
     }, function (reason) {
         zudp.plugin.dialog("error").alert("查询拼图失败！", "提示");
     });
-
 
 
     /**
@@ -312,3 +316,169 @@ $(function(){
 
 
 })
+
+
+
+
+function ComplexCustomOverlay(point){
+    this._point = point;
+}
+ComplexCustomOverlay.prototype = new BMap.Overlay();
+ComplexCustomOverlay.prototype.initialize = function(map){
+
+    this._map = map;
+    var div = this._div = document.createElement("div");
+    div.classList.add("map-radio");
+
+    var divA = this._divA = document.createElement("div");
+    divA.classList.add("map-img");
+
+    map.getPanes().labelPane.appendChild(div);
+    map.getPanes().labelPane.appendChild(divA);
+    var arr = [div,divA];
+    return div;
+
+}
+ComplexCustomOverlay.prototype.draw = function(){
+    var map = this._map;
+    var pixel = map.pointToOverlayPixel(this._point);
+    console.log(pixel.x);
+    console.log(pixel.y);
+
+    this._div.parentNode.style.left = pixel.x +"px";
+    this._div.parentNode.style.top  = pixel.y + "px";
+
+    this._divA.parentNode.style.left = pixel.x +"px";
+    this._divA.parentNode.style.top  = pixel.y + "px";
+    console.log(this._div)
+}
+
+
+function showManhole() {
+    if (manholeis==0){
+        debugger;
+        zudp.ajax("/mm/screen/glCaseList" ).get().then(function (value) {
+            debugger;
+            // 随机向地图添加25个标注
+            var bounds = map.getBounds();
+            var sw = 114.993448;
+            var ne = 27.119917;
+
+            for(var i=0;i<100;i++){
+                var point = new BMap.Point(sw +  (Math.random() * 0.1), ne - (Math.random() * 0.1));
+                var label = new BMap.Label(".",{offset:new BMap.Size(20,-10)});
+                addMarker(point,label);
+            }
+
+            for(var i=0;i<100;i++){
+                var point = new BMap.Point(sw -  (Math.random() * 0.1), ne + (Math.random() * 0.1));
+                var label = new BMap.Label(".",{offset:new BMap.Size(20,-10)});
+                addMarker(point,label);
+            }
+
+
+            manholeis=1;//显示
+
+        }, function (reason) {
+            zudp.plugin.dialog("error").alert("查询拼图失败！", "提示");
+        });
+
+    } else {
+
+        deletePoint();
+        manholeis=0;//隐藏
+    }
+
+
+
+
+
+
+
+}
+
+
+// 编写自定义函数,创建标注
+function addMarker(point,label){
+    var marker = new BMap.Marker(point);
+    var myIcon = new BMap.Icon("../bigscreen/img/arrjg.png", new BMap.Size(10,14));
+    var marker2 = new BMap.Marker(point,{icon:myIcon});  // 创建标注
+    map.addOverlay(marker2);
+    marker.setLabel(label);
+}
+
+function deletePoint(){
+
+    map.clearOverlays();
+    addCase();
+
+/*    var allOverlay = map.getOverlays();
+    for (var i = 0; i < allOverlay.length -1; i++){
+         if(allOverlay[i].getLabel()!=null){
+             if(allOverlay[i].getLabel().content == "."){
+                 map.removeOverlay(allOverlay[i]);
+                 return false;
+             }
+         }
+
+    }*/
+}
+
+function addCase(){
+
+    zudp.ajax("/mm/screen/glCaseList" ).get().then(function (value) {
+      debugger;
+        // 随机向地图添加25个标注
+        var bounds = map.getBounds();
+        var sw = bounds.getSouthWest();
+        var ne = bounds.getNorthEast();
+        var lngSpan = Math.abs(sw.lng - ne.lng);
+        var latSpan = Math.abs(ne.lat - sw.lat);
+        for(var i=0;i<value.length;i++){
+            var point = new BMap.Point(value[i].x ,value[i].y );
+            var label = new BMap.Label("我是id="+i,{offset:new BMap.Size(20,-10)});
+            addMarkercase(point,value[i].STREETNAME,label);
+        }
+
+
+
+
+
+    }, function (reason) {
+        zudp.plugin.dialog("error").alert("查询拼图失败！", "提示");
+    });
+
+
+}
+
+// 编写自定义函数,创建标注
+function addMarkercase(point,name){
+    debugger;
+    var marker = new BMap.Marker(point);
+    var myIcon = new BMap.Icon("../bigscreen/img/arr27.png", new BMap.Size(40,50));
+    var marker2 = new BMap.Marker(point,{icon:myIcon});  // 创建标注
+    map.addOverlay(marker2);
+    addClickHandler(name,marker2);
+
+}
+
+
+
+function addClickHandler(content,marker){
+    marker.addEventListener("click",function(e){
+
+            var frameSrc = "/mm/screen/glindexCase?name="+content;
+            document.getElementById("qyssfx").innerText=content;
+            $("#company_amoun_iframe").attr("src", frameSrc);
+            $('#company_amoun').show();
+            $('#company_amoun').css("display","block");
+
+        }
+    );
+}
+function openInfo(content,e){
+    var p = e.target;
+    var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+    var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象
+    map.openInfoWindow(infoWindow,point); //开启信息窗口
+}

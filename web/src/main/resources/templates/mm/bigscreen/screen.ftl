@@ -228,7 +228,7 @@
         </div>
         <div class="bottom">
             <div class="bo-text flex">
-                <div class="flex-1"><div class="bo-bg">井盖</div></div>
+                <div class="flex-1"><div class="bo-bg" onclick="showManhole()">井盖</div></div>
                 <div class="flex-1"><div class="bo-bg">案件</div class="bo-bg"></div>
                 <div class="flex-1"><div class="bo-bg">之最</div class="bo-bg"></div>
                 <div class="flex-1"><div class="bo-bg">监控</div class="bo-bg"></div>
@@ -261,7 +261,7 @@
 
 
     <script>
-
+        var manholeis=0;//不显示
         // 获取到图表的div,并初始化
         var myChart = echarts.init(document.getElementById('myChart'));
 
