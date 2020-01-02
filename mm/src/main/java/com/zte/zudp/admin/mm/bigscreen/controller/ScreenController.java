@@ -420,4 +420,18 @@ public class ScreenController {
         return list;
     }
 
+    /**
+     * 跳转到关联下钻(案件点击查看)
+     * @return
+     */
+    @JSON
+    @RequestMapping("/glindexCaseid")
+    public  Map  glindexCaseid(String id){
+        Map map = screenService.glindexCaseid(id);
+        return map;
+    }
+
+
+
+
 }

@@ -114,6 +114,7 @@ function rightglfx() {
           myChart2.on('click', function (params) {
 
                 var frameSrc = "/mm/screen/glarea?name="+params.name;
+               document.getElementById("qyssfx").innerText="关联分析季度案件列表";
                 $("#company_amoun_iframe").attr("src", frameSrc);
                 $('#company_amoun').show();
                 $('#company_amoun').css("display","block");
@@ -330,6 +331,7 @@ function getrightCaseNum() {
             myChart4.on('click', function (params) {
 
                 var frameSrc = "/mm/screen/glCommunity?name="+params.name;
+                document.getElementById("qyssfx").innerText="社区案件列表";
                 $("#company_amoun_iframe").attr("src", frameSrc);
                 $('#company_amoun').show();
                 $('#company_amoun').css("display","block");

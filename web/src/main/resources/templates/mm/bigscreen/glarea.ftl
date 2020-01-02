@@ -98,7 +98,7 @@
 
 <script>
 
-
+    search();
     function search() {
         debugger;
         var s="${name}";

@@ -76,6 +76,7 @@ $(function(){
             marker.addEventListener("click",function(e){
 
                 var frameSrc = "/mm/screen/glindexCase?name="+content;
+                document.getElementById("qyssfx").innerText=content;
                 $("#company_amoun_iframe").attr("src", frameSrc);
                 $('#company_amoun').show();
                 $('#company_amoun').css("display","block");

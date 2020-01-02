@@ -119,4 +119,12 @@ public interface ScreenDao extends AbstractDao<Screen> {
      */
     public Integer glindexCaseListCount(String name);
 
+
+    /**
+     *  案件点击事件查看
+     *
+     * @return
+     */
+    public Map glindexCaseid(String id);
+
 }
