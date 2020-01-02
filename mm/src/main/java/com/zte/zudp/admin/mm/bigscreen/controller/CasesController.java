@@ -24,9 +24,30 @@ public class CasesController {
      * 查询所有的案件列表
      */
     @ResponseBody
-    @RequestMapping(value = "/findAllCases",method = RequestMethod.POST)
-    public List<Map> findAllCases(){
-        List<Map> caseList = casesService.findAllCases();
-        return caseList;
+    @RequestMapping(value = "/findAllCases",method = RequestMethod.GET)
+    public List<Map> findAllCases(String page,String startTime,String endTime,String description){
+        int pages=Integer.valueOf(page);
+        if(null != page && !"".equals(page)){
+            pages = (pages -1) * 10;
+        }
+        //新增 (page-1)*5
+        List<Map> list = casesService.findAllCases(pages,startTime,endTime,description);
+        return list;
+
     }
+
+    /**
+     * 三级页面  详情
+     * @param id
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/findCaseById",method = RequestMethod.GET)
+    public Map findCaseById(String id){
+        Map map = casesService.findCaseById(id);
+        return map;
+    }
+
+
+
 }

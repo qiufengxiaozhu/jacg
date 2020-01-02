@@ -16,7 +16,16 @@ public class CasesService {
     @Autowired
     private CasesDao casesDao;
 
-    public List<Map> findAllCases() {
-        return casesDao.findAllCases();
+    public List<Map> findAllCases(int pages,String startTime,String endTime,String description) {
+        return casesDao.findAllCases(pages,startTime,endTime,description);
+    }
+
+    /**
+     * 三级页面  详情
+     * @param id
+     * @return
+     */
+    public Map findCaseById(String id) {
+      return  casesDao.findCaseById(id);
     }
 }
