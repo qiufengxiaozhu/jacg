@@ -286,7 +286,8 @@
 <script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
 <script>
- 
+
+    var id;
     var dataTable;
     var urlstr="/api/wxquestion";
     var formIdStr="#post_form";
@@ -295,23 +296,24 @@
 
 
         // 新建  验证
+        // 新建  验证
         $("#post_form").validate({
             rules: {
                 // 必填项
-
                 contents: "required",
-                questionType:"required",
+                questionType:"required"
+            },
 
-                // 提示信息
-                messages: {
-                    contents: {
-                        required: "请输入题目内容",
-                        remote: "题目已存在"
-                    },
-                    questionType: "请选择题目类型"
-                }
+            // 提示信息
+            messages: {
+                contents: {
+                    required: "请输入题目内容",
+                    remote: "题目已存在"
+                },
+                questionType: "请选择题目类型"
             }
         });
+
 
 
         findList();
@@ -388,7 +390,7 @@
 
                                 delStr = zudp.template.delBtn;
 //                                detailStr = zudp.template.detailBtn;
-                            detailStr = '<button class="btn btn-info btn-sm row-detail" value="{id}" id="detail"><i class="fa fa-pencil"></i>详情</button>';
+                            detailStr = '<button class="btn btn-info btn-sm row-detail" value="{id}" id="detail" onclick="getAllType(this)"><i class="fa fa-pencil"></i>详情</button>';
 
                                     //添加选项
                                 addOptionStr='<button id="row-add-test" class="btn btn-info btn-sm " value="{id}"><i class="fa fa-pencil"></i>添加选项</button>';
@@ -420,7 +422,7 @@
             } else {
                 window.e.cancelBubble = true;
             }
-            var id = $("#row-add-test").val();
+             id =$(this).val() ;
             // 模态框的弹出
             $(".modal-form-content").modal("show");
             $(".testId").val(id);
@@ -442,7 +444,7 @@
            var choiceText02= $("#choiceText02").val();
            var choiceText03= $("#choiceText03").val();
            var choiceText04= $("#choiceText04").val();
-            var idJson = $("#row-add-test").val();
+            var idJson = id;
             var contents = $("#contents02").val();
             var questionType = $("#category").val();
 
@@ -467,9 +469,7 @@
                 // 清空输入框的
                 zudp.plugin.form("#form-addOption").reset();
 
-//                document.location.reload();
                 location.reload();
-
                 })
 
 
@@ -576,7 +576,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on( 'uploadSuccess', function( file,response) {
-            //debugger;
+            //;
             var name = file.name;
             var fileurl = response.data;
             $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");

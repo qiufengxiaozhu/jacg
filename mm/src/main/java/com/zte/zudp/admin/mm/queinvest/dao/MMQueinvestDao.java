@@ -23,7 +23,7 @@ import java.util.Map;
 public interface MMQueinvestDao extends AbstractDao<MMQueinvest> {
 
 
-    List<MMQueinvest> selectAll();
+    List<MMQueinvest> selectAll(@Param("userPhone")Object userPhone);
 
     List<MMQueinvest> startQueinvest(@Param("id") String id);
 
@@ -40,5 +40,5 @@ public interface MMQueinvestDao extends AbstractDao<MMQueinvest> {
      * @param questionId
      * @param optContext
      */
-    void insertToAnswer(@Param("id") String id,@Param("queinvestId") String queinvestId, @Param("questionId") String questionId, @Param("optContext") String optContext);
+    void insertToAnswer(@Param("id") String id,@Param("queinvestId") String queinvestId, @Param("questionId") String questionId, @Param("optContext") String optContext,@Param("userPhone")Object userPhone);
 }

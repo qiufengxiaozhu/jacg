@@ -272,7 +272,7 @@
                 }
             });
             uploader.on('uploadSuccess', function (file, response) {
-                //debugger;
+                //;
                 var name = file.name;
                 var fileurl = response.data;
                 // 截取后缀名

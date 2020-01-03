@@ -18,7 +18,7 @@ function rightglfx() {
     });
 
     zudp.ajax("/mm/screen/getIndex" ).get().then(function (value) {
-        debugger;
+        // debugger;
         var categorys = [];
         for(var i=0;i<value.listdit.length;i++){
             var dit  =value.listdit[i];

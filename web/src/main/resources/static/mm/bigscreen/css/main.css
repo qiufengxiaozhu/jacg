@@ -66,16 +66,16 @@
 }
 .ch-co-qi{
     border:0.08rem solid #44D3E4;
-    border-left:0.08rem solid transparent; 
+    border-left:0.08rem solid transparent;
 }
 .ch-co-ys{
     border:0.08rem solid #0B50FE;
-    border-left:0.08rem solid transparent; 
+    border-left:0.08rem solid transparent;
 }
 .circle-center{
     -webkit-transform: rotate(-45deg);
     text-align: center;
-   /* line-height: 0.4rem;*/
+    /* line-height: 0.4rem;*/
 }
 .case-one{
     text-align: center;
@@ -208,7 +208,7 @@
 .area-2{
     background: url(../img/arr8.png);
     background-size: 100% 100%;
-    margin-left: 0.2rem; 
+    margin-left: 0.2rem;
 }
 .area-2.on{
     background: url(../img/arr9.png);
@@ -376,7 +376,8 @@
     margin-top: 0.1rem;
 }
 .center-tab{
-    margin-left: 6%;
+    margin-left: 3%;
+    padding-left: 3%;
 }
 .get-tab{
     margin-top: 0.2rem;
@@ -402,6 +403,7 @@ table.gridtable {
     width: 7.5rem;
     text-align: center;
     margin-top: 0.1rem;
+    box-shadow: 0px 0px 10px rgba(206,194,229,0.4);
 }
 table.gridtable th {
     border-width: 1px;
@@ -409,7 +411,7 @@ table.gridtable th {
     border-style: solid;
     text-align: center;
     border-color: #CEC2E5;
-    background-color: #2C2336;
+    /* background-color: #2C2336; */
 }
 table.gridtable td {
     font-size:0.13rem;
@@ -417,7 +419,7 @@ table.gridtable td {
     height: 0.4rem;
     border-style: solid;
     border-color: #CEC2E5;
-    background-color: #2C2336;
+    /* background-color: #2C2336; */
 }
 table.gridtable .click-ch td{
     background-color: #8A643D !important;
@@ -438,7 +440,7 @@ table.gridtable .click-ch td{
 .mess{
     position: absolute;
     height: 5.5rem;
-    width: 6rem;
+    width: 6.5rem;
     top: 48%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -464,7 +466,7 @@ table.gridtable .click-ch td{
     height: 0.45rem;
     line-height: 0.45rem;
     width: 100%;
-    border-bottom: 0.5px solid #fff;
+    border-bottom: 1px solid #ccc;
 }
 .me-fl-left{
     float: left;
@@ -486,44 +488,63 @@ table.gridtable .click-ch td{
     font-size: 0.2rem;
 }
 .me-line{
-    border-bottom: 0.5px solid #fff;
+    border-bottom: 1px solid #ccc;
 }
 .ge-put{
-    height: 0.3rem;
+    height: 0.35rem;
     width: 2.05rem;
     border: 1px solid #A499B8;
-
+    color: #fff;
+    background: rgba(0,0,0,0);
+    box-sizing: border-box;
+    padding-left: 0.1rem;
 }
 .btn{
-    height: 0.3rem;
+    height: 0.33rem;
     width: 1.1rem;
     border: 1px solid #A499B8;
     vertical-align: middle;
-    background: #CEC2E5;
+    background: linear-gradient(180deg, #362879, #472b6d);
     color: #fff;
 }
 .zhizui{
     margin-top: 0rem!important;
 }
-.mbox{
-
-    background: -moz-linear-gradient(top,  rgba(61, 64, 71,1) 0%, rgba(39,39,39,0) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(39,39,39,1)), color-stop(100%,rgba(39,39,39,1)));
-    background: -webkit-linear-gradient(top,  rgba(61, 64, 71,1) 0%,rgba(39,39,39,1) 100%);
-    background: -o-linear-gradient(top,  rgba(61, 64, 71,1) 0%,rgba(39,39,39,1) 100%);
-    background: -ms-linear-gradient(top,  rgba(61, 64, 71,1) 0%,rgba(39,39,39,1) 100%);
-    background: linear-gradient(to bottom,  rgba(61, 64, 71,1) 0%,rgba(39,39,39,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#272727', endColorstr='#00272727',GradientType=0 );
+.faguang{
+    box-shadow:1px 0px 5px 0px rgba(206,194,229,0.4) inset;
 }
-.mbox{box-shadow:
-        0 -1px 0 #858585,
-
-
-        0 1px 10px rgba(0,0,0,.6),
-        0 6px 1px rgba(0,0,0,.1),
-        0 0 5px rgba(0,0,0,.2),
-        0 1px 3px rgba(0,0,0,.3),
-        0 3px 5px rgba(0,0,0,.2),
-        0 7px 10px rgba(0,0,0,.25),
-        0 15px 10px rgba(0,0,0,.2),
-        0 25px 15px rgba(0,0,0,.15);}
+.page-list a {
+    display: inline-block;
+    padding: 0 0.1rem;
+    border: 1px solid #CEC2E5;
+    box-shadow: 0px 0px 10px rgba(206,194,229,0.4);
+    margin: 0.1rem 0px;
+}
+.anasy{
+    position: absolute;
+    height: 7rem;
+    width: 10rem;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(23,17,27,0.8);
+    z-index: 999;
+    color: #fff;
+    border-radius: 0.2rem;
+    box-shadow:2px 2px 10px 2px rgba(255,255,255,0.3);
+}
+.modal-cnts{
+    position: absolute;
+    height: 8rem;
+    width: 12rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 9999;
+}
+.mbox{
+    background: rgba(23,17,27,0.8);
+    color: #fff;
+    border-radius: 0.2rem;
+    box-shadow:2px 2px 10px 2px rgba(255,255,255,0.3);
+}

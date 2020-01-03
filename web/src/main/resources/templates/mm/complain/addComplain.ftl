@@ -278,7 +278,7 @@
                 }
             });
             uploader.on('uploadSuccess', function (file, response) {
-                //debugger;
+                //;
                 var name = file.name;
                 var fileurl = response.data;
                 var jw = fileurl.substring(fileurl.lastIndexOf('.'));

@@ -251,6 +251,7 @@
 <script src="/js/pluginInit/laydateInit.js"></script>
 <script>
 
+    var queId;
     var dataTable;
     var urlstr="/api/queinvest";
     var formIdStr="#post_form";
@@ -361,9 +362,9 @@
         {
                         render: function (data, type, row) {
                             if (data.status == '0') {// 未发布
-                                return "未发布状态";
+                                return "未发布";
                             } else if (data.status == '1') { //未发布
-                                return "未发布状态";
+                                return "未发布";
                             } else if (data.status == '2') { //已发布
                                 return "已发布";
                             }
@@ -395,7 +396,6 @@
                                 addStr='<button id="addStr" class="btn btn-success btn-sm " data-toggle="modal_hjm" value="{id}"><i class="fa fa-pencil"></i>添加题目</button>';
                                 // 发布
                                 publicStr= '<button id= "publishStr" class="btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>发布</button>';
-//                                publicStr='<button id="publishStr" class="btn btn-info btn-sm " data-toggle="modal_public"  value="{id}"><i class="fa fa-pencil"></i>发布</button>';
                                 // 预览
 //                                overviewStr='<button id="overview" class="btn btn-info btn-sm " data-toggle="modal_overview" onclick="overview()" value="{id}"><i class="fa fa-pencil"></i>预览</button>';
                                     // 编辑   删除   添加题目  预览     发布
@@ -471,6 +471,9 @@
 
     //添加题目到问卷中       弹出可以选择题目的页面
     $(document).on("click", '#addStr', function (e) {
+
+        // 获取到问卷的id
+        queId =  $(this).val();
         //清除冒泡
         if (e && e.stopPropagation) {
             e.stopPropagation();
@@ -504,7 +507,7 @@
 
             // 在模态框中，点击添加按钮，完成题目的导入，其实就是修改外键的值为问卷的id匹配上
             $(document).on("click", '#test-save-btn', function (e) { // 模态框中的保存按钮
-                var idJson = $("#addStr").val(); // 获取到id值  问卷的id值
+                var idJson = queId; // 获取到id值  问卷的id值
                 alert("问卷id"+idJson);
                 // 遍历所有的复选框
                 var checks = document.getElementsByName("checkBtn");
@@ -550,8 +553,9 @@
             window.e.cancelBubble = true;
         }
         //获取到id
-        var id = $("#publishStr").val();
+        var id = $(this).val();
 //        alert(id);
+        console.log(id);
 
         zudp.ajax("/api/queinvest/updateStatus").post(id).then(function (value) {
             // 刷新页面
@@ -569,7 +573,9 @@
             window.e.cancelBubble = true;
         }
         //获取到id
-        var id = $("#unpublishStr").val();
+        var id = $(this).val();
+        console.log(id);
+
 
         zudp.ajax("/api/queinvest/updateStatus02").post(id).then(function (value) {
 //            document.location.reload();
@@ -637,7 +643,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on( 'uploadSuccess', function( file,response) {
-            //debugger;
+            //;
             var name = file.name;
             var fileurl = response.data;
             $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");

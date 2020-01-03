@@ -286,7 +286,8 @@
 <script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
 <script>
- 
+
+    var id;
     var dataTable;
     var urlstr="/api/question";
     var formIdStr="#post_form";
@@ -413,6 +414,7 @@
     }
 
 
+
 // 添加选项
         $(document).on("click", '#row-add-test', function (e) {
             //清除冒泡
@@ -421,7 +423,7 @@
             } else {
                 window.e.cancelBubble = true;
             }
-            var id = $("#row-add-test").val();
+             id = $(this).val();
             // 模态框的弹出
             $(".modal-form-content").modal("show");
             $(".testId").val(id);
@@ -443,7 +445,7 @@
            var choiceText02= $("#choiceText02").val();
            var choiceText03= $("#choiceText03").val();
            var choiceText04= $("#choiceText04").val();
-            var idJson = $("#row-add-test").val();
+            var idJson = id;
             var contents = $("#contents02").val();
             var questionType = $("#category").val();
 
@@ -469,8 +471,8 @@
                 // 清空输入框的
                 zudp.plugin.form("#form-addOption").reset();
 
-//                location.reload();
-                    zudp.ajax.reload();
+                location.reload();
+//                    zudp.ajax.reload();
                 })
 
 
@@ -577,7 +579,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on( 'uploadSuccess', function( file,response) {
-            //debugger;
+            //;
             var name = file.name;
             var fileurl = response.data;
             $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");

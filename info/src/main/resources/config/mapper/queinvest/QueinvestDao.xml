@@ -133,7 +133,7 @@
         left join  sys_dict t2  on t1.questionType = t2.value and t2.type = 'questionType'
 
         where
-        t1.queinvest_id is null
+        t1.queinvest_id is null and t1.del !=1
     </select>
 
 

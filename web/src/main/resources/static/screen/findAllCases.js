@@ -63,7 +63,7 @@ function findAllCases() {
 
 
             var tr;
-            tr= '<td>'+description+'</td>'+'<td>'+name+'</td>'+'<td>'+time+'</td>';
+            tr= '<td class="faguang">'+description+'</td>'+'<td class="faguang">'+name+'</td>'+'<td class="faguang">'+time+'</td>';
             $("#tableList").append('<tr id="'+id+'" class="list1">'+tr+'</tr>');
             // 三级页面 填入信息 问题描述
             $('.put-tex').html((value[i])["description02"]);
@@ -111,15 +111,15 @@ $(document).on("click","#tableList tr.list1",function () {
                 var adv = value02.adv;
                 var description = value02.description;
 
-                $('#nameId01').html("大类名称&nbsp;:"+name);
-                $('#nameId02').html("小类名称&nbsp;:"+littleName);
-                $('#addressId').html("地址&nbsp;:"+address);
-                $('#deadTimeId').html("案件截止时间&nbsp;:"+deadTime);
-                $('#endTimeId').html("案件截止时间&nbsp;:"+endTime);
-                $('#departmentId').html("处理部门&nbsp;:"+department);
-                $('#dealTimeId').html("部门处理时间&nbsp;:"+dealTime);
-                $('#advId').html("处理意见&nbsp;:"+adv);
-                $('#descriptionId').html("问题描述&nbsp;:"+description);
+                $('#nameId01').html("大类名称:&nbsp;"+name);
+                $('#nameId02').html("小类名称:&nbsp;"+littleName);
+                $('#addressId').html("地址:&nbsp;&nbsp;"+address);
+                $('#deadTimeId').html("案件截止时间:&nbsp;&nbsp;"+deadTime);
+                $('#endTimeId').html("案件截止时间:&nbsp;&nbsp;"+endTime);
+                $('#departmentId').html("处理部门:&nbsp;&nbsp;"+department);
+                $('#dealTimeId').html("部门处理时间:&nbsp;&nbsp;"+dealTime);
+                $('#advId').html("处理意见:&nbsp;"+adv);
+                $('#descriptionId').html("问题描述:&nbsp;"+description);
 
             });
 })

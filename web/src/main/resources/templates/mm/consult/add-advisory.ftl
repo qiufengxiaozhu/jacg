@@ -245,7 +245,7 @@
             });
             /*"<a href='//" + sys_url + "/" + fileurl + "' download='" + name + "'>" + name + "</a>" +*/
             uploader.on('uploadSuccess', function (file, response) {
-                //debugger;
+                //;
                 var name = file.name;
                 var fileurl = response.data;
                 var jw=fileurl.substring(fileurl.lastIndexOf('.'));

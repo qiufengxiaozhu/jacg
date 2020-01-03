@@ -384,6 +384,7 @@ table.gridtable {
     border-collapse: collapse;
     width: 7.5rem;
     text-align: center;
+    margin-top: 0.1rem;
 }
 table.gridtable th {
 	border-width: 1px;
@@ -472,12 +473,20 @@ table.gridtable .click-ch td{
 }
 .ge-put{
     height: 0.3rem;
-    width: 2.1rem;
+    width: 2.05rem;
     border: 1px solid #A499B8;
-
+    margin-top: 0.1rem;
 }
 .btn{
     height: 0.3rem;
     width: 1.1rem;
     border: 1px solid #A499B8;
+    margin-top: 0.1rem;
+    /*background: #713EB9!important;*/
+}
+#searchId{
+    background: #A499B8;
+}
+.get-top{
+    padding-top: 0.2rem;
 }

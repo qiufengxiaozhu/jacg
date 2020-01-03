@@ -5,7 +5,7 @@
 
 
 
-
+<!--问卷列表-->
 <select id="selectAll" resultType="com.zte.zudp.admin.mm.queinvest.entity.MMQueinvest">
 
     select
@@ -14,9 +14,12 @@
     DATE_FORMAT(t1.pubdate,'%Y-%m')  yearStr,
     DATE_FORMAT(t1.pubdate,'%d')  dayStr,
     t1.description description,
-    t1.status status
+    t1.status status,
+    t2.user_id userPhohe
     from jacg_queinvest t1
+    left join jacg_answers t2 on queinvestId = t1.id
     where status = '2'
+    and  t1.id not in (select queinvestId from jacg_answers where user_id =#{userPhone})
 
 </select>
 
@@ -80,14 +83,16 @@ FROM
       (id,
        queinvestId,
        answerOption,
-       questions_id
+       questions_id,
+       user_id
 
       )
       VALUE (
         #{id},
         #{queinvestId},
         #{optContext},
-        #{questionId}
+        #{questionId},
+        #{userPhone}
       )
 
 </insert>

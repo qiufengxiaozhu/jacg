@@ -251,6 +251,7 @@
 <script src="/js/pluginInit/laydateInit.js"></script>
 <script>
 
+    var queId;
     var dataTable;
     var urlstr="/api/wxqueinvest";
     var formIdStr="#post_form";
@@ -263,7 +264,8 @@
                 // 必填项
                 title: "required",
                 description: "required",
-                queinvestType: "required"
+                queinvestType: "required",
+                valid: "required"
             },
 
                 // 提示信息
@@ -273,7 +275,8 @@
                     remote: "问卷名称已存在"
                 },
                 description: "请输入问卷描述信息",
-                queinvestType: "请选择问卷类型"
+                queinvestType: "请选择问卷类型",
+                valid: "请选择问卷有效期"
             }
         });
 
@@ -372,8 +375,8 @@
 
         {
                         render: function (data, type, row) {
-                            if (data.status == '0') {// 临时状态
-                                return "临时状态";
+                            if (data.status == '0') {// 未发布状态
+                                return "未发布";
                             } else if (data.status == '1') { //未发布
                                 return "未发布";
                             } else if (data.status == '2') { //已发布
@@ -398,8 +401,10 @@
                                 // 编辑
                                 editStr= '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>编辑</button>';
                                 // 详情
-                                    detailStr= zudp.template.detailBtn;
-                                        // 删除
+//                                    detailStr= zudp.template.detailBtn;
+                                detailStr = '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
+
+                                // 删除
                                 delStr=zudp.template.delBtn;
                                 //添加题目
                                 addStr='<button id="addStr" class="btn btn-success btn-sm " data-toggle="modal_hjm" value="{id}"><i class="fa fa-pencil"></i>添加题目</button>';
@@ -417,8 +422,8 @@
                                 // 撤销发布
                                 unpublicStr= '<button id= "unpublishStr" class="btn btn-danger btn-sm "  value="{id}"><i class="fa fa-pencil"></i>撤销发布</button>';
                                 // 详情
-//                                detailStr= '<button id="detailStr" class="btn btn-info btn-sm  " value="{id}"><i class="fa fa-pencil"></i>详情</button>';
-                                detailStr= zudp.template.detailBtn;
+                                detailStr = '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
+
                                 // 预览        撤销发布
                                 btn+= overviewStr + "&nbsp;"+ unpublicStr + "&nbsp;"+ detailStr;
                                 return zudp.util.render(btn, row);
@@ -480,6 +485,8 @@
 
     //添加题目到问卷中       弹出可以选择题目的页面
     $(document).on("click", '#addStr', function (e) {
+        // 问卷id
+        queId=$(this).val();
         //清除冒泡
         if (e && e.stopPropagation) {
             e.stopPropagation();
@@ -487,6 +494,7 @@
             window.e.cancelBubble = true;
         }
 //        var id = $("#row-add-test").val();
+        $("#dataList").empty();
         // 模态框的弹出
         $(".modal-form-content").modal("show");
 
@@ -512,16 +520,11 @@
 
             // 在模态框中，点击添加按钮，完成题目的导入，其实就是修改外键的值为问卷的id匹配上
             $(document).on("click", '#test-save-btn', function (e) { // 模态框中的保存按钮
-//                var idJson02 = $(".testId002").val();
-//                alert("id02"+idJson02);
-//                var idces = document.getElementById("id").value;
-//                alert(idces);
-                var idJson = $("#addStr").val(); // 获取到id值  问卷的id值
+                var idJson = queId; // 获取到id值  问卷的id值
 //                alert(idJson);
                 // 遍历所有的复选框
                 var checks = document.getElementsByName("checkBtn");
                 // 所有被选中的复选框的对应的问题的id值
-//                var idsJson = [];
                 var idsJson = [];
                 for(var m = 0; m < value.length; m++){
                     if(checks[m].checked){ //如果被选中
@@ -569,7 +572,7 @@
             window.e.cancelBubble = true;
         }
         //获取到id
-        var id = $("#publishStr").val();
+        var id = $(this).val();
 //        alert(id);
 
         zudp.ajax("/api/wxqueinvest/updateStatus").post(id).then(function (value) {
@@ -587,7 +590,7 @@
             window.e.cancelBubble = true;
         }
         //获取到id
-        var id = $("#unpublishStr").val();
+        var id = $(this).val();
 
         zudp.ajax("/api/wxqueinvest/updateStatus02").post(id).then(function (value) {
             document.location.reload();
@@ -654,7 +657,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on( 'uploadSuccess', function( file,response) {
-            //debugger;
+            //;
             var name = file.name;
             var fileurl = response.data;
             $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");
