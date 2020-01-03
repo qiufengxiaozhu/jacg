@@ -159,9 +159,9 @@
         <div class="center">
             <div class="center-cen flex">
                 <div class="area-2" onclick="casenow('青原区')">青原区</div>
-                <div class="area-2" onclick="casenow('吉州区')">蓟州区</div>
-                <div class="area-2" onclick="casenow('庐陵新区')">路岭新区</div>
-                <div class="area-2" onclick="casenow('井开区')">经开区</div>
+                <div class="area-2" onclick="casenow('吉州区')">吉州区</div>
+                <div class="area-2" onclick="casenow('庐陵新区')">庐陵新区</div>
+                <div class="area-2" onclick="casenow('井开区')">井开区</div>
             </div>
             <div class="map-log">
                 <div class="map-text">
@@ -201,7 +201,7 @@
             </div>
             <div class="right-top">
                 <div class="flex crime">
-                    <div class="fr-text">区域案件预警</div>
+                    <div class="fr-text">区域案件预警(最新2周)</div>
                 </div>
                 <div class="ri-bg">
                     <div class="ri-query flex">

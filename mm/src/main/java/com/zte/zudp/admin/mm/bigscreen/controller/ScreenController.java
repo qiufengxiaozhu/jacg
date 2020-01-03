@@ -210,20 +210,21 @@ public class ScreenController {
         listtype.add("第四季度");
 
         //社区遍历
-        List<Map> list= screenService.findAreaList();
+        //大类最大 前五条
+        List<Map> list = screenService.findType();
         //保存值
         List<Map> listMap=new ArrayList<>();
         //根据类型遍历
-        for (int i = 0; i < listtype.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
 
             Map map=new HashMap();
-            //遍历社区
-            for (int j = 0; j < list.size(); j++) {
-                Map map2=list.get(j);
-                Integer counts= screenService.findAreaCountList(map2.get("name").toString(),listtype.get(i).toString());
-                map.put(map2.get("name"),counts);
+            Map map2=list.get(i);
+            //遍历季度
+            for (int j = 0; j < listtype.size(); j++) {
+                Integer counts= screenService.findareacountList( map2.get("name").toString(),listtype.get(j).toString());
+                map.put(listtype.get(j),counts);
             }
-            map.put("name",listtype.get(i));
+            map.put("name",list.get(i).get("name").toString());
             listMap.add(map);
 
         }
@@ -231,8 +232,8 @@ public class ScreenController {
 
         Map map=new HashMap();
         map.put("listMap",listMap);
-        map.put("listdit",listtype);
-        map.put("listArea",list);
+        map.put("listdit",list);
+        map.put("listArea",listtype);
         return  map;
 
 
@@ -294,26 +295,20 @@ public class ScreenController {
     public  List<Map>  glareaList(String name){
         //季度
         List listtype=new ArrayList<>();
-        listtype.add("第一季度");
-        listtype.add("第二季度");
-        listtype.add("第三季度");
-        listtype.add("第四季度");
-
-        //新增
-        List<Map> list=new ArrayList<>();
-        for (int j = 0; j < listtype.size(); j++) {
-            //遍历
-            List<Map> list2 = screenService.getrightCasetypeNum(name,listtype.get(j).toString());
-            for (int k = 0; k < list2.size(); k++) {
-                Map map2= list2.get(k);
-                map2.put("jd",listtype.get(j).toString());
-                list.add(map2);
-            }
-
+        if (name.equals("第一季度")){
+            listtype.add("第一季度");
+        }else if (name.equals("第二季度")){
+            listtype.add("第二季度");
+        }else if (name.equals("第三季度")){
+            listtype.add("第三季度");
+        }else if (name.equals("第四季度")){
+            listtype.add("第四季度");
         }
 
+        List<Map> list2 = screenService.getrightCasetypeNum(listtype.get(0).toString());
 
-        return list;
+
+        return list2;
     }
 
     /**

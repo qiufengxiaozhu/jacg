@@ -18,17 +18,17 @@ function rightglfx() {
     });
 
     zudp.ajax("/mm/screen/getIndex" ).get().then(function (value) {
-        
+        debugger;
         var categorys = [];
         for(var i=0;i<value.listdit.length;i++){
             var dit  =value.listdit[i];
-            categorys.push(dit.label);
+            categorys.push(dit.name);
         }
 
         var areaname = [];
         for(var i=0;i<value.listArea.length;i++){
             var area  =value.listArea[i];
-            areaname.push(area.name);
+            areaname.push(area);
         }
 
 
@@ -38,7 +38,7 @@ function rightglfx() {
             var data = [];
             for(var j=0;j<value.listArea.length;j++){
                 var area  =value.listArea[j];
-                var sname=area.name;
+                var sname=area;
                 data.push(map[sname]);
             }
 
