@@ -2,6 +2,9 @@ var map;
 
 $(function(){
     $('.map-log').hide();
+    $('.close').on('click',function(){
+        $(this).parent().hide();
+    })
     map = new BMap.Map("container");
     // 创建地图实例  
     var point = new BMap.Point(114.995314,27.110965);

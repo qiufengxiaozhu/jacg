@@ -1,11 +1,31 @@
 // 之最
 function mostOfThe() {
     // 显示模态框
-
-        $("#modal01").show();
+         $('.show-hide1').hide();
+         $('.show-hide2').hide();
+         $("#modal01").show();
          $(".list01").empty();
          $(".list02").empty();
          $(".list03").empty();
+         $('.tab1').on('click',function(){
+             $('.show-hide0').show();
+             $('.show-hide1').hide();
+             $('.show-hide2').hide();
+         })
+         $('.tab2').on('click',function(){
+             $('.show-hide0').hide();
+             $('.show-hide1').show();
+             $('.show-hide2').hide();
+         })
+        $('.tab3').on('click',function(){
+            $('.show-hide0').hide();
+            $('.show-hide1').hide();
+            $('.show-hide2').show();
+        })
+        $('.show-tab').on('click',function(){
+            $(this).siblings().addClass("ch-color");
+            $(this).removeClass('ch-color');
+        })
     // 发送ajax请求获取数据
     zudp.ajax("/mm/screen/findTheMost" ).post().then(function (value) {
             console.info(value);

@@ -239,7 +239,7 @@
 
             <div class="center-tab">
                 <div class="flex get-tab">
-                    <table class="grid show-hide1" id ="table-analysis">
+                    <table class="gridtable show-hide1" id ="table-analysis">
                         <tr>
                             <th>部门</th>
                             <th>案件数量</th>
@@ -273,23 +273,21 @@
 <#--之最  模态框开始-->
 <div class="map-log" style="display: none;"  id="modal01">
     <div class="close"><img src="/zhizui/img/close.png"></div>
-    <div class="modal-cnt flex flex-fx-c" style="">
-        <div class="g-info-tit flex flex-c-c">
-        </div>
-        <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
+    <div class="be-relative" style="">
+        <div class="center-tab" style="padding-top:0.2rem;overflow: auto;">
         <div class="flex get-tab">
             <div class="show-tab tab1">最新</div>
             <div class="show-tab tab2 ch-color">最长</div>
             <div class="show-tab tab3 ch-color">最频繁</div>
         </div>
-        <table class="gridtable show-hide0" id ="table002">
+        <table class="gridtable show-hide0 zhizui" id ="table002">
             <tr>
                 <th>大类</th>
                 <th>问题描述</th>
                 <th>时间</th>
             </tr>
         </table>
-        <table class="gridtable show-hide1" id ="table003">
+        <table class="gridtable show-hide1 zhizui" id ="table003">
             <tr>
                 <th>大类</th>
                 <th>问题描述</th>
@@ -297,7 +295,7 @@
                 <th>持续时间</th>
             </tr>
         </table>
-        <table class="gridtable show-hide2" id ="table004">
+        <table class="gridtable show-hide2 zhizui" id ="table004">
             <tr>
                 <th>大类</th>
                 <th>问题描述</th>
@@ -313,17 +311,16 @@
 <#--案件信息  模态框开始-->
 <div class="map-log" style="display: none;"  id="modal02">
     <div class="close"><img src="/zhizui/img/close.png"></div>
-    <div class="modal-cnt flex flex-fx-c" style="">
-        <div class="g-info-tit flex flex-c-c">
-        </div>
-        <div class="modal-main flex-1" style="padding-top:0.2rem;overflow: auto;">
+    <div class="be-relative" style="">
+        <div class="center-tab" style="padding-top:0.2rem;overflow: auto;">
+            <input class="ge-put" type="text" name="startTime" id="startTime" startDate placeholder="案件立案开始时间" class="form-control">
+            <input class="ge-put" type="text" name="endTime" id="endTime" endDate placeholder="案件立案结束时间" class="form-control">
+            <#--问题描述-->
+            <input class="ge-put" type="text" name="description" id="description" placeholder="问题描述" class="form-control">
+            <input class="btn" type="button" id="searchId" onclick="findAllCases()" value="搜索"/>
             <#--案件 时间段-->
-              <table class="gridtable show-hide0" id ="tableList">
-                  <input class="ge-put" type="text" name="startTime" id="startTime" startDate placeholder="案件立案开始时间" class="form-control">
-                  <input class="ge-put" type="text" name="endTime" id="endTime" endDate placeholder="案件立案结束时间" class="form-control">
-              <#--问题描述-->
-                  <input class="ge-put" type="text" name="description" id="description" placeholder="问题描述" class="form-control">
-                   <input class="btn" type="button" id="searchId" onclick="findAllCases()" value="搜索"/>
+            <br>
+              <table class="gridtable ge-put show-hide0" id ="tableList">
                   <tr>
                     <th>问题描述</th>
                     <th>大类</th>

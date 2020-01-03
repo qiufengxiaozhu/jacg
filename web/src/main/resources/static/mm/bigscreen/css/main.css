@@ -328,7 +328,6 @@
 }
 .map-cont{
     height: 0.25rem;
-    border-left: 1px solid #fff;
     padding-left: 0.1rem;
     margin-top: 0.05rem;
 }
@@ -373,7 +372,7 @@
 .map-cont{
     height: 0.25rem;
     width: 100%;
-    margin-left: 46%;
+    text-align: center;
     margin-top: 0.1rem;
 }
 .center-tab{
@@ -384,7 +383,7 @@
 }
 .show-tab{
     height: 0.4rem;
-    width: 1.35rem;
+    width: 1.9rem;
     background: #493C67;
     font-size: 0.15rem;
     text-align: center;
@@ -402,6 +401,7 @@ table.gridtable {
     border-collapse: collapse;
     width: 7.5rem;
     text-align: center;
+    margin-top: 0.1rem;
 }
 table.gridtable th {
     border-width: 1px;
@@ -490,7 +490,7 @@ table.gridtable .click-ch td{
 }
 .ge-put{
     height: 0.3rem;
-    width: 2.1rem;
+    width: 2.05rem;
     border: 1px solid #A499B8;
 
 }
@@ -498,6 +498,12 @@ table.gridtable .click-ch td{
     height: 0.3rem;
     width: 1.1rem;
     border: 1px solid #A499B8;
+    vertical-align: middle;
+    background: #CEC2E5;
+    color: #fff;
+}
+.zhizui{
+    margin-top: 0rem!important;
 }
 .mbox{
 
