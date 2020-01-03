@@ -69,15 +69,15 @@
 
                         <div class="form-group z-group">
                             <div class="col-sm-12 z-group-pane">
-                                <label class="control-label my-control-label">开始时间：</label>
-                                <input type="text" maxlength="255" name="startDate" id="startDate_select" onfocus="this.blur()" startDate  placeholder="咨询筛选时间(起)" class="form-control  ">
+                                <label class="control-label my-control-label">咨询开始时间：</label>
+                                <input type="text" maxlength="255" name="startDate" id="startDate_select" onfocus="this.blur()" startDate  placeholder="咨询开始时间" class="form-control  ">
                             </div>
                         </div>
 
                         <div class="form-group z-group">
                             <div class="col-sm-12 z-group-pane">
-                                <label class="control-label my-control-label">结束时间：</label>
-                                <input type="text" maxlength="255" name="endDate" id="endDate_select" endDate  placeholder="咨询筛选时间(止)" class="form-control  ">
+                                <label class="control-label my-control-label">咨询结束时间：</label>
+                                <input type="text" maxlength="255" name="endDate" id="endDate_select" endDate  placeholder="咨询开始时间" class="form-control  ">
                             </div>
                         </div>
                     <button class="btn btn-danger mgl my-mgl clear-input" >清空</button>&nbsp;&nbsp;
@@ -530,7 +530,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on( 'uploadSuccess', function( file,response) {
-            //;
+            //debugger;
             var name = file.name;
             var fileurl = response.data;
             $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");

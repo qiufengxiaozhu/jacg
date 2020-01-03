@@ -21,11 +21,11 @@
         </if>
 
         <if test="startTime != null and startTime != '' ">
-            and   t1.pushTime >=  #{startTime} and t1.status ='1'
+            and   t1.pushTime <![CDATA[ >= ]]>  #{startTime} and t1.status ='1'
         </if>
 
         <if test="endTime != null and endTime != '' ">
-            and   #{endTime} >= t1.pushTime and t1.status = '1'
+            and   #{endTime} <![CDATA[ >= ]]> t1.pushTime and t1.status = '1'
         </if>
 
 

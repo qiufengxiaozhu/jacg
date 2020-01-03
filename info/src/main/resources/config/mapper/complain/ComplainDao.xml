@@ -63,10 +63,10 @@
             and `contact` like concat('%', #{contact}, '%')
         </if>
         <if test="startTime!=null and startTime!=''">
-            and `complain_date` >= #{startTime}
+            and `complain_date` <![CDATA[ >= ]]> #{startTime}
         </if>
         <if test="endTime!=null and endTime!=''">
-            and #{endTime} >= `complain_date`
+            and #{endTime} <![CDATA[ >= ]]> `complain_date`
         </if>
         ORDER BY create_date desc
     </select>

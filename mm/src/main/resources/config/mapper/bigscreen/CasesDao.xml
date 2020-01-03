@@ -17,10 +17,10 @@
 	      tocgcase
 	    where NEWINSTTIME like '%2018%'
 	    <if test="startTime != null and startTime != '' ">
-           and  NEWINSTTIME >= #{startTime}
+           and  NEWINSTTIME <![CDATA[ >= ]]> #{startTime}
         </if>
 	    <if test="endTime != null and endTime != '' ">
-           and #{endTime} >= NEWINSTTIME
+           and NEWINSTTIME <![CDATA[ <= ]]>  #{endTime}
         </if>
 	    <if test="description != null and description != '' ">
             and `EVENTDESC` like concat('%', #{description}, '%')

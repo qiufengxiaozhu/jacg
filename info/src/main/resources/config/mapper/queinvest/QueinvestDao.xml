@@ -58,11 +58,11 @@
         </if>
 
         <if test="startTime!=null and startTime!=''">
-            and  pubdate >=  #{startTime} and t1.status = '2'
+            and  pubdate <![CDATA[ >= ]]>  #{startTime} and t1.status = '2'
         </if>
 
         <if test="endTime!=null and endTime!=''">
-            and #{endTime}  >= pubdate and  t1.status = '2'
+            and #{endTime}  <![CDATA[ >= ]]> pubdate and  t1.status = '2'
         </if>
 
     </select>

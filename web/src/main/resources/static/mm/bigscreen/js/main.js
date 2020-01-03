@@ -359,9 +359,9 @@ ComplexCustomOverlay.prototype.draw = function(){
 
 function showManhole() {
     if (manholeis==0){
-        debugger;
+        
         zudp.ajax("/mm/screen/glindexManholeis" ).get().then(function (value) {
-            debugger;
+            
             for(var i=0;i<value.length;i++){
                 var s= value[i].XY;
                 var strs= new Array(); //定义一数组
@@ -424,7 +424,7 @@ function deletePoint(){
 function addCase(casetype){
 
     zudp.ajax("/mm/screen/glCaseList" ).get().then(function (value) {
-      debugger;
+      
         // 随机向地图添加25个标注
         var bounds = map.getBounds();
         var sw = bounds.getSouthWest();
@@ -450,7 +450,7 @@ function addCase(casetype){
 
 // 编写自定义函数,创建标注
 function addMarkercase(point,name,casetype,nametype){
-    debugger;
+    
     var marker = new BMap.Marker(point);
     var myIcon="";
     if (casetype!=null){

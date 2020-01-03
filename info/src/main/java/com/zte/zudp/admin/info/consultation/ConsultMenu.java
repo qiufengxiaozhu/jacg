@@ -20,13 +20,13 @@ public class ConsultMenu {
     @Resource
     private ConsultCategoryService consultCategoryService;
 
-    @Menu
+   /* @Menu
     @GetMapping("/category")
     @EndpointPage(id = "categorylist",name="种类管理",order = 1,icon = "cog")
     public String kindModeler(){
         return "/info/consultation/categorylist";
     }
-
+*/
     @Menu
     @GetMapping("/content")
     @EndpointPage(id = "contentlist",name="内容管理",order = 2,icon = "cog")

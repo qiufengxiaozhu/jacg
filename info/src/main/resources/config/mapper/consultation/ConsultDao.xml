@@ -60,10 +60,10 @@
             and `title` LIKE concat('%', #{title}, '%')
         </if>
         <if test="startDate!=null and startDate!=''">
-            and `consult_date` >=#{startDate}
+            and `consult_date` <![CDATA[ >= ]]>#{startDate}
         </if>
         <if test="endDate!=null and endDate!=''">
-            and #{endDate} >= `consult_date`
+            and #{endDate} <![CDATA[ >= ]]> `consult_date`
         </if>
         ORDER BY create_date desc
     </select>
