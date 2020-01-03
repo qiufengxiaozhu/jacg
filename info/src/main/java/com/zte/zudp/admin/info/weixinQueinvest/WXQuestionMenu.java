@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@EndpointModule(id = "wxquestionManager", name = "题目管理",parent =  WXQueMenu.class, order = 1029 ,icon = "cogs")
+@EndpointModule(id = "wxquestionManager", name = "微信题目管理",parent =  WXQueMenu.class, order = 2 ,icon = "cogs")
 @RequestMapping("/wxquestion")
 public class WXQuestionMenu {
     @Menu
     @GetMapping("/wxquestionlist")
-    @EndpointPage(id = "wxquestionlist", name = "题目列表", order = 1,icon = "cog")
+    @EndpointPage(id = "wxquestionlist", name = "微信题目列表", order = 2,icon = "cog")
     public String processModeler(Model model) {
         return "/info/wxqueinvest/wxquestion";
     }

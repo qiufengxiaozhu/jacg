@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * 微信公众调查后台   主菜单
  */
 @Controller
-@EndpointModule(id = "wxqueManager", name = "微信公众调查管理", order = 300, icon = "home")
+@EndpointModule(id = "wxqueManager", name = "微信公众调查管理", order = 200, icon = "home")
 @RequestMapping("/wxqueMenu")
 public class WXQueMenu {
 

@@ -12,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.websocket.Session;
 import java.util.*;
 
 /**
@@ -32,8 +34,10 @@ public class MMQueinvestController {
      * @return
      */
     @RequestMapping("/survey")
-    public String survey(Model model) {
-        List<MMQueinvest> queinvestList=mmQueinvestService.selectAll();
+    public String survey(Model model,HttpServletRequest request) {
+        // 获取到登录人的手机号
+        Object userPhone = request.getSession().getAttribute("userPhone");
+        List<MMQueinvest> queinvestList=mmQueinvestService.selectAll(userPhone);
         model.addAttribute("queinvestList",queinvestList);
         return "mm/news/survey";
     }
@@ -67,7 +71,10 @@ public class MMQueinvestController {
      * @return
      */
     @GetMapping("/test")
-        public String test(@RequestParam Map<String ,Object> map) {
+        public String test(@RequestParam Map<String ,Object> map,HttpServletRequest request) {
+            // 获取到手机号
+        Object userPhone = request.getSession().getAttribute("userPhone");
+
         // 题目数量
             int queSize = 0;
             // 存放查询出来的结果
@@ -100,7 +107,7 @@ public class MMQueinvestController {
                     //生成一个无序的uuid
                     String id = UUID.randomUUID().toString();
                     // 将其插入到答案表中
-                    mmQueinvestService.insertToAnswer(id,queinvestId,questionId,optContext);
+                    mmQueinvestService.insertToAnswer(id,queinvestId,questionId,optContext,userPhone);
 
                 }
 

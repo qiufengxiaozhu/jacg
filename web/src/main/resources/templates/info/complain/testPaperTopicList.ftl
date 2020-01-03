@@ -149,7 +149,7 @@
 
     //列表数据初始化方法
     function findList() {
-        debugger
+//
         var urls="/api/testPaperTopic/queryNoaddTopic";
         dataTable=zudp.plugin.table('#post-list-table')
                 .url(urls)

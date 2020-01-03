@@ -428,7 +428,7 @@
 
     /** 禁用 启动  开始 */
     function translates(id) {
-        debugger;
+        ;
         var da = {id: id,status:1};
         zudp.ajax("/api/user/updateUserStatus").get(da).then(function (value) {
             zudp.plugin.dialog("success").alert("激活成功！", "提示");

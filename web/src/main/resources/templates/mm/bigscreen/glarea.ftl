@@ -107,10 +107,10 @@
 
     search();
     function search() {
-        debugger;
+//        ;
         var s="${name}";
         zudp.ajax("/mm/screen/glareaList?name="+s).get().then(function (value) {
-            debugger;
+//            ;
             for(var i=0;i<value.length;i++){
                 var data  =value[i];
                 var div ='<tr>';

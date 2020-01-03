@@ -55,43 +55,21 @@
 
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="ibox">
-                <div class="ibox-content form-inline z-relative">
-                    <table id="post-list-table" class="table my-table dataTables-example bs-table">
+                <div class="be-relative">
+                    <table id="post-list-table" class="gridtable ge-put show-hide0">
                         <thead>
                         <tr>
-                            <th>区名</th>
-                            <th>街道</th>
-                            <th>大类名称</th>
-                            <th>问题描述</th>
-                            <th>案件截止时间</th>
-                            <th>操作</th>
+                            <th class="faguang">区名</th>
+                            <th class="faguang">街道</th>
+                            <th class="faguang">大类名称</th>
+                            <th class="faguang">问题描述</th>
+                            <th class="faguang">案件截止时间</th>
+                            <th class="faguang">操作</th>
                         </tr>
                         </thead>
                         <tbody id="tables">
                         </tbody>
                     </table>
-
-                    <div class="page-list ">
-                        <a onclick="firstPage()" class="page-li page-prev">首页</a>
-                        <a  onclick="uppers()" class="page-li on">上一页</a>
-                        <a onclick="lowers()" class="page-li">下一页</a>
-                        <a onclick="endpage()" class="page-li page-next">尾页</a>
-                    </div>
-
-
-
-                </div>
-
-
-
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <#--以下是模态框-->
 <div class="modal inmodal fade modal-form" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
@@ -353,7 +331,7 @@
     function pubBtn(id) {
 
         zudp.ajax("/mm/screen/glindexCaseid?id="+id ).get().then(function (value) {
-            debugger;
+//            ;
             $("#DISTRICTNAME").val(value.DISTRICTNAME);
             $("#STREETNAME").val(value.STREETNAME);
             $("#EVENTSRCNAME").val(value.EVENTSRCNAME);
@@ -366,7 +344,7 @@
             $("#DISPOSEOPINION").val(value.DISPOSEOPINION);
             $("#DISPOSEDEPARTNAME").val(value.DISPOSEDEPARTNAME);
             $("#DEALTIME").val(value.DEALTIME);
-            debugger;
+//            ;
             $("#myModal5").modal("show");//显示div
 
 

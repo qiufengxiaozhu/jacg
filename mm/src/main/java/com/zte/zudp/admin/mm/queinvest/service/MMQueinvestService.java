@@ -36,8 +36,8 @@ public class MMQueinvestService  extends BusinessService<MMQueinvest> {
      * 查询所有信息
      * @return
      */
-    public List<MMQueinvest> selectAll() {
-        return mmQueinvestDao.selectAll();
+    public List<MMQueinvest> selectAll(Object userPhone) {
+        return mmQueinvestDao.selectAll(userPhone);
     }
 
     /**
@@ -64,8 +64,8 @@ public class MMQueinvestService  extends BusinessService<MMQueinvest> {
      * @param questionId
      * @param optContext
      */
-    public void insertToAnswer(String id,String queinvestId, String questionId, String optContext) {
-        mmQueinvestDao.insertToAnswer(id,queinvestId,questionId,optContext);
+    public void insertToAnswer(String id,String queinvestId, String questionId, String optContext,Object userPhone) {
+        mmQueinvestDao.insertToAnswer(id,queinvestId,questionId,optContext,userPhone);
     }
 
 
