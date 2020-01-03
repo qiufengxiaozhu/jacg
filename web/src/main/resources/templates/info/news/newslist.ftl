@@ -262,29 +262,10 @@
 
         $("#post_form").validate({
             rules: {
-//                title:{
-//                    required:true,
-//                    remote: {
-//                        url:"/api/news/checkName",
-//                        type:"get",
-//                        data: {
-//                            "title":function () {
-//                                return $("#title").val();
-//                            },
-//                            "id":function () {
-//                                return $("#id").val();
-//                            }
-//                        },
-//                        dataFilter: function(data, type) {
-//                            var da=JSON.parse(data).data;
-//                            if(zudp.util.isBoolean(da)){
-//                                return da;
-//                            }else{
-//                                return false;
-//                            }
-//                        }
-//                    }
-//                },
+               title:{
+                   required:true,
+                   rangelength:[0,15]
+               },
                 timeZone:"required",
 
 //                identification:{
@@ -317,10 +298,11 @@
                 }
             },
             messages: {
-//                title: {
-//                    required: "请输入新闻标题",
-//                    remote: "新闻标题已存在"
-//                },
+               title: {
+                   required: "请输入新闻标题",
+                   rangelength:"字符个数不能超过15"
+                   // remote: "新闻标题已存在"
+               },
                 timeZone: "时区不能为空",
 //                identification: {
 //                    required: "请输入岗位标识",
@@ -578,14 +560,17 @@
     //编辑按钮
     $(document).on("click", '.row-edit', function (e) {
         ue.setEnabled();
+        $("#xg_rar").show();
     });
     //新建按钮
     $(document).on("click", '#add-btn', function (e) {
         ue.setEnabled();
+        $("#xg_rar").show();
     });
     //详情按钮
     $(document).on("click", '.row-detail', function (e) {
         ue.setDisabled();
+        $("#xg_rar").hide();
     });
 
     //详情
@@ -799,7 +784,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on( 'uploadSuccess', function( file,response) {
-            //;
+            //debugger;
 
             var name = file.name;
             var fileurl = response.data;

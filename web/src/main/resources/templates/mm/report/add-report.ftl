@@ -29,7 +29,16 @@
     <script>
         $(function () {
             $("form").submit(function () {
-                return checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace();
+                checktitle();
+                checkcontent();
+                checkname();
+                checktelephone();
+                checkplace();
+                var flage=checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace();
+                if (flage){
+                    alert("上报成功")
+                }
+                return flage;
             })
             $("input[name='title']").blur(function () {
                         checktitle();
@@ -145,14 +154,14 @@
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>标题&nbsp;:</span>
                             <input type="text"  name="title" class="tab-input flex-1" placeholder="请输入您的来信标题(20字以内)">
-                            <span id="sp_title"></span>
+                            <span id="sp_title" style="color: red">*</span>
                         </div>
                     </div>
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>案发事件位置&nbsp;:</span><br>
                             <input type="text" name="place" class="tab-input flex-1" placeholder="案发地点">
-                            <span id="sp_place"></span>
+                            <span id="sp_place" style="color: red">*</span>
                         </div>
                     </div>
 
@@ -161,7 +170,7 @@
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>案发描述&nbsp;:</span><br>
                             <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的咨询内容(100字以内)">
-                            <span id="sp_content"></span>
+                            <span id="sp_content" style="color: red">*</span>
                         </div>
                     </div>
 
@@ -286,7 +295,7 @@
                 }
             });
             uploader.on('uploadSuccess', function (file, response) {
-                //;
+                //debugger;
                 var name = file.name;
                 var fileurl = response.data;
                 var jw=fileurl.substring(fileurl.lastIndexOf('.'));

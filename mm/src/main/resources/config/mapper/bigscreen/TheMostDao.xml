@@ -12,7 +12,7 @@
 	( CASE WHEN LENGTH( EVENTDESC ) > 20 THEN CONCAT( SUBSTRING( EVENTDESC, 1, 20 ), '...' ) ELSE EVENTDESC END ) AS description
 FROM
 	tocgcase
-        where    date(NEWINSTTIME) >= DATE_SUB(CURDATE(), INTERVAL 18 month)
+        where    date(NEWINSTTIME) <![CDATA[ >= ]]> DATE_SUB(CURDATE(), INTERVAL 18 month)
         ORDER BY NEWINSTTIME desc
         LIMIT 3
 
@@ -30,7 +30,7 @@ FROM
         ) AS description
 
         FROM tocgcase
-        where   date(NEWINSTTIME) >= DATE_SUB(CURDATE(), INTERVAL 18 month)
+        where   date(NEWINSTTIME) <![CDATA[ >= ]]> DATE_SUB(CURDATE(), INTERVAL 18 month)
         ORDER BY USEDTIME desc
         LIMIT 3
 
@@ -48,7 +48,7 @@ FROM
         ) AS description
 
         FROM tocgcase
-        where  date(NEWINSTTIME)  >=  DATE_SUB(CURDATE(), INTERVAL 18 month)
+        where  date(NEWINSTTIME)  <![CDATA[ >= ]]>  DATE_SUB(CURDATE(), INTERVAL 18 month)
         GROUP BY MAINTYPENAME
         ORDER BY  count(MAINTYPENAME) desc
         LIMIT 3

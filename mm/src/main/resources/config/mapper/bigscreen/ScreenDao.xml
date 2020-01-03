@@ -44,7 +44,7 @@
         FROM
             tocgcase
         WHERE
-            date( NEWINSTTIME ) >= DATE_SUB( CURDATE( ), INTERVAL 12 MONTH )
+            date( NEWINSTTIME ) <![CDATA[ >= ]]> DATE_SUB( CURDATE( ), INTERVAL 12 MONTH )
         ORDER BY
             NEWINSTTIME DESC
             LIMIT 3
@@ -76,7 +76,7 @@
         FROM
             tocgcase
         WHERE
-            date( NEWINSTTIME ) >= DATE_SUB( CURDATE( ), INTERVAL 12 MONTH )
+            date( NEWINSTTIME ) <![CDATA[ >= ]]> DATE_SUB( CURDATE( ), INTERVAL 12 MONTH )
         GROUP BY DISTRICTNAME
 
     </select>
@@ -123,7 +123,7 @@
    </select>
 
     <select id="findareacountList" resultType="java.lang.Integer">
-       select COUNT(*) from tocgcase where MAINTYPENAME=  #{fddit} and  tocgcase.CREATETIME <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
+       select COUNT(*) from tocgcase where MAINTYPENAME=  #{fddit} and  tocgcase.CREATETIME  <![CDATA[ >= ]]>   #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
    </select>
 
 
@@ -138,7 +138,7 @@
    </select>
 
     <select id="getrightCasetypeNum" resultType="java.util.Map">
-        select DISTRICTNAME as name,MAINTYPENAME as type,COUNT(*) as num  from tocgcase where   tocgcase.CREATETIME <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
+        select DISTRICTNAME as name,MAINTYPENAME as type,COUNT(*) as num  from tocgcase where   tocgcase.CREATETIME  <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
           GROUP BY DISTRICTNAME,MAINTYPENAME
          ORDER BY COUNT(*) DESC
 
