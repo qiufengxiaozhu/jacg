@@ -7,12 +7,12 @@
     <!--案件列表-->
     <select id="findAllCases" resultType="java.util.Map">
         SELECT
-	      RECID id,
-	      (CASE WHEN LENGTH( EVENTDESC ) > 20 THEN CONCAT( SUBSTRING( EVENTDESC, 1, 20 ), '...' ) ELSE EVENTDESC END ) AS description,
-          EVENTDESC as description02,
-	      MAINTYPENAME name,
-          SUBTYPENAME littleName,
-	      DATE_FORMAT( NEWINSTTIME, '%Y-%m-%d %T' ) time
+        (case when RECID is null then '' else RECID end ) id,
+	    (CASE WHEN LENGTH( EVENTDESC ) > 20 THEN CONCAT( SUBSTRING( EVENTDESC, 1, 20 ), '...' ) when EVENTDESC is null then ''  ELSE EVENTDESC END ) AS description,
+
+        (case when MAINTYPENAME is null then '' else MAINTYPENAME end) as name,
+        (case when SUBTYPENAME is null then '' else SUBTYPENAME end) as littleName,
+        (case when NEWINSTTIME is null then '' else  DATE_FORMAT( NEWINSTTIME, '%Y-%m-%d %T' ) end) as time
         FROM
 	      tocgcase
 	    where NEWINSTTIME like '%2018%'
@@ -32,15 +32,15 @@
 
 <select id="findCaseById" resultType="java.util.Map">
       SELECT
-        MAINTYPENAME name,
-        SUBTYPENAME littleName,
-        ADDRESS address,
-         DATE_FORMAT( DEADLINE, '%Y-%m-%d %T') deadTime,
-         DATE_FORMAT( ENDTIME, '%Y-%m-%d %T') endTime,
-         DISPOSEDEPARTNAME department,
-          DATE_FORMAT( DEALTIME, '%Y-%m-%d %T') dealTime,
-         DISPOSEOPINION adv,
-         EVENTDESC as description
+       (case when MAINTYPENAME is null then '' else MAINTYPENAME end) name,
+       (case when SUBTYPENAME is null then '' else SUBTYPENAME end) littleName,
+       (case when ADDRESS is null then '' else ADDRESS end) address,
+       (case when DEADLINE is null then '' else DATE_FORMAT( DEADLINE, '%Y-%m-%d %T') end) deadTime,
+       (case when ENDTIME is null then '' else DATE_FORMAT( ENDTIME, '%Y-%m-%d %T') end) endTime,
+       (case when DISPOSEDEPARTNAME is null then '' else DISPOSEDEPARTNAME end) department,
+       (case when DEALTIME is null then '' else DATE_FORMAT( DEALTIME, '%Y-%m-%d %T') end) dealTime,
+       (case when DISPOSEOPINION is null then '' else DISPOSEOPINION end) adv,
+       (case when EVENTDESC is null then '' else EVENTDESC end) description
      FROM   tocgcase
      where RECID = #{id}
 

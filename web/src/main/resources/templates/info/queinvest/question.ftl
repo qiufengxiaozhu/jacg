@@ -295,21 +295,22 @@
 
 
         // 新建  验证
+
+        // 新建  验证
         $("#post_form").validate({
             rules: {
                 // 必填项
-
                 contents: "required",
-                questionType:"required",
+                questionType:"required"
+            },
 
-                // 提示信息
-                messages: {
-                    contents: {
-                        required: "请输入题目内容",
-                        remote: "题目已存在"
-                    },
-                    questionType: "请选择题目类型"
-                }
+            // 提示信息
+            messages: {
+                contents: {
+                    required: "请输入题目内容",
+                    remote: "题目已存在"
+                },
+                questionType: "请选择题目类型"
             }
         });
 
@@ -388,7 +389,7 @@
 
                                 delStr = zudp.template.delBtn;
 //                                detailStr = zudp.template.detailBtn;
-                            detailStr = '<button class="btn btn-info btn-sm row-detail" value="{id}" id="detail"><i class="fa fa-pencil"></i>详情</button>';
+                            detailStr = '<button class="btn btn-info btn-sm row-detail" value="{id}" onclick="getAllType(this)" id="detail"><i class="fa fa-pencil"></i>详情</button>';
 
                                     //添加选项
                                 addOptionStr='<button id="row-add-test" class="btn btn-info btn-sm " value="{id}"><i class="fa fa-pencil"></i>添加选项</button>';
@@ -456,6 +457,7 @@
                 questionType:questionType
             };
 
+            console.log(idJson);
             var objJson = JSON.stringify(obj);
 
             // 添加题目 并且更新题目状态
@@ -467,9 +469,8 @@
                 // 清空输入框的
                 zudp.plugin.form("#form-addOption").reset();
 
-//                document.location.reload();
-                location.reload();
-
+//                location.reload();
+                    zudp.ajax.reload();
                 })
 
 

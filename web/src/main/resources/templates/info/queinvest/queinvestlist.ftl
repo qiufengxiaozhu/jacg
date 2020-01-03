@@ -263,7 +263,8 @@
                 // 必填项
                 title: "required",
                 description: "required",
-                queinvestType: "required"
+                queinvestType: "required",
+                valid: "required"
             },
 
                 // 提示信息
@@ -273,7 +274,8 @@
                     remote: "问卷名称已存在"
                 },
                 description: "请输入问卷描述信息",
-                queinvestType: "请选择问卷类型"
+                queinvestType: "请选择问卷类型",
+                valid: "请选择问卷有效期"
             }
         });
 
