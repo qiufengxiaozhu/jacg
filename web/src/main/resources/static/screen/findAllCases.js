@@ -100,6 +100,7 @@ $(document).on("click","#tableList tr.list1",function () {
     var id = $(this).attr("id");
     // 查询详情
             zudp.ajax("/mm/screen/findCaseById?id="+id).get().then(function (value02) {
+
                 var name = value02.name;
                 var littleName = value02.littleName;
                 var address = value02.address;
@@ -109,6 +110,7 @@ $(document).on("click","#tableList tr.list1",function () {
                 var dealTime = value02.dealTime;
                 var adv = value02.adv;
                 var description = value02.description;
+
                 $('#nameId01').html("大类名称&nbsp;:"+name);
                 $('#nameId02').html("小类名称&nbsp;:"+littleName);
                 $('#addressId').html("地址&nbsp;:"+address);

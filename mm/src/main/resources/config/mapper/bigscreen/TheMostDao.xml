@@ -6,15 +6,12 @@
 
     <!--最新-->
     <select id="findMostNew" resultType="java.util.Map">
-        SELECT
-        DATE_FORMAT(NEWINSTTIME,'%Y-%m-%d %T')  time,
-        MAINTYPENAME name,
-        (CASE WHEN LENGTH(EVENTDESC)>20
-        THEN CONCAT(SUBSTRING(EVENTDESC,1,20),'...')
-        ELSE EVENTDESC END
-        ) AS description
-
-        FROM tocgcase
+       SELECT
+	( CASE WHEN  NEWINSTTIME IS NULL THEN '' else  DATE_FORMAT( NEWINSTTIME, '%Y-%m-%d %T' )  END ) AS time,
+	( CASE WHEN MAINTYPENAME IS NULL THEN '' else  MAINTYPENAME END ) AS name,
+	( CASE WHEN LENGTH( EVENTDESC ) > 20 THEN CONCAT( SUBSTRING( EVENTDESC, 1, 20 ), '...' ) ELSE EVENTDESC END ) AS description
+FROM
+	tocgcase
         where    date(NEWINSTTIME) >= DATE_SUB(CURDATE(), INTERVAL 18 month)
         ORDER BY NEWINSTTIME desc
         LIMIT 3
