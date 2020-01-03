@@ -155,17 +155,17 @@ public class Screen extends FileEntity {
     /**
      * 结案率
      */
-    private Double caseRate;
+    private String caseRate;
 
     /**
      * 按期结案率
      */
-    private Double onTimeRate;
+    private String onTimeRate;
 
     /**
      * 超期结案率
      */
-    private Double overTimeRate;
+    private String overTimeRate;
 
     public String getRECID() {
         return RECID;
@@ -383,27 +383,27 @@ public class Screen extends FileEntity {
         this.endNumber = endNumber;
     }
 
-    public Double getCaseRate() {
+    public String getCaseRate() {
         return caseRate;
     }
 
-    public void setCaseRate(Double caseRate) {
+    public void setCaseRate(String caseRate) {
         this.caseRate = caseRate;
     }
 
-    public Double getOnTimeRate() {
+    public String getOnTimeRate() {
         return onTimeRate;
     }
 
-    public void setOnTimeRate(Double onTimeRate) {
+    public void setOnTimeRate(String onTimeRate) {
         this.onTimeRate = onTimeRate;
     }
 
-    public Double getOverTimeRate() {
+    public String getOverTimeRate() {
         return overTimeRate;
     }
 
-    public void setOverTimeRate(Double overTimeRate) {
+    public void setOverTimeRate(String overTimeRate) {
         this.overTimeRate = overTimeRate;
     }
 

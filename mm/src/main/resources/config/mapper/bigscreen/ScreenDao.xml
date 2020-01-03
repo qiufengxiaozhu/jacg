@@ -85,11 +85,17 @@
     <select id="analysis" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
 
         SELECT
-            *
+            id,
+            department,
+            total,
+            CONCAT(TRUNCATE(endNumber * 100,1) ,"%") endNumber,
+            CONCAT(TRUNCATE(caseRate * 100,1) ,"%") caseRate,
+            CONCAT(TRUNCATE(onTimeRate * 100,1) ,"%") onTimeRate,
+            (case when overTimeRate = '0' then '0' else CONCAT(TRUNCATE(overTimeRate * 100,1) ,"%") end ) overTimeRate
         FROM
             qgq_case
         ORDER BY
-            onTimeRate desc
+            total desc
             LIMIT 0,10
     </select>
 

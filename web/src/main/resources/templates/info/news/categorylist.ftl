@@ -94,7 +94,7 @@
                 <div class="modal-body fix-height" style="height: 350px">
                 <#--表单-->
                     <form class="form-horizontal" id="post_form">
-                        <input type="hidden" name="id">
+                        <input type="hidden" name="id" id="id">
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">新闻类别：</label>
@@ -106,7 +106,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">描述：</label>
+                            <label class="col-sm-3 control-label my-control-label">新闻描述：</label>
                             <div class="col-sm-6">
                                 <textarea class="form-control" rows="5" cols="" name="describe" id="describe" ></textarea>
                             </div>
@@ -162,7 +162,27 @@
 
                 category:{
                     required:true,
-                    rangelength:[0,10]
+                    rangelength:[0,10],
+                    remote: {
+                       url:"/api/category/checkName",
+                       type:"get",
+                       data: {
+                           "category":function () {
+                               return $("#category").val();
+                           },
+                           "id":function () {
+                               return $("#id").val();
+                           }
+                       },
+                       dataFilter: function(data, type) {
+                           var da=JSON.parse(data).data;
+                           if(zudp.util.isBoolean(da)){
+                               return da;
+                           }else{
+                               return false;
+                           }
+                       }
+                   }
                 }
             },
 
@@ -170,7 +190,8 @@
             messages: {
                 category: {
                     required: "请输入新闻类别",
-                    rangelength:"字符个数不能超过10"
+                    rangelength:"字符个数不能超过10",
+                    remote: "此新闻类别已存在"
                 }
             }
         });
@@ -193,11 +214,6 @@
 
 
     });
-
-    // //验证输入框是否为空
-    // $(document).on("click", '#save-category', function () {
-    //     alert("123");
-    // });
 
     //提示
     function swalFunction(a,b,c) {

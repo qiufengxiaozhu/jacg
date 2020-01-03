@@ -16,4 +16,15 @@ public class CategoryService extends BusinessService<Category>{
 
     @Autowired
     private CategoryDao categoryDao;
+
+    //检验名称是否重复
+    public boolean checkName(String category,String id) {
+
+        int rows = categoryDao.checkName(category, id);
+        if(rows != 0){ // 如果是0，表中没有
+            return false;
+         }else {
+             return true;
+         }
+    }
 }

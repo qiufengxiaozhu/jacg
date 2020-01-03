@@ -34,14 +34,14 @@
         where id=#{id}
     </select>
 
-    <!--<select id="checkName" resultType="java.lang.Integer">-->
-        <!--SELECT COUNT(1) FROM oa_post-->
-        <!--WHERE del =  '0'-->
-        <!--AND `name` = #{name}-->
-        <!--<if test="id!=null and id !=''">-->
-            <!--AND id != #{id}-->
-        <!--</if>-->
-    <!--</select>-->
+    <select id="checkName" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM qgq_category
+        WHERE del =  '0'
+        AND `category` = #{category}
+        <if test="id!=null and id !=''">
+            AND id != #{id}
+        </if>
+    </select>
     <!--<select id="checkIdentification" resultType="java.lang.Integer">-->
         <!--SELECT COUNT(1) FROM oa_post-->
         <!--WHERE del = '0'-->
