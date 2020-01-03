@@ -87,7 +87,7 @@ public class ScreenService extends FileBusinessService<Screen> {
      *
      * @return
      */
-    public Integer findAreaCountList(String area,String type){
+    public Integer findareacountList(String fdid,String type){
         String StartDate="";
         String EndDate="";
         if (type.equals("第一季度")){
@@ -103,7 +103,7 @@ public class ScreenService extends FileBusinessService<Screen> {
             StartDate="2018-10";
             EndDate="2018-12";
         }
-        return screenDao.findareacountList(area,StartDate,EndDate);
+        return screenDao.findareacountList(fdid,StartDate,EndDate);
     }
 
     /**
@@ -131,7 +131,7 @@ public class ScreenService extends FileBusinessService<Screen> {
      *
      * @return
      */
-    public List<Map> getrightCasetypeNum(String name,String type){
+    public List<Map> getrightCasetypeNum(String type){
 
         String StartDate="";
         String EndDate="";
@@ -148,7 +148,7 @@ public class ScreenService extends FileBusinessService<Screen> {
             StartDate="2018-10";
             EndDate="2018-12";
         }
-        return screenDao.getrightCasetypeNum(name,StartDate,EndDate);
+        return screenDao.getrightCasetypeNum(StartDate,EndDate);
     }
 
 

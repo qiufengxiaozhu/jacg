@@ -69,7 +69,7 @@ public interface ScreenDao extends AbstractDao<Screen> {
      *
      * @return
      */
-    public Integer findareacountList(@Param("area")String area,@Param("startdate")String startdate,@Param("enddate")String enddate);
+    public Integer findareacountList(@Param("fddit")String fddit,@Param("startdate")String startdate,@Param("enddate")String enddate);
 
 
     /**
@@ -92,7 +92,7 @@ public interface ScreenDao extends AbstractDao<Screen> {
      *
      * @return
      */
-    public List<Map> getrightCasetypeNum(@Param("name")String name,@Param("startdate")String startdate,@Param("enddate")String enddate);
+    public List<Map> getrightCasetypeNum(@Param("startdate")String startdate,@Param("enddate")String enddate);
 
     /**
      *  区域案件报警(社区 下钻)

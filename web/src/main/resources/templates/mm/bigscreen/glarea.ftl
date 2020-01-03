@@ -60,8 +60,9 @@
                     <table id="post-list-table" class="table my-table  dataTables-example bs-table">
                         <thead>
                         <tr>
-                            <th>区名</th>
                             <th>季度</th>
+                            <th>区名</th>
+
                             <th>大类名称</th>
                             <th>案件量</th>
 
@@ -113,8 +114,9 @@
             for(var i=0;i<value.length;i++){
                 var data  =value[i];
                 var div ='<tr>';
+
+                div=div +'   <td>'+s+'</td>';
                 div=div +'   <td>'+data.name+'</td>';
-                div=div +'   <td>'+data.jd+'</td>';
                 div=div +'   <td>'+data.type+'</td>';
                 div=div +'   <td>'+data.num+'</td>';
 

@@ -94,7 +94,7 @@
     </select>
 
     <select id="findType" resultType="java.util.Map">
-        SELECT
+              SELECT
         t.MAINTYPENAME as name,t.num
         FROM
         (
@@ -103,6 +103,7 @@
         COUNT(1) AS num
         FROM
         tocgcase
+        where tocgcase.CREATETIME LIKE '%2018%'
         GROUP BY
         MAINTYPENAME
         ) t
@@ -116,13 +117,13 @@
    </select>
 
     <select id="findareacountList" resultType="java.lang.Integer">
-       select COUNT(*) from tocgcase where DISTRICTNAME=  #{area} and  tocgcase.CREATETIME <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
+       select COUNT(*) from tocgcase where MAINTYPENAME=  #{fddit} and  tocgcase.CREATETIME <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
    </select>
 
 
 
     <select id="getrightEvenType" resultType="java.util.Map">
-         select COMMUNITYNAME as name,round((COUNT(*)/10000),2)  as num from tocgcase GROUP BY COMMUNITYNAME ORDER BY
+          select MAINTYPENAME as name,round((COUNT(*)/10000),2)  as num from tocgcase GROUP BY MAINTYPENAME ORDER BY
         round((COUNT(*)/10000),2) DESC limit 0,5;
      </select>
 
@@ -131,8 +132,7 @@
    </select>
 
     <select id="getrightCasetypeNum" resultType="java.util.Map">
-        select DISTRICTNAME as name,MAINTYPENAME as type,COUNT(*) as num  from tocgcase where DISTRICTNAME= #{name}
-          and  tocgcase.CREATETIME <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
+        select DISTRICTNAME as name,MAINTYPENAME as type,COUNT(*) as num  from tocgcase where   tocgcase.CREATETIME <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
           GROUP BY DISTRICTNAME,MAINTYPENAME
          ORDER BY COUNT(*) DESC
 
