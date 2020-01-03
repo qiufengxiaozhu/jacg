@@ -110,7 +110,7 @@
                 <div class="modal-footer">
                     <input type="hidden" id="add-type">
                     <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" id="save-btn">保存</button>
+                    <button type="button" class="btn btn-primary" id="save-btn save-category" >保存</button>
                 </div>
             </small>
         </div>
@@ -233,8 +233,13 @@
         //初始化增删改查参数
         initForm(obj);
 
+
     });
 
+    //验证输入框是否为空
+    $(document).on("click", '#save-category', function () {
+        alert("123");
+    });
 
     //提示
     function swalFunction(a,b,c) {
