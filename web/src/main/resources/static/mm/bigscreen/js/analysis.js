@@ -30,12 +30,20 @@ $(function(){
                     $("#table-analysis").append(
 
                         "<tr class='list1'>"+
-                            "<td>"+department+  "</td>"+
-                            "<td>"+total+       "</td>"+
-                            "<td>"+caseRate+    "</td>"+
-                            "<td>"+onTimeRate+  "</td>"+
-                            "<td>"+overTimeRate+"</td>"+
+                        "<td>"+department+  "</td>"+
+                        "<td>"+total+       "</td>"+
+                        "<td>"+caseRate+    "</td>"+
+                        "<td>"+onTimeRate+  "</td>"+
+                        "<td>"+overTimeRate+"</td>"+
                         "</tr> "
+
+                        // "<tr class='list1'>"+
+                        // "<td>"+department+  "</td>"+
+                        // "<td>"+total+       "</td>"+
+                        // "<td>"+parseFloat(caseRate)*100+'%'+    "</td>"+
+                        // "<td>"+parseFloat(onTimeRate)*100+'%'+  "</td>"+
+                        // "<td>"+parseFloat(overTimeRate)*100+'%'+"</td>"+
+                        // "</tr> "
                     );
 
                 }
