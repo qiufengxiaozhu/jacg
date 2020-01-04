@@ -18,7 +18,7 @@
     <link href="/css/third/webuploader.css" rel="stylesheet">
     <link href="/css/admin/avatar.css" rel="stylesheet">
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
-
+    <script src="/mm/bigscreen/js/rem.js"></script>
     <style>
         .webuploader-container div {
             width:80px;
@@ -53,20 +53,14 @@
 
 <body class="gray-bg">
 <div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="ibox">
-                <div class="ibox-content form-inline z-relative">
-                    <table id="post-list-table" class="table my-table  dataTables-example bs-table">
+                <div class="be-relative">
+                    <table id="post-list-table" class="gridtable ge-put show-hide0">
                         <thead>
                         <tr>
-                            <th>季度</th>
-                            <th>区名</th>
-
-                            <th>大类名称</th>
-                            <th>案件量</th>
-
-
+                            <th class="faguang">季度</th>
+                            <th class="faguang">区名</th>
+                            <th class="faguang">大类名称</th>
+                            <th class="faguang">案件量</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -76,10 +70,6 @@
 
                 </div>
 
-
-            </div>
-        </div>
-    </div>
 </div>
 
 

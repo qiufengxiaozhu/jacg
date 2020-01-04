@@ -256,7 +256,7 @@
 
     <div class="modal-ly" style="display: none;"  id="company_amoun">
         <div class="mask"></div>
-        <div class="modal-cnt mbox flex flex-fx-c" style="">
+        <div class="modal-cnts mbox flex flex-fx-c" style="">
             <div class="g-info-tit flex flex-c-c">
                 <i class="i-icon icon-tb"></i>
                 <span class="flex-1" id="qyssfx">关联分析类型案件统计</span>
@@ -327,7 +327,7 @@
                     <th>时间</th>
                 </tr>
             </table>
-            <div class="page-list ">
+            <div class="page-list">
                 <a onclick="firstPage()" class="page-li page-prev">首页</a>
                 <a  onclick="uppers()" class="page-li on">上一页</a>
                 <a onclick="lowers()" class="page-li">下一页</a>
@@ -336,7 +336,7 @@
         </div>
     </div>
 </div>
-<div class="mess" style="display: none;">
+<div class="mess" style="display: none;" id="myModal5">
     <div class="close me-close"><img src="/zhizui/img/close.png"></div>
     <div class="me-relative">
         <div class="be-center">案件详情</div>
@@ -504,8 +504,8 @@
             var index = $(".area-2").index($(this));
             $(".area-2").removeClass("on").eq(index).addClass("on")
         })
-    </script>
 
+    </script>
 
 
 
