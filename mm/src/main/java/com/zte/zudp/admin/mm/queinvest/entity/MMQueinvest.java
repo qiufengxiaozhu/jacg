@@ -9,6 +9,24 @@ public class MMQueinvest extends DataEntity {
    private String questionId;
     private String queinvestId;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * 答题人名称
+     */
+
+    private String name;
+    /**
+     * 答题时间(提交问卷的时间)
+     */
+    private String answerTime;
+
     public String getQueinvestId() {
         return queinvestId;
     }
@@ -138,5 +156,13 @@ public class MMQueinvest extends DataEntity {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getAnswerTime() {
+        return answerTime;
+    }
+
+    public void setAnswerTime(String answerTime) {
+        this.answerTime = answerTime;
     }
 }

@@ -7,6 +7,35 @@ import com.zte.zudp.admin.common.persistence.entity.DataEntity;
  */
 public class Answers extends DataEntity {
 
+
+    private String pubdate;
+    private String answerTime;
+    private String name;
+
+    public String getPubdate() {
+        return pubdate;
+    }
+
+    public void setPubdate(String pubdate) {
+        this.pubdate = pubdate;
+    }
+
+    public String getAnswerTime() {
+        return answerTime;
+    }
+
+    public void setAnswerTime(String answerTime) {
+        this.answerTime = answerTime;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     /**
      * 题干id
      */

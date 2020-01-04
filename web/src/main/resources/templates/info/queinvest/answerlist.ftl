@@ -53,9 +53,10 @@
                         <tr>
                             <th>id</th>
                             <th>问卷名称</th>
-                            <th>题目名称</th>
-                            <th>所选答案内容</th>
-                            <#--<th>操作</th>-->
+                            <th>答题人</th>
+                            <th>创建时间</th>
+                            <th>答题时间</th>
+                            <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -73,55 +74,21 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
                         class="sr-only">Close</span></button>
-                <h4 class="modal-title">添加</h4>
+                <h4 class="modal-title">详情</h4>
             </div>
             <small class="font-bold">
                 <div class="modal-body fix-height" style="height: 350px">
-                <#--表单-->
-                    <form class="form-horizontal" id="post_form">
-                        <input type="hidden" name="id" id="id">
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">问卷名称：</label>
-                            <div class="col-sm-6">
-                                <input type="text" name="title" maxlength="64" id="title" placeholder="问卷名称" class="form-control">
-                            </div>
-                            <div>
-                                <i class="i_context my-i_context">*</i>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">题目名称：</label>
-                            <div class="col-sm-6">
-                                <input type="text" name="contents" maxlength="64" id="contents" placeholder="题目名称" class="form-control">
-                            </div>
-                            <div>
-                                <i class="i_context my-i_context">*</i>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">所选答案内容：</label>
-                            <div class="col-sm-6">
-                                <input type="text" name="optContext" maxlength="64" id="optContext" placeholder="所选答案内容" class="form-control">
-                            </div>
-                            <div>
-                                <i class="i_context my-i_context">*</i>
-                            </div>
-                        </div>
-
-
-
-                    </form>
+                    <table id="tableList" class="table my-table table-bordered dataTables-example">
+                        <tr>
+                            <th>题目内容</th>
+                            <th>所选答案</th>
+                        </tr>
+                    </table>
                 </div>
 
                 <div class="modal-footer">
                     <input type="hidden" id="add-type">
                     <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" id="save-btn">保存</button>
                 </div>
             </small>
         </div>
@@ -176,6 +143,7 @@
         };
         //初始化增删改查参数
         initForm(obj);
+    });
 
 
         //列表数据初始化方法
@@ -193,28 +161,55 @@
                     .columns([
                         {data: 'id', visible: false},
                         {data: 'title'},
-                        {data: 'contents'},
-                        {data: 'optContext'},
-//
-//
-//                        { // 操作 按钮
-//                            render: function (data, type, row) {
-//                                var btn = "";
-//                                var detailStr = "";
-//                                detailStr = zudp.template.detailBtn;
-//
-//                                btn += detailStr;
-//                                return zudp.util.render(btn, row);
-//
-//
-//                            }
-//                        }
+                        {data: 'name'},
+                        {data: 'pubdate'},
+                        {data: 'answerTime'},
+                    {
+                        render: function (data, type, row) {
+                             var btn = "";
+                             var detailStr="";
+                              detailStr='<button class="btn btn-info btn-sm" value="{id}" id="getDetail"><i class="fa fa-pencil"></i>详情</button>';
 
-                    ])
-                    .then();
-
+                            btn += detailStr;
+                            return zudp.util.render(btn, row);
+            }
         }
-    })
+    ])
+    .then();
+
+    }
+
+
+
+    // 详情
+    $(document).on("click", '#getDetail', function (e) {
+        // 弹出模态框
+        $("#myModal5").modal("show");
+        // 清除模态框
+        $("#list01").empty();
+        //清除冒泡
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        } else {
+            window.e.cancelBubble = true;
+        }
+        // 获取到这一行的id，用于查询详情
+        var id = $(this).parent().prev().prev().prev().text();
+        id = JSON.stringify(id);
+        console.log(id);
+        // 发送ajax请求
+        zudp.ajax("/api/answer/getDetail").post(id).then(function (value) {
+                for(var i=0;i<value.length;i++){
+                      var contents =  value[i]["contents"];
+                      var optContext =  value[i]["optContext"];
+
+                    var tr;
+                    tr= '<td>'+contents+'</td>'+'<td>'+optContext+'</td>';
+                    $("#tableList").append('<tr id="list01">'+tr+'</tr>');
+                }
+        })
+
+    });
 
 
 </script>

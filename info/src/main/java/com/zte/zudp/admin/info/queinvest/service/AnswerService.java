@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * 答案管理
  */
@@ -15,4 +18,13 @@ import org.springframework.transaction.annotation.Transactional;
 public class AnswerService extends BusinessService<Answers> {
     @Autowired
     private AnswersDao answersDao;
+
+    /**
+     * 详情
+     * @param id
+     * @return
+     */
+    public List<Map> getDetail(Object id) {
+        return  answersDao.getDetail(id);
+    }
 }

@@ -19,7 +19,7 @@
     from jacg_queinvest t1
     left join jacg_answers t2 on queinvestId = t1.id
     where status = '2'
-    and  t1.id not in (select queinvestId from jacg_answers where user_id =#{userPhone})
+    and  t1.id not in (select queinvestId from jacg_answers where user_id =#{userPhone}) and t1.del !=1
 
 </select>
 
@@ -84,7 +84,9 @@ FROM
        queinvestId,
        answerOption,
        questions_id,
-       user_id
+       user_id,
+       name,
+       answerTime
 
       )
       VALUE (
@@ -92,7 +94,9 @@ FROM
         #{queinvestId},
         #{optContext},
         #{questionId},
-        #{userPhone}
+        #{userPhone},
+        #{userName},
+        now()
       )
 
 </insert>

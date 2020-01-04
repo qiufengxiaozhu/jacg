@@ -40,5 +40,5 @@ public interface MMQueinvestDao extends AbstractDao<MMQueinvest> {
      * @param questionId
      * @param optContext
      */
-    void insertToAnswer(@Param("id") String id,@Param("queinvestId") String queinvestId, @Param("questionId") String questionId, @Param("optContext") String optContext,@Param("userPhone")Object userPhone);
+    void insertToAnswer(@Param("id") String id,@Param("queinvestId") String queinvestId, @Param("questionId") String questionId, @Param("optContext") String optContext,@Param("userPhone")Object userPhone,@Param("userName")Object userName);
 }

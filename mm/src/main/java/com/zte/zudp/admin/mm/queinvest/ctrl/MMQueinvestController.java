@@ -74,6 +74,8 @@ public class MMQueinvestController {
         public String test(@RequestParam Map<String ,Object> map,HttpServletRequest request) {
             // 获取到手机号
         Object userPhone = request.getSession().getAttribute("userPhone");
+        // 获取到用户名称
+        Object userName = request.getSession().getAttribute("userName");
 
         // 题目数量
             int queSize = 0;
@@ -107,7 +109,7 @@ public class MMQueinvestController {
                     //生成一个无序的uuid
                     String id = UUID.randomUUID().toString();
                     // 将其插入到答案表中
-                    mmQueinvestService.insertToAnswer(id,queinvestId,questionId,optContext,userPhone);
+                    mmQueinvestService.insertToAnswer(id,queinvestId,questionId,optContext,userPhone,userName);
 
                 }
 
