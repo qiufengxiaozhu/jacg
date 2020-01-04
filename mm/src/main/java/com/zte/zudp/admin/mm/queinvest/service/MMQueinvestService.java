@@ -64,8 +64,8 @@ public class MMQueinvestService  extends BusinessService<MMQueinvest> {
      * @param questionId
      * @param optContext
      */
-    public void insertToAnswer(String id,String queinvestId, String questionId, String optContext,Object userPhone) {
-        mmQueinvestDao.insertToAnswer(id,queinvestId,questionId,optContext,userPhone);
+    public void insertToAnswer(String id,String queinvestId, String questionId, String optContext,Object userPhone,Object userName) {
+        mmQueinvestDao.insertToAnswer(id,queinvestId,questionId,optContext,userPhone,userName);
     }
 
 
