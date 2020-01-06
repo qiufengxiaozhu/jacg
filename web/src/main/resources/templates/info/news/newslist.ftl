@@ -20,6 +20,12 @@
     <#--<link href="/css/third/bootstrap-select.css" rel="stylesheet">-->
 
     <style>
+
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+
         .webuploader-container div {
             width:80px;
         }
@@ -294,7 +300,8 @@
 //                },
 
                 content:{
-                    rangelength:[0,1000]
+                    required:true,
+                    rangelength:[0,10000]
                 }
             },
             messages: {
@@ -309,7 +316,8 @@
 //                    remote: "岗位标识已存在"
 //                },
                 content: {
-                    rangelength:"字符个数不能超过1000"
+                    required: "新闻正文不能为空",
+                    rangelength:"字符个数不能超过10000个"
                 }
             },ignore: []
         });

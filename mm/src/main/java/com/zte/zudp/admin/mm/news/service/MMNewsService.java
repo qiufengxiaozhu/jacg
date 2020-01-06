@@ -1,6 +1,5 @@
 package com.zte.zudp.admin.mm.news.service;
 
-import com.zte.zudp.admin.common.persistence.service.BusinessService;
 import com.zte.zudp.admin.info.attachDoc.service.FileBusinessService;
 import com.zte.zudp.admin.mm.news.dao.MMNewsDao;
 import com.zte.zudp.admin.mm.news.entity.MMNews;
@@ -22,10 +21,10 @@ public class MMNewsService extends FileBusinessService<MMNews> {
         return newsDao.find_threeNews();
     }
 
-//    //根据时区查询前三条数据
-//    public ArrayList<MMNews> find_threeNewsTime(String timeZone){
-//        return newsDao.find_threeNewsTime(timeZone);
-//    }
+    //根据时区查询前三条数据
+    public ArrayList<MMNews> find_threeNewsTime(String TimeZone){
+        return newsDao.find_threeNewsTime(TimeZone);
+    }
 
     /**
      * 根据id查找新闻

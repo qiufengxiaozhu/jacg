@@ -3,9 +3,11 @@ package com.zte.zudp.admin.mm.news.dao;
 import com.zte.zudp.admin.common.persistence.dao.AbstractDao;
 import com.zte.zudp.admin.mm.news.entity.MMNews;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
+@Repository
 public interface MMNewsDao extends AbstractDao<MMNews>{
 
     /**
@@ -14,10 +16,10 @@ public interface MMNewsDao extends AbstractDao<MMNews>{
 
     public ArrayList<MMNews> find_threeNews();
 
-//    /**
-//     * 根据时区查询前三条数据
-//     */
-//    public ArrayList<MMNews> find_threeNewsTime(String timeZone);
+    /**
+     * 根据时区查询前三条数据
+     */
+    public ArrayList<MMNews> find_threeNewsTime(String TimeZone);
 
 
     /**

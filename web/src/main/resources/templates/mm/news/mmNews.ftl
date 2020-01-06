@@ -2,13 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>公众新闻</title>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
 	<script type="text/javascript" src="/mm/js/rem.js"></script>
 	<script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
 
 	<link rel="stylesheet" href="/mm/css/index.css">
+    <style>
+        .demo-input{
+            height: 0.7rem;
+            width: 84%;
+            background: #FAFAFA;
+        }
+        .btn-s{
+            height: 0.7rem;
+            width: 10%;
+            color: blue;
+            font-size: 0.4rem;
+            background: #fff;
+            vertical-align: middle;
+        }
+        .fb-time{
+            margin-top: 0.1rem;
+        }
+    </style>
 </head>
 <body>
 	<div class="container-app">
@@ -20,18 +38,19 @@
         </div>
 
 		<div class="wrapper wrapper03" id="wrapper01">
-			<div class="scroller">
-				<ul class="clearfix">
-					<li data="0"><a href="javascript:void(0)">新闻列表</a></li>
-				</ul>
+			<div>
+<#--				<ul class="clearfix">-->
+<#--					<li data="0"><a href="javascript:void(0)">新闻列表</a></li>-->
+<#--				</ul>-->
+                <div class="fb-time">
+                    <input type="text" class="demo-input" placeholder="请选择日期" id="test1">
+                    <input type="hidden" value="${TimeZone}" id="timeText">
+                    <input type="button" id="date" onclick="selectDate()" class="btn-s" value="查询">
+                </div>
 			</div>
 		</div>
 
-		<div class="fb-time">
-            <input type="text" class="demo-input" placeholder="请选择日期" id="test1" style="border: 1px ;height:20px">
-            <input type="hidden" value="${TimeZone}" id="timeText">
-            <input type="button" id="date" onclick="selectDate()" style="color: blue;background-color: whitesmoke;border: #fafffa;margin-right: 10px" value="查询">
-        </div>
+
 
         <div class="new-list">
             <#list Newslist! as news >
@@ -223,7 +242,7 @@
          * 返回新闻首页
          */
         function goIndex() {
-            window.location.href='/mm/news/index';
+            window.location.href='/mm/news/index?TimeZone='+${TimeZone};
         }
 
         /**
