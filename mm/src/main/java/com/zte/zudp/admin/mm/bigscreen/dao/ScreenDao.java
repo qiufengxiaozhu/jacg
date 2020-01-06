@@ -138,4 +138,11 @@ public interface ScreenDao extends AbstractDao<Screen> {
      */
     public List<Map> glindexManholeis();
 
+    /**
+     *  查询季度类型总数
+     *
+     * @return
+     */
+    public List<Map> findTypeJdCount();
+
 }

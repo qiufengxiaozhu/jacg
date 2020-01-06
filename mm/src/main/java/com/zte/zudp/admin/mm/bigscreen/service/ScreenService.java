@@ -217,5 +217,16 @@ public class ScreenService extends FileBusinessService<Screen> {
     }
 
 
+    /**
+     *  查询季度类型总数
+     *
+     * @return
+     */
+    public List<Map> findTypeJdCount(){
+
+        return screenDao.findTypeJdCount();
+    }
+
+
 
 }
