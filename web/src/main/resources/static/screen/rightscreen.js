@@ -162,7 +162,7 @@ function rightEvenType() {
     });
 
 
-    zudp.ajax("/mm/screen/getrightEvenType" ).get().then(function (value) {
+    zudp.ajax("/mm/screen/getrightEvenTypes" ).get().then(function (value) {
         
         var data = [];
         var datas = [];
@@ -206,14 +206,30 @@ function rightEvenType() {
                     normal:{
                         label:{
                             show: true,
-                            formatter: '{b} : {c} ({d}%)'
+                            formatter: '{b} : ({d}%)'
                         },
                         labelLine :{show:true}
                     }
                 },
                 data:datas,
+                normal:{
+                    label:{
+                        show: true,
+                        formatter: '{b} : ({d}%)'
+                    },
+                    labelLine :{show:true}
+                },
                 barWidth : 20,
                 barGap:'-50%',
+                label : {
+                    normal : {
+                        formatter: '{b}:({d}%)',
+                        textStyle : {
+                            fontWeight : 'normal',
+                            fontSize : 15
+                        }
+                    }
+                },
                 itemStyle: {
                     normal: {
                         color: function(params) {
@@ -285,7 +301,7 @@ function getrightCaseNum() {
                 axisPointer: {
                     type: 'shadow'
                 },
-                formatter:'{c}万'　　　　//这是关键，在需要的地方加上就行了
+
             },
             legend: {
                 data: ['统计']
@@ -298,15 +314,16 @@ function getrightCaseNum() {
             },
             xAxis: {
                 type: 'value',
-                boundaryGap: [0, 0.01],
+                boundaryGap: [0, 1],
                 axisLabel: {
                     textStyle: {
                         color: '#FFFFFF'
-                    },
-                    formatter:function(value,index){
-                        return value+"万";
                     }
+                },
+                splitLine:{
+                    show:false
                 }
+               // splitNumber : 1
             },
             yAxis: {
                 type: 'category',
@@ -315,14 +332,31 @@ function getrightCaseNum() {
                     textStyle: {
                         color: '#FFFFFF'
                     }
-                }
+                },
+                splitLine:{
+                    show:false
+                },
+                splitNumber : 1
 
             },
             series: [
                 {
-                    name: '2011年',
+                    name: '2018年',
                     type: 'bar',
-                    data: datas
+                    data: datas,
+                    center: ['60%', '20%'],
+                    itemStyle: {        //上方显示数值
+                        normal: {
+                            label: {
+                                show: true, //开启显示
+                                position: 'right', //在上方显示
+                                textStyle: { //数值样式
+                                    color: '#FFFFFF',
+                                    fontSize: 16
+                                }
+                            }
+                        }
+                    }
                 }
             ]
 

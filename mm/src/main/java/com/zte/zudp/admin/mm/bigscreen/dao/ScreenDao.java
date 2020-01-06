@@ -145,4 +145,11 @@ public interface ScreenDao extends AbstractDao<Screen> {
      */
     public List<Map> findTypeJdCount();
 
+    /**
+     * 查询类型统计
+     *
+     * @return
+     */
+    public List<Map> getrightEvenTypes();
+
 }
