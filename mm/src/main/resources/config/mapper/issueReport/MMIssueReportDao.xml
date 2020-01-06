@@ -30,6 +30,7 @@
     <!--根据id来查询详情-->
     <select id="get" resultType="com.zte.zudp.admin.mm.issueReport.entity.MMIssueReport">
         SELECT
+        id,
         t1.title,
         t1.description,
         DATE_FORMAT(t1.complainDate,'%Y-%m-%d %T') complainDate,
