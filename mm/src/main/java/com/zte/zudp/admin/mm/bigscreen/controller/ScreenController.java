@@ -211,7 +211,7 @@ public class ScreenController {
 
         //社区遍历
         //大类最大 前五条
-        List<Map> list = screenService.findType();
+       /* List<Map> list = screenService.findType();
         //保存值
         List<Map> listMap=new ArrayList<>();
         //根据类型遍历
@@ -227,7 +227,41 @@ public class ScreenController {
             map.put("name",list.get(i).get("name").toString());
             listMap.add(map);
 
+        }*/
+
+
+
+        //大类最大 前五条
+       List<Map> list = screenService.findType();
+
+        //社区遍历
+        //大类最大 前五条
+        List<Map> listcout = screenService.findTypeJdCount();
+        //保存值
+        List<Map> listMap=new ArrayList<>();
+        //根据类型遍历
+        for (int i = 0; i < list.size(); i++) {
+
+            Map map=new HashMap();
+            Map map2=list.get(i);
+            //遍历季度
+            for (int j = 0; j < listtype.size(); j++) {
+
+                for (int k = 0; k < listcout.size(); k++) {
+                     if (listtype.get(j).toString().equals(listcout.get(k).get("jd").toString()) && map2.get("name").toString().equals(listcout.get(k).get("MAINTYPENAME").toString())){
+                         map.put(listtype.get(j),listcout.get(k).get("num").toString());
+                     }
+
+
+                }
+
+
+            }
+            map.put("name",list.get(i).get("name").toString());
+            listMap.add(map);
+
         }
+
 
 
         Map map=new HashMap();
