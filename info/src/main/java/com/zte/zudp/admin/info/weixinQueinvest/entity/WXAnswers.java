@@ -18,6 +18,36 @@ public class WXAnswers extends DataEntity {
 
     private String title;
     private String contents;
+    // 答题人名称
+    private String name;
+    // 创建时间
+    private String pubdate;
+    // 答题时间
+    private String answerTime;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPubdate() {
+        return pubdate;
+    }
+
+    public void setPubdate(String pubdate) {
+        this.pubdate = pubdate;
+    }
+
+    public String getAnswerTime() {
+        return answerTime;
+    }
+
+    public void setAnswerTime(String answerTime) {
+        this.answerTime = answerTime;
+    }
 
     public String getTitle() {
         return title;

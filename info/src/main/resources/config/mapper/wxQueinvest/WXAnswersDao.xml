@@ -8,10 +8,11 @@
 <!--查询出所有的答案-->
     <select id="findList" resultType="com.zte.zudp.admin.info.weixinQueinvest.entity.WXAnswers" >
           select
-             t1.answerOption optContext,
-             t2.title title,
-             t3.contents contents
-
+        t1.name name,
+        t1.id id,
+        t2.title title,
+        DATE_FORMAT( t2.pubdate, '%Y-%m-%d %T' ) pubdate,
+        DATE_FORMAT( t1.answerTime, '%Y-%m-%d %T' ) answerTime
           from  jacg_weixin_answers t1
 
           left join  jacg_weixin_queinvest t2  on  t1.queinvestId = t2.id
@@ -19,8 +20,9 @@
 
           where 1=1
       <if test="title != null and title != '' ">
-          and t1.title like concat('%', #{title}, '%')
+          and t2.title like concat('%', #{title}, '%')
       </if>
+        group by t1.name ,t1.queinvestId
 
 
 
@@ -29,10 +31,9 @@
 
 
     <!--详情-->
-    <select id="get" resultType="com.zte.zudp.admin.info.weixinQueinvest.entity.WXAnswers" >
+    <select id="getDetail" resultType="java.util.Map" >
         select
         t1.answerOption optContext,
-        t2.title title,
         t3.contents contents
 
         from  jacg_weixin_answers t1
@@ -40,7 +41,7 @@
         left join  jacg_weixin_queinvest t2  on  t1.queinvestId = t2.id
         left join jacg_weixin_questions t3  on  t1.questions_id = t3.id
 
-        where t1.id = #{id}
+        where t1.name = #{id} and t2.title = #{queName}
 
     </select>
 

@@ -32,7 +32,7 @@ public interface MMQueinvestDao extends AbstractDao<MMQueinvest> {
      * @param str
      * @return
      */
-    MMQueinvest selectAllByAnswer(@Param("str") String str);
+    MMQueinvest selectAllByAnswer(@Param("str") String str,@Param("queId")String queId);
 
     /**
      * 将获得的答案 ，问卷id，题目id新增到答案表中

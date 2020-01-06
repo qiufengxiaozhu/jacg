@@ -8,7 +8,6 @@
 <!--查询出所有的答案(用户所选的答案)列表-->
     <select id="findList" resultType="com.zte.zudp.admin.info.queinvest.entity.Answers" >
         select
-
         t1.name name,
         t1.id id,
         t2.title title,
@@ -21,10 +20,11 @@
 
           where 1=1
       <if test="title != null and title != '' ">
-          and t1.title  like concat('%', #{title}, '%')
+          and t2.title  like concat('%', #{title}, '%')
       </if>
+        group by t1.name ,t1.queinvestId
 
-        group by name
+
 
 
 
@@ -43,7 +43,7 @@
         left join  jacg_queinvest t2  on  t1.queinvestId = t2.id
         left join jacg_questions t3  on  t1.questions_id = t3.id
 
-        where t1.name = #{id}
+        where t1.name = #{id} and t2.title = #{queName}
 
     </select>
 

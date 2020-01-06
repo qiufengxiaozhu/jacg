@@ -7,23 +7,27 @@
     <!--最新-->
     <select id="findMostNew" resultType="java.util.Map">
        SELECT
-	( CASE WHEN  NEWINSTTIME IS NULL THEN '' else  DATE_FORMAT( NEWINSTTIME, '%Y-%m-%d %T' )  END ) AS time,
+      (case when DISTRICTNAME is null then '' else DISTRICTNAME end)as disName,
+      (case when STREETNAME is null then '' else STREETNAME end)as streeName,
+	( CASE WHEN  DEADLINE IS NULL THEN '' else  DATE_FORMAT( NEWINSTTIME, '%Y-%m-%d %T' )  END ) AS time,
 	( CASE WHEN MAINTYPENAME IS NULL THEN '' else  MAINTYPENAME END ) AS name,
 	( CASE WHEN LENGTH( EVENTDESC ) > 20 THEN CONCAT( SUBSTRING( EVENTDESC, 1, 20 ), '...' ) ELSE EVENTDESC END ) AS description
 FROM
 	tocgcase
         where    date(NEWINSTTIME) <![CDATA[ >= ]]> DATE_SUB(CURDATE(), INTERVAL 18 month)
         ORDER BY NEWINSTTIME desc
-        LIMIT 3
+        LIMIT 10
 
 
     </select>
     <!--最长-->
     <select id="findMostLength" resultType="java.util.Map">
         SELECT
-         USEDTIME  maxTime,
-         DATE_FORMAT(NEWINSTTIME,'%Y-%m-%d %T')  time,
-        MAINTYPENAME name,
+        (case when DISTRICTNAME is null then '' else DISTRICTNAME end)as disName,
+        (case when STREETNAME is null then '' else STREETNAME end)as streeName,
+         (case when USEDTIME is null then '' else concat(USEDTIME,'h')  end)as maxTime,
+         (case when DEADLINE is null then '' else DATE_FORMAT(DEADLINE,'%Y-%m-%d %T') end)as time,
+         (case when MAINTYPENAME is null then '' else MAINTYPENAME  end)as name,
         (CASE WHEN LENGTH(EVENTDESC)>20
         THEN CONCAT(SUBSTRING(EVENTDESC,1,20),'...')
         ELSE EVENTDESC END
@@ -32,16 +36,18 @@ FROM
         FROM tocgcase
         where   date(NEWINSTTIME) <![CDATA[ >= ]]> DATE_SUB(CURDATE(), INTERVAL 18 month)
         ORDER BY USEDTIME desc
-        LIMIT 3
+        LIMIT 10
 
 
     </select>
     <!--最频繁-->
     <select id="findMostFrequent" resultType="java.util.Map">
         SELECT
+        (case when DISTRICTNAME is null then '' else DISTRICTNAME end)as disName,
+        (case when MAINTYPENAME is null then '' else MAINTYPENAME end)as name,
+        (case when STREETNAME is null then '' else STREETNAME end)as streeName,
+        (case when DEADLINE is null then '' else DATE_FORMAT(DEADLINE,'%Y-%m-%d %T') end)as time,
         count(MAINTYPENAME) num,
-         DATE_FORMAT(NEWINSTTIME,'%Y-%m-%d %T')  time,
-        MAINTYPENAME name,
         (CASE WHEN LENGTH(EVENTDESC)>20
         THEN CONCAT(SUBSTRING(EVENTDESC,1,20),'...')
         ELSE EVENTDESC END
@@ -51,7 +57,7 @@ FROM
         where  date(NEWINSTTIME)  <![CDATA[ >= ]]>  DATE_SUB(CURDATE(), INTERVAL 18 month)
         GROUP BY MAINTYPENAME
         ORDER BY  count(MAINTYPENAME) desc
-        LIMIT 3
+        LIMIT 10
 
 
 

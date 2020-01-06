@@ -206,7 +206,7 @@
                 <div class="ri-bg">
                     <div class="ri-query flex">
                         <div class="ri-left flex">
-                            <div class="chart4" id="chart4" style="width:280px;height:200px"></div>
+                            <div class="chart4" id="chart4" style="width:280px;height:160px"></div>
                         </div>
                     </div>
                 </div>
@@ -256,7 +256,7 @@
 
     <div class="modal-ly" style="display: none;"  id="company_amoun">
         <div class="mask"></div>
-        <div class="modal-cnts mbox flex flex-fx-c" style="">
+        <div class="modal-cnt mbox flex flex-fx-c" style="">
             <div class="g-info-tit flex flex-c-c">
                 <i class="i-icon icon-tb"></i>
                 <span class="flex-1" id="qyssfx">关联分析类型案件统计</span>
@@ -282,25 +282,29 @@
         </div>
         <table class="gridtable show-hide0 zhizui" id ="table002">
             <tr>
-                <th>大类</th>
+                <th>区名</th>
+                <th>街道</th>
+                <th>大类名称</th>
                 <th>问题描述</th>
-                <th>时间</th>
+                <th>截止时间</th>
             </tr>
         </table>
         <table class="gridtable show-hide1 zhizui" id ="table003">
             <tr>
-                <th>大类</th>
+                <th>区名</th>
+                <th>街道</th>
+                <th>大类名称</th>
                 <th>问题描述</th>
-                <th>时间</th>
-                <th>持续时间</th>
+                <th>截止时间</th>
             </tr>
         </table>
         <table class="gridtable show-hide2 zhizui" id ="table004">
             <tr>
-                <th>大类</th>
+                <th>区名</th>
+                <th>街道</th>
+                <th>大类名称</th>
                 <th>问题描述</th>
-                <th>时间</th>
-                <th>案件数量</th>
+                <th>截止时间</th>
             </tr>
         </table>
 
@@ -327,7 +331,7 @@
                     <th>时间</th>
                 </tr>
             </table>
-            <div class="page-list">
+            <div class="page-list ">
                 <a onclick="firstPage()" class="page-li page-prev">首页</a>
                 <a  onclick="uppers()" class="page-li on">上一页</a>
                 <a onclick="lowers()" class="page-li">下一页</a>
@@ -336,14 +340,17 @@
         </div>
     </div>
 </div>
-<div class="mess" style="display: none;" id="myModal5">
+<div class="mess" style="display: none;">
     <div class="close me-close"><img src="/zhizui/img/close.png"></div>
     <div class="me-relative">
         <div class="be-center">案件详情</div>
         <div class="me-first">
             <div class="me-high">
-                <#--<div class="me-fl-left" id ="name">案件名称:&nbsp;XXXXX</div>-->
-                    <div class="me-fl-right flex" >案件类型:<div id="nameId01"></div>&nbsp;&nbsp;<div id="nameId02"></div></div>
+                <div class="me-getres" id="descriptionId">问题描述:</div>
+                <div class="put-tex"></div>
+            </div>
+            <div class="me-high">
+                    <div class="me-fl-left flex" >案件类型:<div id="nameId01"></div>&nbsp;&nbsp;<div id="nameId02"></div></div>
             </div>
             <div class="me-high" id="addressId">地址:&nbsp;东湖区莎莎街道659号</div>
             <div class="me-high">
@@ -358,10 +365,7 @@
                 <div class="me-getres" id="advId">处理意见:</div>
                 <div>深刻的较高的是快乐跟你说的圣诞节很谨慎的感觉到石圪节多斯拉克发货的世界观恢复健康该数据库定时关机看电视关键是读后感可接受的时代峻峰好大风交互的</div>
             </div>
-            <div class="me-resolve">
-                <div class="me-getres" id="descriptionId">问题描述:</div>
-                <div class="put-tex"></div>
-            </div>
+
         </div>
     </div>
 </div>
@@ -381,7 +385,7 @@
         // },
         tooltip: {},
         // 曲线类型名称
-        color:['#2db7f5','#ff6600','#808bc6','FFA500'],
+        color:['#2db7f5','#ff6600','#7FFFAA','#FFA500'],
         legend: {
             textStyle:{
                 color: '#ffffff'//字体颜色
@@ -389,7 +393,7 @@
             data: ['庐陵新区', '青原区', '吉州区', '井开区']
         },
         grid: {
-            left: '0%',
+            left: '7%',
             right: '7%',
             bottom: '3%',
             containLabel: true
@@ -504,8 +508,8 @@
             var index = $(".area-2").index($(this));
             $(".area-2").removeClass("on").eq(index).addClass("on")
         })
-
     </script>
+
 
 
 

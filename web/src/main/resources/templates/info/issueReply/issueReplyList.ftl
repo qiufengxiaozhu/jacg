@@ -156,6 +156,7 @@
                             <div class="col-sm-6">
                                 <textarea placeholder="回复内容" class="form-control" rows="2" cols="" name="replyContent" id="replyContent"></textarea>
                             </div>
+                            <i class="i_context my-i_context">*</i>
                         </div>
 
                         <div class="form-group" id ="replyDateId">
@@ -236,7 +237,30 @@
 //    var startDate = new Date();
     $(document).ready(function () {
 
+        $("#kind_form").validate({
+            rules: {
+                // 回复内容
+                replyContent:{
+                    required:true,
+                    rangelength:[0,15]
+                },
+                replyUserId:{
+                    rangelength:[0,5]
+                }
 
+            },
+
+            // 提示信息
+            messages: {
+                replyContent: {
+                    required:"请输入回复内容",
+                    rangelength: "字符个数不能超过15"
+                },
+                replyUserId:{
+                    rangelength:"字符个数不能超过5"
+                }
+            }
+        });
 
 
         findList();

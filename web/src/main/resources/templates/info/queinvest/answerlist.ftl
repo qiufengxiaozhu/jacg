@@ -183,29 +183,35 @@
 
     // 详情
     $(document).on("click", '#getDetail', function (e) {
+        // 清除模态框
+        $(".list01").empty();
         // 弹出模态框
         $("#myModal5").modal("show");
-        // 清除模态框
-        $("#list01").empty();
         //清除冒泡
         if (e && e.stopPropagation) {
             e.stopPropagation();
         } else {
             window.e.cancelBubble = true;
         }
-        // 获取到这一行的id，用于查询详情
+        // 获取到这一行的答题人，用于查询详情
         var id = $(this).parent().prev().prev().prev().text();
-        id = JSON.stringify(id);
+//        id = JSON.stringify(id);
+        var queName = $(this).parent().prev().prev().prev().prev().text();
+        var objJson ={
+          id:id,
+          queName:queName
+        };
+        objJson =  JSON.stringify(objJson);
         console.log(id);
         // 发送ajax请求
-        zudp.ajax("/api/answer/getDetail").post(id).then(function (value) {
+        zudp.ajax("/api/answer/getDetail").post(objJson).then(function (value) {
                 for(var i=0;i<value.length;i++){
                       var contents =  value[i]["contents"];
                       var optContext =  value[i]["optContext"];
 
                     var tr;
                     tr= '<td>'+contents+'</td>'+'<td>'+optContext+'</td>';
-                    $("#tableList").append('<tr id="list01">'+tr+'</tr>');
+                    $("#tableList").append('<tr class="list01">'+tr+'</tr>');
                 }
         })
 

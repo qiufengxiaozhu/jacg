@@ -1,5 +1,6 @@
 package com.zte.zudp.admin.mm.issueReport.service;
 
+import com.zte.zudp.admin.common.persistence.service.BusinessService;
 import com.zte.zudp.admin.common.util.IDUtil;
 import com.zte.zudp.admin.info.attachDoc.service.FileBusinessService;
 import com.zte.zudp.admin.mm.issueReport.dao.MMIssueReportDao;
@@ -16,7 +17,7 @@ import java.util.Map;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
-public class MMIssueReportService extends FileBusinessService<MMIssueReport>{
+public class MMIssueReportService extends FileBusinessService<MMIssueReport> {
     @Autowired
     private MMIssueReportDao mmIssueReportDao;
     /**
@@ -52,6 +53,7 @@ public class MMIssueReportService extends FileBusinessService<MMIssueReport>{
     public synchronized void afterInsert(MMIssueReport mmIssueReport) {
         super.afterInsert(mmIssueReport);
     }
+
 
     /**
      * 去数据库中匹配电话和用户名称

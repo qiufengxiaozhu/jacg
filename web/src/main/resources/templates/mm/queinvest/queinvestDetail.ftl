@@ -49,13 +49,14 @@
     <form class="form-class" action="/mm/queinvest/test" method="get" onsubmit="return check()">
 
     <#list list! as question>
-        <#--<input type="hidden" value="${list?size}" class="queSize" name = "queSize">-->
         <div>
             <div class="ui-flex ui-flex-align-start" style="border-bottom:1px solid #05B7F3;width: auto;">
                 <p class="exam-question">${question.rowNum!}、${question.contents!}</p>
             </div>
             <div class="ui-flex ui-flex-align-start" style="border-bottom:1px solid #05B7F3;width: auto;">
                 <input type="hidden" value="${list?size}" class="queSize" name = "queSize">
+                <#--题目id-->
+                <input type="hidden" value="${question.questionId}" class="queSize" name = "queId">
                 <input type="radio" name="${question.rowNum!}"
                        value="${question.choiceText01!}">${question.choiceText01!}</br>
                 <input type="radio" name="${question.rowNum!}"

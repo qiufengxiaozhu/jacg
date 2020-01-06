@@ -36,8 +36,10 @@ public class AnswerContrller extends AbstractCRUDController<Answers>{
      */
     @ResponseBody
     @RequestMapping(value = "/getDetail",method = RequestMethod.POST)
-    public List<Map> getDetail(@RequestBody Object id ){
-        List<Map> list = answerService.getDetail(id);
+    public List<Map> getDetail(@RequestBody Map map ){
+        Object id = map.get("id");
+        Object queName = map.get("queName");
+        List<Map> list = answerService.getDetail(id,queName);
         return list;
     }
 
