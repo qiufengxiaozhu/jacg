@@ -100,7 +100,7 @@
         )
         VALUE (
         #{id}, #{title},#{content}, #{contentnohtml},
-        '编辑状态',#{fk_categoryid},
+        '未发布状态',#{fk_categoryid},
         #{timeZone},
         '0',
         #{createDate},
@@ -133,6 +133,7 @@
         <foreach collection="array" item="i" separator="," open="(" close=")">
             #{i}
         </foreach>
+        and status != '已发布状态'
     </delete>
 
     <update id="updateRelease">

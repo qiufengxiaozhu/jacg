@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>吉安城管</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <script type="text/javascript" src="/mm/js/rem.js"></script>
     <script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
@@ -181,7 +181,8 @@
 <#--<div class="loader loader-smartphone is-active" data-screen="检测中..." id="checkIng"></div>-->
 </body>
 <script>
-    var timeZone;//当前时区
+    var timeZone = '${Session.timeZone}';//当前时区
+
     $(function(){
         $("#checkIng").hide();
         var mySwiper = new Swiper('.swiper-container',{
@@ -205,7 +206,8 @@
         $(".mask").on("click",function(){
             $(".slt-city").hide();
             timeZone = $(".place-float .city-selected").attr("id");
-//            alert("timeZone:"+timeZone)
+            // alert("timeZone:"+timeZone);
+            window.location.href='/mm/news/index?TimeZone='+timeZone;
         });
         $(".place-float .city-pos").on("click",function(){
             var index = $(".place-float .city-pos").index($(this));
@@ -301,7 +303,7 @@
         var time = timeZone;
         if(time == null )
             time = 1;
-//        alert("timeZone:"+time);
+       // alert("timeZone:"+time);
         window.location.href='/mm/news/mmNews?timeZone='+time;
     }
 

@@ -1,7 +1,6 @@
 package com.zte.zudp.admin.mm.loginCtrl;
 
 
-import com.zte.zudp.admin.info.news.entity.News;
 import com.zte.zudp.admin.mm.news.entity.MMNews;
 import com.zte.zudp.admin.mm.news.service.MMNewsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,13 +8,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -37,6 +34,7 @@ public class loginController {
         HttpSession session = getRequest().getSession();
         session.setAttribute("userName",userName);
         session.setAttribute("userPhone",userPhone);
+        session.setAttribute("timeZone","1");   //设置时区
         session.setMaxInactiveInterval(30*60);
         System.out.println(session);
 

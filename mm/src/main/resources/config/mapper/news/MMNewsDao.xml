@@ -58,29 +58,18 @@
         n.title,
         n.content,
         n.contentnohtml,
-        n.STATUS,
-        t2.category category,
+        n.status,
+        qgq_category.category category,
         n.time_zone,
-        DATE_FORMAT( n.news_date, "%Y-%m-%d %T" ) news_date,
+        DATE_FORMAT(n.news_date,"%Y-%m-%d %T") news_date,
         n.clicks,
-        n.create_date ,
+        n.create_date,
         t3.path path
-        FROM
-        qgq_news n
-        left join   qgq_category t2 ON n.fk_categoryid = t2.id
+        from qgq_news n
+        left join qgq_category on n.fk_categoryid = qgq_category.id
         left join sys_attachments t3  on  t3.billid  =  n.id
-
-        WHERE
-        n.del != 1
-        AND n.STATUS = "已发布状态"
-        <if test="timeZone == '1' ">
-            and 1=1
-        </if>
-        <if test="timeZone != '1' ">
-            and `n.time_zone` = #{timeZone}
-        </if>
-        ORDER BY
-        n.news_date DESC
+        where n.del!=1 and n.status="已发布状态" and n.time_zone = #{TimeZone}
+        ORDER BY n.news_date desc
         LIMIT 3
     </select>
 

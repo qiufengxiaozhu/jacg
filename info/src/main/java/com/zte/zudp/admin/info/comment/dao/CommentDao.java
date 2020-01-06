@@ -3,16 +3,16 @@ package com.zte.zudp.admin.info.comment.dao;
 import com.zte.zudp.admin.common.persistence.dao.AbstractDao;
 import com.zte.zudp.admin.info.comment.entity.Comment;
 import org.apache.ibatis.annotations.Param;
-import org.apache.xmlbeans.impl.jam.mutable.MComment;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @Description ${}
  * @Author MMCommentDao
  * @Date 2019/12/19 13:46
  **/
+@Repository
 public interface CommentDao extends AbstractDao<Comment> {
 
     /**

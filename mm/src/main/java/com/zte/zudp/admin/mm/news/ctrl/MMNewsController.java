@@ -2,9 +2,7 @@ package com.zte.zudp.admin.mm.news.ctrl;
 
 import com.zte.zudp.admin.common.annotation.JSON;
 import com.zte.zudp.admin.common.util.EncryptUtil;
-import com.zte.zudp.admin.common.util.StringUtil;
 import com.zte.zudp.admin.common.util.WebUtil;
-import com.zte.zudp.admin.info.news.service.NewsService;
 import com.zte.zudp.admin.mm.news.entity.MMNews;
 import com.zte.zudp.admin.mm.news.service.MMNewsService;
 import com.zte.zudp.admin.modules.sys.user.entity.User;
@@ -13,19 +11,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.security.auth.Subject;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.List;
-import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/mm/news")
@@ -182,12 +176,30 @@ public class MMNewsController {
      * @return
      */
     @GetMapping("/index")
-    public String index(Model model) {
+    public String index(Model model,@RequestParam(value = "TimeZone",required = false) String TimeZone,HttpServletRequest request) {
 
-        //获取前三条新闻
-        ArrayList<MMNews> newslist = newsService.find_threeNews();
+        HttpSession session = request.getSession();
 
-        model.addAttribute("Newslist",newslist);
+        ArrayList<MMNews> newslist = null;
+
+        //查询所有区前三条新闻
+        if("1".equals(TimeZone)) {
+
+            newslist = newsService.find_threeNews();
+            session.setAttribute("timeZone", "1");
+        }else if(TimeZone == null ){
+
+            Object newTimeZone = request.getSession().getAttribute("timeZone");
+            newslist = newsService.find_threeNewsTime(newTimeZone.toString());
+        }
+        //根据时区查询前三条新闻
+        else{
+
+            newslist = newsService.find_threeNewsTime(TimeZone);
+            session.setAttribute("timeZone", TimeZone);
+        }
+
+        model.addAttribute("Newslist", newslist);
 
         return "/mm/news/index";
     }

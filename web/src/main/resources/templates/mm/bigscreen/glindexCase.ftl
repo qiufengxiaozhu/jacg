@@ -31,24 +31,31 @@
         }
         .bs-table>tbody>tr>td, .bs-table>thead>tr>th{border: 1px solid #00fcff;color:#fff}
         .bs-table{ border: 1px solid #00fcff;   border-collapse: collapse;box-shadow: 0px 0px 12px #00fcff;}
+        .page-list div{
+            float: left;
+            padding: 0 0.1rem;
+            border: 1px solid #CEC2E5;
+            box-shadow: 0px 0px 10px rgba(206,194,229,0.4);
+            margin-left: 0.5rem;
+            margin-top: 0.3rem;
+        }
     </style>
 
     <style>
-        .page-list{text-align: center}
-        .page-list .page-li.prev{font-family: SimHei}
-        .page-list .page-li.next{font-family: SimHei}
-        .page-list .page-li.on{color:#000000}
-        .page-list .page-li{    color: #808080;
-            padding: 0.6rem 1rem;
-            font-size: 1.5rem;
-            background: rgba(255,255,255,0.2);
-            margin: 0 0.3rem;
-            border-radius: 50%;}
         .yt-main{max-height: 100%;}
         .yt-tab-cnt{width: 100%;padding-top: 3rem}
         .modal-content{background: transparent}
         .inmodal .modal-body { background: transparent;  }
         .modal-title, .my-control-label{color: #fff}
+        .page-li{
+            height: 0.6rem;
+            width: 1.2rem;
+            color: #fff;
+            font-size: 0.25rem;
+            text-align: center;
+            line-height: 0.6rem;
+            margin-left: ;
+        }
     </style>
 
 </head>
@@ -70,6 +77,12 @@
             <tbody id="tables">
             </tbody>
         </table>
+        <div class="page-list flex">
+            <div onclick="firstPage()" class="page-li page-prev">首页</div>
+            <div  onclick="uppers()" class="page-li on">上一页</div>
+            <div onclick="lowers()" class="page-li">下一页</div>
+            <div onclick="endpage()" class="page-li page-next">尾页</div>
+        </div>
     </div>
 </div>
 <#--以下是模态框-->
@@ -129,7 +142,7 @@
 
 <script>
     $('.close').on('click',function(){
-        $('.mask').hide();
+        $('.mess').hide();
     })
 
     var page=1;

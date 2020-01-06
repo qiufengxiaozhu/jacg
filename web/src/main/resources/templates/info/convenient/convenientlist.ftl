@@ -20,6 +20,21 @@
     <#--<link href="/css/third/bootstrap-select.css" rel="stylesheet">-->
 
     <style>
+
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+
+        /*去掉百度地图标志*/
+        .BMap_cpyCtrl {
+            display: none;
+        }
+
+        .anchorBL {
+            display: none;
+        }
+
         .webuploader-container div {
             width:80px;
         }
@@ -147,7 +162,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label my-control-label ">位置：</label>
                                 <div class="col-sm-6">
-                                    <input type="text" name="location" maxlength="64" id="location" placeholder="位置" class="form-control">
+                                    <textarea name="location" maxlength="64" id="location" placeholder="位置" class="form-control"></textarea>
                                 </div>
                                 <div>
                                     <i class="i_context my-i_context">*</i>
@@ -159,9 +174,6 @@
                                 <div class="col-sm-6">
                                     <input type="text" name="longitude" readonly="readonly" maxlength="64" id="lng" placeholder="经度" class="form-control">
                                 </div>
-                                <div>
-                                    <i class="i_context my-i_context">*</i>
-                                </div>
                             </div>
 
                             <div class="form-group">
@@ -169,19 +181,15 @@
                                 <div class="col-sm-6">
                                     <input type="text" name="latitude" readonly="readonly" maxlength="64" id="lat" placeholder="纬度" class="form-control">
                                 </div>
-                                <div>
-                                    <i class="i_context my-i_context">*</i>
-                                </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label my-control-label ">描述：</label>
                                 <div class="col-sm-6">
-                                    <#--<input type="text" name="description" maxlength="64" id="description" placeholder="描述" class="form-control">-->
-                                        <textarea class="form-control" rows="5" cols="" name="description" id="description"></textarea>
+                                    <textarea class="form-control" rows="5" cols="" name="description" id="description"></textarea>
                                 </div>
                                 <div>
-                                    <i class="i_context my-i_context">*</i>
+                                    <i class="i_context my-i_contdescriptionext">*</i>
                                 </div>
                             </div>
 
@@ -257,11 +265,46 @@
 
     var typeId;//类别id
 
+    var tpgs="bmp,jpg,png,gif,jpeg";//附件上传格式控制
+
     var dataTable;
     var urlstr="/api/convenient";
     var formIdStr="#post_form";
     var sys_url=window.location.host;
     $(document).ready(function () {
+
+        // 新建  验证
+        $("#post_form").validate({
+            rules: {
+                // 必填项
+                name:{
+                    required:true,
+                    rangelength:[0,10]
+                },
+                location:{
+                    required:true
+                },
+                description:{
+                    required:true,
+                    rangelength:[0,100]
+                }
+            },
+
+            // 提示信息
+            messages: {
+                name: {
+                    required: "请输入名称",
+                    rangelength:"字符个数不能超过10"
+                },
+                location: {
+                    required: "请输入位置"
+                },
+                description: {
+                    required: "请输入描述",
+                    rangelength:"字符个数不能超过100"
+                }
+            }
+        });
 
         findList();
 
@@ -272,7 +315,7 @@
             $("#attachIdss").val('');
 
             //初始化上传工具
-            initUpload();
+            initUpload(tpgs);
         };
 
         var setOtherVal = function () {
@@ -310,7 +353,7 @@
 
             $("#xg_rar").html('上传附件');
             //附件控件
-            initUpload();
+            initUpload(tpgs);
 
         };
 
@@ -431,7 +474,7 @@
     }
 
 
-    function initUpload(){
+    function initUpload(tpgs){
 
         var uploader = WebUploader.create({
             // swf文件路径
@@ -449,7 +492,7 @@
             //重复上传
             duplicate :true,
             accept:{
-                extensions:'bmp,jpg,png,rar,gif,zip,xls,xlsx,doc,docx',
+                extensions: tpgs,
                 title:'file',
                 mimeTypes:'*/*'
             }
@@ -467,6 +510,12 @@
                     "<input type='hidden' name='attachName' value='"+name+"'>" +
                     "</p>");
 
+        });
+
+        uploader.on("error", function (type) {
+            if (type == "Q_TYPE_DENIED") {
+                alert("请上传"+tpgs+"格式文件");
+            }
         });
     }
     //删除，删除节点
@@ -574,10 +623,10 @@
         geoc.getLocation(e.point, function (rs) {
             var addComp = rs.addressComponents;
             var address = addComp.province + addComp.city + addComp.district + addComp.street + addComp.streetNumber;
-            if (confirm("确定要地址是" + address + "?")) {
+            // if (confirm("确定要地址是" + address + "?")) {
                 // document.getElementById('allmap').style.display = 'none';
                 document.getElementById('location').value = address;
-            }
+            // }
         });
         addMarker(e.point);
     }

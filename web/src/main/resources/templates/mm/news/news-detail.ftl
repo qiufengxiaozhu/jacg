@@ -8,7 +8,7 @@
     <script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="/mm/css/index.css">
     <link rel="stylesheet" href="/mm/css/main.css">
-    <title>Document</title>
+    <title>新闻详情</title>
 </head>
 <body>
 <div class="content-box container-app">

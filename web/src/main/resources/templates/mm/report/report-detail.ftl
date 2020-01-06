@@ -82,7 +82,7 @@
 
         <div class="flex inv-cont">
             <div class="">回复人:</div>
-            <div class="inv-right"  id="replyDate">吉安政府</div>
+            <div class="inv-right"  id="replyDate">${mm.replyUserId!}</div>
         </div>
 
         <div class="flex inv-cont">

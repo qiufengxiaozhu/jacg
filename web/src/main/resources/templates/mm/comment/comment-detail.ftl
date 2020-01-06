@@ -7,8 +7,7 @@
     <script type="text/javascript" src="/mm/js/rem.js"></script>
     <script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="/mm/css/index.css">
-    <link rel="stylesheet" href="/mm/css/main.css">
-    <title>Document</title>
+    <title>上报详情</title>
 </head>
 <body>
 <div class="content-box container-app">
@@ -78,12 +77,12 @@
         <br><br>
         <div class="inv-cont inv-special">
             <div class="">上报回复:</div>
-            <div class="inv-right inv-right-special" id="content">${Report.replyContent!}</div>
+            <div class="inv-right inv-right-special" id="content">${Report.replyContent!""}</div>
         </div>
 
         <div class="flex inv-cont">
             <div class="">回复人:</div>
-            <div class="inv-right"  id="replyDate">吉安政府</div>
+            <div class="inv-right"  id="replyDate">${Report.replyUserId!""}</div>
         </div>
 
         <div class="flex inv-cont">
@@ -93,7 +92,7 @@
 
         <div class="flex inv-cont">
             <div class="">回复时间:</div>
-            <div class="inv-right"  id="replyDate">${Report.replyDate!}</div>
+            <div class="inv-right"  id="replyDate">${Report.replyDate!""}</div>
         </div>
 
         <div class="de-lists">
