@@ -27,8 +27,8 @@ public class WXMMQueinvestService extends BusinessService<WXMMQueinvest> {
      * 查询所有信息
      * @return
      */
-    public List<WXMMQueinvest> selectAll() {
-        return wxmmQueinvestDao.selectAll();
+    public List<WXMMQueinvest> selectAll(Object userPhone) {
+        return wxmmQueinvestDao.selectAll(userPhone);
     }
 
     /**
@@ -45,8 +45,8 @@ public class WXMMQueinvestService extends BusinessService<WXMMQueinvest> {
      * @param str
      * @return
      */
-    public WXMMQueinvest selectAllByAnswer(String str) {
-        return  wxmmQueinvestDao.selectAllByAnswer(str);
+    public WXMMQueinvest selectAllByAnswer(String str,String queId) {
+        return  wxmmQueinvestDao.selectAllByAnswer(str,queId);
     }
 
     /**
@@ -55,8 +55,8 @@ public class WXMMQueinvestService extends BusinessService<WXMMQueinvest> {
      * @param questionId
      * @param optContext
      */
-    public void insertToAnswer(String id,String queinvestId, String questionId, String optContext) {
-        wxmmQueinvestDao.insertToAnswer(id,queinvestId,questionId,optContext);
+    public void insertToAnswer(String id,String queinvestId, String questionId, String optContext,Object userPhone,Object userName) {
+        wxmmQueinvestDao.insertToAnswer(id,queinvestId,questionId,optContext,userPhone,userName);
     }
 
 

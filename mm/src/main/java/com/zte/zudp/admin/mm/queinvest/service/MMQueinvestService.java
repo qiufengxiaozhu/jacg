@@ -54,8 +54,8 @@ public class MMQueinvestService  extends BusinessService<MMQueinvest> {
      * @param str
      * @return
      */
-    public MMQueinvest selectAllByAnswer(String str) {
-        return  mmQueinvestDao.selectAllByAnswer(str);
+    public MMQueinvest selectAllByAnswer(String str,String queId) {
+        return  mmQueinvestDao.selectAllByAnswer(str,queId);
     }
 
     /**

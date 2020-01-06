@@ -34,7 +34,7 @@
          DATE_FORMAT(t1.complainDate,'%Y-%m-%d %T') complainDate,
          t1.address address,
          t1.replyContent replyContent,
-         t1.replyDate replyDate,
+         DATE_FORMAT(t1.replyDate,'%Y-%m-%d %T') replyDate,
          t1.replyUserId replyUserId
         from jacg_issuereport t1
         where id=#{id}

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -34,8 +35,10 @@ public class WXMMQueinvestController {
      * @return
      */
     @RequestMapping("/survey")
-    public String survey(Model model) {
-        List<WXMMQueinvest> queinvestList=wxmmQueinvestService.selectAll();
+    public String survey(Model model,HttpServletRequest request) {
+        // 获取到登录人的手机号
+        Object userPhone = request.getSession().getAttribute("userPhone");
+        List<WXMMQueinvest> queinvestList=wxmmQueinvestService.selectAll(userPhone);
         model.addAttribute("queinvestList",queinvestList);
         return "mm/wxindex/survey";
     }
@@ -69,7 +72,11 @@ public class WXMMQueinvestController {
      * @return
      */
     @GetMapping("/test")
-        public String test(@RequestParam Map<String ,Object> map) {
+        public String test(@RequestParam Map<String ,Object> map, HttpServletRequest request) {
+        // 获取到手机号
+        Object userPhone = request.getSession().getAttribute("userPhone");
+        // 获取到用户名称
+        Object userName = request.getSession().getAttribute("userName");
         // 题目数量
             int queSize = 0;
             // 存放查询出来的结果
@@ -85,9 +92,12 @@ public class WXMMQueinvestController {
                     // 获得到每个被选中的单选按钮的值  选项内容
                      if(map.get(i+"") != null){
                          String str = map.get(i+"").toString();
+                         String queId = map.get("queId").toString();
+
                          // 调用service层，查询出此答案所对应的题目和问卷
-                        WXMMQueinvest answer = wxmmQueinvestService.selectAllByAnswer(str);
+                        WXMMQueinvest answer = wxmmQueinvestService.selectAllByAnswer(str,queId);
                         answer.setOptContext(str);
+                        answer.setQuestionId(queId);
                         // 将查询出来的结果放入到list中
                         list.add(answer);
                      }
@@ -102,7 +112,7 @@ public class WXMMQueinvestController {
                     //生成一个无序的uuid
                     String id = UUID.randomUUID().toString();
                     // 将其插入到答案表中
-                    wxmmQueinvestService.insertToAnswer(id,queinvestId,questionId,optContext);
+                    wxmmQueinvestService.insertToAnswer(id,queinvestId,questionId,optContext,userPhone,userName);
 
                 }
 

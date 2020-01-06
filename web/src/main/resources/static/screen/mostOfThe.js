@@ -35,40 +35,45 @@ function mostOfThe() {
 
         // 遍历最新的数据
         for(var i = 0; i<list01.length;i++){
-
+             var disName =  (list01[i])['disName'];
+             var streeName =   (list01[i])['streeName'];
             var time = (list01[i])['time'];
             var name = (list01[i])['name'];
             var description = (list01[i])['description'];
 
             var tr;
-            tr='<td>'+name+'</td>'+'<td>'+description+'</td>'+'<td>'+time+'</td>';
+            tr='<td>'+disName+'</td>'+'<td>'+streeName+'</td>'+'<td>'+name+'</td>'+'<td>'+description+'</td>'+'<td>'+time+'</td>';
             $("#table002").append('<tr class="list01">'+tr+'</tr>')
         }
 
         // 遍历最长的数据
         for(var i = 0; i<list02.length;i++) {
 
+            var disName =  (list02[i])['disName'];
+            var streeName =   (list02[i])['streeName'];
             var time = (list02[i])['time'];
             var name = (list02[i])['name'];
             var description = (list02[i])['description'];
-            var maxTime = (list02[i])['maxTime'];
+            // var maxTime = (list02[i])['maxTime'];
 
             var tr;
-            tr = '<td>' + name + '</td>' + '<td>' + description + '</td>' + '<td>' + time + '</td>' + '<td>' + maxTime + '</td>';
+            tr = '<td>' +  disName+ '</td>' + '<td>' + streeName+ '</td>' + '<td>' +   name + '</td>' + '<td>' +  description   + '</td>'
+                 + '<td>' + time + '</td>';
             $("#table003").append('<tr class="list02">' + tr + '</tr>')
         }
-
 
         // 遍历最频繁的数据
         for(var i = 0; i<list03.length;i++){
 
+            var disName =  (list03[i])['disName'];
+            var streeName =   (list03[i])['streeName'];
             var time = (list03[i])['time'];
             var name = (list03[i])['name'];
             var description = (list03[i])['description'];
-            var num = (list03[i])['num'];
+            // var num = (list03[i])['num'];
 
             var tr;
-            tr = '<td>' + name + '</td>' + '<td>' + description + '</td>' + '<td>' + time + '</td>' + '<td>' + num + '</td>';
+            tr = '<td>' + disName + '</td>' + '<td>' + streeName + '</td>' + '<td>' + name + '</td>' + '<td>' + description + '</td>'+ '<td>' + time + '</td>';
             $("#table004").append('<tr class="list03">' + tr + '</tr>')
         }
 

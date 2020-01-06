@@ -76,7 +76,7 @@
 
         <br><br>
         <div class="inv-cont inv-special">
-            <div class="">上报回复:</div>
+            <div class="">回复内容:</div>
             <div class="inv-right inv-right-special" id="content">${mmIssueReport.replyContent!}</div>
         </div>
 
@@ -87,7 +87,7 @@
 
         <div class="flex inv-cont">
             <div class="">回复单位:</div>
-            <div class="inv-right"  id="replyDate">吉安城管</div>
+            <div class="inv-right"  id="replyDate"></div>
         </div>
 
         <div class="flex inv-cont">

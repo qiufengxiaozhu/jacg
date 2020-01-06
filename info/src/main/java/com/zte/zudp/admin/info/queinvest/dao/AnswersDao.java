@@ -16,5 +16,5 @@ public interface AnswersDao extends AbstractDao<Answers>{
      * @param id
      * @return
      */
-    List<Map> getDetail(@Param("id") Object id);
+    List<Map> getDetail(@Param("id") Object id,@Param("queName")Object queName);
 }

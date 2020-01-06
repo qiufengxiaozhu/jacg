@@ -16,7 +16,7 @@ import java.util.List;
 public interface WXMMQueinvestDao extends AbstractDao<WXMMQueinvest> {
 
 
-    List<WXMMQueinvest> selectAll();
+    List<WXMMQueinvest> selectAll(@Param("userPhone")Object userPhone);
 
     List<WXMMQueinvest> startQueinvest(@Param("id") String id);
 
@@ -25,7 +25,7 @@ public interface WXMMQueinvestDao extends AbstractDao<WXMMQueinvest> {
      * @param str
      * @return
      */
-    WXMMQueinvest selectAllByAnswer(@Param("str") String str);
+    WXMMQueinvest selectAllByAnswer(@Param("str") String str,@Param("queId")String queId);
 
     /**
      * 将获得的答案 ，问卷id，题目id新增到答案表中
@@ -33,5 +33,5 @@ public interface WXMMQueinvestDao extends AbstractDao<WXMMQueinvest> {
      * @param questionId
      * @param optContext
      */
-    void insertToAnswer(@Param("id") String id, @Param("queinvestId") String queinvestId, @Param("questionId") String questionId, @Param("optContext") String optContext);
+    void insertToAnswer(@Param("id") String id, @Param("queinvestId") String queinvestId, @Param("questionId") String questionId, @Param("optContext") String optContext,@Param("userPhone")Object userPhone,@Param("userName")Object userName);
 }

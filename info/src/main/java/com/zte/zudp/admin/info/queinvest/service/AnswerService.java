@@ -24,7 +24,7 @@ public class AnswerService extends BusinessService<Answers> {
      * @param id
      * @return
      */
-    public List<Map> getDetail(Object id) {
-        return  answersDao.getDetail(id);
+    public List<Map> getDetail(Object id,Object queName) {
+        return  answersDao.getDetail(id,queName);
     }
 }

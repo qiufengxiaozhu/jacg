@@ -70,7 +70,7 @@ public class MMQueinvestController {
      * @param map
      * @return
      */
-    @GetMapping("/test")
+    @GetMapping   ("/test")
         public String test(@RequestParam Map<String ,Object> map,HttpServletRequest request) {
             // 获取到手机号
         Object userPhone = request.getSession().getAttribute("userPhone");
@@ -92,9 +92,11 @@ public class MMQueinvestController {
                     // 获得到每个被选中的单选按钮的值  选项内容
                      if(map.get(i+"") != null){
                          String str = map.get(i+"").toString();
+                        String queId =  map.get("queId").toString();
                          // 调用service层，查询出此答案所对应的题目和问卷
-                        MMQueinvest answer = mmQueinvestService.selectAllByAnswer(str);
+                        MMQueinvest answer = mmQueinvestService.selectAllByAnswer(str,queId);
                         answer.setOptContext(str);
+                        answer.setQuestionId(queId);
                         // 将查询出来的结果放入到list中
                         list.add(answer);
                      }

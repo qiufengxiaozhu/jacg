@@ -66,11 +66,8 @@ FROM
 	LEFT JOIN jacg_answers t4 ON t2.id = t4.questions_id
 	AND t4.options_id = t3.id
 
-	where
-	t3.choiceText01 =#{str} or
-	t3.choiceText02 =#{str} or
-	t3.choiceText03 =#{str} or
-	t3.choiceText04 =#{str}
+	where #{str} in (t3.choiceText01,t3.choiceText02,t3.choiceText03,t3.choiceText04)
+	and t2.id= #{queId}
 
 
 

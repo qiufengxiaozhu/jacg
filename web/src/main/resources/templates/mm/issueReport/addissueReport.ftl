@@ -57,7 +57,7 @@
                 $("#sp_title").css("color","green").html("√");
                 return true;
             }else{
-                $("#sp_title").css("color","red").html("×");
+                $("#sp_title").css("color","red").html("字符个数应在1-20个");
                 return false;
             }
         }
@@ -83,7 +83,7 @@
                 $("#sp_content").css("color","green").html("√");
                 return true;
             }else{
-                $("#sp_content").css("color","red").html("×");
+                $("#sp_content").css("color","red").html("字符个数应在1-50个");
                 return false;
             }
         }
@@ -112,7 +112,7 @@
                 $("#sp_telephone").css("color","green").html("√");
                 return true;
             }else{
-                $("#sp_telephone").css("color","red").html("×");
+                $("#sp_telephone").css("color","red").html("请输入11位数字");
                 return false;
             }
         }
@@ -128,7 +128,7 @@
             <div class="return" onclick="goIndex()">返回</div>
             <div class="advince">问题上报</div>
         </div>
-    <form id="addadvisory" action="/mm/issueReport/addIssueReport" method="post">
+    <form id="addadvisory" action="/mm/issueReport/addIssueReport" method="post" onsubmit="return check()">
         <div class="header-img">
             <div class="ts-table">
                 <div class="put">
@@ -344,34 +344,10 @@
             $(obj).parent().remove();
         }
 
-        //获取在节点上的文件路径
-//        function getAttachPath() {
-//            var tempAttachPath = [];
-//            var $attachPath = $("input[name='attachPath']");
-//            $.each($attachPath, function (k, v) {
-//                tempAttachPath.push($(v).val());
-//            })
-//            return tempAttachPath;
-//        }
-        //获取在节点上的文件路名称
-//        function getAttachName() {
-//            var tempAttachName = [];
-//            var $attachName = $("input[name='attachName']");
-//            $.each($attachName, function (k, v) {
-//                tempAttachName.push($(v).val());
-//            })
-//            return tempAttachName;
-//        }
-
-        //获取所有附件Ids
-//      function getAttachIdss() {
-//            var tempAttachIdss = [];
-//            var $attachIdss = $("#attachIdss").val().split(",");
-//            $.each($attachIdss, function (k, v) {
-//                tempAttachIdss.push(v);
-//            })
-//            return tempAttachIdss;
-//        }
+        // 问题上报成功提示语
+        function check() {
+            alert("上报成功！！");
+        }
     </script>
 </body>
 </html>
