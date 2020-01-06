@@ -146,7 +146,7 @@
 
     <select id="glCommunityList" resultType="java.util.Map">
         select DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME  from  tocgcase
-        where COMMUNITYNAME=#{name}  GROUP BY DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME
+        where MAINTYPENAME=#{name}  GROUP BY DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME
     </select>
 
     <select id="glCaseList" resultType="java.util.Map">
