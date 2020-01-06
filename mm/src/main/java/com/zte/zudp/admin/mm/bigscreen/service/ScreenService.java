@@ -116,6 +116,17 @@ public class ScreenService extends FileBusinessService<Screen> {
         return screenDao.getrightEvenType();
     }
 
+
+    /**
+     * 查询类型统计
+     *
+     * @return
+     */
+    public List<Map> getrightEvenTypes(){
+
+        return screenDao.getrightEvenTypes();
+    }
+
     /**
      *  区域案件报警
      *

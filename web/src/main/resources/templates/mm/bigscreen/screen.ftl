@@ -206,7 +206,7 @@
                 <div class="ri-bg">
                     <div class="ri-query flex">
                         <div class="ri-left flex">
-                            <div class="chart4" id="chart4" style="width:280px;height:160px"></div>
+                            <div class="chart4" id="chart4" style="width:280px;height:200px"></div>
                         </div>
                     </div>
                 </div>

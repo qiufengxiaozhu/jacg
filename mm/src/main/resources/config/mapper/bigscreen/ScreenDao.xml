@@ -128,9 +128,16 @@
 
 
 
-    <select id="getrightEvenType" resultType="java.util.Map">
+    <select id="getrightEvenTypes" resultType="java.util.Map">
           select MAINTYPENAME as name,round((COUNT(*)/10000),2)  as num from tocgcase GROUP BY MAINTYPENAME ORDER BY
         round((COUNT(*)/10000),2) DESC limit 0,5;
+     </select>
+
+
+
+    <select id="getrightEvenType" resultType="java.util.Map">
+           select  t.name,t.num from  (select COMMUNITYNAME as name,COUNT(*)  as num from tocgcase where CREATETIME LIKE '%2015-01%' GROUP BY COMMUNITYNAME ORDER BY
+        COUNT(*) DESC limit 0,5 )t ORDER BY t.num ;
      </select>
 
     <select id="getrightCaseNum" resultType="java.util.Map">
@@ -146,7 +153,7 @@
 
     <select id="glCommunityList" resultType="java.util.Map">
         select DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME  from  tocgcase
-        where MAINTYPENAME=#{name}  GROUP BY DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME
+        where COMMUNITYNAME=#{name} and  CREATETIME LIKE '%2015-01%'
     </select>
 
     <select id="glCaseList" resultType="java.util.Map">
