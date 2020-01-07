@@ -454,6 +454,7 @@ table.gridtable .click-ch td{
 .me-relative{
     width: 90%;
     margin: auto;
+    margin-top: 0.1rem;
 }
 .be-center{
     text-align: center;

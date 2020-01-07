@@ -327,8 +327,8 @@
               <table class="gridtable ge-put show-hide0" id ="tableList">
                   <tr>
                     <th>问题描述</th>
-                    <th>大类</th>
-                    <th>时间</th>
+                    <th>大类名称</th>
+                    <th>案件截止时间</th>
                 </tr>
             </table>
             <div class="page-list ">
@@ -345,7 +345,7 @@
     <div class="me-relative">
         <div class="be-center">案件详情</div>
         <div class="me-first">
-            <div class="me-high">
+            <div class="me-resolve me-line">
                 <div class="me-getres" id="descriptionId">问题描述:</div>
                 <div class="put-tex"></div>
             </div>
@@ -353,6 +353,8 @@
                     <div class="me-fl-left flex" >案件类型:<div id="nameId01"></div>&nbsp;&nbsp;<div id="nameId02"></div></div>
             </div>
             <div class="me-high" id="addressId">地址:&nbsp;东湖区莎莎街道659号</div>
+            <div class="me-high" id="eventSourceId">问题来源:&nbsp;东湖区莎莎街道659号</div>
+            <div class="me-high" id="newTimeId">立案时间:&nbsp;东湖区莎莎街道659号</div>
             <div class="me-high">
                 <div class="me-fl-left" id="deadTimeId">案件截止时间: 2019.12.01</div>
                 <div class="me-fl-right" id="endTimeId">案件结束时间: 2019.12.01</div>

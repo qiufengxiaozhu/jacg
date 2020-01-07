@@ -4,27 +4,14 @@ import com.zte.zudp.admin.common.annotation.JSON;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointRest;
 import com.zte.zudp.admin.common.enums.AuthorizedType;
-import com.zte.zudp.admin.common.persistence.Result;
 import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
-import com.zte.zudp.admin.info.queinvest.QueinvestMenu;
-import com.zte.zudp.admin.info.queinvest.QuestionMenu;
 import com.zte.zudp.admin.info.queinvest.entity.Dictionary;
-import com.zte.zudp.admin.info.queinvest.entity.Queinvest;
-import com.zte.zudp.admin.info.queinvest.entity.Questions;
-import com.zte.zudp.admin.info.queinvest.service.QuestionService;
 import com.zte.zudp.admin.info.weixinQueinvest.WXQuestionMenu;
 import com.zte.zudp.admin.info.weixinQueinvest.entity.WXQuestions;
-import com.zte.zudp.admin.info.weixinQueinvest.service.WXQueinvestService;
 import com.zte.zudp.admin.info.weixinQueinvest.service.WXQuestionService;
-import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 import java.util.List;
-import java.util.Map;
-import java.util.UUID;
 
 /**
  *  问卷调查
@@ -79,7 +66,6 @@ public List<Dictionary> getlist() {
         wxQuestionService.updateQuestionStatus(idJson);
 
     }
-
 
 
 }

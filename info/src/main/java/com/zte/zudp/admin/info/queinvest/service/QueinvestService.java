@@ -37,8 +37,8 @@ public class QueinvestService extends BusinessService<Queinvest> {
      * 发布
      * @param id
      */
-    public void updateStatus(String id) {
-        queinvestDao.updateStatus(id);
+    public int updateStatus(String id) {
+      return   queinvestDao.updateStatus(id);
     }
     /**
      * 撤销发布

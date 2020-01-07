@@ -18,6 +18,10 @@ public class IssueReplyService extends FileBusinessService<IssueReply> {
   @Autowired
     private IssueReplyDao issueReplyDao;
 
+    public void insertIntoIssueReply(String loginName,String id) {
+      issueReplyDao.insertIntoIssueReply(loginName,id);
+    }
+
     /*统计管理*/
 //    public List<Report> countManage(){
 //        return reportDao.countManage();

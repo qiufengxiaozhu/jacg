@@ -38,10 +38,10 @@
                         <thead>
                         <tr>
                             <th>id</th>
-                            <th>积分数</th>
+                            <th>排名</th>
                             <th>姓名</th>
                             <th>电话</th>
-                            <th>排名</th>
+                            <th>积分数</th>
 <#--                            <th>操作</th>-->
                         </tr>
                         </thead>
@@ -213,8 +213,8 @@
                     // <th>排名</th>
                     // <th>操作</th>
                     {data: 'id', visible: false},
+                    {data: 'rank'},
 
-                    {data: 'points'},
                     {data: 'name',
                         render: function (data, type, row) {
                             var temp = data;
@@ -225,7 +225,8 @@
                         }
                     },
                     {data: 'telephone'},
-                    {data: 'rank'}
+                    {data: 'points'}
+
                     <#--{-->
                     <#--    render: function (data, type, row) {-->
                     <#--        var btn = "";-->

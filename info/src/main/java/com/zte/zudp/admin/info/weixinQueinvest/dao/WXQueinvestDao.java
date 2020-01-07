@@ -9,6 +9,7 @@ import com.zte.zudp.admin.info.weixinQueinvest.entity.WXQueinvest;
 import com.zte.zudp.admin.info.weixinQueinvest.entity.WXQuestions;
 import org.apache.ibatis.annotations.Param;
 import org.apache.poi.ss.formula.functions.T;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ import java.util.List;
 /**
  * 微信 公众调查
  */
-
+@Repository
 public interface WXQueinvestDao extends AbstractDao<WXQueinvest> {
 
 /**
@@ -36,7 +37,7 @@ public interface WXQueinvestDao extends AbstractDao<WXQueinvest> {
      * @param id
  */
 
-    void updateStatus(@Param("id") String id);
+    int updateStatus(@Param("id") String id);
 /*
      * 撤销发布
      * @param id

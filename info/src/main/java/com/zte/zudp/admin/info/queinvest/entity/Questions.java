@@ -2,7 +2,6 @@ package com.zte.zudp.admin.info.queinvest.entity;
 
 import com.zte.zudp.admin.common.persistence.entity.DataEntity;
 
-import java.util.List;
 
 /**
  * 题干实体类

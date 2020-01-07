@@ -20,6 +20,10 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
         .webuploader-container div {
             width:80px;
         }
@@ -67,8 +71,8 @@
                         <thead>
                         <tr>
                             <th>id</th>
-                            <th>标题</th>
-                            <th>正文</th>
+                            <th>推送标题</th>
+                            <th>内容</th>
                             <th>推送时间</th>
                             <th>状态</th>
                             <th>操作</th>
@@ -95,7 +99,7 @@
             <small class="font-bold">
                 <div class="modal-body fix-height" >
                 <#--表单-->
-                    <form class="form-horizontal" id="dy_form">
+                    <form class="form-horizontal dyClass" id="dy_form">
                         <input type="hidden" name="id" id="id">
 
                         <div class="form-group">
@@ -104,7 +108,7 @@
                                 <input type="text" name="title" maxlength="64" id="title" placeholder="推送标题" class="form-control"id="title">
                             </div>
                             <div>
-                                <i class="i_context my-i_context">*</i>
+                                <i class="i_context my-i_context" id="titId">*</i>
                             </div>
                         </div>
 
@@ -113,6 +117,9 @@
                             <label class="col-sm-3 control-label my-control-label">内容：</label>
                             <div class="col-sm-6">
                                 <textarea class="form-control" rows="5" cols="" name="contents" id="contents"></textarea>
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context" id="conId">*</i>
                             </div>
 
                         </div>
@@ -162,6 +169,27 @@
 <script src="/js/sys/avatar.js"></script>
 <script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
+<script src="/js/third/jquery.min.js"></script>
+<script src="/js/pluginInit/animation.js"></script>
+<script src="/js/third/bootstrap.min.js"></script>
+<script src="/js/third/jquery.validate.min.js"></script>
+<script src="/js/third/jquery.dataTables.min.js"></script>
+<script src="/js/third/dataTables.bootstrap.js"></script>
+<script src="/js/third/layer/layer.min.js"></script>
+<script src="/js/third/icheck.min.js"></script>
+<script src="/js/third/sweetalert.min.js"></script>
+<script src="/js/third/toastr.min.js"></script>
+<script src="/js/third/laydate/laydate.js"></script>
+<script src="/js/pluginInit/dataecho.js"></script>
+<script src="/js/third/laydate/laydate.js"></script>
+<script src="/js/zudp.js"></script>
+<script type="text/javascript" src="/js/third/jquery.ztree.all.js"></script>
+<script src="/js/third/bootstrap-suggest.min.js"></script>
+<script src="/js/sys/avatar.js"></script>
+<script src="/js/third/webuploader.js"></script>
+<script src="/js/rest.js"></script>
+
+<script src="/js/pluginInit/laydateInit.js"></script>
 
 <script src="/js/pluginInit/laydateInit.js"></script>
 
@@ -284,6 +312,22 @@
         });
     });
 
+    $(document).on("click", '#save-btn-test', function (e) {
+        if(checktitle() && checkcontents()){
+            return true;
+        }
+        else {
+            return;
+        }
+    });
+
+    $("input[name='title']").blur(function () {
+        checktitle();
+    });
+
+    $("input[name='contetns']").blur(function () {
+        checkcontents();
+    });
 
 
 
@@ -340,23 +384,25 @@
                 })
                 .columns( [
                     {data: 'id', visible: false},
-                    {data: 'title'},
-                    {data: 'contentsText'},
+                    {data: 'title',width:'20%'},
+                    {data: 'contentsText',width:'37%'},
 //                    {data: 'pushTime'},
                     {
+                        data: 'pushTime',width:'15%',
                         render: function (data, type, row) {
-                            if (data.pushTime == null) { // 就是没有推送  也就不存在推送时间
+                            if (data == null) { // 就是没有推送  也就不存在推送时间
                                 return "无";
                             } else {
-                                return data.pushTime;
+                                return data;
                             }
                         }
                     },
 
 //                    {data: 'status'},
                     {
+                        data: 'status',width:'5%',
                         render: function (data, type, row) {
-                            if (data.status == '0') { // 未推送
+                            if (data == '0') { // 未推送
                                 return "未推送";
                             } else {
                                 return "已推送";
@@ -409,6 +455,34 @@
 
     }
 
+
+    // 检验标题
+    function checktitle(){
+        var title=$("input[name='title']").val();
+        var reg_title= /^.{1,20}$/;
+        var flag=reg_title.test(title)
+        if(title!=null && title!='' &&flag){
+//            $("#sp_title").css("color","green").html("√");
+            return true;
+        }else{
+            $("#titId").css("color","red").html("字符个数应在1-20个");
+            return false;
+        }
+    }
+
+    //检验内容
+    function checkcontents(){
+        var content=$("input[name='contents']").val();
+        var reg_content= /^.{1,50}$/;
+        var flag=reg_content.test(content);
+        if(content!=null && content!='' &&flag){
+//            $("#sp_content").css("color","green").html("√");
+            return true;
+        }else{
+            $("#conId").css("color","red").html("字符个数应在1-50个");
+            return false;
+        }
+    }
 
 
     // 推送

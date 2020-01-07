@@ -103,8 +103,11 @@ public class WXQueinvestContrller extends AbstractCRUDController<WXQueinvest> {
     @PostMapping(value = "/updateStatus")
     @EndpointRest(id = "updateStatus", name = "", authorizedType = AuthorizedType.GUEST)
 
-    public void updateStatus(@RequestBody String id){
-        wxQueinvestService.updateStatus(id);
+    public int updateStatus(@RequestBody String id){
+        int result = wxQueinvestService.updateStatus(id);
+        return result;
+
+
     }
 
 

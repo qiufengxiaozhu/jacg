@@ -20,6 +20,11 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+
         .webuploader-container div {
             width:80px;
         }
@@ -37,7 +42,7 @@
                     <div class='col-sm-12'>
 
                         <div class='querybtn my-querybtn'>
-                            <input type='text' name='telephone' id='search_name' placeholder='请输入用户的电话号码' class='form-control search-input'>
+                            <input type='text' name='telephone' id='search_name' placeholder='请输入上报人手机号' class='form-control search-input'>
                             <button class='btn btn-primary mgl my-mgl research-btn' >
                                 搜索
                             </button>&nbsp;&nbsp;
