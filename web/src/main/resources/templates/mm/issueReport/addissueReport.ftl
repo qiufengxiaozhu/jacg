@@ -124,7 +124,7 @@
             <div class="return" onclick="goIndex()">返回</div>
             <div class="advince">问题上报</div>
         </div>
-    <form id="addadvisory" action="/mm/issueReport/addIssueReport" method="post" onsubmit="return check()">
+    <form id="addadvisory" action="/mm/issueReport/addIssueReport" method="post" >
         <div class="header-img">
             <div class="ts-table">
                 <div class="put">

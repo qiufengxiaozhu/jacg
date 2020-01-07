@@ -56,7 +56,7 @@
         <div class="left-top">
             <div class="case" style="width: 4.5rem;">
                 <span class="case-tell">案情展示</span>
-                <span class="case-time">1月1日—12.16日</span>
+                <span class="case-time">1月1日—12月16日</span>
                 <span class="case-sum">案件总数
                     <span class="case-num">&nbsp;${Total!""}</span>
                 </span>
