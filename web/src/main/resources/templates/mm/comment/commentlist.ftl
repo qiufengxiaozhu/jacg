@@ -36,14 +36,12 @@
                 </div>
             </div>
             <div class="flex-1 flex flex-c-c flex-r-c flex-fx-c">
-                        <#if comment.replyStatus = '1'>
-                            <span class="my-hf green">已回复</span>
-                        <#else >
-                            <span class="my-hf">未回复</span>
-                        </#if>
-
-
-                <img class="right-ceil" src="/mm/img/right.png" style="margin:0.3rem 0">
+                <#if comment.replyStatus = '1'>
+                    <span class="my-hf green">已回复</span>
+                    <img class="right-ceil" src="/mm/img/right.png" style="margin:0.3rem 0">
+                <#else >
+                    <span class="my-hf">未回复</span>
+                </#if>
             </div>
         </div>
         </#list>

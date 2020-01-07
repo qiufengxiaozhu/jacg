@@ -124,6 +124,7 @@
             "image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},
             "selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}
         };
+
         with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=
                 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 
@@ -139,7 +140,16 @@
         //执行一个laydate实例
         laydate.render({
             elem: '#test1' //指定元素
+            // ,min: 0
+            ,max: 0
         });
+        //前后若干天可选，这里以7天为例
+        // laydate.render({
+        //       elem: '#test1'
+        //  ,min: 0
+        //  ,max: 7
+        // });
+
 
         /**
          *  新闻分享单击事件

@@ -27,7 +27,7 @@
         comment as comment,
         like_p_id as likePID,
         like_conten_id as likeContentId,
-        like_time as likeTime,
+        DATE_FORMAT(like_time,"%Y-%m-%d %T") as likeTime,
         like_c_num as likeCNum,
         like_phone as likePhone
         from like_info
@@ -49,7 +49,7 @@
         comment as comment,
         like_p_id as likePID,
         like_conten_id as likeContentId,
-        like_time as likeTime,
+        DATE_FORMAT(like_time,"%Y-%m-%d %T") as likeTime,
         like_c_num as likeCNum,
         like_phone as likePhone
         from like_info
@@ -76,7 +76,7 @@
         #{comment},
         #{likePID},
         #{likeContentId},
-        #{likeTime},
+        Now(),
         '0',
         0,
         #{likePhone}

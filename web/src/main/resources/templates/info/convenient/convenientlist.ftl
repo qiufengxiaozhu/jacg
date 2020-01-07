@@ -353,7 +353,7 @@
 
             $("#xg_rar").html('上传附件');
             //附件控件
-            initUpload(tpgs);
+            initUpload();
 
         };
 

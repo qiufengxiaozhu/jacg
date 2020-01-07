@@ -75,7 +75,7 @@
             mnl.like_num as likeNum,
             mnl.picture as picture,
             mnl.publish_status as publishStatus,
-            mnl.valid_time as validTime,
+            DATE_FORMAT(mnl.valid_time,"%Y-%m-%d %T") as validTime,
             mnl.video as video
         from my_need_like mnl
         where mnl.id=#{id}
