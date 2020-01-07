@@ -237,6 +237,7 @@
 //    var startDate = new Date();
     $(document).ready(function () {
 
+
         $("#kind_form").validate({
             rules: {
                 // 回复内容
@@ -296,14 +297,14 @@
             }
         })
     };
-
-
+    var replyUserId;
     function img2(obj){
         // 获取到按钮的id 记录的id
         var id=$(obj).val();
 //        alert(id);
         $("#fj").html("");
         zudp.ajax("/api/issueReply/getFj?id="+id).get().then(function (value){
+
             var fjpath = value.attachPaths;
             var fjname=value.attachNames;
             if (value!=null) {

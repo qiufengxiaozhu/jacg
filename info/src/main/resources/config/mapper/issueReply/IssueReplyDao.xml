@@ -76,4 +76,10 @@
         <!--GROUP BY-->
 	       <!--reply_id-->
     <!--</select>-->
+
+    <update id="insertIntoIssueReply">
+      update jacg_issuereport t1 set t1.replyUserId =#{loginName} where t1.id =#{id}
+    </update>
+
+
 </mapper>

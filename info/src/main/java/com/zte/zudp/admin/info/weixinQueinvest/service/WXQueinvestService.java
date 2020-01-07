@@ -43,8 +43,8 @@ public class WXQueinvestService extends BusinessService<WXQueinvest> {
      * 发布
      * @param id
      */
-    public void updateStatus(String id) {
-        wxQueinvestDao.updateStatus(id);
+    public int updateStatus(String id) {
+       return wxQueinvestDao.updateStatus(id);
     }
     /**
      * 撤销发布

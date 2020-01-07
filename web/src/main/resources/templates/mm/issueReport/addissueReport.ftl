@@ -29,7 +29,15 @@
     <script>
         $(function () {
             $("form").submit(function () {
-                return checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace();
+                if(checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace()){
+                    alert("上报成功！！");
+                    return true;
+                }
+                else {
+                    alert("请完善上报信息!!!");
+                    return false;
+                }
+//                return checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace();
             })
             $("input[name='title']").blur(function () {
                         checktitle();
@@ -61,19 +69,7 @@
                 return false;
             }
         }
-        //检验案发地点
-//        function checkplace(){
-//            var place=$("input[name='place']").val();
-//            var reg_place= /^.{1,20}$/;
-//            var flag=reg_place.test(place)
-//            if(place!=null && place!='' &&flag){
-//                $("#sp_place").css("color","green").html("√");
-//                return true;
-//            }else{
-//                $("#sp_place").css("color","red").html("×");
-//                return false;
-//            }
-//        }
+
         //检验内容
         function checkcontent(){
             var content=$("input[name='description']").val();
@@ -90,16 +86,16 @@
 
         //检验联系人
         function checkname(){
-            /*var name=$("input[name='contact']").val();
+            var name=$("input[name='contact']").val();
             var reg_name=/^.{2,7}$/;
             var flag=reg_name.test(name);
             if (flag){
                 $("#sp_name").css("color","green").html("√");
                 return true;
             }else{
-                $("#sp_name").css("color","red").html("×");
+                $("#sp_name").css("color","red").html("请输入2-7个字符");
                 return false;
-            }*/
+            }
             return true;
         }
 
@@ -151,7 +147,7 @@
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>文本内容描述&nbsp;:</span><br>
-                            <input type="text" name="description" class="tab-input flex-1" placeholder="请输入文本内容描述(100字以内)">
+                            <input type="text" name="description" class="tab-input flex-1" placeholder="请输入文本内容描述(50字以内)">
                             <span id="sp_content"></span>
                         </div>
                     </div>
@@ -172,7 +168,7 @@
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>联系人&nbsp;:</span>
-                        <input type="text" name="contact" class="tab-input flex-1" placeholder="请输入您的真实姓名" value="${Session.userName!}">
+                        <input type="text" name="contact" class="tab-input flex-1" placeholder="请输入您的真实姓名" value="">
                         <span id="sp_name"></span>
                         </div>
                     </div>
@@ -345,9 +341,13 @@
         }
 
         // 问题上报成功提示语
-        function check() {
-            alert("上报成功！！");
-        }
+//        function check() {
+//            if(checktitle()){
+//                alert("成功");
+//            }else {
+//                alert("上报成功！！");
+//            }
+//        }
     </script>
 </body>
 </html>

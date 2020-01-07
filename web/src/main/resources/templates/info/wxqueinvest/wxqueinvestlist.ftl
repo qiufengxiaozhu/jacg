@@ -131,7 +131,7 @@
                         <div class="form-group" id = "validDiv">
                             <label class="col-sm-3 control-label my-control-label ">问卷有效期：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="valid" id="valid" startDate placeholder="问卷有效期" class="form-control">
+                                <input type="text" name="valid" id="valid"   placeholder="问卷有效期" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -203,7 +203,7 @@
                     <table id="dataList" class="table my-table table-bordered dataTables-example">
                         <thead>
                         <tr>
-                            <th ># </th>
+                            <th > </th>
                             <th >题目名称</th>
                             <th >题目类型</th>
                         </tr>
@@ -248,6 +248,8 @@
 <script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
 
+<script type="text/javascript" src="/laydate/laydate.js"></script>
+
 <script src="/js/pluginInit/laydateInit.js"></script>
 <script>
 
@@ -256,6 +258,15 @@
     var urlstr="/api/wxqueinvest";
     var formIdStr="#post_form";
     var sys_url=window.location.host;
+
+    //日历控件
+    lay('#version').html('-v'+ laydate.v);
+    //执行一个laydate实例
+    laydate.render({
+        elem: '#valid', //指定元素
+        min:0 // 设置开始时间
+    });
+
     $(document).ready(function () {
 
         // 新建  验证
@@ -573,11 +584,13 @@
         }
         //获取到id
         var id = $(this).val();
-//        alert(id);
 
         zudp.ajax("/api/wxqueinvest/updateStatus").post(id).then(function (value) {
             // 刷新页面
             document.location.reload();
+            if(value < 1){
+                alert("发布失败！！");
+            }
         });
     });
 

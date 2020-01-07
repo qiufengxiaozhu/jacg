@@ -112,8 +112,8 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
     @PostMapping(value = "/updateStatus")
     @EndpointRest(id = "updateStatus", name = "", authorizedType = AuthorizedType.GUEST)
 
-    public void updateStatus(@RequestBody String id){
-        queinvestService.updateStatus(id);
+    public int updateStatus(@RequestBody String id){
+       return queinvestService.updateStatus(id);
     }
 
 

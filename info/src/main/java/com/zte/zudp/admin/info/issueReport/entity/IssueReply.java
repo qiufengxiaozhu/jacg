@@ -3,6 +3,8 @@ package com.zte.zudp.admin.info.issueReport.entity;
 import com.zte.zudp.admin.common.persistence.entity.FileEntity;
 
 public class IssueReply extends FileEntity {
+
+
     /**
      * title ：标题
      */

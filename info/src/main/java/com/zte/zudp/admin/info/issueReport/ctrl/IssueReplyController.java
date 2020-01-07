@@ -1,7 +1,9 @@
 package com.zte.zudp.admin.info.issueReport.ctrl;
 
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
+import com.zte.zudp.admin.common.persistence.Subject;
 import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
+import com.zte.zudp.admin.common.security.SubjectUtil;
 import com.zte.zudp.admin.info.issueReport.IssueReplyMenu;
 import com.zte.zudp.admin.info.issueReport.entity.IssueReply;
 import com.zte.zudp.admin.info.issueReport.svr.IssueReplyService;
@@ -29,6 +31,12 @@ public class IssueReplyController extends AbstractCRUDController<IssueReply> {
     @RequestMapping("/getFj")
     @ResponseBody
     public IssueReply getFj(String id){
-        return issueReplyService.get(id);
+        // 获取到登录人名称
+        String loginName = SubjectUtil.getSubject().getLoginName();
+        if(loginName!= null){
+            issueReplyService.insertIntoIssueReply(loginName,id);
+        }
+        IssueReply issueReply = issueReplyService.get(id);
+        return issueReply;
     }
 }

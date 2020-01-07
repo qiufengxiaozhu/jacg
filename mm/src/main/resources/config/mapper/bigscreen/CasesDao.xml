@@ -9,18 +9,16 @@
         SELECT
         (case when RECID is null then '' else RECID end ) id,
 	    (CASE WHEN LENGTH( EVENTDESC ) > 20 THEN CONCAT( SUBSTRING( EVENTDESC, 1, 20 ), '...' ) when EVENTDESC is null then ''  ELSE EVENTDESC END ) AS description,
-
         (case when MAINTYPENAME is null then '' else MAINTYPENAME end) as name,
-        (case when SUBTYPENAME is null then '' else SUBTYPENAME end) as littleName,
-        (case when NEWINSTTIME is null then '' else  DATE_FORMAT( NEWINSTTIME, '%Y-%m-%d %T' ) end) as time
+        (case when DEADLINE is null then '' else  DATE_FORMAT( DEADLINE, '%Y-%m-%d %T' ) end) as time
         FROM
 	      tocgcase
 	    where NEWINSTTIME like '%2018%'
 	    <if test="startTime != null and startTime != '' ">
-           and  NEWINSTTIME <![CDATA[ >= ]]> #{startTime}
+           and  DEADLINE <![CDATA[ >= ]]> #{startTime}
         </if>
 	    <if test="endTime != null and endTime != '' ">
-           and NEWINSTTIME <![CDATA[ <= ]]>  #{endTime}
+           and DEADLINE <![CDATA[ <= ]]>  #{endTime}
         </if>
 	    <if test="description != null and description != '' ">
             and `EVENTDESC` like concat('%', #{description}, '%')
@@ -40,7 +38,9 @@
        (case when DISPOSEDEPARTNAME is null then '' else DISPOSEDEPARTNAME end) department,
        (case when DEALTIME is null then '' else DATE_FORMAT( DEALTIME, '%Y-%m-%d %T') end) dealTime,
        (case when DISPOSEOPINION is null then '' else DISPOSEOPINION end) adv,
-       (case when EVENTDESC is null then '' else EVENTDESC end) description
+       (case when EVENTDESC is null then '' else EVENTDESC end) description,
+       (case when EVENTSRCNAME is null then '' else EVENTSRCNAME end) eventSource,
+       (case when NEWINSTTIME is null then '' else DATE_FORMAT( NEWINSTTIME, '%Y-%m-%d %T') end) newTime
      FROM   tocgcase
      where RECID = #{id}
 

@@ -31,7 +31,7 @@
             </div>
             <div class="forget-pwd">
                 <span id="msg-show"></span>
-                <a href="#">忘记密码</a>
+                <#--<a href="#">忘记密码</a>-->
             </div>
             <div class="btn login-btn" onclick="login()">立即登录</div>
             <div class="regist-user">

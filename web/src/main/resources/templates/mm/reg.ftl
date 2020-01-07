@@ -37,7 +37,7 @@
                 <input type="password" id="new_user_password" class="login-input flex-1" placeholder="请输入密码">
             </div>
             <div class="submit-container">
-                <div class="btn login-btn" onclick="saveReg()">注册</div>
+                <div class="btn login-btn" id ="loginId" onclick="saveReg()">注册</div>
             </div>
             <div class="regist-user">
                 <span id="msg-show" style="margin-left: 25px;"></span>
@@ -47,6 +47,22 @@
     </div>
 </form>
 <script>
+
+
+    $(document).on("click","#loginId",function () {
+        var name = $("#new_user_name").val();
+        var tel =  $("#new_user_username").val();
+        var password = $("#new_user_password").val();
+        if(name == null || name == ''){
+            alert("请输入姓名");
+        }else if(tel == null || tel == ''){
+            alert("请输入电话号码");
+        }else if(password == null || password == ''){
+            alert("请输入密码");
+        }
+
+    })
+
 
     $('#new_user_username').on('input propertychange', function() {
         var val=$(this).val();

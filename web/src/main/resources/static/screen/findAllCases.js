@@ -110,16 +110,20 @@ $(document).on("click","#tableList tr.list1",function () {
                 var dealTime = value02.dealTime;
                 var adv = value02.adv;
                 var description = value02.description;
+                var eventSource = value02.eventSource;
+                var newTime = value02.newTime;
 
                 $('#nameId01').html("大类名称:&nbsp;"+name);
                 $('#nameId02').html("小类名称:&nbsp;"+littleName);
                 $('#addressId').html("地址:&nbsp;&nbsp;"+address);
                 $('#deadTimeId').html("案件截止时间:&nbsp;&nbsp;"+deadTime);
-                $('#endTimeId').html("案件截止时间:&nbsp;&nbsp;"+endTime);
+                $('#endTimeId').html("案件结束时间:&nbsp;&nbsp;"+endTime);
                 $('#departmentId').html("处理部门:&nbsp;&nbsp;"+department);
                 $('#dealTimeId').html("部门处理时间:&nbsp;&nbsp;"+dealTime);
                 $('#advId').html("处理意见:&nbsp;"+adv);
                 $('#descriptionId').html("问题描述:&nbsp;"+description);
+                $('#eventSourceId').html("问题来源:&nbsp;"+eventSource);
+                $('#newTimeId').html("立案时间:&nbsp;"+newTime);
 
             });
 })
