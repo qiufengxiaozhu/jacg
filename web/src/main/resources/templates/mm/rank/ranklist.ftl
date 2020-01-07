@@ -7,7 +7,7 @@
     <script type="text/javascript" src="/mm/js/rem.js"></script>
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="/mm/css/index.css">
-    <title>Document</title>
+    <title>排行榜</title>
 </head>
 <body>
 <div class="content-box container-app" style="background: #F5F5F5">
@@ -52,7 +52,7 @@
                                     <div class="ra-font">${mmRankEntityList[i].name!mmRankEntityList[i].telephone}</div>
                                 </div>
                                 <div class="flex-1">
-                                    <div class="ra-num">${mmRankEntityList[i].points!}</div>
+                                    <div class="last-ra-num">${mmRankEntityList[i].points!}</div>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                     <div class="ra-font">${mmRankEntityList[i].name!mmRankEntityList[i].telephone}</div>
                                 </div>
                                 <div class="flex-1">
-                                    <div class="ra-num">${mmRankEntityList[i].points!}</div>
+                                    <div class="last-ra-num">${mmRankEntityList[i].points!}</div>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                                     <div class="ra-font">${mmRankEntityList[i].name!mmRankEntityList[i].telephone}</div>
                                 </div>
                                 <div class="flex-1">
-                                    <div class="ra-num">${mmRankEntityList[i].points!}</div>
+                                    <div class="last-ra-num">${mmRankEntityList[i].points!}</div>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                         <div class="last-ran flex last-num">
                             <div class="flex-1">
                                 <div class="last-ra-img">${mmRankEntityList[i].rank!}</div>
-                                <div class="last-ra-font">${mmRankEntityList[i].name!}</div>
+                                <div class="last-ra-font">${mmRankEntityList[i].telephone!}</div>
                             </div>
                             <div class="flex-1">
                                 <div class="last-ra-num">${mmRankEntityList[i].points!}</div>

@@ -32,7 +32,23 @@
 <body>
 <div class="container-app content">
     <div class="top">
-        <div class="top-ret in-float"><img src="/mm/img/position.png" class="img-float img-1"><div  class="img-float img-font" id="address1">吉安</div><img src="/mm/img/pull.png" class="img-float img-2"></div>
+        <div class="top-ret in-float">
+            <img src="/mm/img/position.png" class="img-float img-1">
+            <div  class="img-float img-font" id="address1">
+                <#if '${Session.timeZone}'="1">
+                    吉安市
+                <#elseif '${Session.timeZone}'="2">
+                    吉州区
+                <#elseif '${Session.timeZone}'="3">
+                    青原区
+                <#elseif '${Session.timeZone}'="4">
+                    庐陵新区
+                <#elseif '${Session.timeZone}'="5">
+                    井开区
+                </#if>
+            </div>
+            <img src="/mm/img/pull.png" class="img-float img-2">
+        </div>
         <div class="advince">首页</div>
         <div class="dex-float"><img src="/mm/img/around.png" class="img-float img-3"><a href="tel:12319"><img src="/mm/img/phone.png" class="img-float img-4"></a></div>
     </div>
@@ -112,7 +128,7 @@
         </div>
 
         <div class="thumbs">
-            <div class="thumbs-tit" onclick="goNewPage()" style="border:none">我的案件</div>
+            <div class="thumbs-tit" onclick="goNewPage()" style="border:none">地图功能</div>
         </div>
         <div class="center">
             <div class="flex public">
@@ -162,7 +178,19 @@
     <div class="alert">
         <div class="this-city">
             <div class="city-place">当前定位城市</div>
-            <div class="city-pos" id="address">吉安</div>
+            <div class="city-pos" id="address">
+                <#if '${Session.timeZone}'="1">
+                    吉安市
+                <#elseif '${Session.timeZone}'="2">
+                    吉州区
+                <#elseif '${Session.timeZone}'="3">
+                    青原区
+                <#elseif '${Session.timeZone}'="4">
+                    庐陵新区
+                <#elseif '${Session.timeZone}'="5">
+                    井开区
+                </#if>
+            </div>
         </div>
         <div>
             <div class="city-place">其他市区</div>

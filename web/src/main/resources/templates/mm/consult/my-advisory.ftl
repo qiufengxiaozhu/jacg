@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>我的咨询</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <script type="text/javascript" src="/mm/js/rem.js"></script>
@@ -37,11 +37,12 @@
                         <span class="my-hf green">
                         已回复
                         </span>
+                        <img class="right-ceil" src="/mm/img/right.png" style="margin:0.3rem 0">
                         <#else >
                         <span class="my-hf">未回复</span>
                     </#if>
 
-                <img class="right-ceil" src="/mm/img/right.png" style="margin:0.3rem 0">
+
             </div>
         </div>
         </#list>

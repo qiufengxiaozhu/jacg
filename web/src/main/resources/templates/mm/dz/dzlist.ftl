@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
 
     <script type="text/javascript" src="/mm/js/rem.js"></script>
     <script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
@@ -103,24 +104,24 @@
         });
     }
     //点赞操作
-    function like(id){
-        $.ajax({
-            url: "/api/like/likeNum",
-            type: "post",
-            data: {"id":id},
-            dataType: 'json',
-            success: function (data) {
-               if (data != null){
-                   var likeInfo = data.data;
-                  $("#"+id).html(likeInfo.likeNum+"人");
-               }
-            },
-            error: function () {
-                 alert("请刷新页面")
-            }
-        });
-
-    }
+    // function like(id){
+    //     $.ajax({
+    //         url: "/api/like/likeNum",
+    //         type: "post",
+    //         data: {"id":id},
+    //         dataType: 'json',
+    //         success: function (data) {
+    //             if (data != null){
+    //                 var likeInfo = data.data;
+    //                 $("#"+id).html(likeInfo.likeNum+"人");
+    //             }
+    //         },
+    //         error: function () {
+    //             alert("请刷新页面")
+    //         }
+    //     });
+    //
+    // }
     //时间格式化
     function format(time) {
         var date = new Date(time);

@@ -4,9 +4,6 @@ import com.zte.zudp.admin.common.persistence.Subject;
 import com.zte.zudp.admin.common.security.SubjectUtil;
 import com.zte.zudp.admin.common.util.IDUtil;
 import com.zte.zudp.admin.info.integrate.service.IntegrateService;
-import com.zte.zudp.admin.mm.complain.entity.MMComplainEntity;
-import com.zte.zudp.admin.mm.integrate.ctrl.MMIntegrateController;
-import com.zte.zudp.admin.mm.integrate.service.MMIntegrateService;
 import com.zte.zudp.admin.mm.protalreport.entity.MMReport;
 import com.zte.zudp.admin.mm.protalreport.service.MMReportService;
 import org.springframework.stereotype.Controller;
@@ -39,6 +36,7 @@ public class MMReportController {
     public String addAdvisory(MMReport mmReport){
 
         mmReport=getEntity(mmReport);
+
         integrateService.insertToIntegrate("1",mmReport.getId(),mmReport.getTelephone());
         int i = mmReportService.insConsult(mmReport);
         mmReportService.afterInsert(mmReport);

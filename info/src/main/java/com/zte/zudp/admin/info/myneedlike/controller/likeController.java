@@ -5,19 +5,17 @@ import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointRest;
 import com.zte.zudp.admin.common.enums.AuthorizedType;
 import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
-import com.zte.zudp.admin.common.util.IDUtil;
 import com.zte.zudp.admin.info.myneedlike.entity.likeEntity;
-import com.zte.zudp.admin.info.myneedlike.entity.likeInfoEntity;
 import com.zte.zudp.admin.info.myneedlike.likeMenu;
 import com.zte.zudp.admin.info.myneedlike.service.likeInfoService;
 import com.zte.zudp.admin.info.myneedlike.service.likeService;
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -73,19 +71,8 @@ public class likeController extends AbstractCRUDController<likeEntity>{
     @JSON
     @PostMapping(value = "/likeNum" )
     @EndpointRest(id = "likeNum", name = "", authorizedType = AuthorizedType.GUEST)
-    public likeEntity like(HttpSession session,String id, String comment){
-        likeInfoEntity likeInfoEntity = new likeInfoEntity();
-        likeInfoEntity.setId(String.valueOf(IDUtil.simpleId()));
-        likeInfoEntity.setLikeTime(new Date());
-        likeInfoEntity.setLikeContentId(id);
-        likeInfoEntity.setLikePID((String) session.getAttribute("userName"));
-        likeInfoEntity.setLikePhone((String) session.getAttribute("userPhone"));
-        likeInfoEntity.setIcon("1");
-        List<likeInfoEntity> list = likeInfoService.findList(likeInfoEntity);
-        if(list.toArray().length > 0){
-            return likeService.get(id);
-        }
-        likeInfoService.insert(likeInfoEntity);
+    public likeEntity like(HttpSession session,String id){
+
         likeService.updateLikeNum(id);
         return   likeService.get(id);
     }

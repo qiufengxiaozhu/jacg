@@ -19,6 +19,7 @@
     <link href="/css/admin/avatar.css" rel="stylesheet">
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
+
     <style>
         .webuploader-container div {
             width:80px;
@@ -40,11 +41,11 @@
                             新建
                         </button>&nbsp;&nbsp;
                     </@hasPermission>
-                    <@hasPermission name="likeMenu:like:batchDelete">
-                        <button class='btn btn-success btn-danger' id="delete-items">
-                            批量删除
-                        </button>
-                    </@hasPermission>
+<#--                    <@hasPermission name="likeMenu:like:batchDelete">-->
+<#--                        <button class='btn btn-success btn-danger' id="delete-items">-->
+<#--                            批量删除-->
+<#--                        </button>-->
+<#--                    </@hasPermission>-->
                         <div class='querybtn my-querybtn'>
                             <input type='text' name='search' id='search_name' placeholder='请输入标题' class='form-control search-input'>
                             <input type="text" name="validStartTime" maxlength="64" id="validStartTime" placeholder="有效开始时间" class="form-control search-input">
@@ -65,7 +66,7 @@
                         <tr>
                             <th>id</th>
                             <th>标题</th>
-                            <#--<th>内容</th>-->
+
                             <th>发布状态</th>
                             <th>有效时间</th>
                             <th>点赞数</th>
@@ -124,8 +125,9 @@
                         <div class="form-group" style="">
                             <label class="col-sm-3 control-label my-control-label">附件：</label>
                             <div id="fileList" class="uploader-list"></div>
+                            <pre style="width: 50%">附件只支持jpg,png,gif,mp4,MP3,(mp4文件大小请小于80MB)</pre>
                             <div style="width:80;height: 35px;position: relative;margin:0 auto">
-                               <p id="">附件只支持jpg,png,gif,mp4,MP3,(mp4文件大小请<80MB)</p>
+
                                 <div id="xg_rar">上传附件</div>
                             </div>
                             <div id="fileShowName" style="text-align: center;margin:0 auto"></div>
@@ -176,6 +178,36 @@
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
 <script>
 
+    var tpgs="jpg,png,gif,mp4,MP3";//附件上传格式控制
+
+    $(document).ready(function () {
+
+
+        $("#post_form").validate({
+            rules: {
+                title: {
+                    required: true,
+                    rangelength: [0, 15]
+                },
+                validTime: "required",
+                content: {
+                    required: true,
+                    rangelength: [0, 10000]
+                }
+            },
+            messages: {
+                title: {
+                    required: "请输入标题",
+                    rangelength: "字符个数不能超过15"
+                },
+                validTime: "有效时间不能为空",
+                content: {
+                    required: "内容不能为空",
+                    rangelength: "字符个数不能超过10000个"
+                }
+            }, ignore: []
+        });
+    });
 
     findList();
 
@@ -259,53 +291,7 @@
                 $('#likeStopTime').val(value);
             }
         });
-        $("#post_form").validate({
-            rules: {
-                name:{
-                    required:true,
-                    remote: {
-                        url:"/api/like",
-                        type:"post",
-                        data: {
-                            "title":function () {
-                                return $("#title").val();
-                            },
-                            "id":function () {
-                                return $("#id").val();
-                            }
 
-                        },
-                        dataFilter: function(data, type) {
-                            var da=JSON.parse(data).data;
-                            if(zudp.util.isBoolean(da)){
-                                return da;
-                            }else{
-                                return false;
-                            }
-
-                        }
-                    }
-                },
-
-
-                mark:{
-                    rangelength:[0,1000]
-                }
-            },
-            messages: {
-                name: {
-                    required: "请输入标题",
-                    remote: "标题已存在"
-                },
-//                identification: {
-//                    required: "请输入岗位标识",
-//                    remote: "岗位标识已存在"
-//                },
-                mark: {
-                    rangelength:"字符个数不能超过1000"
-                }
-            },ignore: []
-        });
         findList();
         var setValFun = function () {
             $("#xg_rar").html('上传附件');
@@ -314,7 +300,7 @@
             //清空文本框内容
             UE.getEditor('content').setContent("");
             //初始化上传工具
-            initUpload();
+            initUpload(tpgs);
         };
         var setOtherVal = function () {
 
@@ -364,7 +350,7 @@
 
             $("#xg_rar").html('上传附件');
             //附件控件
-            initUpload();
+            initUpload(tpgs);
 
         };
         var saveFormFun = function () {
@@ -471,7 +457,7 @@
                 .columns( [
                     {data: 'id',visible: false},
                     {data: 'title'},
-                   // {data: 'content'},
+
                     {
                         render: function (data, type, row) {
                             if(data.publishStatus == "0"){ // 报警
@@ -517,7 +503,7 @@
                                 editstr=zudp.template.editBtn;
                                 delstr=zudp.template.delBtn;
                                 publish = '<button id= "noPublishStr" class="btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>取消发布</button>';
-                                btn += editstr+delstr+publish;
+                                btn += publish;
                                 return zudp.util.render(btn, row);
                             }
 
@@ -529,7 +515,7 @@
 
     }
 
-    function initUpload(){
+    function initUpload(tpgs){
         var uploader = WebUploader.create({
             // swf文件路径
             swf: '/css/third/Uploader.swf',
@@ -546,7 +532,7 @@
             //重复上传
             duplicate :true,
             accept:{
-                extensions:'jpg,png,gif,mp4,MP3',
+                extensions:tpgs,
                 title:'file',
                 mimeTypes:'*/*'
             }
@@ -567,6 +553,11 @@
             //change(response);
         });
 
+        uploader.on("error", function (type) {
+            if (type == "Q_TYPE_DENIED") {
+                alert("请上传"+tpgs+"格式文件");
+            }
+        });
 
         uploader.on( 'uploadError', function( file ) {
             var name = file.name;

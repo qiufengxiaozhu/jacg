@@ -105,7 +105,13 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">新闻标题：</label>
                             <div class="col-sm-6">
+
                                 <input type="text" name="title" maxlength="64" id="title" placeholder="新闻标题" class="form-control">
+
+                                    <script  type='text/javascript'>
+                                        $('#title').val("123");
+                                    </script>
+
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>

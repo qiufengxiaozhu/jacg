@@ -442,39 +442,6 @@
                         }
 
                     }},
-                /*{data: 'name'},
-
-                {data: 'telephone'},
-
-                {data: 'content',render:function(data, type, row){
-                        var suf="...";
-                        if(data!=null && data.length<20){
-                            suf="";
-                        }
-                        /!*if(data!=null){
-                            data=data.substr(0,20);
-                        }*!/
-                        var ah="<a title='"+data+"'>"+data.substr(0,20);+suf+"</a>";
-                        return ah;
-                    }
-
-                },
-
-                {data: 'category.name'},
-
-                {data: 'reply',render:function(data, type, row){
-                        var suf="...";
-                        if(data!=null && data.length<20){
-                            suf="";
-                        }
-                        /!*if(data!=null){
-                            data=data.substr(0,20)
-                        }*!/
-                        var ah="<a title='"+data+"'>"+data.substr(0,20)+suf+"</a>";
-                        return ah;
-                    }
-
-                },*/
 
                 {
                     render: function (data, type, row) {
@@ -492,8 +459,12 @@
 
                        var detailStr='<button onclick="img2(this)"  class="btn btn-success btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
 
+                        if(data.replyDate == null || data.replyDate == ""){
+                            btn += editstr+detailStr;
+                        }
+                        else
+                            btn += detailStr;
 
-                        btn += editstr+detailStr;
                         return zudp.util.render(btn, row);
                         //return "";
                     }

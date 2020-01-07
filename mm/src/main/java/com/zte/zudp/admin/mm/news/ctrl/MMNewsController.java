@@ -182,15 +182,19 @@ public class MMNewsController {
 
         ArrayList<MMNews> newslist = null;
 
-        //查询所有区前三条新闻
+        //如果时区为1，查询所有区前三条新闻
         if("1".equals(TimeZone)) {
 
             newslist = newsService.find_threeNews();
             session.setAttribute("timeZone", "1");
         }else if(TimeZone == null ){
 
+            //如果传过来的时区为空，获取之前session中时区的值
             Object newTimeZone = request.getSession().getAttribute("timeZone");
-            newslist = newsService.find_threeNewsTime(newTimeZone.toString());
+            if(newTimeZone.equals("1"))
+                newslist = newsService.find_threeNews();
+            else
+                newslist = newsService.find_threeNewsTime(newTimeZone.toString());
         }
         //根据时区查询前三条新闻
         else{

@@ -11,11 +11,12 @@ import com.zte.zudp.admin.info.myneedlike.entity.likeInfoEntity;
 import com.zte.zudp.admin.info.myneedlike.service.likeInfoService;
 import com.zte.zudp.admin.info.myneedlike.service.likeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.Date;
 import java.util.List;
 
 
@@ -89,22 +90,24 @@ public class likeInfoController extends AbstractCRUDController<likeInfoEntity> {
     public void commentSubmit(HttpSession session,String contentID,String matter){
         likeInfoEntity likeInfoEntity = new likeInfoEntity();
         likeInfoEntity.setId(String.valueOf(IDUtil.simpleId()));
-        likeInfoEntity.setLikeTime(new Date());
+//        likeInfoEntity.setLikeTime(new Date());
         likeInfoEntity.setLikeContentId(contentID);
         likeInfoEntity.setComment(matter);
         likeInfoEntity.setIcon("1");
         likeInfoEntity.setLikePID((String) session.getAttribute("userName"));
         likeInfoEntity.setLikePhone((String) session.getAttribute("userPhone"));
-        List<likeInfoEntity> list = likeInfoService.findList(likeInfoEntity);
-        if(list.toArray().length > 0){
-            for(int i=0;i<list.toArray().length;i++){
-                likeInfoEntity = list.get(i);
-                if(likeInfoEntity.getComment()==null & likeInfoEntity.getComment().equals("")){
-                    likeInfoService.insert(likeInfoEntity);
-                    return;
-                }
-            }
-        }
+//        List<likeInfoEntity> list = likeInfoService.findList(likeInfoEntity);
+//        if(list.toArray().length > 0){
+//            for(int i=0;i<list.toArray().length;i++){
+//                likeInfoEntity = list.get(i);
+//                if(likeInfoEntity.getComment()==null & likeInfoEntity.getComment().equals("")){
+//                    likeInfoService.insert(likeInfoEntity);
+//                    return;
+//                }
+//            }
+//            list.get(0)
+//            return;
+//        }
         likeInfoService.insert(likeInfoEntity);
     }
 
