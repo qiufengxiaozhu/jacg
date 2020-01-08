@@ -35,9 +35,19 @@
         ORDER BY id desc
     </select>
 
-    <select id="get" resultMap="reportMap">
-        select *
-        from zmj_report
+    <select id="get" resultType="com.zte.zudp.admin.info.report.entity.Report">
+        select
+        t1.id id,
+        t1.name name,
+        t1.category category,
+        t1.telephone telephone,
+        t1.title title,
+        t1.content content,
+        t1.place place,
+        DATE_FORMAT(t1.report_date,'%Y-%m-%d %T') reportDate,
+        t1.reply reply,
+        DATE_FORMAT(t1.reply_date,'%Y-%m-%d %T') replyDate
+        from zmj_report t1
         where id=#{id}
     </select>
 

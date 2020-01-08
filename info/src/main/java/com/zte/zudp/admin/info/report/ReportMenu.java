@@ -23,7 +23,7 @@ public class ReportMenu {
      */
     @Menu
     @GetMapping("/report")
-    @EndpointPage(id = "reprotlist", name = "公共上报列表", order = 1,icon = "cog")
+    @EndpointPage(id = "reprotlist", name = "公众上报列表", order = 1,icon = "cog")
     public String reportsList() {
         return "/info/report/reportlist";
     }

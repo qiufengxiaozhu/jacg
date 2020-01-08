@@ -29,7 +29,7 @@ public class ConsultMenu {
 */
     @Menu
     @GetMapping("/content")
-    @EndpointPage(id = "contentlist",name="内容管理",order = 2,icon = "cog")
+    @EndpointPage(id = "contentlist",name="公众咨询列表",order = 2,icon = "cog")
     public String contentModeler(){
         return "/info/consultation/contentlist";
     }

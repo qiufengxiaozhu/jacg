@@ -313,21 +313,17 @@
     });
 
     $(document).on("click", '#save-btn-test', function (e) {
+        $("dy_form").submit(function () {
         if(checktitle() && checkcontents()){
             return true;
         }
         else {
-            return;
+            return false;
         }
+        })
     });
 
-    $("input[name='title']").blur(function () {
-        checktitle();
-    });
 
-    $("input[name='contetns']").blur(function () {
-        checkcontents();
-    });
 
 
 
