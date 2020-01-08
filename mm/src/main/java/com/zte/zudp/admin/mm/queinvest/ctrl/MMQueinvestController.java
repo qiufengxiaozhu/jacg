@@ -1,5 +1,6 @@
 package com.zte.zudp.admin.mm.queinvest.ctrl;
 
+import com.zte.zudp.admin.common.persistence.Result;
 import com.zte.zudp.admin.common.persistence.Subject;
 import com.zte.zudp.admin.common.security.SubjectUtil;
 import com.zte.zudp.admin.common.util.IDUtil;
@@ -13,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.websocket.Session;
 import java.util.*;
 
@@ -70,8 +72,9 @@ public class MMQueinvestController {
      * @param map
      * @return
      */
-    @GetMapping   ("/test")
-        public String test(@RequestParam Map<String ,Object> map,HttpServletRequest request) {
+
+    @RequestMapping(value = "/test",method = RequestMethod.POST)
+    public String test(@RequestParam Map<String ,Object> map, HttpServletRequest request, HttpServletResponse response) {
             // 获取到手机号
         Object userPhone = request.getSession().getAttribute("userPhone");
         // 获取到用户名称
@@ -81,7 +84,6 @@ public class MMQueinvestController {
             int queSize = 0;
             // 存放查询出来的结果
             List<MMQueinvest> list= new ArrayList();
-            String str002 = map.get("1").toString();
             try {
                 if (map.get("queSize") != null) { // 题目数量不为空
                     queSize = Integer.parseInt((String) map.get("queSize"));
@@ -92,7 +94,7 @@ public class MMQueinvestController {
                     // 获得到每个被选中的单选按钮的值  选项内容
                      if(map.get(i+"") != null){
                          String str = map.get(i+"").toString();
-                        String queId =  map.get("queId").toString();
+                        String queId =  map.get(i+"queId").toString();
                          // 调用service层，查询出此答案所对应的题目和问卷
                         MMQueinvest answer = mmQueinvestService.selectAllByAnswer(str,queId);
                         answer.setOptContext(str);
@@ -120,7 +122,7 @@ public class MMQueinvestController {
             }
 
 
-            return "/mm/news/index";
+            return "redirect:/mm/news/index";
 
         }
 
