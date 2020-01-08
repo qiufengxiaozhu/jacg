@@ -310,4 +310,120 @@
 
    </select>
 
+
+
+    <select id="findTypeJdSum" resultType="java.util.Map">
+        SELECT
+            COUNT(*) as num,
+
+          '第一季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-01' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-03'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+
+
+        union all
+
+
+        SELECT
+            COUNT(*) as num,
+
+          '第二季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-04' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-06'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+
+
+        union all
+
+
+        SELECT
+            COUNT(*) as num,
+
+          '第三季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-07' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-09'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+
+
+
+        union all
+
+
+        SELECT
+            COUNT(*) as num,
+
+          '第四季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-10' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-12'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+
+   </select>
+
+
+
 </mapper>

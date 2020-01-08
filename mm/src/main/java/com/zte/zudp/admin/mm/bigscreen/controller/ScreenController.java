@@ -264,12 +264,16 @@ public class ScreenController {
 
         }
 
+        //大类最大 每个季度大类总量
+        List<Map> listTypeSum = screenService.findTypeJdSum();
+
 
 
         Map map=new HashMap();
         map.put("listMap",listMap);
         map.put("listdit",list);
         map.put("listArea",listtype);
+        map.put("listTypeSum",listTypeSum);
         return  map;
 
 

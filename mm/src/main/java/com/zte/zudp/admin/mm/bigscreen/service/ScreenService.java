@@ -240,4 +240,17 @@ public class ScreenService extends FileBusinessService<Screen> {
 
 
 
+    /**
+     *  大类最大 每个季度大类总量
+     *
+     * @return
+     */
+    public List<Map> findTypeJdSum(){
+
+        return screenDao.findTypeJdSum();
+    }
+
+
+
+
 }
