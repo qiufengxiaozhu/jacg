@@ -152,4 +152,12 @@ public interface ScreenDao extends AbstractDao<Screen> {
      */
     public List<Map> getrightEvenTypes();
 
+    /**
+     *  大类最大 每个季度大类总量
+     *
+     * @return
+     */
+    public List<Map> findTypeJdSum();
+
+
 }

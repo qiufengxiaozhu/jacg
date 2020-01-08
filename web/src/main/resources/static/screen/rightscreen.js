@@ -31,7 +31,15 @@ function rightglfx() {
             areaname.push(area);
         }
 
+        var jdsum = [];
+        for(var i=0;i<value.listTypeSum.length;i++){
+            var s  =value.listTypeSum[i].num;
+            jdsum.push(s);
+        }
 
+
+
+debugger;
         var series = [];
         for(var i=0;i<value.listMap.length;i++){
             var map  =value.listMap[i];
@@ -48,20 +56,37 @@ function rightglfx() {
                 barWidth : 30,
                 stack: '分宜',
                 data:data,
-                itemStyle : {
-                    normal : {
-                        label: {
-                            show: true,
-                            position: 'top',
-                            textStyle: {
-                                color: 'white'
-                            }
-                        }
-                    },
-                }
+
             }
             series.push(serie);
         }
+
+
+
+        var serie = {
+            name: '总数',
+            type: 'bar',
+            barGap: '-100%',         // 左移100%，stack不再与上面两个在一列
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top',       //  位置设为top
+                    formatter: '{c}',
+                    textStyle: { color: '#fff' }
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: 'rgba(128, 128, 128, 0)'    // 仍为透明
+                }
+            },
+            data: jdsum
+        }
+
+
+        series.push(serie);
+
+
 
 
         option1 = null;
@@ -111,6 +136,9 @@ function rightglfx() {
             ],
             series : series
         };
+
+
+
 
         if (option1 && typeof option1 === "object") {
             myChart2.setOption(option1, true);
