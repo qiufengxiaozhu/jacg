@@ -29,7 +29,15 @@
     <script>
         $(function () {
             $("form").submit(function () {
-                return checktitle()&&checkcontent()&&checkname()&&checktelephone();
+                if (checktitle() && checkcontent() && checkname() && checktelephone()) {
+                    alert("上报成功");
+                    return true;
+
+                } else {
+                    alert("上报失败");
+                return false;
+
+            }
             })
             $("input[name='title']").blur(function () {
                         checktitle();
@@ -56,7 +64,7 @@
                 $("#sp_title").css("color","green").html("√");
                 return true;
             }else{
-                $("#sp_title").css("color","red").html("×");
+                $("#sp_title").css("color","red").html("字数个数应在1-20之间");
                 return false;
             }
         }
@@ -70,7 +78,7 @@
                 $("#sp_content").css("color","green").html("√");
                 return true;
             }else{
-                $("#sp_content").css("color","red").html("×");
+                $("#sp_content").css("color","red").html("字数个数应在1-50之间");
                 return false;
             }
         }
@@ -99,7 +107,7 @@
                 $("#sp_telephone").css("color","green").html("√");
                 return true;
             }else{
-                $("#sp_telephone").css("color","red").html("×");
+                $("#sp_telephone").css("color","red").html("请输入正确的手机号");
                 return false;
             }
         }
@@ -127,15 +135,17 @@
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>标题&nbsp;:</span>
                             <input type="text"  name="title" class="tab-input flex-1" placeholder="请输入您的来信标题(20字以内)">
-                            <span id="sp_title"></span>
+                            <span id="sp_title"style="color: red">*</span>
                         </div>
+
                     </div>
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>内容&nbsp;:</span>
-                            <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的咨询内容(500字以内)">
-                            <span id="sp_content"></span>
+                            <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的咨询内容(50字以内)">
+                            <span id="sp_content" style="color: red">*</span>
                         </div>
+
                     </div>
 
                     <div class="theme">

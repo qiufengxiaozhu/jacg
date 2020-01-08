@@ -20,6 +20,10 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
         .webuploader-container div {
             width:80px;
         }
@@ -121,6 +125,21 @@
                         <input type="hidden" name="id" id="id">
 
                         <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">标题：</label>
+                            <div class="col-sm-6">
+                                <input  type="text" name="title" maxlength="64" id="title" placeholder="咨询人电话" class="form-control">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">咨询内容：</label>
+                            <div class="col-sm-6">
+                                <textarea placeholder="咨询内容" class="form-control" rows="2" cols="" name="content" id="content"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">联系人：</label>
                             <div class="col-sm-6">
                                 <input  type="text" name="name" maxlength="64" id="name" placeholder="咨询人姓名" class="form-control">
@@ -140,19 +159,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">标题：</label>
-                            <div class="col-sm-6">
-                                <input  type="text" name="title" maxlength="64" id="title" placeholder="咨询人电话" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">咨询内容：</label>
-                            <div class="col-sm-6">
-                                <textarea placeholder="咨询内容" class="form-control" rows="2" cols="" name="content" id="content"></textarea>
-                            </div>
-                        </div>
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">咨询时间：</label>
@@ -175,34 +181,6 @@
                             </div>
                         </div>
 
-
-
-                        <#--<div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">咨询种类：</label>
-                            <div class="col-sm-6">
-                                <select class="form-control" id="categoryId" name="categoryId">
-
-                                </select>
-                            </div>
-                        </div>-->
-
-                        <#--<div class="form-group">
-                            <div class="col-sm-6">
-                                <a href="" class="col-sm-3 control-label my-control-label" id="picture" name="picture" target="_blank" >附件图片</a>
-                            </div>
-                        </div>
-
-                       <div class="form-group">
-                            <div class="col-sm-6">
-                                <a href="" class="col-sm-3 control-label my-control-label " id="voice" name="voice" target="_blank" >附件语音</a>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-6">
-                                <a href="" class="col-sm-3 control-label my-control-label " id="video" name="video" target="_blank" >附件视频</a>
-                            </div>
-                        </div>-->
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">附件：</label>
@@ -268,7 +246,7 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}咨询",
+            title: "回复咨询",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],
@@ -442,6 +420,39 @@
                         }
 
                     }},
+                /*{data: 'name'},
+
+                {data: 'telephone'},
+
+                {data: 'content',render:function(data, type, row){
+                        var suf="...";
+                        if(data!=null && data.length<20){
+                            suf="";
+                        }
+                        /!*if(data!=null){
+                            data=data.substr(0,20);
+                        }*!/
+                        var ah="<a title='"+data+"'>"+data.substr(0,20);+suf+"</a>";
+                        return ah;
+                    }
+
+                },
+
+                {data: 'category.name'},
+
+                {data: 'reply',render:function(data, type, row){
+                        var suf="...";
+                        if(data!=null && data.length<20){
+                            suf="";
+                        }
+                        /!*if(data!=null){
+                            data=data.substr(0,20)
+                        }*!/
+                        var ah="<a title='"+data+"'>"+data.substr(0,20)+suf+"</a>";
+                        return ah;
+                    }
+
+                },*/
 
                 {
                     render: function (data, type, row) {
@@ -459,12 +470,8 @@
 
                        var detailStr='<button onclick="img2(this)"  class="btn btn-success btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
 
-                        if(data.replyDate == null || data.replyDate == ""){
-                            btn += editstr+detailStr;
-                        }
-                        else
-                            btn += detailStr;
 
+                        btn += editstr+detailStr;
                         return zudp.util.render(btn, row);
                         //return "";
                     }

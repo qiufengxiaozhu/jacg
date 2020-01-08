@@ -68,7 +68,7 @@
                 $("#sp_title").css("color","green").html("√");
                 return true;
             }else{
-                $("#sp_title").css("color","red").html("×");
+                $("#sp_title").css("color","red").html("请输入1-20位字符");
                 return false;
             }
         }
@@ -81,7 +81,7 @@
                 $("#sp_place").css("color","green").html("√");
                 return true;
             }else{
-                $("#sp_place").css("color","red").html("×");
+                $("#sp_place").css("color","red").html("请输入1-20位字符");
                 return false;
             }
         }
@@ -94,7 +94,7 @@
                 $("#sp_content").css("color","green").html("√");
                 return true;
             }else{
-                $("#sp_content").css("color","red").html("×");
+                $("#sp_content").css("color","red").html("请输入1-50位字符");
                 return false;
             }
         }
@@ -168,14 +168,14 @@
 
 
                     <div class="theme">
-                        <div class="port flex flex-c-c"><span>案发描述&nbsp;:</span><br>
-                            <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的咨询内容(100字以内)">
+                        <div class="port flex flex-c-c"><span>上报内容&nbsp;:</span><br>
+                            <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的上报内容(50字以内)">
                             <span id="sp_content" style="color: red">*</span>
                         </div>
                     </div>
 
                     <div class="theme">
-                        <div class="port flex flex-c-c"><span>类型&nbsp;:</span>
+                        <div class="port flex flex-c-c"><span>上报类型&nbsp;:</span>
                             <select name="category">
                                 <option value="垃圾">垃圾</option>
                                 <option value="广告乱贴">广告乱贴</option>

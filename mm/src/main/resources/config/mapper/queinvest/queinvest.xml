@@ -20,6 +20,7 @@
     left join jacg_answers t2 on queinvestId = t1.id
     where status = '2'
     and  t1.id not in (select queinvestId from jacg_answers where user_id =#{userPhone}) and t1.del !=1
+    and t1.valid > now()
 
 </select>
 
