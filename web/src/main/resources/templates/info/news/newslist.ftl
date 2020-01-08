@@ -24,6 +24,8 @@
         /*滚动条的设置*/
         ::-webkit-scrollbar-thumb {
             background-color:#dddddd;
+            color:#dddddd;
+
         }
 
         .webuploader-container div {

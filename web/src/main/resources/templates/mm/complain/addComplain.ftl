@@ -141,7 +141,14 @@
         $(function () {
             //前端校验
             $("#add_form").submit(function () {
-                return checktitle() && checkcontent() && checkname() && checktelephone();
+                if(checktitle() && checkcontent() && checkname() && checktelephone()){
+                    alert("上报成功");
+                    return true;
+                }else {
+                    alert("上报失败")
+                    return false;
+                }
+
             });
             $("input[name='title']").blur(function () {
                 checktitle();

@@ -7,10 +7,7 @@ import com.zte.zudp.admin.mm.wxQueinvest.service.WXMMQueinvestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -71,7 +68,7 @@ public class WXMMQueinvestController {
      * @param map
      * @return
      */
-    @GetMapping("/test")
+    @PostMapping("/test")
         public String test(@RequestParam Map<String ,Object> map, HttpServletRequest request) {
         // 获取到手机号
         Object userPhone = request.getSession().getAttribute("userPhone");
@@ -81,7 +78,6 @@ public class WXMMQueinvestController {
             int queSize = 0;
             // 存放查询出来的结果
             List<WXMMQueinvest> list= new ArrayList();
-            String str002 = map.get("1").toString();
             try {
                 if (map.get("queSize") != null) { // 题目数量不为空
                     queSize = Integer.parseInt((String) map.get("queSize"));
@@ -92,7 +88,7 @@ public class WXMMQueinvestController {
                     // 获得到每个被选中的单选按钮的值  选项内容
                      if(map.get(i+"") != null){
                          String str = map.get(i+"").toString();
-                         String queId = map.get("queId").toString();
+                         String queId = map.get(i+"queId").toString();
 
                          // 调用service层，查询出此答案所对应的题目和问卷
                         WXMMQueinvest answer = wxmmQueinvestService.selectAllByAnswer(str,queId);
