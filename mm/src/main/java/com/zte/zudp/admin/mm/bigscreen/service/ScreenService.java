@@ -90,16 +90,16 @@ public class ScreenService extends FileBusinessService<Screen> {
     public Integer findareacountList(String fdid,String type){
         String StartDate="";
         String EndDate="";
-        if (type.equals("第一季度")){
+        if (type.equals("一季度")){
             StartDate="2018-01";
             EndDate="2018-03";
-        }else if (type.equals("第二季度")){
+        }else if (type.equals("二季度")){
             StartDate="2018-04";
             EndDate="2018-06";
-        }else if (type.equals("第三季度")){
+        }else if (type.equals("三季度")){
             StartDate="2018-07";
             EndDate="2018-09";
-        }else if (type.equals("第四季度")){
+        }else if (type.equals("四季度")){
             StartDate="2018-10";
             EndDate="2018-12";
         }
@@ -146,16 +146,16 @@ public class ScreenService extends FileBusinessService<Screen> {
 
         String StartDate="";
         String EndDate="";
-        if (type.equals("第一季度")){
+        if (type.equals("一季度")){
             StartDate="2018-01";
             EndDate="2018-03";
-        }else if (type.equals("第二季度")){
+        }else if (type.equals("二季度")){
             StartDate="2018-04";
             EndDate="2018-06";
-        }else if (type.equals("第三季度")){
+        }else if (type.equals("三季度")){
             StartDate="2018-07";
             EndDate="2018-09";
-        }else if (type.equals("第四季度")){
+        }else if (type.equals("四季度")){
             StartDate="2018-10";
             EndDate="2018-12";
         }

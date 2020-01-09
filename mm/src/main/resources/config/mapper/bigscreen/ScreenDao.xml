@@ -201,7 +201,7 @@
         SELECT
             COUNT(*) as num,
             MAINTYPENAME,
-          '第一季度' as jd
+          '一季度' as jd
         FROM
             tocgcase
         WHERE
@@ -229,7 +229,7 @@
         SELECT
             COUNT(*) as num,
             MAINTYPENAME,
-          '第二季度' as jd
+          '二季度' as jd
         FROM
             tocgcase
         WHERE
@@ -257,7 +257,7 @@
         SELECT
             COUNT(*) as num,
             MAINTYPENAME,
-          '第三季度' as jd
+          '三季度' as jd
         FROM
             tocgcase
         WHERE
@@ -286,7 +286,7 @@
         SELECT
             COUNT(*) as num,
             MAINTYPENAME,
-          '第四季度' as jd
+          '四季度' as jd
         FROM
             tocgcase
         WHERE
@@ -316,7 +316,7 @@
         SELECT
             COUNT(*) as num,
 
-          '第一季度' as jd
+          '一季度' as jd
         FROM
             tocgcase
         WHERE
@@ -344,7 +344,7 @@
         SELECT
             COUNT(*) as num,
 
-          '第二季度' as jd
+          '二季度' as jd
         FROM
             tocgcase
         WHERE
@@ -372,7 +372,7 @@
         SELECT
             COUNT(*) as num,
 
-          '第三季度' as jd
+          '三季度' as jd
         FROM
             tocgcase
         WHERE
@@ -401,7 +401,7 @@
         SELECT
             COUNT(*) as num,
 
-          '第四季度' as jd
+          '四季度' as jd
         FROM
             tocgcase
         WHERE
