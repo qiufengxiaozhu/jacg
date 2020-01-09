@@ -39,7 +39,7 @@ function rightglfx() {
 
 
 
-debugger;
+// debugger;
         var series = [];
         for(var i=0;i<value.listMap.length;i++){
             var map  =value.listMap[i];

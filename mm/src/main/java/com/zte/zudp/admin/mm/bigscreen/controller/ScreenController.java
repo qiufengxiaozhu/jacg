@@ -206,10 +206,11 @@ public class ScreenController {
     public Map getIndex() {
         //季度
         List listtype=new ArrayList<>();
-        listtype.add("第一季度");
-        listtype.add("第二季度");
-        listtype.add("第三季度");
-        listtype.add("第四季度");
+        listtype.add("一季度");
+        listtype.add("二季度");
+        listtype.add("三季度");
+        listtype.add("四季度");
+
 
         //社区遍历
         //大类最大 前五条
@@ -354,14 +355,14 @@ public class ScreenController {
     public  List<Map>  glareaList(String name){
         //季度
         List listtype=new ArrayList<>();
-        if (name.equals("第一季度")){
-            listtype.add("第一季度");
-        }else if (name.equals("第二季度")){
-            listtype.add("第二季度");
-        }else if (name.equals("第三季度")){
-            listtype.add("第三季度");
-        }else if (name.equals("第四季度")){
-            listtype.add("第四季度");
+        if (name.equals("一季度")){
+            listtype.add("一季度");
+        }else if (name.equals("二季度")){
+            listtype.add("二季度");
+        }else if (name.equals("三季度")){
+            listtype.add("三季度");
+        }else if (name.equals("四季度")){
+            listtype.add("四季度");
         }
 
         List<Map> list2 = screenService.getrightCasetypeNum(listtype.get(0).toString());
