@@ -12,6 +12,16 @@
     <link href="css/third/animate.min.css" rel="stylesheet">
     <link href="css/style.min.css?v=4.1.0" rel="stylesheet">
     <style>
+
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
+
         .sl-left{ position:relative;  margin-left: 230px;  }
         .sl-left .bd{ padding:10px; }
         .sl-left .bd .tempWrap{ width:100% !important; }/* 用 !important覆盖SuperSlide自动生成的宽度，这样就可以手动控制可视宽度。 */

@@ -23,7 +23,7 @@
             <div class="inv-right"  id="title">${Report.title!}</div>
         </div>
 
-        <div class="inv-cont inv-special">
+        <div class="inv-cont">
             <div class="">内容描述:</div>
             <div class="inv-right inv-right-special" id="content">${Report.description!}</div>
         </div>
@@ -129,7 +129,7 @@
         </div>
 
         <#--//市民评论框-->
-        <div class="cover" style="dis">
+        <div class="cover">
             <div class="alert-center">
                 <div class="slow">写下评论</div>
                 <div class="input-area">
@@ -153,35 +153,59 @@
 
     //评论框
     $(function(){
+
+        function bodyScroll(event){
+            event.preventDefault();
+        }
         $('.cover').hide();
         $(document).on('click','.de-listright',function(){
             $('.cover').show();
+            $('.cover').css({'top':$(document).scrollTop()+'px'});
+            document.body.addEventListener('touchmove',bodyScroll,false);
+            $('body').css({'position':'fixed',"width":"100%"});
         })
         $('.cancel').click(function(){
             $('.cover').hide();
+            document.body.removeEventListener('touchmove',bodyScroll,false);
+            $("body").css({"position":"initial"});
         })
-    });
+    })
 
     //评论提交
     function commentSubmit() {
-        $('.cover').hide();
+        function bodyScroll(event){
+            event.preventDefault();
+        }
+
         var contentValue= $("#content-comment").val();
         var reportId = $("#reportId").val();
-//        alert(contentValue);
-//        alert(reportId);
-        $.ajax({
-            url: "/mm/comment/addComment",
-            type: "get",
-            data: {
-                "content":contentValue,
-                "reportId":reportId
-            },
-            dataType: 'json',
-            success: function (data) {
-                window.location.reload();
-//                dataTable.ajax.reload();
-            }
-        });
+
+        if(contentValue == null || contentValue ==""){
+            document.body.removeEventListener('touchmove',bodyScroll,false);
+            $("body").css({"position":"initial"});
+            alert("评论内容不能为空！");
+            $('.cover').hide();
+        }
+        else {
+            $('.cover').hide();
+            document.body.removeEventListener('touchmove',bodyScroll,false);
+            $("body").css({"position":"initial"});
+            $.ajax({
+                url: "/mm/comment/addComment",
+                type: "get",
+                data: {
+                    "content": contentValue,
+                    "reportId": reportId
+                },
+                dataType: 'json',
+                success: function (data) {
+                    alert("评论成功！");
+                    window.location.reload();
+                    // dataTable.ajax.reload();
+                }
+            });
+        }
+        $('#content-comment').val(" ");
     }
 
     //增加点赞数

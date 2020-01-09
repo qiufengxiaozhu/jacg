@@ -22,6 +22,16 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
+    </style>
 </head>
 <body>
 <h1 class="text-center text-primary"> 我是投诉/建议界面 </h1>

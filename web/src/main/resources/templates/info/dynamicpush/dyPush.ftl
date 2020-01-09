@@ -24,6 +24,10 @@
         ::-webkit-scrollbar-thumb {
             background-color:#dddddd;
         }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
         .webuploader-container div {
             width:80px;
         }
@@ -265,11 +269,11 @@
                 title: title
     };
         data = JSON.stringify(data);
-            zudp.ajax("/api/dyPush/insert02").post(data).then(function (value) {
-                dataTable.ajax.reload();
-                $("#myModal5").modal("hide");
-                return true;
-            });
+        zudp.ajax("/api/dyPush/insert02").post(data).then(function (value) {
+            dataTable.ajax.reload();
+            $("#myModal5").modal("hide");
+
+        });
 
     });
 
@@ -326,8 +330,9 @@
 
 
 
-    $(document).ready(function () {
 
+
+    $(document).ready(function () {
 
 
 
@@ -451,9 +456,33 @@
     }
 
 
+    // 检验标题
+    function checktitle(){
+        var title=$("input[name='title']").val();
+        var reg_title= /^.{1,20}$/;
+        var flag=reg_title.test(title)
+        if(title!=null && title!='' &&flag){
+//            $("#sp_title").css("color","green").html("√");
+            return true;
+        }else{
+            $("#titId").css("color","red").html("字符个数应在1-20个");
+            return false;
+        }
+    }
 
-
-
+    //检验内容
+    function checkcontents(){
+        var content=$("input[name='contents']").val();
+        var reg_content= /^.{1,50}$/;
+        var flag=reg_content.test(content);
+        if(content!=null && content!='' &&flag){
+//            $("#sp_content").css("color","green").html("√");
+            return true;
+        }else{
+            $("#conId").css("color","red").html("字符个数应在1-50个");
+            return false;
+        }
+    }
 
 
     // 推送
@@ -475,6 +504,9 @@
     });
 
 
+
+
+
     // 撤销推送
     $(document).on("click", '#unpushId', function (e) {
 
@@ -492,6 +524,12 @@
             dataTable.ajax.reload();
         });
     });
+
+
+
+
+
+
 
 
     function initUpload(){

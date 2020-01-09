@@ -137,7 +137,7 @@ $(function(){
             containLabel: true
         },
         xAxis: {
-            data: ["季度", '', "一季度", '', "二季度", '', "三季度", '', "四季度"],
+            data: ["季度", '', "第一季度", '', "第二季度", '', "第三季度", '', "第四季度"],
             axisLine: {
                 show: false
             },
@@ -279,17 +279,10 @@ $(function(){
      * 第三个图
      */
     var option3 = {
-        tooltip: {},
-        grid: {
-            left: '2%',
-            right: '-5%',
-            bottom: '17%',
-            containLabel: true
-        },
         series: [{
             name: '销量',
             type: 'pie',
-            radius: ['50%', '70%'],
+            radius: ['0%', '0%'],
             avoidLabelOverlap: false,
             symbol: 'none',
             lineStyle: {
@@ -302,7 +295,7 @@ $(function(){
                 {value:30, name:'15%'},
                 {value:15, name:'30%'}
             ],
-            barWidth : 20,
+            barWidth : 10,
             barGap:'-50%',
             itemStyle: {
                 normal: {

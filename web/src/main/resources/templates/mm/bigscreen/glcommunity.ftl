@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>区域案件预警社区下钻</title>
     <link rel="shortcut icon" href="/img/favicon.ico">
-    <link href="/css/third/bootstrap.min.css" rel="stylesheet">
+<#--    <link href="/css/third/bootstrap.min.css" rel="stylesheet">-->
     <link href="/css/third/font-awesome.min.css" rel="stylesheet">
     <link href="/css/third/custom.css" rel="stylesheet">
     <link href="/css/third/layers/default/layer.css" rel="stylesheet">

@@ -25,6 +25,10 @@
         ::-webkit-scrollbar-thumb {
             background-color:#dddddd;
         }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
 
         /*去掉百度地图标志*/
         .BMap_cpyCtrl {

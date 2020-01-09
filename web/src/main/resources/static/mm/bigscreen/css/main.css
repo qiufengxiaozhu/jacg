@@ -559,3 +559,7 @@ table.gridtable .click-ch td{
     height:6rem;
     z-index: 9999;
 }
+.chart3{
+    height: 2rem;
+    width: 2rem;
+}

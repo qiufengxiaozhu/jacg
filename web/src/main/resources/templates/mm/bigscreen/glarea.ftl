@@ -78,7 +78,7 @@
 <script src="/js/third/bootstrap.min.js"></script>
 <script src="/js/third/jquery.validate.min.js"></script>
 <script src="/js/third/jquery.dataTables.min.js"></script>
-<script src="/js/third/dataTables.bootstrap.js"></script>
+<#--<script src="/js/third/dataTables.bootstrap.js"></script>-->
 <script src="/js/third/layer/layer.min.js"></script>
 <script src="/js/third/icheck.min.js"></script>
 <script src="/js/third/sweetalert.min.js"></script>
