@@ -49,7 +49,7 @@
             <div class="inv-right">
                 <#--<img src="/mm/img/arr15.png" alt="">-->
                 <#--<img src="/mm/img/arr12.png" class="inv-pic2" alt="">-->
-                <#if mm.attachPaths?exists && mm.attachPaths??>
+                <#if mm.attachPaths?exists && mm.attachPaths??&&((mm.attachPaths!?size)>0)>
                     <#list 0..(mm.attachPaths!?size-1) as i>
                     <#if mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".bmp" ||
                         mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".png" ||

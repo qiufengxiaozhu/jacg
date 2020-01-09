@@ -185,29 +185,6 @@
                     <form class="form-horizontal" id="form-addOption">
                         <input type="hidden" class="testId" name="id" id="id">
 
-
-                        <#--<div class="form-group">-->
-                            <#--<label class="col-sm-3 control-label my-control-label ">题目名称：</label>-->
-                            <#--<div class="col-sm-6">-->
-                                <#--<input type="text" name="contents" maxlength="64" id="contents02" placeholder="题目名称" class="form-control">-->
-                            <#--</div>-->
-                            <#--<div>-->
-                                <#--<i class="i_context my-i_context">*</i>-->
-                            <#--</div>-->
-                        <#--</div>-->
-
-                        <#--<div class="form-group">-->
-                            <#--<label class="col-sm-3 control-label my-control-label ">题目类型：</label>-->
-                            <#--<div class="col-sm-6">-->
-                                <#--<select id="category" name="questionType" class="form-control" ><select>-->
-                            <#--</div>-->
-                            <#--<div>-->
-                                <#--<i class="i_context my-i_context">*</i>-->
-                            <#--</div>-->
-                        <#--</div>-->
-
-
-
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项一：</label>
                             <div class="col-sm-6">
@@ -295,7 +272,6 @@
     $(document).ready(function () {
 
 
-        // 新建  验证
 
         // 新建  验证
         $("#post_form").validate({
@@ -551,8 +527,6 @@
         $("#ct4").css("display","block");	//隐藏选项
 
     });
-
-
 
     function initUpload(){
 

@@ -32,7 +32,7 @@
 
     <style>
         .change-font{
-            font-size: 0.3rem;
+            font-size: 0.45rem;
         }
         .te-btn{
             width: 90%;
@@ -45,6 +45,7 @@
             background: #007EF3;
             color: #fff;
             font-size: 0.4rem;
+            max-width: 495px;
         }
     </style>
 
