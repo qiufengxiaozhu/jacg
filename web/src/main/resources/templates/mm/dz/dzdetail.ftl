@@ -41,7 +41,7 @@
         </div>
     </div>
 
-<div class="cover" style="dis">
+<div class="cover cover1" style="display: none;">
     <div class="alert-center">
         <div class="slow">写下评论</div>
         <div class="input-area"><textarea id="matter" cols="45" rows="5" class="text-area"  ></textarea></div>
@@ -55,12 +55,21 @@
     var contentID;
     //评论框
     $(function(){
+        function bodyScroll(event){
+            event.preventDefault();
+        }
         $('.cover').hide();
         $(document).on('click','.de-listright',function(){
             $('.cover').show();
+            $('.cover').css({'top':$(document).scrollTop()+'px'});
+            document.body.addEventListener('touchmove',bodyScroll,false);
+            $('body').css({'position':'fixed',"width":"100%"});
+            console.log(123)
         })
         $('.cancel').click(function(){
             $('.cover').hide();
+            document.body.removeEventListener('touchmove',bodyScroll,false);
+            $("body").css({"position":"initial"});
         })
     })
     //跳转
@@ -75,15 +84,21 @@
     }
     //评论提交
     function commentSubmit() {
-
+        function bodyScroll(event){
+            event.preventDefault();
+        }
         var matterValue= $("#matter").val();
 
         if(matterValue == null || matterValue ==""){
             alert("评论内容不能为空！");
             $('.cover').hide();
+            document.body.removeEventListener('touchmove',bodyScroll,false);
+            $("body").css({"position":"initial"});
         }
         else{
             $('.cover').hide();
+            document.body.removeEventListener('touchmove',bodyScroll,false);
+            $("body").css({"position":"initial"});
             $.ajax({
                 url: "/api/likeInfo/commentSubmit",
                 type: "get",
@@ -96,6 +111,7 @@
                     dzListInfo(); //评论列表更新
                 }
             });
+            alert("评论成功！");
         }
         $('#matter').val(" ");
     }

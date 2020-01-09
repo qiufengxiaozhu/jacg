@@ -221,7 +221,7 @@
 
             $("#attachIdss").val('');
             //初始化上传工具
-            initUpload(tp,tpgs,1*1024*1024);
+            initUpload(tp,tpgs,1,1*1024*1024);
             initUpload(yy,yygs,2,5*1024*1024);
             initUpload(sp,spgs,2,10*1024*1024);
         })

@@ -1,10 +1,7 @@
 package com.zte.zudp.admin.info.complain;
 
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
-import com.zte.zudp.admin.common.annotation.endpoint.EndpointPage;
-import com.zte.zudp.admin.common.annotation.endpoint.Menu;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -17,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/category")
 public class CategoryMenu {
 
-    @Menu
-    @GetMapping("/dept")
-    @EndpointPage(id = "deptManager", name = "部门管理", order = 1,icon = "cog")
-    public String processModeler() {
-        return "/info/complain/dept";
-    }
+//    @Menu
+//    @GetMapping("/dept")
+//    @EndpointPage(id = "deptManager", name = "部门管理", order = 1,icon = "cog")
+//    public String processModeler() {
+//        return "/info/complain/dept";
+//    }
 }

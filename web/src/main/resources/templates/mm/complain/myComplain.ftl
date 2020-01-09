@@ -28,8 +28,17 @@
                         </div>
                         <div class="flex-6">
                             <div>
-                                <p class="violation">${list.title!}</p>
-                                <p class="well-peopel">${list.description!}</p>
+                                <#if (list.title?? && list.title?length>13)>
+                                    <p class="violation">${list.title?substring(0,13)}...</p>
+                                <#else >
+                                    <p class="violation">${list.title!}</p>
+                                </#if>
+
+                                <#if (list.description?? && list.description?length>25)>
+                                    <p class="well-peopel">${list.description?substring(0,25)}...</p>
+                                <#else >
+                                    <p class="well-peopel">${list.description!}</p>
+                                </#if>
                             </div>
                         </div>
                         <div class="flex-1 flex flex-c-c flex-r-c flex-fx-c">
@@ -44,10 +53,17 @@
                             <p class="date-day">${list.day!}</p>
                         </div>
                         <div class="flex-6">
-                            <div>
+                            <#if (list.title?? && list.title?length>13)>
+                                <p class="violation">${list.title?substring(0,13)}...</p>
+                            <#else >
                                 <p class="violation">${list.title!}</p>
+                            </#if>
+
+                            <#if (list.description?? && list.description?length>25)>
+                                <p class="well-peopel">${list.description?substring(0,25)}...</p>
+                            <#else >
                                 <p class="well-peopel">${list.description!}</p>
-                            </div>
+                            </#if>
                         </div>
                         <div class="flex-1 flex flex-c-c flex-r-c flex-fx-c">
                             <span class="my-hf">未回复</span>

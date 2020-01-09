@@ -592,7 +592,7 @@ input::-webkit-input-placeholder{
     overflow: auto;
 }
 .inv-cont{
-    height: 1.2rem;
+
     width: 94%;
     margin: auto;
     border-bottom: 1px solid #F2F2F2;
@@ -1063,9 +1063,9 @@ input::-webkit-input-placeholder {
 }
 .cover{
     position: absolute;
-    top: 0rem;
     width: 100%;
     height: 100%;
+    top: 0rem;
     background: rgba(169, 169, 169, 0.8);
 }
 .alert-center{

@@ -9,7 +9,7 @@
     <link href="/css/third/font-awesome.min.css" rel="stylesheet">
     <link href="/css/third/custom.css" rel="stylesheet">
     <link href="/css/third/layers/default/layer.css" rel="stylesheet">
-    <link href="/css/third/dataTables.bootstrap.css" rel="stylesheet">
+<#--    <link href="/css/third/dataTables.bootstrap.css" rel="stylesheet">-->
     <link href="/css/third/animate.min.css" rel="stylesheet">
     <link href="/css/third/sweetalert.css" rel="stylesheet"/>
     <link href="/css/third/toastr.min.css" rel="stylesheet"/>
@@ -86,7 +86,7 @@
     </div>
 </div>
 <#--以下是模态框-->
-<div class="mess" id="myModal5" style="display: none;">
+<div class="mess" style="z-index: 9999; height: 7.4rem; width: 11rem;font-size: 0.25rem;" id="myModal5">
     <div class="close me-close"><img src="/zhizui/img/close.png"></div>
     <div class="me-relative">
         <div class="be-center">案件详情</div>
@@ -94,7 +94,7 @@
             <div class="me-high">
                 <#--<div class="me-fl-left" id ="name">案件名称:&nbsp;XXXXX</div>-->
                 <div class="me-fl-right flex" >
-                    <div>案件类型: <span id="MAINTYPENAME"></span></div>
+                    <div>大类类型: <span id="MAINTYPENAME"></span></div>
                 </div>
             </div>
             <div class="me-high" id="addressId">地址:&nbsp;<span id="ADDRESS"></span></div>
@@ -111,8 +111,8 @@
                 <div class="deep"><span id="DISPOSEOPINION"></span></div>
             </div>
             <div class="me-resolve">
-                <div class="me-getres" id="descriptionId">问题描述:</div>
-                <div class="put-tex"><span id="EVENTDESC"></span></div>
+                <div class="me-getres" style="font-size: 0.25rem" id="descriptionId">问题描述:</div>
+                <div class="put-tex" style="font-size: 0.25rem"><span id="EVENTDESC"></span></div>
             </div>
         </div>
     </div>
@@ -141,8 +141,10 @@
 <script src="/js/rest.js"></script>
 
 <script>
-    $('.close').on('click',function(){
-        $('.mess').hide();
+    $('.mess').hide();
+
+    $('.mess .close').on('click',function(){
+        $(this).parents(".mess").hide();
     })
 
     var page=1;
@@ -238,7 +240,7 @@
             $("#DISPOSEDEPARTNAME").html(value.DISPOSEDEPARTNAME);
             $("#DEALTIME").html(value.DEALTIME);
 //            ;
-            $("#myModal5").modal("show");//显示div
+            $("#myModal5").show();//显示div
 
 
         },function (reason) {

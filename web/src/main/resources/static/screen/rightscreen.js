@@ -39,7 +39,7 @@ function rightglfx() {
 
 
 
-// debugger;
+debugger;
         var series = [];
         for(var i=0;i<value.listMap.length;i++){
             var map  =value.listMap[i];
@@ -206,6 +206,11 @@ function rightEvenType() {
         option3 = null;
         myChart3.hideLoading();
         option3 = {
+            legend: {
+                textStyle: { //图例文字的样
+                    fontSize: 2
+                }
+            },
             tooltip : {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c} ({d}%)"

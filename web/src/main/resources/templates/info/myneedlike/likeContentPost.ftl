@@ -21,6 +21,14 @@
 
 
     <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
         .webuploader-container div {
             width:80px;
         }
@@ -490,20 +498,23 @@
                         render: function (data, type, row) {
                             var btn = "";
                             var editstr="";
-                            var  delstr="";
+                            var delstr="";
                             var publish = "";
+                            var details ="";
                             if(data.publishStatus == "0"){ // 报警
-                                editstr=zudp.template.editBtn;
+                                editstr= '<button class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}" style="margin-right: 5px"><i class="fa fa-pencil"></i>编辑</button>';
                                 delstr=zudp.template.delBtn;
+                                details = '<button class="btn btn-success btn-sm row-detail" value="{id}" style="margin-left: -5px;margin-right: 5px"><i class="fa fa-pencil"></i>详情</button>'
                                 publish = '<button id= "publishStr" class="btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>发布</button>';
-                                btn += editstr+delstr+publish;
+                                btn += editstr+delstr+details+publish;
                                 return zudp.util.render(btn, row);
                             }
                             else if(data.publishStatus == "1"){
-                                editstr=zudp.template.editBtn;
+                                editstr= '<button class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}" style="margin-right: 5px"><i class="fa fa-pencil"></i>编辑</button>';
                                 delstr=zudp.template.delBtn;
+                                details = '<button class="btn btn-success btn-sm row-detail" value="{id}" style="margin-left: 0px;margin-right: 5px"><i class="fa fa-pencil"></i>详情</button>'
                                 publish = '<button id= "noPublishStr" class="btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>取消发布</button>';
-                                btn += publish;
+                                btn += details+publish;
                                 return zudp.util.render(btn, row);
                             }
 
@@ -514,6 +525,22 @@
                 .then();
 
     }
+
+    //编辑按钮
+    $(document).on("click", '.row-edit', function (e) {
+        ue.setEnabled();
+        $("#xg_rar").show();
+    });
+    //新建按钮
+    $(document).on("click", '#add-btn', function (e) {
+        ue.setEnabled();
+        $("#xg_rar").show();
+    });
+    //详情按钮
+    $(document).on("click", '.row-detail', function (e) {
+        ue.setDisabled();
+        $("#xg_rar").hide();
+    });
 
     function initUpload(tpgs){
         var uploader = WebUploader.create({

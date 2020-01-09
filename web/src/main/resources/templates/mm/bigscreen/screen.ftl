@@ -17,10 +17,10 @@
     <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
     <script src="/js/third/jquery.min.js"></script>
     <script src="/js/pluginInit/animation.js"></script>
-    <script src="/js/third/bootstrap.min.js"></script>
+<#--    <script src="/js/third/bootstrap.min.js"></script>-->
     <script src="/js/third/jquery.validate.min.js"></script>
     <script src="/js/third/jquery.dataTables.min.js"></script>
-    <script src="/js/third/dataTables.bootstrap.js"></script>
+<#--    <script src="/js/third/dataTables.bootstrap.js"></script>-->
     <script src="/js/third/layer/layer.min.js"></script>
     <script src="/js/third/icheck.min.js"></script>
     <script src="/js/third/sweetalert.min.js"></script>
@@ -195,8 +195,8 @@
                          <select name="" id="" class="ri-selected1"><option value="">1月1日——11月16日</option></select>
                      </div>-->
                 </div>
-                <div class="ri-bg">
-                    <div class="chart3" id="chart3" style="width: 280px;height:180px;"></div>
+                <div class="ri-bg" style="overflow: hidden">
+                    <div class="chart3" id="chart3" style="height: 1.7rem;width: 3.3rem;margin-left: 0.4rem;margin-top: 0.2rem;"></div>
                 </div>
             </div>
             <div class="right-top">

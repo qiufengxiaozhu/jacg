@@ -29,16 +29,14 @@
     <script>
         $(function () {
             $("form").submit(function () {
-                checktitle();
-                checkcontent();
-                checkname();
-                checktelephone();
-                checkplace();
-                var flage=checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace();
-                if (flage){
+
+                var flag=checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace();
+                if (flag){
                     alert("上报成功")
+                }else{
+                    alert("上报失败")
                 }
-                return flage;
+                return flag;
             })
             $("input[name='title']").blur(function () {
                         checktitle();

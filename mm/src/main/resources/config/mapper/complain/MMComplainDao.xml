@@ -164,18 +164,18 @@
             contact,
             phone,
             contact_user,
-            DATE_FORMAT(complain_date, '%Y-%c-%d %H:%i:%S') complain_date,
+            DATE_FORMAT(complain_date, "%Y-%m-%d %T") complain_date,
             reply_status,
             reply_content,
-            DATE_FORMAT(reply_date, '%Y-%c-%d %H:%i:%S') reply_date,
+            DATE_FORMAT(reply_date, "%Y-%m-%d %T") reply_date,
             reply_user,
             longitude,
             latitude,
             address,
             create_user,
-            DATE_FORMAT(create_date, '%Y-%c-%d %H:%i:%S') create_date,
+            DATE_FORMAT(create_date, "%Y-%m-%d %T") createDate,
             update_user,
-            DATE_FORMAT(update_date, '%Y-%c-%d %H:%i:%S') update_date,
+            DATE_FORMAT(update_date, "%Y-%m-%d %T") updateDate,
             del
         FROM
             zzb_complain

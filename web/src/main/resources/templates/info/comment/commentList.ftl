@@ -20,6 +20,16 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
+
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
+
         .webuploader-container div {
             width:80px;
         }
@@ -181,9 +191,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group" id="commentText">
-<#--                            <div class='col-md-8 control-label my-control-label' id='tempText' style='float: left'>-->
-<#--                            </div>-->
+                        <#--评论存放位置-->
+                        <div id="commentText">
+
                         </div>
                     </form>
                 </div>
@@ -331,11 +341,29 @@
                 var content=arr[i].content;
                 var time=arr[i].publicTime;
 
-                $("#commentText").append("<div class='col-md-8 control-label my-control-label tempText' id='tempText' style='float: left'>" +
-                        "<div style='float: left;margin-left:165'>回 复 者 ："+"<input type='text' value='"+name+"' id='textName' >"+"</div>" +"<br>"+"<br>"+
-                        "<div style='float: left;margin-left:165'>回复内容："+"<input type='text' value='"+content+"' id='textContent'>"+"</div>" +"<br>"+"<br>"+
-                        "<div style='float: left;margin-left:165'>回复时间："+"<input type='text' value='"+time+"' id='textTime'>"+"</div>" +"<br>"+"<br>"+"<hr>"+
-                        "</div>"+"<br>"+"<br>"+"<br>"+"<br>");
+                $("#commentText").append(
+                    "<hr />"+
+                    "<div class='form-group' id='tempText' >" +
+                        "<label class='col-sm-3 control-label my-control-label '>"+"回 复 者 ："+"</label>"+
+                        "<div class='col-sm-6'>"+
+                            "<input type='text' maxlength='64' class='form-control' readonly value='"+name+"' id='textName' >"+
+                        "</div>" +
+                    "</div>"+
+
+                    "<div class='form-group' id='tempText' >" +
+                        "<label class='col-sm-3 control-label my-control-label '>"+"回复内容："+"</label>"+
+                        "<div class='col-sm-6'>"+
+                            "<input type='text' maxlength='64' class='form-control' readonly value='"+content+"' id='textContent'>"+
+                        "</div>" +
+                    "</div>"+
+
+                    "<div class='form-group' id='tempText' >" +
+                        "<label class='col-sm-3 control-label my-control-label '>"+"回复时间："+"</label>"+
+                        "<div class='col-sm-6'>"+
+                            "<input type='text' maxlength='64' class='form-control' readonly value='"+time+"' id='textTime'>"+
+                        "</div>" +
+                    "</div>"
+                );
 
 //                $("#textName").val(name);
 //                $("#textContent").val(content);
