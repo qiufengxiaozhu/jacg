@@ -25,6 +25,11 @@
             width: 25;
             height: 25
         }
+        .sp-span{display: inline-block;width: 100%;padding-left: 2.2rem;color:#ff2233;display: none}
+        .port .sp-span2{padding:0 .2rem;width: auto;width: 0.2rem;display: none}
+        .webuploader-container div {width: 86px;  height: 35px;line-height: 35px;}
+        .fx-img{width: 32%;height: 2rem;margin:0.1rem 0.5%}
+        .fx-img img{width: 100%;height: 100%}
     </style>
     <script>
         $(function () {
@@ -61,10 +66,12 @@
             var reg_title= /^.{1,20}$/;
             var flag=reg_title.test(title)
             if(title!=null && title!='' &&flag){
-                $("#sp_title").css("color","green").html("√");
+                $("#sp_title2").show();
+                $("#sp_title").hide();
                 return true;
             }else{
-                $("#sp_title").css("color","red").html("字数个数应在1-20之间");
+                $("#sp_title").show();
+                $("#sp_title2").hide();
                 return false;
             }
         }
@@ -75,10 +82,12 @@
             var reg_content= /^.{1,50}$/;
             var flag=reg_content.test(content);
             if(content!=null && content!='' &&flag){
-                $("#sp_content").css("color","green").html("√");
+                $("#sp_content2").show();
+                $("#sp_content").hide();
                 return true;
             }else{
-                $("#sp_content").css("color","red").html("字数个数应在1-50之间");
+                $("#sp_content").show();
+                $("#sp_content2").hide();
                 return false;
             }
         }
@@ -104,10 +113,12 @@
             var reg_telephonr= /^(((13|14|15|18|17)\d{9}))$/;
             var flag=reg_telephonr.test(telephone);
             if (flag){
-                $("#sp_telephone").css("color","green").html("√");
+                $("#sp_telephone2").show();
+                $("#sp_telephone").hide();
                 return true;
             }else{
-                $("#sp_telephone").css("color","red").html("请输入正确的手机号");
+                $("#sp_telephone").show();
+                $("#sp_telephone2").hide();
                 return false;
             }
         }
@@ -135,31 +146,35 @@
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>标题&nbsp;:</span>
                             <input type="text"  name="title" class="tab-input flex-1" placeholder="请输入您的来信标题(20字以内)">
-                            <span id="sp_title"style="color: red">*</span>
+                            <span class="sp-span2" id="sp_title2" style="color:green">√</span>
                         </div>
+                        <span class="sp-span" id="sp_title">字符个数应在1-20个</span>
 
                     </div>
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>内容&nbsp;:</span>
                             <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的咨询内容(50字以内)">
-                            <span id="sp_content" style="color: red">*</span>
+                            <span class="sp-span2" id="sp_content2" style="color:green">√</span>
                         </div>
+                        <span class="sp-span" id="sp_content">请输入11位数字</span>
 
                     </div>
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>联系人&nbsp;:</span>
                         <input type="text" name="name" class="tab-input flex-1" placeholder="请输入您的真实姓名" value="${Session.userName!}">
-                        <span id="sp_name"></span>
+                            <span class="sp-span2" id="sp_name2" style="color:green">√</span>
                         </div>
+                        <span class="sp-span" id="sp_name">请输入2-7个字符</span>
                     </div>
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>联系电话&nbsp;:</span>
                         <input type="text" name="telephone" class="tab-input flex-1" placeholder="请输入您的电话(11位数字)" value="${Session.userPhone!}">
-                        <span id="sp_telephone"></span>
+                            <span class="sp-span2" id="sp_telephone2" style="color:green">√</span>
                         </div>
+                        <span class="sp-span" id="sp_telephone">请输入11位数字</span>
                     </div>
 
                     <#--<div class="theme">
@@ -170,28 +185,28 @@
                             <div ><img src="/mm/img/arr15.png" alt=""></div>
                         </div>
                     </div>-->
-
-                    <div class="form-group" style="">
+                    <div class="theme">
+                    <div class="form-group" style="min-height: 2rem;margin-top: 0.3rem">
                         <div style="width:80;height: 35px;position: relative;margin:0 auto">
                             <div id="xg_rar">上传图片附件</div>
                         </div>
                         <div id="fileShowName" style="text-align: center;margin:0 auto"></div>
                     </div>
 
-                    <div class="form-group" style="">
+                    <div class="form-group" style="min-height: 2rem;">
                         <div style="width:80;height: 35px;position: relative;margin:0 auto">
                             <div id="yy">上传语音附件</div>
                         </div>
                         <div id="yyfileShowName" style="text-align: center;margin:0 auto"></div>
                     </div>
 
-                    <div class="form-group" style="">
+                    <div class="form-group" style="min-height: 2rem;">
                         <div style="width:80;height: 35px;position: relative;margin:0 auto">
                             <div id="sp">上传视频附件</div>
                         </div>
                         <div id="spfileShowName" style="text-align: center;margin:0 auto"></div>
                     </div>
-
+                    </div>
                 </div>
             </div>
         </div>

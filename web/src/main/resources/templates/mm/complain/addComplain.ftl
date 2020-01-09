@@ -20,6 +20,11 @@
             width: 25;
             height: 25
         }
+        .sp-span{display: inline-block;width: 100%;padding-left: 2.2rem;color:#ff2233;display: none}
+        .port .sp-span2{padding:0 .2rem;width: auto;width: 0.2rem;display: none}
+        .webuploader-container div {width: 86px;  height: 35px;line-height: 35px;}
+        .fx-img{width: 32%;height: 2rem;margin:0.1rem 0.5%}
+        .fx-img img{width: 100%;height: 100%}
     </style>
 </head>
 
@@ -41,32 +46,36 @@
                                 <span>标题&nbsp;:</span>
                                 <input type="text" name="title" id="title" class="tab-input flex-1"
                                        placeholder="请输入您的来信标题(20字以内)">
-                                <span id="sp_title"></span>
+                                <span class="sp-span2" id="sp_title2" style="color:green">√</span>
                             </div>
+                            <span class="sp-span" id="sp_title">字符个数应在1-20个</span>
                         </div>
                         <div class="theme">
                             <div class="port flex flex-c-c">
                                 <span>问题描述&nbsp;:</span>
                                 <input type="text" name="description" id="description" class="tab-input flex-1"
                                        placeholder="请输入您的诉求内容(50字以内)">
-                                <span id="sp_description"></span>
+                                <span class="sp-span2" id="sp_description2" style="color:green">√</span>
                             </div>
+                            <span class="sp-span" id="sp_description">请输入1-50位字符</span>
                         </div>
                         <div class="theme">
                             <div class="port flex flex-c-c">
                                 <span>联系人&nbsp;:</span>
                                 <input type="text" name="contact" id="contact" class="tab-input flex-1"
                                        placeholder="请输入您的姓名(20字以内)" value="${Session.userName}">
-                                <span id="sp_contact"></span>
+                                <span class="sp-span2" id="sp_contact2" style="color:green">√</span>
                             </div>
+                            <span class="sp-span" id="sp_contact">请输入1-20位字符</span>
                         </div>
                         <div class="theme">
                             <div class="port flex flex-c-c">
                                 <span>联系电话&nbsp;:</span>
                                 <input type="text" name="phone" id="phone" class="tab-input flex-1"
                                        placeholder="请输入您的电话"value="${Session.userPhone}">
-                                <span id="sp_phone"></span>
+                                <span class="sp-span2" id="sp_phone2" style="color:green">√</span>
                             </div>
+                            <span class="sp-span" id="sp_phone">手机号格式不对</span>
                         </div>
                         <div class="theme">
                             <div class="type">
@@ -85,25 +94,26 @@
                             <div class="port flex flex-c-c">
                                 <span>填写地址&nbsp;:</span>
                                 <input type="text" id="address" name="address" class="tab-input flex-1">
-                                <span id="sp_address"></span>
+                                <span class="sp-span2" id="sp_address2" style="color:green">√</span>
                             </div>
+                            <span class="sp-span" id="sp_address">字符不超过20位</span>
                         </div>
                         <div class="theme">
-                            <div class="form-group" style="">
+                            <div class="form-group" style="min-height: 2rem;margin-top: 0.3rem">
                                 <div style="width:80;height: 35px;position: relative;margin:0 auto">
                                     <div id="xg_rar">上传图片附件</div>
                                 </div>
                                 <div id="fileShowName" style="text-align: center;margin:0 auto"></div>
                             </div>
 
-                            <div class="form-group" style="">
+                            <div class="form-group" style="min-height: 2rem;">
                                 <div style="width:80;height: 35px;position: relative;margin:0 auto">
                                     <div id="yy">上传语音附件</div>
                                 </div>
                                 <div id="yyfileShowName" style="text-align: center;margin:0 auto"></div>
                             </div>
 
-                            <div class="form-group" style="">
+                            <div class="form-group" style="min-height: 2rem;">
                                 <div style="width:80;height: 35px;position: relative;margin:0 auto">
                                     <div id="sp">上传视频附件</div>
                                 </div>
@@ -159,10 +169,12 @@
             var reg_title = /^.{1,20}$/;
             var flag = reg_title.test(title)
             if (title != null && title != '' && flag) {
-                $("#sp_title").css("color", "green").html("√");
+                $("#sp_title2").show();
+                $("#sp_title").hide();
                 return true;
-            } else {
-                $("#sp_title").css("color", "red").html("请输入1-20位字符");
+            }else{
+                $("#sp_title").show();
+                $("#sp_title2").hide();
                 return false;
             }
         }
@@ -173,10 +185,12 @@
             var reg_content = /^.{1,50}$/;
             var flag = reg_content.test(content);
             if (content != null && content != '' && flag) {
-                $("#sp_description").css("color", "green").html("√");
+                $("#sp_description2").show();
+                $("#sp_description").hide();
                 return true;
-            } else {
-                $("#sp_description").css("color", "red").html("请输入1-50位字符");
+            }else{
+                $("#sp_description").show();
+                $("#sp_description2").hide();
                 return false;
             }
         }
@@ -187,13 +201,14 @@
             var reg_name = /^.{1,20}$/;
             var flag = reg_name.test(name);
             if (flag) {
-                $("#sp_contact").css("color", "green").html("√");
+                $("#sp_contact2").show();
+                $("#sp_contact").hide();
                 return true;
-            } else {
-                $("#sp_contact").css("color", "red").html("请输入1-20位字符");
-                return false;
+            }else{
+                $("#sp_contact").show();
+                $("#sp_contact2").hide();
+                return true;
             }
-            return true;
         }
 
         //检查手机号
@@ -202,11 +217,13 @@
             var reg_telephonr = /^(((13|14|15|18|17)\d{9}))$/;
             var flag = reg_telephonr.test(telephone);
             if (flag) {
-                $("#sp_phone").css("color", "green").html("√");
+                $("#sp_phone2").show();
+                $("#sp_phone").hide();
                 return true;
-            } else {
-                $("#sp_phone").css("color", "red").html("手机号格式不对");
-                return false;
+            }else{
+                $("#sp_phone").show();
+                $("#sp_phone2").hide();
+                return true;
             }
         }
 
@@ -216,11 +233,13 @@
             var reg_address = /^.{0,20}$/;
             var flag = reg_address.test(address);
             if (flag) {
-                $("#sp_address").css("color", "green").html("√");
+                $("#sp_address2").show();
+                $("#sp_address").hide();
                 return true;
-            } else {
-                $("#sp_address").css("color", "red").html("字符不超过20位");
-                return false;
+            }else{
+                $("#sp_address").show();
+                $("#sp_address2").hide();
+                return true;
             }
         }
 
