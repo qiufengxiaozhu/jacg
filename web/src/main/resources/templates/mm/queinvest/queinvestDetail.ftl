@@ -31,20 +31,23 @@
     <script src="/js/rest.js"></script>
     <style>
         .change-font{
-            font-size: 0.3rem;
+            font-size: 0.45rem;
         }
         .te-btn{
             width: 90%;
             height: 1rem;
             margin: auto;
-            margin-left: 5%;
             margin-bottom: 0.3rem;
             position: absolute;
+            left: 50%;
+            transform: translate(-50%,0);
             bottom: 0.3rem;
             background: #007EF3;
             color: #fff;
             font-size: 0.4rem;
+            max-width: 495px;
         }
+
     </style>
 
 
@@ -55,6 +58,7 @@
         <div class="top-return"></div>
         <div class="return" onclick="goIndex()">返回</div>
         <div class="advince">公众调查</div>
+
     </div>
 
     <li class="ui-border-t">
@@ -85,10 +89,10 @@
             </div>
         </div>
     </#list>
-        <input type="submit" class="te-btn" value="提交">
+
     </form>
 
-
+    <input type="submit" class="te-btn newbtn" value="提交">
 
 
 <script>
