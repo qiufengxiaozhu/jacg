@@ -94,7 +94,7 @@
         //检验内容
         function checkcontent(){
             var content=$("input[name='content']").val();
-            var reg_content= /^.{1,50}$/;
+            var reg_content= /^.{1,5 0}$/;
             var flag=reg_content.test(content);
             if(content!=null && content!='' &&flag){
                 $("#sp_content2").show();
