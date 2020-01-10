@@ -529,7 +529,7 @@
             // 在模态框中，点击添加按钮，完成题目的导入，其实就是修改外键的值为问卷的id匹配上
             $(document).on("click", '#test-save-btn', function (e) { // 模态框中的保存按钮
                 var idJson = queId; // 获取到id值  问卷的id值
-                alert("问卷id"+idJson);
+//                alert("问卷id"+idJson);
                 // 遍历所有的复选框
                 var checks = document.getElementsByName("checkBtn");
                 // 所有被选中的复选框的对应的问题的id值

@@ -112,7 +112,7 @@
 
         from jacg_questions t1
         left join  jacg_options t2 on t1.id = t2.questions_id
-        where t1.id=#{id} and t2.del !=1
+        where t1.id=#{id}
     </select>
 <!--修改题目状态-->
 <update id="updateQuestionStatus">
