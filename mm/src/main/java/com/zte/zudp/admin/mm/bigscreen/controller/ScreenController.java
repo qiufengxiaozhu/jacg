@@ -3,9 +3,11 @@ package com.zte.zudp.admin.mm.bigscreen.controller;
 import com.zte.zudp.admin.common.annotation.JSON;
 import com.zte.zudp.admin.mm.bigscreen.entity.Screen;
 import com.zte.zudp.admin.mm.bigscreen.service.ScreenService;
-import org.osgeo.proj4j.*;
+import org.osgeo.proj4j.CRSFactory;
+import org.osgeo.proj4j.CoordinateReferenceSystem;
+import org.osgeo.proj4j.CoordinateTransform;
+import org.osgeo.proj4j.CoordinateTransformFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -105,16 +107,16 @@ public class ScreenController {
     @JSON
     @ResponseBody
     @RequestMapping(value = "/trendAnaly",method = RequestMethod.POST)
-    public Map trendAnaly(@RequestParam(value = "time",required = false) String time){
+    public Map<String, List<String>> trendAnaly(@RequestParam(value = "time",required = false) String time){
         List<Map> list = screenService.trendAnaly(time);
         // 创建list来接收不同地区的数据(存放纵坐标)
-        List strList01 = new ArrayList();
-        List strList02 = new ArrayList();
-        List strList03 = new ArrayList();
-        List strList04 = new ArrayList();
+        List<String> strList01 = new ArrayList<>();
+        List<String> strList02 = new ArrayList<>();
+        List<String> strList03 = new ArrayList<String>();
+        List<String> strList04 = new ArrayList<String>();
 
         // 创建map
-        HashMap map = new HashMap();
+        HashMap<String, List<String>> map = new HashMap<String, List<String>>();
 
         System.out.println(list);
         for (int i = 0; i < list.size(); i++) {
@@ -148,8 +150,8 @@ public class ScreenController {
     }
 
     /**
-     * 整合后台代码，将数据封装到前台
      * @return
+     * 整合后台代码，将数据封装到前台
      */
 //    @RequestMapping(value = "/selectAll", method = RequestMethod.GET)
 //    public String selectCase(Model model){
@@ -210,7 +212,6 @@ public class ScreenController {
         listtype.add("二季度");
         listtype.add("三季度");
         listtype.add("四季度");
-
 
         //社区遍历
         //大类最大 前五条
@@ -288,12 +289,40 @@ public class ScreenController {
      */
     @JSON
     @GetMapping(value = "/getrightEvenTypes")
-    public  List<Map>  getrightEvenTypes() {
+    public Map<String, HashMap<String, String>> getrightEvenTypes() {
 
         //遍历
-        List<Map> list = screenService.getrightEvenTypes();
+//        List<Map> list = screenService.getrightEvenTypes();
 
-        return list;
+//        List<Map> list = new ArrayList<Map>();
+        Map<String, HashMap<String, String>> map = new HashMap<String, HashMap<String, String>>();
+        HashMap<String, String> map01= new HashMap<>();
+        HashMap<String, String> map02= new HashMap<>();
+        HashMap<String, String> map03= new HashMap<>();
+        HashMap<String, String> map04= new HashMap<>();
+        HashMap<String, String> map05= new HashMap<>();
+
+        map01.put("市容","15");//市容环境
+        map02.put("街面","30");//街面秩序
+        map03.put("宣传","10");//宣传广告
+        map04.put("施工","25");//施工管理
+        map05.put("公共","20");//公共设施
+
+        map.put("map01",map01);
+        map.put("map02",map02);
+        map.put("map03",map03);
+        map.put("map04",map04);
+        map.put("map05",map05);
+
+        return map;
+
+//        list.add(map01);
+//        list.add(map02);
+//        list.add(map03);
+//        list.add(map04);
+//        list.add(map05);
+
+//        return list;
 
     }
 

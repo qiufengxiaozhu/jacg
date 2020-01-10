@@ -94,7 +94,7 @@
             <div class="me-high">
                 <#--<div class="me-fl-left" id ="name">案件名称:&nbsp;XXXXX</div>-->
                 <div class="me-fl-right flex" >
-                    <div>大类类型: <span id="MAINTYPENAME"></span></div>
+                    <div>大类名称: <span id="MAINTYPENAME"></span></div>
                 </div>
             </div>
             <div class="me-high" id="addressId">地址:&nbsp;<span id="ADDRESS"></span></div>

@@ -39,7 +39,7 @@ function rightglfx() {
 
 
 
-debugger;
+// debugger;
         var series = [];
         for(var i=0;i<value.listMap.length;i++){
             var map  =value.listMap[i];
@@ -194,23 +194,55 @@ function rightEvenType() {
         
         var data = [];
         var datas = [];
-        for(var i=0;i<value.length;i++){
-            var values  =value[i];
-            data.push(values.name);
-            var serie = {
-                value:values.num, name:values.name
-            }
-            datas.push(serie);
-        }
 
+        data.push(value['map01']);
+        var serie01 = {
+
+            value:value['map01']["市容"], name:"市容"//市容环境
+        };
+        datas.push(serie01);
+        data.push(value['map02']);
+        var serie02 = {
+
+            value:value['map02']["街面"], name:"街面" //街面秩序
+        };
+        datas.push(serie02);
+        data.push(value['map03']);
+        var serie03 = {
+
+            value:value['map03']["宣传"], name:"宣传"//宣传广告
+        };
+        datas.push(serie03);
+        data.push(value['map04']);
+        var serie04 = {
+
+            value:value['map04']["施工"], name:"施工"//施工管理
+        };
+        datas.push(serie04);
+        data.push(value['map05']);
+        var serie05 = {
+
+            value:value['map05']["公共"], name:"公共"//公共设施
+        };
+        datas.push(serie05);
+
+
+
+        // for(var i=0;i<value.length;i++){
+        //     var values  =value[i];
+        //     console.log(values);
+        //     data.push(values.name);
+        //     var serie = {
+        //         value:values.num, name:values.name
+        //     }
+        //     datas.push(serie);
+        // }
+        // console.log(data);
+        // console.log(datas);
         option3 = null;
         myChart3.hideLoading();
         option3 = {
-            legend: {
-                textStyle: { //图例文字的样
-                    fontSize: 2
-                }
-            },
+
             tooltip : {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -319,6 +351,7 @@ function getrightCaseNum() {
         var datas = [];
         for(var i=0;i<value.length;i++){
             var values  =value[i];
+            // console.log(values);
             data.push(values.name);
             datas.push(values.num);
         }
@@ -340,6 +373,7 @@ function getrightCaseNum() {
                 data: ['统计']
             },
             grid: {
+                top: '5%',
                 left: '3%',
                 right: '4%',
                 bottom: '3%',
