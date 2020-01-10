@@ -42,20 +42,20 @@ public List<Dictionary> getlist() {
      * @param id
      * @return
      */
-    @JSON
-    @GetMapping(value = "/getOneType")
-    @EndpointRest(id = "listAttach", name = "问卷下拉", authorizedType = AuthorizedType.GUEST)
-    public WXQuestions getOneType(String id) {
-        WXQuestions  wxQuestions= wxQuestionService.get(id);
-        if ((wxQuestions.getQuestionType()).equals("0")) {
-            wxQuestions.setQuestionType("单选题");
-        } else if ((wxQuestions.getQuestionType()).equals("1")) {
-            wxQuestions.setQuestionType("多选题");
-        } else if ((wxQuestions.getQuestionType()).equals("2")) {
-            wxQuestions.setQuestionType("判断题");
-        }
-        return wxQuestions;
-    }
+//    @JSON
+//    @GetMapping(value = "/getOneType")
+//    @EndpointRest(id = "listAttach", name = "问卷下拉", authorizedType = AuthorizedType.GUEST)
+//    public WXQuestions getOneType(String id) {
+//        WXQuestions  wxQuestions= wxQuestionService.get(id);
+//        if ((wxQuestions.getQuestionType()).equals("0")) {
+//            wxQuestions.setQuestionType("单选题");
+//        } else if ((wxQuestions.getQuestionType()).equals("1")) {
+//            wxQuestions.setQuestionType("多选题");
+//        } else if ((wxQuestions.getQuestionType()).equals("2")) {
+//            wxQuestions.setQuestionType("判断题");
+//        }
+//        return wxQuestions;
+//    }
 
     /**
      * 成功题目之后更新题目状态
