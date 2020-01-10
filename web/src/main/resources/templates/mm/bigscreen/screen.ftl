@@ -153,7 +153,7 @@
             <#--                    </div>-->
                 <label class="case-tell">趋势分析</label>
                 <div class="fr-bg" >
-                    <div id="myChart" style="width: 280px;height:180px;"></div>
+                    <div id="myChart" style="width: 280px;height:180px;margin-top: 0.4rem;"></div>
                 </div>
         </div>
         <div class="center">
@@ -184,8 +184,8 @@
                          <select name="" id="" class="ri-selected2"><option value="">8:00-18:00</option></select>
                      </div>-->
                 </div>
-                <div class="ri-bg">
-                    <div id="myChart2" style="width: 280px;height:180px;"></div>
+                <div class="ri-bg" style="overflow: hidden">
+                    <div id="myChart2" style="height: 2.2rem;width: 3.6rem;margin-left: 0.2rem;margin-top: 0.2rem;"></div>
                 </div>
             </div>
             <div class="right-top">
@@ -196,7 +196,7 @@
                      </div>-->
                 </div>
                 <div class="ri-bg" style="overflow: hidden">
-                    <div class="chart3" id="chart3" style="height: 1.7rem;width: 3.3rem;margin-left: 0.4rem;margin-top: 0.2rem;"></div>
+                    <div class="chart3" id="chart3" style="height: 1.7rem;width: 3.6rem;margin-left: 0.1rem;margin-top: 0.2rem;"></div>
                 </div>
             </div>
             <div class="right-top">
