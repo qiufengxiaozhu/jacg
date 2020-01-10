@@ -11,7 +11,7 @@
 	    (CASE WHEN LENGTH( EVENTDESC ) > 20 THEN CONCAT( SUBSTRING( EVENTDESC, 1, 20 ), '...' ) when EVENTDESC is null then ''  ELSE EVENTDESC END ) AS description,
         (case when MAINTYPENAME is null then '' else MAINTYPENAME end) as name,
         (case when DEADLINE is null then '' else  DATE_FORMAT( DEADLINE, '%Y-%m-%d %T' ) end) as time,
-        (case when NEWINSTTIME is null then '' ELSE NEWINSTTIME end) as newTime
+        (case when NEWINSTTIME is null then '' ELSE  DATE_FORMAT( NEWINSTTIME, '%Y-%m-%d' ) end) as newTime
         FROM
 	      tocgcase
 	    where NEWINSTTIME like '%2018%'
