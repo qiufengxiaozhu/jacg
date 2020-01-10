@@ -151,7 +151,7 @@
 
             <#--                    <div class="fr-bg" id = "myChart" >-->
             <#--                    </div>-->
-                <label class="case-tell">案发频率趋势图</label>
+                <label class="case-tell">趋势分析</label>
                 <div class="fr-bg" >
                     <div id="myChart" style="width: 280px;height:180px;"></div>
                 </div>
@@ -329,6 +329,7 @@
                     <th>问题描述</th>
                     <th>大类名称</th>
                     <th>案件截止时间</th>
+                    <th>立案时间</th>
                 </tr>
             </table>
             <div class="page-list ">

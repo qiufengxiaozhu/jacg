@@ -10,15 +10,16 @@
         (case when RECID is null then '' else RECID end ) id,
 	    (CASE WHEN LENGTH( EVENTDESC ) > 20 THEN CONCAT( SUBSTRING( EVENTDESC, 1, 20 ), '...' ) when EVENTDESC is null then ''  ELSE EVENTDESC END ) AS description,
         (case when MAINTYPENAME is null then '' else MAINTYPENAME end) as name,
-        (case when DEADLINE is null then '' else  DATE_FORMAT( DEADLINE, '%Y-%m-%d %T' ) end) as time
+        (case when DEADLINE is null then '' else  DATE_FORMAT( DEADLINE, '%Y-%m-%d %T' ) end) as time,
+        (case when NEWINSTTIME is null then '' ELSE NEWINSTTIME end) as newTime
         FROM
 	      tocgcase
 	    where NEWINSTTIME like '%2018%'
 	    <if test="startTime != null and startTime != '' ">
-           and  DEADLINE <![CDATA[ >= ]]> #{startTime}
+           and  NEWINSTTIME <![CDATA[ >= ]]> #{startTime}
         </if>
 	    <if test="endTime != null and endTime != '' ">
-           and DEADLINE <![CDATA[ <= ]]>  #{endTime}
+           and NEWINSTTIME <![CDATA[ <= ]]>  #{endTime}
         </if>
 	    <if test="description != null and description != '' ">
             and `EVENTDESC` like concat('%', #{description}, '%')
