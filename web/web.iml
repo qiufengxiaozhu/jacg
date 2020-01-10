@@ -26,17 +26,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: zte.zudp.sys:zudp-sys:3.0.15" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.5" level="project" />
-    <orderEntry type="library" name="Maven: zte.zudp.sys:zudp-sys:3.0.15" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.5" level="project" />
     <orderEntry type="module" module-name="common" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.5" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:druid:1.1.2" level="project" />
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:jconsole:1.8.0">
         <CLASSES>
-          <root url="jar://C:/Program Files/Java/jdk1.8.0_231/lib/jconsole.jar!/" />
+          <root url="jar://C:/Program Files/Java/jdk1.8.0_201/lib/jconsole.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -45,7 +41,7 @@
     <orderEntry type="module-library">
       <library name="Maven: com.alibaba:tools:1.8.0">
         <CLASSES>
-          <root url="jar://C:/Program Files/Java/jdk1.8.0_231/lib/tools.jar!/" />
+          <root url="jar://C:/Program Files/Java/jdk1.8.0_201/lib/tools.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -102,7 +98,11 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.3.16.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.16.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.16.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.5" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.9" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.41" level="project" />
     <orderEntry type="module" module-name="info" />
+    <orderEntry type="library" name="Maven: org.osgeo:proj4j:0.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-mail:1.5.12.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.3.16.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.6" level="project" />
