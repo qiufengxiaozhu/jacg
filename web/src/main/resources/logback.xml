@@ -53,6 +53,7 @@
 
     <root level="info">
         <appender-ref ref="STDOUT"/>
+        <appender-ref ref="SYS"/>
     </root>
 
     <logger name="com.zte.zudp.info" level="debug" additivity="false">
