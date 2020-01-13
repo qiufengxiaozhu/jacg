@@ -26,34 +26,35 @@
 }
 .case-tell{
     font-size: 0.2rem;
-    margin-left: 0.1rem;
 }
 .case-time{
     font-size: 0.1rem;
-    margin-left: 0.4rem;
+    margin-top: 4px;
+    text-align: center;
 }
 .case-sum{
     font-size: 0.1rem;
-    margin-left: 0.65rem;
 }
 .case-num{
     font-size: 0.2rem;
     color: #FEB85E;
 }
 .case-show{
-    height: 55%;
+    height: 67%;
     width: 4rem;
     background: url(../img/arr3.png);
     background-size: 100% 100%;
     margin-top: -0.02rem;
     overflow: hidden;
 }
+.anchorBL{display: none}
 .radius{
     margin-top: 10%;
+    padding:0 0.1rem;
 }
 .circle-1{
-    height: 0.4rem;
-    width: 0.4rem;
+    height: 0.6rem;
+    width: 0.6rem;
     margin: auto;
     border:0.08rem solid #E47769;
     border-left:0.08rem solid transparent;
@@ -73,14 +74,19 @@
     border-left:0.08rem solid transparent;
 }
 .circle-center{
-    -webkit-transform: rotate(-45deg);
+    /*-webkit-transform: rotate(-45deg);*/
     text-align: center;
     /* line-height: 0.4rem;*/
+    position: absolute;
+    left: 0;right: 0;
+    margin:26% auto 0;
+    top:0;
 }
 .case-one{
     text-align: center;
     font-size: 0.12rem;
     font-weight: 500;
+    position: relative;
 }
 .case-tex{
     color: #E47769;
@@ -103,7 +109,6 @@
     height: 0.3rem;
 }
 .case-the{
-    float: left;
     font-size: 0.18rem;
     color: #fff;
 }
@@ -168,7 +173,7 @@
     margin-left: 0.1rem;
 }
 .fr-bg{
-    height: 46%;
+    height:31%;
     width: 4rem;
     background: url(../img/arr2.png);
     background-size: 100% 100%;

@@ -54,9 +54,9 @@
     <div class="center-top"><div class="data-city">吉安城市管理大数据平台</div></div>
     <div class="sum-center flex">
         <div class="left-top">
-            <div class="case" style="width: 4.5rem;">
+            <div class="case flex" style="width: 100%">
                 <span class="case-tell">案情展示</span>
-                <span class="case-time">1月1日-12月31日</span>
+                <span class="case-time flex-1">1月1日-12月31日</span>
                 <span class="case-sum">案件总数
                     <span class="case-num">&nbsp;${Total!""}</span>
                 </span>
@@ -65,27 +65,31 @@
                 <div class="radius flex">
                     <div class="case-one flex-1">
                         <div class="circle-1">
-                            <div class="circle-center case-tex">${Number1!""}起</div>
+
                         </div>
                         <div class="case-tex">吉州区</div>
+                        <div class="circle-center case-tex">${Number1!""}起</div>
                     </div>
                     <div class="case-one flex-1">
                         <div class="circle-1 ch-co-ye">
-                            <div class="circle-center tex-ye">${Number2!""}起</div>
+
                         </div>
                         <div class="case-tex">庐陵新区</div>
+                        <div class="circle-center tex-ye">${Number2!""}起</div>
                     </div>
                     <div class="case-one flex-1">
                         <div class="circle-1 ch-co-qi">
-                            <div class="circle-center tex-qi">${Number3!""}起</div>
+
                         </div>
                         <div class="case-tex">青原区</div>
+                        <div class="circle-center tex-qi">${Number3!""}起</div>
                     </div>
                     <div class="case-one flex-1">
                         <div class="circle-1 ch-co-ys">
-                            <div class="circle-center tex-ys">${Number4!""}起</div>
+
                         </div>
                         <div class="case-tex">井开区</div>
+                        <div class="circle-center tex-ys">${Number4!""}起</div>
                     </div>
                 </div>
                 <div class="new-case">
@@ -184,7 +188,7 @@
                          <select name="" id="" class="ri-selected2"><option value="">8:00-18:00</option></select>
                      </div>-->
                 </div>
-                <div class="ri-bg" style="overflow: hidden">
+                <div class="ri-bg flex flex-r-c flex-c-c" style="overflow: hidden">
                     <div id="myChart2" style="height: 2.2rem;width: 3.6rem;margin-left: 0.2rem;margin-top: 0.2rem;"></div>
                 </div>
             </div>
@@ -195,7 +199,7 @@
                          <select name="" id="" class="ri-selected1"><option value="">1月1日——11月16日</option></select>
                      </div>-->
                 </div>
-                <div class="ri-bg" style="overflow: hidden">
+                <div class="ri-bg flex flex-r-c flex-c-c" style="overflow: hidden">
                     <div class="chart3" id="chart3" style="height: 1.7rem;width: 3.6rem;margin-left: 0.1rem;margin-top: 0.2rem;"></div>
                 </div>
             </div>
@@ -203,9 +207,9 @@
                 <div class="flex crime">
                     <div class="fr-text">案件预警(最新2周)</div>
                 </div>
-                <div class="ri-bg">
-                    <div class="ri-query flex">
-                        <div class="ri-left flex">
+                <div class="ri-bg" style="height: 100%">
+                    <div class="ri-query flex" style="height: 89%;">
+                        <div class="ri-left flex flex-c-c flex-r-c" style="height:100%">
                             <div class="chart4" id="chart4" style="width:280px;height:160px"></div>
                         </div>
                     </div>
