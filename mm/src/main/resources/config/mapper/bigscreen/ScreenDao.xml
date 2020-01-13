@@ -76,7 +76,7 @@
         FROM
             tocgcase
         WHERE
-            date( NEWINSTTIME ) <![CDATA[ >= ]]> DATE_SUB( CURDATE( ), INTERVAL 12 MONTH )
+            NEWINSTTIME like '%2018%'
         GROUP BY DISTRICTNAME
 
     </select>
