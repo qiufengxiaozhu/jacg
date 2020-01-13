@@ -77,7 +77,7 @@ $(function(){
             marker.setLabel(label);
         }
 
-        $('.new-case').slide({mainCell:".scroll",autoPlay:true,autoPage:true,effect:"top",vis:3,interTime:2000});
+        $('.new-case').slide({mainCell:".scroll",autoPlay:true,autoPage:true,effect:"top",vis:3,interTime:1000});
 
         function addClickHandler(content,marker){
             marker.addEventListener("click",function(e){
