@@ -165,7 +165,7 @@
                             <input type="text" name="description" class="tab-input flex-1" placeholder="请输入文本内容描述(50字以内)">
                             <span class="sp-span2" id="sp_content2" style="color:green">√</span>
                         </div>
-                        <span class="sp-span" id="sp_content">请输入11位数字</span>
+                        <span class="sp-span" id="sp_content">请输入50个字</span>
                     </div>
 
                     <div class="theme">

@@ -105,10 +105,10 @@
         t1.id id,
         t1.title title,
         t1.`description` description,
-          t1.valid valid,
+          DATE_FORMAT( t1.valid, '%Y-%m-%d %T' ) valid,
         t1.queinvestType queinvestType,
        t1.status status,
-        t1.pubdate pubdate
+       DATE_FORMAT( t1.pubdate, '%Y-%m-%d %T' ) pubdate
 
         FROM `jacg_queinvest` t1
 
@@ -190,9 +190,36 @@
 
     </select>
 
+    <!--预览-->
+<select id="overView" resultType="java.util.Map">
+    select
+            @n:=@n+1 rowNum,
+            t1.id id,
+            t1.title title,
+            t2.contents contents,
+            (case when t3.choiceText01 is null then '' else t3.choiceText01 end) choiceText01 ,
+            (case when t3.choiceText02 is null then '' else t3.choiceText02 end) choiceText02 ,
+            (case when t3.choiceText03 is null then '' else t3.choiceText03 end) choiceText03 ,
+            (case when t3.choiceText04 is null then '' else t3.choiceText04 end) choiceText04 ,
+
+            t2.id questionId
 
 
+        from  jacg_queinvest t1
 
+        left join  jacg_questions t2 on  t1.id = t2.queinvest_id
+
+        left join jacg_options t3 on  t2.id =  t3.questions_id
+
+        inner join (select @n:= 0) d
+
+        where t1.del != 1   and t1.id = #{id}
+</select>
+
+<!--删除问卷里面的题目-->
+<update id="delQuestion">
+    update jacg_questions t1 set t1.queinvest_id = null  where t1.id = #{delId}
+</update>
 
 
 

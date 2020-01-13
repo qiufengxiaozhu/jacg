@@ -41,7 +41,6 @@ public class DynamicPushController extends AbstractCRUDController<DynamicPush> {
     @ResponseBody
     public DynamicPush getDetail(@RequestBody String id){
 
-
         // 调用service层来实现新增
         DynamicPush dynamicPush = dynamicPushService.getDetail(id);
         return dynamicPush;
@@ -53,6 +52,7 @@ public class DynamicPushController extends AbstractCRUDController<DynamicPush> {
     @PostMapping(value = "/updateStatus")
     public void updateStatus(@RequestBody String id){
         dynamicPushService.updateStatus(id);
+
     }
 
     @JSON

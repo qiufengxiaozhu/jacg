@@ -164,7 +164,7 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
         Queinvest queinvest=queinvestService.get(id);
         if(queinvest.getStatus()!=null){ // 不为空
            if(queinvest.getStatus().equals("0")){ // 如果是0  临时状态
-               queinvest.setStatus("临时状态");
+               queinvest.setStatus("未发布");
            }
            if(queinvest.getStatus().equals("1")){ // 如果是1   未发布
                queinvest.setStatus("未发布");
@@ -175,6 +175,24 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
            }
         }
         return queinvest;
+    }
+
+    /**
+     * 预览
+     */
+    @ResponseBody
+    @GetMapping("overView")
+    public List<Map> overView(@RequestParam String id){ //  问卷id
+        List<Map> list = queinvestService.overView(id);
+
+        return list;
+    }
+    /**
+     * 问卷中删除题目
+     */
+    @GetMapping("/delQuestion")
+    public void delQuestion(@RequestParam("delId") String delId){
+        queinvestService.delQuestion(delId);
     }
 }
 

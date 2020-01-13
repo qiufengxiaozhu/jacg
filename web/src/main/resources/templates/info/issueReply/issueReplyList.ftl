@@ -45,7 +45,7 @@
                     <div class='col-sm-12'>
 
                         <div  class='querybtn my-querybtn '>
-                            问题标题：
+                            标题：
                             <input type='text' name='search' id='search_name' placeholder='标题' class='form-control search-input'>&nbsp;&nbsp;&nbsp;&nbsp;
                             问题类型：
                             <select id="category_select" name="issueQuestionType" class='form-control search-input'>

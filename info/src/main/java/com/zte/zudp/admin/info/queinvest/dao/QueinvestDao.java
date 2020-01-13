@@ -9,6 +9,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.poi.ss.formula.functions.T;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -42,4 +43,16 @@ public interface QueinvestDao extends AbstractDao<Queinvest> {
     void updateQuestion(@Param("queinId") String  queinId, @Param("questionId") String questionId);
 
     Queinvest getDetail(@Param("id") String id);
+
+    /**
+     * 预览
+     * @return
+     */
+    List<Map> overView(@Param("id")String id);
+
+    /**
+     * 删除问卷里面的题目
+     * @param delId
+     */
+    void delQuestion(@Param("delId") String delId);
 }

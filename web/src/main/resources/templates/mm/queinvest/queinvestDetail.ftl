@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>公众调查</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <script type="text/javascript" src="/mm/js/rem.js"></script>
@@ -89,10 +89,10 @@
             </div>
         </div>
     </#list>
-
+        <input type="submit" class="te-btn newbtn" value="提交">
     </form>
 
-    <input type="submit" class="te-btn newbtn" value="提交">
+
 
 
 <script>
@@ -102,6 +102,7 @@
         var len=$("input[type='radio']").length;
             for(i=0;i<len;i++){
                 if($("input[type='radio']")[i].checked==true){
+                    alert("作答成功！！");
                     flag = true;
                 }
             }

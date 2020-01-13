@@ -51,7 +51,7 @@
                     </@hasPermission>
 
                     <@hasPermission name="oaManager:riverManager:river:batchDelete">
-                    <button class='btn btn-success btn-danger' id="delete-items">
+                    <button class='btn btn-success btn-danger' id="delete-items02">
                     批量删除
                     </button>
                     </@hasPermission>
@@ -92,6 +92,33 @@
                     </table>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<#--预览-->
+<div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                            class="sr-only">Close</span></button>
+                    <h4 class="modal-title">预览</h4>
+                </div>
+                <small class="font-bold">
+
+                    <div class="fl-title" id="bigDivId">
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+                    </div>
+                </small>
+            </div>
+            <small class="font-bold">
+            </small>
         </div>
     </div>
 </div>
@@ -412,7 +439,7 @@
                             var editStr="";
                             var delStr="";
                             var addStr="";
-                            var overviewStr="";
+                            var overViewStr="";
                             var publicStr="";
                             var unpublicStr="";
                             // 判断状态来实现对按钮的隐藏和显示
@@ -431,9 +458,9 @@
                                 publicStr= '<button id= "publishStr" class="btn btn-info btn-sm "  value="{id}"><i class="fa fa-pencil"></i>发布</button>';
 //                                publicStr='<button id="publishStr" class="btn btn-info btn-sm " data-toggle="modal_public"  value="{id}"><i class="fa fa-pencil"></i>发布</button>';
                                 // 预览
-//                                overviewStr='<button id="overview" class="btn btn-info btn-sm " data-toggle="modal_overview" onclick="overview()" value="{id}"><i class="fa fa-pencil"></i>预览</button>';
+                             overViewStr='<button id="overView" class="btn btn-info btn-sm " data-toggle="modal_overview"  value="{id}"><i class="fa fa-pencil"></i>预览</button>';
                                     // 编辑   删除   添加题目  预览     发布
-                                btn+=editStr+ "&nbsp;"+delStr + "&nbsp;"+addStr + "&nbsp;"+overviewStr + "&nbsp;"+publicStr +"&nbsp;"+detailStr ;
+                                btn+=editStr+ "&nbsp;"+delStr + "&nbsp;"+addStr + "&nbsp;"+overViewStr + "&nbsp;"+publicStr +"&nbsp;"+detailStr ;
                                 return zudp.util.render(btn, row);
                             }else { // 发布状态
                                 // 预览
@@ -444,7 +471,7 @@
                                 detailStr = '<button onclick="getAllType(this)" class="btn btn-info btn-sm row-detail" value="{id}"><i class="fa fa-pencil"></i>详情</button>';
 
                                 // 预览        撤销发布
-                                btn+= overviewStr + "&nbsp;"+ unpublicStr + "&nbsp;"+ detailStr;
+                                btn+=  unpublicStr + "&nbsp;"+ detailStr;
                                 return zudp.util.render(btn, row);
 
                             }
@@ -513,7 +540,7 @@
             window.e.cancelBubble = true;
         }
 //        var id = $("#row-add-test").val();
-        $("#dataList").empty();
+        $(".trClass").empty();
         // 模态框的弹出
         $(".modal-form-content").modal("show");
 
@@ -530,7 +557,7 @@
             var table = $("#dataList");//获取需要显示数据的table
             for(var i=0;i<value.length ;i++){ //遍历数据
                 table.append(
-                        "<tr>"+
+                        "<tr class='trClass'>"+
                         '<td>'+'<input id="selall" type="checkbox" name ="checkBtn" class= "myChecked"  />' + '</td>'+
                         "<td>"+value[i].contents+"</td>" +
                         "<td>"+value[i].label+"</td>"
@@ -597,7 +624,7 @@
             // 刷新页面
             document.location.reload();
             if(value < 1){
-                alert("发布失败！！");
+                alert("发布失败，请添加题目");
             }
         });
     });
@@ -641,7 +668,99 @@
 
     });
 
-// 转换时间
+
+    // 预览
+    $(document).on("click", '#overView', function (e) {
+        //清除冒泡
+        if (e && e.stopPropagation) {
+            e.stopPropagation();
+        } else {
+            window.e.cancelBubble = true;
+        }
+        // 清空模态框
+        $('#bigDivId').empty();
+        // 模态框弹出
+        $('#myModal').modal("show");
+        // 查询出问卷所包含的题目和选项
+        // 获取到id值 问卷的id
+        var id = $(this).val();
+//        alert("问卷id"+id);
+        console.log(id);
+        zudp.ajax("/api/wxqueinvest/overView?id=" + id).get().then(function (value) {
+            for(var i=0;i<value.length;i++){
+                var contents = value[i]["contents"];
+                var choiceText01 = value[i]["choiceText01"];
+                var choiceText02 = value[i]["choiceText02"];
+                var choiceText03 = value[i]["choiceText03"];
+                var choiceText04 = value[i]["choiceText04"];
+                var rowNum = value[i]["rowNum"];
+                var questionId = value[i]["questionId"];
+
+                if(contents!=null){
+                    var $tent = '<div class="ui-flex ui-flex-align-start" id="divId" style="border-bottom:1px solid #05B7F3;width: auto;" xmlns="http://www.w3.org/1999/html"><p class="exam-question"> '+rowNum+' 、 ' + contents +'<span><button name="delBtn" value="' + questionId + '" id="delId">删除</button></span></p></div> <div class="ui-flex ui-flex-align-start" style="border-bottom:1px solid #05B7F3;width: auto;"> <input type="radio" name="choiceText01"value="">' + choiceText01 + '</br> <input type="radio" name="choiceText02"value=" "> '+ choiceText02+'</br><input type="radio" name="choiceText03"value="">' +choiceText03 +'</br><input type="radio" name="choiceText04"value=""> '+ choiceText04+'</br> </div>'
+                    $('.fl-title').append($tent);
+                }
+
+
+            }
+        });
+
+
+    });
+
+    // 问卷删除题目
+    $(document).on("click", '#delId', function (e) {
+        var delId =  $(this).val();
+        zudp.ajax("/api/wxqueinvest/delQuestion?delId=" + delId).get().then(function (value) {
+        });
+        // 点击删除按钮， 隐藏题目(达到删除的功能)
+        var divTemp =  $(this).parent().parent().parent();
+        var divTempNext =  $(this).parent().parent().parent().next();
+        console.log(divTemp);
+        divTemp.css("display","none");
+        divTempNext.css("display","none");
+
+    });
+
+
+
+    // 批量删除
+    $(document).on("click", "#delete-items02", function () {
+        var data = dataTable.rows('.evenSelect').data();
+        var ids = [];
+        var statusIds =[];
+        for (var k = 0; k < data.length; k++) {
+            ids.push(data[k].id);
+            // 如果状态值为2，则添加到数组中
+            if(data[k].status=='2'){
+                statusIds.push(data[k].status);
+            }
+        }
+        if (ids.length == 0) {
+            zudp.plugin.dialog("warning").confirm("数据未选中", "关闭")
+            return;
+        }
+        if(statusIds.length >0){
+            zudp.plugin.dialog("warning").confirm("所选中含发布状态的问卷，删除失败", "关闭")
+            return;
+        }
+        var msgSuccess = zudp.util.render(obj.success, {"msg": "批量删除成功"});
+        var msgError = zudp.util.render(obj.error, {"msg": "批量删除失败"});
+        zudp.plugin.dialog("warning").confirm("确认要删除吗？", "确认", function () {
+            zudp.ajax(obj.url).del(JSON.stringify(ids)).then(function (da) {
+                zudp.plugin.dialog("success").alert(msgSuccess + "!", "提示");
+                dataTable.ajax.reload();
+            }, function (error) {
+                zudp.plugin.dialog("warning").alert(msgError + "!", "警告");
+                dataTable.ajax.reload();
+            });
+        });
+        obj.callback.deleteMore(data);
+    });
+
+
+
+    // 转换时间
     function formatDate(date) {
         if (date == null) return "";
         date = new Date(date);

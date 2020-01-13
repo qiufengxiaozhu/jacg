@@ -28,7 +28,7 @@ public class WXQueinvest extends DataEntity{
      */
     private String description;
 
-    private Date valid;
+    private String valid;
 
     private String status;
 
@@ -65,11 +65,12 @@ public class WXQueinvest extends DataEntity{
 
     //    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
 //    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    public Date getValid() {
+
+    public String getValid() {
         return valid;
     }
 
-    public void setValid(Date valid) {
+    public void setValid(String valid) {
         this.valid = valid;
     }
 

@@ -52,7 +52,7 @@
                         </button>
                     </@hasPermission>
                         <div class='querybtn my-querybtn'>
-                            <input type='text' name='search' id='search_name' placeholder='请输入题目内容' class='form-control search-input'>
+                            <input type='text' name='search' id='search_name' placeholder='请输入题目名称' class='form-control search-input'>
                             <button class='btn btn-primary mgl my-mgl research-btn' >
                                 搜索
                             </button>&nbsp;&nbsp;
@@ -67,7 +67,7 @@
                         <thead>
                         <tr>
                             <th>id</th>
-                            <th>题目内容</th>
+                            <th>题目名称</th>
                             <th>题目类型</th>
                             <th>操作</th>
                         </tr>
