@@ -56,7 +56,7 @@
         <div class="left-top">
             <div class="case" style="width: 4.5rem;">
                 <span class="case-tell">案情展示</span>
-                <span class="case-time">1月1日—12月16日</span>
+                <span class="case-time">1月1日-12月31日</span>
                 <span class="case-sum">案件总数
                     <span class="case-num">&nbsp;${Total!""}</span>
                 </span>
@@ -201,7 +201,7 @@
             </div>
             <div class="right-top">
                 <div class="flex crime">
-                    <div class="fr-text">区域案件预警(最新2周)</div>
+                    <div class="fr-text">案件预警(最新2周)</div>
                 </div>
                 <div class="ri-bg">
                     <div class="ri-query flex">
@@ -256,7 +256,7 @@
 
     <div class="modal-ly" style="display: none;"  id="company_amoun">
         <div class="mask"></div>
-        <div class="modal-cnt mbox flex flex-fx-c" style=""> 
+        <div class="modal-cnt mbox flex flex-fx-c" style="">
             <div class="g-info-tit flex flex-c-c">
                 <i class="i-icon icon-tb"></i>
                 <span class="flex-1" id="qyssfx">关联分析类型案件统计</span>
