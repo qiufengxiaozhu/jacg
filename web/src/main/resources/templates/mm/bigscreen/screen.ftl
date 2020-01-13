@@ -256,7 +256,7 @@
 
     <div class="modal-ly" style="display: none;"  id="company_amoun">
         <div class="mask"></div>
-        <div class="modal-cnt mbox flex flex-fx-c" style="">
+        <div class="modal-cnt mbox flex flex-fx-c" style=""> 
             <div class="g-info-tit flex flex-c-c">
                 <i class="i-icon icon-tb"></i>
                 <span class="flex-1" id="qyssfx">关联分析类型案件统计</span>
