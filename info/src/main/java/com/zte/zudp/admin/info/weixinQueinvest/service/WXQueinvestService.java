@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 微信公众调查
@@ -65,5 +66,22 @@ public class WXQueinvestService extends BusinessService<WXQueinvest> {
     public WXQueinvest getDetail(String id) {
       return   wxQueinvestDao.getDetail(id);
 
+    }
+
+    /**
+     * 预览
+     * @param id
+     * @return
+     */
+    public List<Map> overView(String id) {
+        return wxQueinvestDao.overView(id);
+    }
+
+    /**
+     * 删除题目
+     * @param delId
+     */
+    public void delQuestion(String delId) {
+        wxQueinvestDao.delQuestion(delId);
     }
 }

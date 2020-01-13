@@ -12,6 +12,7 @@ import org.apache.poi.ss.formula.functions.T;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -50,4 +51,17 @@ public interface WXQueinvestDao extends AbstractDao<WXQueinvest> {
     void updateQuestion(@Param("object") Object object, @Param("object02") Object object02);
 
     WXQueinvest getDetail(@Param("id") String id);
+
+    /**
+     * 预览
+     * @param id
+     * @return
+     */
+    List<Map> overView(@Param("id") String id);
+
+    /**
+     * 删除题目
+     * @param delId
+     */
+    void delQuestion(@Param("delId") String delId);
 }

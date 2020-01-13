@@ -158,7 +158,7 @@ public class WXQueinvestContrller extends AbstractCRUDController<WXQueinvest> {
         WXQueinvest wxQueinvest=wxQueinvestService.get(id);
         if(wxQueinvest.getStatus()!=null){ // 不为空
            if(wxQueinvest.getStatus().equals("0")){ // 如果是0  临时状态
-               wxQueinvest.setStatus("临时状态");
+               wxQueinvest.setStatus("未发布");
            }
            if(wxQueinvest.getStatus().equals("1")){ // 如果是1   未发布
                wxQueinvest.setStatus("未发布");
@@ -169,6 +169,24 @@ public class WXQueinvestContrller extends AbstractCRUDController<WXQueinvest> {
            }
         }
         return wxQueinvest;
+    }
+
+    /**
+     * 预览
+     */
+    @ResponseBody
+    @GetMapping("overView")
+    public List<Map> overView(@RequestParam String id){ //  问卷id
+        List<Map> list = wxQueinvestService.overView(id);
+
+        return list;
+    }
+    /**
+     * 问卷中删除题目
+     */
+    @GetMapping("/delQuestion")
+    public void delQuestion(@RequestParam("delId") String delId){
+        wxQueinvestService.delQuestion(delId);
     }
 }
 

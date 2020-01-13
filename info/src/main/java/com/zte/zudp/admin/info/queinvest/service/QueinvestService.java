@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Transactional
@@ -59,5 +60,21 @@ public class QueinvestService extends BusinessService<Queinvest> {
     public Queinvest getDetail(String id) {
       return   queinvestDao.getDetail(id);
 
+    }
+
+    /**
+     * 预览
+     * @return
+     */
+    public List<Map> overView(String id) {
+       return queinvestDao.overView(id);
+    }
+
+    /**
+     * 删除问卷里面的题目
+     * @param delId
+     */
+    public void delQuestion(String delId) {
+        queinvestDao.delQuestion(delId);
     }
 }
