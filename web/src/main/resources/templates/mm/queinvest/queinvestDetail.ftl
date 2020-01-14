@@ -34,11 +34,10 @@
             font-size: 0.45rem;
         }
         .te-btn{
-            width: 90%;
+            width: 100%;
             height: 1rem;
-            margin: auto;
-            margin-bottom: 0.3rem;
-            position: absolute;
+            margin-bottom: 0rem;
+            position: fixed;
             left: 50%;
             transform: translate(-50%,0);
             bottom: 0.3rem;
@@ -47,6 +46,7 @@
             font-size: 0.4rem;
             max-width: 495px;
         }
+
 
     </style>
 
@@ -65,12 +65,13 @@
         <p align="center" style="font-size: 0.50rem;letter-spacing: 0.05rem" class="queinvestName change-font" value="${title!}">${title!}</p>
     </li>
 
-    <form class="form-class" style="margin-top: 0.3rem;font-size: 0.4rem" action="/mm/queinvest/test" method="post" onsubmit="return check()">
+    <form class="form-class" style="margin-top: 0.3rem;font-size: 0.4rem;padding-bottom: 2rem;" action="/mm/queinvest/test" method="post" onsubmit="return check()">
 
     <#list list! as question>
 
     <#--题目id-->
         <input type="hidden" value="${question.questionId}" class="queSize" name = "${question.rowNum!}queId">
+        <input type="hidden" value="${question.id}" class="queSize02" name = "queiId">
         <div>
             <div class="ui-flex ui-flex-align-start" style="border-bottom:1px solid #05B7F3;width: auto;">
                 <p class="exam-question">${question.rowNum!}、${question.contents!}</p>

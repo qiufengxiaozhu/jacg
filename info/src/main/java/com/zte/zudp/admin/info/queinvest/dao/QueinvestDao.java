@@ -23,7 +23,7 @@ public interface QueinvestDao extends AbstractDao<Queinvest> {
     List<Dictionary> getList();
 
 
-    List<Questions> addQuestion();
+    List<Questions> addQuestion(@Param("queId")String queId);
 
 
 

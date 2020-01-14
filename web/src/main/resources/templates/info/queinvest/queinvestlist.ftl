@@ -290,6 +290,7 @@
 
 <script>
 
+    var obj;
     var queId;
     var dataTable;
     var urlstr="/api/queinvest";
@@ -333,7 +334,7 @@
 
         findList();
 
-        var obj={
+         obj={
             url: urlstr,
             formId: formIdStr,
             title: "{type}问卷",
@@ -601,7 +602,7 @@
 //
 
         // 查询出所有的题目
-        zudp.ajax("/api/queinvest/addQuestion").post().then(function (value) {
+        zudp.ajax("/api/queinvest/addQuestion?queId="+queId).get().then(function (value) {
 
 //  "<tr>"+'<th>'+'</th>'+'<th>'+'</th>'+ '<th>'+'</th>'+"</tr>"+
             //获取到table
@@ -739,12 +740,13 @@
             zudp.plugin.dialog("warning").confirm("数据未选中", "关闭")
             return;
         }
-        if(statusIds.length >0){
+       else if(statusIds.length >0){
             zudp.plugin.dialog("warning").confirm("所选中含发布状态的问卷，删除失败", "关闭")
             return;
-        }
+        }else {
         var msgSuccess = zudp.util.render(obj.success, {"msg": "批量删除成功"});
         var msgError = zudp.util.render(obj.error, {"msg": "批量删除失败"});
+        }
         zudp.plugin.dialog("warning").confirm("确认要删除吗？", "确认", function () {
             zudp.ajax(obj.url).del(JSON.stringify(ids)).then(function (da) {
                 zudp.plugin.dialog("success").alert(msgSuccess + "!", "提示");
