@@ -34,7 +34,7 @@
     <script>
         $(function () {
             $("form").submit(function () {
-                if(checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace()){
+                if(checktitle()&&checkcontent()&&checkname()&&checktelephone()){
                     alert("上报成功！！");
                     return true;
                 }
@@ -100,9 +100,11 @@
             var flag=reg_name.test(name);
             if (flag){
                 $("#sp_name2").show();
+                $("#sp_name02").hide();
                 $("#sp_name").hide();
                 return true;
             }else{
+//                $("#sp_name02").show();
                 $("#sp_name").show();
                 $("#sp_name2").hide();
                 return false;
@@ -154,7 +156,7 @@
                             <input type="text"  name="title" class="tab-input flex-1" placeholder="请输入您的来信标题(20字以内)">
                             <span class="sp-span2" id="sp_title2" style="color:green">√</span>
                         </div>
-                        <span class="sp-span" id="sp_title">字符个数应在1-20个</span>
+                        <span class="sp-span" id="sp_title">请输入1-20个字</span>
                     </div>
 
 
@@ -165,7 +167,7 @@
                             <input type="text" name="description" class="tab-input flex-1" placeholder="请输入文本内容描述(50字以内)">
                             <span class="sp-span2" id="sp_content2" style="color:green">√</span>
                         </div>
-                        <span class="sp-span" id="sp_content">请输入50个字</span>
+                        <span class="sp-span" id="sp_content">请输入1-50个字</span>
                     </div>
 
                     <div class="theme">
@@ -186,8 +188,10 @@
                         <div class="port flex flex-c-c"><span>联系人&nbsp;:</span>
                             <input type="text" name="contact" class="tab-input flex-1" placeholder="请输入您的真实姓名" value="">
                             <span class="sp-span2" id="sp_name2" style="color:green">√</span>
+                            <span id="sp_name02" style="color:red">*</span>
+
                         </div>
-                        <span class="sp-span" id="sp_name">请输入2-7个字符</span>
+                        <span class="sp-span" id="sp_name">请输入2-7个字</span>
                     </div>
 
                     <div class="theme">

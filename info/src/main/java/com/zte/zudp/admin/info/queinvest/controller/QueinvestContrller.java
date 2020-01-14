@@ -78,10 +78,10 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
      * @return
      */
     @JSON
-    @PostMapping(value = "/addQuestion")
+    @GetMapping(value = "/addQuestion")
     @EndpointRest(id = "questionlist", name = "题目列表", authorizedType = AuthorizedType.LOGIN)
-    public List<Questions> addQuestion() {
-        List<Questions> list= queinvestService.addQuestion();
+    public List<Questions> addQuestion(@RequestParam String  queId) {
+        List<Questions> list= queinvestService.addQuestion(queId);
         System.out.println(list);
         return list;
 

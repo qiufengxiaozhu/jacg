@@ -30,45 +30,45 @@
     <select id="startQueinvest" resultType="com.zte.zudp.admin.mm.queinvest.entity.MMQueinvest">
         select
             @n:=@n+1 rowNum,
-            t1.id id,
-            t1.title title,
+            t0.id id,
+            t0.title title,
+            t2.id questionId,
             t2.contents contents,
-            t3.choiceText01 choiceText01 ,
-            t3.choiceText02 choiceText02,
-            t3.choiceText03 choiceText03,
-            t3.choiceText04 choiceText04,
-            t2.id questionId
+            (case when t3.choiceText01 is null then '' else t3.choiceText01 end )as choiceText01,
+            (case when t3.choiceText02 is null then '' else t3.choiceText02 end )as choiceText02,
+            (case when t3.choiceText03 is null then '' else t3.choiceText03 end )as choiceText03,
+            (case when t3.choiceText04 is null then '' else t3.choiceText04 end )as choiceText04
 
 
-        from  jacg_queinvest t1
+        from
+           (select  t1.*,qq.questions_id  from jacg_queinvest_questions qq right join jacg_queinvest t1 on qq.queinvest_id = t1.id)as t0
 
-        left join  jacg_questions t2 on  t1.id = t2.queinvest_id
-
-        left join jacg_options t3 on  t2.id =  t3.questions_id
-
-        inner join (select @n:= 0) d
-
-        where t1.del != 1   and t1.id = #{id}
+            left join jacg_questions t2  on  t0.questions_id = t2.id
+            left join jacg_options t3 on t2.id = t3.questions_id
+            inner join (select @n:= 0) d
+        where t0.del != 1   and t0.id = #{id}
 
     </select>
 
     <!--根据所选答案，查询出所有的信息-->
     <select id="selectAllByAnswer" resultType="com.zte.zudp.admin.mm.queinvest.entity.MMQueinvest">
-        SELECT
-	t1.title title,
-	t2.contents contents,
-	t1.id queinvestId,
-	t2.id questionId
+       select
+ t0.id queinvestId,
+t0.title title,
+t2.id questionId,
+t2.contents contents
 
-FROM
-	jacg_queinvest t1
-	LEFT JOIN jacg_questions t2 ON t1.id = t2.queinvest_id
-	LEFT JOIN jacg_options t3 ON t2.id = t3.questions_id
-	LEFT JOIN jacg_answers t4 ON t2.id = t4.questions_id
-	AND t4.options_id = t3.id
+from
+(select  t1.*,qq.questions_id  from jacg_queinvest_questions qq right join jacg_queinvest t1 on qq.queinvest_id = t1.id)as t0
 
-	where #{str} in (t3.choiceText01,t3.choiceText02,t3.choiceText03,t3.choiceText04)
-	and t2.id= #{queId}
+left join jacg_questions t2  on  t0.questions_id = t2.id
+left join jacg_options t3 on t2.id = t3.questions_id
+LEFT JOIN jacg_answers t4 on t2.id = t4.questions_id
+inner join (select @n:= 0) d
+
+ where #{str} in (t3.choiceText01,t3.choiceText02,t3.choiceText03,t3.choiceText04)
+and t2.id= #{queId}
+GROUP BY t2.id
 
 
 

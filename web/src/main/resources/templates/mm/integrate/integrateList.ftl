@@ -23,7 +23,7 @@
     <link href="/css/third/webuploader.css" rel="stylesheet">
     <link href="/css/admin/avatar.css" rel="stylesheet">
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
-    <title>Document</title>
+    <title>积分管理</title>
 </head>
 <body>
 <div class="content-box container-app">

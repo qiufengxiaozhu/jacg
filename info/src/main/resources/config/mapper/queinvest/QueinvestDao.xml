@@ -105,7 +105,7 @@
         t1.id id,
         t1.title title,
         t1.`description` description,
-          DATE_FORMAT( t1.valid, '%Y-%m-%d %T' ) valid,
+          DATE_FORMAT( t1.valid, '%Y-%m-%d' ) valid,
         t1.queinvestType queinvestType,
        t1.status status,
        DATE_FORMAT( t1.pubdate, '%Y-%m-%d %T' ) pubdate
@@ -123,25 +123,39 @@
         from sys_dict t1 where  t1.type = "queinvestType"
     </select>
 
-<!--查询出所有的题目-->
+<!--查询出所有的题目 此问卷没有添加过的所有题目-->
     <select id="addQuestion" resultType="com.zte.zudp.admin.info.queinvest.entity.Questions">
-         select
-          t1.id id,
-          t1.contents contents,
-          t2.label label
-        from jacg_questions t1
-        left join  sys_dict t2  on t1.questionType = t2.value and t2.type = 'questionType'
+        SELECT
+	t1.id id,
+	t1.contents contents,
+	t2.label label
+FROM
+	jacg_questions t1
+	LEFT JOIN sys_dict t2 ON t1.questionType = t2.value	AND t2.type = 'questionType'
+	left join jacg_options t3 on t1.id = t3.questions_id
+	where t1.id not in
+	(select  questions_id from jacg_queinvest_questions where queinvest_id =#{queId} and questions_id  in (select t3.id from jacg_questions t3))
+	and t3.choiceText01 is not null and t3.choiceText02 is not null and t3.choiceText03 is not null and t3.choiceText04 is not null
 
-        where
-        t1.queinvest_id is null and t1.del !=1
     </select>
 
 
 <!--往问卷中添加题目   即是修改关联的外键的值即可-->
-    <update id="updateQuestion" parameterType="java.lang.String">
-        update jacg_questions t1 set t1.queinvest_id = #{questionId}
-        where t1.id =#{queinId}
-    </update>
+    <!--<update id="updateQuestion" parameterType="java.lang.String">-->
+        <!--update jacg_questions t1 set t1.queinvest_id = #{questionId}-->
+        <!--where t1.id =#{queinId}-->
+    <!--</update>-->
+
+    <!--往问卷中添加题目   第三张表-->
+    <insert id="updateQuestion" >
+       insert into jacg_queinvest_questions
+       (queinvest_id,
+        questions_id)
+        VALUES (
+        #{questionId},
+        #{queinId}
+        )
+    </insert>
 
     <!--发布   发布状态-->
     <update id="updateStatus">
@@ -151,7 +165,8 @@
         set
         t1.status = '2' ,
         t1.pubdate = now()
-        where t1.id =#{id} and t1.id in (select t2.queinvest_id from jacg_questions where t2.del != 1)
+        where #{id}  in (select t2.queinvest_id  from  jacg_queinvest_questions t2)
+        and t1.id = #{id}
     </update>
 
     <!--撤销发布  未发布状态-->
@@ -192,28 +207,25 @@
 
     <!--预览-->
 <select id="overView" resultType="java.util.Map">
-    select
+         select
             @n:=@n+1 rowNum,
-            t1.id id,
-            t1.title title,
+            t0.id id,
+            t0.title title,
+            t2.id questionId,
             t2.contents contents,
-            (case when t3.choiceText01 is null then '' else t3.choiceText01 end) choiceText01 ,
-            (case when t3.choiceText02 is null then '' else t3.choiceText02 end) choiceText02 ,
-            (case when t3.choiceText03 is null then '' else t3.choiceText03 end) choiceText03 ,
-            (case when t3.choiceText04 is null then '' else t3.choiceText04 end) choiceText04 ,
-
-            t2.id questionId
+            (case when t3.choiceText01 is null then '' else t3.choiceText01 end )as choiceText01,
+            (case when t3.choiceText02 is null then '' else t3.choiceText02 end )as choiceText02,
+            (case when t3.choiceText03 is null then '' else t3.choiceText03 end )as choiceText03,
+            (case when t3.choiceText04 is null then '' else t3.choiceText04 end )as choiceText04
 
 
-        from  jacg_queinvest t1
+        from
+           (select  t1.*,qq.questions_id  from jacg_queinvest_questions qq right join jacg_queinvest t1 on qq.queinvest_id = t1.id)as t0
 
-        left join  jacg_questions t2 on  t1.id = t2.queinvest_id
-
-        left join jacg_options t3 on  t2.id =  t3.questions_id
-
-        inner join (select @n:= 0) d
-
-        where t1.del != 1   and t1.id = #{id}
+            left join jacg_questions t2  on  t0.questions_id = t2.id
+            left join jacg_options t3 on t2.id = t3.questions_id
+            inner join (select @n:= 0) d
+        where t0.del != 1   and t0.id = #{id}
 </select>
 
 <!--删除问卷里面的题目-->

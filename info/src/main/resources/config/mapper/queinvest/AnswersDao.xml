@@ -20,7 +20,7 @@
 
           where 1=1
       <if test="title != null and title != '' ">
-          and t2.title  like concat('%', #{title}, '%')
+          and t2.title = #{title}
       </if>
         group by t1.name ,t1.queinvestId
 

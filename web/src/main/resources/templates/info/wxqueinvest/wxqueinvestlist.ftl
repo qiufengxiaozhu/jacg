@@ -288,6 +288,7 @@
 <script src="/js/pluginInit/laydateInit.js"></script>
 <script>
 
+    var obj;
     var queId;
     var dataTable;
     var urlstr="/api/wxqueinvest";
@@ -328,7 +329,7 @@
 
         findList();
 
-        var obj={
+         obj={
             url: urlstr,
             formId: formIdStr,
             title: "{type}问卷",

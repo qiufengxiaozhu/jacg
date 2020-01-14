@@ -35,13 +35,13 @@
             font-size: 0.45rem;
         }
         .te-btn{
-            width: 90%;
+            width: 100%;
             height: 1rem;
-            margin: auto;
-            margin-left: 5%;
-            margin-bottom: 0.3rem;
-            position: absolute;
-            bottom: 0.3rem;
+            margin-bottom: 0rem;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%,0);
+            bottom: 0rem;
             background: #007EF3;
             color: #fff;
             font-size: 0.4rem;
@@ -64,7 +64,7 @@
 
 
 
-    <form class="form-class" action="/mm/wxqueinvest/test" method="post" onsubmit="return check()">
+    <form class="form-class" style="padding-bottom: 2rem;" action="/mm/wxqueinvest/test" method="post" onsubmit="return check()">
 
     <#list list! as question>
     <#--题目id-->

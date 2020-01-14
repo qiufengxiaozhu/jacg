@@ -82,6 +82,8 @@ public class MMQueinvestController {
 
         // 题目数量
             int queSize = 0;
+            // 获取到问卷id
+        String queinvestId = map.get("queiId").toString();
             // 存放查询出来的结果
             List<MMQueinvest> list= new ArrayList();
             try {
@@ -93,9 +95,11 @@ public class MMQueinvestController {
                 for (int i = 1; i <= queSize; i++) {
                     // 获得到每个被选中的单选按钮的值  选项内容
                      if(map.get(i+"") != null){
+                         // 所选的选项内容
                          String str = map.get(i+"").toString();
+                         // queId：题目的id
                         String queId =  map.get(i+"queId").toString();
-                         // 调用service层，查询出此答案所对应的题目和问卷
+                         // 调用service层，查询出此答案所对应的题目
                         MMQueinvest answer = mmQueinvestService.selectAllByAnswer(str,queId);
                         answer.setOptContext(str);
                         answer.setQuestionId(queId);
@@ -107,7 +111,7 @@ public class MMQueinvestController {
                 // 遍历list，将它插入到答案表中
                 for(int i = 0;i<list.size();i++){ //得到的问卷名称
 
-                    String queinvestId = list.get(i).getQueinvestId(); // 问卷id
+//                    String queinvestId = list.get(i).getQueinvestId(); // 问卷id
                     String questionId =  list.get(i).getQuestionId(); // 题目id
                     String optContext = list.get(i).getOptContext(); // 所选的答案
                     //生成一个无序的uuid

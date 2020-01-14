@@ -105,7 +105,7 @@
         t1.id id,
         t1.title title,
         t1.`description` description,
-        DATE_FORMAT( t1.valid, '%Y-%m-%d %T' ) valid,
+        DATE_FORMAT( t1.valid, '%Y-%m-%d' ) valid,
         t1.queinvestType queinvestType,
        t1.status status,
       DATE_FORMAT( t1.pubdate, '%Y-%m-%d %T' ) pubdate

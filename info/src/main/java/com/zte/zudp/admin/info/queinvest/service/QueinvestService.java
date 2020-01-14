@@ -29,8 +29,8 @@ public class QueinvestService extends BusinessService<Queinvest> {
     }
 
 
-    public List<Questions> addQuestion() {
-        return queinvestDao.addQuestion();
+    public List<Questions> addQuestion(String queId) {
+        return queinvestDao.addQuestion(queId);
     }
 
 
