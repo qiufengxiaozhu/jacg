@@ -268,8 +268,10 @@
         var id=$(obj).val();
         zudp.ajax("/api/consult/"+id).get("").then(function (data){
         if(data.reply!=null && data.reply!=""){
+            $(".modal form").find("[name='reply']").attr("disabled",true);
               $("#save-btn").hide();
             }else {
+            $(".modal form").find("[name='reply']").attr("disabled",false);
                 $("#save-btn").show();
             }
         })
@@ -282,11 +284,13 @@
         $(".modal form").find("[name='name'],[name='telephone'],[name='content']").attr("disabled",false);
     }
 
-    function show1() {
-        /*$(".modal form").find("#picture").show();
-        $(".modal form").find("#voice").show();
-        $(".modal form").find("#video").show();*/
-
+    function show1(obj) {
+        var id=$(obj).val();
+       /* if(reply!=null&&reply!=""){
+            $(".modal form").find("[name='reply']").attr("disabled",true);
+        }else {
+            $(".modal form").find("[name='reply']").attr("disabled",false);
+        }*/
         $(".modal form").find("[name='name'],[name='telephone'],[name='content'],[name='consultDate'],[name='replyDate'],[name='title']").attr("disabled",true);
     }
 
@@ -466,7 +470,7 @@
                        <#--<@hasPermission name="oaManager:post:update">
                         editstr=zudp.template.editBtn;
                         </@hasPermission>-->
-                        editstr='<button onclick="show1(),img2(this),hiddensave(this),replytitle()"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
+                        editstr='<button onclick="show1(this),img2(this),hiddensave(this),replytitle()"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
 
                         <#--<@hasPermission name="oaManager:post:delete">
                         delstr=zudp.template.delBtn;

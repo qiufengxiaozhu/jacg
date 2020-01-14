@@ -157,7 +157,7 @@
 
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">位置：</label>
+                            <label class="col-sm-3 control-label my-control-label ">案发事件位置：</label>
                             <div class="col-sm-6">
                                 <textarea  class="form-control" rows="2" cols="" name="place" id="place"></textarea>
                             </div>

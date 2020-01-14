@@ -27,6 +27,7 @@
         }
         .sp-span{display: inline-block;width: 100%;padding-left: 2.2rem;color:#ff2233;display: none}
         .port .sp-span2{padding:0 .2rem;width: auto;width: 0.2rem;display: none}
+        .port .sp-span3{padding:0 .2rem;width: auto;width: 0.2rem;}
         .webuploader-container div {width: 86px;  height: 35px;line-height: 35px;}
         .fx-img{width: 32%;height: 2rem;margin:0.1rem 0.5%}
         .fx-img img{width: 100%;height: 100%}
@@ -68,12 +69,14 @@
             var reg_title= /^.{1,20}$/;
             var flag=reg_title.test(title)
             if(title!=null && title!='' &&flag){
+                $("#sp_title3").hide();
                 $("#sp_title2").show();
                 $("#sp_title").hide();
                 return true;
             }else{
                 $("#sp_title").show();
                 $("#sp_title2").hide();
+                $("#sp_title3").show();
                 return false;
             }
         }
@@ -83,12 +86,14 @@
             var reg_place= /^.{1,20}$/;
             var flag=reg_place.test(place)
             if(place!=null && place!='' &&flag){
+                $("#sp_place3").hide();
                 $("#sp_place2").show();
                 $("#sp_place").hide();
                 return true;
             }else{
                 $("#sp_place").show();
                 $("#sp_place2").hide();
+                $("#sp_place3").show();
             }
         }
         //检验内容
@@ -97,12 +102,14 @@
             var reg_content= /^.{1,50}$/;
             var flag=reg_content.test(content);
             if(content!=null && content!='' &&flag){
+                $("#sp_content3").hide();
                 $("#sp_content2").show();
                 $("#sp_content").hide();
                 return true;
             }else{
                 $("#sp_content").show();
                 $("#sp_content2").hide();
+                $("#sp_content3").show();
                 return false;
             }
         }
@@ -165,6 +172,7 @@
                         <div class="port flex flex-c-c"><span>标题&nbsp;:</span>
                             <input type="text"  name="title" class="tab-input flex-1" placeholder="请输入您的来信标题(20字以内)">
                             <span class="sp-span2" id="sp_title2" style="color:green">√</span>
+                            <span class="sp-span3" id="sp_title3" style="color:red">*</span>
                         </div>
                         <span class="sp-span" id="sp_title">字符个数应在1-20个</span>
                     </div>
@@ -173,6 +181,7 @@
                         <div class="port flex flex-c-c"><span style="width: auto;">案发事件位置&nbsp;:</span><br>
                             <input type="text" name="place" class="tab-input flex-1" placeholder="案发地点">
                             <span class="sp-span2" id="sp_place2" style="color:green">√</span>
+                            <span class="sp-span3" id="sp_place3" style="color:red">*</span>
                         </div>
                         <span class="sp-span" id="sp_place">字符个数应在1-20个</span>
                     </div>
@@ -183,6 +192,7 @@
                         <div class="port flex flex-c-c"><span>上报内容&nbsp;:</span><br>
                             <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的上报内容(50字以内)">
                             <span class="sp-span2" id="sp_content2" style="color:green">√</span>
+                            <span class="sp-span3" id="sp_content3" style="color:red">*</span>
                         </div>
                         <span class="sp-span" id="sp_content">字符个数应在1-50个</span>
                     </div>
