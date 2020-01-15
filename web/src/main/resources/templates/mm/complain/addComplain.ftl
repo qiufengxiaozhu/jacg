@@ -41,7 +41,7 @@
             <div class="header-img">
                 <div class="ts-table">
                     <div class="put">
-                        <input type="hidden" name="contactUser" id="contact_user" value='${Session.userPhone}'>
+                        <input type="hidden" name="contactUser" id="contact_user" value='${Session.userPhone!}'>
                         <div class="theme">
                             <div class="port flex flex-c-c">
                                 <span>标题&nbsp;:</span>
@@ -66,7 +66,7 @@
                             <div class="port flex flex-c-c">
                                 <span>联系人&nbsp;:</span>
                                 <input type="text" name="contact" id="contact" class="tab-input flex-1"
-                                       placeholder="请输入您的姓名(20字以内)" value="${Session.userName}">
+                                       placeholder="请输入您的姓名(20字以内)" value="${Session.userName!}">
                                 <span class="sp-span2" id="sp_contact2" style="color:green">√</span>
                             </div>
                             <span class="sp-span" id="sp_contact">请输入1-20位字符</span>
@@ -75,7 +75,7 @@
                             <div class="port flex flex-c-c">
                                 <span>联系电话&nbsp;:</span>
                                 <input type="text" name="phone" id="phone" class="tab-input flex-1"
-                                       placeholder="请输入您的电话"value="${Session.userPhone}">
+                                       placeholder="请输入您的电话"value="${Session.userPhone!}">
                                 <span class="sp-span2" id="sp_phone2" style="color:green">√</span>
                             </div>
                             <span class="sp-span" id="sp_phone">手机号格式不对</span>
