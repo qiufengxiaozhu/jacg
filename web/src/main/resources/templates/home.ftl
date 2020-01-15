@@ -89,13 +89,13 @@
                             <div id="span_avatar" class="span_avatar" style="text-align: center;display: block"></div>
                             <span class="percent1">0</span>
                         </div>
-                        <p style="color:#599235;font-size:16px;margin: 0 0 5px;"><strong>Hi</strong>, Nutprawee</p>
-                        <p><a href="#">2019-11-21 AM 8:49</a></p>
+                        <p style="color:#599235;font-size:16px;margin: 0 0 5px;"><strong>Hi! </strong>admin</p>
+                        <p style="color: whitesmoke;" id="home_time"></p >
                         <div class="avatar-link btn-group btn-group-justified">
-                            <a class="btn" ><i class="fa fa-briefcase"></i></a>
-                            <a class="btn" ><i class="fa fa-bell-o"></i><em class="green active"></em></a>
-                            <a class="btn" ><i class="fa fa-envelope-o"></i><em class="active"></em></a>
-                            <a class="btn" ><i class="fa fa-book"></i></a>
+                            <#--<a class="btn" ><i class="fa fa-briefcase"></i></a>-->
+                            <#--<a class="btn" ><i class="fa fa-bell-o"></i><em class="green active"></em></a>-->
+                            <#--<a class="btn" ><i class="fa fa-envelope-o"></i><em class="active"></em></a>-->
+                            <#--<a class="btn" ><i class="fa fa-book"></i></a>-->
                         </div>
                         <#--<a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear">
@@ -498,6 +498,8 @@
 
     $(document).ready(function () {
 
+
+
         zudp.ajax("/api/info/notReaderMessageCount").get().then(function (da) {
             $("#home-message-count").html(da);
         });
@@ -541,6 +543,16 @@
                                  });
 
     });
+    setInterval("getDate()",1000);
+
+    function getDate(){
+        //获取当前时间
+        var date = new Date();
+        //格式化为本地时间格式
+        var date1 = date.toLocaleString();
+
+        $("#home_time").html(date1);
+    }
     function compare(property) {
         return function(a, b) {
             var value1 = a[property];
