@@ -166,6 +166,7 @@ public class MMNewsController {
 
         model.addAttribute("Newslist",newslist);
         model.addAttribute("TimeZone",TimeZone);
+        model.addAttribute("NewsDate",newsDate);
 
 
 //        return "forward:/mm/news/mmNews";
