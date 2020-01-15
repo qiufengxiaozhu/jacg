@@ -832,7 +832,7 @@ IScroll.prototype = {
 		pos.left -= this.wrapperOffset.left;
 		pos.top  -= this.wrapperOffset.top;
 
-		// if offsetX/Y are true we center the element to the screen
+		// if offsetX/Y are true we center the element to the bigscreen
 		if ( offsetX === true ) {
 			offsetX = Math.round(el.offsetWidth / 2 - this.wrapper.offsetWidth / 2);
 		}

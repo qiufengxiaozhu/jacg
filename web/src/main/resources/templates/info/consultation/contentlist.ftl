@@ -20,6 +20,14 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
         .webuploader-container div {
             width:80px;
         }
@@ -69,15 +77,15 @@
 
                         <div class="form-group z-group">
                             <div class="col-sm-12 z-group-pane">
-                                <label class="control-label my-control-label">开始时间：</label>
-                                <input type="text" maxlength="255" name="startDate" id="startDate_select" onfocus="this.blur()" startDate  placeholder="咨询筛选时间(起)" class="form-control  ">
+                                <label class="control-label my-control-label">咨询开始时间：</label>
+                                <input type="text" maxlength="255" name="startDate" id="startDate_select" onfocus="this.blur()" startDate  placeholder="咨询开始时间" class="form-control  ">
                             </div>
                         </div>
 
                         <div class="form-group z-group">
                             <div class="col-sm-12 z-group-pane">
-                                <label class="control-label my-control-label">结束时间：</label>
-                                <input type="text" maxlength="255" name="endDate" id="endDate_select" endDate  placeholder="咨询筛选时间(止)" class="form-control  ">
+                                <label class="control-label my-control-label">咨询结束时间：</label>
+                                <input type="text" maxlength="255" name="endDate" id="endDate_select" endDate  placeholder="咨询开始时间" class="form-control  ">
                             </div>
                         </div>
                     <button class="btn btn-danger mgl my-mgl clear-input" >清空</button>&nbsp;&nbsp;
@@ -121,6 +129,21 @@
                         <input type="hidden" name="id" id="id">
 
                         <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">标题：</label>
+                            <div class="col-sm-6">
+                                <input  type="text" name="title" maxlength="64" id="title" placeholder="咨询人电话" class="form-control">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">咨询内容：</label>
+                            <div class="col-sm-6">
+                                <textarea placeholder="咨询内容" class="form-control" rows="2" cols="" name="content" id="content"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">联系人：</label>
                             <div class="col-sm-6">
                                 <input  type="text" name="name" maxlength="64" id="name" placeholder="咨询人姓名" class="form-control">
@@ -140,19 +163,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">标题：</label>
-                            <div class="col-sm-6">
-                                <input  type="text" name="title" maxlength="64" id="title" placeholder="咨询人电话" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">咨询内容：</label>
-                            <div class="col-sm-6">
-                                <textarea placeholder="咨询内容" class="form-control" rows="2" cols="" name="content" id="content"></textarea>
-                            </div>
-                        </div>
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">咨询时间：</label>
@@ -175,34 +185,6 @@
                             </div>
                         </div>
 
-
-
-                        <#--<div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">咨询种类：</label>
-                            <div class="col-sm-6">
-                                <select class="form-control" id="categoryId" name="categoryId">
-
-                                </select>
-                            </div>
-                        </div>-->
-
-                        <#--<div class="form-group">
-                            <div class="col-sm-6">
-                                <a href="" class="col-sm-3 control-label my-control-label" id="picture" name="picture" target="_blank" >附件图片</a>
-                            </div>
-                        </div>
-
-                       <div class="form-group">
-                            <div class="col-sm-6">
-                                <a href="" class="col-sm-3 control-label my-control-label " id="voice" name="voice" target="_blank" >附件语音</a>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-6">
-                                <a href="" class="col-sm-3 control-label my-control-label " id="video" name="video" target="_blank" >附件视频</a>
-                            </div>
-                        </div>-->
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">附件：</label>
@@ -268,7 +250,7 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}咨询",
+            title: "回复咨询",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],
@@ -286,8 +268,10 @@
         var id=$(obj).val();
         zudp.ajax("/api/consult/"+id).get("").then(function (data){
         if(data.reply!=null && data.reply!=""){
+            $(".modal form").find("[name='reply']").attr("disabled",true);
               $("#save-btn").hide();
             }else {
+            $(".modal form").find("[name='reply']").attr("disabled",false);
                 $("#save-btn").show();
             }
         })
@@ -300,11 +284,13 @@
         $(".modal form").find("[name='name'],[name='telephone'],[name='content']").attr("disabled",false);
     }
 
-    function show1() {
-        /*$(".modal form").find("#picture").show();
-        $(".modal form").find("#voice").show();
-        $(".modal form").find("#video").show();*/
-
+    function show1(obj) {
+        var id=$(obj).val();
+       /* if(reply!=null&&reply!=""){
+            $(".modal form").find("[name='reply']").attr("disabled",true);
+        }else {
+            $(".modal form").find("[name='reply']").attr("disabled",false);
+        }*/
         $(".modal form").find("[name='name'],[name='telephone'],[name='content'],[name='consultDate'],[name='replyDate'],[name='title']").attr("disabled",true);
     }
 
@@ -484,7 +470,7 @@
                        <#--<@hasPermission name="oaManager:post:update">
                         editstr=zudp.template.editBtn;
                         </@hasPermission>-->
-                        editstr='<button onclick="show1(),img2(this),hiddensave(this),replytitle()"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
+                        editstr='<button onclick="show1(this),img2(this),hiddensave(this),replytitle()"  class="btn btn-info btn-sm row-edit updateOpBtn" value="{id}"><i class="fa fa-pencil"></i>回复</button>&nbsp;&nbsp;&nbsp;';
 
                         <#--<@hasPermission name="oaManager:post:delete">
                         delstr=zudp.template.delBtn;

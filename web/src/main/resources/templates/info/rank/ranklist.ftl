@@ -20,6 +20,14 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
         .webuploader-container div {
             width:80px;
         }
@@ -38,10 +46,10 @@
                         <thead>
                         <tr>
                             <th>id</th>
-                            <th>积分数</th>
+                            <th>排名</th>
                             <th>姓名</th>
                             <th>电话</th>
-                            <th>排名</th>
+                            <th>积分数</th>
 <#--                            <th>操作</th>-->
                         </tr>
                         </thead>
@@ -213,8 +221,8 @@
                     // <th>排名</th>
                     // <th>操作</th>
                     {data: 'id', visible: false},
+                    {data: 'rank'},
 
-                    {data: 'points'},
                     {data: 'name',
                         render: function (data, type, row) {
                             var temp = data;
@@ -225,7 +233,8 @@
                         }
                     },
                     {data: 'telephone'},
-                    {data: 'rank'}
+                    {data: 'points'}
+
                     <#--{-->
                     <#--    render: function (data, type, row) {-->
                     <#--        var btn = "";-->
@@ -272,7 +281,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on( 'uploadSuccess', function( file,response) {
-            //debugger;
+            //;
             var name = file.name;
             var fileurl = response.data;
             $("#fileShowName").append("<p>" +

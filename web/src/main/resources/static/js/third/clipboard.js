@@ -203,7 +203,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
                 this.fakeElem.style.border = '0';
                 this.fakeElem.style.padding = '0';
                 this.fakeElem.style.margin = '0';
-                // Move element out of screen horizontally
+                // Move element out of bigscreen horizontally
                 this.fakeElem.style.position = 'absolute';
                 this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
                 // Move element to the same position vertically

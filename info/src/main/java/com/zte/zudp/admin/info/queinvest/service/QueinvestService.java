@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Transactional
@@ -28,8 +29,8 @@ public class QueinvestService extends BusinessService<Queinvest> {
     }
 
 
-    public List<Questions> addQuestion() {
-        return queinvestDao.addQuestion();
+    public List<Questions> addQuestion(String queId) {
+        return queinvestDao.addQuestion(queId);
     }
 
 
@@ -37,8 +38,8 @@ public class QueinvestService extends BusinessService<Queinvest> {
      * 发布
      * @param id
      */
-    public void updateStatus(String id) {
-        queinvestDao.updateStatus(id);
+    public int updateStatus(String id) {
+      return   queinvestDao.updateStatus(id);
     }
     /**
      * 撤销发布
@@ -52,12 +53,28 @@ public class QueinvestService extends BusinessService<Queinvest> {
       return   queinvestDao.findAllQuestion(id);
     }
 
-    public void updateQuestion(Object object, Object object02) {
-        queinvestDao.updateQuestion(object,object02);
+    public void updateQuestion(String questionId, String queinId) {
+        queinvestDao.updateQuestion(questionId,queinId);
     }
 
     public Queinvest getDetail(String id) {
       return   queinvestDao.getDetail(id);
 
+    }
+
+    /**
+     * 预览
+     * @return
+     */
+    public List<Map> overView(String id) {
+       return queinvestDao.overView(id);
+    }
+
+    /**
+     * 删除问卷里面的题目
+     * @param delId
+     */
+    public void delQuestion(String delId) {
+        queinvestDao.delQuestion(delId);
     }
 }

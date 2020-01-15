@@ -15,6 +15,14 @@
     <link href="/css/style.min.css" rel="stylesheet">
     <link href="/css/third/webuploader.css" rel="stylesheet">
     <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
         a.no_cshow {
             color: #707477;
         }

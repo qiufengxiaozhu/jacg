@@ -41,7 +41,7 @@
             and my_need_like.title like concat('%', #{title}, '%')
         </if>
         <if test="validStartTime!=null and validStartTime !=''">
-           AND  valid_time &gt;= #{validStartTime}
+           AND  valid_time <![CDATA[ >= ]]> #{validStartTime}
         </if>
         <if test="validStopTime!=null and validStopTime !=''">
             AND  valid_time &lt;= #{validStopTime}
@@ -54,7 +54,7 @@
             like_info l
             WHERE
             del!=1
-            AND l.like_time >= #{likeStartTime}
+            AND l.like_time <![CDATA[ >= ]]> #{likeStartTime}
             AND l.like_time &lt;= #{likeStopTime}
             GROUP BY
             like_conten_id
@@ -75,7 +75,7 @@
             mnl.like_num as likeNum,
             mnl.picture as picture,
             mnl.publish_status as publishStatus,
-            mnl.valid_time as validTime,
+            DATE_FORMAT(mnl.valid_time,"%Y-%m-%d %T") as validTime,
             mnl.video as video
         from my_need_like mnl
         where mnl.id=#{id}

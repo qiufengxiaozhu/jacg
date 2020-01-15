@@ -203,7 +203,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 			});
 
 		// It's definitely a better user experience if we make the paste-bin pretty unnoticed
-		// by pulling it off the screen.
+		// by pulling it off the bigscreen.
 		pastebin.setStyle( this.config.contentsLangDirection == 'ltr' ? 'left' : 'right', '-1000px' );
 
 		var bms = sel.createBookmarks();

@@ -1,6 +1,7 @@
 package com.zte.zudp.admin.info.manhole;
 
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
+import com.zte.zudp.admin.info.OtherMenu;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @since on 2018-02-05.
  */
 @Controller
-@EndpointModule(id = "headManager", name = "井盖终端", order = 100, icon = "home")
+@EndpointModule(id = "headManager", name = "井盖终端", order = 100, icon = "home",parent = OtherMenu.class)
 @RequestMapping("/headMenu")
 public class HeadMenu {
 

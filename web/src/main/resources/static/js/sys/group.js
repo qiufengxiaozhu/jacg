@@ -232,16 +232,16 @@ $(document).ready(function () {
     });
 
     $("#update_group_insert").click(function () {
-        if (ztree.getSelectedNodes()[0].status != 2) {
+        // if (ztree.getSelectedNodes()[0].status != 2) {
             $("#details_modal").modal("show");
             if (datatableInsert == null) {
                 listInsert();
             } else {
                 zudp.plugin.table("#list-details-insert").then().ajax.reload();
             }
-        } else {
+       /* } else {
             swals("该组织已被撤销无法添加用户！");
-        }
+        }*/
     });
     $("#select_group_details_insert").click(select_details_insert);
     $("#update_group_details_insert").click(updateAll_insert);
@@ -359,7 +359,6 @@ var key = $('#semail');
 
 function getNodeDetail(groupId) {
 
-    debugger;
     if (ztree.getSelectedNodes()[0].status == '2') {
         $("#revoke").hide();
         $("#enable-btn").show();
@@ -467,7 +466,7 @@ $(document).ready(function () {
             treeName: {
                 required: true
             },
-            primaryUser: {
+            primaryUserTemp: {
                 required: true
             },
             weight: {
@@ -480,7 +479,7 @@ $(document).ready(function () {
                 required: "请输入组织编号",
                 remote: "该组织编号对应的组织已存在"
             },
-            primaryUser: {
+            primaryUserTemp: {
                 required: "请输入组织负责人"
             },
             treeName: {

@@ -84,4 +84,10 @@
         </#if>
     });
 </script>
+<script>
+    /**
+     * 跳转到登录后直接跳出iframe
+     */
+    if(top.location!=self.location){top.location=self.location}
+</script>
 </html>

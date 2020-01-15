@@ -23,7 +23,7 @@
     <link href="/css/third/webuploader.css" rel="stylesheet">
     <link href="/css/admin/avatar.css" rel="stylesheet">
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
-    <title>Document</title>
+    <title>统计管理</title>
 </head>
 <body>
 <div class="content-box container-app">
@@ -84,7 +84,8 @@
                     j = j+1;
                     table +=' <tr>\n' +
                             '                <th>'+j+'</th>\n' +
-                            '                <th>'+list[i].replyId+'</th>\n' +
+                            // '                <th>'+list[i].replyId+'</th>\n' +
+                            '                <th>'+'吉安城管'+'</th>\n' +
                             '                <th>'+list[i].sbSum+'</th>\n' +
                             '                <th>'+list[i].replyYes+'</th>\n' +
                             '                <th>'+list[i].repleNo+'</th>\n' +

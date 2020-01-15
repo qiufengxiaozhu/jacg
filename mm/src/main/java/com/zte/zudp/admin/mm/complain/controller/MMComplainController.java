@@ -1,20 +1,17 @@
 package com.zte.zudp.admin.mm.complain.controller;
 
-import com.zte.zudp.admin.common.persistence.Result;
 import com.zte.zudp.admin.mm.complain.entity.MMComplainEntity;
 import com.zte.zudp.admin.mm.complain.service.MMComplainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.swing.text.html.parser.Entity;
-import java.io.IOException;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -34,18 +31,25 @@ public class MMComplainController {
      * @return
      */
     @GetMapping("/myComplain")
-    public String myComplain(@ModelAttribute("contactUser") String contactUser, Model model) {
+//    public String myComplain(@ModelAttribute("contactUser") String contactUser, Model model) {
+//    @ModelAttribute("contactUser") String contactUser,
+    public String myComplain(Model model, HttpSession session) {
 
-        System.out.println("@ModelAttribute(\"contactUser\") String contactUser : " + contactUser);
+        String phone = session.getAttribute("userPhone").toString();
         //如果是从 /mm/news/index 过来的 contact == ""，因为我也不知道怎么把用户账号信息写好
-        if (contactUser == null || contactUser.equals(""))
-            contactUser = "123";
+//        if (contactUser == null || contactUser.equals(""))
+//            contactUser = "123";
+        System.out.println(phone);
+        if (phone == null || phone.equals(""))
+            phone = "123456";
         MMComplainEntity entity = new MMComplainEntity();
-        entity.setContactUser(contactUser);
+//        entity.setContactUser(contactUser);
+        //contactUser
+        entity.setContactUser(phone);
         List<MMComplainEntity> contactUserList = service.findList(entity);
 
 
-        model.addAttribute("contactUser", contactUser);
+        model.addAttribute("contactUser", phone);
         model.addAttribute("complainEntity",contactUserList);
 
         return "/mm/complain/myComplain";
@@ -95,9 +99,10 @@ public class MMComplainController {
         if (complainEntity.getContactUser() == null || "".equals(complainEntity.getContactUser()))
             complainEntity.setContactUser("123");
         int i = service.saveOne(complainEntity);
-        redirectAttributes.addFlashAttribute("contactUser", complainEntity.getContactUser());
+//        redirectAttributes.addFlashAttribute("contactUser", complainEntity.getContactUser());
 
-        return "redirect:/mm/complain/myComplain";
+//        return "redirect:/mm/complain/myComplain";
+        return "redirect:/mm/news/index";
     }
 
     /**

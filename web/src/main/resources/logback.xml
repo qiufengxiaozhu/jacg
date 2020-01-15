@@ -9,7 +9,7 @@
     <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 按天回滚 daily -->
-            <fileNamePattern>log/error/%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <fileNamePattern>zudp-cache-log/log/error/%d{yyyy-MM-dd}.log.gz</fileNamePattern>
             <!-- 日志最大的历史 120 天 -->
             <maxHistory>120</maxHistory>
         </rollingPolicy>
@@ -22,7 +22,7 @@
     <appender name="ACCESS" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 按天回滚 daily -->
-            <fileNamePattern>log/access/%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>zudp-cache-log/log/access/%d{yyyy-MM-dd}.log</fileNamePattern>
             <!-- 日志最大的历史 120 天 -->
             <maxHistory>120</maxHistory>
         </rollingPolicy>
@@ -35,7 +35,7 @@
     <appender name="SYS" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 按天回滚 daily -->
-            <fileNamePattern>log/sys/%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>zudp-cache-log/log/sys/%d{yyyy-MM-dd}.log</fileNamePattern>
             <!-- 日志最大的历史 120 天 -->
             <maxHistory>120</maxHistory>
         </rollingPolicy>
@@ -53,6 +53,7 @@
 
     <root level="info">
         <appender-ref ref="STDOUT"/>
+        <appender-ref ref="SYS"/>
     </root>
 
     <logger name="com.zte.zudp.info" level="debug" additivity="false">

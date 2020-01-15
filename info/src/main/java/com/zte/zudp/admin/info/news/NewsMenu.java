@@ -1,6 +1,5 @@
 package com.zte.zudp.admin.info.news;
 
-import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointPage;
 import com.zte.zudp.admin.common.annotation.endpoint.Menu;
 import org.springframework.stereotype.Controller;
@@ -21,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class NewsMenu {
     @Menu
     @GetMapping("/newslist")
-    @EndpointPage(id = "newsManager", name = "新闻信息全览",parent =  MainMenu.class, order = 1029 ,icon = "cogs")
+    @EndpointPage(id = "newsManager", name = "新闻资讯",parent =  MainMenu.class, order = 1029 ,icon = "cogs")
     public String processModeler(Model model) {
         return "/info/news/newslist";
     }

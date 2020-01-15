@@ -2500,7 +2500,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'lprintd lprintq lprm ls lsof make man mkdir mkfifo mkisofs mknod more mount mtools ' +
 						'mv netstat nice nl nohup nslookup open op passwd paste pathchk ping popd pr printcap ' +
 						'printenv printf ps pushd pwd quota quotacheck quotactl ram rcp read readonly renice ' +
-						'remsync rm rmdir rsync screen scp sdiff sed select seq set sftp shift shopt shutdown ' +
+						'remsync rm rmdir rsync bigscreen scp sdiff sed select seq set sftp shift shopt shutdown ' +
 						'sleep sort source split ssh strace su sudo sum symlink sync tail tar tee test time ' +
 						'times touch top traceroute trap tr true tsort tty type ulimit umask umount unalias ' +
 						'uname unexpand uniq units unset unshar useradd usermod users uuencode uudecode v vdir ' +
@@ -2781,7 +2781,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'lowercase lower-greek lower-latin lower-roman lower low ltr marker maroon medium message-box middle mix move narrower '+
 						'navy ne-resize no-close-quote none no-open-quote no-repeat normal nowrap n-resize nw-resize oblique olive once open-quote outset '+
 						'outside overline pointer portrait pre print projection purple red relative repeat repeat-x repeat-y rgb ridge right right-side '+
-						'rightwards rtl run-in screen scroll semi-condensed semi-expanded separate se-resize show silent silver slower slow '+
+						'rightwards rtl run-in bigscreen scroll semi-condensed semi-expanded separate se-resize show silent silver slower slow '+
 						'small small-caps small-caption smaller soft solid speech spell-out square s-resize static status-bar sub super sw-resize '+
 						'table-caption table-cell table-column table-column-group table-footer-group table-header-group table-row table-row-group teal '+
 						'text-bottom text-top thick thin top transparent tty tv ultra-condensed ultra-expanded underline upper-alpha uppercase upper-latin '+
@@ -3438,7 +3438,7 @@ typeof(exports) != 'undefined' ? exports.SyntaxHighlighter = SyntaxHighlighter :
 						'lowercase lower-greek lower-latin lower-roman lower low ltr marker maroon medium message-box middle mix move narrower '+
 						'navy ne-resize no-close-quote none no-open-quote no-repeat normal nowrap n-resize nw-resize oblique olive once open-quote outset '+
 						'outside overline pointer portrait pre print projection purple red relative repeat repeat-x repeat-y rgb ridge right right-side '+
-						'rightwards rtl run-in screen scroll semi-condensed semi-expanded separate se-resize show silent silver slower slow '+
+						'rightwards rtl run-in bigscreen scroll semi-condensed semi-expanded separate se-resize show silent silver slower slow '+
 						'small small-caps small-caption smaller soft solid speech spell-out square s-resize static status-bar sub super sw-resize '+
 						'table-caption table-cell table-column table-column-group table-footer-group table-header-group table-row table-row-group teal '+
 						'text-bottom text-top thick thin top transparent tty tv ultra-condensed ultra-expanded underline upper-alpha uppercase upper-latin '+

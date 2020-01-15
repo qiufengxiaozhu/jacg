@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.dynamicpush.dao.DynamicPushDao">
+
+    <!--查询出所有的信息-->
+    <select id="findList" resultType="com.zte.zudp.admin.info.dynamicpush.entity.DynamicPush">
+        SELECT
+        t1.id id,
+        t1.title title,
+        ( CASE WHEN LENGTH(  t1.contentsText ) > 20 THEN CONCAT( SUBSTRING(  t1.contentsText, 1, 20 ), '...' ) ELSE  t1.contentsText END ) AS contentsText,
+        t1.contents contents,
+        t1.status status,
+        DATE_FORMAT(t1.pushTime,"%Y-%m-%d %T") pushTime
+        FROM
+        jacg_dynamicpush t1
+
+        where t1.del = '0'
+        <if test="title != null and title != '' ">
+            and t1.title like concat('%', #{title}, '%')
+        </if>
+
+        <if test="startTime != null and startTime != '' ">
+            and   t1.pushTime <![CDATA[ >= ]]>  #{startTime} and t1.status ='1'
+        </if>
+
+        <if test="endTime != null and endTime != '' ">
+            and   #{endTime} <![CDATA[ >= ]]> t1.pushTime and t1.status = '1'
+        </if>
+
+
+
+
+    </select>
+
+    <!--新增-->
+    <insert id="insert">
+        insert into  jacg_dynamicpush (
+        id,
+        title,
+        contents,
+        contentsText,
+        status,
+        del
+        )
+        VALUES (
+        #{id},
+        #{title},
+        #{contents},
+        #{contentsText},
+        '0',
+        '0'
+
+        )
+    </insert>
+<!--详情-->
+    <select id="get" resultType="com.zte.zudp.admin.info.dynamicpush.entity.DynamicPush">
+        SELECT
+        t1.id id,
+        t1.title title,
+        t1.contents contents,
+        t1.status status,
+        DATE_FORMAT(t1.pushTime,"%Y-%m-%d %T") pushTime
+        FROM
+        jacg_dynamicpush t1
+
+        where  id=#{id} and t1.del = '0'
+
+    </select>
+
+
+    <select id="getDetail" resultType="com.zte.zudp.admin.info.dynamicpush.entity.DynamicPush">
+        SELECT
+        t1.id id,
+        t1.title title,
+        t1.contents contents,
+        t1.status status,
+        DATE_FORMAT(t1.pushTime,"%Y-%m-%d %T") pushTime
+        FROM
+        jacg_dynamicpush t1
+
+        where  t1.id=#{id} and t1.del = '0'
+
+    </select>
+<!--修改-->
+    <update id="update">
+        update
+        jacg_dynamicpush t1
+        set
+        t1.title = #{title},
+        t1.contents = #{contents}
+
+        where id =#{id}
+
+    </update>
+
+
+<!--推送-->
+    <update id="updateStatus">
+        update  jacg_dynamicpush t1
+        set
+        t1.status = '1',
+        t1.pushTime = now()
+        where id = #{id}
+    </update>
+
+    <update id="updateStatus02">
+        update  jacg_dynamicpush t1
+        set
+        t1.status = '0'
+        where id = #{id}
+    </update>
+
+    <update id="delete">
+        update  jacg_dynamicpush t1
+        set
+        t1.del = '1'
+        where id = #{id}
+    </update>
+
+    <!--&lt;!&ndash;批量删除&ndash;&gt;-->
+    <delete id="batchDelete">
+        UPDATE jacg_dynamicpush  SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+
+    </delete>
+
+</mapper>

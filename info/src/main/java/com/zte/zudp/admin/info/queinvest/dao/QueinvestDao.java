@@ -9,6 +9,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.poi.ss.formula.functions.T;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -22,7 +23,7 @@ public interface QueinvestDao extends AbstractDao<Queinvest> {
     List<Dictionary> getList();
 
 
-    List<Questions> addQuestion();
+    List<Questions> addQuestion(@Param("queId")String queId);
 
 
 
@@ -30,7 +31,7 @@ public interface QueinvestDao extends AbstractDao<Queinvest> {
      * 发布
      * @param id
      */
-    void updateStatus(@Param("id")String  id);
+    int updateStatus(@Param("id")String  id);
     /**
      * 撤销发布
      * @param id
@@ -39,7 +40,19 @@ public interface QueinvestDao extends AbstractDao<Queinvest> {
 
     List<Questions> findAllQuestion(String id);
 
-    void updateQuestion(@Param("object") Object object, @Param("object02") Object object02);
+    void updateQuestion(@Param("queinId") String  queinId, @Param("questionId") String questionId);
 
     Queinvest getDetail(@Param("id") String id);
+
+    /**
+     * 预览
+     * @return
+     */
+    List<Map> overView(@Param("id")String id);
+
+    /**
+     * 删除问卷里面的题目
+     * @param delId
+     */
+    void delQuestion(@Param("delId") String delId);
 }

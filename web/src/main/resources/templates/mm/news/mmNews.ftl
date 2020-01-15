@@ -2,13 +2,31 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>公众新闻</title>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
 	<script type="text/javascript" src="/mm/js/rem.js"></script>
 	<script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
 
 	<link rel="stylesheet" href="/mm/css/index.css">
+    <style>
+        .demo-input{
+            height: 0.7rem;
+            width: 84%;
+            background: #FAFAFA;
+        }
+        .btn-s{
+            height: 0.7rem;
+            width: 10%;
+            color: blue;
+            font-size: 0.4rem;
+            background: #fff;
+            vertical-align: middle;
+        }
+        .fb-time{
+            margin-top: 0.1rem;
+        }
+    </style>
 </head>
 <body>
 	<div class="container-app">
@@ -20,17 +38,19 @@
         </div>
 
 		<div class="wrapper wrapper03" id="wrapper01">
-			<div class="scroller">
-				<ul class="clearfix">
-					<li data="0"><a href="javascript:void(0)">新闻列表</a></li>
-				</ul>
+			<div>
+<#--				<ul class="clearfix">-->
+<#--					<li data="0"><a href="javascript:void(0)">新闻列表</a></li>-->
+<#--				</ul>-->
+                <div class="fb-time">
+                    <input type="text" class="demo-input" placeholder="请选择日期" id="test1">
+                    <input type="hidden" value="${TimeZone}" id="timeText">
+                    <input type="button" id="date" onclick="selectDate()" class="btn-s" value="查询">
+                </div>
 			</div>
 		</div>
 
-		<div class="fb-time">
-            <input type="text" class="demo-input" placeholder="请选择日期" id="test1" style="border: 1px ;height:20px">
-            <input type="button" id="date" onclick="selectDate()" style="color: blue;background-color: whitesmoke;border: #fafffa;margin-right: 10px" value="查询">
-        </div>
+
 
         <div class="new-list">
             <#list Newslist! as news >
@@ -75,14 +95,14 @@
                         <p class="">取消分享</p>
                     </div>
 
-                    <div class="bdsharebuttonbox">
-                        <a href="#" class="bds_more" data-cmd="more"></a>
-                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-                        <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-                        <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
-                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-                    </div>
+                    <#--<div class="bdsharebuttonbox">-->
+                        <#--<a href="#" class="bds_more" data-cmd="more"></a>-->
+                        <#--<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>-->
+                        <#--<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>-->
+                        <#--<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>-->
+                        <#--<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>-->
+                        <#--<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>-->
+                    <#--</div>-->
 
                 </div>
             </div>
@@ -104,6 +124,7 @@
             "image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},
             "selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}
         };
+
         with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src=
                 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
 
@@ -119,7 +140,16 @@
         //执行一个laydate实例
         laydate.render({
             elem: '#test1' //指定元素
+            // ,min: 0
+            ,max: 0
         });
+        //前后若干天可选，这里以7天为例
+        // laydate.render({
+        //       elem: '#test1'
+        //  ,min: 0
+        //  ,max: 7
+        // });
+
 
         /**
          *  新闻分享单击事件
@@ -211,8 +241,9 @@
 
             $("#date").click(function () {
                 var date = $("#test1").val();
-//                alert("日期为：  "+date);
-                window.location.href='/mm/news/queryNews?newsDate='+date;
+                var time = $("#timeText").val();
+//                alert("时区为：  "+time);
+                window.location.href='/mm/news/queryNews?newsDate='+date+'&TimeZone='+time;
             });
         });
 
@@ -221,7 +252,7 @@
          * 返回新闻首页
          */
         function goIndex() {
-            window.location.href='/mm/news/index';
+            window.location.href='/mm/news/index?TimeZone='+${TimeZone};
         }
 
         /**

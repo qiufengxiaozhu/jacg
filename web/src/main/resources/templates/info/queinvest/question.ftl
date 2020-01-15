@@ -20,6 +20,14 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
         .webuploader-container div {
             width:80px;
         }
@@ -44,7 +52,7 @@
                         </button>
                     </@hasPermission>
                         <div class='querybtn my-querybtn'>
-                            <input type='text' name='search' id='search_name' placeholder='请输入题目内容' class='form-control search-input'>
+                            <input type='text' name='search' id='search_name' placeholder='请输入题目名称' class='form-control search-input'>
                             <button class='btn btn-primary mgl my-mgl research-btn' >
                                 搜索
                             </button>&nbsp;&nbsp;
@@ -59,7 +67,7 @@
                         <thead>
                         <tr>
                             <th>id</th>
-                            <th>题目内容</th>
+                            <th>题目名称</th>
                             <th>题目类型</th>
                             <th>操作</th>
                         </tr>
@@ -183,7 +191,7 @@
                 <div class="modal-body fix-height" style="height: 350px">
                 <#--表单-->
                     <form class="form-horizontal" id="form-addOption">
-                        <input type="hidden" class="testId" name="id" id="id">
+                        <#--<input type="hidden" class="testId" name="id" id="id">-->
 
 
                         <#--<div class="form-group">-->
@@ -211,7 +219,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项一：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText01"   maxlength="64" id="choiceText01" placeholder="选项一" class="form-control">
+                                <input type="text" name="opt01"   maxlength="64" id="choiceText01" placeholder="选项一" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -221,7 +229,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项二：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText02" maxlength="64" id="choiceText02" placeholder="选项二" class="form-control">
+                                <input type="text" name="opt02" maxlength="64" id="choiceText02" placeholder="选项二" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -231,7 +239,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项三：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText03" maxlength="64" id="choiceText03" placeholder="选项三" class="form-control">
+                                <input type="text" name="opt03" maxlength="64" id="choiceText03" placeholder="选项三" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -241,7 +249,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项四：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText04" maxlength="64" id="choiceText04" placeholder="选项四" class="form-control">
+                                <input type="text" name="opt04" maxlength="64" id="choiceText04" placeholder="选项四" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -254,7 +262,7 @@
                 <div class="modal-footer">
                     <input type="hidden" id="add-type">
                     <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" id="test-save-btn">保存</button>
+                    <button type="button" class="btn btn-primary " id="test-save-btn">保存</button>
                 </div>
             </small>
         </div>
@@ -286,7 +294,8 @@
 <script src="/js/third/webuploader.js"></script>
 <script src="/js/rest.js"></script>
 <script>
- 
+
+    var id;
     var dataTable;
     var urlstr="/api/question";
     var formIdStr="#post_form";
@@ -298,18 +307,17 @@
         $("#post_form").validate({
             rules: {
                 // 必填项
-
                 contents: "required",
-                questionType:"required",
+                questionType:"required"
+            },
 
-                // 提示信息
-                messages: {
-                    contents: {
-                        required: "请输入题目内容",
-                        remote: "题目已存在"
-                    },
-                    questionType: "请选择题目类型"
-                }
+            // 提示信息
+            messages: {
+                contents: {
+                    required: "请输入题目内容",
+                    remote: "题目已存在"
+                },
+                questionType: "请选择题目类型"
             }
         });
 
@@ -388,7 +396,7 @@
 
                                 delStr = zudp.template.delBtn;
 //                                detailStr = zudp.template.detailBtn;
-                            detailStr = '<button class="btn btn-info btn-sm row-detail" value="{id}" id="detail"><i class="fa fa-pencil"></i>详情</button>';
+                            detailStr = '<button class="btn btn-info btn-sm row-detail" value="{id}" onclick="getAllType(this)" id="detail"><i class="fa fa-pencil"></i>详情</button>';
 
                                     //添加选项
                                 addOptionStr='<button id="row-add-test" class="btn btn-info btn-sm " value="{id}"><i class="fa fa-pencil"></i>添加选项</button>';
@@ -412,6 +420,7 @@
     }
 
 
+
 // 添加选项
         $(document).on("click", '#row-add-test', function (e) {
             //清除冒泡
@@ -420,7 +429,7 @@
             } else {
                 window.e.cancelBubble = true;
             }
-            var id = $("#row-add-test").val();
+             id = $(this).val();
             // 模态框的弹出
             $(".modal-form-content").modal("show");
             $(".testId").val(id);
@@ -442,7 +451,7 @@
            var choiceText02= $("#choiceText02").val();
            var choiceText03= $("#choiceText03").val();
            var choiceText04= $("#choiceText04").val();
-            var idJson = $("#row-add-test").val();
+            var idJson = id;
             var contents = $("#contents02").val();
             var questionType = $("#category").val();
 
@@ -456,6 +465,7 @@
                 questionType:questionType
             };
 
+            console.log(idJson);
             var objJson = JSON.stringify(obj);
 
             // 添加题目 并且更新题目状态
@@ -467,9 +477,8 @@
                 // 清空输入框的
                 zudp.plugin.form("#form-addOption").reset();
 
-//                document.location.reload();
                 location.reload();
-
+//                    zudp.ajax.reload();
                 })
 
 
@@ -534,10 +543,10 @@
 
     // 隐藏选项输入框  编辑
     $(document).on("click", '#edit', function () {
-        $("#ct1").css("display","none");	//隐藏选项
-        $("#ct2").css("display","none");	//隐藏选项
-        $("#ct3").css("display","none");	//隐藏选项
-        $("#ct4").css("display","none");	//隐藏选项
+        $("#ct1").css("display","block");	//隐藏选项
+        $("#ct2").css("display","block");	//隐藏选项
+        $("#ct3").css("display","block");	//隐藏选项
+        $("#ct4").css("display","block");	//隐藏选项
 
     });
     // 隐藏选项输入框  详情
@@ -576,7 +585,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on( 'uploadSuccess', function( file,response) {
-            //debugger;
+            //;
             var name = file.name;
             var fileurl = response.data;
             $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");

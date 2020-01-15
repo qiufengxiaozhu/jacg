@@ -2625,7 +2625,7 @@ var CodeMirror = (function() {
     }
 
     // Find the position of an element by following the offsetParent chain.
-    // If screen==true, it returns screen (rather than page) coordinates.
+    // If bigscreen==true, it returns bigscreen (rather than page) coordinates.
     function eltOffset(node, screen) {
         var bod = node.ownerDocument.body;
         var x = 0, y = 0, skipBody = false;

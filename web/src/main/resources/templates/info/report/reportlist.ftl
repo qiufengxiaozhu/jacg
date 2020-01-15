@@ -20,6 +20,16 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
+
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
+
         .webuploader-container div {
             width:80px;
         }
@@ -37,7 +47,7 @@
                     <div class='col-sm-12'>
 
                         <div  class='querybtn my-querybtn '>
-                            上报标题：
+                            标题：
                             <input type='text' name='search' id='search_name' placeholder='标题' class='form-control search-input'>&nbsp;&nbsp;&nbsp;&nbsp;
                             上报类型：
                             <select id="category_select" name="category" class='form-control search-input'>
@@ -94,13 +104,13 @@
                     <form class="form-horizontal" id="kind_form">
                         <input type="hidden" name="id" id="id">
 
+
+
+
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">联系人：</label>
+                            <label class="col-sm-3 control-label my-control-label ">标题：</label>
                             <div class="col-sm-6">
-                                <input  type="text" name="name" maxlength="64" id="name" placeholder="上报人姓名" class="form-control">
-                            </div>
-                            <div>
-                                <i class="i_context my-i_context">*</i>
+                                <input  type="text" name="title" maxlength="64" id="title"  class="form-control">
                             </div>
                         </div>
 
@@ -111,6 +121,30 @@
                             </div>
                         </div>
 
+
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">上报时间：</label>
+                            <div class="col-sm-6">
+                                <input  type="text" name="reportDate" maxlength="64" id="reportDate" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">上报内容：</label>
+                            <div class="col-sm-6">
+                                <textarea  class="form-control" rows="2" cols="" name="content" id="content"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label ">联系人：</label>
+                            <div class="col-sm-6">
+                                <input  type="text" name="name" maxlength="64" id="name" placeholder="上报人姓名" class="form-control">
+                            </div>
+                            <div>
+                                <i class="i_context my-i_context">*</i>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">联系电话：</label>
                             <div class="col-sm-6">
@@ -121,33 +155,15 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">标题：</label>
-                            <div class="col-sm-6">
-                                <input  type="text" name="title" maxlength="64" id="title"  class="form-control">
-                            </div>
-                        </div>
 
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">上报内容：</label>
-                            <div class="col-sm-6">
-                                <textarea  class="form-control" rows="2" cols="" name="content" id="content"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">地点：</label>
+                            <label class="col-sm-3 control-label my-control-label ">案发事件位置：</label>
                             <div class="col-sm-6">
                                 <textarea  class="form-control" rows="2" cols="" name="place" id="place"></textarea>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label ">上报时间：</label>
-                            <div class="col-sm-6">
-                                <input  type="text" name="reportDate" maxlength="64" id="reportDate" class="form-control">
-                            </div>
-                        </div>
+
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">回复内容：</label>
@@ -163,27 +179,6 @@
                             </div>
                         </div>
 
-
-
-
-
-                       <#-- <div class="form-group">
-                            <div class="col-sm-6">
-                                <a href="" class="col-sm-3 control-label my-control-label " id="picture" name="picture" target="_blank" >附件图片</a>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-6">
-                                <a href="" class="col-sm-3 control-label my-control-label " id="voice" name="voice" target="_blank" >附件语音</a>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-6">
-                                <a href="" class="col-sm-3 control-label my-control-label " id="video" name="video" target="_blank" >附件视频</a>
-                            </div>
-                        </div>-->
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">附件：</label>
@@ -208,7 +203,6 @@
     <small class="font-bold">
     </small>
 </div>
-
 
 <script src="/js/third/jquery.min.js"></script>
 <script src="/js/pluginInit/animation.js"></script>
@@ -247,7 +241,7 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}咨询",
+            title: "{type}上报",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],
@@ -457,7 +451,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on( 'uploadSuccess', function( file,response) {
-            //debugger;
+            //;
             var name = file.name;
             var fileurl = response.data;
             $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='"+fileurl+"'><input type='hidden' name='attachName' value='"+name+"'>	</p>");

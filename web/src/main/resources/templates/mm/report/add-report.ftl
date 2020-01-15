@@ -25,11 +25,24 @@
             width: 25;
             height: 25
         }
+        .sp-span{display: inline-block;width: 100%;padding-left: 2.2rem;color:#ff2233;display: none}
+        .port .sp-span2{padding:0 .2rem;width: auto;width: 0.2rem;display: none}
+        .port .sp-span3{padding:0 .2rem;width: auto;width: 0.2rem;}
+        .webuploader-container div {width: 86px;  height: 35px;line-height: 35px;}
+        .fx-img{width: 32%;height: 2rem;margin:0.1rem 0.5%}
+        .fx-img img{width: 100%;height: 100%}
     </style>
     <script>
         $(function () {
             $("form").submit(function () {
-                return checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace();
+
+                var flag=checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace();
+                if (flag){
+                    alert("上报成功")
+                }else{
+                    alert("上报失败")
+                }
+                return flag;
             })
             $("input[name='title']").blur(function () {
                         checktitle();
@@ -56,10 +69,14 @@
             var reg_title= /^.{1,20}$/;
             var flag=reg_title.test(title)
             if(title!=null && title!='' &&flag){
-                $("#sp_title").css("color","green").html("√");
+                $("#sp_title3").hide();
+                $("#sp_title2").show();
+                $("#sp_title").hide();
                 return true;
             }else{
-                $("#sp_title").css("color","red").html("×");
+                $("#sp_title").show();
+                $("#sp_title2").hide();
+                $("#sp_title3").show();
                 return false;
             }
         }
@@ -69,11 +86,14 @@
             var reg_place= /^.{1,20}$/;
             var flag=reg_place.test(place)
             if(place!=null && place!='' &&flag){
-                $("#sp_place").css("color","green").html("√");
+                $("#sp_place3").hide();
+                $("#sp_place2").show();
+                $("#sp_place").hide();
                 return true;
             }else{
-                $("#sp_place").css("color","red").html("×");
-                return false;
+                $("#sp_place").show();
+                $("#sp_place2").hide();
+                $("#sp_place3").show();
             }
         }
         //检验内容
@@ -82,17 +102,21 @@
             var reg_content= /^.{1,50}$/;
             var flag=reg_content.test(content);
             if(content!=null && content!='' &&flag){
-                $("#sp_content").css("color","green").html("√");
+                $("#sp_content3").hide();
+                $("#sp_content2").show();
+                $("#sp_content").hide();
                 return true;
             }else{
-                $("#sp_content").css("color","red").html("×");
+                $("#sp_content").show();
+                $("#sp_content2").hide();
+                $("#sp_content3").show();
                 return false;
             }
         }
 
         //检验联系人
         function checkname(){
-            var name=$("input[name='name']").val();
+          /*  var name=$("input[name='name']").val();
             var reg_name=/^([\u4e00-\u9fa5]){2,7}$/;
             var flag=reg_name.test(name);
             if (flag){
@@ -101,7 +125,8 @@
             }else{
                 $("#sp_name").css("color","red").html("×");
                 return false;
-            }
+            }*/
+          return true;
         }
 
         //检查手机号
@@ -110,10 +135,12 @@
             var reg_telephonr= /^(((13|14|15|18|17)\d{9}))$/;
             var flag=reg_telephonr.test(telephone);
             if (flag){
-                $("#sp_telephone").css("color","green").html("√");
+                $("#sp_telephone2").show();
+                $("#sp_telephone").hide();
                 return true;
             }else{
-                $("#sp_telephone").css("color","red").html("×");
+                $("#sp_telephone").show();
+                $("#sp_telephone2").hide();
                 return false;
             }
         }
@@ -134,6 +161,9 @@
             <div class="ts-table">
                 <div class="put">
 
+                    <#--用户名称和电话号码-->
+                    <#--<input id="userName" type="hidden" value="${Session.userName}" />-->
+                    <#--<input id="userPhone" type="hidden" value="${Session.userPhone}" />-->
                     <!-- 附件上传 隐藏传值  开始 -->
                     <input id="attachIdss" type="hidden" />
                     <!-- 附件上传 隐藏传值  结束 -->
@@ -141,28 +171,34 @@
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>标题&nbsp;:</span>
                             <input type="text"  name="title" class="tab-input flex-1" placeholder="请输入您的来信标题(20字以内)">
-                            <span id="sp_title"></span>
+                            <span class="sp-span2" id="sp_title2" style="color:green">√</span>
+                            <span class="sp-span3" id="sp_title3" style="color:red">*</span>
                         </div>
+                        <span class="sp-span" id="sp_title">字符个数应在1-20个</span>
                     </div>
 
                     <div class="theme">
-                        <div class="port flex flex-c-c"><span>案发事件位置&nbsp;:</span><br>
+                        <div class="port flex flex-c-c"><span style="width: auto;">案发事件位置&nbsp;:</span><br>
                             <input type="text" name="place" class="tab-input flex-1" placeholder="案发地点">
-                            <span id="sp_place"></span>
+                            <span class="sp-span2" id="sp_place2" style="color:green">√</span>
+                            <span class="sp-span3" id="sp_place3" style="color:red">*</span>
                         </div>
+                        <span class="sp-span" id="sp_place">字符个数应在1-20个</span>
                     </div>
 
 
 
                     <div class="theme">
-                        <div class="port flex flex-c-c"><span>案发描述&nbsp;:</span><br>
-                            <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的咨询内容(100字以内)">
-                            <span id="sp_content"></span>
+                        <div class="port flex flex-c-c"><span>上报内容&nbsp;:</span><br>
+                            <input type="text" name="content" class="tab-input flex-1" placeholder="请输入您的上报内容(50字以内)">
+                            <span class="sp-span2" id="sp_content2" style="color:green">√</span>
+                            <span class="sp-span3" id="sp_content3" style="color:red">*</span>
                         </div>
+                        <span class="sp-span" id="sp_content">字符个数应在1-50个</span>
                     </div>
 
                     <div class="theme">
-                        <div class="port flex flex-c-c"><span>类型&nbsp;:</span>
+                        <div class="port flex flex-c-c"><span>上报类型&nbsp;:</span>
                             <select name="category">
                                 <option value="垃圾">垃圾</option>
                                 <option value="广告乱贴">广告乱贴</option>
@@ -177,16 +213,18 @@
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>联系人&nbsp;:</span>
-                        <input type="text" name="name" class="tab-input flex-1" placeholder="请输入您的真实姓名">
-                        <span id="sp_name"></span>
+                        <input type="text" name="name" class="tab-input flex-1" placeholder="请输入您的真实姓名" value="${Session.userName!}">
+                            <span class="sp-span2" id="sp_name2" style="color:green">√</span>
                         </div>
+                        <span class="sp-span" id="sp_name">请输入2-7个字符</span>
                     </div>
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>联系电话&nbsp;:</span>
-                        <input type="text" name="telephone" class="tab-input flex-1" placeholder="请输入您的电话(11位数字)">
-                        <span id="sp_telephone"></span>
+                        <input type="text" name="telephone" class="tab-input flex-1" placeholder="请输入您的电话(11位数字)" value="${Session.userPhone!}">
+                            <span class="sp-span2" id="sp_telephone2" style="color:green">√</span>
                         </div>
+                        <span class="sp-span" id="sp_telephone">请输入11位数字</span>
                     </div>
 
                     <#--<div class="theme">
@@ -197,28 +235,28 @@
                             <div ><img src="/mm/img/arr15.png" alt=""></div>
                         </div>
                     </div>-->
-
-                    <div class="form-group" style="">
+                    <div class="theme">
+                    <div class="form-group" style="min-height: 2rem;margin-top: 0.3rem">
                         <div style="width:80;height: 35px;position: relative;margin:0 auto">
                             <div id="xg_rar">上传图片附件</div>
                         </div>
                         <div id="fileShowName" style="text-align: center;margin:0 auto"></div>
                     </div>
 
-                    <div class="form-group" style="">
+                    <div class="form-group" style="min-height: 2rem;">
                         <div style="width:80;height: 35px;position: relative;margin:0 auto">
                             <div id="yy">上传语音附件</div>
                         </div>
                         <div id="yyfileShowName" style="text-align: center;margin:0 auto"></div>
                     </div>
 
-                    <div class="form-group" style="">
+                    <div class="form-group" style="min-height: 2rem;">
                         <div style="width:80;height: 35px;position: relative;margin:0 auto">
                             <div id="sp">上传视频附件</div>
                         </div>
                         <div id="spfileShowName" style="text-align: center;margin:0 auto"></div>
                     </div>
-
+                    </div>
                 </div>
             </div>
         </div>

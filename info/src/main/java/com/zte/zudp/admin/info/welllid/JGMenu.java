@@ -1,6 +1,7 @@
 package com.zte.zudp.admin.info.welllid;
 
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
+import com.zte.zudp.admin.info.OtherMenu;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  */
 @Controller
-@EndpointModule(id = "jgManager", name = "井盖监控", order =301, icon = "home")
+@EndpointModule(id = "jgManager", name = "井盖监控", order =301, icon = "home",parent = OtherMenu.class)
 @RequestMapping("/jgMenu")
 public class JGMenu {
 

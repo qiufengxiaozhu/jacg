@@ -20,6 +20,14 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
         .webuploader-container div {
             width: 80px;
         }
@@ -357,7 +365,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on('uploadSuccess', function (file, response) {
-            //debugger;
+            //;
             var name = file.name;
             var fileurl = response.data;
             $("#fileShowName").append("<p><a href='//" + sys_url + "/" + fileurl + "' download='" + name + "'>" + name + "</a><input type='hidden' name='fid'>&nbsp;&nbsp;&nbsp;&nbsp;<span style='color:red' onclick='deleteFile(this)'>删除</span><input type='hidden' name='attachPath' value='" + fileurl + "'><input type='hidden' name='attachName' value='" + name + "'>	</p>");

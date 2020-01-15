@@ -20,6 +20,16 @@
     <#--<link href="/css/third/bootstrap-select.css" rel="stylesheet">-->
 
     <style>
+
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
+
         .webuploader-container div {
             width:80px;
         }
@@ -99,7 +109,13 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">新闻标题：</label>
                             <div class="col-sm-6">
+
                                 <input type="text" name="title" maxlength="64" id="title" placeholder="新闻标题" class="form-control">
+
+                                    <script  type='text/javascript'>
+                                        $('#title').val("123");
+                                    </script>
+
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -118,8 +134,8 @@
                             <label class="col-sm-3 control-label my-control-label ">所在时区：</label>
                             <div class="col-sm-6">
                                 <select id="timeZone" name="timeZone" class="form-control">
-                                    <option value="1" selected>吉安市</option>
-                                    <option value="2">吉州区</option>
+<#--                                    <option value="1" selected>吉安市</option>-->
+                                    <option value="2" selected>吉州区</option>
                                     <option value="3">青原区</option>
                                     <option value="4">庐陵新区</option>
                                     <option value="5">井开区</option>
@@ -262,29 +278,10 @@
 
         $("#post_form").validate({
             rules: {
-//                title:{
-//                    required:true,
-//                    remote: {
-//                        url:"/api/news/checkName",
-//                        type:"get",
-//                        data: {
-//                            "title":function () {
-//                                return $("#title").val();
-//                            },
-//                            "id":function () {
-//                                return $("#id").val();
-//                            }
-//                        },
-//                        dataFilter: function(data, type) {
-//                            var da=JSON.parse(data).data;
-//                            if(zudp.util.isBoolean(da)){
-//                                return da;
-//                            }else{
-//                                return false;
-//                            }
-//                        }
-//                    }
-//                },
+               title:{
+                   required:true,
+                   rangelength:[0,15]
+               },
                 timeZone:"required",
 
 //                identification:{
@@ -313,21 +310,24 @@
 //                },
 
                 content:{
-                    rangelength:[0,1000]
+                    required:true,
+                    rangelength:[0,10000]
                 }
             },
             messages: {
-//                title: {
-//                    required: "请输入新闻标题",
-//                    remote: "新闻标题已存在"
-//                },
+               title: {
+                   required: "请输入新闻标题",
+                   rangelength:"字符个数不能超过15"
+                   // remote: "新闻标题已存在"
+               },
                 timeZone: "时区不能为空",
 //                identification: {
 //                    required: "请输入岗位标识",
 //                    remote: "岗位标识已存在"
 //                },
                 content: {
-                    rangelength:"字符个数不能超过1000"
+                    required: "新闻正文不能为空",
+                    rangelength:"字符个数不能超过10000个"
                 }
             },ignore: []
         });
@@ -407,7 +407,7 @@
                 var mymesg = "新建";
                 var id=$("#id").val();
                 if ($("#id").val() != '') { //编辑的保存按钮
-                    alert("修改");
+//                    alert("修改");
                     console.info(data);
                     mymesg = "修改";
                     zudp.ajax(urlstr +'/'+id).put(data).then(function (da) {
@@ -417,7 +417,7 @@
                         $(".modal-form").modal("hide");
                     });
                 }else {     //新增的保存按钮
-                    alert("新建");
+//                    alert("新建");
                     console.info(data);
                     zudp.ajax(urlstr + "/saveNews").post(data).then(function (da) {
 
@@ -571,13 +571,34 @@
 //        $("#publicTime").css("display","none");
 //        $("#newsDate").css("display","none");
 //        $("#publicDate").css("display","none");
+
+//        ue.setEnabled();
     }
+
+    //编辑按钮
+    $(document).on("click", '.row-edit', function (e) {
+        ue.setEnabled();
+        $("#xg_rar").show();
+    });
+    //新建按钮
+    $(document).on("click", '#add-btn', function (e) {
+        ue.setEnabled();
+        $("#xg_rar").show();
+    });
+    //详情按钮
+    $(document).on("click", '.row-detail', function (e) {
+        ue.setDisabled();
+        $("#xg_rar").hide();
+    });
 
     //详情
     function detailsstrBtn() {
 //        $("#publicTime").css("display","block");
 //        $("#newsDate").css("display","block");
         $("#publicDate").css("display","block");
+
+//        ue.setDisabled();
+
 //        $("#xg_rar").attr("disabled", "disabled");
 //        $("#newsContent").attr("disabled", "disabled");
 //        $("#newsTable").attr("disabled", "disabled");
@@ -767,7 +788,7 @@
             pick: '#xg_rar',
 
             // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
-            resize: false,
+            resize: true,
 
 //            fileNumLimit: 1, 规定上传数量
             //重复上传

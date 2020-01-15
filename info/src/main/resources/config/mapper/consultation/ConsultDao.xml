@@ -60,19 +60,27 @@
             and `title` LIKE concat('%', #{title}, '%')
         </if>
         <if test="startDate!=null and startDate!=''">
-            and `consult_date` >=#{startDate}
+            and `consult_date` <![CDATA[ >= ]]>#{startDate}
         </if>
         <if test="endDate!=null and endDate!=''">
-            and #{endDate} >= `consult_date`
+            and #{endDate} <![CDATA[ >= ]]> `consult_date`
         </if>
         ORDER BY create_date desc
     </select>
 
 
-    <select id="get" resultMap="consultMap" >
-        SELECT  z.*
-        FROM zmj_consult z
-        where z.id=#{id}
+    <select id="get" resultType="com.zte.zudp.admin.info.consultation.entity.Consult" >
+        SELECT
+        t1.id id,
+        t1.title title,
+        t1.content content,
+        t1.name name,
+        t1.telephone telephone,
+        DATE_FORMAT(t1.consult_date,'%Y-%m-%d %T') consultDate,
+        t1.reply reply,
+        DATE_FORMAT(t1.reply_date,'%Y-%m-%d %T') replyDate
+        FROM zmj_consult t1
+        where t1.id=#{id}
     </select>
 
     <select id="getFj" resultMap="consultMap" >

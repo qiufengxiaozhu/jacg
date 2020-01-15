@@ -23,7 +23,7 @@
         <div class="login-box">
             <div class="login-group flex flex-c-c">
                 <div class="lg-user"></div>
-                <input type="text" id="username" class="login-input flex-1" placeholder="请输入手机号/邮箱">
+                <input type="text" id="username" class="login-input flex-1" placeholder="请输入手机号">
             </div>
             <div class="login-group flex flex-c-c">
                 <div class="lg-pwd"></div>
@@ -31,12 +31,12 @@
             </div>
             <div class="forget-pwd">
                 <span id="msg-show"></span>
-                <a href="#">忘记密码</a>
+                <#--<a href="#">忘记密码</a>-->
             </div>
             <div class="btn login-btn" onclick="login()">立即登录</div>
             <div class="regist-user">
                 <span>还没有账号?</span>
-                <a href="#">马上注册</a>
+                <a href="/mm/news/toreg">马上注册</a>
             </div>
         </div>
     </div>
@@ -46,6 +46,9 @@
     function login(){
         var name=$("#username").val();
         var pwd = $("#passwd").val();
+
+
+
         var data={loginName:name,password:pwd};
         data = JSON.stringify(data);
         $("#msg-show").html("正在登陆中...");
@@ -53,7 +56,9 @@
 
             if(da=='ok'){
                 $("#msg-show").html("登录成功");
-                window.location.href='${laterurl!""}';
+                ///mm/wxindex/index
+                <#--window.location.href='${laterurl!""}';-->
+                window.location.href='/mm/wxindex/index';
             }else if(da=='noperson'){
                 $("#msg-show").html("用户不存在");
             }else if(da=='noactive'){

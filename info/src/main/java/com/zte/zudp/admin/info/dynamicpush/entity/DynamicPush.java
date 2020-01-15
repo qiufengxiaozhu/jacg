@@ -2,47 +2,54 @@ package com.zte.zudp.admin.info.dynamicpush.entity;
 
 
 import com.zte.zudp.admin.common.persistence.entity.DataEntity;
+import com.zte.zudp.admin.common.persistence.entity.FileEntity;
 
 import java.util.Date;
 
-public class DynamicPush extends DataEntity {
+/**
+ * 动态推送实体类
+ */
+public class DynamicPush extends DataEntity{
 
-    /**
-     * 动态推送类型
-     */
-    private String pushType;
 
     /**
      * 推送标题
      */
     private String title;
 
-    /**
-     *推送的作者
-     */
-    private String author;
+    private String contents;
 
-    /**
-     * 推送发布时间
-     */
-    private Date pubdate;
+    private String status;
 
-    /**
-     * 推送消息状态：0-临时状态；1-已发布状态；2-撤销发布状态
-     */
-    private Integer pushStatus;
+    private String pushTime;
 
-    /**
-     * 推送内容
-     */
-    private String content;
+    private String contentsText;
 
-    public String getPushType() {
-        return pushType;
+    private String startTime;
+    private String endTime;
+
+    public String getStartTime() {
+        return startTime;
     }
 
-    public void setPushType(String pushType) {
-        this.pushType = pushType;
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    public String getContentsText() {
+        return contentsText;
+    }
+
+    public void setContentsText(String contentsText) {
+        this.contentsText = contentsText;
     }
 
     public String getTitle() {
@@ -53,35 +60,27 @@ public class DynamicPush extends DataEntity {
         this.title = title;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getContents() {
+        return contents;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setContents(String contents) {
+        this.contents = contents;
     }
 
-    public Date getPubdate() {
-        return pubdate;
+    public String getStatus() {
+        return status;
     }
 
-    public void setPubdate(Date pubdate) {
-        this.pubdate = pubdate;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public Integer getPushStatus() {
-        return pushStatus;
+    public String getPushTime() {
+        return pushTime;
     }
 
-    public void setPushStatus(Integer pushStatus) {
-        this.pushStatus = pushStatus;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+    public void setPushTime(String pushTime) {
+        this.pushTime = pushTime;
     }
 }

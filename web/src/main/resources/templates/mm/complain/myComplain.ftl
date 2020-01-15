@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>我的投诉</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <script type="text/javascript" src="/mm/js/rem.js"></script>
@@ -28,8 +28,17 @@
                         </div>
                         <div class="flex-6">
                             <div>
-                                <p class="violation">${list.title!}</p>
-                                <p class="well-peopel">${list.description!}</p>
+                                <#if (list.title?? && list.title?length>13)>
+                                    <p class="violation">${list.title?substring(0,13)}...</p>
+                                <#else >
+                                    <p class="violation">${list.title!}</p>
+                                </#if>
+
+                                <#if (list.description?? && list.description?length>25)>
+                                    <p class="well-peopel">${list.description?substring(0,25)}...</p>
+                                <#else >
+                                    <p class="well-peopel">${list.description!}</p>
+                                </#if>
                             </div>
                         </div>
                         <div class="flex-1 flex flex-c-c flex-r-c flex-fx-c">
@@ -44,14 +53,21 @@
                             <p class="date-day">${list.day!}</p>
                         </div>
                         <div class="flex-6">
-                            <div>
+                            <#if (list.title?? && list.title?length>13)>
+                                <p class="violation">${list.title?substring(0,13)}...</p>
+                            <#else >
                                 <p class="violation">${list.title!}</p>
+                            </#if>
+
+                            <#if (list.description?? && list.description?length>25)>
+                                <p class="well-peopel">${list.description?substring(0,25)}...</p>
+                            <#else >
                                 <p class="well-peopel">${list.description!}</p>
-                            </div>
+                            </#if>
                         </div>
                         <div class="flex-1 flex flex-c-c flex-r-c flex-fx-c">
                             <span class="my-hf">未回复</span>
-                            <img class="right-ceil" src="/mm/img/right.png" style="margin:0.3rem 0"></div>
+                        </div>
                     </div>
                 </#if>
             </#list>
@@ -86,7 +102,7 @@
 //        alert(data.contactUser);
         var dataJSON = JSON.stringify(data);
         zudp.ajax("/mm/complain/addComplain").post(dataJSON).then(function (result) {
-//            debugger;
+//            ;
 //            alert(result);
 //            window.location.href = '${path!""}';
             window.location.href = result;

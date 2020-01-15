@@ -2099,7 +2099,7 @@ CKEDITOR.DIALOG_STATE_BUSY = 2;
 
 	var resizeCover;
 	// Caching resuable covers and allowing only one cover
-	// on screen.
+	// on bigscreen.
 	var covers = {},
 		currentCover;
 

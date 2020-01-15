@@ -78,10 +78,10 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
      * @return
      */
     @JSON
-    @PostMapping(value = "/addQuestion")
+    @GetMapping(value = "/addQuestion")
     @EndpointRest(id = "questionlist", name = "题目列表", authorizedType = AuthorizedType.LOGIN)
-    public List<Questions> addQuestion() {
-        List<Questions> list= queinvestService.addQuestion();
+    public List<Questions> addQuestion(@RequestParam String  queId) {
+        List<Questions> list= queinvestService.addQuestion(queId);
         System.out.println(list);
         return list;
 
@@ -92,15 +92,15 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
      * 添加题目到问卷中去
      * @return
      */
-    @JSON
     @PostMapping(value = "/updateQuestion")
-    @EndpointRest(id = "updateList", name = "ddd" )
     public void updateQuestion(@RequestBody Map<String,Object> map)  {
+        // 题目id数组
        List <String> idsArr=(List<String>) map.get("idsJson");
-        Object object02 = map.get("idJson");
+       // 问卷id
+       String queinId = map.get("idJson").toString();
         for (int i=0;i<idsArr.size();i++) {
-            Object object= idsArr.get(i);
-            queinvestService.updateQuestion(object,object02);
+            String questionId= idsArr.get(i).toString();
+            queinvestService.updateQuestion(questionId,queinId);
         }
 
     }
@@ -112,8 +112,8 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
     @PostMapping(value = "/updateStatus")
     @EndpointRest(id = "updateStatus", name = "", authorizedType = AuthorizedType.GUEST)
 
-    public void updateStatus(@RequestBody String id){
-        queinvestService.updateStatus(id);
+    public int updateStatus(@RequestBody String id){
+       return queinvestService.updateStatus(id);
     }
 
 
@@ -164,7 +164,7 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
         Queinvest queinvest=queinvestService.get(id);
         if(queinvest.getStatus()!=null){ // 不为空
            if(queinvest.getStatus().equals("0")){ // 如果是0  临时状态
-               queinvest.setStatus("临时状态");
+               queinvest.setStatus("未发布");
            }
            if(queinvest.getStatus().equals("1")){ // 如果是1   未发布
                queinvest.setStatus("未发布");
@@ -175,6 +175,24 @@ public class QueinvestContrller extends AbstractCRUDController<Queinvest> {
            }
         }
         return queinvest;
+    }
+
+    /**
+     * 预览
+     */
+    @ResponseBody
+    @GetMapping("overView")
+    public List<Map> overView(@RequestParam String id){ //  问卷id
+        List<Map> list = queinvestService.overView(id);
+
+        return list;
+    }
+    /**
+     * 问卷中删除题目
+     */
+    @GetMapping("/delQuestion")
+    public void delQuestion(@RequestParam("delId") String delId){
+        queinvestService.delQuestion(delId);
     }
 }
 

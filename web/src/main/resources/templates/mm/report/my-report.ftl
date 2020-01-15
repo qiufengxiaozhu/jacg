@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>我的上报</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
     <script type="text/javascript" src="/mm/js/rem.js"></script>
@@ -14,7 +14,7 @@
     <div class="top flex flex-c-c">
         <div class="top-return"></div>
         <div class="return" onclick="goIndex()">返回</div>
-        <div class="advince">我的咨询</div>
+        <div class="advince">我的上报</div>
     </div>
     <div class="center">
         <#list list as report>
@@ -37,22 +37,27 @@
                         <span class="my-hf green">
                         已回复
                         </span>
+                        <img class="right-ceil" src="/mm/img/right.png" style="margin:0.3rem 0">
                         <#else >
                         <span class="my-hf">未回复</span>
                     </#if>
 
-                <img class="right-ceil" src="/mm/img/right.png" style="margin:0.3rem 0">
+
             </div>
         </div>
         </#list>
     </div>
 </div>
+        <form id="detail_form" action="/report/detail" method="post">
+            <input type="hidden" name="id" id="id"/>
+        </form>
 <script>
     function goIndex(){
         window.location.href='/mm/news/index';
     }
     function goDetail(id){
-        window.location.href='/consult/zxdetail/'+id;
+        $("#id").val(id);
+        $("#detail_form").submit();
     }
 
 </script>

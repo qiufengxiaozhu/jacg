@@ -91,4 +91,39 @@
         </foreach>
     </delete>
 
+
+<!--匹配电话号码和用户名称-->
+    <select id="checkUserAndPhone02" resultType="java.util.Map">
+        select
+        t1.name name,
+        t1.telephone telephone
+        from
+        zmj_consult t1
+        where 1=1
+        <if test="name!= null and name != '' ">
+            and  name = #{name}
+        </if>
+        <if test="phone!= null and phone != '' ">
+            and  telephone = #{phone}
+        </if>
+
+    </select>
+
+
+    <!--匹配电话号码和用户名称-->
+    <select id="showAndCheck" resultMap="consultMap" useCache="false">
+        SELECT  id,content,title,reply,name,telephone,
+        DATE_FORMAT(consult_date,'%Y-%m') as yearStr,
+        DATE_FORMAT(consult_date,'%d') as dayStr
+        FROM zmj_consult
+        WHERE  del!=1
+        <if test="userName!= null and userName != '' ">
+            and  name = #{userName}
+        </if>
+        <if test="userPhone!= null and userPhone != '' ">
+            and  telephone = #{userPhone}
+        </if>
+        ORDER BY consult_date desc
+    </select>
+
 </mapper>

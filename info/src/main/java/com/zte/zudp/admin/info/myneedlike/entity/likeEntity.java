@@ -1,10 +1,6 @@
 package com.zte.zudp.admin.info.myneedlike.entity;
 
-import com.zte.zudp.admin.common.persistence.entity.DataEntity;
 import com.zte.zudp.admin.common.persistence.entity.FileEntity;
-
-import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 点赞详情实体类
@@ -23,7 +19,7 @@ public class likeEntity extends FileEntity {
     private String picture;  //图片
     private String video; //视频
     private String publishStatus; //发布状态
-    private Date validTime; //有效时间
+    private String validTime; //有效时间
     private long likeNum; //点赞数
     private String validStartTime; //有效开始时间
     private String validStopTime; //有效结束时间
@@ -82,9 +78,7 @@ public class likeEntity extends FileEntity {
         this.publishStatus = publishStatus;
     }
 
-    public void setValidTime(Date validTime) {
-        this.validTime = validTime;
-    }
+
 
     public void setLikeNum(long likeNum) {
         this.likeNum = likeNum;
@@ -110,13 +104,16 @@ public class likeEntity extends FileEntity {
         return publishStatus;
     }
 
-    public Date getValidTime() {
-        return validTime;
-    }
 
     public long getLikeNum() {
         return likeNum;
     }
 
+    public String getValidTime() {
+        return validTime;
+    }
 
+    public void setValidTime(String validTime) {
+        this.validTime = validTime;
+    }
 }

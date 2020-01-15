@@ -20,11 +20,22 @@
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
 
     <style>
+
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
+
         .webuploader-container div {
             width:80px;
         }
         .dropdown-menu.open .inner.open{height:200px}
         .dropdown-menu.open{width: 100%;}
+
     </style>
 </head>
 
@@ -87,7 +98,7 @@
                 <div class="modal-body fix-height" style="height: 350px">
                 <#--表单-->
                     <form class="form-horizontal" id="post_form">
-                        <input type="hidden" name="id">
+                        <input type="hidden" name="id" id="id">
 
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">新闻类别：</label>
@@ -99,9 +110,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">描述：</label>
+                            <label class="col-sm-3 control-label my-control-label">新闻描述：</label>
                             <div class="col-sm-6">
-                                <textarea class="form-control" rows="5" cols="" name="describe" id="describe"></textarea>
+                                <textarea class="form-control" rows="5" cols="" name="describe" id="describe" ></textarea>
                             </div>
                         </div>
                     </form>
@@ -110,7 +121,7 @@
                 <div class="modal-footer">
                     <input type="hidden" id="add-type">
                     <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" id="save-btn">保存</button>
+                    <button type="button" class="btn btn-primary" id="save-btn" >保存</button>
                 </div>
             </small>
         </div>
@@ -148,81 +159,53 @@
     var sys_url=window.location.host;
     $(document).ready(function () {
 
-//        $("#post_form").validate({
-//            rules: {
-//                name:{
-//                    required:true,
-//                    remote: {
-//                        url:"/api/post/checkName",
-//                        type:"get",
-//                        data: {
-//                            "name":function () {
-//                                return $("#name").val();
-//                            },
-//                            "id":function () {
-//                                return $("#id").val();
-//                            }
-//                        },
-//                        dataFilter: function(data, type) {
-//                            var da=JSON.parse(data).data;
-//                            if(zudp.util.isBoolean(da)){
-//                                return da;
-//                            }else{
-//                                return false;
-//                            }
-//                        }
-//                    }
-//                },
-//                identification:{
-//                    required:true,
-//                    rangelength:[0,64],
-//                    remote: {
-//                        url:"/api/post/checkIdenty",
-//                        type:"get",
-//                        data: {
-//                            "identy":function () {
-//                                return $("#identification").val();
-//                            },
-//                            "id":function () {
-//                                return $("#id").val();
-//                            }
-//                        },
-//                        dataFilter: function(data, type) {
-//                            var da=JSON.parse(data).data;
-//                            if(zudp.util.isBoolean(da)){
-//                                return da;
-//                            }else{
-//                                return false;
-//                            }
-//                        }
-//                    }
-//                },
+        // 新建  验证
+        $("#post_form").validate({
+            rules: {
+                // 必填项
 
-//                mark:{
-//                    rangelength:[0,1000]
-//                }
-//            },
-//            messages: {
-//                name: {
-//                    required: "请输入岗位名称",
-//                    remote: "岗位名称已存在"
-//                },
-//                identification: {
-//                    required: "请输入岗位标识",
-//                    remote: "岗位标识已存在"
-//                },
-//                mark: {
-//                    rangelength:"字符个数不能超过1000"
-//                }
-//            },ignore: []
-//        });
+                category:{
+                    required:true,
+                    rangelength:[0,10],
+                    remote: {
+                       url:"/api/category/checkName",
+                       type:"get",
+                       data: {
+                           "category":function () {
+                               return $("#category").val();
+                           },
+                           "id":function () {
+                               return $("#id").val();
+                           }
+                       },
+                       dataFilter: function(data, type) {
+                           var da=JSON.parse(data).data;
+                           if(zudp.util.isBoolean(da)){
+                               return da;
+                           }else{
+                               return false;
+                           }
+                       }
+                   }
+                }
+            },
+
+            // 提示信息
+            messages: {
+                category: {
+                    required: "请输入新闻类别",
+                    rangelength:"字符个数不能超过10",
+                    remote: "此新闻类别已存在"
+                }
+            }
+        });
 
         findList();
 
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}新闻",
+            title: "{type}新增类别",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],
@@ -233,8 +216,8 @@
         //初始化增删改查参数
         initForm(obj);
 
-    });
 
+    });
 
     //提示
     function swalFunction(a,b,c) {

@@ -8,12 +8,12 @@
     <script type="text/javascript" src="/mm/js/rem.js"></script>
     <script type="text/javascript" src="/mm/js/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="/mm/css/index.css">
-    <title>Document</title>
+    <title>点赞详情</title>
 </head>
 <body>
 <div class="content-box container-app sum-background">
-    <div class="top get-fix">
-        <div class="top-ret"></div>
+    <div class="top flex flex-c-c">
+        <div class="top-return"></div>
         <div class="return" onclick="goList()">返回</div>
         <div class="advince">点赞详情</div>
     </div>
@@ -25,54 +25,23 @@
 
             </div>
             <div class="flex de-good">
-                <div><img src="/mm/img/good.png" alt=""></div>&nbsp;
+                <div id="img-btn" onclick="like()"><img src="/mm/img/good.png" alt=""></div>&nbsp;
                 <div id="likeNum"></div>
             </div>
         </div>
         <div class="de-center">
             <div class="de-relative">相关附件:</div>
             <div class="flex de-getimg" id="accessory">
-               <#-- <div class="de-img de-img1"><img src="img/arr22.png" alt=""></div>
-                <div class="de-img de-img2"><img src="img/arr15.png" alt=""></div>
-                <div class="de-img de-img3"><img src="img/arr15.png" alt=""></div>-->
+
             </div>
         </div>
     </div>
     <div class="de-bottom" id="comment">
-          <#--  <div class="de-getlists flex">
-                <div class="de-stat"><img src="/mm/img/star.jpg" alt=""></div>
-                <div class="de-sum">
-                    <div class="de-name">某某某</div>
-                    <div class="de-cont">好的，我会竭力配合</div>
-                </div>
-                <div class="de-time flex">
-                    <div class="flex de-getcont">
-                        <div class="de-pic"><img src="/mm/img/good.png" alt=""></div>&nbsp;
-                        <div class="de-num">43200</div>
-                    </div>
-                    <div class="de-year">2019.12.05</div>
-                    <div class="de-month">8:00</div>
-                </div>
-            </div>
-            <div class="de-getlists flex">
-                <div class="de-stat"><img src="/mm/img/star.jpg" alt=""></div>
-                <div class="de-sum">
-                    <div class="de-name">某某某</div>
-                    <div class="de-cont">好的，我会竭力配合</div>
-                </div>
-                <div class="de-time flex">
-                    <div class="flex de-getcont">
-                        <div class="de-pic"><img src="/mm/img/good.png" alt=""></div>&nbsp;
-                        <div class="de-num">43200</div>
-                    </div>
-                    <div class="de-year">2019.12.05</div>
-                    <div class="de-month">8:00</div>
-                </div>
-            </div>-->
+
         </div>
     </div>
 
-<div class="cover" style="dis">
+<div class="cover cover1" style="display: none;">
     <div class="alert-center">
         <div class="slow">写下评论</div>
         <div class="input-area"><textarea id="matter" cols="45" rows="5" class="text-area"  ></textarea></div>
@@ -86,12 +55,19 @@
     var contentID;
     //评论框
     $(function(){
+        function bodyScroll(event){
+            event.preventDefault();
+        }
         $('.cover').hide();
         $(document).on('click','.de-listright',function(){
             $('.cover').show();
+            document.body.addEventListener('touchmove',bodyScroll,false);
+            $('body').css({'position':'fixed',"width":"100%"});
         })
         $('.cancel').click(function(){
             $('.cover').hide();
+            document.body.removeEventListener('touchmove',bodyScroll,false);
+            $("body").css({"position":"initial"});
         })
     })
     //跳转
@@ -106,20 +82,36 @@
     }
     //评论提交
     function commentSubmit() {
-        $('.cover').hide();
-      var matterValue= $("#matter").val();
-        $.ajax({
-            url: "/api/likeInfo/commentSubmit",
-            type: "get",
-            data: {
-                "contentID":contentID,
-                "matter":matterValue
-            },
-            dataType: 'json',
-            success: function (data) {
-                dzListInfo(); //评论列表更新
-            }
-        });
+        function bodyScroll(event){
+            event.preventDefault();
+        }
+        var matterValue= $("#matter").val();
+
+        if(matterValue == null || matterValue ==""){
+            alert("评论内容不能为空！");
+            $('.cover').hide();
+            document.body.removeEventListener('touchmove',bodyScroll,false);
+            $("body").css({"position":"initial"});
+        }
+        else{
+            $('.cover').hide();
+            document.body.removeEventListener('touchmove',bodyScroll,false);
+            $("body").css({"position":"initial"});
+            $.ajax({
+                url: "/api/likeInfo/commentSubmit",
+                type: "get",
+                data: {
+                    "contentID":contentID,
+                    "matter":matterValue
+                },
+                dataType: 'json',
+                success: function (data) {
+                    dzListInfo(); //评论列表更新
+                }
+            });
+            alert("评论成功！");
+        }
+        $('#matter').val(" ");
     }
     //评论点赞数增加
     function commentLike(id) {
@@ -163,7 +155,7 @@
                                "                        <div class='de-pic'><img src='/mm/img/good.png' onclick=\"commentLike(\'"+info.id+"\')\"></div>&nbsp;\n" +
                                '                        <div class="de-num"  id = "'+info.id+'">'+info.likeCNum+'</div>\n' +
                                '                    </div>\n' +
-                               '                    <div class="de-year" >'+format(info.likeTime)+'</div>\n' +
+                               '                    <div class="de-year" >'+info.likeTime+'</div>\n' +
                                '                </div>\n' +
                                '            </div>';
                    }
@@ -206,7 +198,7 @@
                     $("#title").text(likeInfo.title);
                     $("#content").html(likeInfo.content);
                     $("#likeNum").html(likeInfo.likeNum);
-                    $("#likePID").html(format(likeInfo.validTime));
+                    $("#likePID").html(likeInfo.validTime);
                   /*  $("#validTime").html(format(likeInfo.validTime));*/
                 }
             },
@@ -215,23 +207,45 @@
             }
         });
     }
-    //时间格式化
-    function format(time) {
-        var date = new Date(time);
-        var y = date.getFullYear();
-        var m = date.getMonth() + 1;
-        m = m < 10 ? ('0' + m) : m;
-        var d = date.getDate();
-        d = d < 10 ? ('0' + d) : d;
-        var h = date.getHours();
-        h = h < 10 ? ('0' + h) : h;
-        var minute = date.getMinutes();
-        var second = date.getSeconds();
-        minute = minute < 10 ? ('0' + minute) : minute;
-        second = second < 10 ? ('0' + second) : second;
-        var fortime = y+":"+m+":"+d;
-        return fortime;
+
+    //点赞操作
+    function like(){
+
+        $.ajax({
+            url: "/api/like/likeNum",
+            type: "post",
+            data: {"id":contentID},
+            dataType: 'json',
+            success: function (data) {
+                if (data != null){
+                    var likeInfo = data.data;
+                    $("#likeNum").html(likeInfo.likeNum);
+                }
+            },
+            error: function () {
+                alert("请刷新页面")
+            }
+        });
+
     }
+
+    // //时间格式化
+    // function format(time) {
+    //     var date = new Date(time);
+    //     var y = date.getFullYear();
+    //     var m = date.getMonth() + 1;
+    //     m = m < 10 ? ('0' + m) : m;
+    //     var d = date.getDate();
+    //     d = d < 10 ? ('0' + d) : d;
+    //     var h = date.getHours();
+    //     h = h < 10 ? ('0' + h) : h;
+    //     var minute = date.getMinutes();
+    //     var second = date.getSeconds();
+    //     minute = minute < 10 ? ('0' + minute) : minute;
+    //     second = second < 10 ? ('0' + second) : second;
+    //     var fortime = y+":"+m+":"+d;
+    //     return fortime;
+    // }
     //预加载
     $(document).ready(function(){
         // 初始化内容

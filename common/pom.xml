@@ -107,9 +107,14 @@
         </dependency>
         	<!--zudp引入zudp-upgrade的jar 和License许可证         开始 -->
         <dependency>
+          <groupId>com.belerweb</groupId>
+          <artifactId>pinyin4j</artifactId>
+          <version>2.5.0</version>
+        </dependency>
+        <dependency>
             <groupId>zte.zudp.sys</groupId>
             <artifactId>zudp-sys</artifactId>
-            <version>3.0.3</version>
+            <version>3.0.18</version>
         </dependency>
         <dependency>
 	        <groupId>de.schlichtherle.truelicense</groupId>

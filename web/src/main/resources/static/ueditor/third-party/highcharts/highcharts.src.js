@@ -5112,7 +5112,7 @@ var VMLRendererExtension = { // inherit SVGRenderer
 		renderer.setSize(width, height, false);
 
 		// The only way to make IE6 and IE7 print is to use a global namespace. However,
-		// with IE8 the only way to make the dynamic shapes visible in screen and print mode
+		// with IE8 the only way to make the dynamic shapes visible in bigscreen and print mode
 		// seems to be to add the xmlns attribute and the behaviour style inline.
 		if (!doc.namespaces.hcv) {
 

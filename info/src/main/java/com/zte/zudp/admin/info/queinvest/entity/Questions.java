@@ -2,7 +2,6 @@ package com.zte.zudp.admin.info.queinvest.entity;
 
 import com.zte.zudp.admin.common.persistence.entity.DataEntity;
 
-import java.util.List;
 
 /**
  * 题干实体类
@@ -10,6 +9,17 @@ import java.util.List;
 public class Questions extends DataEntity{
 
 
+    private String id;
+
+    @Override
+    public String getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(String id) {
+        this.id = id;
+    }
 
     private String choiceText01;
     private String choiceText02;

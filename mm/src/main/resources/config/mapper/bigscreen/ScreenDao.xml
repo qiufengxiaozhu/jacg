@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.mm.bigscreen.dao.ScreenDao">
+
+
+
+
+
+
+    <!--趋势分析-->
+    <select id="trendAnaly" resultType="java.util.Map">
+        SELECT
+            num,
+            time,
+            dest
+        FROM
+            (
+            SELECT
+                COUNT( RECID ) AS num,
+                QUARTER ( NEWINSTTIME ) AS time,
+                DISTRICTNAME dest
+            FROM
+                tocgcase
+            WHERE
+                NEWINSTTIME like '%2018%'
+            GROUP BY
+                QUARTER (NEWINSTTIME),
+                DISTRICTNAME
+        ) t
+        GROUP BY
+        dest,
+        time
+    </select>
+
+    <!--显示最近12个月数据，显示三条-->
+    <select id="selectCase" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
+
+        SELECT
+            RECID,
+            EVENTDESC,
+            MAINTYPENAME,
+            DATE_FORMAT( NEWINSTTIME, "%Y-%m" ) NEWINSTTIME
+        FROM
+            tocgcase
+        WHERE
+            date( NEWINSTTIME ) <![CDATA[ >= ]]> DATE_SUB( CURDATE( ), INTERVAL 12 MONTH )
+        ORDER BY
+            NEWINSTTIME DESC
+            LIMIT 3
+    </select>
+
+    <!--统计2019年1月份所有区前十条案件-->
+    <select id="selectAllCase" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
+
+        SELECT
+            RECID,
+            EVENTDESC,
+            MAINTYPENAME,
+            DATE_FORMAT( NEWINSTTIME, "%Y-%m" ) NEWINSTTIME
+        FROM
+            tocgcase
+        WHERE
+            NEWINSTTIME like '%2019-01%'
+        ORDER BY
+            NEWINSTTIME DESC
+            LIMIT 10
+    </select>
+
+    <!--统计近一年每个区发生的事件有多少起-->
+    <select id="countCase" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
+
+        SELECT
+            DISTRICTNAME,
+            COUNT( RECID ) as NUMBER
+        FROM
+            tocgcase
+        WHERE
+            NEWINSTTIME like '%2018%'
+        GROUP BY DISTRICTNAME
+
+    </select>
+
+    <!--效能分析-->
+    <select id="analysis" resultType="com.zte.zudp.admin.mm.bigscreen.entity.Screen">
+
+        SELECT
+            id,
+            department,
+            total,
+            CONCAT(TRUNCATE(endNumber * 100,1) ,"%") endNumber,
+            CONCAT(TRUNCATE(caseRate * 100,1) ,"%") caseRate,
+            CONCAT(TRUNCATE(onTimeRate * 100,1) ,"%") onTimeRate,
+            (case when overTimeRate = '0' then '0' else CONCAT(TRUNCATE(overTimeRate * 100,1) ,"%") end ) overTimeRate
+        FROM
+            qgq_case
+        ORDER BY
+            total desc
+            LIMIT 0,10
+    </select>
+
+    <select id="findType" resultType="java.util.Map">
+              SELECT
+        t.MAINTYPENAME as name,t.num
+        FROM
+        (
+        SELECT
+        MAINTYPENAME,
+        COUNT(1) AS num
+        FROM
+        tocgcase
+        where tocgcase.CREATETIME LIKE '%2018%'
+        GROUP BY
+        MAINTYPENAME
+        ) t
+        ORDER BY
+        t.num DESC limit 0,5;
+ </select>
+
+
+    <select id="findAreaList" resultType="java.util.Map">
+        select DISTRICTNAME as name from tocgcase GROUP BY DISTRICTNAME;
+   </select>
+
+    <select id="findareacountList" resultType="java.lang.Integer">
+       select COUNT(*) from tocgcase where MAINTYPENAME=  #{fddit} and  tocgcase.CREATETIME  <![CDATA[ >= ]]>   #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
+   </select>
+
+
+
+    <select id="getrightEvenTypes" resultType="java.util.Map">
+          select MAINTYPENAME as name,round((COUNT(*)/10000),2)  as num from tocgcase GROUP BY MAINTYPENAME ORDER BY
+        round((COUNT(*)/10000),2) DESC limit 0,5;
+     </select>
+
+
+
+    <select id="getrightEvenType" resultType="java.util.Map">
+           select  t.name,t.num from  (select COMMUNITYNAME as name,COUNT(*)  as num from tocgcase where CREATETIME LIKE '%2015-01%' GROUP BY COMMUNITYNAME ORDER BY
+        COUNT(*) DESC limit 0,5 )t ORDER BY t.num ;
+     </select>
+
+    <select id="getrightCaseNum" resultType="java.util.Map">
+    select DISTRICTNAME as name,COUNT(*) as num from tocgcase where tocgcase.CREATETIME LIKE '%2017-12%'  GROUP BY DISTRICTNAME
+   </select>
+
+    <select id="getrightCasetypeNum" resultType="java.util.Map">
+        select DISTRICTNAME as name,MAINTYPENAME as type,COUNT(*) as num  from tocgcase where   tocgcase.CREATETIME  <![CDATA[ >= ]]>  #{startdate} and tocgcase.CREATETIME  <![CDATA[ <= ]]> #{enddate}
+          GROUP BY DISTRICTNAME,MAINTYPENAME
+         ORDER BY COUNT(*) DESC
+
+   </select>
+
+    <select id="glCommunityList" resultType="java.util.Map">
+        select DISTRICTNAME,STREETNAME,COMMUNITYNAME,MAINTYPENAME,EVENTSRCNAME  from  tocgcase
+        where COMMUNITYNAME=#{name} and  CREATETIME LIKE '%2015-01%'
+    </select>
+
+    <select id="glCaseList" resultType="java.util.Map">
+        select DISTRICTNAME,STREETNAME ,MAX(COORDINATEX),MAX(COORDINATEY) from  tocgcase where STREETNAME is not null  GROUP BY DISTRICTNAME,STREETNAME
+    </select>
+
+    <select id="glindexCaseList" resultType="java.util.Map">
+   select RECID,DISTRICTNAME,STREETNAME,MAINTYPENAME,EVENTDESC,DATE_FORMAT(DEADLINE,'%Y-%m-%d %T' ) as DEADLINE  from  tocgcase where STREETNAME=#{name}
+    limit ${pages},10;
+   </select>
+
+
+    <select id="glindexCaseListCount" resultType="java.lang.Integer">
+    select COUNT(*)  from  tocgcase where STREETNAME=#{name}
+   </select>
+
+    <select id="glindexCaseid" resultType="java.util.Map">
+        SELECT
+            IFNULL(DISTRICTNAME,'') as DISTRICTNAME,
+            IFNULL(STREETNAME,'') as STREETNAME,
+            IFNULL(EVENTSRCNAME,'') as EVENTSRCNAME,
+            IFNULL(MAINTYPENAME,'') as MAINTYPENAME,
+            IFNULL(SUBTYPENAME,'') as SUBTYPENAME,
+            IFNULL(EVENTDESC,'') as EVENTDESC,
+            IFNULL(ADDRESS,'') as ADDRESS,
+            IFNULL(DATE_FORMAT(DEADLINE,'%Y-%m-%d %H:%i:%S'),'') as DEADLINE,
+            IFNULL(DATE_FORMAT(ENDTIME,'%Y-%m-%d %H:%i:%S'),'') as ENDTIME,
+            IFNULL(DISPOSEOPINION,'') as DISPOSEOPINION,
+            IFNULL(DISPOSEDEPARTNAME,'') as DISPOSEDEPARTNAME,
+            IFNULL(DATE_FORMAT(DEALTIME,'%Y-%m-%d %H:%i:%S'),'') as DATEFORMAT
+        FROM
+            tocgcase
+        where RECID=#{id}
+    </select>
+
+
+    <select id="glindexManholeis" resultType="java.util.Map">
+      select * from tomanholeis
+   </select>
+
+
+
+    <select id="findTypeJdCount" resultType="java.util.Map">
+
+        SELECT
+            COUNT(*) as num,
+            MAINTYPENAME,
+          '一季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-01' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-03'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+         GROUP BY MAINTYPENAME
+
+        union all
+
+
+        SELECT
+            COUNT(*) as num,
+            MAINTYPENAME,
+          '二季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-04' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-06'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+         GROUP BY MAINTYPENAME
+
+        union all
+
+
+        SELECT
+            COUNT(*) as num,
+            MAINTYPENAME,
+          '三季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-07' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-09'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+         GROUP BY MAINTYPENAME
+
+
+        union all
+
+
+        SELECT
+            COUNT(*) as num,
+            MAINTYPENAME,
+          '四季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-10' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-12'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+         GROUP BY MAINTYPENAME
+
+   </select>
+
+
+
+    <select id="findTypeJdSum" resultType="java.util.Map">
+        SELECT
+            COUNT(*) as num,
+
+          '一季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-01' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-03'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+
+
+        union all
+
+
+        SELECT
+            COUNT(*) as num,
+
+          '二季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-04' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-06'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+
+
+        union all
+
+
+        SELECT
+            COUNT(*) as num,
+
+          '三季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-07' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-09'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+
+
+
+        union all
+
+
+        SELECT
+            COUNT(*) as num,
+
+          '四季度' as jd
+        FROM
+            tocgcase
+        WHERE
+          tocgcase.CREATETIME  <![CDATA[ >= ]]>   '2018-10' and tocgcase.CREATETIME  <![CDATA[  <=  ]]>   '2018-12'
+            and MAINTYPENAME IN (  select t.name from (SELECT
+                t.MAINTYPENAME as name
+                FROM
+                (
+                SELECT
+                MAINTYPENAME,
+                COUNT(1) AS num
+                FROM
+                tocgcase
+                where tocgcase.CREATETIME LIKE '%2018%'
+                GROUP BY
+                MAINTYPENAME
+                ) t
+                ORDER BY
+                t.num DESC limit 0,5) t)
+
+   </select>
+
+
+
+</mapper>

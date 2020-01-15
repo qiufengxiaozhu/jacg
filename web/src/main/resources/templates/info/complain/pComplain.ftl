@@ -19,6 +19,14 @@
     <link href="/css/admin/avatar.css" rel="stylesheet">
     <link href="/css/third/bootstrap-select.css" rel="stylesheet">
     <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
         .webuploader-container div {
             width:80px;
         }
@@ -59,9 +67,9 @@
 
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <label class="control-label my-control-label">开始时间：</label>
+                                <label class="control-label my-control-label">投诉开始时间：</label>
                                 <input type='text' name='search' id='start_time' placeholder="开始时间" startDate onfocus="this.blur()" class='form-control search-input'>
-                                <label class="control-label my-control-label">结束世间：</label>
+                                <label class="control-label my-control-label">投诉结束时间：</label>
                                 <input type='text' name='search' id='end_time' placeholder="结束时间" endDate onfocus="this.blur()" class='form-control search-input'>
                             </div>
                         </div>
@@ -73,7 +81,7 @@
                             <th>id</th>
                             <th>标题</th>
                             <th>类型</th>
-                            <th>创建时间</th>
+                            <th>投诉时间</th>
                             <th>回复状态</th>
                             <th>回复时间</th>
                             <th>操作</th>
@@ -138,7 +146,13 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label my-control-label">创建时间：</label>
+                            <label class="col-sm-3 control-label my-control-label">位置：</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="address" maxlength="64" id="address" placeholder="位置" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label my-control-label">投诉时间：</label>
                             <div class="col-sm-6">
                                 <input type="text" name="complainDate" id="complainDate" placeholder="创建时间" class="form-control"/>
                             </div>
@@ -210,7 +224,21 @@
     var formIdStr="#post_form";
     var sys_url=window.location.host;
     $(document).ready(function () {
-        //校验
+        $("#post_form").validate({
+            rules: {
+                replyContent:{
+                    required:true,
+                    rangelength:[0,25]
+                }
+            },
+            messages: {
+                replyContent: {
+                    required: "请输入回复内容",
+                    rangelength:"字数个数不能超过25"
+                    // remote: "新闻标题已存在"
+                }
+            },ignore: []
+        });
         findList();
 
         var editBtnValue = function() {
@@ -247,7 +275,7 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}",
+            title: "回复",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: [],
@@ -405,7 +433,7 @@
         });
         // 文件上传成功，给item添加成功class, 用样式标记上传成功。
         uploader.on( 'uploadSuccess', function( file,response) {
-            //debugger;
+            //;
             var name = file.name;
             var fileurl = response.data;
             $("#fileShowName").append("<p><a href='//"+sys_url+"/"+fileurl+"' download='"+name+"'>"+name+"</a>" +

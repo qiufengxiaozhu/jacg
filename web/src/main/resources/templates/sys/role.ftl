@@ -61,20 +61,20 @@
                                                     <div class="row">
                                                         <div class="form-group">
                                                             <div class='col-sm-12'>
-                                                                <@hasPermission name="sys:role:create">
+                                                                <@hasPermission name="sys:authManager:role:create">
                                                                 <button class='btn btn-success role_add'
                                                                         data-toggle='modal' data-target='#role_modal'>
                                                                     新增
                                                                 </button>&nbsp;&nbsp;
                                                                 </@hasPermission>
-                                                                <@hasPermission name="sys:role:update">
+                                                                <@hasPermission name="sys:authManager:role:update">
                                                                 <button class='btn btn-info role_update'
                                                                         style="display: none" data-toggle='modal'
                                                                         data-target='#role_modal'>
                                                                     编辑
                                                                 </button>&nbsp;&nbsp;
                                                                 </@hasPermission>
-                                                                <@hasPermission name="sys:role:delete">
+                                                                <@hasPermission name="sys:authManager:role:delete">
                                                                 <button class='btn btn-danger role_delete'
                                                                         style="display: none">
                                                                     删除
@@ -124,7 +124,7 @@
                                                                         </button>
                                                                         <div class="input-group-btn role-mr"
                                                                              style="display: inline-block;width: 65px;">
-                                                                            <@hasPermission name="sys:resource:batchInsert">
+                                                                            <@hasPermission name="sys:authManager:member:batchInsert">
                                                                             <button data-toggle="dropdown"
                                                                                     class="btn btn-success dropdown-toggle"
                                                                                     type="button">新增 <span
@@ -137,7 +137,7 @@
                                                                             </ul>
                                                                         </div>
 
-                                                                        <@hasPermission name="sys:member:batchDelete">
+                                                                        <@hasPermission name="sys:authManager:member:batchDelete">
                                                                         <button class='btn btn-danger'
                                                                                 onclick='member_delete();'>
                                                                             批量删除
@@ -192,7 +192,7 @@
                                                                         </button>
                                                                         <div class="input-group-btn role-mr"
                                                                              style="    display: inline-block;width: 65px;">
-                                                                            <@hasPermission name="sys:resource:batchInsert">
+                                                                            <@hasPermission name="sys:authManager:resource:batchInsert">
                                                                             <button data-toggle="dropdown"
                                                                                     class="btn btn-success dropdown-toggle"
                                                                                     type="button">新增 <span
@@ -204,7 +204,7 @@
 
                                                                             </ul>
                                                                         </div>
-                                                                        <@hasPermission name="sys:resource:batchDelete">
+                                                                        <@hasPermission name="sys:authManager:resource:batchDelete">
                                                                         <button class='btn btn-danger'
                                                                                 onclick='resources_delete();'>
                                                                             批量删除
@@ -535,7 +535,7 @@
                     {data: 'name'},
                     {
                         render: function (data, type, row) {
-                            var html = '<@hasPermission name="sys:member:batchDelete"><button class="member-del-btn btn btn-danger btn-sm mgl" value="{id}">删除</button>&nbsp;&nbsp;</@hasPermission>';
+                            var html = '<@hasPermission name="sys:authManager:member:batchDelete"><button class="member-del-btn btn btn-danger btn-sm mgl" value="{id}">删除</button>&nbsp;&nbsp;</@hasPermission>';
                             return zudp.util.render(html, row);
                         }
                     }
@@ -620,7 +620,7 @@
                     },
                     {
                         render: function (data, type, row) {
-                            var template = '<@hasPermission name="sys:resource:delete"><button class="resource-del-btn btn btn-danger btn-sm mgl" value="{id}/{type}">删除</button>&nbsp;&nbsp;</@hasPermission>';
+                            var template = '<@hasPermission name="sys:authManager:resource:delete"><button class="resource-del-btn btn btn-danger btn-sm mgl" value="{id}/{type}">删除</button>&nbsp;&nbsp;</@hasPermission>';
                             return zudp.util.render(template, row);
                         }
                     }

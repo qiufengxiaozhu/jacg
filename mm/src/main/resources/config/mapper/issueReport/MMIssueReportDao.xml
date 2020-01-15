@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.mm.issueReport.dao.MMIssueReportDao">
+
+
+<!--查询出我的问题上报的列表-->
+    <select id="myReportList" resultType="com.zte.zudp.admin.mm.issueReport.entity.MMIssueReport" useCache="false">
+        SELECT
+        t1.id id,
+        t1.title title,
+        t1.contact contact,
+        t1.replyStatus replyStatus,
+        DATE_FORMAT(t1.complainDate,'%Y-%m') as yearStr,
+        DATE_FORMAT(t1.complainDate,'%d') as dayStr
+        FROM jacg_issuereport t1
+        WHERE  del!=1
+        <if test="name != null and name != '' ">
+            and phone = #{name}
+        </if>
+        ORDER BY t1.complainDate desc
+    </select>
+
+    <!--<select id="selById" resultType="com.zte.zudp.admin.mm.protalreport.entity.MMReport">-->
+        <!--SELECT  *-->
+        <!--FROM zmj_report-->
+        <!--WHERE  id=#{id}-->
+    <!--</select>-->
+
+    <!--根据id来查询详情-->
+    <select id="get" resultType="com.zte.zudp.admin.mm.issueReport.entity.MMIssueReport">
+        SELECT
+        id,
+        t1.title,
+        t1.description,
+        DATE_FORMAT(t1.complainDate,'%Y-%m-%d %T') complainDate,
+        t1.contact,
+        t1.phone,
+        t1.replyContent,
+        t1.replyUserId,
+        DATE_FORMAT(t1.replyDate,'%Y-%m-%d %T') replyDate
+
+        FROM jacg_issuereport t1
+        WHERE  id=#{id}
+    </select>
+<!--新增上报信息-->
+    <insert id="insReport">
+        INSERT INTO jacg_issuereport(
+        id,
+        title,
+        description,
+        issueQuestionType,
+        contact,
+        phone,
+        replyStatus,
+        complainDate,
+        create_date,
+        create_user,
+        update_date,
+        update_user,
+        del
+        )
+        VALUES (
+        #{id},
+        #{title},
+        #{description},
+        #{issueQuestionType},
+        #{contact},
+        #{phone},
+        '0',
+        NOW(),
+        #{createDate},
+        #{createUser.id},
+        #{updateDate},
+        #{updateUser.id},
+        '0'
+        )
+    </insert>
+
+
+    <!--<update id="update" parameterType="com.zte.zudp.admin.mm.protalreport.entity.MMReport">-->
+    <!--UPDATE zmj_report  SET-->
+    <!--reply = #{reply},-->
+    <!--reply_date = #{updateDate}-->
+    <!--WHERE id = #{id}-->
+<!--</update>-->
+
+
+
+
+
+
+</mapper>

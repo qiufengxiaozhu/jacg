@@ -34,7 +34,8 @@ public class QuestionContrller extends AbstractCRUDController<Questions>{
     private QuestionService questionService;
 
 
-/**
+
+    /**
  * 下拉  题目类型
  */
 @JSON
@@ -51,20 +52,20 @@ public List<Dictionary> getlist() {
      * @param id
      * @return
      */
-    @JSON
-    @GetMapping(value = "/getOneType")
-    @EndpointRest(id = "listAttach", name = "问卷下拉", authorizedType = AuthorizedType.GUEST)
-    public Questions getOneType(String id) {
-        Questions question= questionService.get(id);
-        if ((question.getQuestionType()).equals("0")) {
-            question.setQuestionType("单选题");
-        } else if ((question.getQuestionType()).equals("1")) {
-            question.setQuestionType("多选题");
-        } else if ((question.getQuestionType()).equals("2")) {
-            question.setQuestionType("判断题");
-        }
-        return question;
-    }
+//    @JSON
+//    @GetMapping(value = "/getOneType")
+//    @EndpointRest(id = "listAttach", name = "问卷下拉", authorizedType = AuthorizedType.GUEST)
+//    public Questions getOneType(String id) {
+//        Questions question= questionService.get(id);
+////        if ((question.getQuestionType()).equals("0")) {
+////            question.setQuestionType("单选题");
+////        } else if ((question.getQuestionType()).equals("1")) {
+////            question.setQuestionType("多选题");
+////        } else if ((question.getQuestionType()).equals("2")) {
+////            question.setQuestionType("判断题");
+////        }
+//        return question;
+//    }
 
     /**
      * 成功题目之后更新题目状态

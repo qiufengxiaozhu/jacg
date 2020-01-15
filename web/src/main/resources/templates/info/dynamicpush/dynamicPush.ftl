@@ -13,6 +13,16 @@
     <link href="/css/third/sweetalert.css" rel="stylesheet"/>
     <link href="/css/third/toastr.min.css" rel="stylesheet"/>
     <link href="/css/style.min.css" rel="stylesheet">
+    <style>
+        /*滚动条的设置*/
+        ::-webkit-scrollbar-thumb {
+            background-color:#dddddd;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+        }
+    </style>
 </head>
 
 <body class="gray-bg">

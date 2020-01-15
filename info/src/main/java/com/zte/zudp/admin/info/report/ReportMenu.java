@@ -4,7 +4,6 @@ import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointPage;
 import com.zte.zudp.admin.common.annotation.endpoint.Menu;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@EndpointModule(id="reportManage",name = "公众上报管理", order = 2,icon = "home")
+@EndpointModule(id="reportManage",name = "公众上报", order = 30,icon = "home")
 @RequestMapping("/reportMenu")
 public class ReportMenu {
 
@@ -24,7 +23,7 @@ public class ReportMenu {
      */
     @Menu
     @GetMapping("/report")
-    @EndpointPage(id = "reprotlist", name = "公共上报列表", order = 1,icon = "cog")
+    @EndpointPage(id = "reprotlist", name = "公众上报列表", order = 1,icon = "cog")
     public String reportsList() {
         return "/info/report/reportlist";
     }

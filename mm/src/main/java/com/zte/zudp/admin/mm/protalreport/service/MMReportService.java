@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Transactional(rollbackFor = Exception.class)
@@ -30,12 +31,26 @@ public class MMReportService  extends FileBusinessService<MMReport>{
         return mmReportDao.insReport(mmReport);
     }
 
-    public List<MMReport> show(){
-        return mmReportDao.selAll();
+    public List<MMReport> show(Object phone,Object name){
+        return mmReportDao.selAll(phone,name);
     }
 
+    public List<MMReport> showAll(){
+        return mmReportDao.selAll();
+    }
+//
     @Override
     public synchronized void afterInsert(MMReport mmReport) {
         super.afterInsert(mmReport);
     }
+//
+//    /**
+//     * 去数据库中匹配电话和用户名称
+//     * @param userName
+//     * @param userPhone
+//     * @return
+//     */
+//    public List<Map> checkUserAndPhone( ) {
+//        return  mmReportDao.checkUserAndPhone( );
+//    }
 }

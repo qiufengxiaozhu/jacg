@@ -22,42 +22,24 @@
             <div class="ibox">
                 <div class="ibox-content form-inline ">
                     <div class=" col-sm-12">
-                        <@hasPermission name="sys:user:create">
+                        <@hasPermission name="sys:groupSetting:user:create">
                         <button class="btn btn-success" data-toggle="modal" id="add-btn" >新增</button>&nbsp;&nbsp;
                         </@hasPermission>
-                        <@hasPermission name="sys:user:batchDelete">
+                        <@hasPermission name="sys:groupSetting:user:batchDelete">
                         <button class="btn btn-success btn-danger" id="delete-items" >批量删除</button>
                         </@hasPermission>
                         <div class="querybtn my-querybtn">
                             <label id="click"></label>
-                            <input type="text" name="search" maxlength="255"  placeholder="用户名" class="form-control search-input">
+                            <input type="text" name="search" maxlength="255" id="user_loginName_select_first"  placeholder="用户名" class="form-control search-input">
+                            <input type="text" name="name" maxlength="255" id="user_name_select" placeholder="姓名" class="form-control">
+                            <input type="text" name="phone" id="user_phone_select" placeholder="电话号码" class="form-control">
                             <button class="btn btn-primary mgl my-mgl research-btn" >搜索</button>
-                            <button class="btn btn-primary select-query"  >高级搜索</button>
+                            <button class="btn btn-primary mgl my-mgl clear-input" >清空</button>&nbsp;&nbsp;
                         </div>
                     </div>
-                    <div id="search" class="search-group" style="display:none;">
-                        <div class="form-group z-group">
-                            <div class="col-sm-12 z-group-pane">
-                                <label class="control-label my-control-label">用户名：</label>
-                                <input type="text" maxlength="255" name="loginName" id="user_loginName_select" placeholder="用户名" class="form-control search-input">
-                                </div>
-                            </div>
+                   <#-- <div id="search" class="search-group" style="display:none;">
 
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <label class="control-label my-control-label">姓名：</label>
-                                <input type="text" name="name" maxlength="255" id="user_name_select" placeholder="姓名" class="form-control">
-                                </div>
-                            </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <label class="control-label my-control-label">电话号码：</label>
-                                 <input type="text" name="phone" id="user_phone_select" placeholder="电话号码" class="form-control">
-                                </div>
-                            </div>
-                        <button class="btn btn-primary mgl my-mgl clear-input" >清空</button>&nbsp;&nbsp;
-                    </div>
+                    </div>-->
                     <table id="user-list-table" class="table my-table table-bordered dataTables-example">
                         <thead>
                         <tr>
@@ -335,7 +317,7 @@
                 id: '#user-list-table',
                 search: function () {
                     return {
-                        "loginName":$("#user_loginName_select").val(),
+                        "loginName":$("#user_loginName_select_first").val(),
                         "name":$("#user_name_select").val(),
                         "phone":$("#user_phone_select").val()
                     }
@@ -359,9 +341,16 @@
                     },
                     {
                         render: function (data, type, row) {
-                            var btn = <@hasPermission name="sys:user:update">zudp.template.editBtn</@hasPermission><@hasPermission name="sys:user:delete"> + zudp.template.delBtn</@hasPermission>
-                            return zudp.util.render(btn, row);
-                        }
+                            var update_btn = <@hasPermission name="sys:groupSetting:user:update">'<button class="btn btn-info btn-sm row-edit updateOpBtn" value="' + row.id + '">编辑</button>'</@hasPermission>+"";
+                            var delete_btn =   <@hasPermission name="sys:groupSetting:user:delete">'<button class="btn btn-danger btn-sm row-delete mgl my-mgl" value="' + row.id + '">删除</button>'</@hasPermission>+"";
+                            var updatePassword_btn = <@hasPermission name="sys:groupSetting:user:updatePassword"> "<button class=\"btn btn-info btn-sm  btn-img\" onclick=\"updatePassword('" + row.id + "')\" title='修改密码'>修改密码</button>"</@hasPermission>+"";
+                            var updateUserStatus_btn = "";
+                            if(data.status == '1'){
+                                updateUserStatus_btn =  <@hasPermission name="sys:groupSetting:user:updateUserStatus"> "&nbsp;<button class=\"btn btn-success btn-sm  btn-img\" onclick=\"translateNo('" + row.id + "')\" title='禁用'>禁用</button>"</@hasPermission>+"";
+                            }else{
+                                updateUserStatus_btn =  <@hasPermission name="sys:groupSetting:user:updateUserStatus"> "&nbsp;<button class=\"btn btn-warning btn-sm  btn-img\" onclick=\"translates('" + row.id + "')\" title='激活'>激活</button>"</@hasPermission>+"";
+                            }
+                            return zeroToSpace(update_btn)+zeroToSpace(delete_btn)+zeroToSpace(updatePassword_btn)+zeroToSpace(updateUserStatus_btn);                        }
                     }
                 ]
             },
@@ -394,6 +383,72 @@
         var length = value.length;
         return this.optional(element) || (length <= 32  && length >= 6);
     }, "请输入6到16位密码");
+
+</script>
+<script>
+    function clearOther(){
+        $("#user_loginName_select_first").val('');
+        $("#user_name_select").val('');
+        $("#user_phone_select").val('');
+        dataTable.ajax.reload();
+    }
+
+    /**  修改密码 js 开始 */
+    function updatePassword(id) {
+        document.getElementById("pwd").reset();
+        $("#pwId").val(id);
+        $('#role_member2').modal({show: true, backdrop: 'static'});
+    }
+
+    function upwordpass(){
+        $("#pwdspan").html("");
+        $("#rewppwdspan").html("");
+        var gid = $("#pwId").val();
+        var pwd = $("#uppwd").val();
+        var reuppwd = $("#reuppwd").val();
+        if(pwd == null || pwd == "" ){
+            $("#pwdspan").html("请输入密码");
+
+            return "";
+        }
+        if(reuppwd != pwd){
+            $("#rewppwdspan").html("两次密码不一致");
+            return "";
+        }
+        var da = {id: gid,password:pwd};
+        zudp.ajax("/api/user/updatePassword").get(da).then(function (value) {
+            zudp.plugin.dialog("success").alert("修改成功！", "提示");
+            $("#role_member2").modal("hide");
+        }, function (reason) {
+            zudp.plugin.dialog("error").alert("修改失败！", "提示");
+            $("#role_member2").modal("hide");
+        });
+    }
+    /**  修改密码 js 结束 */
+
+    /** 禁用 启动  开始 */
+    function translates(id) {
+        ;
+        var da = {id: id,status:1};
+        zudp.ajax("/api/user/updateUserStatus").get(da).then(function (value) {
+            zudp.plugin.dialog("success").alert("激活成功！", "提示");
+            zudp.plugin.table("#user-list-table").then().ajax.reload();
+        }, function (reason) {
+            zudp.plugin.dialog("error").alert("修改失败！", "提示");
+            zudp.plugin.table("#user-list-table").then().ajax.reload();
+        });
+    }
+
+    function translateNo(id) {
+        var da = {id: id,status:0};
+        zudp.ajax("/api/user/updateUserStatus").get(da).then(function (value) {
+            zudp.plugin.dialog("success").alert("禁用成功！", "提示");
+            zudp.plugin.table("#user-list-table").then().ajax.reload();
+        }, function (reason) {
+            zudp.plugin.dialog("error").alert("禁用失败！", "提示");
+        });
+    }
+    /** 禁用 启动  结束 */
 
 </script>
 </body>

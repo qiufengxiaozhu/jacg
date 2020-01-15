@@ -19,13 +19,13 @@ import com.zte.zudp.admin.common.enums.AuthorizedType;
  */
 @Controller
 @RequestMapping("/dev")
-//@EndpointModule(id = "devHelper", name = "开发助手", order = 10000, icon = "tripadvisor",
-//        authorizedType = AuthorizedType.SUBJECT, authorized = {Constants.Permission.SUPER_ADMIN})
+@EndpointModule(id = "devHelper", name = "开发助手", order = 10000, icon = "tripadvisor",
+        authorizedType = AuthorizedType.SUBJECT, authorized = {Constants.Permission.SUPER_ADMIN})
 public class DevHelperMenu {
 
     @Menu
     @GetMapping("/endpointTreeDetail")
-//    @EndpointPage(id = "endpointTree", name = "功能端点参考", order = 1, icon = "cubes")
+    @EndpointPage(id = "endpointTree", name = "功能端点参考", order = 1, icon = "cubes")
     public String showEndpointTree() {
         return "/component/dev/endpointTree";
     }

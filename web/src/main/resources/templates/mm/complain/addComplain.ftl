@@ -20,6 +20,12 @@
             width: 25;
             height: 25
         }
+        .sp-span{display: inline-block;width: 100%;padding-left: 2.2rem;color:#ff2233;display: none}
+        .port .sp-span2{padding:0 .2rem;width: auto;width: 0.2rem;display: none}
+        .port .sp-span3{padding:0 .2rem;width: auto;width: 0.2rem}
+        .webuploader-container div {width: 86px;  height: 35px;line-height: 35px;}
+        .fx-img{width: 32%;height: 2rem;margin:0.1rem 0.5%}
+        .fx-img img{width: 100%;height: 100%}
     </style>
 </head>
 
@@ -35,43 +41,49 @@
             <div class="header-img">
                 <div class="ts-table">
                     <div class="put">
-                        <input type="hidden" name="contactUser" id="contact_user" value='${contactUser!""}'>
+                        <input type="hidden" name="contactUser" id="contact_user" value='${Session.userPhone}'>
                         <div class="theme">
                             <div class="port flex flex-c-c">
-                                <span>主题&nbsp;:</span>
+                                <span>标题&nbsp;:</span>
                                 <input type="text" name="title" id="title" class="tab-input flex-1"
-                                       placeholder="请输入您的来信主题(50字以内)">
-                                <span id="sp_title"></span>
+                                       placeholder="请输入您的来信标题(20字以内)">
+                                <span class="sp-span2" id="sp_title2" style="color:green">√</span>
+                                <span class="sp-span3" id="sp_title3" style="color:red">*</span>
                             </div>
+                            <span class="sp-span" id="sp_title">字符个数应在1-20个</span>
                         </div>
                         <div class="theme">
                             <div class="port flex flex-c-c">
-                                <span>内容&nbsp;:</span>
+                                <span>问题描述&nbsp;:</span>
                                 <input type="text" name="description" id="description" class="tab-input flex-1"
-                                       placeholder="请输入您的诉求内容(1000字以内)">
-                                <span id="sp_description"></span>
+                                       placeholder="请输入您的诉求内容(50字以内)">
+                                <span class="sp-span2" id="sp_description2" style="color:green">√</span>
+                                <span class="sp-span3" id="sp_description3" style="color:red">*</span>
                             </div>
+                            <span class="sp-span" id="sp_description">请输入1-50位字符</span>
                         </div>
                         <div class="theme">
                             <div class="port flex flex-c-c">
                                 <span>联系人&nbsp;:</span>
                                 <input type="text" name="contact" id="contact" class="tab-input flex-1"
-                                       placeholder="请输入您的姓名(20字以内)">
-                                <span id="sp_contact"></span>
+                                       placeholder="请输入您的姓名(20字以内)" value="${Session.userName}">
+                                <span class="sp-span2" id="sp_contact2" style="color:green">√</span>
                             </div>
+                            <span class="sp-span" id="sp_contact">请输入1-20位字符</span>
                         </div>
                         <div class="theme">
                             <div class="port flex flex-c-c">
                                 <span>联系电话&nbsp;:</span>
                                 <input type="text" name="phone" id="phone" class="tab-input flex-1"
-                                       placeholder="请输入您的电话(20字以内)">
-                                <span id="sp_phone"></span>
+                                       placeholder="请输入您的电话"value="${Session.userPhone}">
+                                <span class="sp-span2" id="sp_phone2" style="color:green">√</span>
                             </div>
+                            <span class="sp-span" id="sp_phone">手机号格式不对</span>
                         </div>
                         <div class="theme">
                             <div class="type">
-                                <div class="select-left flex flex-c-c">
-                                    <span>反映类型&nbsp;:</span>
+                                <div class="select-left port flex flex-c-c">
+                                    <span>类型&nbsp;:</span>
                                     &nbsp;&nbsp;
                                     <select id="type" name="type" class="selected">
                                         <option value="0">投诉</option>
@@ -85,37 +97,27 @@
                             <div class="port flex flex-c-c">
                                 <span>填写地址&nbsp;:</span>
                                 <input type="text" id="address" name="address" class="tab-input flex-1">
+                                <span class="sp-span2" id="sp_address2" style="color:green">√</span>
+                                <span class="sp-span3" id="sp_address3" style="color:red">*</span>
                             </div>
+                            <span class="sp-span" id="sp_address">字符不超过20位</span>
                         </div>
-                        <#--                        <div class="theme">-->
-                        <#--                            <div class="port">添加附件&nbsp;:</div>-->
-                        <#--                                <a href="#"><img src="/mm/img/file.png" alt=""></a>-->
-                        <#--                                <a href="#"><img src="/mm/img/music.png" alt=""></a>-->
-                        <#--                                <a href="#"><img src="/mm/img/arr15.png" alt=""></a>-->
-                        <#--                            </div>-->
-                        <#--                        </div>-->
-                        <#--                        <div class="theme">-->
-                        <#--                            <div style="width:80;height: 35px;position: relative;margin:0 auto">-->
-                        <#--                                <div id="xg_rar">上传附件</div>-->
-                        <#--                            </div>-->
-                        <#--                            <div id="fileShowName" class="port" style="text-align: center;margin:0 auto"></div>-->
-                        <#--                        </div>-->
                         <div class="theme">
-                            <div class="form-group" style="">
+                            <div class="form-group" style="min-height: 2rem;margin-top: 0.3rem">
                                 <div style="width:80;height: 35px;position: relative;margin:0 auto">
                                     <div id="xg_rar">上传图片附件</div>
                                 </div>
                                 <div id="fileShowName" style="text-align: center;margin:0 auto"></div>
                             </div>
 
-                            <div class="form-group" style="">
+                            <div class="form-group" style="min-height: 2rem;">
                                 <div style="width:80;height: 35px;position: relative;margin:0 auto">
                                     <div id="yy">上传语音附件</div>
                                 </div>
                                 <div id="yyfileShowName" style="text-align: center;margin:0 auto"></div>
                             </div>
 
-                            <div class="form-group" style="">
+                            <div class="form-group" style="min-height: 2rem;">
                                 <div style="width:80;height: 35px;position: relative;margin:0 auto">
                                     <div id="sp">上传视频附件</div>
                                 </div>
@@ -141,7 +143,13 @@
         $(function () {
             //前端校验
             $("#add_form").submit(function () {
-                return checktitle() && checkcontent() && checkname() && checktelephone();
+                var flag=checktitle() && checkcontent() && checkname() && checktelephone() && checkaddress();
+                if (flag){
+                    alert("投诉成功")
+                }else{
+                    alert("投诉失败")
+                }
+                return flag;
             });
             $("input[name='title']").blur(function () {
                 checktitle();
@@ -157,6 +165,9 @@
             $("input[name='phone']").blur(function () {
                 checktelephone();
             });
+            $("input[name='address']").blur(function () {
+                checkaddress();
+            });
 
 
         });
@@ -165,13 +176,17 @@
         //检验标题
         function checktitle() {
             var title = $("input[name='title']").val();
-            var reg_title = /^.{1,50}$/;
+            var reg_title = /^.{1,20}$/;
             var flag = reg_title.test(title)
             if (title != null && title != '' && flag) {
-                $("#sp_title").css("color", "green").html("√");
+                $("#sp_title3").hide();
+                $("#sp_title2").show();
+                $("#sp_title").hide();
                 return true;
-            } else {
-                $("#sp_title").css("color", "red").html("×");
+            }else{
+                $("#sp_title").show();
+                $("#sp_title2").hide();
+                $("#sp_title3").show();
                 return false;
             }
         }
@@ -179,29 +194,36 @@
         //检验内容
         function checkcontent() {
             var content = $("input[name='description']").val();
-            var reg_content = /^.{1,2000}$/;
+            var reg_content = /^.{1,50}$/;
             var flag = reg_content.test(content);
             if (content != null && content != '' && flag) {
-                $("#sp_description").css("color", "green").html("√");
+                $("#sp_description3").hide();
+                $("#sp_description2").show();
+                $("#sp_description").hide();
                 return true;
-            } else {
-                $("#sp_description").css("color", "red").html("×");
+            }else{
+                $("#sp_description").show();
+                $("#sp_description2").hide();
+                $("#sp_description3").show();
                 return false;
             }
         }
 
         //检验联系人
         function checkname() {
-            var name = $("input[name='contact']").val();
-            var reg_name = /^([\u4e00-\u9fa5]){2,7}$/;
+            /*var name = $("input[name='contact']").val();
+            var reg_name = /^.{1,20}$/;
             var flag = reg_name.test(name);
             if (flag) {
-                $("#sp_contact").css("color", "green").html("√");
+                $("#sp_contact2").show();
+                $("#sp_contact").hide();
                 return true;
-            } else {
-                $("#sp_contact").css("color", "red").html("×");
+            }else{
+                $("#sp_contact").show();
+                $("#sp_contact2").hide();
                 return false;
-            }
+            }*/
+            return true;
         }
 
         //检查手机号
@@ -210,10 +232,30 @@
             var reg_telephonr = /^(((13|14|15|18|17)\d{9}))$/;
             var flag = reg_telephonr.test(telephone);
             if (flag) {
-                $("#sp_phone").css("color", "green").html("√");
+                $("#sp_phone2").show();
+                $("#sp_phone").hide();
                 return true;
-            } else {
-                $("#sp_phone").css("color", "red").html("×");
+            }else{
+                $("#sp_phone").show();
+                $("#sp_phone2").hide();
+                return false;
+            }
+        }
+
+        //检查地址
+        function checkaddress() {
+            var address = $("input[name='address']").val();
+            var reg_address = /^.{1,20}$/;
+            var flag = reg_address.test(address);
+            if (flag) {
+                $("#sp_address3").hide();
+                $("#sp_address2").show();
+                $("#sp_address").hide();
+                return true;
+            }else{
+                $("#sp_address").show();
+                $("#sp_address2").hide();
+                $("#sp_address3").show();
                 return false;
             }
         }
@@ -277,7 +319,7 @@
                 }
             });
             uploader.on('uploadSuccess', function (file, response) {
-                //debugger;
+                //;
                 var name = file.name;
                 var fileurl = response.data;
                 var jw = fileurl.substring(fileurl.lastIndexOf('.'));

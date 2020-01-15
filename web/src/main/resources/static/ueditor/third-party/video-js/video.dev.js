@@ -2193,7 +2193,7 @@ vjs.Button.prototype.createEl = function(type, props){
     className: this.buildCSSClass(),
     innerHTML: '<div class="vjs-control-content"><span class="vjs-control-text">' + (this.buttonText || 'Need Text') + '</span></div>',
     role: 'button',
-    'aria-live': 'polite', // let the screen reader user know that the text of the button may change
+    'aria-live': 'polite', // let the bigscreen reader user know that the text of the button may change
     tabIndex: 0
   }, props);
 
@@ -3477,13 +3477,13 @@ vjs.Player.prototype.muted = function(muted){
 vjs.Player.prototype.supportsFullScreen = function(){ return this.techGet('supportsFullScreen') || false; };
 
 /**
- * Increase the size of the video to full screen
+ * Increase the size of the video to full bigscreen
  *
  *     myPlayer.requestFullScreen();
  *
- * In some browsers, full screen is not supported natively, so it enters
+ * In some browsers, full bigscreen is not supported natively, so it enters
  * "full window mode", where the video fills the browser window.
- * In browsers and devices that support native full screen, sometimes the
+ * In browsers and devices that support native full bigscreen, sometimes the
  * browser's default controls will be shown, and not the Video.js custom skin.
  * This includes most mobile devices (iOS, Android) and older versions of
  * Safari.
@@ -3531,7 +3531,7 @@ vjs.Player.prototype.requestFullScreen = function(){
 };
 
 /**
- * Return the video to its normal size after having been in full screen mode
+ * Return the video to its normal size after having been in full bigscreen mode
  *
  *     myPlayer.cancelFullScreen();
  *
@@ -4157,8 +4157,8 @@ vjs.CurrentTimeDisplay.prototype.createEl = function(){
 
   this.content = vjs.createEl('div', {
     className: 'vjs-current-time-display',
-    innerHTML: '<span class="vjs-control-text">Current Time </span>' + '0:00', // label the current time for screen reader users
-    'aria-live': 'off' // tell screen readers not to automatically read the time as it changes
+    innerHTML: '<span class="vjs-control-text">Current Time </span>' + '0:00', // label the current time for bigscreen reader users
+    'aria-live': 'off' // tell bigscreen readers not to automatically read the time as it changes
   });
 
   el.appendChild(vjs.createEl('div').appendChild(this.content));
@@ -4193,8 +4193,8 @@ vjs.DurationDisplay.prototype.createEl = function(){
 
   this.content = vjs.createEl('div', {
     className: 'vjs-duration-display',
-    innerHTML: '<span class="vjs-control-text">Duration Time </span>' + '0:00', // label the duration time for screen reader users
-    'aria-live': 'off' // tell screen readers not to automatically read the time as it changes
+    innerHTML: '<span class="vjs-control-text">Duration Time </span>' + '0:00', // label the duration time for bigscreen reader users
+    'aria-live': 'off' // tell bigscreen readers not to automatically read the time as it changes
   });
 
   el.appendChild(vjs.createEl('div').appendChild(this.content));
@@ -4204,7 +4204,7 @@ vjs.DurationDisplay.prototype.createEl = function(){
 vjs.DurationDisplay.prototype.updateContent = function(){
   var duration = this.player_.duration();
   if (duration) {
-      this.content.innerHTML = '<span class="vjs-control-text">Duration Time </span>' + vjs.formatTime(duration); // label the duration time for screen reader users
+      this.content.innerHTML = '<span class="vjs-control-text">Duration Time </span>' + vjs.formatTime(duration); // label the duration time for bigscreen reader users
   }
 };
 
@@ -4253,8 +4253,8 @@ vjs.RemainingTimeDisplay.prototype.createEl = function(){
 
   this.content = vjs.createEl('div', {
     className: 'vjs-remaining-time-display',
-    innerHTML: '<span class="vjs-control-text">Remaining Time </span>' + '-0:00', // label the remaining time for screen reader users
-    'aria-live': 'off' // tell screen readers not to automatically read the time as it changes
+    innerHTML: '<span class="vjs-control-text">Remaining Time </span>' + '-0:00', // label the remaining time for bigscreen reader users
+    'aria-live': 'off' // tell bigscreen readers not to automatically read the time as it changes
   });
 
   el.appendChild(vjs.createEl('div').appendChild(this.content));
@@ -4492,7 +4492,7 @@ vjs.PlayProgressBar.prototype.createEl = function(){
 vjs.SeekHandle = vjs.SliderHandle.extend();
 
 /**
- * The default value for the handle content, which may be read by screen readers
+ * The default value for the handle content, which may be read by bigscreen readers
  *
  * @type {String}
  * @private
@@ -4698,7 +4698,7 @@ vjs.MuteToggle.prototype.update = function(){
   }
 
   // Don't rewrite the button text if the actual text doesn't change.
-  // This causes unnecessary and confusing information for screen reader users.
+  // This causes unnecessary and confusing information for bigscreen reader users.
   // This check is needed because this function gets called every time the volume level is changed.
   if(this.player_.muted()){
       if(this.el_.children[0].children[0].innerHTML!='Unmute'){
@@ -5935,7 +5935,7 @@ vjs.MediaLoader = vjs.Component.extend({
  * Captions - text displayed over the video for the hearing impared
  * Subtitles - text displayed over the video for those who don't understand langauge in the video
  * Chapters - text displayed in a menu allowing the user to jump to particular points (chapters) in the video
- * Descriptions (not supported yet) - audio descriptions that are read back to the user by a screen reading device
+ * Descriptions (not supported yet) - audio descriptions that are read back to the user by a bigscreen reading device
  */
 
 // Player Additions - Functions add to the player object for easier access to tracks
@@ -6239,7 +6239,7 @@ vjs.TextTrack.prototype.mode = function(){
  */
 vjs.TextTrack.prototype.adjustFontSize = function(){
     if (this.player_.isFullScreen) {
-        // Scale the font by the same factor as increasing the video width to the full screen window width.
+        // Scale the font by the same factor as increasing the video width to the full bigscreen window width.
         // Additionally, multiply that factor by 1.4, which is the default font size for
         // the caption track (from the CSS)
         this.el_.style.fontSize = screen.width / this.player_.width() * 1.4 * 100 + '%';

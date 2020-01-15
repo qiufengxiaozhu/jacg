@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.comment.dao.CommentDao">
+
+    <!--查询所有-->
+    <select id="findList" resultType="com.zte.zudp.admin.info.comment.entity.Comment">
+        SELECT DISTINCT
+        t1.id replyId,
+        t1.title,
+        t1.issueQuestionType,
+        DATE_FORMAT( t1.complainDate, '%Y-%m-%d %T' ) complainDate,
+        DATE_FORMAT( t1.replyDate, '%Y-%m-%d %T' ) replyDate,
+        t1.replyStatus,
+        t2.fk_issuereportId commentType
+        FROM
+        jacg_issuereport t1
+        LEFT JOIN qgq_comment t2 ON t2.fk_issuereportId = t1.id
+        WHERE
+        t1.del = '0'
+        <if test="issueQuestionType!=null and issueQuestionType!=''">
+            and t1.issueQuestionType like concat('%', #{issueQuestionType}, '%')
+        </if>
+        <if test="title!=null and title!=''">
+            and t1.title like concat('%', #{title}, '%')
+        </if>
+
+    </select>
+    <!--查看详情-->
+    <select id="get" resultType="com.zte.zudp.admin.info.issueReport.entity.IssueReply">
+        select
+        t1.id id,
+        t1.title title,
+        t1.description description,
+        t1.issueQuestionType issueQuestionType,
+        t1.contact contact,
+        t1.phone phone,
+        DATE_FORMAT( t1.complainDate, '%Y-%m-%d %T' ) complainDate,
+        t1.address address,
+        t1.replyContent replyContent,
+        DATE_FORMAT( t1.replyDate, '%Y-%m-%d %T' ) replyDate,
+        t1.replyUserId replyUserId
+        from jacg_issuereport t1
+        where id=#{id}
+    </select>
+
+    <select id="getComment" resultType="com.zte.zudp.admin.info.comment.entity.Comment">
+        SELECT
+        id, content, name, phone, clicks,
+        DATE_FORMAT( public_time, "%Y-%m-%d %T" ) publicTime,
+        fk_issuereportid
+        FROM qgq_comment
+        WHERE  del!=1
+        <if test="id != null and id != '' ">
+            and fk_issuereportid = #{id}
+        </if>
+        ORDER BY public_time desc
+    </select>
+</mapper>

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@EndpointModule(id = "queinvestManager", name = "问卷管理",parent =  QueMenu.class, order = 1029 ,icon = "cogs")
+@EndpointModule(id = "queinvestManager", name = "问卷管理",parent =  QueMenu.class, order = 1 ,icon = "cogs")
 @RequestMapping("/queinvest")
 public class QueinvestMenu {
     @Menu

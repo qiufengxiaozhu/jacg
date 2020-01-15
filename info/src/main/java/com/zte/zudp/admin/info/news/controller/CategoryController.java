@@ -42,4 +42,11 @@ public class CategoryController extends AbstractCRUDController<Category> {
     public List<Category> getlist() {
         return service().findList();
     }
+
+    @JSON
+    @GetMapping(value = "/checkName")
+    @EndpointRest(id = "checkName", name = "校验类别名称是否存在", authorizedType = AuthorizedType.GUEST)
+    public boolean checkName(String category, String id) {
+        return service().checkName(category,id);
+    }
 }
