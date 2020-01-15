@@ -69,7 +69,7 @@
                             <div class="col-sm-12">
                                 <label class="control-label my-control-label">投诉开始时间：</label>
                                 <input type='text' name='search' id='start_time' placeholder="开始时间" startDate onfocus="this.blur()" class='form-control search-input'>
-                                <label class="control-label my-control-label">投诉结束世间：</label>
+                                <label class="control-label my-control-label">投诉结束时间：</label>
                                 <input type='text' name='search' id='end_time' placeholder="结束时间" endDate onfocus="this.blur()" class='form-control search-input'>
                             </div>
                         </div>
@@ -275,7 +275,7 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}",
+            title: "回复",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: [],
