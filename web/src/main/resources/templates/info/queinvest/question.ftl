@@ -191,7 +191,7 @@
                 <div class="modal-body fix-height" style="height: 350px">
                 <#--表单-->
                     <form class="form-horizontal" id="form-addOption">
-                        <input type="hidden" class="testId" name="id" id="id">
+                        <#--<input type="hidden" class="testId" name="id" id="id">-->
 
 
                         <#--<div class="form-group">-->
@@ -219,7 +219,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项一：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText01"   maxlength="64" id="choiceText01" placeholder="选项一" class="form-control">
+                                <input type="text" name="opt01"   maxlength="64" id="choiceText01" placeholder="选项一" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -229,7 +229,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项二：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText02" maxlength="64" id="choiceText02" placeholder="选项二" class="form-control">
+                                <input type="text" name="opt02" maxlength="64" id="choiceText02" placeholder="选项二" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -239,7 +239,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项三：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText03" maxlength="64" id="choiceText03" placeholder="选项三" class="form-control">
+                                <input type="text" name="opt03" maxlength="64" id="choiceText03" placeholder="选项三" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -249,7 +249,7 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label my-control-label ">选项四：</label>
                             <div class="col-sm-6">
-                                <input type="text" name="choiceText04" maxlength="64" id="choiceText04" placeholder="选项四" class="form-control">
+                                <input type="text" name="opt04" maxlength="64" id="choiceText04" placeholder="选项四" class="form-control">
                             </div>
                             <div>
                                 <i class="i_context my-i_context">*</i>
@@ -262,7 +262,7 @@
                 <div class="modal-footer">
                     <input type="hidden" id="add-type">
                     <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" id="test-save-btn">保存</button>
+                    <button type="button" class="btn btn-primary " id="test-save-btn">保存</button>
                 </div>
             </small>
         </div>
@@ -543,10 +543,10 @@
 
     // 隐藏选项输入框  编辑
     $(document).on("click", '#edit', function () {
-        $("#ct1").css("display","none");	//隐藏选项
-        $("#ct2").css("display","none");	//隐藏选项
-        $("#ct3").css("display","none");	//隐藏选项
-        $("#ct4").css("display","none");	//隐藏选项
+        $("#ct1").css("display","block");	//隐藏选项
+        $("#ct2").css("display","block");	//隐藏选项
+        $("#ct3").css("display","block");	//隐藏选项
+        $("#ct4").css("display","block");	//隐藏选项
 
     });
     // 隐藏选项输入框  详情

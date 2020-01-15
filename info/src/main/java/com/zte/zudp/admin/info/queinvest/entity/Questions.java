@@ -9,6 +9,17 @@ import com.zte.zudp.admin.common.persistence.entity.DataEntity;
 public class Questions extends DataEntity{
 
 
+    private String id;
+
+    @Override
+    public String getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(String id) {
+        this.id = id;
+    }
 
     private String choiceText01;
     private String choiceText02;
