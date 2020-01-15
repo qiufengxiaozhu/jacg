@@ -283,7 +283,7 @@
                 // 必填项
                 name:{
                     required:true,
-                    rangelength:[0,10]
+                    rangelength:[0,15]
                 },
                 location:{
                     required:true
@@ -298,7 +298,7 @@
             messages: {
                 name: {
                     required: "请输入名称",
-                    rangelength:"字符个数不能超过10"
+                    rangelength:"字符个数不能超过15"
                 },
                 location: {
                     required: "请输入位置"
@@ -587,23 +587,23 @@
     var geoc = new BMap.Geocoder();  //地址解析对象
     var markersArray = [];
     var geolocation = new BMap.Geolocation();
-    var point = new BMap.Point(114.67806931222913, 27.811967294005495);
+    var point = new BMap.Point(114.881909,27.224167);
     map.centerAndZoom(point, 12); // 中心点
     map.addEventListener("click", showInfo);
 
 
-    //地图缩小放大
-    geolocation.getCurrentPosition(function (r) {
-        if (this.getStatus() == BMAP_STATUS_SUCCESS) {
-            var mk = new BMap.Marker(r.point);
-            map.addOverlay(mk);
-            map.panTo(r.point);
-            map.enableScrollWheelZoom(true);
-        }
-        else {
-            alert('failed' + this.getStatus());
-        }
-    }, {enableHighAccuracy: true})
+    //地图缩小放大(定位用户当前位置)
+    //  geolocation.getCurrentPosition(function (r) {
+    //     if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+    //         var mk = new BMap.Marker(r.point);
+    //         map.addOverlay(mk);
+    //         map.panTo(r.point);
+              map.enableScrollWheelZoom(true);
+    //     }
+    //     else {
+    //         alert('failed' + this.getStatus());
+    //     }
+    // }, {enableHighAccuracy: true})
 
     //清除标识
     function clearOverlays() {

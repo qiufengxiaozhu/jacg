@@ -30,7 +30,7 @@
     <select id="getConvenientList" resultType="com.zte.zudp.admin.mm.convenient.entity.MMConvenient">
         SELECT
             n.id,
-            n.NAME,
+            n.name,
             n.location,
             n.description,
             n.longitude,

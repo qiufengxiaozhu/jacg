@@ -134,8 +134,8 @@
                             <label class="col-sm-3 control-label my-control-label ">所在时区：</label>
                             <div class="col-sm-6">
                                 <select id="timeZone" name="timeZone" class="form-control">
-                                    <option value="1" selected>吉安市</option>
-                                    <option value="2">吉州区</option>
+<#--                                    <option value="1" selected>吉安市</option>-->
+                                    <option value="2" selected>吉州区</option>
                                     <option value="3">青原区</option>
                                     <option value="4">庐陵新区</option>
                                     <option value="5">井开区</option>
