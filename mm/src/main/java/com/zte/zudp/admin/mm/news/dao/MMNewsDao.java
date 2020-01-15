@@ -52,4 +52,11 @@ public interface MMNewsDao extends AbstractDao<MMNews>{
      * 根据发布时间查找新闻
      */
     ArrayList<MMNews> find_newsList(@Param("newsDate")String newsDate);
+
+    /**
+     * 根据手机号 查询出用户名
+     * @param phone
+     * @return
+     */
+    String findNameByTel(@Param("phone") String phone);
 }

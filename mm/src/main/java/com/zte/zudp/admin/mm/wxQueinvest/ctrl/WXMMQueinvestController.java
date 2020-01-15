@@ -76,6 +76,8 @@ public class WXMMQueinvestController {
         Object userName = request.getSession().getAttribute("userName");
         // 题目数量
             int queSize = 0;
+        // 获取到问卷id
+        String queinvestId = map.get("queiId").toString();
             // 存放查询出来的结果
             List<WXMMQueinvest> list= new ArrayList();
             try {
@@ -102,7 +104,7 @@ public class WXMMQueinvestController {
                 // 遍历list，将它插入到答案表中
                 for(int i = 0;i<list.size();i++){ //得到的问卷名称
 
-                    String queinvestId = list.get(i).getQueinvestId(); // 问卷id
+//                    String queinvestId = list.get(i).getQueinvestId(); // 问卷id
                     String questionId =  list.get(i).getQuestionId(); // 题目id
                     String optContext = list.get(i).getOptContext(); // 所选的答案
                     //生成一个无序的uuid

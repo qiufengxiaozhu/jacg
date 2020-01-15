@@ -550,7 +550,7 @@
 //
 
         // 查询出所有的题目
-        zudp.ajax("/api/wxqueinvest/addQuestion").post().then(function (value) {
+        zudp.ajax("/api/wxqueinvest/addQuestion?queId="+queId).get().then(function (value) {
 
 //
             //获取到table

@@ -67,6 +67,8 @@
     <form class="form-class" style="padding-bottom: 2rem;" action="/mm/wxqueinvest/test" method="post" onsubmit="return check()">
 
     <#list list! as question>
+    <#--问卷id-->
+        <input type="hidden" value="${question.id}" class="queSize02" name = "queiId">
     <#--题目id-->
         <input type="hidden" value="${question.questionId!}" class="queSize" name = "${question.rowNum!}queId">
         <#--<input type="hidden" value="${list?size}" class="queSize" name = "queSize">-->

@@ -39,10 +39,22 @@
                     return true;
                 }
                 else {
-                    alert("请完善上报信息!!!");
-                    return false;
+                    if(!flagTitle){
+                        alert("标题请输入1-20个字");
+                        return false;
+                    }
+                    else if(!flagContent){
+                        alert("内容请输入1-50个字");
+                        return false;
+                    } else if(!flagName){
+                        alert("联系人请输入2-7个字");
+                        return false;
+                    } else if(!flagTel){
+                        alert("内容请输入11位数字");
+                        return false;
+                    }
                 }
-//                return checktitle()&&checkcontent()&&checkname()&&checktelephone()&&checkplace();
+
             })
             $("input[name='title']").blur(function () {
                         checktitle();
@@ -62,49 +74,58 @@
         });
 
         //检验标题
+        var flagTitle;
         function checktitle(){
             var title=$("input[name='title']").val();
             var reg_title= /^.{1,20}$/;
-            var flag=reg_title.test(title)
-            if(title!=null && title!='' &&flag){
+            flagTitle=reg_title.test(title)
+            if(title!=null && title!='' &&flagTitle){
+
                 $("#sp_title2").show();
+                $("#sp_title02").hide();
                 $("#sp_title").hide();
                 return true;
             }else{
                 $("#sp_title").show();
                 $("#sp_title2").hide();
+                $("#sp_title02").show();
                 return false;
             }
         }
 
         //检验内容
+        var flagContent;
         function checkcontent(){
             var content=$("input[name='description']").val();
             var reg_content= /^.{1,50}$/;
-            var flag=reg_content.test(content);
-            if(content!=null && content!='' &&flag){
+              flagContent=reg_content.test(content);
+            if(content!=null && content!='' &&flagContent){
+
                 $("#sp_content2").show();
+                $("#sp_content02").hide();
                 $("#sp_content").hide();
                 return true;
             }else{
                 $("#sp_content").show();
+                $("#sp_content02").show();
                 $("#sp_content2").hide();
                 return false;
             }
         }
 
         //检验联系人
+        var flagName;
         function checkname(){
             var name=$("input[name='contact']").val();
             var reg_name=/^.{2,7}$/;
-            var flag=reg_name.test(name);
-            if (flag){
+              flagName=reg_name.test(name);
+            if (flagName){
                 $("#sp_name2").show();
                 $("#sp_name02").hide();
                 $("#sp_name").hide();
                 return true;
             }else{
-//                $("#sp_name02").show();
+                $("#sp_name02").show();
                 $("#sp_name").show();
                 $("#sp_name2").hide();
                 return false;
@@ -113,17 +134,20 @@
         }
 
         //检查手机号
+        var flagTel;
         function checktelephone(){
             var telephone=$("input[name='phone']").val();
             var reg_telephonr= /^(((13|14|15|18|17)\d{9}))$/;
-            var flag=reg_telephonr.test(telephone);
-            if (flag){
+            flagTel =reg_telephonr.test(telephone);
+            if (flagTel){
                 $("#sp_telephone2").show();
+                $("#sp_telephone02").hide();
                 $("#sp_telephone").hide();
                 return true;
             }else{
                 $("#sp_telephone").show();
                 $("#sp_telephone2").hide();
+                $("#sp_telephone02").show();
                 return false;
             }
         }
@@ -155,6 +179,7 @@
                         <div class="port flex flex-c-c"><span>标题&nbsp;:</span>
                             <input type="text"  name="title" class="tab-input flex-1" placeholder="请输入您的来信标题(20字以内)">
                             <span class="sp-span2" id="sp_title2" style="color:green">√</span>
+                            <span id="sp_title02" style="color:red">*</span>
                         </div>
                         <span class="sp-span" id="sp_title">请输入1-20个字</span>
                     </div>
@@ -166,6 +191,7 @@
                             <span style="width: auto;">文本内容描述&nbsp;:</span>
                             <input type="text" name="description" class="tab-input flex-1" placeholder="请输入文本内容描述(50字以内)">
                             <span class="sp-span2" id="sp_content2" style="color:green">√</span>
+                            <span id="sp_content02" style="color:red">*</span>
                         </div>
                         <span class="sp-span" id="sp_content">请输入1-50个字</span>
                     </div>
@@ -186,7 +212,7 @@
 
                     <div class="theme">
                         <div class="port flex flex-c-c"><span>联系人&nbsp;:</span>
-                            <input type="text" name="contact" class="tab-input flex-1" placeholder="请输入您的真实姓名" value="">
+                            <input type="text" name="contact" class="tab-input flex-1" placeholder="请输入您的真实姓名" value="${Session.name02!}">
                             <span class="sp-span2" id="sp_name2" style="color:green">√</span>
                             <span id="sp_name02" style="color:red">*</span>
 
@@ -198,6 +224,8 @@
                         <div class="port flex flex-c-c"><span>联系电话&nbsp;:</span>
                         <input type="text" name="phone" class="tab-input flex-1" placeholder="请输入您的电话(11位数字)" value="${Session.userName!}">
                             <span class="sp-span2" id="sp_telephone2" style="color:green">√</span>
+                            <span class="sp-span2" id="sp_telephone02" style="color:red">*</span>
+
                         </div>
                         <span class="sp-span" id="sp_telephone">请输入11位数字</span>
                     </div>

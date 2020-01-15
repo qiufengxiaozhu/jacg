@@ -35,8 +35,12 @@ public class WXQueinvestService extends BusinessService<WXQueinvest> {
     }
 
 
-    public List<WXQuestions> addQuestion() {
-        return wxQueinvestDao.addQuestion();
+    /**
+     * 查询出所有的题目
+     * @return
+     */
+    public List<WXQuestions> addQuestion(String queId) {
+        return wxQueinvestDao.addQuestion(queId);
     }
 
 

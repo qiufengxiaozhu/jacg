@@ -180,4 +180,8 @@
     </select>
 
 
+    <!--根据电话号码查询出用户名-->
+<select id="findNameByTel" resultType="java.lang.String">
+    select  u.name from sys_user u where u.login_name =#{phone}
+</select>
 </mapper>
