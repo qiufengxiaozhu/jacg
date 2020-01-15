@@ -316,7 +316,7 @@
                    rangelength:"字符个数不能超过15"
                    // remote: "新闻标题已存在"
                },
-                timeZone: "时区不能为空",
+                timeZone: "所在时区不能为空",
 //                identification: {
 //                    required: "请输入岗位标识",
 //                    remote: "岗位标识已存在"
