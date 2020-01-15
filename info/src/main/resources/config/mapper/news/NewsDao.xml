@@ -49,7 +49,7 @@
         <if test="endTime!=null and endTime!=''">
             and  #{endTime} <![CDATA[ >= ]]> `news_date` and n.status = '已发布状态'
         </if>
-        ORDER BY n.news_date desc
+        ORDER BY n.create_date desc,n.news_date desc
     </select>
 
     <select id="get" resultMap="newsMap" >

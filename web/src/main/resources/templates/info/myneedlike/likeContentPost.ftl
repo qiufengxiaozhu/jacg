@@ -133,7 +133,7 @@
                         <div class="form-group" style="">
                             <label class="col-sm-3 control-label my-control-label">附件：</label>
                             <div id="fileList" class="uploader-list"></div>
-                            <pre style="width: 50%">附件只支持jpg,png,gif,mp4,MP3,(mp4文件大小请小于80MB)</pre>
+                            <pre style="width: 50%">格式仅支持jpg,png,gif,mp3,mp4</pre>
                             <div style="width:80;height: 35px;position: relative;margin:0 auto">
 
                                 <div id="xg_rar">上传附件</div>
