@@ -66,4 +66,13 @@ public class MMNewsService extends FileBusinessService<MMNews> {
     public ArrayList<MMNews> find_newsList(String newsDate) {
         return newsDao.find_newsList(newsDate);
     }
+
+    /**
+     * 根据电话号码 查询出名称
+     * @param phone
+     * @return
+     */
+    public String findNameByTel(String phone) {
+      return  newsDao.findNameByTel(phone);
+    }
 }

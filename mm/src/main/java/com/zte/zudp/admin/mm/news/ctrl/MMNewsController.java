@@ -31,6 +31,8 @@ public class MMNewsController {
     @Autowired
     private UserService userService;
 
+
+
     /**
      * 查询所有新闻
      * @param model
@@ -383,7 +385,7 @@ public class MMNewsController {
     }
 
     /**
-     * 登录
+     * 登录  微信
      * @param t
      * @return
      */
@@ -395,6 +397,13 @@ public class MMNewsController {
         String name = t.getName();
         String phone = t.getLoginName();
         HttpServletRequest request = WebUtil.getHttpRequest();
+        // 根据手机号 查询出用户名称
+        String name02 =null;
+        if(newsService.findNameByTel(phone)!=null){
+           name02 = newsService.findNameByTel(phone);
+        }
+
+
         User user = userService.getUserWithNoActiveByLoginName(username);
 
         if (user == null) {
@@ -417,6 +426,7 @@ public class MMNewsController {
 
         request.getSession(true).setAttribute("userName", phone);
         request.getSession(true).setAttribute("userPhone", phone);
+        request.getSession(true).setAttribute("name02", name02);
         return "ok";
 
     }

@@ -29,7 +29,7 @@ public interface WXQueinvestDao extends AbstractDao<WXQueinvest> {
     List<Dictionary> getList();
 
 
-    List<WXQuestions> addQuestion();
+    List<WXQuestions> addQuestion(@Param("queId")String queId);
 
 
 

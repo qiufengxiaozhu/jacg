@@ -69,10 +69,10 @@ public class WXQueinvestContrller extends AbstractCRUDController<WXQueinvest> {
      * @return
      */
     @JSON
-    @PostMapping(value = "/addQuestion")
+    @GetMapping(value = "/addQuestion")
     @EndpointRest(id = "questionlist", name = "题目列表", authorizedType = AuthorizedType.LOGIN)
-    public List<WXQuestions> addQuestion() {
-        List<WXQuestions> list= wxQueinvestService.addQuestion();
+    public List<WXQuestions> addQuestion(@RequestParam("queId") String queId) {
+        List<WXQuestions> list= wxQueinvestService.addQuestion(queId);
         System.out.println(list);
         return list;
 
@@ -176,7 +176,7 @@ public class WXQueinvestContrller extends AbstractCRUDController<WXQueinvest> {
      */
     @ResponseBody
     @GetMapping("overView")
-    public List<Map> overView(@RequestParam String id){ //  问卷id
+    public List<Map> overView(@RequestParam("id") String id){ //  问卷id
         List<Map> list = wxQueinvestService.overView(id);
 
         return list;
