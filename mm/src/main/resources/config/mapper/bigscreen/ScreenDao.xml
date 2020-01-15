@@ -161,7 +161,7 @@
     </select>
 
     <select id="glindexCaseList" resultType="java.util.Map">
-   select RECID,DISTRICTNAME,STREETNAME,MAINTYPENAME,EVENTDESC,DATE_FORMAT(DEADLINE,'%Y-%m-%d' ) as DEADLINE  from  tocgcase where STREETNAME=#{name}
+   select RECID,DISTRICTNAME,STREETNAME,MAINTYPENAME,EVENTDESC,DATE_FORMAT(DEADLINE,'%Y-%m-%d %T' ) as DEADLINE  from  tocgcase where STREETNAME=#{name}
     limit ${pages},10;
    </select>
 

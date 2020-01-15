@@ -247,7 +247,7 @@ function rightEvenType() {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
-      /*      legend: {
+            legend: {
                 orient: 'vertical',
                 data: data,
                 top:'5%',
@@ -255,7 +255,6 @@ function rightEvenType() {
                 right:"0"
 
             },
-*/
 
             series: [{
                 name: '销量',

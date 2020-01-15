@@ -61,10 +61,8 @@
         $('.cover').hide();
         $(document).on('click','.de-listright',function(){
             $('.cover').show();
-            $('.cover').css({'top':$(document).scrollTop()+'px'});
             document.body.addEventListener('touchmove',bodyScroll,false);
             $('body').css({'position':'fixed',"width":"100%"});
-            console.log(123)
         })
         $('.cancel').click(function(){
             $('.cover').hide();
