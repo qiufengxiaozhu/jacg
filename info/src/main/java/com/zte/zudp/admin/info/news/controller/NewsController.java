@@ -5,7 +5,9 @@ import com.zte.zudp.admin.common.annotation.endpoint.EndpointModule;
 import com.zte.zudp.admin.common.annotation.endpoint.EndpointRest;
 import com.zte.zudp.admin.common.enums.AuthorizedType;
 import com.zte.zudp.admin.common.persistence.Result;
+import com.zte.zudp.admin.common.persistence.Subject;
 import com.zte.zudp.admin.common.persistence.web.AbstractCRUDController;
+import com.zte.zudp.admin.common.security.SubjectUtil;
 import com.zte.zudp.admin.common.util.IDUtil;
 import com.zte.zudp.admin.info.news.entity.News;
 import com.zte.zudp.admin.info.news.service.NewsService;
@@ -80,6 +82,7 @@ public class NewsController extends AbstractCRUDController<News> {
     @PostMapping("/saveNews")
     @ResponseBody
     public Result saveNews(@RequestBody News news) {
+
 
         int i = newsService.saveNews(news);
         return Result.success("yes", "");//data 不能为 null，一定有对象

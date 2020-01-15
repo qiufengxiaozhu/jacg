@@ -32,7 +32,7 @@
                         <div class='form-group'>
                             <div class='col-sm-12'>
                                 <label class='control-label'>姓名:</label>
-                                <input type='text' name='name' id='user_name' placeholder='用户名' class='form-control'>
+                                <input type='text' name='name' id='user_name' placeholder='姓名' class='form-control'>
                             </div>
                         </div>
 

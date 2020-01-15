@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * 公众上报controller
  * @author
@@ -30,10 +32,11 @@ public class IssueReplyController extends AbstractCRUDController<IssueReply> {
      */
     @RequestMapping("/getFj")
     @ResponseBody
-    public IssueReply getFj(String id){
+    public IssueReply getFj(String id, HttpServletRequest request){
         // 获取到登录人名称
         String loginName = SubjectUtil.getSubject().getLoginName();
         if(loginName!= null){
+            request.getSession().setAttribute("loginName",loginName);
             issueReplyService.insertIntoIssueReply(loginName,id);
         }
         IssueReply issueReply = issueReplyService.get(id);
