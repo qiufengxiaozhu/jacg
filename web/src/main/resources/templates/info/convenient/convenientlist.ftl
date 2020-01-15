@@ -193,7 +193,7 @@
                                     <textarea class="form-control" rows="5" cols="" name="description" id="description"></textarea>
                                 </div>
                                 <div>
-                                    <i class="i_context my-i_contdescriptionext">*</i>
+                                    <i class="i_context my-i_context">*</i>
                                 </div>
                             </div>
 

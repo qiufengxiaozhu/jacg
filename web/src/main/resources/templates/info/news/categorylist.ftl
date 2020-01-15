@@ -205,7 +205,7 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}新增类别",
+            title: "{type}新闻类别",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],

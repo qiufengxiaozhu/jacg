@@ -51,7 +51,7 @@
                         </button>&nbsp;&nbsp;
                     </@hasPermission>
                     <@hasPermission name="oaManager:post:batchDelete">
-                        <button class='btn btn-success btn-danger' id="delete-items">
+                        <button class='btn btn-success btn-danger' id="delete-items02">
                             批量删除
                         </button>
                     </@hasPermission>
@@ -111,10 +111,6 @@
                             <div class="col-sm-6">
 
                                 <input type="text" name="title" maxlength="64" id="title" placeholder="新闻标题" class="form-control">
-
-                                    <script  type='text/javascript'>
-                                        $('#title').val("123");
-                                    </script>
 
                             </div>
                             <div>
@@ -442,7 +438,7 @@
         var obj={
             url: urlstr,
             formId: formIdStr,
-            title: "{type}新闻",
+            title: "{type}新闻资讯",
             success: "数据{msg}",
             error: "数据{msg}",
             disabledName: ["type", 'value'],
@@ -501,7 +497,7 @@
                             return ah;
                         }
                     },
-                    {data: 'content',width: '32%',
+                    {data: 'contentnohtml',width: '32%',
                         render:function(data, type, row){
                         var suf="...";
                         if(data!=null && data.length<28){
@@ -1042,12 +1038,23 @@
             obj.callback.delete(rowData);
         });
 
-        $(document).on("click", "#delete-items", function () {
+// 批量删除
+        $(document).on("click", "#delete-items02", function () {
             var data = dataTable.rows('.evenSelect').data();
             var ids = [];
+            var statusIds =[];
             for (var k = 0; k < data.length; k++) {
                 ids.push(data[k].id);
+                // 判断发布状态值
+                if(data[k].status == "已发布状态"){
+                    statusIds.push(data[k].status);
+                }
             }
+            if (statusIds.length >0) {
+                zudp.plugin.dialog("warning").confirm("您选中的数据有发布状态的新闻", "关闭")
+                return;
+            }
+
             if (ids.length == 0) {
                 zudp.plugin.dialog("warning").confirm("数据未选中", "关闭")
                 return;
