@@ -25,10 +25,10 @@ public class WXOptions extends DataEntity {
     /**
      * 选项内容
      */
-    private String choiceText01;
-    private String choiceText02;
-    private String choiceText03;
-    private String choiceText04;
+    private String opt01;
+    private String opt02;
+    private String opt03;
+
     /**
      * 题干的id
      */
@@ -56,36 +56,28 @@ public class WXOptions extends DataEntity {
         this.number = number;
     }
 
-    public String getChoiceText01() {
-        return choiceText01;
+    public String getOpt01() {
+        return opt01;
     }
 
-    public void setChoiceText01(String choiceText01) {
-        this.choiceText01 = choiceText01;
+    public void setOpt01(String opt01) {
+        this.opt01 = opt01;
     }
 
-    public String getChoiceText02() {
-        return choiceText02;
+    public String getOpt02() {
+        return opt02;
     }
 
-    public void setChoiceText02(String choiceText02) {
-        this.choiceText02 = choiceText02;
+    public void setOpt02(String opt02) {
+        this.opt02 = opt02;
     }
 
-    public String getChoiceText03() {
-        return choiceText03;
+    public String getOpt03() {
+        return opt03;
     }
 
-    public void setChoiceText03(String choiceText03) {
-        this.choiceText03 = choiceText03;
-    }
-
-    public String getChoiceText04() {
-        return choiceText04;
-    }
-
-    public void setChoiceText04(String choiceText04) {
-        this.choiceText04 = choiceText04;
+    public void setOpt03(String opt03) {
+        this.opt03 = opt03;
     }
 
     public String getQuestionsId() {
