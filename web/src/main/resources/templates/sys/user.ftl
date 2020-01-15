@@ -30,8 +30,8 @@
                         </@hasPermission>
                         <div class="querybtn my-querybtn">
                             <label id="click"></label>
-                            <input type="text" name="search" maxlength="255" id="user_loginName_select_first"  placeholder="用户名" class="form-control search-input">
-                            <input type="text" name="name" maxlength="255" id="user_name_select" placeholder="姓名" class="form-control">
+                            <input type="text" name="search" maxlength="255" id="user_loginName_select_first"  placeholder="姓名" class="form-control search-input">
+                            <input type="text" name="name" maxlength="255" id="user_name_select" placeholder="用户名" class="form-control">
                             <input type="text" name="phone" id="user_phone_select" placeholder="电话号码" class="form-control">
                             <button class="btn btn-primary mgl my-mgl research-btn" >搜索</button>
                             <button class="btn btn-primary mgl my-mgl clear-input" >清空</button>&nbsp;&nbsp;

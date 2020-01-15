@@ -38,7 +38,7 @@
             <thead>
             <tr>
                 <th>序号</th>
-                <th>单位名称</th>
+                <#--<th>单位名称</th>-->
                 <th>公众上报数</th>
                 <th>已回复数</th>
                 <th>未回复数</th>
@@ -85,7 +85,7 @@
                     table +=' <tr>\n' +
                             '                <th>'+j+'</th>\n' +
                             // '                <th>'+list[i].replyId+'</th>\n' +
-                            '                <th>'+'吉安城管'+'</th>\n' +
+//                            '                <th>'+'吉安城管'+'</th>\n' +
                             '                <th>'+list[i].sbSum+'</th>\n' +
                             '                <th>'+list[i].replyYes+'</th>\n' +
                             '                <th>'+list[i].repleNo+'</th>\n' +
