@@ -9,7 +9,7 @@
         t1.id id,
         t1.title title,
         ( CASE WHEN LENGTH(  t1.contentsText ) > 20 THEN CONCAT( SUBSTRING(  t1.contentsText, 1, 20 ), '...' ) ELSE  t1.contentsText END ) AS contentsText,
-        t1.contents contents,
+       t1.contents contents,
         t1.status status,
         DATE_FORMAT(t1.pushTime,"%Y-%m-%d %T") pushTime
         FROM

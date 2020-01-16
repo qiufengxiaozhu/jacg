@@ -114,6 +114,7 @@
                             <div>
                                 <i class="i_context my-i_context" id="titId">*</i>
                             </div>
+
                         </div>
 
 
@@ -121,7 +122,7 @@
                             <label class="col-sm-3 control-label my-control-label">内容：</label>
                             <div class="col-sm-6">
                                 <textarea class="form-control" rows="5" cols="" name="contents" id="contents"></textarea>
-                            </div>
+                            </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                             <div>
                                 <i class="i_context my-i_context" id="conId">*</i>
                             </div>
@@ -217,15 +218,12 @@
         $(".testSave").css("display","none");
         $(".testSave02").css("display","block");
 
-//        $("#save-btn").hide();
-//        $("#save-btn-test").hide();
+//
         UE.getEditor('contents').setContent("");
         dataTable.ajax.reload();
 
 
     });
-
-
 
     //初始化百度富文本框  开始  id='content'
     var ue = UE.getEditor('contents',{
@@ -254,6 +252,9 @@
 
     //  新建     信息到数据库中 将带格式 和不带格式的数据都存储到数据库中
         $(document).on("click", '#save-btn-test', function (value) {
+            $("#conId").css("color","#CC5965").html("");
+            $("#titId").css("color","#CC5965").html("");
+
             $(".testSave").css("display","none");
             $(".testSave02").css("display","block");
         // 带格式的内容
@@ -262,28 +263,49 @@
         var contentsText = UE.getEditor('contents').getContentTxt();
         // 获取到表单的数据
         var title = $("#title").val();
-//        var contents = $("#contents").val();
-        var data = {
-            contents : contents,
-        contentsText : contentsText,
-                title: title
-    };
-        data = JSON.stringify(data);
-        zudp.ajax("/api/dyPush/insert02").post(data).then(function (value) {
-            dataTable.ajax.reload();
-            $("#myModal5").modal("hide");
+            // 判断标题是否为空
+            var reg_title= /^.{1,20}$/;
+            var flagTitle=reg_title.test(title);
+            var reg_content= /^.{1,10000}$/;
+            var flagContent=reg_content.test(contents);
 
-        });
+             if(title!=null && title!='' &&flagTitle && contents!=null && contents!='' && flagContent){
+                var data = {
+                    contents : contents,
+                    contentsText : contentsText,
+                    title: title
+                };
+                data = JSON.stringify(data);
+                zudp.ajax("/api/dyPush/insert02").post(data).then(function (value) {
+                    dataTable.ajax.reload();
+                    $("#myModal5").modal("hide");
+
+                });
+
+                return true;
+            }else {
+                 if(!flagTitle){
+                     $("#titId").css("color","#CC5965").html("字符个数应在1-20个");
+
+                     return false;
+                 }
+                 if(!flagContent){
+                     $("#conId").css("color","#CC5965").html("字符个数应在1-10000个");
+                     return false;
+                 }
+
+            }
 
     });
 
 
 // 详情  富文本框的信息
         $(document).on("click", '#detailId', function (value) {
+            UE.getEditor('contents').setContent("");
             $(".testSave02").css("display","none");
             $(".testSave").css("display","block");
         // 获取自带的按钮的id值时候，不需要转成json字符串，已经转了
-        var id = $("#detailId").val();
+        var id = $(this).val();
 //            id = JSON.stringify(id);
         zudp.ajax(urlstr + "/getDetail").post(id).then(function (data) {
             if (data.contents != null && data.contents.length > 0) {
@@ -299,11 +321,12 @@
 
         // 编辑   获取到富文本框的信息
     $(document).on("click", '#editId', function (value) {
+
         ue.setEnabled();
         $(".testSave02").css("display","none");
         $(".testSave").css("display","block");
         // 获取自带的按钮的id值时候，不需要转成json字符串，已经转了
-        var id = $("#editId").val();
+        var id = $(this).val();
 //            id = JSON.stringify(id);
         zudp.ajax(urlstr + "/getDetail").post(id).then(function (data) {
             if (data.contents != null && data.contents.length > 0) {
@@ -311,21 +334,9 @@
             } else {
                 UE.getEditor('contents').setContent("");
             }
-//            ue.setDisabled();
-//            location.reload();
         });
     });
 
-    $(document).on("click", '#save-btn-test', function (e) {
-        $("dy_form").submit(function () {
-        if(checktitle() && checkcontents()){
-            return true;
-        }
-        else {
-            return false;
-        }
-        })
-    });
 
 
 
@@ -333,6 +344,35 @@
 
 
     $(document).ready(function () {
+
+        // 验证
+        $("#dy_form").validate({
+            rules: {
+                title:{
+                    required:true,
+                    rangelength:[0,20]
+                },
+
+                contents:{
+                    required:true,
+                    rangelength:[0,10000]
+                }
+            },
+            messages: {
+                title: {
+                    required: "请输入推送标题",
+                    rangelength:"字符个数不能超过20"
+                },
+
+                contents: {
+                    required: "推送正文不能为空",
+                    rangelength:"字符个数不能超过10000个"
+                }
+            },ignore: []
+        });
+
+
+
 
 
 
@@ -457,32 +497,32 @@
 
 
     // 检验标题
-    function checktitle(){
-        var title=$("input[name='title']").val();
-        var reg_title= /^.{1,20}$/;
-        var flag=reg_title.test(title)
-        if(title!=null && title!='' &&flag){
-//            $("#sp_title").css("color","green").html("√");
-            return true;
-        }else{
-            $("#titId").css("color","red").html("字符个数应在1-20个");
-            return false;
-        }
-    }
+//    function checktitle(){
+//        var title=$("input[name='title']").val();
+//        var reg_title= /^.{1,20}$/;
+//        var flag=reg_title.test(title)
+//        if(title!=null && title!='' &&flag){
+////            $("#sp_title").css("color","green").html("√");
+//            return true;
+//        }else{
+//            $("#titId").css("color","red").html("字符个数应在1-20个");
+//            return false;
+//        }
+//    }
 
     //检验内容
-    function checkcontents(){
-        var content=$("input[name='contents']").val();
-        var reg_content= /^.{1,50}$/;
-        var flag=reg_content.test(content);
-        if(content!=null && content!='' &&flag){
-//            $("#sp_content").css("color","green").html("√");
-            return true;
-        }else{
-            $("#conId").css("color","red").html("字符个数应在1-50个");
-            return false;
-        }
-    }
+//    function checkcontents(){
+//        var content=$("input[name='contents']").val();
+//        var reg_content= /^.{1,50}$/;
+//        var flag=reg_content.test(content);
+//        if(content!=null && content!='' &&flag){
+////            $("#sp_content").css("color","green").html("√");
+//            return true;
+//        }else{
+//            $("#conId").css("color","red").html("字符个数应在1-50个");
+//            return false;
+//        }
+//    }
 
 
     // 推送
@@ -494,7 +534,7 @@
             window.e.cancelBubble = true;
         }
         //获取到id  内置的按钮的id 不需要使用stringify。
-        var id = $("#pushId").val();
+        var id = $(this).val();
 
         zudp.ajax("/api/dyPush/updateStatus").post(id).then(function (value) {
             // 刷新页面
@@ -516,7 +556,7 @@
             window.e.cancelBubble = true;
         }
         //获取到id  内置的按钮的id 不需要使用stringify。
-        var id = $("#unpushId").val();
+        var id = $(this).val();
 
         zudp.ajax("/api/dyPush/updateStatus02").post(id).then(function (value) {
             // 刷新页面
