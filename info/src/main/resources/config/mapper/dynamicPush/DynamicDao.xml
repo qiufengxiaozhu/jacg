@@ -83,12 +83,13 @@
 
     </select>
 <!--修改-->
-    <update id="update">
+    <update id="update02">
         update
-        jacg_dynamicpush t1
+        jacg_dynamicpush
         set
-        t1.title = #{title},
-        t1.contents = #{contents}
+        title = #{title},
+        contents = #{contents},
+        contentsText = #{contentsText}
 
         where id =#{id}
 

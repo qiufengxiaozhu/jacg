@@ -11,6 +11,8 @@ import com.zte.zudp.admin.info.dynamicpush.svr.DynamicPushService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 /**
  * 动态推送controller
  * @author
@@ -62,6 +64,15 @@ public class DynamicPushController extends AbstractCRUDController<DynamicPush> {
     }
 
 
+    @RequestMapping("/update02")
+    public void update02(@RequestBody DynamicPush dynamicPush){
+
+//        String id = map.get("id").toString();
+//        String contents = map.get("contents").toString();
+//        String contentsText = map.get("contentsText").toString();
+//        String title = map.get("title").toString();
+        dynamicPushService.update02(dynamicPush);
+    }
 
 
 }

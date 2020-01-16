@@ -139,7 +139,7 @@
                     <button type="button" class="btn btn-primary" id="save-btn-test" style="float: right">保存</button>
                     </div>
                 <div class="modal-footer testSave" style="float: right">
-                    <button type="button" class="btn btn-primary" id="save-btn" style="float: right">保存</button>
+                    <button type="button" class="btn btn-primary" id="save-btn02" style="float: right">保存</button>
                     </div>
                     <div class="modal-footer" style="float: right">
                         <button type="button" class="btn btn-white" data-dismiss="modal" style="float: right">关闭</button>
@@ -299,11 +299,36 @@
     });
 
 
+
+
+    // 编辑的时候，点击保存按钮
+    $(document).on("click", '#save-btn02', function (value) {
+       // 获取到输入框里面的数据
+        var contents = UE.getEditor('contents').getContent();
+        var contentsText = UE.getEditor('contents').getContentTxt();
+        var title = $("#title").val();
+        var id =$("#id").val();
+
+        var objJson = {
+            id:id,
+            contents : contents,
+            contentsText : contentsText,
+            title: title
+        };
+        objJson = JSON.stringify(objJson);
+        zudp.ajax("/api/dyPush/update02").post(objJson).then(function (value) {
+            dataTable.ajax.reload();
+            $("#myModal5").modal("hide");
+        });
+
+
+    });
+
 // 详情  富文本框的信息
         $(document).on("click", '#detailId', function (value) {
             UE.getEditor('contents').setContent("");
             $(".testSave02").css("display","none");
-            $(".testSave").css("display","block");
+            $(".testSave").css("display","none");
         // 获取自带的按钮的id值时候，不需要转成json字符串，已经转了
         var id = $(this).val();
 //            id = JSON.stringify(id);
@@ -374,8 +399,6 @@
 
 
 
-
-
         findList();
 
         var obj={
@@ -426,7 +449,6 @@
                     {data: 'id', visible: false},
                     {data: 'title',width:'20%'},
                     {data: 'contentsText',width:'37%'},
-//                    {data: 'pushTime'},
                     {
                         data: 'pushTime',width:'15%',
                         render: function (data, type, row) {
@@ -438,7 +460,6 @@
                         }
                     },
 
-//                    {data: 'status'},
                     {
                         data: 'status',width:'5%',
                         render: function (data, type, row) {
@@ -496,34 +517,6 @@
     }
 
 
-    // 检验标题
-//    function checktitle(){
-//        var title=$("input[name='title']").val();
-//        var reg_title= /^.{1,20}$/;
-//        var flag=reg_title.test(title)
-//        if(title!=null && title!='' &&flag){
-////            $("#sp_title").css("color","green").html("√");
-//            return true;
-//        }else{
-//            $("#titId").css("color","red").html("字符个数应在1-20个");
-//            return false;
-//        }
-//    }
-
-    //检验内容
-//    function checkcontents(){
-//        var content=$("input[name='contents']").val();
-//        var reg_content= /^.{1,50}$/;
-//        var flag=reg_content.test(content);
-//        if(content!=null && content!='' &&flag){
-////            $("#sp_content").css("color","green").html("√");
-//            return true;
-//        }else{
-//            $("#conId").css("color","red").html("字符个数应在1-50个");
-//            return false;
-//        }
-//    }
-
 
     // 推送
     $(document).on("click", '#pushId', function (e) {
@@ -544,9 +537,6 @@
     });
 
 
-
-
-
     // 撤销推送
     $(document).on("click", '#unpushId', function (e) {
 
@@ -564,11 +554,6 @@
             dataTable.ajax.reload();
         });
     });
-
-
-
-
-
 
 
 
