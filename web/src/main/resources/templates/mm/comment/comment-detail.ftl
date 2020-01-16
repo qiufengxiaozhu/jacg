@@ -25,7 +25,7 @@
 
         <div class="inv-cont">
             <div class="">内容描述:</div>
-            <div class="inv-right inv-right-special" id="content">${Report.description!}</div>
+            <div class="inv-right inv-right-special" id="content" style="overflow: hidden">${Report.description!}</div>
         </div>
 
         <div class="flex inv-cont">
@@ -87,7 +87,7 @@
 
         <div class="flex inv-cont">
             <div class="">回复单位:</div>
-            <div class="inv-right"  id="replyDate">吉安城管</div>
+            <div class="inv-right"  id="replyDate"> </div>
         </div>
 
         <div class="flex inv-cont">

@@ -48,7 +48,7 @@
             </div>
             <div class="inv-cont inv-special">
                 <div class="">内容描述:</div>
-                <div class="inv-right inv-right-special">${entity.description!}</div>
+                <div class="inv-right inv-right-special" style="overflow: hidden">${entity.description!}</div>
             </div>
             <div class="inv-cont inv-pic">
                 <div class="">相关附件:</div>

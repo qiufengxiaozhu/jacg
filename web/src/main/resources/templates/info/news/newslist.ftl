@@ -279,32 +279,6 @@
                    rangelength:[0,15]
                },
                 timeZone:"required",
-
-//                identification:{
-//                    required:true,
-//                    rangelength:[0,64],
-//                    remote: {
-//                        url:"/api/post/checkIdenty",
-//                        type:"get",
-//                        data: {
-//                            "identy":function () {
-//                                return $("#identification").val();
-//                            },
-//                            "id":function () {
-//                                return $("#id").val();
-//                            }
-//                        },
-//                        dataFilter: function(data, type) {
-//                            var da=JSON.parse(data).data;
-//                            if(zudp.util.isBoolean(da)){
-//                                return da;
-//                            }else{
-//                                return false;
-//                            }
-//                        }
-//                    }
-//                },
-
                 content:{
                     required:true,
                     rangelength:[0,10000]
@@ -314,13 +288,8 @@
                title: {
                    required: "请输入新闻标题",
                    rangelength:"字符个数不能超过15"
-                   // remote: "新闻标题已存在"
                },
                 timeZone: "所在时区不能为空",
-//                identification: {
-//                    required: "请输入岗位标识",
-//                    remote: "岗位标识已存在"
-//                },
                 content: {
                     required: "新闻正文不能为空",
                     rangelength:"字符个数不能超过10000个"

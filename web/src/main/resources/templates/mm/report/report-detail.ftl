@@ -25,7 +25,7 @@
 
         <div class="inv-cont inv-special">
             <div class="">内容描述:</div>
-            <div class="inv-right inv-right-special" id="content">${mm.content!}</div>
+            <div class="inv-right inv-right-special" id="content" style="overflow: hidden">${mm.content!}</div>
         </div>
 
         <div class="flex inv-cont">
