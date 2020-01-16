@@ -89,7 +89,7 @@
                             <div id="span_avatar" class="span_avatar" style="text-align: center;display: block"></div>
                             <span class="percent1">0</span>
                         </div>
-                        <p style="color:#599235;font-size:16px;margin: 0 0 5px;"><strong>Hi! </strong>admin</p>
+                        <p style="color:#599235;font-size:16px;margin: 0 0 5px;" id="nameId"><strong>Hi! </strong></p>
                         <p style="color: whitesmoke;" id="home_time"></p >
                         <div class="avatar-link btn-group btn-group-justified">
                             <#--<a class="btn" ><i class="fa fa-briefcase"></i></a>-->
@@ -506,6 +506,11 @@
 
         zudp.ajax('/api/user/current').get('').then(function (data) {
             $('#name').text(data.name);
+            // 登录名称
+            var name = data.loginName;
+            $("#nameId").html("Hi!  " +name);
+
+            console.log(name);
             var src = data.avatar;
             if (zudp.util.isString(src)) {
                 // 提供默认图片
