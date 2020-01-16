@@ -47,4 +47,14 @@ public class DynamicPushService extends BusinessService<DynamicPush> {
     public void updateStatus02(String id) {
         dynamicPushDao.updateStatus02(id);
     }
+
+    /**
+     * 编辑之后保存
+     * @param contents
+     * @param contentsText
+     * @param title
+     */
+    public void update02(DynamicPush dynamicPush) {
+        dynamicPushDao.update02(dynamicPush);
+    }
 }

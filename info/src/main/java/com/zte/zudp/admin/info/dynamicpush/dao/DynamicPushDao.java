@@ -27,4 +27,12 @@ public interface DynamicPushDao  extends AbstractDao<DynamicPush> {
      * @param id
      */
     void updateStatus02(@Param("id") String id);
+
+    /**
+     * 编辑后保存
+     * @param contents
+     * @param contentsText
+     * @param title
+     */
+    void update02(DynamicPush dynamicPush);
 }
