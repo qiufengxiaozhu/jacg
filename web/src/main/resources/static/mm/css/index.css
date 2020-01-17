@@ -109,7 +109,7 @@ input::-webkit-input-placeholder{
 .fx-item p{text-align: center;}
 
 
-.in-center{padding: 0 0 1.5rem;box-sizing: border-box;height:calc(100% - 1.4rem);overflow: auto;}
+.in-center{box-sizing: border-box;height:calc(100% - 1.4rem);overflow: auto;}
 .thumbs-tit{height: 0.6rem;line-height: .6rem;border-left:2px solid #007FF4;padding-left: 0.3rem;margin-left: 0.3rem;margin-top: 0.2rem;color:#888888;font-weight: 600}
 
 

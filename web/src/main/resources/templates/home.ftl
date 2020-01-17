@@ -87,7 +87,7 @@
                                 <circle cx="75" cy="75" r="70" stroke-width="5" stroke="#00A5E0" fill="none" transform="matrix(0,-1,1,0,0,150)" stroke-dasharray="0 1069"></circle>
                             </svg>
                             <div id="span_avatar" class="span_avatar" style="text-align: center;display: block"></div>
-                            <span class="percent1">0</span>
+                            <#--<span class="percent1"></span>-->
                         </div>
                         <p style="color:#599235;font-size:16px;margin: 0 0 5px;" id="nameId"><strong>Hi! </strong></p>
                         <p style="color: whitesmoke;" id="home_time"></p >
@@ -820,11 +820,11 @@
     });*/
     <!--/修改头像-->
     /*资料填写率*/
-    var circle = document.querySelectorAll("circle")[1];
-    var percent = 70/100;
-    var perimeter = Math.PI * 2 * 75;
-    circle.setAttribute('stroke-dasharray', perimeter * percent + " " + perimeter * (1- percent));
-    $(".percent1").html(percent * 100)
+//    var circle = document.querySelectorAll("circle")[1];
+//    var percent = 70/100;
+//    var perimeter = Math.PI * 2 * 75;
+//    circle.setAttribute('stroke-dasharray', perimeter * percent + " " + perimeter * (1- percent));
+//    $(".percent1").html(percent * 100)
 </script>
 <script src="/js/menuTab.js"></script>
 
