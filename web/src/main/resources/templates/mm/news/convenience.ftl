@@ -11,6 +11,16 @@
 
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=F0i6SrLmHquLVNLCqpExxPrj8mWVdFwx"></script>
 
+	<style>
+		/*去掉百度地图标志*/
+		.BMap_cpyCtrl {
+			display: none;
+		}
+
+		.anchorBL {
+			display: none;
+		}
+	</style>
 </head>
 
 <body>

@@ -184,13 +184,13 @@
                     for(var i=0;i<likeInfo.attachPaths.length;i++) {
                         var attachPaths = likeInfo.attachPaths[i];
                         if(img.test(attachPaths)||jpg.test(attachPaths)||png.test(attachPaths)||gif.test(attachPaths)){
-                            accessory   +=  '<div class="de-img de-img1"><img src="'+attachPaths+'"  alt=""></div>';
+                            accessory   +=  '<div class="de-img de-img1" style="overflow: hidden;margin-right: 10px;"><img src="'+attachPaths+'"  alt=""></div>';
                         }else if(mp4.test(attachPaths)){
-                            accessory   +=  '<div class="de-img de-img1"><video width="100" height="100" controls>\n' +
+                            accessory   +=  '<div class="de-img de-img1" style="margin-right: 10px;"><video width="100%" height="100%" controls>\n' +
                                     '  <source src="'+attachPaths+'" type="video/mp4">\n' +
                                     '</video></div>\n';
                         }else if(mp3.test(attachPaths)){
-                            accessory   +=  '<div class="de-img de-img1"><audio width="100" height="100" src="'+attachPaths+'" controls="controls">\n' +
+                            accessory   +=  '<div class="de-img de-img1" style="overflow: hidden;margin-right: 10px;"><audio width="100" height="100" src="'+attachPaths+'" controls="controls">\n' +
                                     '</audio></div>';
                         }
                         $("#accessory").html(accessory);

@@ -57,12 +57,12 @@
                     mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".gif" ||
                     mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".jpeg"
                     >
-                        <img src='${mm.attachPaths[i]!}' class="inv-pic2" title="${mm.attachNames[i]!}">
+                        <div style="height: 70px"><img src='${mm.attachPaths[i]!}' class="inv-pic2" title="${mm.attachNames[i]!}"></div>
                     <#elseif mm.attachPaths[i]?substring(mm.attachPaths[i]?last_index_of("."))==".mp3">
-                        <audio controls>
+                        <div><audio controls>
                             <source src='${mm.attachPaths[i]!}' type="audio/mpeg">
                             您的浏览器不支持 audio 元素。
-                        </audio>
+                        </audio></div>
                     <#else >
                         <video  width="150" height="100" controls="controls" >
                             <source  src="${mm.attachPaths[i]!}" type="video/mp4" />

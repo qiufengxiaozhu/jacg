@@ -52,7 +52,7 @@
             </div>
             <div class="inv-cont inv-pic">
                 <div class="">相关附件:</div>
-                <div class="inv-right">
+                <div class="inv-right" style="overflow: hidden">
                     <#if entity.attachPaths?exists && entity.attachPaths?? && ((entity.attachPaths!?size)>0)>
                         <#list 0..(entity.attachPaths!?size-1) as i>
                             <#if entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".bmp" ||
@@ -61,16 +61,17 @@
                             entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".gif" ||
                             entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".jpeg"
                             >
-                                <img src='${entity.attachPaths[i]!}' class="inv-pic2" title="${entity.attachNames[i]!}">
+                                <div style="height: 70px"><img src='${entity.attachPaths[i]!}' class="inv-pic2" title="${entity.attachNames[i]!}"></div>
                             <#elseif entity.attachPaths[i]?substring(entity.attachPaths[i]?last_index_of("."))==".mp3">
-                                <audio controls>
+                                <div><audio controls>
                                     <source src='${entity.attachPaths[i]!}' type="audio/mpeg">
                                     您的浏览器不支持 audio 元素。
                                 </audio>
+                                    </div>
                             <#else >
-                                <video  width="150" height="100" controls="controls" >
+                                <div><video  width="150" height="100" controls="controls" >
                                     <source  src="${entity.attachPaths[i]!}" type="video/mp4" />
-                                </video>
+                                    </video></div>
                             </#if>
                         </#list>
                     </#if>
