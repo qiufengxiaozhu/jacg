@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.consultation.dao.ConsultDao">
+
+    <resultMap type="com.zte.zudp.admin.info.consultation.entity.Consult" id="consultMap">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="telephone" property="telephone"/>
+        <result column="title" property="title" />
+        <result column="content" property="content"/>
+        <result column="consult_id" property="consultId"/>
+        <result column="consult_date" property="consultDate"/>
+        <result column="reply" property="reply"/>
+        <result column="reply_id" property="replyId"/>
+        <result column="reply_unit_id" property="replyUnitId" />
+        <result column="reply_date" property="replyDate"/>
+        <result column="start_date" property="startDate"/>
+        <result column="end_date" property="endDate"/>
+        <result column="create_date" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="del" property="del" />
+
+        <collection property="attachDocList" ofType="com.zte.zudp.admin.info.attachDoc.entity.AttachDoc">
+            <id column="fid" property="id" />
+            <result column="billid" property="billid"/>
+            <result column="billtype" property="billtype"/>
+            <result column="fname" property="name"/>
+            <result column="path" property="path"/>
+            <result column="f_create_user" property="createUser.id"/>
+            <result column="f_create_date" property="createDate"/>
+            <result column="f_del" property="del"/>
+        </collection>
+    </resultMap>
+
+
+
+    <select id="findList" resultMap="consultMap" useCache="false">
+       /* SELECT distinct co.id,co.name,telephone,picture,video,
+        content,category_id,reply,ca.id as cid,ca.name as caname,
+
+        ca.create_date as cacreate_date,ca.create_user as cacreate_user,
+        ca.update_date as caupdate_date,ca.update_user as caupdate_user
+
+        from zmj_consult co join zmj_category ca
+        on category_id=ca.id
+        where co.del!=1 and ca.del!=1*/
+
+        SELECT  * FROM zmj_consult
+        WHERE  del!=1
+        <if test="name!=null and name!=''">
+            and name = #{name}
+        </if>
+        <if test="telephone!=null and telephone!=''">
+            and telephone =#{telephone}
+        </if>
+        <if test="title!=null and title!=''">
+            and `title` LIKE concat('%', #{title}, '%')
+        </if>
+        <if test="startDate!=null and startDate!=''">
+            and `consult_date` <![CDATA[ >= ]]>#{startDate}
+        </if>
+        <if test="endDate!=null and endDate!=''">
+            and #{endDate} <![CDATA[ >= ]]> `consult_date`
+        </if>
+        ORDER BY create_date desc
+    </select>
+
+
+    <select id="get" resultType="com.zte.zudp.admin.info.consultation.entity.Consult" >
+        SELECT
+        t1.id id,
+        t1.title title,
+        t1.content content,
+        t1.name name,
+        t1.telephone telephone,
+        DATE_FORMAT(t1.consult_date,'%Y-%m-%d %T') consultDate,
+        t1.reply reply,
+        DATE_FORMAT(t1.reply_date,'%Y-%m-%d %T') replyDate
+        FROM zmj_consult t1
+        where t1.id=#{id}
+    </select>
+
+    <select id="getFj" resultMap="consultMap" >
+        SELECT  DISTINCT z.*,f.id fid,f.name fname,path,
+        f.create_user f_create_user,f.create_date f_create_date,
+        f.del f_del
+        FROM zmj_consult z JOIN sys_attachments f
+        on z.id=billid
+        where z.id=#{id}
+    </select>
+
+    <!--<select id="checkName" resultType="java.lang.Integer">
+        SELECT COUNT(1) FROM oa_post
+        WHERE del =  '0'
+        AND `name` = #{name}
+        <if test="id!=null and id !=''">
+            AND id != #{id}
+        </if>
+    </select>-->
+
+    <!--<insert id="insert">
+        INSERT INTO zmj_consult (
+        id, name,telephone,content,category_id,reply,
+        create_date,
+        create_user,
+        update_date,
+        update_user,
+        del
+        )
+        VALUE (
+        #{id}, #{name}, #{telephone}, #{content}, #{categoryId}, #{reply},
+        #{createDate},
+        #{createUser.id},
+        #{updateDate},
+        #{updateUser.id},
+        0
+        )
+    </insert>-->
+
+    <update id="update" parameterType="com.zte.zudp.admin.info.consultation.entity.Consult">
+    UPDATE zmj_consult  SET
+    reply = #{reply},
+    reply_date = #{updateDate}
+    WHERE id = #{id}
+</update>
+
+    <delete id="delete">
+        UPDATE zmj_consult
+        SET del = 1
+        WHERE id = #{id}
+    </delete>
+
+    <delete id="batchDelete">
+        UPDATE zmj_consult SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </delete>
+
+</mapper>

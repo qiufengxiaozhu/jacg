@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.complain.dao.ComplainDao">
+
+    <resultMap type="com.zte.zudp.admin.info.complain.entity.ComplainEntity" id="complainMap">
+        <id column="id" property="id"/>
+        <result column="title" property="title" />
+        <result column="description" property="description"/>
+        <result column="type" property="type" />
+        <result column="contact" property="contact" />
+        <result column="phone" property="phone"/>
+        <result column="contact_user" property="contactUser"/>
+        <result column="complain_date" property="complainDate" />
+        <result column="reply_status" property="replyStatus"/>
+        <result column="reply_content" property="replyContent"/>
+        <result column="reply_date" property="replyDate"/>
+        <result column="reply_user" property="replyUser"/>
+        <result column="longitude" property="longitude"/>
+        <result column="latitude" property="latitude"/>
+        <result column="address" property="address"/>
+        <result column="create_user" property="createUser.id"/>
+        <result column="create_date" property="createDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="del" property="del" />
+    </resultMap>
+
+    <!-- select All 查询所有信息 -->
+    <select id="findList" resultMap="complainMap" useCache="false">
+        select
+            z.id,
+            z.title,
+            z.description,
+            z.type,
+            z.contact,
+            z.phone,
+            z.contact_user,
+            z.complain_date,
+            z.reply_status,
+            z.reply_content,
+            z.reply_date,
+            z.reply_user,
+            z.longitude,
+            z.latitude,
+            z.address,
+            z.create_user,
+            z.create_date,
+            z.update_user,
+            z.update_date,
+            z.del
+        FROM
+            zzb_complain z
+        WHERE
+            del != 1
+        <if test="title!=null and title!=''">
+            and `title` like concat('%', #{title}, '%')
+        </if>
+        <if test="phone!=null and phone!=''">
+            and `phone` like concat('%', #{phone}, '%')
+        </if>
+        <if test="contact!=null and contact!=''">
+            and `contact` like concat('%', #{contact}, '%')
+        </if>
+        <if test="startTime!=null and startTime!=''">
+            and `complain_date` <![CDATA[ >= ]]> #{startTime}
+        </if>
+        <if test="endTime!=null and endTime!=''">
+            and #{endTime} <![CDATA[ >= ]]> `complain_date`
+        </if>
+        ORDER BY create_date desc
+    </select>
+
+    <!-- 插入数据 -->
+    <!--<insert id="insert">-->
+        <!--INSERT INTO-->
+            <!--zzb_complain-->
+        <!--(-->
+            <!--id,-->
+            <!--department,-->
+            <!--topic,-->
+            <!--type,-->
+            <!--username,-->
+            <!--tel,-->
+            <!--comment,-->
+            <!--reply,-->
+            <!--reply_status,-->
+            <!--total,-->
+            <!--create_user,-->
+            <!--create_date,-->
+            <!--del-->
+        <!--)-->
+        <!--VALUE-->
+        <!--(-->
+            <!--#{id},-->
+            <!--#{department},-->
+            <!--#{topic},-->
+            <!--#{type},-->
+            <!--#{username},-->
+            <!--#{tel},-->
+            <!--#{comment},-->
+            <!--#{reply},-->
+            <!--0,-->
+            <!--0,-->
+            <!--#{createUser.id},-->
+            <!--#{createDate},-->
+            <!--0-->
+        <!--)-->
+    <!--</insert>-->
+
+    <!-- 更新数据
+      department = #{department},
+        topic = #{topic},
+           type = #{type},
+             username = #{username},
+             tel = #{tel},
+            comment = #{comment},
+                 update_user = #{createUser.id},
+            update_date = #{createDate}
+     -->
+    <update id="update" parameterType="com.zte.zudp.admin.info.complain.entity.ComplainEntity">
+        UPDATE
+            zzb_complain
+        SET
+            reply_status = #{replyStatus},
+            reply_content = #{replyContent},
+            reply_date = #{updateDate},
+            update_user = #{updateUser.id},
+            update_date = #{updateDate}
+        WHERE
+            del != 1
+        AND
+            id = #{id}
+    </update>
+
+    <!-- 删除数据 -->
+    <!--<delete id="delete">-->
+        <!--UPDATE-->
+            <!--zzb_complain-->
+        <!--SET del = 1-->
+        <!--WHERE id = #{id}-->
+    <!--</delete>-->
+
+    <!-- 批量删除 -->
+    <!--<delete id="batchDelete">-->
+        <!--UPDATE-->
+            <!--zzb_complain-->
+        <!--SET-->
+            <!--del = 1-->
+        <!--WHERE-->
+            <!--id-->
+        <!--IN-->
+        <!--<foreach collection="array" item="i" separator="," open="(" close=")">-->
+            <!--#{i}-->
+        <!--</foreach>-->
+    <!--</delete>-->
+
+    <!-- 点击编辑按钮 -->
+    <select id="get" resultMap="complainMap" >
+        select
+            z.id,
+            z.title,
+            z.description,
+            z.type,
+            z.contact,
+            z.phone,
+            z.contact_user,
+            z.complain_date,
+            z.reply_status,
+            z.reply_content,
+            z.reply_date,
+            z.reply_user,
+            z.longitude,
+            z.latitude,
+            z.address,
+            z.create_user,
+            z.create_date,
+            z.update_user,
+            z.update_date,
+            z.del
+        FROM
+            zzb_complain z
+        WHERE
+            z.del != 1
+        AND
+            id=#{id}
+    </select>
+</mapper>

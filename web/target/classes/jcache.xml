@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xmlns='http://www.ehcache.org/v3'
+        xmlns:jsr107='http://www.ehcache.org/v3/jsr107'
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd
+                            http://www.ehcache.org/v3/jsr107 http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
+
+    <service>
+        <jsr107:defaults enable-management="true" enable-statistics="true" default-template="zudpCache"/>
+    </service>
+
+    <persistence directory="zudp-cache-log/cache"/>
+
+    <!-- 请查看 com.zte.zudp.admin.common.enums.CacheName 匹配 alias 值 -->
+    <cache alias="PASSWORD_ERROR_COUNT" uses-template="passwordErrorCount-Cache"/>
+    <cache alias="PERMISSION" uses-template="permission-Cache"/>
+    <cache alias="ENDPOINT" uses-template="endpoint-Cache"/>
+    <cache alias="ROLE_RESOURCE" uses-template="roleResource-Cache"/>
+    <cache alias="PHONE_LOGIN_CAPTCHA" uses-template="phoneLoginCaptcha-Cache"/>
+    <cache alias="TIMEOUT_THIRTY_MIN_CACHE" uses-template="timeOut-Thirty-Min-Cache" >
+        <expiry>
+            <ttl unit="minutes">30</ttl>
+        </expiry>
+    </cache>
+    <cache alias="SUBJECT" uses-template="subject-Cache"/>
+
+    <cache-template name="zudpCache">
+        <heap unit="entries">200</heap>
+    </cache-template>
+
+    <cache-template name="passwordErrorCount-Cache">
+        <listeners>
+            <listener>
+                <class>com.zte.zudp.admin.common.config.CacheEventLogger</class>
+                <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>UPDATED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+                <events-to-fire-on>REMOVED</events-to-fire-on>
+                <events-to-fire-on>EVICTED</events-to-fire-on>
+            </listener>
+        </listeners>
+        <resources>
+            <heap>1</heap>
+            <offheap unit="MB">1</offheap>
+            <disk persistent="true" unit="MB">100</disk>
+        </resources>
+    </cache-template>
+
+    <cache-template name="phoneLoginCaptcha-Cache">
+        <listeners>
+            <listener>
+                <class>com.zte.zudp.admin.common.config.CacheEventLogger</class>
+                <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>UPDATED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+                <events-to-fire-on>REMOVED</events-to-fire-on>
+                <events-to-fire-on>EVICTED</events-to-fire-on>
+            </listener>
+        </listeners>
+        <resources>
+            <heap>1</heap>
+            <offheap unit="MB">1</offheap>
+            <disk persistent="true" unit="MB">100</disk>
+        </resources>
+    </cache-template>
+
+    <cache-template name="roleResource-Cache">
+        <listeners>
+            <listener>
+                <class>com.zte.zudp.admin.common.config.CacheEventLogger</class>
+                <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>UPDATED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+                <events-to-fire-on>REMOVED</events-to-fire-on>
+                <events-to-fire-on>EVICTED</events-to-fire-on>
+            </listener>
+        </listeners>
+        <resources>
+            <heap>1</heap>
+            <offheap unit="MB">1</offheap>
+            <disk persistent="true" unit="MB">100</disk>
+        </resources>
+    </cache-template>
+
+    <cache-template name="endpoint-Cache">
+        <listeners>
+            <listener>
+                <class>com.zte.zudp.admin.common.config.CacheEventLogger</class>
+                <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>UPDATED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+                <events-to-fire-on>REMOVED</events-to-fire-on>
+                <events-to-fire-on>EVICTED</events-to-fire-on>
+            </listener>
+        </listeners>
+        <resources>
+            <heap>1</heap>
+            <offheap unit="MB">1</offheap>
+            <disk persistent="true" unit="MB">100</disk>
+        </resources>
+    </cache-template>
+
+    <cache-template name="permission-Cache">
+        <listeners>
+            <listener>
+                <class>com.zte.zudp.admin.common.config.CacheEventLogger</class>
+                <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>UPDATED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+                <events-to-fire-on>REMOVED</events-to-fire-on>
+                <events-to-fire-on>EVICTED</events-to-fire-on>
+            </listener>
+        </listeners>
+        <resources>
+            <heap>1</heap>
+            <offheap unit="MB">1</offheap>
+            <disk persistent="true" unit="MB">100</disk>
+        </resources>
+    </cache-template>
+
+    <cache-template name="timeOut-Thirty-Min-Cache">
+        <listeners>
+            <listener>
+                <class>com.zte.zudp.admin.common.config.CacheEventLogger</class>
+                <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>UPDATED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+                <events-to-fire-on>REMOVED</events-to-fire-on>
+                <events-to-fire-on>EVICTED</events-to-fire-on>
+            </listener>
+        </listeners>
+        <resources>
+            <heap>1</heap>
+            <offheap unit="MB">1</offheap>
+            <disk persistent="true" unit="MB">100</disk>
+        </resources>
+    </cache-template>
+
+    <cache-template name="subject-Cache">
+        <listeners>
+            <listener>
+                <class>com.zte.zudp.admin.common.config.CacheEventLogger</class>
+                <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+                <event-ordering-mode>UNORDERED</event-ordering-mode>
+                <events-to-fire-on>CREATED</events-to-fire-on>
+                <events-to-fire-on>UPDATED</events-to-fire-on>
+                <events-to-fire-on>EXPIRED</events-to-fire-on>
+                <events-to-fire-on>REMOVED</events-to-fire-on>
+                <events-to-fire-on>EVICTED</events-to-fire-on>
+            </listener>
+        </listeners>
+        <resources>
+            <heap>1</heap>
+            <offheap unit="MB">1</offheap>
+            <disk persistent="true" unit="MB">100</disk>
+        </resources>
+    </cache-template>
+</config>

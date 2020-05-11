@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dab2bef7-6d31-4ebb-b639-bb082f4bc313" name="Default" comment="微信页面">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_41.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_belerweb_pinyin4j_2_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_04.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_197.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_schlichtherle_truelicense_truelicense_core_1_33.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_schlichtherle_truelicense_truelicense_xml_1_33.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__eu_bitwalker_UserAgentUtils_1_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_cache_cache_api_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_46.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_core_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_soap_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_bindings_xml_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_databinding_jaxb_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_jaxws_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_frontend_simple_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_transports_http_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_addr_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_ws_policy_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_rt_wsdl_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_spring_boot_autoconfigure_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_cxf_cxf_spring_boot_starter_jaxws_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_neethi_neethi_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_8_5_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ws_xmlschema_xmlschema_core_2_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ehcache_ehcache_3_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ehcache_ehcache_3_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_6_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_osgeo_proj4j_0_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_12_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_16_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_3_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_autoconfigure_1_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_starter_1_1_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__wsdl4j_wsdl4j_1_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_resolver_xml_resolver_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__zte_zudp_sys_zudp_sys_3_0_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/zudp-jacg.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/ENDPOINT_11fd4fce857ac0752054ef6edaa99f9b6d03ae70/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/ENDPOINT_11fd4fce857ac0752054ef6edaa99f9b6d03ae70/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/ENDPOINT_11fd4fce857ac0752054ef6edaa99f9b6d03ae70/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/PASSWORD_ERROR_COUNT_41f69091addfd5e7ea0ebb2b1d1d4ac4257f4922/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/PASSWORD_ERROR_COUNT_41f69091addfd5e7ea0ebb2b1d1d4ac4257f4922/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/PASSWORD_ERROR_COUNT_41f69091addfd5e7ea0ebb2b1d1d4ac4257f4922/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/PERMISSION_ffd7cc1dc44cccf9435f388e8f327c84ef7647f1/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/PERMISSION_ffd7cc1dc44cccf9435f388e8f327c84ef7647f1/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/PERMISSION_ffd7cc1dc44cccf9435f388e8f327c84ef7647f1/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/PHONE_LOGIN_CAPTCHA_2a6efab960f53996eda3aa5108428eb89937e2fe/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/PHONE_LOGIN_CAPTCHA_2a6efab960f53996eda3aa5108428eb89937e2fe/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/PHONE_LOGIN_CAPTCHA_2a6efab960f53996eda3aa5108428eb89937e2fe/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/ROLE_RESOURCE_882b6f94fbf6bbfb50255b47cbaab4161fd502fa/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/ROLE_RESOURCE_882b6f94fbf6bbfb50255b47cbaab4161fd502fa/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/ROLE_RESOURCE_882b6f94fbf6bbfb50255b47cbaab4161fd502fa/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/SUBJECT_e713d42aa647a37b5f84c993a2b22536de969313/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/SUBJECT_e713d42aa647a37b5f84c993a2b22536de969313/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/SUBJECT_e713d42aa647a37b5f84c993a2b22536de969313/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/TIMEOUT_THIRTY_MIN_CACHE_dabb8172c252cc17b0c902a293f133686a1739c1/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/TIMEOUT_THIRTY_MIN_CACHE_dabb8172c252cc17b0c902a293f133686a1739c1/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/file/TIMEOUT_THIRTY_MIN_CACHE_dabb8172c252cc17b0c902a293f133686a1739c1/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lic/license.lic" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-11-29.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-03.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-05.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-12.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-13.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-18.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-19.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/access/2019-12-21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-11-29.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-03.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-05.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-12.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-13.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-18.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-19.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/2019-12-21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-11-29.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-03.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-05.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-11.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-12.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-13.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-18.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-19.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/sys/2019-12-21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/ENDPOINT_11fd4fce857ac0752054ef6edaa99f9b6d03ae70/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/ENDPOINT_11fd4fce857ac0752054ef6edaa99f9b6d03ae70/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/ENDPOINT_11fd4fce857ac0752054ef6edaa99f9b6d03ae70/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/PASSWORD_ERROR_COUNT_41f69091addfd5e7ea0ebb2b1d1d4ac4257f4922/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/PASSWORD_ERROR_COUNT_41f69091addfd5e7ea0ebb2b1d1d4ac4257f4922/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/PASSWORD_ERROR_COUNT_41f69091addfd5e7ea0ebb2b1d1d4ac4257f4922/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/PERMISSION_ffd7cc1dc44cccf9435f388e8f327c84ef7647f1/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/PERMISSION_ffd7cc1dc44cccf9435f388e8f327c84ef7647f1/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/PERMISSION_ffd7cc1dc44cccf9435f388e8f327c84ef7647f1/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/PHONE_LOGIN_CAPTCHA_2a6efab960f53996eda3aa5108428eb89937e2fe/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/PHONE_LOGIN_CAPTCHA_2a6efab960f53996eda3aa5108428eb89937e2fe/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/PHONE_LOGIN_CAPTCHA_2a6efab960f53996eda3aa5108428eb89937e2fe/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/ROLE_RESOURCE_882b6f94fbf6bbfb50255b47cbaab4161fd502fa/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/ROLE_RESOURCE_882b6f94fbf6bbfb50255b47cbaab4161fd502fa/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/ROLE_RESOURCE_882b6f94fbf6bbfb50255b47cbaab4161fd502fa/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/SUBJECT_e713d42aa647a37b5f84c993a2b22536de969313/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/SUBJECT_e713d42aa647a37b5f84c993a2b22536de969313/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/SUBJECT_e713d42aa647a37b5f84c993a2b22536de969313/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/TIMEOUT_THIRTY_MIN_CACHE_dabb8172c252cc17b0c902a293f133686a1739c1/offheap-disk-store/ehcache-disk-store.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/TIMEOUT_THIRTY_MIN_CACHE_dabb8172c252cc17b0c902a293f133686a1739c1/offheap-disk-store/ehcache-disk-store.index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/cache/file/TIMEOUT_THIRTY_MIN_CACHE_dabb8172c252cc17b0c902a293f133686a1739c1/offheap-disk-store/ehcache-disk-store.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2019-12-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2019-12-24.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2019-12-25.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2019-12-26.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2019-12-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2019-12-31.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-03.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-13.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/access/2020-01-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2019-12-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2019-12-24.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2019-12-25.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2019-12-26.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2019-12-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2019-12-31.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-03.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-13.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/error/2020-01-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2019-12-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2019-12-24.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2019-12-25.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2019-12-26.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2019-12-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2019-12-31.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-03.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-06.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-07.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-09.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-13.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zudp-cache-log/log/sys/2020-01-17.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/info.iml" beforeDir="false" afterPath="$PROJECT_DIR$/info/info.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mm/mm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mm/mm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parent/parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/parent/parent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+    <option name="PARALLEL_COMPILATION" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="zudp-jacg" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/info/news/categorylist.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/mm/src/main/java/com/zte/zudp/admin/mm/news/ctrl/MMNewsController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/mm/complain/detailComplain.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/info/src/main/resources/config/mapper/convenient/ConvenientDao.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/info/src/main/resources/config/mapper/myneedlike/likeInfoDao.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/home.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/info/queinvest/queinvestlist.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/info/src/main/resources/config/mapper/myneedlike/likeDao.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/info/convenient/convenientlist.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/mm/src/main/java/com/zte/zudp/admin/mm/bigscreen/controller/ScreenController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/mm/complain/addComplain.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/mm/src/main/resources/config/mapper/convenient/MMConvenientDao.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/mm/news/mmNews.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/mm/bigscreen/screen.ftl" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/info/src/main/resources/config/mapper/news/NewsDao.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/mm/dz/dzlist.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/mm/src/main/resources/config/mapper/bigscreen/CasesDao.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/mm/src/main/resources/config/mapper/bigscreen/ScreenDao.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/mm/news/convenience.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/static/screen/findAllCases.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/info/myneedlike/likeContentPost.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/mm/news/index.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/web/src/main/resources/templates/info/news/newslist.ftl" root0="SKIP_INSPECTION" root1="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="localRepository" value="D:\idea\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../apache-maven-3.5.0" />
+        <option name="userSettingsFile" value="D:\idea\apache-maven-3.5.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WBUbOH3jVidtfM06E9KkNVYaa8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="directory&#10;module" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="role&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/templates/sys/role.ftl&#10;newsli&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/templates/info/news/newslist.ftl&#10;Newslist&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/templates/info/news/newslist.ftl&#10;post&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/templates/modules/mm/postlist.ftl&#10;AttachDocDao&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/info/src/main/resources/config/mapper/AttachDocDao.xml&#10;newslist&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/templates/info/news/newslist.ftl&#10;UploadController&#9;PSI&#9;JAVA://com.zte.zudp.admin.modules.sys.sr.UploadController&#10;newsD&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/info/src/main/java/com/zte/zudp/admin/info/news/dao/NewsDao.java&#10;zudp&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/static/js/zudp.js&#10;Att&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/info/src/main/resources/config/mapper/AttachDocDao.xml&#10;rest&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/static/js/rest.js&#10;news&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/templates/info/news/newslist.ftl&#10;Upload&#9;FILE&#9;jar://C:/Users/邱高强/.m2/repository/zte/zudp/sys/zudp-sys/3.0.3/zudp-sys-3.0.3.jar!/com/zte/zudp/admin/modules/sys/sr/UploadController.class&#10;lay&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/static/js/pluginInit/laydateInit.js&#10;user&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/templates/sys/user.ftl&#10;user.ftl&#9;FILE&#9;file://D:/idea/ideaWorkspace/zudp-jacg/zudp-jacg/web/src/main/resources/templates/sys/member/user.ftl&#10;Result&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_231/jre/lib/rt.jar!/javax/xml/transform/Result.class&#10;Resul&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_231/jre/lib/plugin.jar!/com/sun/java/browser/plugin2/liveconnect/v1/Result.class" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.1507799" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/web/src/main/resources/templates/mm/bigscreen/glcommunity.ftl" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\idea\ideaWorkspace\zudp-jacg\zudp-jacg\lic" />
+      <recent name="D:\idea\ideaWorkspace\zudp-jacg\zudp-jacg\web\src\main\resources\templates\mm\complain" />
+      <recent name="D:\idea\ideaWorkspace\zudp-jacg\zudp-jacg\web\src\main\resources\templates\info\queinvest" />
+      <recent name="D:\idea\ideaWorkspace\zudp-jacg\zudp-jacg\web\src\main\resources\templates\info\news" />
+      <recent name="D:\idea\ideaWorkspace\zudp-jacg\zudp-jacg\web\src\main\resources\templates\info\dynamicpush" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zte.zudp.admin.info.comment.controller" />
+      <recent name="com.zte.zudp.admin.info.comment.service" />
+      <recent name="com.zte.zudp.admin.info.comment.dao" />
+      <recent name="com.zte.zudp.admin.info.comment.entity" />
+      <recent name="com.zte.zudp.admin.info.comment" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\idea\ideaWorkspace\zudp-jacg\zudp-jacg\web\src\main\resources\static\mm" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zte.zudp.admin.AdminApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_zudp-jacg" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58728" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dab2bef7-6d31-4ebb-b639-bb082f4bc313" name="Default" comment="" />
+      <created>1575014202457</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575014202457</updated>
+      <workItem from="1575014205668" duration="6913000" />
+      <workItem from="1575246860391" duration="11207000" />
+      <workItem from="1575332810471" duration="9162000" />
+      <workItem from="1575418980624" duration="25988000" />
+      <workItem from="1575505991538" duration="36292000" />
+      <workItem from="1575592075343" duration="37456000" />
+      <workItem from="1575683022132" duration="16546000" />
+      <workItem from="1575851678444" duration="22610000" />
+      <workItem from="1575937158528" duration="16581000" />
+      <workItem from="1575962988895" duration="16629000" />
+      <workItem from="1576024368687" duration="30025000" />
+      <workItem from="1576067717356" duration="387000" />
+      <workItem from="1576068109581" duration="2953000" />
+      <workItem from="1576110881792" duration="24096000" />
+      <workItem from="1576197028323" duration="3116000" />
+      <workItem from="1576200173706" duration="18617000" />
+      <workItem from="1576456199520" duration="31835000" />
+      <workItem from="1576542864895" duration="35439000" />
+      <workItem from="1576629213306" duration="10865000" />
+      <workItem from="1576647886750" duration="21260000" />
+      <workItem from="1576715770089" duration="1491000" />
+      <workItem from="1576717266695" duration="21600000" />
+      <workItem from="1576802630182" duration="99000" />
+      <workItem from="1576803012424" duration="36717000" />
+      <workItem from="1576893202581" duration="20717000" />
+      <workItem from="1577061623895" duration="15664000" />
+      <workItem from="1577148047884" duration="3958000" />
+      <workItem from="1577153395962" duration="2845000" />
+      <workItem from="1577166218032" duration="7565000" />
+      <workItem from="1577177554843" duration="2242000" />
+      <workItem from="1577179949730" duration="1369000" />
+      <workItem from="1577184631365" duration="291000" />
+      <workItem from="1577185032324" duration="9266000" />
+      <workItem from="1577233702544" duration="10558000" />
+      <workItem from="1577252335305" duration="665000" />
+      <workItem from="1577253273156" duration="13313000" />
+      <workItem from="1577270677732" duration="5632000" />
+      <workItem from="1577319546247" duration="9285000" />
+      <workItem from="1577358588351" duration="4894000" />
+      <workItem from="1577411436613" duration="330000" />
+      <workItem from="1577666346118" duration="20339000" />
+      <workItem from="1577752610387" duration="19135000" />
+      <workItem from="1577925200445" duration="14769000" />
+      <workItem from="1577952576486" duration="2190000" />
+      <workItem from="1577954806982" duration="157000" />
+      <workItem from="1577955205617" duration="4787000" />
+      <workItem from="1577964988937" duration="4890000" />
+      <workItem from="1578011976440" duration="31815000" />
+      <workItem from="1578104202852" duration="9000" />
+      <workItem from="1578104547982" duration="1025000" />
+      <workItem from="1578105778289" duration="512000" />
+      <workItem from="1578106350157" duration="11000" />
+      <workItem from="1578106377509" duration="4050000" />
+      <workItem from="1578115951121" duration="11416000" />
+      <workItem from="1578198227366" duration="25000" />
+      <workItem from="1578270183487" duration="31654000" />
+      <workItem from="1578316154228" duration="935000" />
+      <workItem from="1578357234933" duration="34073000" />
+      <workItem from="1578403324037" duration="401000" />
+      <workItem from="1578443783429" duration="30037000" />
+      <workItem from="1578530390065" duration="27483000" />
+      <workItem from="1578619474501" duration="183000" />
+      <workItem from="1578620375373" duration="34000" />
+      <workItem from="1578622558363" duration="672000" />
+      <workItem from="1578623284285" duration="9474000" />
+      <workItem from="1578638683136" duration="8295000" />
+      <workItem from="1578647643298" duration="3715000" />
+      <workItem from="1578654629129" duration="487000" />
+      <workItem from="1578655402796" duration="5205000" />
+      <workItem from="1578755971325" duration="35000" />
+      <workItem from="1578836076692" duration="4127000" />
+      <workItem from="1578877516472" duration="1794000" />
+      <workItem from="1578880186335" duration="53000" />
+      <workItem from="1579049166663" duration="29725000" />
+      <workItem from="1579134294590" duration="5730000" />
+      <workItem from="1579223762932" duration="1625000" />
+      <workItem from="1579240605206" duration="293000" />
+      <workItem from="1582252350121" duration="49000" />
+      <workItem from="1585485386645" duration="2072000" />
+      <workItem from="1585637465535" duration="35000" />
+      <workItem from="1585645481987" duration="1136000" />
+      <workItem from="1585648629960" duration="691000" />
+      <workItem from="1587713714240" duration="41000" />
+    </task>
+    <task id="LOCAL-00001" summary="公众新闻">
+      <created>1575015511371</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575015511371</updated>
+    </task>
+    <task id="LOCAL-00002" summary="公众新闻">
+      <created>1575247674610</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575247674610</updated>
+    </task>
+    <task id="LOCAL-00003" summary="公众新闻 移动端">
+      <created>1575363242295</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575363242296</updated>
+    </task>
+    <task id="LOCAL-00004" summary="公众新闻 移动端">
+      <created>1575943919209</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575943919209</updated>
+    </task>
+    <task id="LOCAL-00005" summary="公众新闻 移动端">
+      <created>1575966565379</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575966565379</updated>
+    </task>
+    <task id="LOCAL-00006" summary="公众新闻 移动端">
+      <created>1575966848090</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575966848090</updated>
+    </task>
+    <task id="LOCAL-00007" summary="公众新闻 移动端">
+      <created>1575982570198</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575982570198</updated>
+    </task>
+    <task id="LOCAL-00008" summary="公众新闻 移动端">
+      <created>1576054590016</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1576054590016</updated>
+    </task>
+    <task id="LOCAL-00009" summary="公众新闻 移动端">
+      <created>1576055830428</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576055830428</updated>
+    </task>
+    <task id="LOCAL-00010" summary="公众新闻 移动端">
+      <created>1576117929728</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576117929728</updated>
+    </task>
+    <task id="LOCAL-00011" summary="公众新闻 微博分享">
+      <created>1576216515948</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576216515948</updated>
+    </task>
+    <task id="LOCAL-00012" summary="公众新闻 移动端">
+      <created>1576221230203</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1576221230203</updated>
+    </task>
+    <task id="LOCAL-00013" summary="公众新闻 移动端">
+      <created>1576222552662</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1576222552662</updated>
+    </task>
+    <task id="LOCAL-00014" summary="便民服务">
+      <created>1576676211010</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576676211010</updated>
+    </task>
+    <task id="LOCAL-00015" summary="便民服务与市民评论">
+      <created>1576846391768</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1576846391768</updated>
+    </task>
+    <task id="LOCAL-00016" summary="市民评论后台">
+      <created>1576920709160</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1576920709160</updated>
+    </task>
+    <task id="LOCAL-00017" summary="微信页面">
+      <created>1577082105046</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1577082105047</updated>
+    </task>
+    <task id="LOCAL-00018" summary="微信页面 修改">
+      <created>1577167246942</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1577167246942</updated>
+    </task>
+    <task id="LOCAL-00019" summary="微信首页 更正">
+      <created>1577168506944</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1577168506944</updated>
+    </task>
+    <task id="LOCAL-00020" summary="吉安大屏">
+      <created>1577172424883</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1577172424883</updated>
+    </task>
+    <task id="LOCAL-00021" summary="大屏左边">
+      <created>1577323825150</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1577323825151</updated>
+    </task>
+    <task id="LOCAL-00022" summary="大屏修改">
+      <created>1577351204496</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1577351204496</updated>
+    </task>
+    <task id="LOCAL-00023" summary="菜单整理">
+      <created>1577698739562</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1577698739562</updated>
+    </task>
+    <task id="LOCAL-00024" summary="吉安大屏订正">
+      <created>1577756895680</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1577756895680</updated>
+    </task>
+    <task id="LOCAL-00025" summary="吉安大屏">
+      <created>1577968047300</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1577968047300</updated>
+    </task>
+    <task id="LOCAL-00026" summary="吉安大屏-样式修正">
+      <created>1578015204728</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1578015204728</updated>
+    </task>
+    <task id="LOCAL-00027" summary="提交少了的文件">
+      <created>1578031249893</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1578031249893</updated>
+    </task>
+    <task id="LOCAL-00028" summary="吉安大屏修改">
+      <created>1578051710737</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1578051710737</updated>
+    </task>
+    <task id="LOCAL-00029" summary="修改 &gt;=">
+      <created>1578058315361</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1578058315361</updated>
+    </task>
+    <task id="LOCAL-00030" summary="修改 &gt;=">
+      <created>1578058370068</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1578058370068</updated>
+    </task>
+    <task id="LOCAL-00031" summary="修正bug">
+      <created>1578315196188</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1578315196189</updated>
+    </task>
+    <task id="LOCAL-00032" summary="吉安大屏">
+      <created>1578403557925</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1578403557925</updated>
+    </task>
+    <task id="LOCAL-00033" summary="吉安bug修正版">
+      <created>1578567402366</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1578567402366</updated>
+    </task>
+    <task id="LOCAL-00034" summary="吉安页面修改">
+      <created>1578573694313</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1578573694313</updated>
+    </task>
+    <task id="LOCAL-00035" summary="大屏">
+      <created>1578652579143</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1578652579143</updated>
+    </task>
+    <task id="LOCAL-00036" summary="bug修改">
+      <created>1579072910974</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1579072910974</updated>
+    </task>
+    <task id="LOCAL-00037" summary="新闻修改">
+      <created>1579080657395</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1579080657395</updated>
+    </task>
+    <task id="LOCAL-00038" summary="bug修复">
+      <created>1579088560788</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1579088560788</updated>
+    </task>
+    <task id="LOCAL-00039" summary="吉安APP">
+      <created>1579135800713</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1579135800713</updated>
+    </task>
+    <task id="LOCAL-00040" summary="bug咻咻咻">
+      <created>1579240817921</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1579240817921</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="公众新闻 移动端" />
+    <MESSAGE value="便民服务" />
+    <MESSAGE value="便民服务与市民评论" />
+    <MESSAGE value="市民评论后台" />
+    <MESSAGE value="微信页面" />
+    <MESSAGE value="微信页面 修改" />
+    <MESSAGE value="微信首页 更正" />
+    <MESSAGE value="大屏左边" />
+    <MESSAGE value="大屏修改" />
+    <MESSAGE value="菜单整理" />
+    <MESSAGE value="吉安大屏订正" />
+    <MESSAGE value="吉安大屏-样式修正" />
+    <MESSAGE value="提交少了的文件" />
+    <MESSAGE value="吉安大屏修改" />
+    <MESSAGE value="修改 &gt;=" />
+    <MESSAGE value="修正bug" />
+    <MESSAGE value="吉安大屏" />
+    <MESSAGE value="吉安bug修正版" />
+    <MESSAGE value="吉安页面修改" />
+    <MESSAGE value="大屏" />
+    <MESSAGE value="bug修改" />
+    <MESSAGE value="新闻修改" />
+    <MESSAGE value="bug修复" />
+    <MESSAGE value="吉安APP" />
+    <MESSAGE value="bug咻咻咻" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug咻咻咻" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" width="814" height="730" key="#Intentions" timestamp="1578639011365">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" width="814" height="730" key="#Intentions/0.0.1536.824@0.0.1536.824" timestamp="1578639011365" />
+    <state x="361" y="71" width="971" height="682" key="#Live_Templates" timestamp="1578639667567">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" width="971" height="682" key="#Live_Templates/0.0.1536.824@0.0.1536.824" timestamp="1578639667567" />
+    <state x="361" y="71" key="#Notifications" timestamp="1579224279659">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1579224279659" />
+    <state x="361" y="71" key="#Other_File_Types" timestamp="1578656705362">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Other_File_Types/0.0.1536.824@0.0.1536.824" timestamp="1578656705362" />
+    <state x="361" y="71" key="#SQL_Dialects" timestamp="1578638817480">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1578638817480" />
+    <state x="314" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578642475401">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="314" y="133" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1578642475401" />
+    <state x="496" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585648843555">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="496" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1585648843555" />
+    <state x="345" y="0" key="CommitChangelistDialog2" timestamp="1579240808229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="345" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1579240808229" />
+    <state x="82" y="29" width="1350" height="716" key="DiffContextDialog" timestamp="1579240728480">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="82" y="29" width="1350" height="716" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1579240728480" />
+    <state x="403" y="167" width="550" height="489" key="FileChooserDialogImpl" timestamp="1579224783434">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="403" y="167" width="550" height="489" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1579224783434" />
+    <state width="1493" height="272" key="GridCell.Tab.0.bottom" timestamp="1579240738206">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579240738206" />
+    <state width="1493" height="272" key="GridCell.Tab.0.center" timestamp="1579240738206">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1579240738206" />
+    <state width="1493" height="272" key="GridCell.Tab.0.left" timestamp="1579240738206">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1579240738206" />
+    <state width="1493" height="272" key="GridCell.Tab.0.right" timestamp="1579240738206">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1579240738206" />
+    <state width="1493" height="272" key="GridCell.Tab.1.bottom" timestamp="1579240738206">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1579240738206" />
+    <state width="1493" height="272" key="GridCell.Tab.1.center" timestamp="1579240738206">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1579240738206" />
+    <state width="1493" height="272" key="GridCell.Tab.1.left" timestamp="1579240738206">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1579240738206" />
+    <state width="1493" height="272" key="GridCell.Tab.1.right" timestamp="1579240738206">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="272" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1579240738206" />
+    <state width="212" height="539" key="HiddenNamespacesPopup" timestamp="1578642195778">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="212" height="539" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1578642195778" />
+    <state x="500" y="38" key="RollbackChangesDialog" timestamp="1579050363491">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="500" y="38" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1579050363491" />
+    <state x="252" y="109" key="SettingsEditor" timestamp="1585649086175">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="252" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585649086175" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1579240825330">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1579240825330" />
+    <state x="437" y="0" width="662" height="824" key="find.popup" timestamp="1579091015787">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="437" y="0" width="662" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1579091015787" />
+    <state x="611" y="141" key="git4idea.merge.GitPullDialog" timestamp="1579240735995">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="611" y="141" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1579240735995" />
+    <state x="477" y="147" width="732" height="571" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1578655766815">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="147" width="732" height="571" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1578655766815" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1578641326695">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1578641326695" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585649082247">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585649082247" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mm/src/main/java/com/zte/zudp/admin/mm/rank/controller/MMRankController.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="mmConvenientList.get(0)" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="id" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

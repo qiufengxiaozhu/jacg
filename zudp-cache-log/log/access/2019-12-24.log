@@ -1,0 +1,1354 @@
+08:47:01.630 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+08:47:01.630 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+08:47:01.630 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:47:01.812 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577148421629, waste time: 0.182s
+08:47:03.179 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+08:47:03.179 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+08:47:03.179 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+08:47:03.270 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577148423179, waste time: 0.091s
+08:47:04.480 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+08:47:04.480 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+08:47:04.480 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+08:47:04.520 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577148424480, waste time: 0.04s
+08:47:05.801 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404
+08:47:05.801 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+08:47:05.801 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+08:47:05.836 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577148425801, waste time: 0.035s
+08:47:07.136 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+08:47:07.136 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+08:47:07.136 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+08:47:07.170 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577148427136, waste time: 0.034s
+08:51:12.698 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+08:51:12.699 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+08:51:12.699 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:51:12.876 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577148672698, waste time: 0.178s
+08:54:30.191 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+08:54:30.191 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+08:54:30.191 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+08:54:30.254 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577148870191, waste time: 0.063s
+08:59:25.948 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName
+08:59:25.948 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+08:59:25.948 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+08:59:25.948 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#checkLoginName
+08:59:25.948 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+08:59:25.948 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:checkLoginName
+08:59:25.948 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+08:59:25.949 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+08:59:26.105 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName, startTime: 1577149165948, waste time: 0.157s
+08:59:33.543 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/regsave
+08:59:33.543 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: POST
+08:59:33.543 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:59:33.659 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/regsave, startTime: 1577149173543, waste time: 0.116s
+08:59:35.004 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+08:59:35.004 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+08:59:35.004 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+08:59:35.047 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577149175004, waste time: 0.043s
+08:59:36.440 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+08:59:36.440 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+08:59:36.440 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+08:59:36.476 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577149176440, waste time: 0.036s
+08:59:43.407 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/login
+08:59:43.407 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: POST
+08:59:43.407 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:59:43.464 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577149183407, waste time: 0.057s
+08:59:44.877 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+08:59:44.877 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+08:59:44.877 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+08:59:44.976 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577149184877, waste time: 0.099s
+08:59:46.451 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+08:59:46.451 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+08:59:46.451 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+08:59:46.504 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577149186451, waste time: 0.053s
+08:59:47.800 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+08:59:47.800 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+08:59:47.800 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+08:59:47.837 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577149187800, waste time: 0.037s
+08:59:49.094 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+08:59:49.094 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+08:59:49.094 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+08:59:49.136 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577149189094, waste time: 0.042s
+09:00:42.950 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName
+09:00:42.950 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:00:42.950 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:00:42.950 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#checkLoginName
+09:00:42.950 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+09:00:42.950 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:checkLoginName
+09:00:42.950 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:00:42.950 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+09:00:43.043 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName, startTime: 1577149242950, waste time: 0.093s
+09:00:49.530 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+09:00:49.530 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:00:49.530 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:00:49.569 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577149249530, waste time: 0.039s
+09:00:51.031 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+09:00:51.031 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:00:51.031 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:00:51.071 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577149251031, waste time: 0.04s
+09:00:52.378 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+09:00:52.378 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:00:52.378 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:00:52.418 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577149252378, waste time: 0.04s
+09:00:53.709 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+09:00:53.709 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:00:53.709 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:00:53.754 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577149253709, waste time: 0.045s
+09:00:55.175 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:00:55.175 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:00:55.175 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:00:55.212 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577149255175, waste time: 0.037s
+09:01:14.540 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+09:01:14.540 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:01:14.540 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:01:14.576 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577149274540, waste time: 0.036s
+09:01:15.982 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+09:01:15.982 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:01:15.982 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:01:16.020 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577149275982, waste time: 0.038s
+09:01:17.518 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/login
+09:01:17.518 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: POST
+09:01:17.518 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:01:17.571 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577149277518, waste time: 0.053s
+09:01:18.902 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+09:01:18.902 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:01:18.902 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:01:18.950 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577149278902, waste time: 0.048s
+09:01:20.369 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+09:01:20.369 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:01:20.369 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:01:20.403 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577149280369, waste time: 0.034s
+09:01:21.696 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:01:21.697 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:01:21.697 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:01:21.735 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577149281696, waste time: 0.039s
+09:07:15.320 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/
+09:07:15.320 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:07:15.320 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:07:15.434 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/, startTime: 1577149635320, waste time: 0.114s
+09:07:21.065 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+09:07:21.065 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:07:21.065 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:07:21.117 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577149641065, waste time: 0.052s
+09:07:26.273 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/
+09:07:26.274 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:07:26.274 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:07:26.351 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/, startTime: 1577149646273, waste time: 0.078s
+09:07:29.166 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+09:07:29.166 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: POST
+09:07:29.166 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:07:29.204 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577149649166, waste time: 0.038s
+09:07:48.994 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/
+09:07:48.994 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:07:48.994 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:07:49.050 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/, startTime: 1577149668994, waste time: 0.056s
+09:07:51.858 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+09:07:51.858 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: POST
+09:07:51.858 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:07:51.900 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577149671858, waste time: 0.042s
+09:10:04.068 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/
+09:10:04.068 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:10:04.068 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:10:04.132 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/, startTime: 1577149804068, waste time: 0.064s
+09:10:09.294 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+09:10:09.294 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: POST
+09:10:09.294 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:10:09.345 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577149809294, waste time: 0.051s
+09:17:34.756 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+09:17:34.757 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:17:34.757 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:17:34.942 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577150254756, waste time: 0.186s
+09:17:38.617 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+09:17:38.617 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:17:38.617 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:17:38.672 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577150258616, waste time: 0.056s
+09:17:40.170 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+09:17:40.171 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:17:40.171 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:17:40.217 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577150260170, waste time: 0.047s
+09:17:41.555 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/login
+09:17:41.555 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:17:41.555 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:17:41.696 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577150261555, waste time: 0.141s
+09:17:43.221 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+09:17:43.221 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:17:43.221 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:17:43.273 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577150263221, waste time: 0.052s
+09:17:44.794 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:17:44.794 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:17:44.794 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:17:44.832 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577150264794, waste time: 0.038s
+09:17:46.130 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404
+09:17:46.130 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:17:46.130 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:17:46.178 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577150266130, waste time: 0.048s
+09:17:47.463 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/
+09:17:47.463 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:17:47.463 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:17:47.579 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/, startTime: 1577150267463, waste time: 0.116s
+09:17:50.085 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+09:17:50.085 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: POST
+09:17:50.085 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:17:50.272 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577150270085, waste time: 0.187s
+09:17:51.644 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+09:17:51.644 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:17:51.645 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:17:51.679 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577150271644, waste time: 0.035s
+09:17:59.546 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll
+09:17:59.546 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:17:59.547 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:17:59.605 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll, startTime: 1577150279546, waste time: 0.059s
+09:18:06.776 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+09:18:06.776 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:18:06.776 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:18:06.851 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577150286776, waste time: 0.075s
+09:18:08.257 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+09:18:08.257 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:18:08.257 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:18:08.295 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577150288257, waste time: 0.038s
+09:18:18.739 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/comment/addComment
+09:18:18.739 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:18:18.740 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:18:18.825 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/comment/addComment, startTime: 1577150298739, waste time: 0.086s
+09:18:20.268 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+09:18:20.268 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:18:20.268 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:18:20.346 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577150300268, waste time: 0.078s
+09:18:21.800 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+09:18:21.800 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:18:21.800 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:18:21.847 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577150301800, waste time: 0.047s
+09:18:32.583 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/comment/addClicks
+09:18:32.583 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:18:32.583 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:18:32.670 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/comment/addClicks, startTime: 1577150312583, waste time: 0.087s
+09:18:34.057 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+09:18:34.057 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:18:34.057 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:18:34.137 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577150314057, waste time: 0.08s
+09:18:35.581 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+09:18:35.581 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:18:35.581 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:18:35.626 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577150315581, waste time: 0.045s
+09:18:37.010 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+09:18:37.010 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:18:37.010 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:18:37.057 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577150317010, waste time: 0.047s
+09:18:41.117 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+09:18:41.117 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:18:41.117 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:18:41.162 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577150321117, waste time: 0.045s
+09:30:44.714 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/login
+09:30:44.714 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:30:44.714 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:30:44.894 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577151044714, waste time: 0.18s
+09:30:46.315 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+09:30:46.315 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:30:46.315 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:30:46.453 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577151046315, waste time: 0.138s
+09:30:48.042 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+09:30:48.042 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:30:48.042 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:30:48.080 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577151048041, waste time: 0.039s
+09:30:49.465 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:30:49.465 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:30:49.465 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:30:49.505 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577151049465, waste time: 0.04s
+09:34:23.537 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+09:34:23.537 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:34:23.537 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:34:23.589 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577151263537, waste time: 0.052s
+09:48:48.376 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+09:48:48.376 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:48:48.376 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:48:51.578 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404
+09:48:51.578 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:48:51.578 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:10:35.812 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:10:35.816 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:10:35.816 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:10:36.014 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577153435812, waste time: 0.202s
+10:10:38.329 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+10:10:38.329 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:10:38.329 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:10:38.375 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577153438329, waste time: 0.046s
+10:10:42.594 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:10:42.594 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: POST
+10:10:42.595 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:10:42.734 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577153442594, waste time: 0.14s
+10:10:44.850 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+10:10:44.850 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:10:44.851 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:10:44.932 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577153444850, waste time: 0.082s
+10:10:47.586 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+10:10:47.586 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:10:47.586 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:10:47.633 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577153447586, waste time: 0.047s
+10:10:49.599 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex
+10:10:49.599 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:10:49.599 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:10:49.653 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex, startTime: 1577153449599, waste time: 0.054s
+10:10:51.468 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+10:10:51.468 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:10:51.468 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:10:51.508 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577153451468, waste time: 0.04s
+10:11:20.746 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+10:11:20.746 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:11:20.746 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:11:20.799 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577153480745, waste time: 0.054s
+10:11:22.662 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+10:11:22.663 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+10:11:22.663 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+10:11:22.699 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577153482662, waste time: 0.037s
+10:11:24.413 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+10:11:24.413 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:11:24.413 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:11:24.460 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577153484413, waste time: 0.047s
+10:11:26.186 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyReportList
+10:11:26.186 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:11:26.186 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:11:26.332 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyReportList, startTime: 1577153486186, waste time: 0.146s
+10:11:31.612 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/issueReport/reportDetail
+10:11:31.612 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: POST
+10:11:31.612 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:11:31.749 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/issueReport/reportDetail, startTime: 1577153491612, waste time: 0.137s
+10:11:37.380 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+10:11:37.380 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:11:37.380 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:11:37.426 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577153497380, waste time: 0.046s
+10:22:08.395 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:22:08.395 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:22:08.395 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:22:08.595 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577154128395, waste time: 0.2s
+10:22:11.009 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+10:22:11.009 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:22:11.009 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:22:11.057 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154131009, waste time: 0.048s
+10:22:18.251 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+10:22:18.251 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:22:18.251 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:22:18.312 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577154138251, waste time: 0.061s
+10:22:52.677 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName
+10:22:52.677 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:22:52.677 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:22:52.678 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#checkLoginName
+10:22:52.678 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+10:22:52.678 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:checkLoginName
+10:22:52.678 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+10:22:52.678 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+10:22:52.799 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName, startTime: 1577154172677, waste time: 0.122s
+10:28:31.650 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:28:31.650 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:28:31.650 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:28:31.867 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577154511650, waste time: 0.217s
+10:28:33.585 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+10:28:33.585 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:28:33.585 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:28:33.776 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154513585, waste time: 0.191s
+10:28:36.472 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:28:36.472 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: POST
+10:28:36.472 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:28:36.567 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577154516472, waste time: 0.095s
+10:28:38.392 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+10:28:38.392 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:28:38.392 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:28:38.448 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577154518392, waste time: 0.056s
+10:28:40.434 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+10:28:40.434 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:28:40.434 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:28:40.467 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154520434, waste time: 0.033s
+10:28:42.213 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/
+10:28:42.213 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+10:28:42.213 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:28:42.353 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/, startTime: 1577154522213, waste time: 0.14s
+10:28:44.085 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+10:28:44.085 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:28:44.085 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:28:44.116 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154524085, waste time: 0.031s
+10:28:45.843 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+10:28:45.843 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: POST
+10:28:45.843 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:28:46.016 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577154525843, waste time: 0.173s
+10:28:47.963 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+10:28:47.964 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:28:47.964 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:28:48.002 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154527963, waste time: 0.039s
+10:28:53.872 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll
+10:28:53.872 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:28:53.872 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:28:53.952 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll, startTime: 1577154533872, waste time: 0.08s
+10:28:58.866 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+10:28:58.866 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:28:58.866 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:28:58.915 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577154538866, waste time: 0.049s
+10:29:00.841 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+10:29:00.841 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:29:00.841 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:29:00.875 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154540841, waste time: 0.034s
+10:29:02.663 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex
+10:29:02.663 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:29:02.663 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:29:02.720 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex, startTime: 1577154542663, waste time: 0.057s
+10:29:04.494 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+10:29:04.494 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+10:29:04.494 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+10:29:04.533 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154544494, waste time: 0.039s
+10:30:28.723 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:30:28.724 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:30:28.724 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:30:28.937 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577154628723, waste time: 0.214s
+10:30:31.135 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+10:30:31.135 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:30:31.135 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:30:31.185 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154631134, waste time: 0.051s
+10:30:33.141 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:30:33.141 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: POST
+10:30:33.141 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:30:33.277 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577154633141, waste time: 0.136s
+10:30:35.190 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+10:30:35.190 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+10:30:35.190 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:30:35.285 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577154635190, waste time: 0.095s
+10:30:37.543 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+10:30:37.543 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:30:37.543 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:30:37.584 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154637542, waste time: 0.042s
+10:30:39.513 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex
+10:30:39.513 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:30:39.513 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:30:39.605 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex, startTime: 1577154639513, waste time: 0.092s
+10:30:41.438 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+10:30:41.438 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:30:41.438 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:30:41.474 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154641437, waste time: 0.037s
+10:31:33.330 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:31:33.330 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:31:33.330 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:31:33.572 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577154693329, waste time: 0.243s
+10:31:35.610 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+10:31:35.610 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:31:35.610 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:31:35.660 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154695610, waste time: 0.05s
+10:31:37.624 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:31:37.624 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: POST
+10:31:37.624 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:31:37.751 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577154697624, waste time: 0.127s
+10:31:39.734 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+10:31:39.734 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:31:39.734 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:31:39.823 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577154699734, waste time: 0.089s
+10:31:42.115 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+10:31:42.116 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:31:42.116 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:31:42.151 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577154702115, waste time: 0.036s
+10:31:43.982 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex
+10:31:43.982 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:31:43.982 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:31:44.041 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex, startTime: 1577154703982, waste time: 0.059s
+10:31:45.904 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404
+10:31:45.904 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+10:31:45.904 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:36:34.275 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+10:36:34.275 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:36:34.275 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:36:34.326 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577154994275, waste time: 0.051s
+10:36:56.728 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName
+10:36:56.729 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:36:56.729 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:36:56.729 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#checkLoginName
+10:36:56.729 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+10:36:56.729 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:checkLoginName
+10:36:56.729 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+10:36:56.729 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+10:36:56.818 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName, startTime: 1577155016728, waste time: 0.09s
+10:37:53.591 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName
+10:37:53.591 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:37:53.591 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:37:53.591 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#checkLoginName
+10:37:53.591 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+10:37:53.591 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:checkLoginName
+10:37:53.591 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+10:37:53.591 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+10:37:53.662 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName, startTime: 1577155073591, waste time: 0.071s
+10:37:59.158 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/news/regsave
+10:37:59.158 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: POST
+10:37:59.158 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:37:59.235 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/news/regsave, startTime: 1577155079158, waste time: 0.077s
+10:38:01.035 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:38:01.035 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:38:01.035 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:38:01.081 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577155081035, waste time: 0.046s
+10:38:02.871 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+10:38:02.871 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:38:02.871 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:38:02.913 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155082871, waste time: 0.042s
+10:38:15.028 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:38:15.028 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: POST
+10:38:15.028 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:38:15.095 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577155095028, waste time: 0.067s
+10:38:27.398 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:38:27.399 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: POST
+10:38:27.399 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+10:38:27.463 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577155107398, waste time: 0.065s
+10:38:33.551 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+10:38:33.551 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:38:33.551 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:38:33.597 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577155113551, waste time: 0.046s
+10:38:46.963 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName
+10:38:46.963 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:38:46.963 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:38:46.964 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#checkLoginName
+10:38:46.964 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+10:38:46.964 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:checkLoginName
+10:38:46.964 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+10:38:46.964 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+10:38:47.020 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName, startTime: 1577155126963, waste time: 0.057s
+10:39:10.338 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName
+10:39:10.338 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:39:10.338 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:39:10.338 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#checkLoginName
+10:39:10.338 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+10:39:10.338 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:checkLoginName
+10:39:10.338 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+10:39:10.338 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+10:39:10.396 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName, startTime: 1577155150338, waste time: 0.058s
+10:39:14.587 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/news/regsave
+10:39:14.587 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: POST
+10:39:14.587 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:39:14.679 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/news/regsave, startTime: 1577155154587, waste time: 0.092s
+10:39:16.461 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:39:16.461 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+10:39:16.461 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:39:16.505 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577155156461, waste time: 0.044s
+10:39:18.499 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+10:39:18.499 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:39:18.499 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:39:18.562 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155158499, waste time: 0.063s
+10:39:27.070 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:39:27.071 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: POST
+10:39:27.071 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:39:27.120 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577155167070, waste time: 0.05s
+10:39:39.477 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+10:39:39.477 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+10:39:39.477 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+10:39:39.537 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577155179477, waste time: 0.06s
+10:40:13.782 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName
+10:40:13.782 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:40:13.782 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:40:13.782 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#checkLoginName
+10:40:13.782 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+10:40:13.782 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:checkLoginName
+10:40:13.782 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+10:40:13.782 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+10:40:13.865 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName, startTime: 1577155213782, waste time: 0.083s
+10:40:15.629 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName
+10:40:15.630 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:40:15.630 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:40:15.630 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#checkLoginName
+10:40:15.630 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+10:40:15.630 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:checkLoginName
+10:40:15.630 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+10:40:15.630 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+10:40:15.686 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName, startTime: 1577155215629, waste time: 0.057s
+10:40:19.215 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/regsave
+10:40:19.215 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: POST
+10:40:19.215 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:40:19.287 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/regsave, startTime: 1577155219215, waste time: 0.072s
+10:40:21.117 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:40:21.117 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:40:21.117 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:40:21.164 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577155221117, waste time: 0.047s
+10:40:22.948 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+10:40:22.948 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:40:22.948 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:40:22.987 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155222948, waste time: 0.039s
+10:40:25.592 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:40:25.592 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: POST
+10:40:25.592 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:40:25.653 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577155225592, waste time: 0.061s
+10:40:27.445 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+10:40:27.446 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:40:27.446 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:40:27.482 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577155227445, waste time: 0.037s
+10:40:29.424 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+10:40:29.424 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:40:29.424 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:40:29.461 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155229424, waste time: 0.037s
+10:40:31.244 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex
+10:40:31.244 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:40:31.244 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:40:31.290 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex, startTime: 1577155231244, waste time: 0.046s
+10:40:33.097 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+10:40:33.097 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:40:33.097 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:40:33.136 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155233097, waste time: 0.039s
+10:42:42.406 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+10:42:42.406 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:42:42.406 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:42:42.601 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577155362406, waste time: 0.195s
+10:42:49.379 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+10:42:49.379 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:42:49.379 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:42:49.439 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577155369379, waste time: 0.06s
+10:43:10.027 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName
+10:43:10.028 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+10:43:10.028 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:43:10.028 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#checkLoginName
+10:43:10.028 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+10:43:10.028 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:checkLoginName
+10:43:10.028 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+10:43:10.028 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+10:43:10.151 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /api/user/checkLoginName, startTime: 1577155390027, waste time: 0.124s
+10:43:16.340 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/regsave
+10:43:16.340 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: POST
+10:43:16.340 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:43:16.487 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/regsave, startTime: 1577155396340, waste time: 0.147s
+10:43:18.319 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:43:18.320 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+10:43:18.320 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+10:43:18.400 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577155398319, waste time: 0.081s
+10:43:20.287 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+10:43:20.287 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:43:20.287 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:43:20.327 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155400287, waste time: 0.04s
+10:43:42.464 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:43:42.464 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: POST
+10:43:42.464 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:43:42.522 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577155422464, waste time: 0.057s
+10:43:44.361 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+10:43:44.361 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:43:44.361 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:43:44.423 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577155424361, waste time: 0.062s
+10:43:46.428 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+10:43:46.428 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:43:46.428 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:43:46.468 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155426428, waste time: 0.04s
+10:43:48.493 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:43:48.493 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:43:48.493 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:43:48.549 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577155428493, waste time: 0.056s
+10:43:50.383 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+10:43:50.383 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:43:50.383 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:43:50.443 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155430383, waste time: 0.06s
+10:43:52.161 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+10:43:52.161 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:43:52.161 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:43:52.211 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155432161, waste time: 0.05s
+10:44:02.872 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:44:02.872 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: POST
+10:44:02.872 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+10:44:02.930 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577155442872, waste time: 0.058s
+10:44:19.285 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:44:19.285 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: POST
+10:44:19.285 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:44:19.355 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577155459285, waste time: 0.07s
+10:44:21.130 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+10:44:21.130 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:44:21.130 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:44:21.188 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577155461130, waste time: 0.057s
+10:44:23.122 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+10:44:23.122 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:44:23.122 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:44:23.159 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155463122, waste time: 0.037s
+10:44:24.905 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex
+10:44:24.905 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:44:24.905 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:44:24.962 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex, startTime: 1577155464905, waste time: 0.057s
+10:44:26.689 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+10:44:26.689 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:44:26.689 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:44:26.738 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155466689, waste time: 0.049s
+10:46:42.891 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+10:46:42.891 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:46:42.891 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:46:43.079 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577155602891, waste time: 0.188s
+10:46:54.135 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:46:54.135 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:46:54.135 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:46:54.191 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577155614134, waste time: 0.057s
+10:46:56.044 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+10:46:56.044 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:46:56.044 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:46:56.089 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155616044, waste time: 0.045s
+10:47:01.944 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:47:01.945 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: POST
+10:47:01.945 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:47:02.132 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577155621944, waste time: 0.188s
+10:47:14.172 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:47:14.172 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: POST
+10:47:14.172 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:47:14.231 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577155634172, waste time: 0.059s
+10:47:16.022 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+10:47:16.022 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:47:16.022 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:47:16.092 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577155636022, waste time: 0.07s
+10:47:18.083 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+10:47:18.083 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:47:18.083 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:47:18.123 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155638083, waste time: 0.04s
+10:47:19.892 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex
+10:47:19.892 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:47:19.892 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:47:19.951 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex, startTime: 1577155639892, waste time: 0.059s
+10:47:21.724 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+10:47:21.724 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:47:21.724 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:47:21.757 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155641724, waste time: 0.033s
+10:48:22.875 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex
+10:48:22.875 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:48:22.875 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:48:22.927 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex, startTime: 1577155702875, waste time: 0.052s
+10:48:26.933 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex
+10:48:26.933 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:48:26.933 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:48:26.991 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex, startTime: 1577155706933, waste time: 0.058s
+10:52:26.887 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+10:52:26.887 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:52:26.887 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:52:27.092 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577155946887, waste time: 0.205s
+10:52:29.456 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+10:52:29.456 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:52:29.456 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:52:29.505 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577155949456, waste time: 0.049s
+10:52:40.206 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/login
+10:52:40.206 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: POST
+10:52:40.206 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:53:51.010 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577155960206, waste time: 70.804s
+14:01:50.042 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+14:01:50.042 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:01:50.042 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:01:50.227 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577167310041, waste time: 0.186s
+14:01:52.733 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+14:01:52.733 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:01:52.733 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:01:52.783 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167312733, waste time: 0.05s
+14:02:07.230 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/login
+14:02:07.230 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: POST
+14:02:07.230 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:02:07.367 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577167327230, waste time: 0.137s
+14:02:09.533 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:02:09.533 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:02:09.533 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:02:09.629 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577167329533, waste time: 0.096s
+14:02:12.028 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+14:02:12.028 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:02:12.028 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:02:12.082 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167332028, waste time: 0.054s
+14:02:14.106 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+14:02:14.106 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:02:14.106 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:02:14.142 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167334106, waste time: 0.036s
+14:02:42.329 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/
+14:02:42.330 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:02:42.330 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:02:42.470 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/, startTime: 1577167362329, waste time: 0.141s
+14:02:46.676 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:02:46.677 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:02:46.677 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:02:46.755 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577167366676, waste time: 0.079s
+14:02:48.971 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+14:02:48.972 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:02:48.972 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:02:49.026 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167368971, waste time: 0.055s
+14:02:51.113 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+14:02:51.113 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:02:51.113 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:02:51.150 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167371113, waste time: 0.037s
+14:03:41.960 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/
+14:03:41.960 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:03:41.960 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:03:42.026 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll/, startTime: 1577167421960, waste time: 0.066s
+14:03:47.429 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+14:03:47.429 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: POST
+14:03:47.429 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:03:47.585 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577167427429, waste time: 0.156s
+14:03:49.822 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+14:03:49.822 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:03:49.822 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:03:49.858 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167429822, waste time: 0.035s
+14:03:59.255 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/comment/addComment
+14:03:59.255 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:03:59.255 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:03:59.349 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/comment/addComment, startTime: 1577167439255, waste time: 0.094s
+14:04:01.545 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+14:04:01.545 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: POST
+14:04:01.545 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:04:01.627 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577167441545, waste time: 0.082s
+14:04:03.835 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+14:04:03.835 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:04:03.835 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:04:03.877 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167443834, waste time: 0.043s
+14:04:08.779 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/comment/addClicks
+14:04:08.779 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:04:08.779 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:04:08.858 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/comment/addClicks, startTime: 1577167448779, waste time: 0.079s
+14:04:10.891 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/comment/addClicks
+14:04:10.891 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:04:10.891 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:04:13.050 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/comment/addClicks
+14:04:13.050 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:04:13.050 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:04:13.124 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/comment/addClicks, startTime: 1577167453050, waste time: 0.074s
+14:04:15.200 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/comment/addClicks
+14:04:15.201 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:04:15.201 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:04:15.284 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/comment/addClicks, startTime: 1577167455200, waste time: 0.084s
+14:04:17.388 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+14:04:17.388 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: POST
+14:04:17.388 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:04:17.458 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577167457388, waste time: 0.07s
+14:04:19.520 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+14:04:19.521 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: POST
+14:04:19.521 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:04:19.590 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577167459520, waste time: 0.07s
+14:04:21.642 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+14:04:21.642 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: POST
+14:04:21.642 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:04:21.715 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577167461642, waste time: 0.073s
+14:04:23.747 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail
+14:04:23.747 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: POST
+14:04:23.747 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:04:23.825 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/comment/getDetail, startTime: 1577167463747, waste time: 0.078s
+14:04:26.068 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+14:04:26.068 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:04:26.068 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:04:26.101 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167466068, waste time: 0.033s
+14:04:29.433 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll
+14:04:29.433 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:04:29.433 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:04:29.485 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/comment/selectAll, startTime: 1577167469433, waste time: 0.052s
+14:04:33.473 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:04:33.474 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:04:33.474 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:04:33.538 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577167473473, waste time: 0.065s
+14:04:35.734 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+14:04:35.735 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:04:35.735 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:04:35.774 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167475734, waste time: 0.04s
+14:04:37.850 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404
+14:04:37.850 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:04:37.850 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:04:37.882 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167477850, waste time: 0.032s
+14:04:39.987 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex
+14:04:39.987 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:04:39.987 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:04:40.052 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyIndex, startTime: 1577167479987, waste time: 0.065s
+14:05:01.236 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom
+14:05:01.236 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: POST
+14:05:01.236 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:05:01.237 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.common.upload.util.UploadControllerOfGuest#getCustomTypeResource
+14:05:01.237 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+14:05:01.237 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - 	 full id: sys:uploadOfGuest:customUploadOfGuest
+14:05:01.237 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+14:05:01.237 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+14:05:01.300 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom, startTime: 1577167501236, waste time: 0.064s
+14:05:12.754 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom
+14:05:12.754 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: POST
+14:05:12.754 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:05:12.754 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.common.upload.util.UploadControllerOfGuest#getCustomTypeResource
+14:05:12.754 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+14:05:12.754 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - 	 full id: sys:uploadOfGuest:customUploadOfGuest
+14:05:12.754 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+14:05:12.754 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+14:05:12.808 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom, startTime: 1577167512754, waste time: 0.054s
+14:05:49.809 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/issueReport/addIssueReport
+14:05:49.809 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: POST
+14:05:49.809 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:05:49.957 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/issueReport/addIssueReport, startTime: 1577167549809, waste time: 0.148s
+14:05:52.142 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:05:52.143 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:05:52.143 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:05:52.183 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577167552142, waste time: 0.041s
+14:05:54.391 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+14:05:54.391 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:05:54.391 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:05:54.425 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167554391, waste time: 0.034s
+14:05:56.534 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+14:05:56.534 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:05:56.534 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:05:56.581 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167556534, waste time: 0.047s
+14:05:58.635 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyReportList
+14:05:58.635 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:05:58.635 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:05:58.692 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyReportList, startTime: 1577167558634, waste time: 0.057s
+14:06:21.882 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:06:21.882 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:06:21.882 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:06:21.941 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577167581882, waste time: 0.059s
+14:06:24.081 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+14:06:24.081 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:06:24.081 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:06:24.116 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167584081, waste time: 0.035s
+14:06:26.155 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+14:06:26.156 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:06:26.156 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:06:26.198 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167586155, waste time: 0.043s
+14:06:39.328 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyReportList
+14:06:39.328 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:06:39.328 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:06:39.384 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyReportList, startTime: 1577167599328, waste time: 0.055s
+14:06:42.558 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/issueReport/reportDetail
+14:06:42.559 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: POST
+14:06:42.559 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:06:42.621 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/issueReport/reportDetail, startTime: 1577167602558, waste time: 0.063s
+14:06:49.185 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404
+14:06:49.185 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:06:49.185 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:06:49.223 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167609185, waste time: 0.038s
+14:07:17.908 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyReportList
+14:07:17.908 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:07:17.908 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:07:17.965 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/issueReport/toMyReportList, startTime: 1577167637908, waste time: 0.057s
+14:07:21.077 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:07:21.077 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:07:21.077 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:07:21.128 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577167641077, waste time: 0.051s
+14:07:23.288 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+14:07:23.288 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:07:23.288 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:07:23.322 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167643288, waste time: 0.034s
+14:07:25.334 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+14:07:25.334 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:07:25.334 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:07:25.367 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167645334, waste time: 0.032s
+14:08:23.692 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/login
+14:08:23.692 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:08:23.692 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:08:23.740 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1577167703692, waste time: 0.048s
+14:08:30.497 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+14:08:30.497 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:08:30.497 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:08:30.538 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167710497, waste time: 0.041s
+14:08:32.592 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+14:08:32.592 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:08:32.592 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:08:32.638 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167712592, waste time: 0.046s
+14:08:40.302 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/news/conven
+14:08:40.302 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:08:40.302 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:08:42.422 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/mmConvenient/getConvenientType
+14:08:42.422 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:08:42.422 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:08:42.489 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/mmConvenient/getConvenientType, startTime: 1577167722422, waste time: 0.067s
+14:08:42.526 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/news/conven, startTime: 1577167722422, waste time: 0.104s
+14:09:01.801 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/index
+14:09:01.801 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:09:01.801 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:09:01.891 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/index, startTime: 1577167741801, waste time: 0.09s
+14:09:06.244 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+14:09:06.244 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:09:06.244 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:09:06.288 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1577167746244, waste time: 0.044s
+14:09:08.389 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+14:09:08.389 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:09:08.389 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:09:08.441 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167748389, waste time: 0.052s
+14:09:10.498 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+14:09:10.498 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:09:10.498 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:09:10.539 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577167750498, waste time: 0.041s
+14:13:50.567 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+14:13:50.568 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:13:50.568 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:13:50.613 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1577168030567, waste time: 0.046s
+14:13:52.774 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+14:13:52.775 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:13:52.775 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:13:52.817 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168032774, waste time: 0.043s
+14:14:03.428 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/login
+14:14:03.428 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: POST
+14:14:03.428 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:14:03.483 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/login, startTime: 1577168043428, waste time: 0.055s
+14:14:05.596 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:14:05.596 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:14:05.596 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:14:05.644 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577168045596, waste time: 0.048s
+14:14:07.904 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+14:14:07.904 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:14:07.904 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:14:07.952 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168047904, waste time: 0.048s
+14:14:10.760 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+14:14:10.760 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:14:10.761 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:14:10.799 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168050760, waste time: 0.039s
+14:16:04.026 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:16:04.026 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:16:04.026 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:16:04.079 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577168164026, waste time: 0.053s
+14:16:06.232 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+14:16:06.232 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:16:06.232 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:16:06.273 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168166231, waste time: 0.042s
+14:16:08.306 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+14:16:08.306 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:16:08.307 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:16:08.349 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168168306, waste time: 0.043s
+14:16:56.782 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:16:56.782 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:16:56.782 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:16:56.831 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577168216782, waste time: 0.049s
+14:16:58.998 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+14:16:58.998 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:16:58.998 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:16:59.041 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168218998, waste time: 0.043s
+14:17:01.259 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+14:17:01.259 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:17:01.259 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:17:01.307 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168221259, waste time: 0.048s
+14:18:26.981 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:18:26.981 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:18:26.981 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:18:27.077 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577168306981, waste time: 0.096s
+14:18:29.196 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+14:18:29.196 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:18:29.196 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:18:29.241 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168309196, waste time: 0.045s
+14:18:31.314 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+14:18:31.314 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:18:31.314 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:18:31.357 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168311314, waste time: 0.043s
+14:19:36.349 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:19:36.349 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:19:36.349 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:19:36.402 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577168376349, waste time: 0.053s
+14:19:38.583 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+14:19:38.583 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:19:38.583 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:19:38.615 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168378583, waste time: 0.032s
+14:19:40.639 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+14:19:40.639 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:19:40.639 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:19:40.674 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168380639, waste time: 0.035s
+14:19:56.664 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:19:56.664 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:19:56.664 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:19:56.707 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577168396664, waste time: 0.043s
+14:19:58.830 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+14:19:58.830 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:19:58.830 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:19:58.864 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168398830, waste time: 0.034s
+14:20:00.880 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+14:20:00.880 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:20:00.880 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:20:00.915 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168400879, waste time: 0.036s
+14:20:24.735 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index
+14:20:24.735 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:20:24.735 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:20:24.785 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /mm/wxindex/index, startTime: 1577168424735, waste time: 0.05s
+14:20:26.911 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+14:20:26.911 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:20:26.912 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:20:26.948 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168426911, waste time: 0.037s
+14:20:29.037 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+14:20:29.037 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:20:29.037 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:20:29.090 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168429036, waste time: 0.054s
+14:24:49.290 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/login
+14:24:49.290 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:24:49.290 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:24:49.343 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1577168689290, waste time: 0.053s
+14:24:51.555 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+14:24:51.555 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:24:51.555 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:24:51.595 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168691555, waste time: 0.04s
+14:24:53.795 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+14:24:53.795 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:24:53.795 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:24:53.834 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168693795, waste time: 0.039s
+14:24:55.866 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/dz/cmanage
+14:24:55.866 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:24:55.866 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:24:55.939 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/dz/cmanage, startTime: 1577168695866, waste time: 0.073s
+14:24:58.085 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+14:24:58.085 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:24:58.085 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:24:58.127 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168698085, waste time: 0.042s
+14:25:00.248 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+14:25:00.248 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:25:00.248 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:25:00.310 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168700248, waste time: 0.062s
+14:25:02.371 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /count/countManage
+14:25:02.371 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:25:02.371 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:25:02.438 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /count/countManage, startTime: 1577168702371, waste time: 0.067s
+14:25:04.414 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+14:25:04.414 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:25:04.414 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:25:04.445 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577168704414, waste time: 0.031s
+17:01:32.645 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /
+17:01:32.645 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+17:01:32.645 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+17:01:32.645 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#home
+17:01:32.645 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+17:01:32.645 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 full id: index:home
+17:01:32.645 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+17:01:32.645 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+17:01:32.693 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /, startTime: 1577178092645, waste time: 0.048s
+17:01:34.977 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /login
+17:01:34.977 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+17:01:34.977 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+17:01:34.977 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#login
+17:01:34.977 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+17:01:34.977 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 full id: index:login
+17:01:34.977 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+17:01:34.977 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+17:01:35.112 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /login, startTime: 1577178094977, waste time: 0.135s
+17:01:37.679 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+17:01:37.679 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+17:01:37.679 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+17:01:37.726 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577178097679, waste time: 0.047s
+17:01:39.915 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /login
+17:01:39.915 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: POST
+17:01:39.915 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+17:01:39.916 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#login
+17:01:39.916 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+17:01:39.916 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 full id: index:showLogin
+17:01:39.916 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+17:01:39.916 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+17:01:40.009 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /login, startTime: 1577178099915, waste time: 0.094s
+17:01:40.016 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /
+17:01:40.016 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+17:01:40.016 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+17:01:40.016 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#home
+17:01:40.016 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+17:01:40.016 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 full id: index:home
+17:01:40.016 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+17:01:40.016 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+17:01:40.091 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /, startTime: 1577178100016, waste time: 0.075s
+17:01:40.121 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /index
+17:01:40.121 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+17:01:40.121 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+17:01:40.122 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#index
+17:01:40.122 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+17:01:40.122 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - 	 full id: index:welcome
+17:01:40.122 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+17:01:40.122 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+17:01:40.205 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /index, startTime: 1577178100121, waste time: 0.084s
+17:01:40.363 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /api/menu
+17:01:40.364 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+17:01:40.364 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+17:01:40.393 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /api/user/current
+17:01:40.394 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+17:01:40.394 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+17:01:40.394 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#getCurrentUser
+17:01:40.394 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+17:01:40.394 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:current
+17:01:40.394 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+17:01:40.394 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+17:01:40.398 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /api/info/notReaderMessageCount
+17:01:40.398 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+17:01:40.398 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+17:01:40.398 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.component.info.controller.InfoReceiverController#getNotReaderCount
+17:01:40.399 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+17:01:40.399 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - 	 full id: sys:info:notReaderMessageCount
+17:01:40.399 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+17:01:40.399 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+17:01:40.522 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /api/menu, startTime: 1577178100363, waste time: 0.159s
+17:01:40.552 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /api/user/current, startTime: 1577178100393, waste time: 0.159s
+17:01:40.577 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /api/info/notReaderMessageCount, startTime: 1577178100397, waste time: 0.18s
+17:01:42.771 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404
+17:01:42.771 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+17:01:42.771 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+17:01:42.801 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577178102771, waste time: 0.03s
+17:01:45.073 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+17:01:45.073 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+17:01:45.073 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+17:01:45.109 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577178105072, waste time: 0.037s
+20:28:33.270 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+20:28:33.273 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+20:28:33.273 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+20:28:40.138 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577190513270, waste time: 6.868s
+20:28:41.936 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+20:28:41.936 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+20:28:41.936 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+20:28:41.979 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190521936, waste time: 0.043s
+20:28:43.760 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+20:28:43.760 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+20:28:43.760 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+20:28:43.809 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190523760, waste time: 0.049s
+20:28:45.537 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+20:28:45.537 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+20:28:45.537 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+20:28:45.576 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190525537, waste time: 0.039s
+20:28:47.356 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404
+20:28:47.356 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+20:28:47.356 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+20:28:47.404 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190527356, waste time: 0.048s
+20:28:49.200 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+20:28:49.200 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+20:28:49.200 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+20:28:49.242 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190529200, waste time: 0.042s
+20:28:51.114 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+20:28:51.114 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+20:28:51.114 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+20:28:51.151 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190531114, waste time: 0.037s
+20:28:52.925 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+20:28:52.926 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+20:28:52.926 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+20:28:52.967 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190532925, waste time: 0.042s
+20:28:54.705 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+20:28:54.705 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+20:28:54.706 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+20:28:54.762 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190534705, waste time: 0.057s
+20:28:56.498 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+20:28:56.498 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+20:28:56.498 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+20:28:56.534 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190536498, waste time: 0.036s
+20:28:58.308 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+20:28:58.308 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+20:28:58.308 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+20:28:58.345 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190538308, waste time: 0.037s
+20:29:00.125 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+20:29:00.125 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+20:29:00.125 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+20:29:00.163 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190540125, waste time: 0.038s
+20:29:01.917 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+20:29:01.917 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+20:29:01.917 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+20:29:01.951 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190541917, waste time: 0.034s
+20:30:09.213 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+20:30:09.213 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+20:30:09.214 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+20:30:15.809 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577190609213, waste time: 6.596s
+20:30:17.620 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+20:30:17.620 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+20:30:17.621 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+20:30:17.666 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190617620, waste time: 0.046s
+20:30:19.526 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+20:30:19.526 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+20:30:19.526 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+20:30:19.565 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190619526, waste time: 0.039s
+20:30:21.367 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+20:30:21.367 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+20:30:21.367 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+20:30:21.406 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190621367, waste time: 0.039s
+20:30:23.218 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+20:30:23.218 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+20:30:23.218 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+20:30:23.250 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190623218, waste time: 0.032s
+20:30:24.994 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404
+20:30:24.995 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+20:30:24.995 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+20:30:25.041 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190624994, waste time: 0.047s
+20:30:26.947 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404
+20:30:26.947 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+20:30:26.947 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+20:30:26.993 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190626947, waste time: 0.046s
+20:30:28.759 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+20:30:28.759 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+20:30:28.759 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+20:30:28.798 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190628759, waste time: 0.039s
+20:30:30.881 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404
+20:30:30.881 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+20:30:30.881 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+20:30:30.916 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190630881, waste time: 0.035s
+20:30:32.731 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+20:30:32.731 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+20:30:32.731 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+20:30:32.774 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190632731, waste time: 0.043s
+20:30:34.527 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+20:30:34.527 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+20:30:34.527 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+20:30:34.558 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190634527, waste time: 0.031s
+20:30:36.341 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+20:30:36.341 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+20:30:36.341 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+20:30:36.381 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190636341, waste time: 0.04s
+20:30:38.159 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+20:30:38.159 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+20:30:38.159 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+20:30:38.314 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190638159, waste time: 0.155s
+20:32:05.637 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+20:32:05.637 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - method: GET
+20:32:05.637 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - platform: html
+20:32:11.908 [http-nio-8080-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577190725637, waste time: 6.271s
+20:32:13.916 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+20:32:13.916 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+20:32:13.916 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+20:32:13.957 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190733916, waste time: 0.041s
+20:32:15.655 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404
+20:32:15.655 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+20:32:15.655 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+20:32:15.698 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190735655, waste time: 0.043s
+20:32:17.455 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+20:32:17.455 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+20:32:17.456 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+20:32:17.491 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190737455, waste time: 0.036s
+20:34:12.797 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+20:34:12.797 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+20:34:12.797 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+20:34:15.606 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577190852797, waste time: 2.809s
+20:34:17.562 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404
+20:34:17.563 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+20:34:17.563 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+20:34:17.607 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190857562, waste time: 0.045s
+20:34:19.326 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404
+20:34:19.326 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - method: GET
+20:34:19.326 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - platform: html
+20:34:19.365 [http-nio-8080-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190859326, waste time: 0.039s
+20:34:21.143 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404
+20:34:21.143 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - method: GET
+20:34:21.143 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - platform: html
+20:34:21.174 [http-nio-8080-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190861142, waste time: 0.032s
+20:34:30.110 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+20:34:30.111 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+20:34:30.111 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+20:34:30.348 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577190870110, waste time: 0.238s
+20:34:32.277 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /404
+20:34:32.277 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+20:34:32.277 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+20:34:34.057 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404
+20:34:34.057 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+20:34:34.057 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+20:34:34.090 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190874057, waste time: 0.033s
+20:34:35.821 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+20:34:35.821 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+20:34:35.821 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+20:34:35.857 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577190875821, waste time: 0.036s
+20:40:14.539 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+20:40:14.539 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+20:40:14.539 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+20:40:15.162 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577191214539, waste time: 0.623s
+20:42:06.591 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/login
+20:42:06.591 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - method: GET
+20:42:06.591 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - platform: html
+20:42:06.677 [http-nio-8080-exec-9] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1577191326591, waste time: 0.086s
+20:42:11.931 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404
+20:42:11.931 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+20:42:11.931 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+20:42:11.968 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577191331931, waste time: 0.037s
+20:42:13.704 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404
+20:42:13.704 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - method: GET
+20:42:13.704 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - platform: html
+20:42:13.735 [http-nio-8080-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1577191333704, waste time: 0.031s
+20:50:59.921 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+20:50:59.921 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - method: GET
+20:50:59.921 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - platform: html
+20:51:13.530 [http-nio-8080-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577191859921, waste time: 13.609s
+20:54:18.465 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+20:54:18.465 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - method: GET
+20:54:18.465 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - platform: html
+20:54:23.630 [http-nio-8080-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577192058465, waste time: 5.165s
+20:54:55.235 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+20:54:55.235 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+20:54:55.236 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+20:54:56.681 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577192095235, waste time: 1.446s
+21:14:02.227 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+21:14:02.227 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+21:14:02.227 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+21:14:16.699 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577193242227, waste time: 14.472s
+21:14:52.065 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+21:14:52.065 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+21:14:52.065 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+21:15:06.158 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577193292065, waste time: 14.093s
+21:16:56.110 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+21:16:56.111 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - method: GET
+21:16:56.111 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - platform: html
+21:17:08.932 [http-nio-8080-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577193416110, waste time: 12.822s
+21:20:53.396 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+21:20:53.396 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - method: GET
+21:20:53.396 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - platform: html
+21:21:49.104 [http-nio-8080-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577193653396, waste time: 55.708s
+21:22:07.495 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll
+21:22:07.496 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - method: GET
+21:22:07.496 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - platform: html
+21:23:04.760 [http-nio-8080-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/selectAll, startTime: 1577193727495, waste time: 57.265s

@@ -1,0 +1,1674 @@
+08:58:08.479 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /
+08:58:08.479 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+08:58:08.479 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:58:08.479 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#home
+08:58:08.480 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+08:58:08.480 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: index:home
+08:58:08.480 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+08:58:08.480 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:08.531 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /, startTime: 1579136288479, waste time: 0.052s
+08:58:09.943 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /login
+08:58:09.943 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+08:58:09.943 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+08:58:09.943 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#login
+08:58:09.943 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+08:58:09.943 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 full id: index:login
+08:58:09.943 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+08:58:09.943 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:10.036 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /login, startTime: 1579136289943, waste time: 0.093s
+08:58:11.510 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+08:58:11.510 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+08:58:11.510 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+08:58:11.551 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579136291510, waste time: 0.041s
+08:58:12.915 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+08:58:12.915 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+08:58:12.915 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+08:58:12.952 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579136292915, waste time: 0.037s
+08:58:14.289 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404
+08:58:14.290 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+08:58:14.290 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+08:58:14.330 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579136294289, waste time: 0.041s
+08:58:25.276 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /login
+08:58:25.276 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+08:58:25.276 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:58:25.276 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#login
+08:58:25.276 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+08:58:25.276 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: index:showLogin
+08:58:25.276 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+08:58:25.276 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:25.347 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /login, startTime: 1579136305276, waste time: 0.071s
+08:58:25.351 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /
+08:58:25.351 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+08:58:25.351 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+08:58:25.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#home
+08:58:25.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+08:58:25.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: index:home
+08:58:25.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+08:58:25.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:25.405 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /index
+08:58:25.405 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+08:58:25.405 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /, startTime: 1579136305351, waste time: 0.054s
+08:58:25.405 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+08:58:25.405 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#index
+08:58:25.405 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+08:58:25.405 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: index:welcome
+08:58:25.406 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+08:58:25.406 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:25.454 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /index, startTime: 1579136305405, waste time: 0.049s
+08:58:25.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/menu
+08:58:25.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+08:58:25.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+08:58:25.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.MenuController#tree
+08:58:25.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+08:58:25.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 full id: sys:menu:tree
+08:58:25.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+08:58:25.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:25.561 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/info/notReaderMessageCount
+08:58:25.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/user/current
+08:58:25.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+08:58:25.561 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+08:58:25.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:58:25.561 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+08:58:25.562 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.component.info.controller.InfoReceiverController#getNotReaderCount
+08:58:25.562 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#getCurrentUser
+08:58:25.562 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+08:58:25.562 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+08:58:25.562 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 full id: sys:info:notReaderMessageCount
+08:58:25.562 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:current
+08:58:25.562 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+08:58:25.562 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+08:58:25.562 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:25.562 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:25.612 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/menu, startTime: 1579136305537, waste time: 0.075s
+08:58:25.669 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/info/notReaderMessageCount, startTime: 1579136305561, waste time: 0.108s
+08:58:25.689 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/user/current, startTime: 1579136305561, waste time: 0.128s
+08:58:31.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /news/newslist
+08:58:31.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+08:58:31.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+08:58:31.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.news.NewsMenu#processModeler
+08:58:31.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+08:58:31.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 full id: mainManager:newsManager
+08:58:31.952 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+08:58:31.952 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:32.007 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /news/newslist, startTime: 1579136311951, waste time: 0.056s
+08:58:32.119 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/news
+08:58:32.119 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+08:58:32.119 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+08:58:32.119 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.news.controller.NewsController#index
+08:58:32.119 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+08:58:32.119 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 full id: news:list
+08:58:32.119 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+08:58:32.119 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:32.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/category/clist
+08:58:32.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+08:58:32.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:58:32.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.news.controller.CategoryController#userList
+08:58:32.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+08:58:32.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: category:clist
+08:58:32.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+08:58:32.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+08:58:32.182 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /Ueditors/config
+08:58:32.182 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+08:58:32.182 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+08:58:32.192 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/category/clist, startTime: 1579136312119, waste time: 0.073s
+08:58:32.221 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /Ueditors/config, startTime: 1579136312181, waste time: 0.04s
+08:58:32.252 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/news, startTime: 1579136312118, waste time: 0.134s
+08:59:12.756 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/login
+08:59:12.756 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+08:59:12.756 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+08:59:12.886 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579136352756, waste time: 0.13s
+08:59:15.996 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404
+08:59:15.996 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+08:59:15.996 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+08:59:15.996 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+08:59:15.996 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+08:59:15.996 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:59:16.045 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579136355996, waste time: 0.049s
+08:59:16.064 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579136355996, waste time: 0.068s
+08:59:26.784 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+08:59:26.785 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+08:59:26.785 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+08:59:26.826 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579136366784, waste time: 0.042s
+08:59:26.876 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+08:59:26.876 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+08:59:26.876 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+08:59:26.946 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579136366876, waste time: 0.07s
+08:59:30.085 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+08:59:30.085 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+08:59:30.085 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:59:30.130 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579136370085, waste time: 0.045s
+08:59:30.143 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+08:59:30.143 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+08:59:30.143 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+08:59:30.144 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+08:59:30.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+08:59:30.144 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+08:59:30.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: POST
+08:59:30.144 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+08:59:30.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+08:59:30.144 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+08:59:30.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+08:59:30.144 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+08:59:30.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+08:59:30.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+08:59:30.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+08:59:30.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+08:59:30.207 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579136370143, waste time: 0.064s
+08:59:30.229 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579136370144, waste time: 0.085s
+09:01:22.753 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:01:22.753 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:01:22.753 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:01:22.797 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579136482753, waste time: 0.044s
+09:01:22.807 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:01:22.808 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:01:22.808 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:01:22.808 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:01:22.808 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:01:22.808 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:01:22.808 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:01:22.808 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:01:22.811 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:01:22.811 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:01:22.811 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:01:22.812 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:01:22.812 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:01:22.812 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:01:22.812 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:01:22.812 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:01:22.876 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579136482807, waste time: 0.069s
+09:01:22.904 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579136482811, waste time: 0.093s
+09:02:32.079 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:02:32.079 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:02:32.079 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:02:32.141 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579136552079, waste time: 0.062s
+09:02:32.155 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:02:32.156 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+09:02:32.156 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:02:32.156 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:02:32.157 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+09:02:32.157 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:02:32.157 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:02:32.157 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+09:02:32.158 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:02:32.158 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:02:32.158 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:02:32.158 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:02:32.158 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:02:32.158 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:02:32.158 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:02:32.158 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:02:32.215 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579136552155, waste time: 0.06s
+09:02:32.236 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579136552158, waste time: 0.078s
+09:02:50.048 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:02:50.048 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:02:50.048 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:02:50.100 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579136570048, waste time: 0.052s
+09:02:50.116 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:02:50.117 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+09:02:50.117 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:02:50.117 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:02:50.117 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+09:02:50.117 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:02:50.117 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:02:50.117 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+09:02:50.118 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:02:50.118 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:02:50.119 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:02:50.119 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:02:50.119 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+09:02:50.119 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:02:50.119 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:02:50.119 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+09:02:50.186 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579136570116, waste time: 0.07s
+09:02:50.209 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579136570118, waste time: 0.091s
+09:03:41.074 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:03:41.074 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:03:41.074 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:03:41.121 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579136621074, waste time: 0.047s
+09:03:41.135 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:03:41.135 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:03:41.135 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:03:41.135 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:03:41.135 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+09:03:41.135 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:03:41.135 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:03:41.135 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+09:03:41.137 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:03:41.137 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:03:41.137 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:03:41.138 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:03:41.138 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:03:41.138 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:03:41.138 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:03:41.138 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:03:41.198 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579136621135, waste time: 0.063s
+09:03:41.231 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579136621137, waste time: 0.094s
+09:04:07.631 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:04:07.631 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:04:07.631 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:04:07.684 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579136647631, waste time: 0.053s
+09:04:07.695 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:04:07.695 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:04:07.695 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:04:07.696 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:04:07.696 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:04:07.696 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:04:07.696 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:04:07.696 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:04:07.701 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:04:07.701 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:04:07.702 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:04:07.703 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:04:07.703 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+09:04:07.703 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:04:07.703 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:04:07.703 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+09:04:07.765 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579136647695, waste time: 0.07s
+09:04:07.790 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579136647701, waste time: 0.089s
+09:10:47.220 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:10:47.220 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:10:47.220 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:10:47.263 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137047220, waste time: 0.043s
+09:10:47.276 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:10:47.276 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+09:10:47.276 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:10:47.276 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:10:47.276 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+09:10:47.276 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:10:47.276 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:10:47.277 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+09:10:47.277 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:10:47.277 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:10:47.277 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:10:47.278 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:10:47.278 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:10:47.278 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:10:47.278 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:10:47.278 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:10:47.345 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137047276, waste time: 0.069s
+09:10:47.364 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137047277, waste time: 0.087s
+09:11:03.861 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /likeContentPost/likeList
+09:11:03.861 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:11:03.861 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:11:03.861 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.likeContentPost#processModeler
+09:11:03.861 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+09:11:03.861 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 full id: likeMenu:likeContent:likeList
+09:11:03.861 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+09:11:03.861 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+09:11:03.896 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+09:11:03.896 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:11:03.896 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:11:03.904 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /likeContentPost/likeList, startTime: 1579137063861, waste time: 0.043s
+09:11:03.938 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579137063896, waste time: 0.042s
+09:11:04.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/like
+09:11:04.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:11:04.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:11:04.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#index
+09:11:04.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:11:04.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:list
+09:11:04.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:11:04.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:11:04.084 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /Ueditors/config
+09:11:04.084 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:11:04.084 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:11:04.089 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/like, startTime: 1579137064001, waste time: 0.088s
+09:11:04.123 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /Ueditors/config, startTime: 1579137064084, waste time: 0.039s
+09:12:09.924 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /Ueditors/uploadimage
+09:12:09.924 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+09:12:09.924 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:12:09.979 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /Ueditors/uploadimage, startTime: 1579137129924, waste time: 0.055s
+09:12:16.600 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /upload/custom
+09:12:16.600 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:12:16.600 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:12:16.646 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /upload/custom, startTime: 1579137136600, waste time: 0.046s
+09:12:21.806 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /upload/custom
+09:12:21.806 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:12:21.806 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:12:21.859 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /upload/custom, startTime: 1579137141806, waste time: 0.053s
+09:12:29.426 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /upload/custom
+09:12:29.426 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:12:29.426 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:12:29.479 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /upload/custom, startTime: 1579137149426, waste time: 0.053s
+09:12:31.053 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/like
+09:12:31.053 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+09:12:31.053 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:12:31.053 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#create
+09:12:31.053 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+09:12:31.053 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:create
+09:12:31.053 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+09:12:31.054 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+09:12:31.171 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/like, startTime: 1579137151053, waste time: 0.118s
+09:12:31.179 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/like
+09:12:31.179 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:12:31.179 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:12:31.179 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#index
+09:12:31.179 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+09:12:31.179 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:list
+09:12:31.179 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:12:31.179 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+09:12:31.246 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/like, startTime: 1579137151179, waste time: 0.067s
+09:12:33.716 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/like/updatePublish
+09:12:33.716 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:12:33.716 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:12:33.716 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#updatePublish
+09:12:33.716 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+09:12:33.716 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:updatePublish
+09:12:33.716 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:12:33.716 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+09:12:33.796 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/like/updatePublish, startTime: 1579137153716, waste time: 0.08s
+09:12:33.801 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /likeContentPost/likeList
+09:12:33.801 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:12:33.801 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:12:33.801 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.likeContentPost#processModeler
+09:12:33.801 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:12:33.801 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: likeMenu:likeContent:likeList
+09:12:33.801 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+09:12:33.801 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:12:33.822 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404
+09:12:33.823 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:12:33.823 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:12:33.836 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /likeContentPost/likeList, startTime: 1579137153801, waste time: 0.035s
+09:12:33.862 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579137153822, waste time: 0.04s
+09:12:33.918 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/like
+09:12:33.918 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:12:33.918 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:12:33.918 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#index
+09:12:33.918 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+09:12:33.918 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:list
+09:12:33.918 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:12:33.918 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+09:12:33.934 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /Ueditors/config
+09:12:33.934 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:12:33.934 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:12:33.961 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /Ueditors/config, startTime: 1579137153934, waste time: 0.027s
+09:12:33.987 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/like, startTime: 1579137153918, waste time: 0.069s
+09:12:36.390 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:12:36.390 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:12:36.390 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:12:36.437 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579137156390, waste time: 0.047s
+09:12:36.446 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:12:36.447 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:12:36.447 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:12:36.503 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579137156446, waste time: 0.057s
+09:12:39.122 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:12:39.122 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:12:39.122 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:12:39.171 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137159122, waste time: 0.049s
+09:12:39.179 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:12:39.179 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:12:39.179 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:12:39.180 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:12:39.180 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+09:12:39.180 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:12:39.180 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:12:39.180 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+09:12:39.180 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:12:39.180 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:12:39.180 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+09:12:39.180 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:12:39.180 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+09:12:39.180 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:12:39.180 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:12:39.180 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+09:12:39.237 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137159179, waste time: 0.058s
+09:12:39.263 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137159180, waste time: 0.083s
+09:13:21.649 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/likeInfo/commentSubmit
+09:13:21.649 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:13:21.650 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:13:21.650 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#commentSubmit
+09:13:21.650 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+09:13:21.650 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: likeInfo:commentSubmit
+09:13:21.650 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:13:21.650 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+09:13:21.712 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/likeInfo/commentSubmit, startTime: 1579137201649, waste time: 0.063s
+09:13:29.607 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:13:29.607 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:13:29.607 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:13:29.655 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137209607, waste time: 0.048s
+09:13:29.667 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:13:29.667 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:13:29.667 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:13:29.667 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:13:29.667 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+09:13:29.667 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:13:29.667 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:13:29.667 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+09:13:29.667 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:13:29.668 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:13:29.668 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:13:29.668 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:13:29.668 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:13:29.668 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:13:29.668 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:13:29.668 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:13:29.728 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137209667, waste time: 0.061s
+09:13:29.745 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137209667, waste time: 0.078s
+09:13:36.504 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/likeInfo/commentSubmit
+09:13:36.504 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:13:36.504 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:13:36.504 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#commentSubmit
+09:13:36.504 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:13:36.504 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: likeInfo:commentSubmit
+09:13:36.504 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:13:36.504 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:13:36.578 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/likeInfo/commentSubmit, startTime: 1579137216504, waste time: 0.074s
+09:13:37.972 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:13:37.972 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+09:13:37.972 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:13:37.972 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:13:37.972 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+09:13:37.972 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:13:37.972 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:13:37.972 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+09:13:38.061 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137217972, waste time: 0.089s
+09:13:48.606 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/likeInfo/commentSubmit
+09:13:48.606 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:13:48.606 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:13:48.606 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#commentSubmit
+09:13:48.606 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+09:13:48.606 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: likeInfo:commentSubmit
+09:13:48.606 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:13:48.606 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+09:13:48.745 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/likeInfo/commentSubmit, startTime: 1579137228606, waste time: 0.139s
+09:13:50.070 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:13:50.070 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:13:50.070 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:13:50.070 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:13:50.070 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+09:13:50.070 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:13:50.070 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:13:50.070 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+09:13:50.154 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137230070, waste time: 0.084s
+09:13:53.803 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/likeInfo/updateLikeCNum
+09:13:53.803 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+09:13:53.803 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:13:53.804 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#updateLikeCNum
+09:13:53.804 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+09:13:53.804 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 full id: likeInfo:updateLikeCNum
+09:13:53.804 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:13:53.804 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+09:13:53.895 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/likeInfo/updateLikeCNum, startTime: 1579137233803, waste time: 0.092s
+09:13:55.736 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:13:55.736 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:13:55.736 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:13:55.771 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579137235736, waste time: 0.035s
+09:13:55.782 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:13:55.783 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:13:55.783 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:13:55.845 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579137235782, waste time: 0.063s
+09:14:00.175 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/index
+09:14:00.175 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:14:00.175 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:14:00.257 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:14:00.257 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:14:00.257 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:14:00.266 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404
+09:14:00.266 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:14:00.266 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:14:00.267 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/index, startTime: 1579137240175, waste time: 0.092s
+09:14:00.302 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579137240257, waste time: 0.045s
+09:14:00.312 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579137240266, waste time: 0.046s
+09:14:53.479 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /likeContentPost/likeList
+09:14:53.479 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:14:53.479 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:14:53.479 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.likeContentPost#processModeler
+09:14:53.479 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:14:53.479 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: likeMenu:likeContent:likeList
+09:14:53.479 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+09:14:53.479 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:14:53.500 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+09:14:53.500 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:14:53.500 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:14:53.518 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /likeContentPost/likeList, startTime: 1579137293479, waste time: 0.039s
+09:14:53.536 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579137293500, waste time: 0.036s
+09:14:53.555 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/like
+09:14:53.555 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:14:53.555 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:14:53.555 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#index
+09:14:53.555 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+09:14:53.555 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:list
+09:14:53.555 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:14:53.555 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+09:14:53.592 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /Ueditors/config
+09:14:53.592 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:14:53.592 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:14:53.627 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/like, startTime: 1579137293555, waste time: 0.072s
+09:14:53.645 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /Ueditors/config, startTime: 1579137293591, waste time: 0.054s
+09:15:13.101 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/news/newsDetail/200115141634011188
+09:15:13.102 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:15:13.102 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:15:13.195 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/news/newsDetail/200115141634011188, startTime: 1579137313101, waste time: 0.094s
+09:15:14.976 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404
+09:15:14.976 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:15:14.976 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:15:15.018 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579137314976, waste time: 0.042s
+09:15:22.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/index
+09:15:22.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:15:22.537 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:15:22.577 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/news/index, startTime: 1579137322537, waste time: 0.04s
+09:15:28.142 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/login
+09:15:28.143 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:15:28.143 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:15:28.201 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579137328142, waste time: 0.059s
+09:15:34.154 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:15:34.154 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:15:34.154 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:15:34.204 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579137334154, waste time: 0.05s
+09:15:35.613 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:15:35.613 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:15:35.613 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:15:35.662 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579137335613, waste time: 0.049s
+09:15:43.287 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:15:43.287 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:15:43.287 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:15:43.328 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137343286, waste time: 0.042s
+09:15:44.837 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:15:44.838 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+09:15:44.838 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:15:44.838 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:15:44.838 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+09:15:44.838 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:15:44.838 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:15:44.838 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+09:15:44.893 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137344837, waste time: 0.056s
+09:15:46.254 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:15:46.254 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:15:46.254 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:15:46.255 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:15:46.255 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+09:15:46.255 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:15:46.255 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:15:46.255 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+09:15:46.318 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137346254, waste time: 0.064s
+09:16:14.852 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:16:14.852 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:16:14.852 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:16:14.893 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579137374852, waste time: 0.041s
+09:16:14.901 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:16:14.901 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:16:14.901 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:16:14.954 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579137374901, waste time: 0.053s
+09:16:17.567 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:16:17.567 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:16:17.567 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:16:17.620 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137377567, waste time: 0.053s
+09:16:17.627 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:16:17.627 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:16:17.627 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:16:17.627 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:16:17.628 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+09:16:17.628 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:16:17.628 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:16:17.628 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+09:16:17.628 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:16:17.628 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:16:17.628 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:16:17.628 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:16:17.628 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:16:17.628 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:16:17.628 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:16:17.628 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:16:17.693 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137377627, waste time: 0.066s
+09:16:17.726 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137377628, waste time: 0.098s
+09:16:22.282 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:16:22.282 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:16:22.282 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:16:22.327 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137382282, waste time: 0.045s
+09:16:24.403 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:16:24.403 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:16:24.403 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:16:24.404 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:16:24.404 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:16:24.404 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:16:24.404 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:16:24.404 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:16:24.460 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137384403, waste time: 0.057s
+09:16:25.758 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:16:25.758 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+09:16:25.758 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:16:25.759 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:16:25.759 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+09:16:25.759 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:16:25.759 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:16:25.759 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+09:16:25.836 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137385758, waste time: 0.078s
+09:16:55.455 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/updateLikeCNum
+09:16:55.455 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:16:55.455 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:16:55.456 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#updateLikeCNum
+09:16:55.456 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:16:55.456 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: likeInfo:updateLikeCNum
+09:16:55.456 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:16:55.456 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:16:55.545 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/updateLikeCNum, startTime: 1579137415455, waste time: 0.09s
+09:16:56.788 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/likeInfo/updateLikeCNum
+09:16:56.788 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:16:56.788 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:16:56.788 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#updateLikeCNum
+09:16:56.788 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:16:56.788 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: likeInfo:updateLikeCNum
+09:16:56.788 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:16:56.788 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:16:56.877 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/likeInfo/updateLikeCNum, startTime: 1579137416788, waste time: 0.089s
+09:17:09.345 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/likeInfo/commentSubmit
+09:17:09.345 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:17:09.345 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:17:09.345 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#commentSubmit
+09:17:09.345 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+09:17:09.345 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: likeInfo:commentSubmit
+09:17:09.345 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:17:09.345 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+09:17:09.419 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/likeInfo/commentSubmit, startTime: 1579137429345, waste time: 0.074s
+09:17:11.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:17:11.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+09:17:11.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:17:11.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:17:11.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+09:17:11.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:17:11.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:17:11.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+09:17:11.659 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137431579, waste time: 0.08s
+09:17:17.644 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/likeInfo/updateLikeCNum
+09:17:17.644 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: POST
+09:17:17.644 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:17:17.644 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#updateLikeCNum
+09:17:17.644 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+09:17:17.644 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 full id: likeInfo:updateLikeCNum
+09:17:17.644 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:17:17.645 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+09:17:17.734 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/likeInfo/updateLikeCNum, startTime: 1579137437644, waste time: 0.09s
+09:17:31.990 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:17:31.990 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:17:31.990 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:17:32.026 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579137451990, waste time: 0.036s
+09:17:33.519 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:17:33.519 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+09:17:33.519 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:17:33.575 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579137453519, waste time: 0.056s
+09:17:46.905 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:17:46.905 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:17:46.905 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:17:46.943 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137466905, waste time: 0.038s
+09:17:49.596 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:17:49.596 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:17:49.596 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:17:49.596 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:17:49.596 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:17:49.596 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:17:49.596 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:17:49.596 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:17:49.652 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137469596, waste time: 0.056s
+09:17:50.921 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:17:50.921 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:17:50.921 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:17:50.922 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:17:50.922 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:17:50.922 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:17:50.922 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:17:50.922 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:17:51.000 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137470921, waste time: 0.079s
+09:18:01.151 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:18:01.151 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:18:01.151 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:18:01.202 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579137481151, waste time: 0.051s
+09:18:03.240 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:18:03.241 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:18:03.241 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:18:03.286 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579137483240, waste time: 0.046s
+09:18:12.999 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:18:12.999 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:18:12.999 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:18:13.035 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137492999, waste time: 0.036s
+09:18:14.768 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:18:14.768 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:18:14.768 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:18:14.768 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:18:14.768 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:18:14.768 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:18:14.768 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:18:14.768 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:18:14.841 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137494768, waste time: 0.073s
+09:18:16.094 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:18:16.094 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:18:16.094 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:18:16.094 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:18:16.094 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:18:16.094 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:18:16.094 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:18:16.094 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:18:16.143 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137496094, waste time: 0.049s
+09:18:37.848 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:18:37.848 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:18:37.848 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:18:37.909 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137517848, waste time: 0.061s
+09:18:39.351 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:18:39.351 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:18:39.351 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:18:39.352 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:18:39.352 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+09:18:39.352 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:18:39.352 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:18:39.352 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+09:18:39.409 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137519351, waste time: 0.058s
+09:18:40.716 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:18:40.716 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:18:40.716 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:18:40.716 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:18:40.716 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:18:40.716 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:18:40.716 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:18:40.716 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:18:40.792 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137520716, waste time: 0.076s
+09:21:15.565 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/like/updateNoPublish
+09:21:15.565 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:21:15.565 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:21:15.565 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#updateNoPublish
+09:21:15.565 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+09:21:15.565 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:updateNoPublish
+09:21:15.565 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:21:15.565 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:15.677 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/like/updateNoPublish, startTime: 1579137675565, waste time: 0.112s
+09:21:15.682 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /likeContentPost/likeList
+09:21:15.682 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:21:15.682 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:21:15.683 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.likeContentPost#processModeler
+09:21:15.683 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+09:21:15.683 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 full id: likeMenu:likeContent:likeList
+09:21:15.683 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+09:21:15.683 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:15.704 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+09:21:15.704 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:21:15.704 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:21:15.740 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /likeContentPost/likeList, startTime: 1579137675682, waste time: 0.058s
+09:21:15.773 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579137675704, waste time: 0.069s
+09:21:15.793 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/like
+09:21:15.793 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:21:15.793 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:21:15.793 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#index
+09:21:15.793 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:21:15.793 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:list
+09:21:15.793 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:21:15.793 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:15.809 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /Ueditors/config
+09:21:15.809 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:21:15.809 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:21:15.848 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /Ueditors/config, startTime: 1579137675809, waste time: 0.039s
+09:21:15.867 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/like, startTime: 1579137675793, waste time: 0.074s
+09:21:18.535 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/like/200116091231077055
+09:21:18.535 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:21:18.535 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:21:18.536 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#get
+09:21:18.536 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+09:21:18.536 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:get
+09:21:18.536 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:21:18.536 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:18.618 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/like/200116091231077055, startTime: 1579137678535, waste time: 0.083s
+09:21:23.364 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /upload/custom
+09:21:23.364 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+09:21:23.364 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:21:23.417 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /upload/custom, startTime: 1579137683364, waste time: 0.053s
+09:21:25.076 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/like
+09:21:25.076 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:21:25.076 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:21:25.076 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#create
+09:21:25.076 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+09:21:25.076 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:create
+09:21:25.076 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+09:21:25.076 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:25.182 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/like, startTime: 1579137685076, waste time: 0.106s
+09:21:25.189 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/like
+09:21:25.189 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:21:25.189 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:21:25.189 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#index
+09:21:25.189 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:21:25.189 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:list
+09:21:25.189 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:21:25.189 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:25.251 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/like, startTime: 1579137685189, waste time: 0.062s
+09:21:27.190 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/like/updatePublish
+09:21:27.190 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:21:27.190 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:21:27.190 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#updatePublish
+09:21:27.190 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+09:21:27.190 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:updatePublish
+09:21:27.190 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:21:27.190 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:27.258 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/like/updatePublish, startTime: 1579137687190, waste time: 0.068s
+09:21:27.263 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /likeContentPost/likeList
+09:21:27.263 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:21:27.263 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:21:27.263 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.likeContentPost#processModeler
+09:21:27.263 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+09:21:27.263 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 full id: likeMenu:likeContent:likeList
+09:21:27.263 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+09:21:27.263 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:27.283 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+09:21:27.283 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:21:27.283 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:21:27.306 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /likeContentPost/likeList, startTime: 1579137687263, waste time: 0.043s
+09:21:27.325 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579137687283, waste time: 0.042s
+09:21:27.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/like
+09:21:27.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:21:27.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:21:27.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#index
+09:21:27.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+09:21:27.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:list
+09:21:27.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:21:27.352 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:27.366 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /Ueditors/config
+09:21:27.366 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:21:27.366 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:21:27.424 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /Ueditors/config, startTime: 1579137687366, waste time: 0.058s
+09:21:27.434 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/like, startTime: 1579137687352, waste time: 0.082s
+09:21:30.015 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:21:30.015 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:21:30.015 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:21:30.056 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579137690015, waste time: 0.041s
+09:21:30.065 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:21:30.065 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: POST
+09:21:30.065 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:21:30.118 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579137690065, waste time: 0.053s
+09:21:31.944 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:21:31.944 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:21:31.944 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:21:32.009 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137691944, waste time: 0.065s
+09:21:32.018 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:21:32.018 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:21:32.018 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:21:32.019 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:21:32.019 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:21:32.019 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:21:32.019 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:21:32.019 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:32.019 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:21:32.019 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:21:32.019 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:21:32.019 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:21:32.019 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:21:32.019 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:21:32.019 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:21:32.019 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:21:32.073 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137692018, waste time: 0.055s
+09:21:32.093 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137692019, waste time: 0.074s
+09:21:55.249 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:21:55.250 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:21:55.250 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:21:55.290 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579137715249, waste time: 0.041s
+09:21:56.891 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:21:56.891 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+09:21:56.891 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:21:56.951 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579137716891, waste time: 0.06s
+09:22:03.863 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:22:03.863 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:22:03.863 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:22:03.901 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579137723863, waste time: 0.038s
+09:22:05.992 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:22:05.992 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+09:22:05.992 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:22:05.992 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:22:05.992 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+09:22:05.992 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:22:05.992 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:22:05.993 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+09:22:06.049 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579137725992, waste time: 0.057s
+09:22:07.313 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:22:07.313 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:22:07.313 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:22:07.313 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:22:07.313 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+09:22:07.313 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:22:07.313 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:22:07.313 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+09:22:07.384 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579137727313, waste time: 0.071s
+09:23:01.478 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/login
+09:23:01.478 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:23:01.478 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:23:06.465 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579137781478, waste time: 4.987s
+09:23:08.202 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/login
+09:23:08.202 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:23:08.202 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:23:08.408 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579137788202, waste time: 0.206s
+09:23:08.424 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+09:23:08.424 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:23:08.424 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:23:08.432 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+09:23:08.432 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:23:08.432 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:23:08.464 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579137788424, waste time: 0.04s
+09:23:08.500 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579137788432, waste time: 0.068s
+09:23:10.904 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/addComplain
+09:23:10.904 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:23:10.904 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:23:10.906 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/complain/addComplain
+09:23:10.906 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:23:10.906 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:23:10.956 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/complain/addComplain, startTime: 1579137790906, waste time: 0.05s
+09:23:10.992 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/addComplain, startTime: 1579137790906, waste time: 0.086s
+09:23:52.080 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom
+09:23:52.080 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:23:52.080 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:23:52.080 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.common.upload.util.UploadControllerOfGuest#getCustomTypeResource
+09:23:52.080 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:23:52.080 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: sys:uploadOfGuest:customUploadOfGuest
+09:23:52.080 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:23:52.080 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:23:52.116 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom, startTime: 1579137832080, waste time: 0.036s
+09:25:54.823 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/news/addComplain
+09:25:54.823 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:25:54.823 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:25:54.825 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/complain/addComplain
+09:25:54.825 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:25:54.825 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:25:54.943 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/complain/addComplain, startTime: 1579137954825, waste time: 0.118s
+09:25:55.043 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/news/addComplain, startTime: 1579137954825, waste time: 0.218s
+09:26:30.262 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom
+09:26:30.262 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:26:30.263 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:26:30.263 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.common.upload.util.UploadControllerOfGuest#getCustomTypeResource
+09:26:30.263 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:26:30.263 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: sys:uploadOfGuest:customUploadOfGuest
+09:26:30.263 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:26:30.263 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:26:30.313 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom, startTime: 1579137990262, waste time: 0.051s
+09:26:34.967 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom
+09:26:34.967 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:26:34.967 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:26:34.968 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.common.upload.util.UploadControllerOfGuest#getCustomTypeResource
+09:26:34.968 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+09:26:34.968 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 full id: sys:uploadOfGuest:customUploadOfGuest
+09:26:34.968 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:26:34.968 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+09:26:35.011 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom, startTime: 1579137994967, waste time: 0.044s
+09:26:40.012 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom
+09:26:40.012 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:26:40.012 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:26:40.012 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.common.upload.util.UploadControllerOfGuest#getCustomTypeResource
+09:26:40.012 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+09:26:40.012 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: sys:uploadOfGuest:customUploadOfGuest
+09:26:40.012 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:26:40.012 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+09:26:40.056 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom, startTime: 1579138000012, waste time: 0.044s
+09:26:45.036 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/complain/addComplaining
+09:26:45.036 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:26:45.036 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:26:45.195 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/complain/addComplaining, startTime: 1579138005036, waste time: 0.159s
+09:26:45.199 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/index
+09:26:45.199 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:26:45.199 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:26:45.280 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/index, startTime: 1579138005199, waste time: 0.081s
+09:26:45.302 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:26:45.302 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:26:45.302 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:26:45.304 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404
+09:26:45.304 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:26:45.304 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:26:45.339 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138005301, waste time: 0.038s
+09:26:45.362 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138005304, waste time: 0.058s
+09:26:47.542 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/myComplain
+09:26:47.542 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:26:47.542 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:26:47.544 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/complain/myComplain
+09:26:47.544 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:26:47.544 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:26:47.673 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/complain/myComplain, startTime: 1579138007544, waste time: 0.129s
+09:26:47.712 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/myComplain, startTime: 1579138007544, waste time: 0.168s
+09:26:53.448 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /pComplain/p
+09:26:53.448 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:26:53.448 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:26:53.449 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.complain.PublicComplainMenu#processModeler
+09:26:53.449 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:26:53.449 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: complainManager:pComplainManager:pComplain
+09:26:53.449 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+09:26:53.449 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:26:53.474 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404
+09:26:53.474 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:26:53.474 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:26:53.513 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /pComplain/p, startTime: 1579138013448, waste time: 0.065s
+09:26:53.536 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138013474, waste time: 0.062s
+09:26:53.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/p
+09:26:53.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:26:53.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:26:53.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.complain.controller.ComplainController#index
+09:26:53.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:26:53.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: complainManager:categoryManager:public:list
+09:26:53.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:26:53.561 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:26:53.696 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/p, startTime: 1579138013561, waste time: 0.135s
+09:26:55.877 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/p/200116092645060165
+09:26:55.877 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:26:55.877 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:26:55.877 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.complain.controller.ComplainController#get
+09:26:55.877 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+09:26:55.877 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: complainManager:categoryManager:public:get
+09:26:55.877 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:26:55.877 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+09:26:55.890 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/p/getAttach/200116092645060165
+09:26:55.890 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:26:55.890 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:26:55.930 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/p/200116092645060165, startTime: 1579138015877, waste time: 0.053s
+09:26:55.953 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/p/getAttach/200116092645060165, startTime: 1579138015890, waste time: 0.063s
+09:27:06.881 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/p/200116092645060165
+09:27:06.881 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: PUT
+09:27:06.881 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:27:06.881 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.complain.controller.ComplainController#update
+09:27:06.881 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+09:27:06.881 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: complainManager:categoryManager:public:update
+09:27:06.881 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+09:27:06.881 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+09:27:06.962 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/p/200116092645060165, startTime: 1579138026881, waste time: 0.081s
+09:27:06.970 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/p
+09:27:06.970 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:27:06.970 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:27:06.970 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.complain.controller.ComplainController#index
+09:27:06.970 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:27:06.970 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: complainManager:categoryManager:public:list
+09:27:06.970 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+09:27:06.970 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:27:07.047 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/p, startTime: 1579138026970, waste time: 0.077s
+09:27:12.790 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/myComplain
+09:27:12.790 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:27:12.790 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:27:12.792 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/complain/myComplain
+09:27:12.792 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:27:12.792 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:27:12.861 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/complain/myComplain, startTime: 1579138032792, waste time: 0.069s
+09:27:12.897 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/myComplain, startTime: 1579138032792, waste time: 0.105s
+09:27:15.079 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:27:15.079 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:27:15.079 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:27:15.121 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404
+09:27:15.122 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:27:15.122 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:27:15.147 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579138035079, waste time: 0.068s
+09:27:15.164 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138035121, waste time: 0.043s
+09:31:03.754 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:31:03.754 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:31:03.755 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:31:03.796 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579138263754, waste time: 0.042s
+09:31:05.311 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:31:05.311 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:31:05.311 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:31:05.311 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:31:05.311 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+09:31:05.311 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:31:05.311 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:31:05.311 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+09:31:05.386 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579138265311, waste time: 0.075s
+09:31:06.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:31:06.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+09:31:06.579 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:31:06.580 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:31:06.580 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+09:31:06.580 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:31:06.580 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:31:06.580 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+09:31:06.654 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579138266579, waste time: 0.075s
+09:31:36.996 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/myComplain
+09:31:36.996 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:31:36.996 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:31:38.297 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/complain/myComplain
+09:31:38.297 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:31:38.297 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:31:38.371 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/complain/myComplain, startTime: 1579138298297, waste time: 0.074s
+09:31:38.430 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/news/myComplain, startTime: 1579138298297, waste time: 0.133s
+09:31:39.630 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/login
+09:31:39.630 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:31:39.630 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:31:39.688 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579138299630, waste time: 0.058s
+09:31:43.528 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:31:43.528 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:31:43.528 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:31:43.593 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579138303528, waste time: 0.065s
+09:31:47.953 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+09:31:47.953 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:31:47.953 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:31:47.996 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138307953, waste time: 0.043s
+09:33:49.556 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:33:49.556 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: POST
+09:33:49.556 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:33:49.628 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+09:33:49.628 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:33:49.628 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:33:49.695 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579138429556, waste time: 0.139s
+09:33:49.731 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138429628, waste time: 0.103s
+09:34:31.712 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:34:31.712 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:34:31.712 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:34:31.766 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:34:31.766 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:34:31.766 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:34:32.036 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579138471712, waste time: 0.324s
+09:34:32.058 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138471766, waste time: 0.292s
+09:35:07.066 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:35:07.066 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:35:07.066 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:35:07.130 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404
+09:35:07.130 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:35:07.130 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:35:07.142 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579138507066, waste time: 0.076s
+09:35:07.196 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138507130, waste time: 0.066s
+09:40:19.525 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:40:19.525 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+09:40:19.525 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:40:24.540 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404
+09:40:24.540 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:40:24.540 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:40:24.544 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579138819525, waste time: 5.019s
+09:40:24.586 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138824540, waste time: 0.046s
+09:40:51.620 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:40:51.620 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:40:51.620 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:40:51.670 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+09:40:51.670 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:40:51.670 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:40:51.720 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138851670, waste time: 0.05s
+09:40:54.984 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:40:54.984 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:40:54.984 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:40:55.036 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404
+09:40:55.036 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:40:55.036 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:40:55.045 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579138854984, waste time: 0.061s
+09:40:55.088 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138855036, waste time: 0.052s
+09:41:20.160 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:41:20.160 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:41:20.160 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:41:20.217 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+09:41:20.217 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:41:20.217 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:41:20.227 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579138880160, waste time: 0.067s
+09:41:20.261 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138880217, waste time: 0.044s
+09:43:05.809 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:43:05.809 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:43:05.809 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:43:05.872 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+09:43:05.872 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:43:05.872 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:43:05.893 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579138985809, waste time: 0.084s
+09:43:05.920 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579138985872, waste time: 0.048s
+09:44:03.195 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:44:03.195 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:44:03.195 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:44:03.246 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+09:44:03.247 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:44:03.247 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:44:03.262 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139043195, waste time: 0.067s
+09:44:03.296 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139043246, waste time: 0.05s
+09:44:35.551 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:44:35.551 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:44:35.551 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:44:35.598 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404
+09:44:35.598 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:44:35.598 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:44:35.616 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139075551, waste time: 0.065s
+09:44:35.657 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139075598, waste time: 0.059s
+09:45:13.475 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:45:13.475 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+09:45:13.475 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:45:13.530 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+09:45:13.530 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:45:13.530 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:45:13.541 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139113475, waste time: 0.066s
+09:45:13.567 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139113530, waste time: 0.037s
+09:45:23.528 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:45:23.528 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:45:23.528 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:45:23.582 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+09:45:23.583 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:45:23.583 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:45:23.600 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139123528, waste time: 0.072s
+09:45:23.642 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139123582, waste time: 0.06s
+09:45:25.825 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:45:25.826 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:45:25.826 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:45:25.877 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+09:45:25.878 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:45:25.878 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:45:25.912 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:45:25.912 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:45:25.912 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:45:25.917 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139125825, waste time: 0.092s
+09:45:25.961 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139125877, waste time: 0.084s
+09:45:26.000 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139125912, waste time: 0.088s
+09:46:22.767 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:46:22.767 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+09:46:22.767 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:46:22.818 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404
+09:46:22.818 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:46:22.818 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:46:22.825 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139182767, waste time: 0.058s
+09:46:22.867 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139182818, waste time: 0.049s
+09:46:56.457 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:46:56.457 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+09:46:56.458 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:46:56.511 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404
+09:46:56.511 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:46:56.511 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:46:56.516 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139216457, waste time: 0.058s
+09:46:56.560 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139216511, waste time: 0.049s
+09:47:37.423 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:47:37.423 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:47:37.423 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:47:37.488 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+09:47:37.488 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:47:37.488 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:47:37.500 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139257423, waste time: 0.077s
+09:47:37.546 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139257488, waste time: 0.058s
+09:48:01.982 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/login
+09:48:01.982 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:48:01.982 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:48:02.049 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579139281982, waste time: 0.067s
+09:48:02.113 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+09:48:02.113 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:48:02.114 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:48:02.119 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+09:48:02.119 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:48:02.119 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:48:02.188 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139282113, waste time: 0.075s
+09:48:02.206 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139282119, waste time: 0.087s
+09:48:05.924 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/myComplain
+09:48:05.924 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:48:05.924 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:48:05.926 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/complain/myComplain
+09:48:05.926 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:48:05.926 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:48:05.990 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/complain/myComplain, startTime: 1579139285926, waste time: 0.064s
+09:48:06.023 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/myComplain, startTime: 1579139285926, waste time: 0.097s
+09:48:08.111 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:48:08.111 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:48:08.111 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:48:08.149 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+09:48:08.149 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:48:08.149 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:48:08.175 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139288111, waste time: 0.064s
+09:48:08.191 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139288149, waste time: 0.042s
+09:50:47.996 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:50:47.996 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:50:47.996 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:50:48.054 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404
+09:50:48.054 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:50:48.054 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:50:48.055 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139447996, waste time: 0.059s
+09:50:48.113 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139448054, waste time: 0.059s
+09:52:56.409 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/login
+09:52:56.409 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:52:56.409 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:52:56.472 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579139576409, waste time: 0.063s
+09:53:04.687 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:53:04.687 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:53:04.687 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:53:04.722 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579139584687, waste time: 0.035s
+09:53:06.403 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:53:06.403 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+09:53:06.403 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:53:06.496 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579139586403, waste time: 0.093s
+09:53:13.713 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:53:13.713 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:53:13.713 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:53:13.752 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579139593713, waste time: 0.039s
+09:53:15.355 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:53:15.355 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:53:15.355 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:53:15.356 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:53:15.356 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+09:53:15.356 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:53:15.356 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:53:15.356 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+09:53:15.414 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579139595355, waste time: 0.059s
+09:53:16.764 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:53:16.765 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+09:53:16.765 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:53:16.765 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:53:16.765 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+09:53:16.765 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:53:16.765 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:53:16.765 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+09:53:16.853 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579139596764, waste time: 0.089s
+09:55:26.799 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/login
+09:55:26.799 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:55:26.799 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:55:26.927 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579139726799, waste time: 0.128s
+09:55:32.565 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:55:32.565 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:55:32.565 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:55:32.605 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579139732564, waste time: 0.041s
+09:55:34.083 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:55:34.083 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:55:34.083 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:55:34.152 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579139734083, waste time: 0.069s
+09:55:42.440 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:55:42.440 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:55:42.440 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:55:42.478 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579139742440, waste time: 0.038s
+09:55:43.268 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:55:43.269 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+09:55:43.269 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:55:43.330 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+09:55:43.330 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:55:43.330 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:55:43.343 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139743268, waste time: 0.075s
+09:55:43.387 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139743330, waste time: 0.057s
+09:55:44.262 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:55:44.263 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:55:44.263 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:55:44.263 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:55:44.263 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:55:44.263 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:55:44.263 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:55:44.263 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:55:44.513 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579139744262, waste time: 0.251s
+09:55:45.733 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:55:45.733 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:55:45.733 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:55:45.734 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:55:45.734 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+09:55:45.734 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:55:45.734 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:55:45.734 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+09:55:45.801 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579139745733, waste time: 0.068s
+09:56:37.699 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/login
+09:56:37.699 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:56:37.699 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:56:37.776 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579139797699, waste time: 0.077s
+09:56:44.332 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/complain/detail
+09:56:44.332 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:56:44.332 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:56:44.396 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+09:56:44.397 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:56:44.397 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:56:44.415 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/complain/detail, startTime: 1579139804332, waste time: 0.083s
+09:56:44.465 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139804396, waste time: 0.069s
+09:56:45.953 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:56:45.953 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:56:45.953 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:56:46.003 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579139805953, waste time: 0.05s
+09:56:47.302 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:56:47.302 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:56:47.302 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:56:47.337 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579139807301, waste time: 0.036s
+09:56:48.636 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:56:48.637 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:56:48.637 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:56:48.671 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579139808636, waste time: 0.035s
+09:56:49.989 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:56:49.990 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:56:49.990 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:56:50.025 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579139809989, waste time: 0.036s
+09:56:51.361 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:56:51.361 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:56:51.361 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:56:51.408 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579139811361, waste time: 0.047s
+09:56:58.487 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:56:58.487 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:56:58.487 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:56:58.525 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579139818487, waste time: 0.038s
+09:57:00.642 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:57:00.642 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:57:00.642 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:57:00.643 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:57:00.643 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:57:00.643 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:57:00.643 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:57:00.643 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:57:00.715 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579139820642, waste time: 0.073s
+09:57:01.973 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:57:01.974 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:57:01.974 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:57:01.974 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:57:01.974 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+09:57:01.974 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:57:01.974 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:57:01.974 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+09:57:02.034 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579139821973, waste time: 0.061s
+09:57:18.176 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/login
+09:57:18.176 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:57:18.176 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:57:18.239 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579139838176, waste time: 0.063s
+09:57:18.272 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404
+09:57:18.273 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:57:18.273 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:57:18.310 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:57:18.310 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:57:18.310 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:57:18.324 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139838272, waste time: 0.052s
+09:57:18.355 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139838310, waste time: 0.045s
+09:57:23.979 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/advisory
+09:57:23.979 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:57:23.979 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:57:23.984 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /consult/myadvisory
+09:57:23.985 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:57:23.985 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:57:24.100 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /consult/myadvisory, startTime: 1579139843984, waste time: 0.116s
+09:57:24.137 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/news/advisory, startTime: 1579139843984, waste time: 0.153s
+09:57:25.468 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /consult/zxdetail/200113205305598663
+09:57:25.469 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:57:25.469 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:57:25.506 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404
+09:57:25.506 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:57:25.507 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:57:25.530 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /consult/zxdetail/200113205305598663, startTime: 1579139845468, waste time: 0.062s
+09:57:25.550 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139845506, waste time: 0.044s
+09:57:35.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/login
+09:57:35.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+09:57:35.002 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+09:57:35.059 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579139855002, waste time: 0.057s
+09:57:35.079 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:57:35.079 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:57:35.079 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+09:57:35.079 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:57:35.079 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:57:35.079 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:57:35.193 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139855079, waste time: 0.114s
+09:57:35.193 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139855079, waste time: 0.114s
+09:57:41.694 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist
+09:57:41.694 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:57:41.694 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:57:41.739 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/dz/dzlist, startTime: 1579139861694, waste time: 0.045s
+09:57:41.747 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList
+09:57:41.747 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:57:41.747 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:57:41.799 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/findList, startTime: 1579139861747, waste time: 0.052s
+09:57:43.049 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail
+09:57:43.049 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:57:43.049 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:57:43.100 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/dz/dzdetail, startTime: 1579139863049, waste time: 0.051s
+09:57:43.109 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo
+09:57:43.109 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:57:43.109 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:57:43.109 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeController#getLikeInfo
+09:57:43.109 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:57:43.109 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: likeMenu:like:getLikeInfo
+09:57:43.109 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:57:43.109 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:57:43.110 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList
+09:57:43.110 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+09:57:43.110 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:57:43.111 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.myneedlike.controller.likeInfoController#findInfoList
+09:57:43.111 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+09:57:43.111 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: likeInfo:likeInfoList
+09:57:43.111 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:57:43.111 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+09:57:43.183 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/like/getLikeInfo, startTime: 1579139863109, waste time: 0.074s
+09:57:43.251 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/likeInfo/likeInfoList, startTime: 1579139863110, waste time: 0.141s
+09:58:00.202 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/login
+09:58:00.202 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:58:00.203 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:58:00.263 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579139880202, waste time: 0.061s
+09:58:00.284 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404
+09:58:00.284 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404
+09:58:00.284 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+09:58:00.284 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+09:58:00.284 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+09:58:00.284 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:58:00.326 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139880284, waste time: 0.042s
+09:58:00.346 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139880284, waste time: 0.062s
+09:58:02.070 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/addadvisory
+09:58:02.070 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:58:02.070 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:58:02.114 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/addadvisory, startTime: 1579139882070, waste time: 0.044s
+09:58:20.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom
+09:58:20.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+09:58:20.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:58:20.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.common.upload.util.UploadControllerOfGuest#getCustomTypeResource
+09:58:20.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+09:58:20.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: sys:uploadOfGuest:customUploadOfGuest
+09:58:20.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:58:20.119 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+09:58:20.171 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom, startTime: 1579139900119, waste time: 0.052s
+09:59:28.574 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/addadvisory
+09:59:28.574 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+09:59:28.574 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+09:59:28.682 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/news/addadvisory, startTime: 1579139968574, waste time: 0.108s
+09:59:42.703 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom
+09:59:42.703 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+09:59:42.703 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:59:42.704 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.common.upload.util.UploadControllerOfGuest#getCustomTypeResource
+09:59:42.704 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+09:59:42.704 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 full id: sys:uploadOfGuest:customUploadOfGuest
+09:59:42.704 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:59:42.704 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+09:59:42.757 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom, startTime: 1579139982703, waste time: 0.054s
+09:59:49.062 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom
+09:59:49.062 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+09:59:49.062 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:59:49.062 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.common.upload.util.UploadControllerOfGuest#getCustomTypeResource
+09:59:49.062 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+09:59:49.062 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: sys:uploadOfGuest:customUploadOfGuest
+09:59:49.062 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:59:49.062 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+09:59:49.132 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom, startTime: 1579139989062, waste time: 0.07s
+09:59:53.704 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom
+09:59:53.704 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+09:59:53.704 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:59:53.704 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.common.upload.util.UploadControllerOfGuest#getCustomTypeResource
+09:59:53.704 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+09:59:53.704 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: sys:uploadOfGuest:customUploadOfGuest
+09:59:53.704 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+09:59:53.704 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+09:59:53.740 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /uploadOfGuest/custom, startTime: 1579139993704, waste time: 0.036s
+09:59:58.529 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /consult/addadvisory
+09:59:58.529 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+09:59:58.529 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:59:58.688 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /consult/addadvisory, startTime: 1579139998529, waste time: 0.159s
+09:59:58.693 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/news/index
+09:59:58.693 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:59:58.693 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:59:58.749 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/news/index, startTime: 1579139998693, waste time: 0.056s
+09:59:58.788 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404
+09:59:58.788 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:59:58.788 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:59:58.793 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+09:59:58.793 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+09:59:58.793 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+09:59:58.826 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139998788, waste time: 0.038s
+09:59:58.845 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579139998793, waste time: 0.052s
+10:00:00.953 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/advisory
+10:00:00.953 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:00:00.953 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:00:00.956 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /consult/myadvisory
+10:00:00.956 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:00:00.956 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:00:01.011 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /consult/myadvisory, startTime: 1579140000956, waste time: 0.055s
+10:00:01.049 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/advisory, startTime: 1579140000956, waste time: 0.093s
+10:00:06.886 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /consult/content
+10:00:06.886 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:00:06.886 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:00:06.886 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.consultation.ConsultMenu#contentModeler
+10:00:06.886 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+10:00:06.886 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: zxManager:consultManager:contentlist
+10:00:06.886 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+10:00:06.886 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+10:00:06.928 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /consult/content, startTime: 1579140006886, waste time: 0.042s
+10:00:06.935 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+10:00:06.935 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:00:06.935 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:00:06.979 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579140006935, waste time: 0.044s
+10:00:07.036 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/consult
+10:00:07.036 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:00:07.036 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:00:07.036 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.consultation.controller.ConsultController#index
+10:00:07.036 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+10:00:07.036 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: zxManager:consultManager:consult:list
+10:00:07.036 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+10:00:07.036 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+10:00:07.112 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/consult, startTime: 1579140007036, waste time: 0.076s
+10:00:08.918 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/consult/getFj
+10:00:08.918 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+10:00:08.918 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+10:00:08.920 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/consult/200116095958547285
+10:00:08.920 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:00:08.920 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:00:08.920 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.consultation.controller.ConsultController#get
+10:00:08.920 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+10:00:08.920 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 full id: zxManager:consultManager:consult:get
+10:00:08.920 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+10:00:08.920 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+10:00:08.927 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/consult/200116095958547285
+10:00:08.927 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:00:08.927 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:00:08.927 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.consultation.controller.ConsultController#get
+10:00:08.927 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+10:00:08.927 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: zxManager:consultManager:consult:get
+10:00:08.927 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+10:00:08.927 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+10:00:08.978 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/consult/200116095958547285, startTime: 1579140008920, waste time: 0.058s
+10:00:08.999 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/consult/getFj, startTime: 1579140008918, waste time: 0.081s
+10:00:08.999 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/consult/200116095958547285, startTime: 1579140008927, waste time: 0.072s
+10:00:15.369 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/consult/200116095958547285
+10:00:15.370 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: PUT
+10:00:15.370 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:00:15.370 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.consultation.controller.ConsultController#update
+10:00:15.370 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+10:00:15.370 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: zxManager:consultManager:consult:update
+10:00:15.370 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+10:00:15.370 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+10:00:15.450 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/consult/200116095958547285, startTime: 1579140015369, waste time: 0.081s
+10:00:15.458 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/consult
+10:00:15.458 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:00:15.458 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:00:15.458 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.consultation.controller.ConsultController#index
+10:00:15.458 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+10:00:15.458 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: zxManager:consultManager:consult:list
+10:00:15.458 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+10:00:15.458 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+10:00:15.536 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/consult, startTime: 1579140015458, waste time: 0.078s
+10:00:18.134 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/advisory
+10:00:18.135 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:00:18.135 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:00:18.137 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /consult/myadvisory
+10:00:18.137 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:00:18.138 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:00:18.189 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /consult/myadvisory, startTime: 1579140018137, waste time: 0.052s
+10:00:18.228 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/news/advisory, startTime: 1579140018137, waste time: 0.091s
+10:00:20.446 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /consult/zxdetail/200116095958547285
+10:00:20.447 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:00:20.447 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:00:20.484 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+10:00:20.484 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+10:00:20.484 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:00:20.502 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /consult/zxdetail/200116095958547285, startTime: 1579140020446, waste time: 0.056s
+10:00:20.530 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579140020484, waste time: 0.046s
+10:02:40.058 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /consult/zxdetail/200116095958547285
+10:02:40.058 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:02:40.058 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:02:40.168 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+10:02:40.168 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:02:40.168 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:02:40.171 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /consult/zxdetail/200116095958547285, startTime: 1579140160058, waste time: 0.113s
+10:02:40.222 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579140160168, waste time: 0.054s
+10:02:47.878 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/login
+10:02:47.878 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:02:47.878 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:02:47.991 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579140167878, waste time: 0.113s
+10:02:48.011 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+10:02:48.011 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+10:02:48.012 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:02:48.014 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+10:02:48.014 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:02:48.014 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:02:48.054 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579140168011, waste time: 0.043s
+10:02:48.072 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579140168014, waste time: 0.058s
+10:02:49.795 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/addreport
+10:02:49.795 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:02:49.795 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:02:49.838 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/news/addreport, startTime: 1579140169795, waste time: 0.043s

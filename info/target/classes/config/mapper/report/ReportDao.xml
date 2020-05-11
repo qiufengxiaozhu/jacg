@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.report.dao.ReportDao">
+    <resultMap id="reportMap" type="Report">
+        <id column="id" property="id"/>
+        <result column="create_date" property="createDate"/>
+        <result column="create_user" property="createUser.id"/>
+        <result column="update_user" property="updateUser.id"/>
+        <result column="update_date" property="updateDate"/>
+        <result column="del" property="del"/>
+
+        <result column="report_id" property="reportId"/>
+        <result column="report_date" property="reportDate"/>
+        <result column="reply_status" property="replyStatus"/>
+        <result column="reply_date" property="replyDate"/>
+        <result column="reply_id" property="replyId"/>
+
+        <!--统计管理使用字段-->
+        <result column="sbSum" property="sbSum"/>
+        <result column="repleNo" property="repleNo"/>
+        <result column="repleYes" property="repleYes"/>
+    </resultMap>
+
+    <select id="findList" resultMap="reportMap">
+        select *
+        from zmj_report
+        where del=0
+        <if test="category!=null and category!=''">
+            and category like concat('%', #{category}, '%')
+        </if>
+        <if test="title!=null and title!=''">
+            and title like concat('%', #{title}, '%')
+        </if>
+        ORDER BY id desc
+    </select>
+
+    <select id="get" resultType="com.zte.zudp.admin.info.report.entity.Report">
+        select
+        t1.id id,
+        t1.name name,
+        t1.category category,
+        t1.telephone telephone,
+        t1.title title,
+        t1.content content,
+        t1.place place,
+        DATE_FORMAT(t1.report_date,'%Y-%m-%d %T') reportDate,
+        t1.reply reply,
+        DATE_FORMAT(t1.reply_date,'%Y-%m-%d %T') replyDate
+        from zmj_report t1
+        where id=#{id}
+    </select>
+
+    <update id="update" parameterType="com.zte.zudp.admin.info.report.entity.Report">
+        UPDATE zmj_report  SET
+        reply = #{reply},
+        reply_date = #{updateDate},
+        reply_status='已回复'
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE zmj_report
+        SET del = 1
+        WHERE id = #{id}
+    </update>
+
+    <update id="batchDelete">
+        UPDATE zmj_report SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </update>
+
+
+    <!--统计管理-->
+    <select id="countManage" resultMap="reportMap" >
+        SELECT
+          reply_id,
+	      count(case when del!=1 THEN 1 END) as sbSum,
+	      count( CASE WHEN reply_status = '未回复' THEN 1 END ) AS repleNo,
+	      count( CASE WHEN reply_status = '已回复' THEN 1 END ) AS replyYes
+        FROM
+	       zmj_report
+        GROUP BY
+	       reply_id
+    </select>
+</mapper>

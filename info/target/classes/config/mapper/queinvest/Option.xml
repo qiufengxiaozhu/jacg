@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.queinvest.dao.OptionDao">
+
+    <resultMap type="com.zte.zudp.admin.info.queinvest.entity.Options" id="optionMap">
+        <id column="id" property="id"/>
+        <result column="create_date" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="del" property="del" />
+
+        <result column="choiceText01" property="choiceText01" />
+        <result column="choiceText02" property="choiceText02" />
+        <result column="choiceText03" property="choiceText03" />
+        <result column="choiceText04" property="choiceText04" />
+        <!--对象的映射-->
+        <result column="questions_id" property="questions.id" />
+
+
+
+    </resultMap>
+
+
+
+    <!--添加选项-->
+    <insert id="addOption" >
+  insert into jacg_options
+        (id,
+        questions_id,
+        choiceText01,
+        choiceText02,
+        choiceText03,
+        choiceText04,
+        create_user,
+        create_date,
+        update_user,
+        update_date,
+        del,
+        val01)
+    VALUES
+    ( #{id},
+      #{idJson},
+      #{opt01},
+      #{opt02},
+      #{opt03},
+      #{opt04},
+      #{createUser.id},
+      #{createDate},
+      #{updateUser.id},
+      #{updateDate},
+      '0',
+      '预留字段'
+     )
+
+    </insert>
+<!--<update id="addOption">
+    update jacg_options t1
+    left join  jacg_questions t2 on t2.id = t1.questions_id
+
+    set t1.id= #{id},
+        t1.questions_id =#{idJson},
+        t1.choiceText01 =#{choiceText01},
+        t1.choiceText02 =#{choiceText02},
+        t1.choiceText03=#{choiceText03},
+        t1.choiceText04=#{choiceText04},
+        t1.create_user= #{createUser.id},
+        t1.create_date = #{createDate},
+        t1.update_user =#{updateUser.id},
+        t1.update_date = #{updateDate},
+        t1.del ='0',
+        t1.val01 = '预留字段',
+        t2.contents = #{contents},
+        t2.questionType = #{questionType}
+
+        where t2.id = #{idJson}
+
+</update>-->
+
+</mapper>

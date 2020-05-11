@@ -1,0 +1,1832 @@
+08:33:25.866 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/login
+08:33:25.872 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+08:33:25.872 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+08:33:26.503 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1578616405866, waste time: 0.637s
+08:33:37.078 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+08:33:37.079 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+08:33:37.079 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+08:33:42.147 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+08:33:42.147 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+08:33:42.147 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+08:33:42.340 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578616422147, waste time: 0.193s
+08:34:25.542 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/tologin
+08:34:25.542 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+08:34:25.542 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+08:34:25.787 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/news/tologin, startTime: 1578616465542, waste time: 0.245s
+08:34:30.940 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404
+08:34:30.940 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+08:34:30.940 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+08:34:31.155 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578616470940, waste time: 0.215s
+08:34:37.778 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/news/toreg
+08:34:37.778 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+08:34:37.778 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+08:34:38.031 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/news/toreg, startTime: 1578616477778, waste time: 0.253s
+08:34:44.102 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404
+08:34:44.102 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+08:34:44.102 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+09:18:24.654 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+09:18:24.654 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+09:18:24.654 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+09:18:24.728 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578619104654, waste time: 0.074s
+10:53:43.399 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+10:53:43.399 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:53:43.399 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:53:47.089 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578624823399, waste time: 3.69s
+10:53:49.665 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:53:49.665 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:53:49.665 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:53:51.033 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578624829665, waste time: 1.368s
+10:53:52.112 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+10:53:52.112 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:53:52.112 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:53:53.275 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578624832112, waste time: 1.163s
+10:53:54.401 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+10:53:54.401 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+10:53:54.401 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+10:53:54.675 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578624834400, waste time: 0.275s
+10:53:56.778 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+10:53:56.778 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+10:53:56.778 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:53:57.142 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578624836778, waste time: 0.364s
+10:53:59.007 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+10:53:59.007 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:53:59.007 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:54:01.242 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+10:54:01.242 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+10:54:01.242 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:54:01.551 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578624841241, waste time: 0.31s
+10:54:02.225 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578624839007, waste time: 3.218s
+10:54:04.013 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:54:04.014 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:54:04.014 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:54:04.233 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578624844013, waste time: 0.22s
+10:54:26.724 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:54:26.724 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:54:26.724 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:54:26.957 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578624866724, waste time: 0.233s
+10:54:47.547 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:54:47.547 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:54:47.547 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:54:47.758 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578624887547, waste time: 0.211s
+10:55:02.584 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:55:02.584 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:55:02.584 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:55:02.790 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578624902584, waste time: 0.206s
+10:55:18.815 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:55:18.815 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:55:18.815 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:55:19.015 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578624918815, waste time: 0.2s
+10:55:35.039 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:55:35.039 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:55:35.039 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:55:35.249 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578624935039, waste time: 0.21s
+10:55:49.556 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:55:49.556 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+10:55:49.556 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:55:57.829 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:55:57.829 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:55:57.829 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:55:58.032 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578624957829, waste time: 0.203s
+10:56:20.625 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:56:20.625 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:56:20.625 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:56:20.840 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578624980625, waste time: 0.215s
+10:56:52.642 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:56:52.642 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:56:52.642 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:56:52.856 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625012642, waste time: 0.214s
+10:56:57.379 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:56:57.379 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+10:56:57.379 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+10:56:57.581 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625017379, waste time: 0.202s
+10:57:00.656 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:57:00.656 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+10:57:00.656 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+10:57:00.865 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625020655, waste time: 0.21s
+10:57:02.943 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:57:02.943 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:57:02.943 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:57:03.148 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625022942, waste time: 0.206s
+10:57:05.177 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:57:05.177 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:57:05.177 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:57:05.390 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625025177, waste time: 0.213s
+10:57:07.328 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+10:57:07.328 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:57:07.328 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:57:07.757 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578625027328, waste time: 0.429s
+10:57:10.136 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:57:10.136 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:57:10.136 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:57:10.615 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625030136, waste time: 0.479s
+10:57:12.356 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+10:57:12.356 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+10:57:12.356 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+10:57:12.565 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578625032356, waste time: 0.209s
+10:57:14.572 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+10:57:14.573 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+10:57:14.573 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+10:57:15.240 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578625034572, waste time: 0.668s
+10:57:16.791 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+10:57:16.791 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+10:57:16.791 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+10:57:17.157 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578625036791, waste time: 0.366s
+10:57:19.003 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+10:57:19.003 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+10:57:19.003 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+10:57:21.210 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+10:57:21.210 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+10:57:21.210 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+10:57:21.416 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578625041210, waste time: 0.206s
+10:57:21.482 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578625039003, waste time: 2.479s
+10:57:25.312 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:57:25.312 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+10:57:25.312 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+10:57:25.523 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625045312, waste time: 0.211s
+10:57:40.873 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:57:40.873 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+10:57:40.873 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+10:57:41.090 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625060873, waste time: 0.217s
+10:57:51.307 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:57:51.307 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+10:57:51.307 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+10:57:51.515 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625071307, waste time: 0.208s
+10:58:00.563 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+10:58:00.563 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+10:58:00.563 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+10:58:00.772 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625080562, waste time: 0.21s
+11:01:39.441 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:01:39.442 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+11:01:39.442 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+11:01:41.772 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578625299441, waste time: 2.331s
+11:01:44.225 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:01:44.226 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+11:01:44.226 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+11:01:45.706 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625304225, waste time: 1.481s
+11:01:46.456 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:01:46.456 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:01:46.456 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:01:47.746 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578625306456, waste time: 1.29s
+11:01:48.656 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:01:48.656 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+11:01:48.656 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:01:49.156 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578625308656, waste time: 0.5s
+11:01:50.908 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:01:50.908 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+11:01:50.908 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:01:51.647 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578625310907, waste time: 0.74s
+11:01:53.110 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:01:53.110 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+11:01:53.110 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+11:01:55.357 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:01:55.357 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: POST
+11:01:55.357 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+11:01:55.638 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578625315357, waste time: 0.281s
+11:01:56.146 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578625313109, waste time: 3.037s
+11:02:12.868 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:02:12.868 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+11:02:12.868 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:02:13.817 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578625332868, waste time: 0.949s
+11:02:16.196 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:02:16.196 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:02:16.197 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:02:17.470 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625336196, waste time: 1.274s
+11:02:18.379 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:02:18.379 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+11:02:18.379 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:02:19.245 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578625338379, waste time: 0.866s
+11:02:20.586 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:02:20.587 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:02:20.587 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:02:20.829 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578625340586, waste time: 0.243s
+11:02:22.788 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:02:22.788 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+11:02:22.788 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+11:02:23.179 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578625342788, waste time: 0.391s
+11:02:25.050 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:02:25.050 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+11:02:25.050 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+11:02:27.255 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:02:27.255 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+11:02:27.255 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+11:02:27.500 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578625347255, waste time: 0.245s
+11:02:27.854 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578625345050, waste time: 2.804s
+11:03:06.422 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:03:06.422 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+11:03:06.422 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+11:03:07.463 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578625386422, waste time: 1.041s
+11:03:09.775 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:03:09.775 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+11:03:09.775 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+11:03:10.270 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625389775, waste time: 0.495s
+11:03:11.986 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:03:11.986 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:03:11.986 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:03:12.603 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578625391986, waste time: 0.617s
+11:03:14.186 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:03:14.186 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+11:03:14.186 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:03:14.403 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578625394186, waste time: 0.217s
+11:03:16.406 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:03:16.407 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+11:03:16.407 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:03:16.796 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578625396406, waste time: 0.39s
+11:03:18.602 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:03:18.603 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:03:18.603 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:03:20.797 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:03:20.797 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+11:03:20.797 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:03:21.046 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578625400797, waste time: 0.249s
+11:03:21.645 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578625398602, waste time: 3.043s
+11:03:38.234 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:03:38.234 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+11:03:38.234 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:03:38.715 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578625418234, waste time: 0.481s
+11:03:41.318 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:03:41.318 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+11:03:41.318 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+11:03:41.820 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578625421318, waste time: 0.502s
+11:03:43.588 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:03:43.588 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+11:03:43.588 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:03:44.203 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578625423588, waste time: 0.615s
+11:03:45.863 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:03:45.863 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:03:45.863 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:03:46.083 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578625425863, waste time: 0.22s
+11:03:48.113 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:03:48.113 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+11:03:48.113 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+11:03:48.481 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578625428113, waste time: 0.368s
+11:03:50.400 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:03:50.400 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+11:03:50.400 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+11:03:52.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:03:52.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+11:03:52.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:03:52.878 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578625432634, waste time: 0.244s
+11:03:53.336 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578625430400, waste time: 2.936s
+11:21:17.255 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:21:17.255 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+11:21:17.256 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:21:17.813 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578626477255, waste time: 0.558s
+11:21:20.343 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:21:20.343 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+11:21:20.343 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:21:20.738 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578626480343, waste time: 0.395s
+11:21:22.663 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:21:22.663 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+11:21:22.663 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:21:23.278 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578626482663, waste time: 0.615s
+11:21:25.002 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:21:25.003 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:21:25.003 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:21:25.220 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578626485002, waste time: 0.218s
+11:21:27.330 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:21:27.330 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+11:21:27.330 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+11:21:27.369 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578626487330, waste time: 0.039s
+11:21:29.631 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:21:29.631 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:21:29.631 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:21:31.933 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:21:31.933 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+11:21:31.933 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+11:21:32.228 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578626491933, waste time: 0.295s
+11:21:32.889 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578626489631, waste time: 3.258s
+11:29:53.827 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:29:53.827 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:29:53.827 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:29:54.261 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578626993827, waste time: 0.434s
+11:29:56.754 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:29:56.754 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+11:29:56.754 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+11:29:57.224 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578626996754, waste time: 0.47s
+11:29:59.028 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:29:59.028 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+11:29:59.028 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:29:59.637 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578626999028, waste time: 0.609s
+11:30:01.301 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:30:01.301 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+11:30:01.302 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:30:01.511 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578627001301, waste time: 0.21s
+11:30:03.622 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:30:03.622 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+11:30:03.622 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+11:30:03.654 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578627003621, waste time: 0.033s
+11:30:05.887 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:30:05.887 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+11:30:05.887 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+11:30:08.174 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:30:08.175 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+11:30:08.175 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:30:08.437 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578627008174, waste time: 0.263s
+11:30:08.687 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578627005887, waste time: 2.8s
+11:31:29.823 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:31:29.823 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+11:31:29.823 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:31:30.256 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578627089822, waste time: 0.434s
+11:31:32.633 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:31:32.633 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:31:32.633 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:31:33.204 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578627092633, waste time: 0.571s
+11:31:34.898 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:31:34.898 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+11:31:34.898 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+11:31:35.531 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578627094898, waste time: 0.633s
+11:31:37.125 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:31:37.125 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:31:37.125 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:31:37.331 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578627097125, waste time: 0.206s
+11:31:39.364 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:31:39.365 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+11:31:39.365 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+11:31:39.403 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578627099364, waste time: 0.039s
+11:31:41.638 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:31:41.639 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+11:31:41.639 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:31:44.038 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:31:44.038 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+11:31:44.038 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+11:31:44.249 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578627104038, waste time: 0.211s
+11:31:44.357 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578627101638, waste time: 2.719s
+11:34:09.607 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:34:09.607 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:34:09.607 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:34:13.001 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578627249607, waste time: 3.394s
+11:34:15.390 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:34:15.390 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+11:34:15.390 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+11:34:16.881 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578627255390, waste time: 1.491s
+11:34:17.740 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:34:17.740 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:34:17.741 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:34:18.747 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578627257740, waste time: 1.007s
+11:34:19.998 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:34:19.998 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+11:34:19.998 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:34:20.205 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578627259998, waste time: 0.207s
+11:34:22.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:34:22.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+11:34:22.144 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+11:34:22.187 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578627262144, waste time: 0.043s
+11:34:24.265 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:34:24.265 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+11:34:24.265 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:34:26.355 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:34:26.355 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+11:34:26.355 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:34:26.862 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578627264265, waste time: 2.597s
+11:35:32.679 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:35:32.679 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+11:35:32.679 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:35:33.120 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578627332679, waste time: 0.441s
+11:35:35.512 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:35:35.512 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+11:35:35.512 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:35:36.002 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578627335512, waste time: 0.49s
+11:35:37.779 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:35:37.779 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+11:35:37.779 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+11:35:38.394 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578627337779, waste time: 0.615s
+11:35:40.208 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:35:40.208 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:35:40.208 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:35:40.445 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578627340208, waste time: 0.237s
+11:35:42.554 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:35:42.554 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+11:35:42.555 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+11:35:42.588 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578627342554, waste time: 0.034s
+11:35:44.910 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:35:44.910 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+11:35:44.910 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+11:35:47.259 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:35:47.259 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+11:35:47.259 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:35:47.538 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578627347259, waste time: 0.279s
+11:35:47.871 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578627344909, waste time: 2.962s
+11:35:49.621 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+11:35:49.621 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:35:49.621 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:35:49.662 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578627349621, waste time: 0.041s
+11:37:00.281 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:37:00.281 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:37:00.281 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:37:01.131 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578627420281, waste time: 0.85s
+11:37:03.663 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:37:03.663 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+11:37:03.663 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:37:04.129 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578627423663, waste time: 0.466s
+11:37:05.986 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:37:05.986 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+11:37:05.986 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:37:06.670 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578627425986, waste time: 0.684s
+11:37:08.268 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:37:08.268 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+11:37:08.268 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:37:08.487 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578627428268, waste time: 0.219s
+11:37:10.615 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:37:10.615 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+11:37:10.616 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+11:37:10.647 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578627430615, waste time: 0.032s
+11:37:13.512 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:37:13.512 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:37:13.512 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:37:15.712 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:37:15.712 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+11:37:15.712 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+11:37:16.146 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578627435712, waste time: 0.434s
+11:37:16.647 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578627433512, waste time: 3.135s
+11:37:39.082 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:37:39.082 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+11:37:39.082 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+11:37:39.503 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578627459082, waste time: 0.421s
+11:37:41.846 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:37:41.846 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:37:41.846 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:37:42.320 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578627461846, waste time: 0.474s
+11:37:44.079 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:37:44.079 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+11:37:44.079 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+11:37:44.945 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578627464079, waste time: 0.866s
+11:37:46.288 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:37:46.288 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+11:37:46.288 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:37:46.513 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578627466288, waste time: 0.225s
+11:37:48.525 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:37:48.526 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+11:37:48.526 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:37:48.604 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578627468525, waste time: 0.079s
+11:37:50.686 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:37:50.686 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+11:37:50.686 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+11:37:53.087 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:37:53.087 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+11:37:53.087 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:37:53.378 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578627473087, waste time: 0.291s
+11:37:53.954 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578627470686, waste time: 3.268s
+11:37:55.387 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+11:37:55.387 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:37:55.388 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:37:55.420 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578627475387, waste time: 0.033s
+11:39:24.490 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:39:24.491 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+11:39:24.491 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:39:24.952 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578627564490, waste time: 0.462s
+11:39:27.395 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+11:39:27.395 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+11:39:27.395 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:39:27.428 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578627567395, waste time: 0.033s
+11:39:29.633 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:39:29.633 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:39:29.633 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:39:29.952 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578627569632, waste time: 0.32s
+11:39:31.915 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:39:31.915 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+11:39:31.915 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+11:39:31.960 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578627571915, waste time: 0.045s
+11:39:34.164 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:39:34.164 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+11:39:34.164 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+11:39:36.365 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:39:36.365 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+11:39:36.365 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:39:36.562 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578627576365, waste time: 0.197s
+11:39:36.996 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578627574164, waste time: 2.832s
+11:39:38.700 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:39:38.700 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+11:39:38.701 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+11:39:39.170 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578627578700, waste time: 0.47s
+11:39:40.881 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:39:40.881 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+11:39:40.881 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+11:39:41.487 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578627580881, waste time: 0.606s
+11:40:51.667 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:40:51.667 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:40:51.668 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:40:52.893 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578627651667, waste time: 1.226s
+11:40:55.299 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:40:55.299 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+11:40:55.299 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+11:40:56.396 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578627655299, waste time: 1.097s
+11:40:57.551 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:40:57.551 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:40:57.552 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:40:58.160 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578627657551, waste time: 0.609s
+11:40:59.786 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:40:59.787 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+11:40:59.787 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:41:00.004 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578627659786, waste time: 0.218s
+11:41:02.056 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:41:02.056 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+11:41:02.056 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+11:41:02.095 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578627662056, waste time: 0.039s
+11:41:04.324 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:41:04.324 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+11:41:04.325 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:41:06.567 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:41:06.567 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+11:41:06.567 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+11:41:06.796 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578627666567, waste time: 0.229s
+11:41:07.393 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578627664324, waste time: 3.069s
+11:41:12.591 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404
+11:41:12.591 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+11:41:12.591 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+11:41:12.634 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578627672591, waste time: 0.043s
+11:42:54.749 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+11:42:54.749 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+11:42:54.749 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+11:42:55.178 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578627774749, waste time: 0.429s
+11:42:57.511 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+11:42:57.511 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+11:42:57.511 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+11:42:58.011 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578627777511, waste time: 0.5s
+11:42:59.888 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+11:42:59.888 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+11:42:59.888 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+11:43:00.645 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578627779888, waste time: 0.757s
+11:43:02.228 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+11:43:02.228 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+11:43:02.228 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+11:43:02.434 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578627782228, waste time: 0.206s
+11:43:04.463 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+11:43:04.463 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+11:43:04.463 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+11:43:04.501 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578627784463, waste time: 0.038s
+11:43:06.690 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+11:43:06.690 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+11:43:06.690 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+11:43:08.876 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+11:43:08.876 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+11:43:08.876 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+11:43:09.070 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578627788876, waste time: 0.194s
+11:43:09.743 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578627786690, waste time: 3.053s
+11:43:11.134 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+11:43:11.134 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+11:43:11.134 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+11:43:11.175 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578627791134, waste time: 0.041s
+14:04:09.329 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+14:04:09.329 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:04:09.329 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:04:13.322 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578636249329, waste time: 3.993s
+14:04:15.738 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404
+14:04:15.738 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:04:15.738 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:04:15.784 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578636255738, waste time: 0.046s
+14:04:17.983 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+14:04:17.983 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:04:17.983 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:04:18.967 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578636257983, waste time: 0.984s
+14:04:20.209 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+14:04:20.210 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:04:20.210 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:04:20.254 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578636260209, waste time: 0.045s
+14:04:22.411 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+14:04:22.412 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:04:22.412 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:04:24.809 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+14:04:24.809 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+14:04:24.809 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:04:25.033 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578636264809, waste time: 0.224s
+14:04:25.411 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578636262411, waste time: 3.0s
+14:04:27.034 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+14:04:27.034 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:04:27.034 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:04:27.517 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578636267034, waste time: 0.483s
+14:04:29.266 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+14:04:29.266 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:04:29.266 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:04:29.901 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578636269265, waste time: 0.636s
+14:14:13.814 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+14:14:13.814 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:14:13.814 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:14:14.250 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578636853814, waste time: 0.436s
+14:14:16.649 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+14:14:16.649 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:14:16.649 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:14:17.152 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578636856649, waste time: 0.503s
+14:14:18.974 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+14:14:18.974 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:14:18.974 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:14:19.582 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578636858974, waste time: 0.608s
+14:14:21.238 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+14:14:21.238 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:14:21.238 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:14:21.446 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578636861238, waste time: 0.208s
+14:14:23.550 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+14:14:23.550 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:14:23.550 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:14:23.591 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578636863550, waste time: 0.041s
+14:14:25.783 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+14:14:25.783 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:14:25.783 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:14:27.994 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+14:14:27.994 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+14:14:27.994 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:14:28.194 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578636867994, waste time: 0.2s
+14:14:28.908 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578636865783, waste time: 3.125s
+14:14:37.589 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404
+14:14:37.589 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:14:37.589 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:14:37.641 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578636877589, waste time: 0.052s
+14:15:52.511 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+14:15:52.511 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:15:52.511 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:15:52.945 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578636952511, waste time: 0.434s
+14:15:55.424 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404
+14:15:55.424 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:15:55.424 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:15:55.478 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578636955424, waste time: 0.054s
+14:15:57.628 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+14:15:57.628 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:15:57.628 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:15:57.831 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578636957628, waste time: 0.203s
+14:15:59.882 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+14:15:59.882 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:15:59.882 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:15:59.920 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578636959882, waste time: 0.038s
+14:16:02.202 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+14:16:02.203 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:16:02.203 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:16:04.583 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+14:16:04.583 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+14:16:04.583 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:16:04.786 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578636964583, waste time: 0.203s
+14:16:04.997 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578636962202, waste time: 2.795s
+14:16:06.774 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+14:16:06.774 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:16:06.775 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:16:07.252 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578636966774, waste time: 0.478s
+14:16:08.944 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+14:16:08.944 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:16:08.944 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:16:10.356 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578636968944, waste time: 1.412s
+14:16:12.864 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404
+14:16:12.864 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:16:12.864 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:16:12.924 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578636972864, waste time: 0.06s
+14:27:09.521 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+14:27:09.522 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:27:09.522 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:27:12.926 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578637629521, waste time: 3.405s
+14:27:15.324 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+14:27:15.324 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:27:15.324 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:27:15.367 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578637635324, waste time: 0.043s
+14:27:17.544 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+14:27:17.544 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:27:17.544 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:27:18.853 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578637637544, waste time: 1.308s
+14:27:19.756 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+14:27:19.757 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:27:19.757 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:27:19.800 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578637639756, waste time: 0.044s
+14:27:21.933 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+14:27:21.933 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:27:21.934 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:27:24.203 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+14:27:24.203 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+14:27:24.203 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:27:24.477 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578637644203, waste time: 0.274s
+14:27:25.678 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578637641933, waste time: 3.745s
+14:27:26.515 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+14:27:26.515 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:27:26.515 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:27:27.001 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578637646515, waste time: 0.486s
+14:27:28.874 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+14:27:28.874 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:27:28.874 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:27:29.670 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578637648874, waste time: 0.796s
+14:30:23.871 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+14:30:23.871 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:30:23.871 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:30:28.717 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578637823871, waste time: 4.846s
+14:30:31.120 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+14:30:31.121 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:30:31.121 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:30:31.161 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578637831120, waste time: 0.041s
+14:30:33.367 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+14:30:33.367 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:30:33.367 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:30:33.424 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578637833367, waste time: 0.057s
+14:30:35.565 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+14:30:35.565 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:30:35.565 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:30:36.594 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578637835565, waste time: 1.029s
+14:30:37.777 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+14:30:37.778 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:30:37.778 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:30:39.989 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+14:30:39.989 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+14:30:39.990 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:30:40.316 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578637839989, waste time: 0.327s
+14:30:41.274 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578637837777, waste time: 3.497s
+14:30:42.263 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+14:30:42.263 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:30:42.263 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:30:42.803 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578637842262, waste time: 0.541s
+14:30:44.402 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+14:30:44.402 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:30:44.402 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:30:45.111 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578637844401, waste time: 0.71s
+14:32:35.531 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+14:32:35.531 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:32:35.531 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:32:36.112 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578637955531, waste time: 0.581s
+14:32:38.529 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+14:32:38.529 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:32:38.529 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:32:38.573 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578637958529, waste time: 0.044s
+14:32:40.758 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+14:32:40.758 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:32:40.758 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:32:40.998 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578637960757, waste time: 0.241s
+14:32:42.987 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+14:32:42.987 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:32:42.987 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:32:43.027 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578637962987, waste time: 0.04s
+14:32:45.190 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+14:32:45.190 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:32:45.190 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:32:47.367 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+14:32:47.367 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+14:32:47.367 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:32:47.603 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578637967367, waste time: 0.236s
+14:32:48.277 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578637965190, waste time: 3.087s
+14:32:49.625 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+14:32:49.625 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:32:49.625 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:32:50.181 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578637969625, waste time: 0.556s
+14:32:51.793 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+14:32:51.793 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:32:51.793 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:32:52.470 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578637971793, waste time: 0.677s
+14:33:26.054 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+14:33:26.054 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+14:33:26.054 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+14:33:26.500 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578638006054, waste time: 0.446s
+14:33:29.132 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+14:33:29.132 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:33:29.132 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:33:29.172 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578638009132, waste time: 0.04s
+14:33:31.491 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+14:33:31.491 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:33:31.491 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:33:31.697 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578638011490, waste time: 0.207s
+14:33:33.813 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+14:33:33.813 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:33:33.813 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:33:33.864 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578638013813, waste time: 0.051s
+14:33:36.115 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+14:33:36.115 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:33:36.115 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:33:38.387 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+14:33:38.387 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+14:33:38.387 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:33:38.626 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578638018387, waste time: 0.239s
+14:33:38.720 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578638016114, waste time: 2.606s
+14:33:40.763 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+14:33:40.763 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:33:40.763 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:33:41.289 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578638020763, waste time: 0.526s
+14:33:42.978 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+14:33:42.978 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+14:33:42.978 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+14:33:43.590 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578638022978, waste time: 0.612s
+14:34:05.615 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+14:34:05.615 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:34:05.615 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:34:06.061 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578638045615, waste time: 0.446s
+14:34:08.480 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+14:34:08.480 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+14:34:08.480 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+14:34:08.530 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578638048480, waste time: 0.05s
+14:34:10.684 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+14:34:10.684 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:34:10.684 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:34:10.895 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578638050684, waste time: 0.211s
+14:34:12.895 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+14:34:12.896 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:34:12.896 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:34:12.930 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578638052895, waste time: 0.035s
+14:34:15.061 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+14:34:15.061 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:34:15.061 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:34:17.345 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+14:34:17.345 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: POST
+14:34:17.345 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:34:17.618 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578638057345, waste time: 0.273s
+14:34:18.140 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578638055061, waste time: 3.079s
+14:34:19.980 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+14:34:19.980 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+14:34:19.980 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:34:20.477 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578638059980, waste time: 0.497s
+14:34:22.508 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+14:34:22.508 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:34:22.508 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:34:23.116 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578638062508, waste time: 0.608s
+14:55:13.663 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+14:55:13.663 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:55:13.663 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:55:14.263 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578639313663, waste time: 0.6s
+14:55:16.683 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+14:55:16.683 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:55:16.683 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:55:17.206 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578639316682, waste time: 0.524s
+14:55:18.920 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+14:55:18.920 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+14:55:18.920 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+14:55:19.616 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578639318920, waste time: 0.696s
+14:55:21.124 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+14:55:21.124 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+14:55:21.124 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+14:55:21.323 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578639321124, waste time: 0.199s
+14:55:23.375 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+14:55:23.375 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:55:23.375 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:55:23.414 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578639323375, waste time: 0.039s
+14:55:25.616 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+14:55:25.616 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:55:25.616 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:55:28.467 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578639325616, waste time: 2.851s
+14:55:28.637 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+14:55:28.637 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+14:55:28.637 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+14:55:28.913 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578639328637, waste time: 0.276s
+14:56:27.600 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexManholeis
+14:56:27.600 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:56:27.600 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+14:56:27.689 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexManholeis, startTime: 1578639387600, waste time: 0.089s
+14:56:31.602 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCase
+14:56:31.602 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+14:56:31.602 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+14:56:31.832 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCase, startTime: 1578639391602, waste time: 0.23s
+14:56:34.002 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+14:56:34.002 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+14:56:34.002 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+14:56:34.039 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578639394002, waste time: 0.037s
+14:56:36.244 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCaseList
+14:56:36.245 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+14:56:36.245 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+14:56:36.297 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCaseList, startTime: 1578639396244, waste time: 0.053s
+14:56:47.994 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCaseid
+14:56:47.994 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+14:56:47.994 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+15:02:00.224 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+15:02:00.225 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+15:02:00.225 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+15:02:00.797 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578639720224, waste time: 0.573s
+15:02:03.253 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+15:02:03.253 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+15:02:03.253 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+15:02:03.825 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578639723253, waste time: 0.572s
+15:02:05.505 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+15:02:05.505 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+15:02:05.505 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+15:02:06.174 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578639725505, waste time: 0.669s
+15:02:07.802 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+15:02:07.802 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+15:02:07.802 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+15:02:08.014 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578639727801, waste time: 0.213s
+15:02:10.029 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+15:02:10.029 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+15:02:10.029 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+15:02:12.273 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+15:02:12.274 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+15:02:12.274 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+15:02:12.345 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578639732273, waste time: 0.072s
+15:02:12.912 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578639730029, waste time: 2.883s
+15:02:14.507 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+15:02:14.507 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+15:02:14.507 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+15:02:14.787 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578639734507, waste time: 0.28s
+15:02:16.722 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCase
+15:02:16.722 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+15:02:16.722 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+15:02:16.908 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCase, startTime: 1578639736722, waste time: 0.186s
+15:02:19.000 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404
+15:02:19.000 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+15:02:19.000 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+15:02:19.041 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578639739000, waste time: 0.041s
+15:02:21.207 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCaseList
+15:02:21.207 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+15:02:21.207 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+15:02:21.263 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCaseList, startTime: 1578639741207, waste time: 0.056s
+15:02:28.591 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCaseid
+15:02:28.591 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+15:02:28.591 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+15:02:28.641 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCaseid, startTime: 1578639748591, waste time: 0.05s
+15:50:39.514 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/analysis
+15:50:39.514 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+15:50:39.514 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+15:50:39.637 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/analysis, startTime: 1578642639514, waste time: 0.123s
+15:55:08.761 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404
+15:55:08.761 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+15:55:08.761 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+15:55:08.863 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578642908761, waste time: 0.102s
+15:55:11.600 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+15:55:11.600 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+15:55:11.601 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+15:55:11.672 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578642911600, waste time: 0.072s
+15:55:13.958 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+15:55:13.958 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+15:55:13.958 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+15:55:14.004 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578642913958, waste time: 0.046s
+15:57:41.945 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+15:57:41.946 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+15:57:41.946 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+15:57:42.469 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643061945, waste time: 0.524s
+15:57:45.413 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+15:57:45.413 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+15:57:45.413 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+15:57:45.461 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643065413, waste time: 0.048s
+15:57:47.864 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+15:57:47.864 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+15:57:47.864 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+15:57:48.112 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643067864, waste time: 0.248s
+15:57:50.197 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+15:57:50.197 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+15:57:50.197 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+15:57:50.244 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643070197, waste time: 0.047s
+15:57:52.437 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+15:57:52.437 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+15:57:52.437 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+15:57:54.637 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+15:57:54.637 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+15:57:54.637 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+15:57:54.894 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643074637, waste time: 0.257s
+15:57:55.478 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643072437, waste time: 3.041s
+15:57:56.982 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+15:57:56.982 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+15:57:56.982 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+15:57:57.494 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643076982, waste time: 0.512s
+15:57:59.136 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+15:57:59.136 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+15:57:59.136 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+15:57:59.852 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643079136, waste time: 0.716s
+15:58:15.782 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+15:58:15.782 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+15:58:15.782 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+15:58:16.225 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643095782, waste time: 0.443s
+15:58:19.250 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+15:58:19.251 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+15:58:19.251 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+15:58:19.296 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643099250, waste time: 0.046s
+15:58:21.657 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+15:58:21.657 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+15:58:21.657 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+15:58:21.869 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643101657, waste time: 0.212s
+15:58:23.960 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+15:58:23.960 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+15:58:23.960 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+15:58:23.995 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643103960, waste time: 0.035s
+15:58:26.304 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+15:58:26.304 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+15:58:26.304 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+15:58:28.755 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+15:58:28.755 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+15:58:28.755 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+15:58:28.969 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643108755, waste time: 0.214s
+15:58:29.111 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643106304, waste time: 2.807s
+15:58:31.502 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+15:58:31.502 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+15:58:31.502 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+15:58:31.987 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643111502, waste time: 0.485s
+15:58:34.564 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+15:58:34.564 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+15:58:34.564 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+15:58:35.187 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643114564, waste time: 0.623s
+15:58:58.640 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+15:58:58.640 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+15:58:58.640 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+15:58:59.080 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643138640, waste time: 0.44s
+15:59:01.874 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404
+15:59:01.874 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+15:59:01.874 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+15:59:01.922 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643141874, waste time: 0.048s
+15:59:04.174 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+15:59:04.174 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+15:59:04.174 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+15:59:04.395 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643144174, waste time: 0.221s
+15:59:06.433 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+15:59:06.433 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+15:59:06.433 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+15:59:06.470 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643146433, waste time: 0.037s
+15:59:08.649 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+15:59:08.649 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+15:59:08.650 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+15:59:10.919 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+15:59:10.919 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+15:59:10.919 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+15:59:11.151 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643148649, waste time: 2.502s
+15:59:11.169 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643150919, waste time: 0.25s
+15:59:13.139 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+15:59:13.139 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+15:59:13.139 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+15:59:13.618 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643153139, waste time: 0.479s
+15:59:15.243 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+15:59:15.243 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+15:59:15.243 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+15:59:15.851 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643155243, waste time: 0.608s
+15:59:50.475 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+15:59:50.475 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+15:59:50.475 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+15:59:50.904 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643190475, waste time: 0.429s
+15:59:54.015 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+15:59:54.015 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+15:59:54.015 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+15:59:54.052 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643194015, waste time: 0.037s
+15:59:56.272 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+15:59:56.272 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+15:59:56.272 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+15:59:56.478 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643196272, waste time: 0.206s
+15:59:58.476 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+15:59:58.477 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+15:59:58.477 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+15:59:58.517 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643198476, waste time: 0.041s
+16:00:00.665 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:00:00.665 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:00:00.665 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:00:02.865 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:00:02.865 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+16:00:02.865 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:00:03.084 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643202865, waste time: 0.219s
+16:00:03.777 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643200664, waste time: 3.113s
+16:00:05.129 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:00:05.130 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:00:05.130 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:00:05.603 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643205129, waste time: 0.474s
+16:00:07.283 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:00:07.284 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:00:07.284 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:00:07.868 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643207283, waste time: 0.585s
+16:03:20.413 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:03:20.414 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:03:20.414 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:03:20.852 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643400413, waste time: 0.439s
+16:03:23.855 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404
+16:03:23.856 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+16:03:23.856 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:03:23.900 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643403855, waste time: 0.045s
+16:03:26.514 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:03:26.514 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+16:03:26.514 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+16:03:26.984 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643406514, waste time: 0.47s
+16:03:28.942 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:03:28.942 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+16:03:28.942 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:03:28.983 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643408942, waste time: 0.041s
+16:03:31.320 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:03:31.320 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:03:31.320 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:03:33.659 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:03:33.659 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+16:03:33.659 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+16:03:33.877 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643413659, waste time: 0.218s
+16:03:34.328 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643411320, waste time: 3.008s
+16:03:36.120 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:03:36.120 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:03:36.120 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:03:36.933 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643416120, waste time: 0.813s
+16:03:38.478 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:03:38.479 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:03:38.479 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:03:39.108 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643418478, waste time: 0.63s
+16:04:33.734 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:04:33.734 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+16:04:33.734 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:04:40.709 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:04:40.710 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+16:04:40.710 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+16:04:44.812 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643480709, waste time: 4.103s
+16:04:47.905 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+16:04:47.905 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+16:04:47.905 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+16:04:47.988 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643487905, waste time: 0.083s
+16:04:50.332 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:04:50.332 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+16:04:50.332 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:04:50.687 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643490332, waste time: 0.355s
+16:04:52.649 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:04:52.649 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+16:04:52.649 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+16:04:52.686 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643492649, waste time: 0.037s
+16:04:54.887 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:04:54.887 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+16:04:54.887 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+16:04:57.097 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:04:57.097 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: POST
+16:04:57.097 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:04:57.653 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643497097, waste time: 0.556s
+16:04:58.096 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643494887, waste time: 3.209s
+16:04:59.320 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:04:59.320 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:04:59.320 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:04:59.795 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643499320, waste time: 0.475s
+16:05:01.404 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:05:01.404 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+16:05:01.404 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:05:02.099 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643501404, waste time: 0.695s
+16:06:37.507 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:06:37.507 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:06:37.507 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:06:37.956 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643597507, waste time: 0.449s
+16:06:40.921 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404
+16:06:40.921 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+16:06:40.922 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+16:06:40.970 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643600921, waste time: 0.049s
+16:06:43.186 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:06:43.186 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:06:43.186 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:06:43.395 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643603186, waste time: 0.209s
+16:06:45.403 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:06:45.403 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:06:45.403 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:06:45.577 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643605403, waste time: 0.174s
+16:06:47.725 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:06:47.725 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:06:47.725 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:06:49.897 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:06:49.897 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+16:06:49.897 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+16:06:50.156 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643609897, waste time: 0.259s
+16:06:50.895 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643607725, waste time: 3.17s
+16:06:52.152 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:06:52.152 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+16:06:52.152 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:06:52.690 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643612152, waste time: 0.538s
+16:06:54.215 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:06:54.216 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:06:54.216 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:06:54.806 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643614215, waste time: 0.591s
+16:07:36.166 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:07:36.166 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+16:07:36.166 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:07:36.608 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643656166, waste time: 0.442s
+16:07:39.660 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404
+16:07:39.660 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:07:39.660 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:07:39.703 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643659659, waste time: 0.044s
+16:07:41.955 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:07:41.955 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+16:07:41.955 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+16:07:42.165 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643661955, waste time: 0.21s
+16:07:44.180 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:07:44.180 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:07:44.180 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:07:44.214 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643664180, waste time: 0.034s
+16:07:46.443 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:07:46.443 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+16:07:46.443 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+16:07:48.672 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:07:48.672 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+16:07:48.672 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:07:48.864 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643668672, waste time: 0.192s
+16:07:49.355 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643666443, waste time: 2.912s
+16:07:51.085 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:07:51.085 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:07:51.085 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:07:51.586 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643671085, waste time: 0.501s
+16:07:53.163 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:07:53.163 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+16:07:53.163 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:07:53.870 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643673163, waste time: 0.707s
+16:08:48.540 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:08:48.540 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:08:48.540 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:08:48.992 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643728540, waste time: 0.452s
+16:08:51.899 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+16:08:51.899 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+16:08:51.899 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:08:51.936 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643731899, waste time: 0.037s
+16:08:54.172 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:08:54.172 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:08:54.172 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:08:54.387 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643734172, waste time: 0.215s
+16:08:56.434 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:08:56.434 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+16:08:56.434 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+16:08:56.469 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643736434, waste time: 0.035s
+16:08:58.678 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:08:58.678 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:08:58.678 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:09:00.858 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:09:00.858 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: POST
+16:09:00.858 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:09:01.156 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643740857, waste time: 0.299s
+16:09:01.835 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643738678, waste time: 3.157s
+16:09:03.117 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:09:03.117 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:09:03.117 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:09:03.603 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643743117, waste time: 0.486s
+16:09:05.232 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:09:05.232 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+16:09:05.232 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+16:09:05.797 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643745231, waste time: 0.566s
+16:09:59.201 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:09:59.201 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:09:59.201 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:09:59.738 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643799201, waste time: 0.537s
+16:10:02.438 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404
+16:10:02.438 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+16:10:02.438 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+16:10:02.497 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643802438, waste time: 0.059s
+16:10:04.682 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:10:04.682 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:10:04.682 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:10:04.880 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643804682, waste time: 0.198s
+16:10:06.966 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:10:06.966 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:10:06.966 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:10:07.004 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643806966, waste time: 0.038s
+16:10:09.218 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:10:09.218 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+16:10:09.218 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+16:10:11.427 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:10:11.427 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+16:10:11.427 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+16:10:11.655 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643811427, waste time: 0.228s
+16:10:12.207 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643809218, waste time: 2.988s
+16:10:13.708 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:10:13.708 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:10:13.708 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:10:14.170 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643813708, waste time: 0.462s
+16:10:15.902 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:10:15.902 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:10:15.902 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:10:16.512 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643815902, waste time: 0.61s
+16:10:37.654 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:10:37.654 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+16:10:37.654 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+16:10:38.102 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643837654, waste time: 0.448s
+16:10:40.948 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404
+16:10:40.948 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:10:40.948 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:10:40.988 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643840948, waste time: 0.04s
+16:10:43.267 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:10:43.267 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:10:43.267 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:10:43.477 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643843267, waste time: 0.21s
+16:10:45.537 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:10:45.537 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+16:10:45.537 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+16:10:45.571 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643845537, waste time: 0.034s
+16:10:47.806 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:10:47.806 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:10:47.806 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:10:50.164 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:10:50.165 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: POST
+16:10:50.165 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+16:10:50.355 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643850164, waste time: 0.191s
+16:10:50.622 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643847805, waste time: 2.817s
+16:10:52.461 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:10:52.461 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+16:10:52.461 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:10:52.929 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643852461, waste time: 0.468s
+16:10:54.584 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:10:54.584 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:10:54.584 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:10:55.254 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643854584, waste time: 0.67s
+16:12:27.361 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:12:27.361 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:12:27.361 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:12:27.818 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578643947361, waste time: 0.457s
+16:12:30.881 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404
+16:12:30.881 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:12:30.881 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:12:30.920 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578643950881, waste time: 0.039s
+16:12:33.154 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:12:33.154 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:12:33.154 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:12:33.362 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578643953154, waste time: 0.208s
+16:12:35.431 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:12:35.431 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:12:35.431 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:12:35.471 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578643955431, waste time: 0.04s
+16:12:37.889 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:12:37.889 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:12:37.890 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:12:40.788 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:12:40.788 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+16:12:40.788 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:12:41.020 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578643957889, waste time: 3.131s
+16:12:41.070 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578643960788, waste time: 0.282s
+16:12:43.786 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:12:43.786 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+16:12:43.786 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:12:44.355 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578643963785, waste time: 0.57s
+16:12:46.542 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:12:46.542 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+16:12:46.542 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+16:12:47.271 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578643966542, waste time: 0.729s
+16:15:51.165 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:15:51.165 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:15:51.165 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:15:51.961 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578644151165, waste time: 0.796s
+16:15:55.714 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+16:15:55.714 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+16:15:55.714 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:15:55.767 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578644155714, waste time: 0.053s
+16:15:58.007 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:15:58.007 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+16:15:58.007 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:15:58.213 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578644158007, waste time: 0.206s
+16:16:00.213 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:16:00.213 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+16:16:00.213 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+16:16:00.252 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578644160213, waste time: 0.039s
+16:16:02.400 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:16:02.400 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:16:02.400 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:16:04.566 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:16:04.566 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+16:16:04.566 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+16:16:04.810 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578644164566, waste time: 0.244s
+16:16:05.285 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578644162400, waste time: 2.885s
+16:16:06.815 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:16:06.815 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:16:06.815 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:16:07.288 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578644166815, waste time: 0.473s
+16:16:08.979 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:16:08.979 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:16:08.980 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:16:09.676 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578644168979, waste time: 0.697s
+16:24:41.506 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:24:41.506 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:24:41.506 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:24:41.938 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578644681506, waste time: 0.432s
+16:24:44.653 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+16:24:44.653 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+16:24:44.653 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+16:24:44.698 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578644684653, waste time: 0.045s
+16:24:46.952 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:24:46.952 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+16:24:46.952 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:24:47.190 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578644686952, waste time: 0.238s
+16:24:49.265 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:24:49.265 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:24:49.265 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:24:49.314 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578644689265, waste time: 0.049s
+16:24:51.487 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:24:51.487 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:24:51.487 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:24:53.676 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:24:53.676 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+16:24:53.676 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:24:53.875 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578644693676, waste time: 0.199s
+16:24:54.332 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578644691487, waste time: 2.845s
+16:24:55.939 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:24:55.939 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+16:24:55.939 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+16:24:56.444 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578644695939, waste time: 0.504s
+16:24:58.020 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:24:58.020 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:24:58.020 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:24:58.622 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578644698020, waste time: 0.602s
+16:25:36.494 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:25:36.494 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:25:36.494 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:25:36.936 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578644736494, waste time: 0.442s
+16:25:40.203 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404
+16:25:40.203 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+16:25:40.203 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:25:40.248 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578644740203, waste time: 0.045s
+16:25:42.704 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:25:42.704 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+16:25:42.704 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+16:25:42.906 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578644742703, waste time: 0.203s
+16:25:45.017 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:25:45.017 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:25:45.017 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:25:45.048 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578644745017, waste time: 0.03s
+16:25:47.255 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:25:47.255 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+16:25:47.255 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+16:25:49.432 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:25:49.432 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: POST
+16:25:49.432 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:25:49.680 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578644749432, waste time: 0.248s
+16:25:50.448 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578644747255, waste time: 3.193s
+16:25:51.678 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:25:51.678 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:25:51.678 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:25:52.164 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578644751678, waste time: 0.486s
+16:25:53.775 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:25:53.775 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:25:53.775 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:25:54.375 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578644753775, waste time: 0.6s
+16:26:49.034 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:26:49.034 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+16:26:49.034 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:26:49.473 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578644809034, waste time: 0.439s
+16:26:52.216 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404
+16:26:52.216 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+16:26:52.216 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+16:26:52.255 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578644812216, waste time: 0.039s
+16:26:54.467 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:26:54.467 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:26:54.467 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:26:54.679 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578644814467, waste time: 0.212s
+16:26:56.739 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:26:56.739 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:26:56.739 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:26:56.773 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578644816738, waste time: 0.035s
+16:26:58.979 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:26:58.979 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+16:26:58.979 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:27:01.215 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:27:01.215 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+16:27:01.215 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+16:27:01.455 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578644821215, waste time: 0.24s
+16:27:02.081 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578644818979, waste time: 3.102s
+16:27:03.580 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:27:03.580 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+16:27:03.580 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:27:04.064 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578644823580, waste time: 0.484s
+16:27:05.963 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:27:05.963 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+16:27:05.963 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+16:27:06.623 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578644825963, waste time: 0.66s
+16:27:28.284 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+16:27:28.284 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:27:28.284 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:27:28.716 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578644848284, waste time: 0.432s
+16:27:31.417 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404
+16:27:31.417 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+16:27:31.417 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+16:27:31.464 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578644851417, waste time: 0.047s
+16:27:33.646 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+16:27:33.646 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:27:33.646 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:27:33.857 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578644853645, waste time: 0.212s
+16:27:35.878 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+16:27:35.878 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+16:27:35.878 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+16:27:35.914 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578644855878, waste time: 0.036s
+16:27:38.110 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+16:27:38.110 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:27:38.110 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:27:40.299 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+16:27:40.299 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+16:27:40.299 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+16:27:40.647 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578644860299, waste time: 0.348s
+16:27:41.558 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578644858110, waste time: 3.448s
+16:27:42.592 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+16:27:42.592 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+16:27:42.592 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+16:27:43.079 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578644862592, waste time: 0.487s
+16:27:44.700 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:27:44.700 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:27:44.700 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:27:45.396 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578644864700, waste time: 0.696s
+16:31:58.499 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:31:58.499 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+16:31:58.499 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+16:31:59.182 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578645118499, waste time: 0.683s
+16:32:00.572 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:32:00.572 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+16:32:00.572 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+16:32:01.173 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578645120572, waste time: 0.601s
+16:32:02.686 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:32:02.686 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:32:02.686 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:32:03.287 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578645122686, waste time: 0.601s
+16:32:05.081 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:32:05.081 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+16:32:05.081 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+16:32:05.686 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578645125081, waste time: 0.605s
+16:32:07.441 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+16:32:07.441 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+16:32:07.441 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+16:32:08.052 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578645127441, waste time: 0.611s
+16:32:13.389 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCase
+16:32:13.389 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+16:32:13.389 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+16:32:13.577 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCase, startTime: 1578645133389, waste time: 0.188s
+16:32:15.748 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404
+16:32:15.748 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+16:32:15.748 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+16:32:15.844 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578645135748, waste time: 0.096s
+16:32:17.957 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404
+16:32:17.957 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+16:32:17.957 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+16:32:18.003 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578645137957, waste time: 0.046s
+16:32:20.215 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCaseList
+16:32:20.215 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+16:32:20.215 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+16:32:20.264 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/glindexCaseList, startTime: 1578645140215, waste time: 0.049s
+16:32:22.366 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+16:32:22.366 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+16:32:22.366 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+16:32:22.402 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578645142366, waste time: 0.036s
+17:13:19.142 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+17:13:19.142 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+17:13:19.142 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+17:13:19.577 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578647599142, waste time: 0.435s
+17:13:22.078 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+17:13:22.078 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+17:13:22.078 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+17:13:22.117 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578647602078, waste time: 0.039s
+17:13:24.297 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+17:13:24.297 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+17:13:24.297 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+17:13:24.574 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578647604297, waste time: 0.277s
+17:13:26.556 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+17:13:26.556 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+17:13:26.556 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+17:13:26.591 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578647606556, waste time: 0.035s
+17:13:28.744 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+17:13:28.744 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+17:13:28.744 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+17:13:28.959 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578647608744, waste time: 0.215s
+17:13:30.918 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+17:13:30.918 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+17:13:30.918 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+17:13:33.042 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+17:13:33.043 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+17:13:33.043 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+17:13:33.376 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578647613042, waste time: 0.334s
+17:13:33.823 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578647610918, waste time: 2.905s
+17:13:35.187 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+17:13:35.187 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+17:13:35.187 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+17:13:35.793 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578647615187, waste time: 0.606s
+18:43:01.552 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen
+18:43:01.552 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+18:43:01.552 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+18:43:04.663 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/screen/toBigScreen, startTime: 1578652981552, waste time: 3.111s
+18:43:07.275 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases
+18:43:07.275 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+18:43:07.275 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+18:43:08.431 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /mm/screen/findAllCases, startTime: 1578652987275, waste time: 1.156s
+18:43:09.510 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList
+18:43:09.510 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+18:43:09.510 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+18:43:10.378 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /mm/screen/glCaseList, startTime: 1578652989510, waste time: 0.868s
+18:43:11.797 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType
+18:43:11.797 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+18:43:11.797 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+18:43:12.012 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenType, startTime: 1578652991797, waste time: 0.215s
+18:43:14.072 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes
+18:43:14.072 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+18:43:14.072 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+18:43:14.111 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /mm/screen/getrightEvenTypes, startTime: 1578652994072, waste time: 0.039s
+18:43:16.333 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex
+18:43:16.333 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+18:43:16.333 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+18:43:18.612 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly
+18:43:18.612 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+18:43:18.612 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+18:43:18.880 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /mm/screen/trendAnaly, startTime: 1578652998612, waste time: 0.268s
+18:43:19.471 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /mm/screen/getIndex, startTime: 1578652996333, waste time: 3.138s
+19:52:53.994 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /
+19:52:53.994 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+19:52:53.994 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+19:52:53.995 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#home
+19:52:53.995 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+19:52:53.995 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: index:home
+19:52:53.995 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:52:53.995 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+19:52:54.052 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /, startTime: 1578657173994, waste time: 0.058s
+19:52:56.471 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /login
+19:52:56.471 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+19:52:56.471 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+19:52:56.472 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#login
+19:52:56.472 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+19:52:56.472 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 full id: index:login
+19:52:56.472 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+19:52:56.472 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+19:52:56.556 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /login, startTime: 1578657176471, waste time: 0.085s
+19:52:59.003 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+19:52:59.003 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+19:52:59.003 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+19:52:59.052 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578657179003, waste time: 0.049s
+19:53:01.335 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404
+19:53:01.335 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+19:53:01.335 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+19:53:01.372 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578657181334, waste time: 0.038s
+19:53:03.693 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+19:53:03.693 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+19:53:03.693 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+19:53:03.735 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578657183693, waste time: 0.042s
+19:53:08.238 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /login
+19:53:08.238 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: POST
+19:53:08.238 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+19:53:08.238 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#login
+19:53:08.238 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+19:53:08.238 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 full id: index:showLogin
+19:53:08.238 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+19:53:08.238 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:08.319 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /login, startTime: 1578657188238, waste time: 0.081s
+19:53:08.323 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /
+19:53:08.323 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+19:53:08.323 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+19:53:08.324 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#home
+19:53:08.324 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+19:53:08.324 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: index:home
+19:53:08.324 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:53:08.324 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:08.378 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /index
+19:53:08.378 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+19:53:08.378 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+19:53:08.378 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.IndexController#index
+19:53:08.378 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+19:53:08.378 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: index:welcome
+19:53:08.378 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:53:08.378 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:08.382 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /, startTime: 1578657188323, waste time: 0.059s
+19:53:08.436 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /index, startTime: 1578657188378, waste time: 0.058s
+19:53:08.498 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/menu
+19:53:08.498 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+19:53:08.498 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+19:53:08.498 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.MenuController#tree
+19:53:08.498 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+19:53:08.498 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: sys:menu:tree
+19:53:08.498 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:53:08.498 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:08.527 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/info/notReaderMessageCount
+19:53:08.527 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+19:53:08.527 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+19:53:08.527 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.component.info.controller.InfoReceiverController#getNotReaderCount
+19:53:08.527 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+19:53:08.527 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: sys:info:notReaderMessageCount
+19:53:08.528 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:53:08.528 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:08.529 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/user/current
+19:53:08.529 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+19:53:08.529 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+19:53:08.530 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.modules.sys.user.controller.UserController#getCurrentUser
+19:53:08.530 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+19:53:08.530 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: sys:groupSetting:user:current
+19:53:08.531 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:53:08.531 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:08.564 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/menu, startTime: 1578657188498, waste time: 0.066s
+19:53:08.626 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/info/notReaderMessageCount, startTime: 1578657188527, waste time: 0.099s
+19:53:08.647 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/user/current, startTime: 1578657188528, waste time: 0.119s
+19:53:24.508 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /queinvest/qlist
+19:53:24.508 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+19:53:24.508 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+19:53:24.508 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.QueinvestMenu#processModeler
+19:53:24.508 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+19:53:24.508 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvestlist
+19:53:24.508 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: PERMISSION
+19:53:24.508 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:24.546 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404
+19:53:24.546 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: GET
+19:53:24.546 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+19:53:24.559 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /queinvest/qlist, startTime: 1578657204508, waste time: 0.051s
+19:53:24.589 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /404, startTime: 1578657204546, waste time: 0.043s
+19:53:24.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/queinvest
+19:53:24.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+19:53:24.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+19:53:24.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#index
+19:53:24.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+19:53:24.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:list
+19:53:24.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:53:24.634 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:24.760 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/queinvest, startTime: 1578657204634, waste time: 0.126s
+19:53:28.673 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion
+19:53:28.673 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+19:53:28.673 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+19:53:28.674 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#addQuestion
+19:53:28.674 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+19:53:28.674 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:questionlist
+19:53:28.674 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:53:28.674 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:28.746 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion, startTime: 1578657208673, waste time: 0.073s
+19:53:33.994 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/queinvest/getAllType
+19:53:33.994 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/queinvest/getOneType
+19:53:33.994 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: GET
+19:53:33.994 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: GET
+19:53:33.994 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+19:53:33.994 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+19:53:33.994 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#getlist
+19:53:33.994 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#getOneType
+19:53:33.995 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+19:53:33.995 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+19:53:33.995 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:List
+19:53:33.995 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:listAttach
+19:53:33.995 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+19:53:33.995 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+19:53:33.995 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:33.995 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:33.999 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/queinvest/200107140923525021
+19:53:33.999 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - method: GET
+19:53:33.999 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - platform: html
+19:53:33.999 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#get
+19:53:34.000 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - endpoint: 
+19:53:34.000 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:get
+19:53:34.000 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:53:34.000 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:34.051 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/queinvest/getAllType, startTime: 1578657213994, waste time: 0.057s
+19:53:34.071 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/queinvest/getOneType, startTime: 1578657213994, waste time: 0.077s
+19:53:34.071 [http-nio-9898-exec-2] DEBUG com.zte.zudp.access - uri: /api/queinvest/200107140923525021, startTime: 1578657213999, waste time: 0.072s
+19:53:36.950 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion
+19:53:36.950 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: POST
+19:53:36.950 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+19:53:36.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#addQuestion
+19:53:36.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+19:53:36.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:questionlist
+19:53:36.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:53:36.951 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+19:53:37.012 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion, startTime: 1578657216950, waste time: 0.062s
+19:54:43.278 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion
+19:54:43.278 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: POST
+19:54:43.278 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+19:54:43.279 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#addQuestion
+19:54:43.279 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+19:54:43.279 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:questionlist
+19:54:43.279 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:54:43.279 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+19:54:43.340 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion, startTime: 1578657283278, waste time: 0.062s
+19:57:01.680 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion
+19:57:01.680 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+19:57:01.680 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+19:57:01.680 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#addQuestion
+19:57:01.680 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+19:57:01.680 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:questionlist
+19:57:01.680 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+19:57:01.680 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+19:57:01.742 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion, startTime: 1578657421680, waste time: 0.062s
+20:02:07.628 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/queinvest/getOneType
+20:02:07.628 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+20:02:07.628 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+20:02:07.629 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#getOneType
+20:02:07.629 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - endpoint: 
+20:02:07.629 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:listAttach
+20:02:07.629 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+20:02:07.629 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - 	 authorized: []
+20:02:07.631 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/queinvest/getAllType
+20:02:07.631 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - method: GET
+20:02:07.631 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - platform: html
+20:02:07.631 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#getlist
+20:02:07.632 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - endpoint: 
+20:02:07.632 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:List
+20:02:07.632 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+20:02:07.632 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - 	 authorized: []
+20:02:07.640 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/queinvest/200107140923525021
+20:02:07.640 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - method: GET
+20:02:07.640 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - platform: html
+20:02:07.640 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#get
+20:02:07.640 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - endpoint: 
+20:02:07.640 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:get
+20:02:07.640 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+20:02:07.640 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - 	 authorized: []
+20:02:07.742 [http-nio-9898-exec-4] DEBUG com.zte.zudp.access - uri: /api/queinvest/getAllType, startTime: 1578657727631, waste time: 0.111s
+20:02:07.745 [http-nio-9898-exec-9] DEBUG com.zte.zudp.access - uri: /api/queinvest/200107140923525021, startTime: 1578657727640, waste time: 0.105s
+20:02:07.745 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /api/queinvest/getOneType, startTime: 1578657727628, waste time: 0.117s
+20:02:10.875 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion
+20:02:10.875 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - method: POST
+20:02:10.875 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - platform: html
+20:02:10.875 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#addQuestion
+20:02:10.875 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - endpoint: 
+20:02:10.875 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:questionlist
+20:02:10.875 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+20:02:10.875 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - 	 authorized: []
+20:02:10.926 [http-nio-9898-exec-10] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion, startTime: 1578657730875, waste time: 0.051s
+20:02:14.823 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/queinvest/getAllType
+20:02:14.823 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/queinvest/getOneType
+20:02:14.823 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+20:02:14.823 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+20:02:14.823 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+20:02:14.823 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+20:02:14.823 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#getlist
+20:02:14.823 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#getOneType
+20:02:14.823 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - endpoint: 
+20:02:14.823 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - endpoint: 
+20:02:14.823 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:List
+20:02:14.823 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:listAttach
+20:02:14.823 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+20:02:14.824 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized type: GUEST
+20:02:14.824 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - 	 authorized: []
+20:02:14.824 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - 	 authorized: []
+20:02:14.830 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/queinvest/200107140923525021
+20:02:14.830 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+20:02:14.830 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+20:02:14.830 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#get
+20:02:14.830 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - endpoint: 
+20:02:14.830 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:get
+20:02:14.830 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+20:02:14.830 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - 	 authorized: []
+20:02:14.876 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /api/queinvest/getAllType, startTime: 1578657734823, waste time: 0.053s
+20:02:14.896 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /api/queinvest/getOneType, startTime: 1578657734823, waste time: 0.073s
+20:02:14.896 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /api/queinvest/200107140923525021, startTime: 1578657734830, waste time: 0.066s
+20:02:17.787 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion
+20:02:17.787 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - method: POST
+20:02:17.787 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - platform: html
+20:02:17.787 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#addQuestion
+20:02:17.787 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - endpoint: 
+20:02:17.787 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:questionlist
+20:02:17.787 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+20:02:17.787 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - 	 authorized: []
+20:02:17.839 [http-nio-9898-exec-3] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion, startTime: 1578657737787, waste time: 0.052s
+20:03:01.945 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion
+20:03:01.946 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - method: POST
+20:03:01.946 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - platform: html
+20:03:01.946 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - access: com.zte.zudp.admin.info.queinvest.controller.QueinvestContrller#addQuestion
+20:03:01.946 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - endpoint: 
+20:03:01.946 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 full id: queManager:queinvestManager:queinvest:questionlist
+20:03:01.946 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized type: LOGIN
+20:03:01.946 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - 	 authorized: []
+20:03:02.011 [http-nio-9898-exec-5] DEBUG com.zte.zudp.access - uri: /api/queinvest/addQuestion, startTime: 1578657781945, waste time: 0.066s

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.queinvest.dao.QuestionDao">
+
+    <!--<resultMap type="com.zte.zudp.admin.info.queinvest.entity.Questions" id="questionMap">-->
+        <!--<id column="id" property="id"/>-->
+        <!--<result column="create_date" property="createDate" />-->
+        <!--<result column="create_user" property="createUser.id" />-->
+        <!--<result column="update_date" property="updateDate" />-->
+        <!--<result column="update_user" property="updateUser.id" />-->
+        <!--<result column="del" property="del" />-->
+
+        <!--<result column="contents" property="contents" />-->
+        <!--<result column="questionType" property="questionType" />-->
+
+
+
+
+    <!--</resultMap>-->
+
+
+
+    <!--新建题目-->
+    <insert id="insert" >
+  insert into jacg_questions
+        (id,
+        contents,
+        questionType,
+        create_user,
+        create_date,
+        update_user,
+        update_date,
+        del,
+        status)
+    VALUES
+    ( #{id},
+      #{contents},
+      #{questionType},
+      #{createUser.id},
+      #{createDate},
+      #{updateUser.id},
+      #{updateDate},
+      '0',
+      '0'
+     )
+
+    </insert>
+
+    <!--查询所有   显示所有的问卷的题目和描述-->
+    <select id="findList" resultType="com.zte.zudp.admin.info.queinvest.entity.Questions">
+        SELECT
+        t1.id id,
+        t1.contents contents,
+        t1.questionType questionType,
+        t1.status status
+
+        FROM `jacg_questions` t1
+
+
+        where t1.del!=1
+        <if test="contents!=null and contents!=''">
+            and `contents` like concat('%', #{contents}, '%')
+        </if>
+
+    </select>
+
+    <!--编辑-->
+    <update id="update" >
+       update jacg_questions t1
+       left join jacg_options t2 on t1.id = t2.questions_id
+       set
+        t1.contents = #{contents},
+        t1.questionType = #{questionType},
+        t2.choiceText01 =#{choiceText01},
+        t2.choiceText02 =#{choiceText02},
+        t2.choiceText03 =#{choiceText03},
+        t2.choiceText04 =#{choiceText04}
+        where t1.id=#{id}
+    </update>
+
+    <!--删除-->
+    <delete id="delete">
+    UPDATE jacg_questions
+    SET del = 1
+    WHERE id = #{id}
+    </delete>
+
+
+
+    <!--批量删除-->
+    <delete id="batchDelete">
+    UPDATE jacg_questions SET del = 1
+    WHERE id IN
+    <foreach collection="array" item="i" separator="," open="(" close=")">
+    #{i}
+    </foreach>
+    </delete>
+
+<!--详情-->
+    <select id="get" resultType="com.zte.zudp.admin.info.queinvest.entity.Questions">
+        select
+
+        t1.id id,
+        t1.contents contents,
+        t1.questionType questionType,
+        t2.choiceText01 choiceText01,
+        t2.choiceText02 choiceText02,
+        t2.choiceText03 choiceText03,
+        t2.choiceText04 choiceText04
+
+
+        from jacg_questions t1
+        left join  jacg_options t2 on t1.id = t2.questions_id
+        where t1.id=#{id}
+    </select>
+<!--修改题目状态-->
+<update id="updateQuestionStatus">
+    update
+    jacg_questions t1
+     set t1.status = '1'
+      where t1.id =#{idJson}
+</update>
+
+
+
+    <!--题目类型下拉-->
+    <select id="getList" resultType="com.zte.zudp.admin.info.queinvest.entity.Dictionary" >
+         select
+         t1.label,
+         t1.value
+        from sys_dict t1 where  t1.type = "questionType"
+    </select>
+</mapper>

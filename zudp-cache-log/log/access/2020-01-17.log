@@ -1,0 +1,24 @@
+09:17:59.036 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/login
+09:17:59.036 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:17:59.036 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:17:59.414 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/login, startTime: 1579223879036, waste time: 0.378s
+09:18:10.833 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404
+09:18:10.833 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - method: GET
+09:18:10.833 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - platform: html
+09:18:10.883 [http-nio-9898-exec-6] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579223890833, waste time: 0.05s
+09:18:13.439 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404
+09:18:13.439 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - method: GET
+09:18:13.439 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - platform: html
+09:18:13.489 [http-nio-9898-exec-7] DEBUG com.zte.zudp.access - uri: /404, startTime: 1579223893439, waste time: 0.05s
+09:18:43.282 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/news/conven
+09:18:43.282 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:18:43.282 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:18:45.696 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/mmConvenient/getConvenientType
+09:18:45.696 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - method: GET
+09:18:45.696 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - platform: html
+09:18:45.848 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/mmConvenient/getConvenientType, startTime: 1579223925696, waste time: 0.152s
+09:18:45.888 [http-nio-9898-exec-8] DEBUG com.zte.zudp.access - uri: /mm/news/conven, startTime: 1579223925696, waste time: 0.192s
+09:18:50.312 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/mmConvenient/getConvenientList
+09:18:50.312 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - method: GET
+09:18:50.312 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - platform: html
+09:18:50.438 [http-nio-9898-exec-1] DEBUG com.zte.zudp.access - uri: /mm/mmConvenient/getConvenientList, startTime: 1579223930312, waste time: 0.126s

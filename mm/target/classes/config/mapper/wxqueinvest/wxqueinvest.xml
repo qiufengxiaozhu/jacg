@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.mm.wxQueinvest.dao.WXMMQueinvestDao">
+
+
+
+    <!--问卷列表-->
+<select id="selectAll" resultType="com.zte.zudp.admin.mm.wxQueinvest.entity.WXMMQueinvest">
+
+    select
+    t1.id id,
+    t1.title title,
+    DATE_FORMAT(t1.pubdate,'%Y-%m')  yearStr,
+    DATE_FORMAT(t1.pubdate,'%d')  dayStr,
+    t1.description description,
+    t1.status status
+    from jacg_weixin_queinvest t1
+    where status = '2'
+     and  t1.id not in (select queinvestId from jacg_weixin_answers where user_id =#{userPhone}) and t1.del !=1
+     and t1.valid > now()
+
+</select>
+
+
+
+    <!--查询出完整问卷信息 startQueinvest-->
+    <select id="startQueinvest" resultType="com.zte.zudp.admin.mm.wxQueinvest.entity.WXMMQueinvest">
+        select
+            @n:=@n+1 rowNum,
+            t0.id id,
+            t0.title title,
+            t2.id questionId,
+            t2.contents contents,
+            (case when t3.choiceText01 is null then '' else t3.choiceText01 end )as choiceText01,
+            (case when t3.choiceText02 is null then '' else t3.choiceText02 end )as choiceText02,
+            (case when t3.choiceText03 is null then '' else t3.choiceText03 end )as choiceText03,
+            (case when t3.choiceText04 is null then '' else t3.choiceText04 end )as choiceText04
+
+
+        from
+           (select  t1.*,qq.questions_id  from jacg_weixin_queinvest_questions qq right join jacg_weixin_queinvest t1 on qq.queinvest_id = t1.id)as t0
+
+            left join jacg_weixin_questions t2  on  t0.questions_id = t2.id
+            left join jacg_weixin_options t3 on t2.id = t3.questions_id
+            inner join (select @n:= 0) d
+        where t0.del != 1   and t0.id = #{id}
+
+    </select>
+
+    <!--根据所选答案，查询出所有的信息-->
+    <select id="selectAllByAnswer" resultType="com.zte.zudp.admin.mm.wxQueinvest.entity.WXMMQueinvest">
+        select
+ t0.id queinvestId,
+t0.title title,
+t2.id questionId,
+t2.contents contents
+
+from
+(select  t1.*,qq.questions_id  from jacg_weixin_queinvest_questions qq right join jacg_weixin_queinvest t1 on qq.queinvest_id = t1.id)as t0
+
+left join jacg_weixin_questions t2  on  t0.questions_id = t2.id
+left join jacg_weixin_options t3 on t2.id = t3.questions_id
+LEFT JOIN jacg_weixin_answers t4 on t2.id = t4.questions_id
+inner join (select @n:= 0) d
+
+ where #{str} in (t3.choiceText01,t3.choiceText02,t3.choiceText03,t3.choiceText04)
+and t2.id= #{queId}
+GROUP BY t2.id
+
+
+    </select>
+
+   <!-- 将获得的答案 ，问卷id，题目id新增到答案表中-->
+<insert id="insertToAnswer" >
+
+    insert into  jacg_weixin_answers
+       (id,
+       queinvestId,
+       answerOption,
+       questions_id,
+       user_id,
+       name,
+       answerTime
+
+      )
+      VALUE (
+        #{id},
+        #{queinvestId},
+        #{optContext},
+        #{questionId},
+        #{userPhone},
+        #{userName},
+        now()
+        )
+</insert>
+
+
+
+
+
+</mapper>

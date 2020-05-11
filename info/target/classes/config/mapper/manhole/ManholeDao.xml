@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zte.zudp.admin.info.manhole.dao.ManholeDao">
+
+    <resultMap type="com.zte.zudp.admin.info.manhole.entity.Manhole" id="manholeMap">
+        <id column="id" property="id"/>
+        <result column="manhole" property="manhole"/>
+        <result column="street" property="street"/>
+        <result column="spareOne" property="spareOne"/>
+        <result column="spareTwo" property="spareTwo"/>
+        <result column="spareThree" property="spareThree" />
+        <result column="create_date" property="createDate" />
+        <result column="create_user" property="createUser.id" />
+        <result column="update_date" property="updateDate" />
+        <result column="update_user" property="updateUser.id" />
+        <result column="del" property="del" />
+    </resultMap>
+
+    <select id="findList" resultMap="manholeMap" useCache="false">
+        SELECT n.id,n.manhole,n.street
+        from qgq_manhole n
+        where n.del!=1
+        <if test="manhole!=null and manhole!=''">
+            and `manhole` like concat('%', #{manhole}, '%')
+        </if>
+        ORDER BY n.create_date desc
+    </select>
+
+    <select id="get" resultMap="manholeMap" >
+        SELECT
+        id,
+        manhole,
+        street,
+        create_user,
+        create_date
+        from qgq_manhole
+        where id=#{id}
+    </select>
+
+    <insert id="insert">
+        INSERT INTO qgq_manhole (
+        id, manhole, street,
+        create_date,
+        create_user,
+        update_date,
+        update_user,
+        del
+        )
+        VALUE (
+        #{id}, #{manhole}, #{street},
+        #{createDate},
+        #{createUser.id},
+        #{updateDate},
+        #{updateUser.id},
+        '0'
+        )
+    </insert>
+    <update id="update" parameterType="com.zte.zudp.admin.info.manhole.entity.Manhole">
+        UPDATE qgq_manhole m SET
+        m.manhole = #{manhole},
+        m.street = #{street},
+        m.update_date = #{updateDate},
+        m.update_user = #{updateUser.id}
+        WHERE m.id = #{id}
+    </update>
+
+    <delete id="delete">
+        UPDATE qgq_manhole
+        SET del = 1
+        WHERE id = #{id}
+    </delete>
+    <delete id="batchDelete">
+        UPDATE qgq_manhole SET del = 1
+        WHERE id IN
+        <foreach collection="array" item="i" separator="," open="(" close=")">
+            #{i}
+        </foreach>
+    </delete>
+</mapper>
